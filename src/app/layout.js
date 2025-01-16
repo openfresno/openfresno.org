@@ -9,8 +9,8 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Open Sacramento',
-  description: 'Open Sacramento civic technology.',
+  title: 'Open Fresno',
+  description: 'Open Fresno civic technology.',
 }
 
 export default function RootLayout({children}) {

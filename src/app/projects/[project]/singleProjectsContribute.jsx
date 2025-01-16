@@ -7,7 +7,7 @@ export default function SingleProjectsContribute({ sectionType, contributeAs, se
           <h2 className={`project-heading project-heading-underline`}>How to Contribute</h2>
         </div>
         <p className={`project-paragraph`}>
-          Open Sacramento is run by volunteers. We are always looking for help.
+          Open Fresno is run by volunteers. We are always looking for help.
           Explore the various ways you can make a difference.
         </p>
         <h4 className={`project-info-label`}>Get Involved As</h4>

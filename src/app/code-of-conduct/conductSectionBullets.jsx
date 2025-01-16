@@ -2,7 +2,7 @@ export default function conductSectionBullets({sectionType}) {
   return (
     <section className={`conduct-list-container conduct-${sectionType}-theme`}>
       <p className={`conduct-sub-heading`}>
-        Open Sacramento fosters a community that:
+        Open Fresno fosters a community that:
       </p>
 
       <div className={`conduct-numbered-item`}>
@@ -87,8 +87,8 @@ export default function conductSectionBullets({sectionType}) {
       </div>
 
       <p className={`conduct-sub-heading`}>
-        Open Sacramento reserves the right to ask anyone in violation of these policies not to participate in
-        Open Sacramento network activities, events, and digital forums.
+        Open Fresno reserves the right to ask anyone in violation of these policies not to participate in
+        Open Fresno network activities, events, and digital forums.
       </p>
     </section>
   )

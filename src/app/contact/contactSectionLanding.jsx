@@ -8,7 +8,7 @@ export default function ContactSectionLanding({sectionType}) {
       <div className={`general-section-${sectionType}-container contact-heading-underline`}>
         <h1 className={`general-heading-section`}>Contact Us</h1>
         <h2 className={`contact-sub-heading`}>
-          Contact<br></br> Open Sacramento
+          Contact<br></br> Open Fresno
         </h2>
       </div>
 

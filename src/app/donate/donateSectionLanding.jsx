@@ -23,9 +23,9 @@ export default function ContactSectionLanding({ sectionType }) {
           </span>{" "}
           Make a one-time donation to support our mission instantly
           {/*, or become a sustaining supporter by selecting the monthly donation option*/}
-          . Your tax-deductable donation fuels innovaction, empowers civic
+          . Your tax-deductible donation fuels innovation, empowers civic
           engagement, and enhances public services while shaping a brighter
-          future for Sacramento. Thank you for your generous support!
+          future for Fresno. Thank you for your generous support!
         </p>
         <br />
 
