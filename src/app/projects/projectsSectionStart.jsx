@@ -20,7 +20,7 @@ export default function ProjectsSectionStart({ sectionType }) {
         </div>
         <div className={`projects-section-${sectionType}-container`}>
           <p className={`projects-section-paragraph`}>
-            Discover the diverse range of projects at Open Sacramento, where we&apos;re
+            Discover the diverse range of projects at Open Fresno, where we&apos;re
             using technology and collaboration to tackle civic challenges and
             enhance public services. Join our dedicated team of designers,
             developers, and passionate individuals to make a lasting impact on our

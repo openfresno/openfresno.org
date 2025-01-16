@@ -59,7 +59,7 @@ const ExtendedNavbarMenu = (visible) => {
           <div className="navbar-extended-text-wrapper-2">Pitch a Project</div>
           <p className="navbar-extended-desktop-section-content">
             Get the latest information and guidance for anyone who want to propose new projects or ideas to the Open
-            Sacramento community.
+            Fresno community.
           </p>
           <Link href="/pitch" className="navbar-extended-button">Pitch a Project</Link>
         </div>

@@ -11,9 +11,9 @@ export default function AppFooter() {
         <div className="footerMessage">
           <h2 className="footerMessageHeader">Get Involved.</h2>
           <p className="footerMessageParagraph">
-            Open Sacramento is a tax-deductible civic-tech community dedicated
+            Open Fresno is a tax-deductible civic-tech community dedicated
             to using technology and open data for positive civic change in
-            Sacramento.
+            Fresno.
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function AppFooter() {
       </div>
 
       <div className="footerBottomContainer">
-        <div className="footerBottomTitle">Open Sacramento</div>
+        <div className="footerBottomTitle">Open Fresno</div>
         <div className="footerBottomLinksContainer">
           <Link href="/get-started" className="footerBottomLink">
             get started

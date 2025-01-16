@@ -9,11 +9,11 @@ export default function AboutSectionTeam() {
         <div className={`about-heading-container about-heading-underline`}>
           <h1 className={`general-heading-section`}>OUR TEAM</h1>
           <h2 className={`about-sub-heading`}>
-            Meet the Heartbeat of Open Sacramento
+            Meet the Heartbeat of Open Fresno
           </h2>
         </div>
         <p className={`team-paragraph`}>
-          Open Sacramento is powered by a volunteer Core Team that orchestrates events, fosters strategic partnerships,
+          Open Fresno is powered by a volunteer Core Team that orchestrates events, fosters strategic partnerships,
           and ensures seamless communication among cross-functional project teams. Our dedicated team members bring
           diverse skills and expertise to the table,
           all with a shared passion for civic tech and community empowerment.

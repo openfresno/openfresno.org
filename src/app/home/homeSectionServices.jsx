@@ -41,7 +41,7 @@ export default function HomeSectionServices({sectionType}) {
           <p className={`home-numbered-paragraph`}>
             Have a project idea that can benefit the community? Pitch it to us and
             join forces with our community of innovators to bring your vision to
-            life, driving positive change in Sacramento.
+            life, driving positive change in Fresno.
           </p>
           <Button className={`btn btn-alt-gold`} href="/pitch" textContent="Pitch a Project" />
         </div>

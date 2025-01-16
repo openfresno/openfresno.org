@@ -9,17 +9,17 @@ Renders the home element and checks if all components are rendering
 */
 
 test('HomeSectionLandingImage Renders in Home', () => {
-  expect(screen.getByRole('heading', { level: 1, name: /we are open sacramento/i })).toBeDefined()
+  expect(screen.getByRole('heading', { level: 1, name: /we are open Fresno/i })).toBeDefined()
 })
 
 test('HomeSectionDefault2 Renders in Home', () => {
   expect(screen.getByRole('heading', { level: 1, name: /who we are/i })).toBeDefined()
-  expect(screen.getByRole('heading', { level: 2, name: /Building a Brighter Sacramento Through Innovation and Technology/i })).toBeDefined()
+  expect(screen.getByRole('heading', { level: 2, name: /Building a Brighter Fresno Through Innovation and Technology/i })).toBeDefined()
 })
 
 test('HomeSectionAboutImage Renders in Home', () => {
   expect(screen.getByRole('heading', { level: 1, name: /what we do/i })).toBeDefined()
-  expect(screen.getByRole('heading', { level: 2, name: /Building a Better Future in Sacramento/i })).toBeDefined()
+  expect(screen.getByRole('heading', { level: 2, name: /Building a Better Future in Fresno/i })).toBeDefined()
 })
 
 test('HomeSectionServices Renders in Home', () => {
@@ -29,7 +29,7 @@ test('HomeSectionServices Renders in Home', () => {
 
 test('HomeSectionDefault Renders in Home', () => {
   expect(screen.getByRole('heading', { level: 1, name: /why volunteer/i })).toBeDefined()
-  expect(screen.getByRole('heading', { level: 2, name: /Empower Change with Open Sacramento/i })).toBeDefined()
+  expect(screen.getByRole('heading', { level: 2, name: /Empower Change with Open Fresno/i })).toBeDefined()
 })
 
 test('HomeSectionProjects Renders in Home', () => {
@@ -42,7 +42,7 @@ test('HomeSectionPartnerships Renders in Home', () => {
 })
 
 test('HomeSectionDonate Renders in Home', () => {
-  expect(screen.getByRole('heading', { level: 1, name: /Help Support Open Sacramento/i })).toBeDefined()
+  expect(screen.getByRole('heading', { level: 1, name: /Help Support Open Fresno/i })).toBeDefined()
 })
 
 

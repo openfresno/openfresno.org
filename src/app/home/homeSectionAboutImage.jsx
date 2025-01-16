@@ -11,13 +11,13 @@ export default function HomeSectionAboutImage({sectionType}) {
           <h1 className={`general-heading-section general-heading-section-alt`}>What we do</h1>
           <h2 className={`sub-heading`}>
             Building a Better Future <br/>
-            in Sacramento
+            in Fresno
           </h2>
         </div>
         <p className={`home-section-paragraph`}>
           Our mission is done by uniting programmers, designers, and other talents,
           we transform ideas into tangible solutions that impact lives throughout
-          the Sacramento area. Together, we drive innovation forward, building a
+          the Fresno area. Together, we drive innovation forward, building a
           future where open source technology empowers citizens and uplifts our
           city. <span className={`paragraph-bold`}>
             Join us in driving innovation through open-source tech and empowering our community!
