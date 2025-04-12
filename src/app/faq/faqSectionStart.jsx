@@ -15,7 +15,7 @@ export default function FaqSectionStart({ sectionType }) {
       <div className={`general-section-container`}>
         <p className="section-paragraph-small">
           Welcome to our FAQ page, designed to provide you with quick and
-          informative answers to commonly asked questions about Open Sacramento.
+          informative answers to commonly asked questions about Open Fresno.
           Whether you&apos;re curious about volunteering, projects,
           collaborations, or more, we&apos;ve compiled a list of queries to
           guide you through our mission, initiatives, and how you can get

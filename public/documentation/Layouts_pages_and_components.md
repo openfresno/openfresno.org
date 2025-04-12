@@ -1,4 +1,4 @@
-# Application Layouts, Pages, and Components for the Open Sacramento Website
+# Application Layouts, Pages, and Components for the Open Fresno Website
 
 Reusable components and layouts are in the [components](/src/components/) folder. The pages for the website are in the [app](/src/app/) folder.
 

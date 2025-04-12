@@ -14,7 +14,7 @@ export default function ContactSectionMission({ sectionType }) {
   const [subject, setSubject] = useState('')
   const [body, setBody] = useState('')
 
-  const mailtoUri = `mailto:hello@opensac.org?subject=${encodeURIComponent(
+  const mailtoUri = `mailto:hello@openfresno.org?subject=${encodeURIComponent(
     subject,
   )}&body=${encodeURIComponent(body)}%0A%0A%0A%0A${encodeURIComponent(
     firstName,
@@ -50,7 +50,7 @@ export default function ContactSectionMission({ sectionType }) {
           Check out our weekly meetings on our{' '}
           <Link
             className="contactActionLinksAnchor"
-            href="https://www.meetup.com/code4sac/"
+            href="https://www.meetup.com/openfresno/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Link to Meetup."

@@ -19,7 +19,7 @@ export default function AboutSectionLanding({ sectionType }) {
             designers, and civic-minded individuals united by a common goal:
           </span>{' '}
           leveraging technology and open data to address civic challenges and
-          enhance public services in the Sacramento area. Our community thrives
+          enhance public services in the Fresno area. Our community thrives
           on collaboration, innovation, and a shared commitment to driving
           positive change.
         </p>

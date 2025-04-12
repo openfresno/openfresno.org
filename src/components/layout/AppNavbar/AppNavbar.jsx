@@ -82,7 +82,7 @@ export default function AppNavbar({ fade = false }) {
               <Link className={'navbar-left-section'} href="/">
                 <img
                   src="/img/logo_opensac_black_transparent_2.png"
-                  alt="Open Sacramento logo"
+                  alt="Open Fresno logo"
                   height="60"
                   width="200"
                 />

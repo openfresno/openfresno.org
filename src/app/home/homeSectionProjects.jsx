@@ -22,7 +22,7 @@ export default function HomeSectionProjects({ sectionType }) {
         </div>
         <p className={`section-paragraph`}>
           We tackle tech projects addressing civic issues, enhancing services in
-          Sacramento. From open data initiatives to government services and
+          Fresno. From open data initiatives to government services and
           community platforms,
           <span className={`paragraph-bold`}>
             {' '}
@@ -72,11 +72,11 @@ export default function HomeSectionProjects({ sectionType }) {
               <h2 className="sub-heading">Open Budget Sac</h2>
               <p className="home-section-dark-paragraph">
                 Fiscal transparency and visualization web app for the City of
-                Sacramento.
+                Fresno.
               </p>
             </div>
             <img
-              src="https://raw.githubusercontent.com/code4sac/openbudgetsac.org/main/screenshot.jpg"
+              src="https://raw.githubusercontent.com/openfresno/openbudgetsac.org/main/screenshot.jpg"
               alt="Open Budget Sac"
               className="home-section-project-image"
             />

@@ -23,7 +23,7 @@ export default function GetStartedPage() {
         <HeaderUnderline
           sectionType={SectionType.light}
           title="Get started"
-          description="Ready to Volunteer with Open Sacramento"
+          description="Ready to Volunteer with Open Fresno"
           large={true}
           className={'general-section-container '}
         />
@@ -31,8 +31,8 @@ export default function GetStartedPage() {
           className={`general-section-container section-${SectionType.light} section-paragraph`}
         >
           We&apos;re thrilled that you&apos;re eager to join our community of
-          civic-minded individuals and make a positive impact on Sacramento.
-          Volunteering with Open Sacramento is a rewarding experience that
+          civic-minded individuals and make a positive impact on Fresno.
+          Volunteering with Open Fresno is a rewarding experience that
           allows you to use your skills for the betterment of our city.{' '}
           <span className={`paragraph-bold`}>
             Whether you&apos;re a designer, developer, or anyone else passionate
@@ -50,7 +50,7 @@ export default function GetStartedPage() {
             title="Getting started"
             description="Steps to Volunteer"
           >
-            Discover how you can become a valued volunteer at Open Sacramento.
+            Discover how you can become a valued volunteer at Open Fresno.
             Follow these simple steps to join our community of technologists,
             developers, and civic-minded individuals dedicated to driving
             positive change through technology and collaboration.

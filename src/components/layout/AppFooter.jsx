@@ -11,9 +11,9 @@ export default function AppFooter() {
         <div className="footerMessage">
           <h2 className="footerMessageHeader">Get Involved.</h2>
           <p className="footerMessageParagraph">
-            Open Sacramento is a tax-deductible civic-tech community dedicated
+            Open Fresno is a tax-deductible civic-tech community dedicated
             to using technology and open data for positive civic change in
-            Sacramento. Open Sacramento is fiscally sponsored by{' '}
+            Fresno. Open Fresno is fiscally sponsored by{' '}
             <Link href="https://www.dbaarts.org/">DBA Arts</Link>.
           </p>
         </div>
@@ -23,7 +23,7 @@ export default function AppFooter() {
             Join us for our weekly meetings on{' '}
             <Link
               className="footerActionLinksAnchor"
-              href="https://www.meetup.com/code4sac/"
+              href="https://www.meetup.com/openfresno/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Link to Meetup."
@@ -50,7 +50,7 @@ export default function AppFooter() {
 
         <div className="footerSocialMedia">
           <Link
-            href="https://www.facebook.com/code4sac"
+            href="https://www.facebook.com/openfresno"
             target="_blank"
             rel="noopener noreferrer"
             className="footerSocialMediaLink"
@@ -62,7 +62,7 @@ export default function AppFooter() {
             />
           </Link>
           <Link
-            href="https://twitter.com/code4sac"
+            href="https://twitter.com/openfresno"
             target="_blank"
             rel="noopener noreferrer"
             className="footerSocialMediaLink"
@@ -74,7 +74,7 @@ export default function AppFooter() {
             />
           </Link>
           <Link
-            href="https://www.youtube.com/@code4sac"
+            href="https://www.youtube.com/@openfresno"
             target="_blank"
             rel="noopener noreferrer"
             className="footerSocialMediaLink"
@@ -89,7 +89,7 @@ export default function AppFooter() {
       </div>
 
       <div className="footerBottomContainer">
-        <div className="footerBottomTitle">Open Sacramento</div>
+        <div className="footerBottomTitle">Open Fresno</div>
         <div className="footerBottomLinksContainer">
           <Link href="/get-started" className="footerBottomLink">
             get started

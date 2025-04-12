@@ -16,13 +16,13 @@ export default function HomeSectionAboutImage({ sectionType }) {
           </h1>
           <h2 className={`sub-heading`}>
             Building a Better Future <br />
-            in Sacramento
+            in Fresno
           </h2>
         </div>
         <p className={`section-paragraph`}>
           Our mission is done by uniting programmers, designers, and other
           talents, we transform ideas into tangible solutions that impact lives
-          throughout the Sacramento area. Together, we drive innovation forward,
+          throughout the Fresno area. Together, we drive innovation forward,
           building a future where open source technology empowers citizens and
           uplifts our city.{' '}
           <span className={`paragraph-bold`}>
