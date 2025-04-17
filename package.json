@@ -1,7 +1,7 @@
 {
-  "name": "opensac.org",
-  "version": "3.0.0",
-  "description": "Website for Open Sacramento",
+  "name": "openfresno.org",
+  "version": "3.0.0-alpha",
+  "description": "Website for Open Fresno",
   "private": true,
   "scripts": {
     "dev": "next dev --turbo",
@@ -12,19 +12,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/code4sac/opensac.org.git"
+    "url": "git+https://github.com/openfresno/openfresno.org.git"
   },
   "keywords": [],
   "author": {
-    "name": "Open Sacramento",
-    "email": "hello@opensac.org",
-    "url": "https://opensac.org"
+    "name": "Open Fresno",
+    "email": "hello@openfresno.org",
+    "url": "https://openfresno.org"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/code4sac/opensac.org/issues"
+    "url": "https://github.com/openfresno/openfresno.org/issues"
   },
-  "homepage": "https://github.com/code4sac/opensac.org#readme",
+  "homepage": "https://github.com/openfresno/openfresno.org#readme",
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.3",

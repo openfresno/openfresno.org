@@ -20,7 +20,7 @@ export default function ProjectsSectionStart({ sectionType }) {
         </div>
         <div className={`projects-section-${sectionType}-container`}>
           <p className={`section-paragraph-small`}>
-            Discover the diverse range of projects at Open Sacramento, where
+            Discover the diverse range of projects at Open Fresno, where
             we&apos;re using technology and collaboration to tackle civic
             challenges and enhance public services. Join our dedicated team of
             designers, developers, and passionate individuals to make a lasting
@@ -57,7 +57,7 @@ export default function ProjectsSectionStart({ sectionType }) {
           <div className={`meeting-card-section`}>
             <Link
               className={`meeting-card-link`}
-              href="https://www.meetup.com/code4sac/"
+              href="https://www.meetup.com/openfresno/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Link to Meetup."

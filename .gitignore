@@ -11,7 +11,7 @@ build/
 !projects/*.json
 gulpfile.js
 
-# C4S ideas dir
+# IntelliJ directory
 .idea/
 
 # Dont serve dev resources in production

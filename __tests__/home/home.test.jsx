@@ -10,7 +10,7 @@ Renders the home element and checks if all components are rendering
 
 test('HomeSectionLandingImage Renders in Home', () => {
   expect(
-    screen.getByRole('heading', { level: 1, name: /we are open sacramento/i }),
+    screen.getByRole('heading', { level: 1, name: /we are Open Fresno/i }),
   ).toBeDefined()
 })
 
@@ -21,7 +21,7 @@ test('HomeSectionDefault2 Renders in Home', () => {
   expect(
     screen.getByRole('heading', {
       level: 2,
-      name: /Building a Brighter Sacramento Through Innovation and Technology/i,
+      name: /Building a Brighter Fresno Through Innovation and Technology/i,
     }),
   ).toBeDefined()
 })
@@ -33,7 +33,7 @@ test('HomeSectionAboutImage Renders in Home', () => {
   expect(
     screen.getByRole('heading', {
       level: 2,
-      name: /Building a Better Future in Sacramento/i,
+      name: /Building a Better Future in Fresno/i,
     }),
   ).toBeDefined()
 })
@@ -57,7 +57,7 @@ test('HomeSectionDefault Renders in Home', () => {
   expect(
     screen.getByRole('heading', {
       level: 2,
-      name: /Empower Change with Open Sacramento/i,
+      name: /Empower Change with Open Fresno/i,
     }),
   ).toBeDefined()
 })
@@ -87,7 +87,7 @@ test('HomeSectionDonate Renders in Home', () => {
   expect(
     screen.getByRole('heading', {
       level: 1,
-      name: /Help Support Open Sacramento/i,
+      name: /Help Support Open Fresno/i,
     }),
   ).toBeDefined()
 })

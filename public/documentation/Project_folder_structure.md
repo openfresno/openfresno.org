@@ -1,4 +1,4 @@
-# Project Folder Structure for the Open Sacramento Website
+# Project Folder Structure for the Open Fresno Website
 
 ## [Top-level files](https://nextjs.org/docs/getting-started/project-structure#top-level-files)
 

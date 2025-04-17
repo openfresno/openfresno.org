@@ -17,11 +17,11 @@ export default function notFound() {
             <p>Would you like to join and be a part of creating it?</p>
           </div>
           <Link
-            href="https://github.com/code4sac/opensac.org"
+            href="https://github.com/openfresno/openfresno.org"
             className="not-found-link"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Link to opensac.org github page."
+            aria-label="Link to openfresno.org github page."
           >
             Get Started
           </Link>

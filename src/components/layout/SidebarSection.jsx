@@ -32,7 +32,7 @@ export default function SidebarSection({ children, sectionType }) {
           </Link>
           <Link
             className={`side-section-anchor`}
-            href="https://www.meetup.com/code4sac/"
+            href="https://www.meetup.com/openfresno/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Link to Meetup."

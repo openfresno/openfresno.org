@@ -11,11 +11,11 @@ export default function HomeSectionLandingImage() {
         <div className={`home-landing-container`}>
           <h1 className={`home-landing-heading`}>
             <span>We are</span> <br />
-            Open Sacramento
+            Open Fresno
           </h1>
           <p className={`section-paragraph`}>
             Join us to address civic challenges and enhance public services for
-            Sacramento residents through technology and open data. Volunteer now
+            Fresno residents through technology and open data. Volunteer now
             for a better future!
           </p>
           <div className={`home-buttons-group`}>

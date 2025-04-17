@@ -73,8 +73,8 @@ const metaFile = 'meta.yml'
  title: OpenSac.org
  project_type: website
  project_status: active
- description: The Open Sacramento website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Sacramento area and beyond through technology
- image_url: opensac.jpg
+ description: The Open Fresno website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Fresno area and beyond through technology
+ image_url: openfresno.jpg
  project_partner: Dan Fey
  project_lead: Brianda Hernandez
  technical_lead: Nate Bass
@@ -106,18 +106,18 @@ const metaFile = 'meta.yml'
  development:
  time_range: October 6, 2023 - April 1, 2023
  objective: Create react application reflecting figma designs
- outcome: Completed Open Sacramento website reflecting the figma designs
+ outcome: Completed Open Fresno website reflecting the figma designs
  deployment:
  time_range: April 2, 2023 - April 9, 2023
- objective: Deploy react application to opensac.org
- outcome: Live hosted opensac.org website
+ objective: Deploy react application to openfresno.org
+ outcome: Live hosted openfresno.org website
  launch:
  time_range: April 10, 2023 - April 24, 2023
  objective: Raise awareness of new website and branding on social media
- outcome: People interested in Open Sacramento are now aware of OpenSac.org
+ outcome: People interested in Open Fresno are now aware of OpenSac.org
  resources:
  screenshots:
- - opensac.jpg
+ - openfresno.jpg
  *
  * @param ghFullName
  * @param defaultBranchName
@@ -151,11 +151,11 @@ const localMetaYaml = yaml.parse(`
 title: OpenSac.org
 project_type: website
 project_status: active
-description: The Open Sacramento website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Sacramento area and beyond through technology
+description: The Open Fresno website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Fresno area and beyond through technology
 comments: This is a great project for new members to get used to working one issues and tasks. It is one of the more approachable projects.
 communications: Slack
-channels: \#proj-opensacorg
-image_url: opensac.jpg
+channels: \#proj-openfresnoorg
+image_url: openfresno.jpg
 project_partner: Dan Fey
 project_lead: Brianda Hernandez
 technical_lead: Nate Bass
@@ -172,7 +172,7 @@ contributing:
     backend: n/a
     technologies: To be announced
     version_control: Github
-    repo: /opensac
+    repo: /openfresno
     ways_to_contribute: Bug fixing, testing, maintenance; see issues on github
   project_manager:
     difficulty: easy
@@ -198,5 +198,5 @@ resources:
   meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
   office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:
-  - opensac.jpg
+  - openfresno.jpg
 `)

@@ -11,7 +11,7 @@ export default function HomeSectionDonate({ sectionType }) {
         className={`general-section-container heading-underline donate-section-underline`}
       >
         <h1 className={`heading-large-section-sub`}>
-          Help Support Open Sacramento
+          Help Support Open Fresno
         </h1>
       </div>
       <div className={`donate-section-paragraph-container`}>
@@ -19,7 +19,7 @@ export default function HomeSectionDonate({ sectionType }) {
           <span className={`home-section-${sectionType}-paragraph-bold`}>
             Your support, whether through donations or volunteering,
           </span>{' '}
-          is instrumental in driving positive change with Open Sacramento.
+          is instrumental in driving positive change with Open Fresno.
           <br />
           <br />
           <span>Donations fuel our technology</span>-driven initiatives that

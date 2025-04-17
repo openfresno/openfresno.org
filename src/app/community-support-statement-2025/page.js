@@ -29,14 +29,14 @@ export default function CommunitySupportStatementPage() {
         </div>
         <div className="prose">
           <p>
-            At <Link href="https://opensac.org/">Open Sacramento</Link>{" "}
+            At <Link href="https://openfresno.org/">Open Fresno</Link>{" "}
             (OpenSac) and <Link href="">OpenFresno</Link> (OpenFresno), we are
             dedicated to{" "}
             <b>
               fostering a community that is safe, respectful, and inclusive for
               all.
             </b>{" "}
-            We take our roles in the Greater Sacramento and Greater Fresno areas
+            We take our roles in the Greater Fresno and Greater Fresno areas
             seriously, and supporting diversity and inclusion is not about
             taking sides—it&apos;s about doing what&apos;s right for our
             community and being good people.
@@ -97,7 +97,7 @@ export default function CommunitySupportStatementPage() {
             Today, we{" "}
             <b>
               reaffirm our commitment to inviting and supporting individuals who
-              are working to make the Greater Sacramento and Greater Fresno
+              are working to make the Greater Fresno and Greater Fresno
               areas—and beyond—a better, more inclusive place.
             </b>{" "}
             We stand with all members of our community—whether you&apos;re

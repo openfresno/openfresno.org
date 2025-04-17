@@ -55,7 +55,7 @@ const ExtendedNavbarMenu = (visible) => {
           </Link>
           <Link
             className={'mobile-nav-link'}
-            href="https://www.meetup.com/code4sac/"
+            href="https://www.meetup.com/openfresno/"
           >
             Meetup
           </Link>
@@ -101,7 +101,7 @@ const ExtendedNavbarMenu = (visible) => {
           <div className="navbar-extended-text-wrapper-2">Pitch a Project</div>
           <p className="navbar-extended-desktop-section-content">
             Get the latest information and guidance for anyone who wants to
-            propose new projects or ideas to the Open Sacramento community.
+            propose new projects or ideas to the Open Fresno community.
           </p>
           <Link href="/pitch" className="navbar-extended-button">
             Pitch a Project
@@ -111,7 +111,7 @@ const ExtendedNavbarMenu = (visible) => {
           <p className="section-content-2">
             Join us for our weekly meetings on{' '}
             <Link
-              href="https://www.meetup.com/code4sac/"
+              href="https://www.meetup.com/openfresno/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-wrapper-3"

@@ -28,5 +28,5 @@ jobs:
         with:
           folder: out
           git-config-name: Automated
-          git-config-email: hello@opensac.org
+          git-config-email: hello@openfresno.org
           branch: gh-pages

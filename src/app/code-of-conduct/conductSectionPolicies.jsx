@@ -34,12 +34,12 @@ export default function conductSectionPolicies() {
 
       <div className={`conduct-policy-body-container`}>
         <h3 className={`conduct-sub-heading`}>
-          Open Sacramento fosters a community that:
+          Open Fresno fosters a community that:
         </h3>
 
         <p className={`conduct-item-paragraph`}>
           In addition to governing our own events by this policy, Open
-          Sacramento will only lend its brand and fund groups that offer an
+          Fresno will only lend its brand and fund groups that offer an
           anti-harassment policy to their attendees. For information on how to
           offer an anti-harassment policy to your group,{' '}
           <Link className={`conduct-paragraph-anchor`} href="/">
@@ -48,14 +48,14 @@ export default function conductSectionPolicies() {
         </p>
 
         <p className={`conduct-item-paragraph`}>
-          Open Sacramento is dedicated to providing a harassment-free experience
+          Open Fresno is dedicated to providing a harassment-free experience
           for everyone regardless of gender, gender identity and expression,
           sexual orientation, disability, physical appearance, body size, race,
           age, or religion. We do not tolerate harassment of staff, presenters,
           and participants in any form. Sexual language and imagery is not
-          appropriate for any Open Sacramento event or network activity,
+          appropriate for any Open Fresno event or network activity,
           including talks. Anyone in violation of these policies may expelled
-          from Open Sacramento network activities, events, and digital forums,
+          from Open Fresno network activities, events, and digital forums,
           at the discretion of the event organizer or forum administrator.
         </p>
 
@@ -73,7 +73,7 @@ export default function conductSectionPolicies() {
         <p className={`conduct-item-paragraph`}>
           If a participant engages in harassing behavior, the organizers may
           take any action they deem appropriate, including warning the offender
-          or expulsion from Open Sacramento network activities, events, and
+          or expulsion from Open Fresno network activities, events, and
           digital forums.
         </p>
 

@@ -31,7 +31,7 @@ export default function PitchPage() {
         <div className={`general-section-container section-paragraph-small`}>
           Share your innovative ideas and collaborate with our community to turn
           them into reality. Pitch your project to make a positive impact on
-          Sacramento using technology and civic engagement.
+          Fresno using technology and civic engagement.
         </div>
       </section>
       <SidebarSection sectionType={SectionType.dark}>
@@ -42,7 +42,7 @@ export default function PitchPage() {
             description="How to Start a New Project"
           >
             Ready to turn your civic tech idea into reality? Follow these simple
-            steps to pitch your project idea to Open Sacramento.
+            steps to pitch your project idea to Open Fresno.
           </HeaderUnderline>
         </div>
         <Steps sectionType={SectionType.dark} steps={instructionData}></Steps>

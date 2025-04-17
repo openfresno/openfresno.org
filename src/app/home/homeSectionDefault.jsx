@@ -11,14 +11,14 @@ export default function HomeSectionDefault({ sectionType }) {
         <h1 className={`general-heading-section`}>Why volunteer</h1>
         <h2 className={`sub-heading`}>
           Empower Change with <br />
-          Open Sacramento
+          Open Fresno
         </h2>
       </div>
 
       <div className={`general-section-container`}>
         <p className={`section-paragraph`}>
           <span className={`paragraph-bold`}>Ready to make a difference? </span>
-          Join us at Open Sacramento and use your skills to drive positive
+          Join us at Open Fresno and use your skills to drive positive
           change through technology and collaboration.
           <span className={`paragraph-bold`}>
             {' '}

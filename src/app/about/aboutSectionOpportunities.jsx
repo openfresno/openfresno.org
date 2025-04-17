@@ -23,9 +23,9 @@ export default function AboutSectionOpportunities({ sectionType }) {
             <span className={`paragraph-bold`}>
               Are you passionate about civic tech leadership?
             </span>{' '}
-            Open Sacramento invites you to join our Core Team, organizing
+            Open Fresno invites you to join our Core Team, organizing
             events, fostering partnerships, and driving community impact. Shape
-            Sacramento&apos;s civic innovation future – connect with us and
+            Fresno&apos;s civic innovation future – connect with us and
             explore joining our dedicated team.
           </p>
         </div>
