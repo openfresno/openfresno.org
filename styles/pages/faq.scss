@@ -42,11 +42,12 @@ FAQ page layout.
 
 .faq-nav a {
   @include mixins.nav-semi-bold;
-  color: variables.$primary-500;
+  color: variables.$neutral-50;
   text-decoration: none;
   margin-right: 20px;
   display: inline-block;
   padding: 5px 0;
+  text-decoration: underline;
 
   @media (max-width: variables.$screen-lg) {
     font-size: 16px;
