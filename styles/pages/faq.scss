@@ -23,6 +23,10 @@ FAQ page layout.
   }
 }
 
+.faq-container {
+  background-color: variables.$secondary-500;
+}
+
 .faq-nav-light {
   color: variables.$neutral-900;
   border: 1px solid variables.$primary-500;
