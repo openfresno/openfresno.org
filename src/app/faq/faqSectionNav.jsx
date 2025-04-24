@@ -6,10 +6,10 @@ import Link from 'next/link'
  */
 export default function FaqSectionNav({ topics, sectionType }) {
   return (
-    <section className="faq-container">
-      <nav className={`faq-nav faq-nav-${sectionType}`}>
+    <section className="faq-container" >
+      <nav className={`faq-nav faq-nav-${sectionType}`}> 
         {topics.map((item) => (
-          <Link key={item.slug} className="nav-link" href={`#${item.slug}`}>
+          <Link key={item.slug} className="nav-link"  href={`#${item.slug}`}>
             {item.text}
           </Link>
         ))}
