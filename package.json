@@ -2,7 +2,7 @@
   "name": "openfresno.org",
   "version": "3.0.0-alpha",
   "description": "Website for Open Fresno",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -27,36 +27,36 @@
   "homepage": "https://github.com/openfresno/openfresno.org#readme",
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@tailwindcss/postcss": "^4.1.3",
+    "@tailwindcss/postcss": "^4.1.10",
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^4.5.2",
     "concurrently": "^9.1.2",
-    "eslint": "^9.24.0",
-    "eslint-config-next": "15.2.3",
-    "jsdom": "^26.0.0",
-    "next": "^15.3.0",
-    "postcss": "^8.5.3",
+    "eslint": "^9.29.0",
+    "eslint-config-next": "15.3.4",
+    "jsdom": "^26.1.0",
+    "next": "^15.3.4",
+    "postcss": "^8.5.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "sass": "^1.86.3",
-    "tailwindcss": "^4.0.13",
-    "vitest": "^3.1.1"
+    "sass": "^1.89.2",
+    "tailwindcss": "^4.1.10",
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
-    "@mui/material": "^7.0.2",
-    "@next/mdx": "^15.3.0",
+    "@mui/material": "^7.1.1",
+    "@next/mdx": "^15.3.4",
     "@types/mdx": "^2.0.13",
     "keen-slider": "^6.8.6",
     "moment": "^2.30.1",
     "next-mdx-remote": "^5.0.0",
     "prop-types": "^15.8.1",
     "swr": "^2.3.3",
-    "yaml": "^2.7.1"
+    "yaml": "^2.8.0"
   }
 }
