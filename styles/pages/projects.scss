@@ -1,6 +1,6 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
-@use '../base/animations';
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../base/animations";
 
 /*
 Projects page layout.
@@ -70,15 +70,15 @@ Projects page layout.
 
     li {
       &:first-child {
-        list-style-image: url('/img/meeting-card/calender.svg');
+        list-style-image: url("/img/meeting-card/calender.svg");
       }
 
       &:nth-child(2) {
-        list-style-image: url('/img/meeting-card/clock.svg');
+        list-style-image: url("/img/meeting-card/clock.svg");
       }
 
       &:nth-child(3) {
-        list-style-image: url('/img/meeting-card/document-txt.svg');
+        list-style-image: url("/img/meeting-card/document-txt.svg");
       }
     }
   }
@@ -141,23 +141,23 @@ Projects page layout.
     position: relative;
 
     /* clears the ‘X’ from Internet Explorer */
-    input[type='search']::-ms-clear {
+    input[type="search"]::-ms-clear {
       display: none;
       width: 0;
       height: 0;
     }
 
-    input[type='search']::-ms-reveal {
+    input[type="search"]::-ms-reveal {
       display: none;
       width: 0;
       height: 0;
     }
 
     /* clears the ‘X’ from Chrome */
-    input[type='search']::-webkit-search-decoration,
-    input[type='search']::-webkit-search-cancel-button,
-    input[type='search']::-webkit-search-results-button,
-    input[type='search']::-webkit-search-results-decoration {
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
       -webkit-appearance: none;
     }
 
@@ -192,7 +192,7 @@ Projects page layout.
       margin-top: 4px;
       padding: 10px 16px;
       appearance: none;
-      background-image: url('/img/form-element/chevron-down.svg');
+      background-image: url("/img/form-element/chevron-down.svg");
       background-repeat: no-repeat;
       background-size: 16px 16px;
       background-position: right 10px top 50%;
@@ -318,7 +318,7 @@ details h4 {
 
 .projects-question a::after,
 details h4::after {
-  content: '';
+  content: "";
   flex-shrink: 0;
   margin-left: auto;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 6.5V12.5M12 12.5V18.5M12 12.5H18M12 12.5H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
@@ -333,7 +333,7 @@ details h4::after {
 
 .projects-question.question-open a::after,
 details[open] h4::after {
-  content: '';
+  content: "";
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 12H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
 }
 

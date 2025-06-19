@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 /**
  * Home Partnerships Section
@@ -8,7 +8,7 @@ import Link from 'next/link'
 export default function HomeSectionPartnership({ sectionType }) {
   return (
     <section className={`general-section-${sectionType} partnership-section`}>
-      <div className={'heading-underline-partnership'}>
+      <div className={"heading-underline-partnership"}>
         <h1 className={`heading-large-section-sub`}>
           Our Collaborations and Partnerships
         </h1>
@@ -49,5 +49,5 @@ export default function HomeSectionPartnership({ sectionType }) {
         </Link>
       </div>
     </section>
-  )
+  );
 }

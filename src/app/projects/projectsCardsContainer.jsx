@@ -1,5 +1,5 @@
-import ProjectCard from '@/app/projects/projectCard'
-import moment from 'moment'
+import ProjectCard from "@/app/projects/projectCard";
+import moment from "moment";
 
 const ProjectsCardsContainer = ({
   error,
@@ -16,8 +16,8 @@ const ProjectsCardsContainer = ({
           projectStatus="."
           projectTitle="Loading..."
           projectText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin euismod aliquet ligula, eu efficitur quam accumsan nec. Maecenas lobortis, justo eget commodo vehicula."
-          tags={['loading']}
-          lastUpdatedTimestamp={moment('2024-05-02T03:07:22Z')}
+          tags={["loading"]}
+          lastUpdatedTimestamp={moment("2024-05-02T03:07:22Z")}
         />
       ))}
     </div>
@@ -25,8 +25,8 @@ const ProjectsCardsContainer = ({
     <div className={`project-cards-load-status-container`}>
       <span className={`project-cards-load-status-text`}>
         {error
-          ? 'Failed to load...'
-          : 'There are no projects that meet the search criteria...'}
+          ? "Failed to load..."
+          : "There are no projects that meet the search criteria..."}
       </span>
     </div>
   ) : (
@@ -41,12 +41,12 @@ const ProjectsCardsContainer = ({
           imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
           pageUrl={`/projects/${project.name}/#project-section-start`}
           githubUrl={project.html_url}
-          tags={project.meta.tags.split(',')}
+          tags={project.meta.tags.split(",")}
           lastUpdatedTimestamp={moment(project.updated_at)}
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default ProjectsCardsContainer
+export default ProjectsCardsContainer;

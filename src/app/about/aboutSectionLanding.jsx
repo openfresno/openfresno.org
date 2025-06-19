@@ -17,13 +17,13 @@ export default function AboutSectionLanding({ sectionType }) {
           <span className={`paragraph-bold`}>
             We are a passionate and diverse group of technologists, developers,
             designers, and civic-minded individuals united by a common goal:
-          </span>{' '}
+          </span>{" "}
           leveraging technology and open data to address civic challenges and
-          enhance public services in the Fresno area. Our community thrives
-          on collaboration, innovation, and a shared commitment to driving
-          positive change.
+          enhance public services in the Fresno area. Our community thrives on
+          collaboration, innovation, and a shared commitment to driving positive
+          change.
         </p>
       </div>
     </section>
-  )
+  );
 }

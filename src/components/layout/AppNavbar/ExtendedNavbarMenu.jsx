@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import Link from 'next/link'
+import React, { useState } from "react";
+import Link from "next/link";
 
 /**
  * Dropdown menu for navbar.
@@ -7,33 +7,33 @@ import Link from 'next/link'
  */
 const ExtendedNavbarMenu = (visible) => {
   function hide() {
-    visible = false
+    visible = false;
   }
 
-  const [mobileNavPosition, toggleMobileNavPosition] = useState(false)
+  const [mobileNavPosition, toggleMobileNavPosition] = useState(false);
 
   return (
-    <div className="dropdown-menu" style={visible ? {} : { display: 'none' }}>
-      <div className={'navbar-extended-mobile-container'}>
+    <div className="dropdown-menu" style={visible ? {} : { display: "none" }}>
+      <div className={"navbar-extended-mobile-container"}>
         <div
           className={`navbar-extended-mobile-content`}
-          style={mobileNavPosition ? { display: 'none' } : {}}
+          style={mobileNavPosition ? { display: "none" } : {}}
         >
-          <Link className={'mobile-nav-link'} href="/">
+          <Link className={"mobile-nav-link"} href="/">
             Home
           </Link>
-          <Link className={'mobile-nav-link'} href="/about">
+          <Link className={"mobile-nav-link"} href="/about">
             About
           </Link>
-          <Link className={'mobile-nav-link'} href="/contact">
+          <Link className={"mobile-nav-link"} href="/contact">
             Contact
           </Link>
-          <Link className={'mobile-nav-link'} href="/donate">
+          <Link className={"mobile-nav-link"} href="/donate">
             Donate
           </Link>
           <div>
             <span
-              className={'navbar-extended-mobile-content-button-01'}
+              className={"navbar-extended-mobile-content-button-01"}
               onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
             >
               Get Involved
@@ -41,30 +41,30 @@ const ExtendedNavbarMenu = (visible) => {
           </div>
         </div>
         <div
-          className={'navbar-extended-mobile-content'}
-          style={!mobileNavPosition ? { display: 'none' } : {}}
+          className={"navbar-extended-mobile-content"}
+          style={!mobileNavPosition ? { display: "none" } : {}}
         >
-          <Link className={'mobile-nav-link'} href="/get-started">
+          <Link className={"mobile-nav-link"} href="/get-started">
             Get Started
           </Link>
-          <Link className={'mobile-nav-link'} href="/projects">
+          <Link className={"mobile-nav-link"} href="/projects">
             Projects
           </Link>
-          <Link className={'mobile-nav-link'} href="/pitch">
+          <Link className={"mobile-nav-link"} href="/pitch">
             Pitch a Project
           </Link>
           <Link
-            className={'mobile-nav-link'}
+            className={"mobile-nav-link"}
             href="https://www.meetup.com/openfresno/"
           >
             Meetup
           </Link>
-          <Link className={'mobile-nav-link'} href="/faq">
+          <Link className={"mobile-nav-link"} href="/faq">
             FAQs
           </Link>
           <div>
             <span
-              className={'navbar-extended-mobile-content-button-02'}
+              className={"navbar-extended-mobile-content-button-02"}
               onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
             >
               Back
@@ -72,7 +72,7 @@ const ExtendedNavbarMenu = (visible) => {
           </div>
         </div>
       </div>
-      <div className={'navbar-extended-desktop-container container-xxl'}>
+      <div className={"navbar-extended-desktop-container container-xxl"}>
         <div className="navbar-extended-desktop-section-item">
           <div className="navbar-extended-text-wrapper-2">Get Started</div>
           <p className="navbar-extended-desktop-section-content">
@@ -109,7 +109,7 @@ const ExtendedNavbarMenu = (visible) => {
         </div>
         <div className="navbar-extended-desktop-section-item">
           <p className="section-content-2">
-            Join us for our weekly meetings on{' '}
+            Join us for our weekly meetings on{" "}
             <Link
               href="https://www.meetup.com/openfresno/"
               target="_blank"
@@ -121,7 +121,7 @@ const ExtendedNavbarMenu = (visible) => {
             .
           </p>
           <p className="section-content-2">
-            For any questions, visit our{' '}
+            For any questions, visit our{" "}
             <Link href="/faq" className="text-wrapper-3">
               FAQs
             </Link>
@@ -130,7 +130,7 @@ const ExtendedNavbarMenu = (visible) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ExtendedNavbarMenu
+export default ExtendedNavbarMenu;

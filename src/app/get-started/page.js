@@ -1,17 +1,17 @@
-import HeaderUnderline from '../../components/layout/HeaderUnderline'
-import SidebarSection from '../../components/layout/SidebarSection'
-import Steps from '../../components/ui/Steps'
-import instructionData from './instructions.json'
-import AppLayout from '@/components/layout/AppLayout'
+import HeaderUnderline from "../../components/layout/HeaderUnderline";
+import SidebarSection from "../../components/layout/SidebarSection";
+import Steps from "../../components/ui/Steps";
+import instructionData from "./instructions.json";
+import AppLayout from "@/components/layout/AppLayout";
 
 /**
  * Section type. Displays light or dark themes.
  * @type {{light: string, dark: string}}
  */
 export const SectionType = {
-  light: 'light',
-  dark: 'dark',
-}
+  light: "light",
+  dark: "dark",
+};
 
 /**
  * Get started page.
@@ -25,19 +25,19 @@ export default function GetStartedPage() {
           title="Get started"
           description="Ready to Volunteer with Open Fresno"
           large={true}
-          className={'general-section-container '}
+          className={"general-section-container "}
         />
         <div
           className={`general-section-container section-${SectionType.light} section-paragraph`}
         >
           We&apos;re thrilled that you&apos;re eager to join our community of
           civic-minded individuals and make a positive impact on Fresno.
-          Volunteering with Open Fresno is a rewarding experience that
-          allows you to use your skills for the betterment of our city.{' '}
+          Volunteering with Open Fresno is a rewarding experience that allows
+          you to use your skills for the betterment of our city.{" "}
           <span className={`paragraph-bold`}>
             Whether you&apos;re a designer, developer, or anyone else passionate
             about civic tech,
-          </span>{' '}
+          </span>{" "}
           you&apos;ll find step-by-step instructions below to help you get
           started on your journey of civic tech and community empowerment.
         </div>
@@ -45,7 +45,7 @@ export default function GetStartedPage() {
       <SidebarSection sectionType={SectionType.dark}>
         <div className={`sidebar-info-container`}>
           <HeaderUnderline
-            className={'split-section-content-container'}
+            className={"split-section-content-container"}
             sectionType={SectionType.dark}
             title="Getting started"
             description="Steps to Volunteer"
@@ -59,5 +59,5 @@ export default function GetStartedPage() {
         <Steps sectionType={SectionType.dark} steps={instructionData}></Steps>
       </SidebarSection>
     </AppLayout>
-  )
+  );
 }

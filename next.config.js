@@ -1,17 +1,17 @@
-const path = require('path')
-const withMDX = require('@next/mdx')()
+const path = require("path");
+const withMDX = require("@next/mdx")();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: "export",
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   eslint: {
     ignoreDuringBuilds: true,
   },
-  transpilePackages: ['next-mdx-remote'],
-}
+  transpilePackages: ["next-mdx-remote"],
+};
 
-module.exports = withMDX(nextConfig)
+module.exports = withMDX(nextConfig);

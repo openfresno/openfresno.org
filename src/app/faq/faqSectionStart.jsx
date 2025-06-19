@@ -25,5 +25,5 @@ export default function FaqSectionStart({ sectionType }) {
         </p>
       </div>
     </section>
-  )
+  );
 }

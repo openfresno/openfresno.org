@@ -1,35 +1,35 @@
-import moment from 'moment'
-import SingleProjectsRoadmapMilestone from './singleProjectsRoadmapMilestone.jsx'
+import moment from "moment";
+import SingleProjectsRoadmapMilestone from "./singleProjectsRoadmapMilestone.jsx";
 
 export default function SingleProjectsRoadmap({ data }) {
-  const milestones = parseRoadmapMilestones(data.meta.roadmap)
-  parseRoadmapTimelineStatus(data.meta.roadmap)
+  const milestones = parseRoadmapMilestones(data.meta.roadmap);
+  parseRoadmapTimelineStatus(data.meta.roadmap);
 
   function parseRoadmapMilestones(roadmap) {
-    let roadmapKeys = Object.keys(roadmap)
+    let roadmapKeys = Object.keys(roadmap);
     roadmapKeys = roadmapKeys.filter(
       (key) => roadmap[key] !== null && roadmap[key].time_range,
-    )
-    return roadmapKeys
+    );
+    return roadmapKeys;
   }
 
   function parseRoadmapTimelineStatus(roadmap) {
-    const currentDate = moment(moment(), 'MMMM D, YYYY')
+    const currentDate = moment(moment(), "MMMM D, YYYY");
 
     milestones.map((milestone) => {
       if (roadmap[milestone].time_range) {
         const t = roadmap[milestone].time_range
-          .split('-')
-          .map((date) => moment(date, 'MMMM D, YYYY'))
+          .split("-")
+          .map((date) => moment(date, "MMMM D, YYYY"));
         if (t[1].isBefore(t[currentDate])) {
-          data.meta.roadmap[milestone].status = 'completed'
+          data.meta.roadmap[milestone].status = "completed";
         } else if (t[0].isAfter(currentDate)) {
-          data.meta.roadmap[milestone].status = 'not started'
+          data.meta.roadmap[milestone].status = "not started";
         } else {
-          data.meta.roadmap[milestone].status = 'in progress'
+          data.meta.roadmap[milestone].status = "in progress";
         }
       }
-    })
+    });
   }
 
   return (
@@ -55,7 +55,7 @@ export default function SingleProjectsRoadmap({ data }) {
                   milestone={milestone}
                   isLastIndex={index === milestones.length - 1}
                 />
-              )
+              );
             })}
           </div>
         </div>
@@ -78,5 +78,5 @@ export default function SingleProjectsRoadmap({ data }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react";
 
 /**
  * Hook to check if component has mounted
  * @returns {boolean} - Whether the component has mounted
  */
 function useHasMounted() {
-  const [hasMounted, setHasMounted] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false);
 
   useEffect(() => {
-    setHasMounted(true)
-  }, [])
+    setHasMounted(true);
+  }, []);
 
-  return hasMounted
+  return hasMounted;
 }
 
 /**
@@ -24,41 +24,41 @@ function useHasMounted() {
  */
 function useLocalStorage(key, initialValue) {
   // Initialize with initialValue on server side
-  const [storedValue, setStoredValue] = useState(initialValue)
-  const [isLoaded, setIsLoaded] = useState(false)
-  const hasMounted = useHasMounted()
+  const [storedValue, setStoredValue] = useState(initialValue);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const hasMounted = useHasMounted();
 
   // Only run on client-side after mount
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       try {
-        const item = window.localStorage.getItem(key)
+        const item = window.localStorage.getItem(key);
         if (item) {
-          setStoredValue(JSON.parse(item))
+          setStoredValue(JSON.parse(item));
         }
-        setIsLoaded(true)
+        setIsLoaded(true);
       } catch (error) {
-        console.error(`Error reading localStorage key "${key}":`, error)
-        setIsLoaded(true)
+        console.error(`Error reading localStorage key "${key}":`, error);
+        setIsLoaded(true);
       }
     }
-  }, [key])
+  }, [key]);
 
   const setValue = (value) => {
     try {
       const valueToStore =
-        value instanceof Function ? value(storedValue) : value
-      setStoredValue(valueToStore)
+        value instanceof Function ? value(storedValue) : value;
+      setStoredValue(valueToStore);
 
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore))
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
       }
     } catch (error) {
-      console.error(`Error setting localStorage key "${key}":`, error)
+      console.error(`Error setting localStorage key "${key}":`, error);
     }
-  }
+  };
 
-  return [storedValue, setValue, isLoaded && hasMounted]
+  return [storedValue, setValue, isLoaded && hasMounted];
 }
 
 /**
@@ -68,18 +68,18 @@ function useLocalStorage(key, initialValue) {
  * @returns {Object} - { visible, dismissBanner }
  */
 export default function useBanner({ id }) {
-  const storageKey = `banner_dismissed_${id}`
+  const storageKey = `banner_dismissed_${id}`;
   const [isDismissed, setIsDismissed, isReady] = useLocalStorage(
     storageKey,
     false,
-  )
+  );
 
   const dismissBanner = () => {
-    setIsDismissed(true)
-  }
+    setIsDismissed(true);
+  };
 
   return {
     visible: isReady ? !isDismissed : false,
     dismissBanner,
-  }
+  };
 }

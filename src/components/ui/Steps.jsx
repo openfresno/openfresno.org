@@ -24,5 +24,5 @@ export default function Steps({ children, sectionType, steps }) {
         ))}
       </div>
     </>
-  )
+  );
 }

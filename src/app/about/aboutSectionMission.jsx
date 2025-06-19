@@ -17,10 +17,10 @@ export default function AboutSectionMission({ sectionType }) {
           </h2>
         </div>
         <p className={`section-paragraph`}>
-          At Open Fresno, we roll up our sleeves and dive into a wide range
-          of technology-driven projects. From open data initiatives and
-          government service enhancements to community engagement platforms and
-          education campaigns,{' '}
+          At Open Fresno, we roll up our sleeves and dive into a wide range of
+          technology-driven projects. From open data initiatives and government
+          service enhancements to community engagement platforms and education
+          campaigns,{" "}
           <span className={`paragraph-bold`}>
             we&apos;re dedicated to creating innovative solutions that empower
             citizens and make our city a better place to live.
@@ -33,5 +33,5 @@ export default function AboutSectionMission({ sectionType }) {
         className={`about-action-image`}
       />
     </section>
-  )
+  );
 }

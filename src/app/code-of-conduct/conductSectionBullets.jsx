@@ -139,9 +139,9 @@ export default function conductSectionBullets({ sectionType }) {
 
       <p className={`conduct-sub-heading`}>
         Open Fresno reserves the right to ask anyone in violation of these
-        policies not to participate in Open Fresno network activities,
-        events, and digital forums.
+        policies not to participate in Open Fresno network activities, events,
+        and digital forums.
       </p>
     </section>
-  )
+  );
 }

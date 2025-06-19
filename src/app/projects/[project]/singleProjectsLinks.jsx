@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const SingleProjectsLinks = () => {
   return (
@@ -22,7 +22,7 @@ const SingleProjectsLinks = () => {
         How to Volunteer
       </Link>
     </section>
-  )
-}
+  );
+};
 
-export default SingleProjectsLinks
+export default SingleProjectsLinks;

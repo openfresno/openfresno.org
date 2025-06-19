@@ -1,12 +1,12 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
-@use '../base/animations';
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../base/animations";
 
 /*
 Home page layout.
  */
 .home-landing-image {
-  background-image: url('/img/towerbridgenight.png');
+  background-image: url("/img/towerbridgenight.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -113,7 +113,7 @@ Home page layout.
 }
 
 .home-about-image {
-  background-image: url('/img/open_data_day_curved.png');
+  background-image: url("/img/open_data_day_curved.png");
   background-repeat: no-repeat;
   background-size: 45vw 40vw;
   background-position: right center;
@@ -264,7 +264,7 @@ Home page layout.
 }
 
 .heading-underline-partnership::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 1px;
   width: 93px;

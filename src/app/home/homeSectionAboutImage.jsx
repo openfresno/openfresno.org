@@ -24,7 +24,7 @@ export default function HomeSectionAboutImage({ sectionType }) {
           talents, we transform ideas into tangible solutions that impact lives
           throughout the Fresno area. Together, we drive innovation forward,
           building a future where open source technology empowers citizens and
-          uplifts our city.{' '}
+          uplifts our city.{" "}
           <span className={`paragraph-bold`}>
             Join us in driving innovation through open-source tech and
             empowering our community!
@@ -37,5 +37,5 @@ export default function HomeSectionAboutImage({ sectionType }) {
         className={`home-section-action-image`}
       />
     </section>
-  )
+  );
 }

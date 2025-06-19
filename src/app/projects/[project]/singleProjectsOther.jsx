@@ -50,5 +50,5 @@ export default function SingleProjectsOther({ data }) {
       </div>
       <hr className={`project-info-line`} />
     </section>
-  )
+  );
 }

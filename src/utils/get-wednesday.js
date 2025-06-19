@@ -1,38 +1,41 @@
-const moment = require('moment')
+const moment = require("moment");
 
 export const getWednesday = (nextMonth) => {
-  let currentMonth = nextMonth ? moment().month() + 1 : moment().month()
-  let currentYear = moment().year()
+  let currentMonth = nextMonth ? moment().month() + 1 : moment().month();
+  let currentYear = moment().year();
 
   if (currentMonth === 12) {
-    currentMonth = 0
-    currentYear = currentYear + 1
+    currentMonth = 0;
+    currentYear = currentYear + 1;
   }
 
-  const currentDay = nextMonth ? 1 : moment().date()
+  const currentDay = nextMonth ? 1 : moment().date();
 
   const daysInMonth = moment()
     .year(currentYear)
     .month(currentMonth)
-    .daysInMonth()
+    .daysInMonth();
 
-  let wednesdays = []
+  let wednesdays = [];
 
   for (let day = currentDay; day <= daysInMonth; day++) {
-    const currentDate = moment().year(currentYear).month(currentMonth).date(day)
+    const currentDate = moment()
+      .year(currentYear)
+      .month(currentMonth)
+      .date(day);
 
     if (currentDate.day() === 3) {
-      wednesdays.push(currentDate.date())
+      wednesdays.push(currentDate.date());
     }
   }
 
-  wednesdays.pop()
+  wednesdays.pop();
 
-  if (wednesdays.length === 0) return getWednesday(1)
+  if (wednesdays.length === 0) return getWednesday(1);
   else
     return moment()
       .year(currentYear)
       .month(currentMonth)
       .date(wednesdays[0])
-      .format('dddd, MMMM D, YYYY')
-}
+      .format("dddd, MMMM D, YYYY");
+};

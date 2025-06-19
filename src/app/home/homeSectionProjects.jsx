@@ -1,6 +1,6 @@
-'use client'
-import { Slider } from '@/components/ui'
-import Button from '../../components/ui/buttons'
+"use client";
+import { Slider } from "@/components/ui";
+import Button from "../../components/ui/buttons";
 
 /**
  * Home projects section.
@@ -25,7 +25,7 @@ export default function HomeSectionProjects({ sectionType }) {
           Fresno. From open data initiatives to government services and
           community platforms,
           <span className={`paragraph-bold`}>
-            {' '}
+            {" "}
             our open-source tech and collaboration drive innovation
           </span>
           for transparent, efficient, engaged local governance.
@@ -38,7 +38,7 @@ export default function HomeSectionProjects({ sectionType }) {
       </div>
 
       <div className="test">
-        <Slider containerClass={'navigation-wrapper'}>
+        <Slider containerClass={"navigation-wrapper"}>
           <div className="keen-slider__slide">
             <div className="slide-content">
               <h2 className="sub-heading">Learning Blocks</h2>
@@ -84,5 +84,5 @@ export default function HomeSectionProjects({ sectionType }) {
         </Slider>
       </div>
     </section>
-  )
+  );
 }

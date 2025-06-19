@@ -9,11 +9,11 @@ export default function SingleProjectsRoadmapMilestone({
         <img
           className={`project-roadmap-icon`}
           src={
-            data.meta.roadmap[milestone].status === 'completed'
-              ? '/img/project-roadmap/check-circle.svg'
-              : data.meta.roadmap[milestone].status === 'in progress'
-                ? '/img/project-roadmap/arrow-circle-right.svg'
-                : '/img/project-roadmap/circle-stop.svg'
+            data.meta.roadmap[milestone].status === "completed"
+              ? "/img/project-roadmap/check-circle.svg"
+              : data.meta.roadmap[milestone].status === "in progress"
+                ? "/img/project-roadmap/arrow-circle-right.svg"
+                : "/img/project-roadmap/circle-stop.svg"
           }
           alt="Project roadmap status image."
         />
@@ -28,13 +28,13 @@ export default function SingleProjectsRoadmapMilestone({
         <img
           className={`project-roadmap-icon-line`}
           src={
-            data.meta.roadmap[milestone].status === 'completed'
-              ? '/img/project-roadmap/line-4.svg'
-              : '/img/project-roadmap/line-5.svg'
+            data.meta.roadmap[milestone].status === "completed"
+              ? "/img/project-roadmap/line-4.svg"
+              : "/img/project-roadmap/line-5.svg"
           }
           alt="Project roadmap divider line."
         />
       )}
     </>
-  )
+  );
 }

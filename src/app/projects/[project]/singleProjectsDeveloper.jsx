@@ -61,5 +61,5 @@ export default function SingleProjectsDeveloper({ data }) {
       </div>
       <hr className={`project-info-line`} />
     </section>
-  )
+  );
 }

@@ -16,9 +16,9 @@ export default function HomeSectionDefault2({ sectionType }) {
         <p className={`section-paragraph`}>
           Open Fresno is
           <span className={`paragraph-bold`}>
-            {' '}
+            {" "}
             a community of technologists, developers, designers, and
-            civic-minded individuals{' '}
+            civic-minded individuals{" "}
           </span>
           who come together to use technology and open data to address civic
           challenges and improve public services in the Fresno area.
@@ -29,5 +29,5 @@ export default function HomeSectionDefault2({ sectionType }) {
         </p>
       </div>
     </section>
-  )
+  );
 }

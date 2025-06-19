@@ -5,33 +5,33 @@
 
 const ProjectSearch = ({ data, setProjectsData }) => {
   const search = (formData) => {
-    const projectSearch = formData.get('project-search').toLowerCase()
-    const projectFilter = formData.get('project-filter')
-    const projectSortBy = formData.get('project-sort-by')
-    let filteredProjects = data
+    const projectSearch = formData.get("project-search").toLowerCase();
+    const projectFilter = formData.get("project-filter");
+    const projectSortBy = formData.get("project-sort-by");
+    let filteredProjects = data;
 
     if (projectSearch) {
       filteredProjects = filteredProjects.filter((project) =>
         project.meta.title.toLowerCase().includes(projectSearch),
-      )
+      );
     }
 
-    if (projectFilter !== 'all') {
+    if (projectFilter !== "all") {
       filteredProjects = filteredProjects.filter(
         (project) => project.meta.project_status === projectFilter,
-      )
+      );
     }
 
     filteredProjects = filteredProjects.sort(
       (a, b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy]),
-    )
-    setProjectsData([...filteredProjects])
-  }
+    );
+    setProjectsData([...filteredProjects]);
+  };
 
   const handleChange = (e) => {
-    const formData = new FormData(e.target.form)
-    search(formData)
-  }
+    const formData = new FormData(e.target.form);
+    search(formData);
+  };
 
   return (
     <div className={`project-search-section`}>
@@ -73,7 +73,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectSearch
+export default ProjectSearch;

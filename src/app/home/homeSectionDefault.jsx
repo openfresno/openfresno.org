@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 /**
  * Home default section.
@@ -18,17 +18,17 @@ export default function HomeSectionDefault({ sectionType }) {
       <div className={`general-section-container`}>
         <p className={`section-paragraph`}>
           <span className={`paragraph-bold`}>Ready to make a difference? </span>
-          Join us at Open Fresno and use your skills to drive positive
-          change through technology and collaboration.
+          Join us at Open Fresno and use your skills to drive positive change
+          through technology and collaboration.
           <span className={`paragraph-bold`}>
-            {' '}
+            {" "}
             Whether you&apos;re a designer, developer, or anyone eager to
             volunteer, together we&apos;re enhancing community services,
             amplifying voices, and giving you the opportunity to improve your
             resume and portfolio.
-          </span>{' '}
+          </span>{" "}
           It&apos;s a journey of innovation and empowerment waiting for you.
-          Your impact starts{' '}
+          Your impact starts{" "}
           <Link href="/get-started" className={`home-section-paragraph-anchor`}>
             here
           </Link>
@@ -36,5 +36,5 @@ export default function HomeSectionDefault({ sectionType }) {
         </p>
       </div>
     </section>
-  )
+  );
 }
