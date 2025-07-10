@@ -1,4 +1,4 @@
-import Button from '../../components/ui/buttons'
+import Button from "../../components/ui/buttons";
 
 /**
  * Home services section.
@@ -67,5 +67,5 @@ export default function HomeSectionServices({ sectionType }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

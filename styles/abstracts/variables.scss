@@ -1,26 +1,44 @@
 /*
 Application color theme.
  */
-$secondary-50: #fffcf5;
 $neutral-50: #f7f7f8;
-$primary-100: #d6e0ff;
+$neutral-100: #eaeaec;
 $neutral-200: #d4d4d8;
-$secondary-200: #fff3cd;
-$neutral-300: #a9aab1;
-$secondary-300: #ffe69c;
+$neutral-300: #bfbfc5;
 $neutral-400: #a9aab1;
-$primary-400: #5c85ff;
-$neutral-500: #72727e;
-$primary-500: #112971;
-$secondary-500: #004491;
-$primary-600: #002db3;
-$neutral-700: #797a7b;
+$neutral-500: #72727d;
+$neutral-600: #55555e;
+$neutral-700: #3a3a40;
 $neutral-800: #1d1d20;
-$neutral-900: #060718;
-$primary-900: #00081f;
+$neutral-900: #060717;
+$primary-50: #f0f4fe;
+$primary-100: #d6e1fe;
+$primary-200: #adc4fc;
+$primary-300: #85a6fb;
+$primary-400: #5b89fa;
+$primary-500: #0d2866;
+$primary-600: #0034ae;
+$primary-700: #002377;
+$primary-800: #00113c;
+$primary-900: #00091e;
+$secondary-50: #fffcf5;
+$secondary-100: #fff9e7;
+$secondary-200: #fff2cf;
+$secondary-300: #ffe5a1;
+$secondary-400: #ffd874;
+$secondary-500: #ffbf32;
+$secondary-600: #ecaf2c;
+$secondary-700: #e9ad2e;
+$secondary-800: #251e0d;
 $secondary-900: #0c0900;
-$landing-background-color: #030303;
-$navbar-color: #060717;
+$shades-black: #000000;
+$shades-white: #ffffff;
+
+/*
+Brand colors.
+*/
+$landing-background-color: $neutral-50;
+$navbar-color: $neutral-50;
 $vivid-blue: #3155f5;
 
 /* 

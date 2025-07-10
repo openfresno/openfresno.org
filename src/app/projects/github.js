@@ -1,5 +1,5 @@
-import { githubOwner, githubProject } from '@/constants'
-import * as yaml from 'yaml'
+import { githubOwner, githubProject } from "@/constants";
+import * as yaml from "yaml";
 
 /**
  * Fetches project data from GitHub
@@ -19,11 +19,11 @@ import * as yaml from 'yaml'
  * @param ghFullResponses
  */
 export const fetchGithubProjectData = async (ghFullResponses) => {
-  const data = await Promise.all(ghFullResponses.map(fetchGithubSingleProject))
+  const data = await Promise.all(ghFullResponses.map(fetchGithubSingleProject));
 
   // Filter projects without a meta file
-  return data.filter((d) => d !== null)
-}
+  return data.filter((d) => d !== null);
+};
 
 /**
  * Fetches project data from GitHub
@@ -41,15 +41,15 @@ export const fetchGithubProjectData = async (ghFullResponses) => {
  * @param ghResponse
  */
 export const fetchGithubSingleProject = async (ghResponse) => {
-  const ghData = mapGhData(ghResponse)
-  const meta = await fetchMetaFile(ghData.full_name, ghData.default_branch)
+  const ghData = mapGhData(ghResponse);
+  const meta = await fetchMetaFile(ghData.full_name, ghData.default_branch);
   return meta
     ? {
         ...ghData,
         meta,
       }
-    : null
-}
+    : null;
+};
 
 // Response format here: https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28
 const mapGhData = (ghResponse) => ({
@@ -62,9 +62,9 @@ const mapGhData = (ghResponse) => ({
   api_url: ghResponse.url,
   created_at: ghResponse.created_at,
   updated_at: ghResponse.updated_at,
-})
+});
 
-const metaFile = 'meta.yml'
+const metaFile = "meta.yml";
 
 /**
  *
@@ -125,27 +125,27 @@ const metaFile = 'meta.yml'
  * @param defaultBranchName
  */
 const fetchMetaFile = async (ghFullName, defaultBranchName) => {
-  console.dir(`${ghFullName}/${githubProject}`)
-  console.dir(localMetaYaml)
+  console.dir(`${ghFullName}/${githubProject}`);
+  console.dir(localMetaYaml);
   if (
     ghFullName === `${githubOwner}/${githubProject}` &&
-    process.env.NODE_ENV === 'development'
+    process.env.NODE_ENV === "development"
   ) {
-    return localMetaYaml
+    return localMetaYaml;
   }
 
   const metaResponse = await fetch(
     `https://raw.githubusercontent.com/${ghFullName}/${defaultBranchName}/${metaFile}`,
-  )
+  );
   if (metaResponse.status === 404) {
-    return null
+    return null;
   } else if (!metaResponse.ok) {
-    throw new Error(`Error fetching meta file: ${await metaResponse.text()}`)
+    throw new Error(`Error fetching meta file: ${await metaResponse.text()}`);
   }
-  const textResponse = await metaResponse.text()
+  const textResponse = await metaResponse.text();
 
-  return yaml.parse(textResponse)
-}
+  return yaml.parse(textResponse);
+};
 
 const localMetaYaml = yaml.parse(`
 title: OpenSac.org
@@ -199,4 +199,4 @@ resources:
   office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:
   - openfresno.jpg
-`)
+`);

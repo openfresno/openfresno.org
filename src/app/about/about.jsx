@@ -1,17 +1,17 @@
-import AboutSectionLanding from './aboutSectionLanding'
-import AboutSectionCollage from './aboutSectionCollage'
-import AboutSectionMission from './aboutSectionMission'
-import AboutSectionTeam from './aboutSectionTeam'
-import AboutSectionOpportunities from './aboutSectionOpportunities'
+import AboutSectionLanding from "./aboutSectionLanding";
+import AboutSectionCollage from "./aboutSectionCollage";
+import AboutSectionMission from "./aboutSectionMission";
+import AboutSectionTeam from "./aboutSectionTeam";
+import AboutSectionOpportunities from "./aboutSectionOpportunities";
 
 /**
  * Section type. Displays light or dark themes.
  * @type {{light: string, dark: string}}
  */
 export const SectionType = {
-  light: 'light',
-  dark: 'dark',
-}
+  light: "light",
+  dark: "dark",
+};
 
 /**
  * About page.
@@ -26,5 +26,5 @@ export default function About() {
       <AboutSectionTeam sectionType={SectionType.light} />
       <AboutSectionOpportunities sectionType={SectionType.dark} />
     </div>
-  )
+  );
 }

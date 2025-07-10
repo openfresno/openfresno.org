@@ -1,8 +1,8 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function SingleProjectsResources({ data }) {
   if (!data.meta.resources) {
-    return <section id="resources" className={``}></section>
+    return <section id="resources" className={``}></section>;
   }
 
   return (
@@ -33,7 +33,7 @@ export default function SingleProjectsResources({ data }) {
       </div>
       {(() => {
         if (data.meta.resources.tutorials) {
-          let tutorialCounter = 1
+          let tutorialCounter = 1;
           return data.meta.resources.tutorials.map((link) => (
             <>
               <hr className={`project-info-line`} />
@@ -46,7 +46,7 @@ export default function SingleProjectsResources({ data }) {
                 </Link>
               </div>
             </>
-          ))
+          ));
         }
       })()}
       <hr className={`project-info-line`} />
@@ -64,5 +64,5 @@ export default function SingleProjectsResources({ data }) {
       </div>
       <hr className={`project-info-line`} />
     </section>
-  )
+  );
 }

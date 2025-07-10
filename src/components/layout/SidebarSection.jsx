@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 /**
  * Get started instructions section.
@@ -42,5 +42,5 @@ export default function SidebarSection({ children, sectionType }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

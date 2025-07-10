@@ -1,14 +1,14 @@
-'use client'
-import NameChangeSectionLanding from './nameChangeLanding'
+"use client";
+import NameChangeSectionLanding from "./nameChangeLanding";
 
 /**
  * Section type. Displays light or dark themes.
  * @type {{light: string, dark: string}}
  */
 export const SectionType = {
-  light: 'light',
-  dark: 'dark',
-}
+  light: "light",
+  dark: "dark",
+};
 
 /**
  * About page.
@@ -19,5 +19,5 @@ export default function NameChange() {
     <div className="">
       <NameChangeSectionLanding sectionType={SectionType.light} />
     </div>
-  )
+  );
 }

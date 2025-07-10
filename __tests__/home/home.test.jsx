@@ -1,93 +1,93 @@
-import { expect, test } from 'vitest'
-import { render, screen } from '@testing-library/react'
-import Home from '../../src/app/home/home'
+import { expect, test } from "vitest";
+import { render, screen } from "@testing-library/react";
+import Home from "../../src/app/home/home";
 
-render(<Home />)
+render(<Home />);
 
 /* 
 Renders the home element and checks if all components are rendering
 */
 
-test('HomeSectionLandingImage Renders in Home', () => {
+test("HomeSectionLandingImage Renders in Home", () => {
   expect(
-    screen.getByRole('heading', { level: 1, name: /we are Open Fresno/i }),
-  ).toBeDefined()
-})
+    screen.getByRole("heading", { level: 1, name: /we are Open Fresno/i }),
+  ).toBeDefined();
+});
 
-test('HomeSectionDefault2 Renders in Home', () => {
+test("HomeSectionDefault2 Renders in Home", () => {
   expect(
-    screen.getByRole('heading', { level: 1, name: /who we are/i }),
-  ).toBeDefined()
+    screen.getByRole("heading", { level: 1, name: /who we are/i }),
+  ).toBeDefined();
   expect(
-    screen.getByRole('heading', {
+    screen.getByRole("heading", {
       level: 2,
       name: /Building a Brighter Fresno Through Innovation and Technology/i,
     }),
-  ).toBeDefined()
-})
+  ).toBeDefined();
+});
 
-test('HomeSectionAboutImage Renders in Home', () => {
+test("HomeSectionAboutImage Renders in Home", () => {
   expect(
-    screen.getByRole('heading', { level: 1, name: /what we do/i }),
-  ).toBeDefined()
+    screen.getByRole("heading", { level: 1, name: /what we do/i }),
+  ).toBeDefined();
   expect(
-    screen.getByRole('heading', {
+    screen.getByRole("heading", {
       level: 2,
       name: /Building a Better Future in Fresno/i,
     }),
-  ).toBeDefined()
-})
+  ).toBeDefined();
+});
 
-test('HomeSectionServices Renders in Home', () => {
+test("HomeSectionServices Renders in Home", () => {
   expect(
-    screen.getByRole('heading', { level: 1, name: /our services/i }),
-  ).toBeDefined()
+    screen.getByRole("heading", { level: 1, name: /our services/i }),
+  ).toBeDefined();
   expect(
-    screen.getByRole('heading', {
+    screen.getByRole("heading", {
       level: 2,
       name: /Explore Our Engagement Options/i,
     }),
-  ).toBeDefined()
-})
+  ).toBeDefined();
+});
 
-test('HomeSectionDefault Renders in Home', () => {
+test("HomeSectionDefault Renders in Home", () => {
   expect(
-    screen.getByRole('heading', { level: 1, name: /why volunteer/i }),
-  ).toBeDefined()
+    screen.getByRole("heading", { level: 1, name: /why volunteer/i }),
+  ).toBeDefined();
   expect(
-    screen.getByRole('heading', {
+    screen.getByRole("heading", {
       level: 2,
       name: /Empower Change with Open Fresno/i,
     }),
-  ).toBeDefined()
-})
+  ).toBeDefined();
+});
 
-test('HomeSectionProjects Renders in Home', () => {
+test("HomeSectionProjects Renders in Home", () => {
   expect(
-    screen.getByRole('heading', { level: 1, name: /our projects/i }),
-  ).toBeDefined()
+    screen.getByRole("heading", { level: 1, name: /our projects/i }),
+  ).toBeDefined();
   expect(
-    screen.getByRole('heading', {
+    screen.getByRole("heading", {
       level: 2,
       name: /Driving Innovation Through Tech and Collaboration/i,
     }),
-  ).toBeDefined()
-})
+  ).toBeDefined();
+});
 
-test('HomeSectionPartnerships Renders in Home', () => {
+test("HomeSectionPartnerships Renders in Home", () => {
   expect(
-    screen.getByRole('heading', {
+    screen.getByRole("heading", {
       level: 1,
       name: /Our Collaborations and Partnerships/i,
     }),
-  ).toBeDefined()
-})
+  ).toBeDefined();
+});
 
-test('HomeSectionDonate Renders in Home', () => {
+test("HomeSectionDonate Renders in Home", () => {
   expect(
-    screen.getByRole('heading', {
+    screen.getByRole("heading", {
       level: 1,
       name: /Help Support Open Fresno/i,
     }),
-  ).toBeDefined()
-})
+  ).toBeDefined();
+});

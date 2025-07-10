@@ -1,4 +1,4 @@
-import Button from '../../components/ui/buttons'
+import Button from "../../components/ui/buttons";
 
 /**
  * Home donate section.
@@ -18,7 +18,7 @@ export default function HomeSectionDonate({ sectionType }) {
         <p className={`home-section-${sectionType}-paragraph`}>
           <span className={`home-section-${sectionType}-paragraph-bold`}>
             Your support, whether through donations or volunteering,
-          </span>{' '}
+          </span>{" "}
           is instrumental in driving positive change with Open Fresno.
           <br />
           <br />
@@ -35,7 +35,7 @@ export default function HomeSectionDonate({ sectionType }) {
           Together, we shape a better future for our city, amplifying voices,
           enhancing services, and driving innovation.
           <span>
-            {' '}
+            {" "}
             Join us today and be a catalyst for lasting, community-driven
             transformation!
           </span>
@@ -54,5 +54,5 @@ export default function HomeSectionDonate({ sectionType }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

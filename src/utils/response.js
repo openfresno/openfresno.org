@@ -1,1 +1,1 @@
-export const jsonResponse = (res) => res.json()
+export const jsonResponse = (res) => res.json();

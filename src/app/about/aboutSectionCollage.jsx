@@ -19,5 +19,5 @@ export default function AboutSectionCollage({ sectionType }) {
         />
       </div>
     </section>
-  )
+  );
 }

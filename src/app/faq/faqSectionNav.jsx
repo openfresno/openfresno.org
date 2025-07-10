@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 /**
  * Frequently-asked questions navigation section.
@@ -15,5 +15,5 @@ export default function FaqSectionNav({ topics, sectionType }) {
         ))}
       </nav>
     </section>
-  )
+  );
 }

@@ -29,9 +29,9 @@ export default function CommunitySupportStatementPage() {
         </div>
         <div className="prose">
           <p>
-            At <Link href="https://openfresno.org/">Open Fresno</Link>{" "}
-            (OpenSac) and <Link href="">OpenFresno</Link> (OpenFresno), we are
-            dedicated to{" "}
+            At <Link href="https://openfresno.org/">Open Fresno</Link> (OpenSac)
+            and <Link href="">OpenFresno</Link> (OpenFresno), we are dedicated
+            to{" "}
             <b>
               fostering a community that is safe, respectful, and inclusive for
               all.

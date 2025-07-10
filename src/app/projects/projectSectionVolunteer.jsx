@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 /**
  * Instructions for project page.
@@ -16,10 +16,9 @@ export default function projectSectionVolunteer() {
           <h2 className={`project-heading`}>Why Join Open Fresno?</h2>
         </div>
         <p className={`project-paragraph`}>
-          Join us at Open Fresno to collaborate on impactful civic tech
-          projects and connect with a diverse community of like-minded
-          individuals. It&apos;s a rewarding way to make a meaningful difference
-          in our city.
+          Join us at Open Fresno to collaborate on impactful civic tech projects
+          and connect with a diverse community of like-minded individuals.
+          It&apos;s a rewarding way to make a meaningful difference in our city.
         </p>
       </div>
       <div className={`project-volunteer-image-container`}>
@@ -37,5 +36,5 @@ export default function projectSectionVolunteer() {
         </p>
       </div>
     </section>
-  )
+  );
 }

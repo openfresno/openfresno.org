@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import ExtendedNavbarMenu from './ExtendedNavbarMenu'
-import { useEffect, useState } from 'react'
-import { usePathname } from 'next/navigation'
-import useBanner from '@/hooks/useBanner'
+import Link from "next/link";
+import ExtendedNavbarMenu from "./ExtendedNavbarMenu";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import useBanner from "@/hooks/useBanner";
 
 /**
  * Set toolbar opacity. Based on the scroll y-axis.
@@ -13,7 +13,7 @@ import useBanner from '@/hooks/useBanner'
  */
 function setOpacity(currentScrollHeight) {
   // Start transparent and reach full opacity by the amount in pixels.
-  return Math.min(currentScrollHeight / 520, 1)
+  return Math.min(currentScrollHeight / 520, 1);
 }
 
 /**
@@ -23,13 +23,13 @@ function setOpacity(currentScrollHeight) {
  * @returns {function(): void} Cleanup function to remove event listener
  */
 function registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight) {
-  setFadeLayout(true)
+  setFadeLayout(true);
   const onScroll = () => {
-    setCurrentScrollHeight(window.scrollY)
-  }
-  window.removeEventListener('scroll', onScroll)
-  window.addEventListener('scroll', onScroll, { passive: true })
-  return () => window.removeEventListener('scroll', onScroll)
+    setCurrentScrollHeight(window.scrollY);
+  };
+  window.removeEventListener("scroll", onScroll);
+  window.addEventListener("scroll", onScroll, { passive: true });
+  return () => window.removeEventListener("scroll", onScroll);
 }
 
 /**
@@ -40,25 +40,25 @@ function registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight) {
  * @returns {JSX.Element}
  */
 export default function AppNavbar({ fade = false }) {
-  const [extendedMenuVisible, showExtendedMenu] = useState(false)
-  const [fadeLayout, setFadeLayout] = useState(fade)
-  const [currentScrollHeight, setCurrentScrollHeight] = useState(0)
-  const backgroundOpacity = setOpacity(currentScrollHeight)
-  const websiteURL = usePathname()
+  const [extendedMenuVisible, showExtendedMenu] = useState(false);
+  const [fadeLayout, setFadeLayout] = useState(fade);
+  const [currentScrollHeight, setCurrentScrollHeight] = useState(0);
+  const backgroundOpacity = setOpacity(currentScrollHeight);
+  const websiteURL = usePathname();
   const { dismissBanner } = useBanner({
-    id: 'community-support-statement-2025-banner',
-  })
+    id: "community-support-statement-2025-banner",
+  });
 
   useEffect(() => {
-    showExtendedMenu(false)
-    if (currentScrollHeight === 0) setCurrentScrollHeight(window.scrollY)
+    showExtendedMenu(false);
+    if (currentScrollHeight === 0) setCurrentScrollHeight(window.scrollY);
 
     // Only register navbar fade layout if fade is true
     if (fade) {
-      return registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight)
+      return registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight);
     }
-    return () => {}
-  }, [websiteURL, fade])
+    return () => {};
+  }, [websiteURL, fade]);
 
   return (
     <div className="navbar-container">
@@ -71,15 +71,15 @@ export default function AppNavbar({ fade = false }) {
                 boxShadow:
                   backgroundOpacity > 0.2
                     ? `0 2px 4px rgba(0, 0, 0, ${backgroundOpacity * 0.1})`
-                    : 'none',
+                    : "none",
               }
-            : { backgroundColor: 'rgba(6, 7, 23, 1)' }
+            : { backgroundColor: "rgba(6, 7, 23, 1)" }
         }
       >
-        <div className={'navbar-toolbar-main'}>
-          <div className={'navbar-toolbar-content container-xxl'}>
-            <div className={'navbar-left-container'}>
-              <Link className={'navbar-left-section'} href="/">
+        <div className={"navbar-toolbar-main"}>
+          <div className={"navbar-toolbar-content container-xxl"}>
+            <div className={"navbar-left-container"}>
+              <Link className={"navbar-left-section"} href="/">
                 <img
                   src="/img/logo_opensac_black_transparent_2.png"
                   alt="Open Fresno logo"
@@ -89,27 +89,27 @@ export default function AppNavbar({ fade = false }) {
               </Link>
             </div>
 
-            <div className={'navbar-middle-container'}>
-              <ul className={'navbar-middle-section'}>
+            <div className={"navbar-middle-container"}>
+              <ul className={"navbar-middle-section"}>
                 <li
                   className={`navbar-link ${
-                    websiteURL === '/' ? 'navbar-link-selected one' : ''
+                    websiteURL === "/" ? "navbar-link-selected one" : ""
                   }`}
                 >
                   <Link href="/">Home</Link>
                 </li>
                 <li
                   className={`navbar-link ${
-                    websiteURL === '/about' ? 'navbar-link-selected two' : ''
+                    websiteURL === "/about" ? "navbar-link-selected two" : ""
                   }`}
                 >
                   <Link href="/about">About</Link>
                 </li>
                 <li
                   className={`navbar-link ${
-                    websiteURL === '/contact'
-                      ? 'navbar-link-selected three'
-                      : ''
+                    websiteURL === "/contact"
+                      ? "navbar-link-selected three"
+                      : ""
                   }`}
                 >
                   <Link href="/contact">Contact</Link>
@@ -117,35 +117,35 @@ export default function AppNavbar({ fade = false }) {
                 <li className={`navbar-link`}>
                   <Link href="/donate">Donate</Link>
                 </li>
-                <hr className={'navbar-underline'} />
+                <hr className={"navbar-underline"} />
               </ul>
             </div>
 
             <div
               className={`navbar-right-container ${
                 extendedMenuVisible
-                  ? 'navbar-extend-background-active'
-                  : 'navbar-extend-background-inactive'
+                  ? "navbar-extend-background-active"
+                  : "navbar-extend-background-inactive"
               }`}
             >
               <div
                 className={`navbar-right-section`}
                 onClick={() => {
-                  showExtendedMenu(!extendedMenuVisible)
+                  showExtendedMenu(!extendedMenuVisible);
                 }}
               >
                 <div className={`navbar-nested-parent-link`}>
                   <div
                     className={`${
                       extendedMenuVisible
-                        ? 'navbar-toggle-extend-button-extended'
-                        : 'navbar-toggle-extend-button'
+                        ? "navbar-toggle-extend-button-extended"
+                        : "navbar-toggle-extend-button"
                     }`}
                   >
                     <span
                       className={`navbar-extend-button-text ${
                         extendedMenuVisible
-                          ? 'navbar-extend-button-text-extended'
+                          ? "navbar-extend-button-text-extended"
                           : null
                       }`}
                     >
@@ -158,11 +158,11 @@ export default function AppNavbar({ fade = false }) {
           </div>
         </div>
         {extendedMenuVisible ? (
-          <div className={'navbar-toolbar-extended'}>
+          <div className={"navbar-toolbar-extended"}>
             <ExtendedNavbarMenu visible={extendedMenuVisible} />
           </div>
         ) : null}
       </nav>
     </div>
-  )
+  );
 }
