@@ -1,28 +1,28 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import useBanner from '@/hooks/useBanner'
+import { useEffect, useState } from "react";
+import useBanner from "@/hooks/useBanner";
 
 /**
  * Banner component to display at the top of the page
- * 
+ *
  * @example
  * ```
-  const { dismissBanner } = useBanner({
-    id: 'community-support-statement-2025-banner',
-  }) 
+ const { dismissBanner } = useBanner({
+ id: 'community-support-statement-2025-banner',
+ })
 
-  <Banner id="community-support-statement-2025-banner">
-    <span className="font-semibold mr-2">Announcement:</span>
-    Read our new{' '}
-    <Link
-      href="/community-support-statement-2025"
-      onClick={() => dismissBanner()}
-    >
-      Community Support Statement
-    </Link>
-    .
-  </Banner>
+ <Banner id="community-support-statement-2025-banner">
+ <span className="font-semibold mr-2">Announcement:</span>
+ Read our new{' '}
+ <Link
+ href="/community-support-statement-2025"
+ onClick={() => dismissBanner()}
+ >
+ Community Support Statement
+ </Link>
+ .
+ </Banner>
  *  ```
  * @param {Object} props
  * @param {JSX.Element} props.children - The message to display in the banner
@@ -30,41 +30,41 @@ import useBanner from '@/hooks/useBanner'
  */
 export default function Banner({ children }) {
   const { visible: bannerVisible, dismissBanner } = useBanner({
-    id: 'community-support-statement-2025-banner',
-  })
-  const [isAnimating, setIsAnimating] = useState(false)
-  const [shouldRender, setShouldRender] = useState(bannerVisible)
+    id: "community-support-statement-2025-banner",
+  });
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [shouldRender, setShouldRender] = useState(bannerVisible);
 
   useEffect(() => {
     if (bannerVisible) {
-      setShouldRender(true)
+      setShouldRender(true);
       // Small delay to ensure the DOM has updated before starting animation
       const timer = setTimeout(() => {
-        setIsAnimating(true)
-      }, 1000)
-      return () => clearTimeout(timer)
+        setIsAnimating(true);
+      }, 1000);
+      return () => clearTimeout(timer);
     } else if (!bannerVisible && shouldRender) {
-      setIsAnimating(false)
+      setIsAnimating(false);
       // Wait for animation to complete before removing from DOM
       const timer = setTimeout(() => {
-        setShouldRender(false)
-      }, 500) // Match transition duration
-      return () => clearTimeout(timer)
+        setShouldRender(false);
+      }, 500); // Match transition duration
+      return () => clearTimeout(timer);
     }
-  }, [bannerVisible, shouldRender])
+  }, [bannerVisible, shouldRender]);
 
   const handleDismiss = () => {
-    setIsAnimating(false)
+    setIsAnimating(false);
     // Wait for animation to finish before actually dismissing
     setTimeout(() => {
-      dismissBanner()
-    }, 300)
-  }
+      dismissBanner();
+    }, 300);
+  };
 
-  if (!shouldRender) return null
+  if (!shouldRender) return null;
 
   return (
-    <div className={`banner ${isAnimating ? 'animate-in' : 'animate-out'}`}>
+    <div className={`banner ${isAnimating ? "animate-in" : "animate-out"}`}>
       <div className="banner-content container-xxl">
         <span>{children}</span>
         <button
@@ -76,5 +76,5 @@ export default function Banner({ children }) {
         </button>
       </div>
     </div>
-  )
+  );
 }

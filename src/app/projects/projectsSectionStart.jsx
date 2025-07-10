@@ -1,5 +1,5 @@
-import { getWednesday } from '@/utils/get-wednesday'
-import Link from 'next/link'
+import { getWednesday } from "@/utils/get-wednesday";
+import Link from "next/link";
 
 /**
  * Projects start section.
@@ -72,5 +72,5 @@ export default function ProjectsSectionStart({ sectionType }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

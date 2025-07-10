@@ -1,30 +1,30 @@
-'use client'
+"use client";
 
-import useBanner from '@/hooks/useBanner'
-import { useEffect, useState } from 'react'
+import useBanner from "@/hooks/useBanner";
+import { useEffect, useState } from "react";
 
 export default function MarginTop() {
   const { visible: bannerVisible } = useBanner({
-    id: 'community-support-statement-2025-banner',
-  })
+    id: "community-support-statement-2025-banner",
+  });
 
-  const [delayedBannerVisible, setDelayedBannerVisible] = useState(false)
+  const [delayedBannerVisible, setDelayedBannerVisible] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setDelayedBannerVisible(bannerVisible)
-    }, 1000)
+      setDelayedBannerVisible(bannerVisible);
+    }, 1000);
 
-    return () => clearTimeout(timer) // Cleanup on unmount or re-run
-  }, [bannerVisible]) // Re-run effect if bannerVisible changes
+    return () => clearTimeout(timer); // Cleanup on unmount or re-run
+  }, [bannerVisible]); // Re-run effect if bannerVisible changes
 
   return (
     <div
       className={`${
         delayedBannerVisible
-          ? 'toolbar-after-content-with-banner'
-          : 'toolbar-after-content'
+          ? "toolbar-after-content-with-banner"
+          : "toolbar-after-content"
       }`}
     ></div>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-@use 'variables.scss';
+@use "variables.scss";
 
 /*
 Mixins are mostly used throughout the application for font attributes. It should be up-to-date with the font library in Figma. Some styles are not documented in Figma, so adding additional styles here is appropriate.
@@ -120,7 +120,7 @@ Mixins are mostly used throughout the application for font attributes. It should
 }
 
 @mixin p2-bold {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;

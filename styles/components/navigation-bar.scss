@@ -1,6 +1,6 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
-@use '../base/animations.scss';
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../base/animations.scss";
 
 /*
 Navigation bar.
@@ -150,7 +150,7 @@ It is made up of three sections.
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background: url('/img/navbar/menu_hamburger_light.svg') no-repeat center right;
+  background: url("/img/navbar/menu_hamburger_light.svg") no-repeat center right;
 
   @media screen and (min-width: variables.$screen-lg) {
     background: transparent;
@@ -189,7 +189,7 @@ It is made up of three sections.
 
 .navbar-extend-background-active {
   .navbar-right-section {
-    background: url('/img/navbar/menu_x.png') no-repeat center right;
+    background: url("/img/navbar/menu_x.png") no-repeat center right;
   }
 
   @media screen and (min-width: variables.$screen-lg) {
@@ -216,14 +216,14 @@ It is made up of three sections.
   }
 
   .navbar-toggle-extend-button {
-    background: transparent url('/img/navbar/chevron_down.png') no-repeat center
+    background: transparent url("/img/navbar/chevron_down.png") no-repeat center
       right;
     padding: 0 20px 0 0;
     color: variables.$secondary-500;
   }
 
   .navbar-toggle-extend-button-extended {
-    background: transparent url('/img/navbar/chevron_up.png') no-repeat center
+    background: transparent url("/img/navbar/chevron_up.png") no-repeat center
       right;
     padding: 0 20px 0 0;
     color: variables.$neutral-900;

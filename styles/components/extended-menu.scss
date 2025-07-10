@@ -1,5 +1,5 @@
-@use '../abstracts/variables.scss';
-@use '../abstracts/mixins';
+@use "../abstracts/variables.scss";
+@use "../abstracts/mixins";
 
 /*
 Navigation bar extended drop down menu.
@@ -63,7 +63,7 @@ Navigation bar extended drop down menu.
 }
 
 .navbar-extended-mobile-content ul::before {
-  content: '';
+  content: "";
 }
 
 .navbar-extended-mobile-section li.active a {
@@ -88,7 +88,7 @@ Navigation bar extended drop down menu.
 }
 
 .navbar-extended-mobile-content-button-01 {
-  background: transparent url('/img/navbar/menu_chevron_right.png') no-repeat
+  background: transparent url("/img/navbar/menu_chevron_right.png") no-repeat
     center right;
   padding: 0 18px 0 0;
   color: variables.$secondary-500;
@@ -96,7 +96,7 @@ Navigation bar extended drop down menu.
 }
 
 .navbar-extended-mobile-content-button-02 {
-  background: transparent url('/img/navbar/menu_chevron_left.png') no-repeat
+  background: transparent url("/img/navbar/menu_chevron_left.png") no-repeat
     center left;
   padding: 0 0 0 17px;
   color: variables.$secondary-500;

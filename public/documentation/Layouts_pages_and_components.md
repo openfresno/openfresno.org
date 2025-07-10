@@ -1,6 +1,7 @@
 # Application Layouts, Pages, and Components for the Open Fresno Website
 
-Reusable components and layouts are in the [components](/src/components/) folder. The pages for the website are in the [app](/src/app/) folder.
+Reusable components and layouts are in the [components](/src/components/) folder. The pages for the website are in
+the [app](/src/app/) folder.
 
 ## Application Navbar
 
@@ -31,4 +32,5 @@ Reusable components and layouts are in the [components](/src/components/) folder
 
 ## Home page
 
-The homepage consists of hero sections with alternating color schemes. The footer is placed at the end of the page. The navbar is displayed at all times and stays on top when scrolling.
+The homepage consists of hero sections with alternating color schemes. The footer is placed at the end of the page. The
+navbar is displayed at all times and stays on top when scrolling.

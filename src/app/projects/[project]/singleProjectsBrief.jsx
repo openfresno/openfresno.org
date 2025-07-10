@@ -50,5 +50,5 @@ export default function SingleProjectsBrief({ data }) {
         <p className={`project-info-text`}>{data.meta.lead_designer}</p>
       </div>
     </section>
-  )
+  );
 }

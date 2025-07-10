@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 /**
  * 404 not found page. This is a built-in Next.js function.
@@ -29,5 +29,5 @@ export default function notFound() {
         </div>
       </section>
     </>
-  )
+  );
 }

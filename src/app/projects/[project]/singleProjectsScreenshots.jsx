@@ -1,4 +1,4 @@
-import { Slider } from '@/components/ui'
+import { Slider } from "@/components/ui";
 
 export default function SingleProjectsScreenshots({ data }) {
   let shownImages = data.meta.screenshots.map((screenshot) => (
@@ -9,14 +9,14 @@ export default function SingleProjectsScreenshots({ data }) {
         backgroundImage: `url(https://raw.githubusercontent.com/${data.full_name}/main/${screenshot})`,
       }}
     ></div>
-  ))
+  ));
   for (let i = shownImages.length; i < 6; i++) {
     shownImages.push(
       <div
         className={`keen-slider__slide project-blank-screenshot`}
         key={data.full_name + i}
       ></div>,
-    )
+    );
   }
 
   return (
@@ -33,9 +33,9 @@ export default function SingleProjectsScreenshots({ data }) {
       <div className={`project-screenshots-images-container`}>
         {shownImages}
       </div>
-      <Slider containerClass={'project-screenshots-slider-container'}>
+      <Slider containerClass={"project-screenshots-slider-container"}>
         {shownImages}
       </Slider>
     </section>
-  )
+  );
 }

@@ -16,7 +16,7 @@ export default function DonateSectionLanding({ sectionType }) {
         <p className={`section-paragraph`}>
           <span className={`paragraph-bold`}>
             Choose the option that suits you best.
-          </span>{' '}
+          </span>{" "}
           Make a one-time donation to support our mission instantly
           {/*, or become a sustaining supporter by selecting the monthly donation option*/}
           . Your tax-deductible donation fuels innovation, empowers civic
@@ -33,5 +33,5 @@ export default function DonateSectionLanding({ sectionType }) {
         ></stripe-buy-button>
       </div>
     </section>
-  )
+  );
 }

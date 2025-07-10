@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function conductSectionPolicies() {
   return (
@@ -15,10 +15,10 @@ export default function conductSectionPolicies() {
           </h2>
         </div>
         <p className={`conduct-item-paragraph`}>
-          This anti-harassment policy is based on{' '}
+          This anti-harassment policy is based on{" "}
           <Link className={`conduct-paragraph-anchor`} href="/">
             the example policy
-          </Link>{' '}
+          </Link>{" "}
           from the Geek Feminism wiki, created by the Ada Initiative and other
           volunteers.
           <br />
@@ -38,25 +38,25 @@ export default function conductSectionPolicies() {
         </h3>
 
         <p className={`conduct-item-paragraph`}>
-          In addition to governing our own events by this policy, Open
-          Fresno will only lend its brand and fund groups that offer an
-          anti-harassment policy to their attendees. For information on how to
-          offer an anti-harassment policy to your group,{' '}
+          In addition to governing our own events by this policy, Open Fresno
+          will only lend its brand and fund groups that offer an anti-harassment
+          policy to their attendees. For information on how to offer an
+          anti-harassment policy to your group,{" "}
           <Link className={`conduct-paragraph-anchor`} href="/">
             see this guide.
           </Link>
         </p>
 
         <p className={`conduct-item-paragraph`}>
-          Open Fresno is dedicated to providing a harassment-free experience
-          for everyone regardless of gender, gender identity and expression,
-          sexual orientation, disability, physical appearance, body size, race,
-          age, or religion. We do not tolerate harassment of staff, presenters,
-          and participants in any form. Sexual language and imagery is not
-          appropriate for any Open Fresno event or network activity,
-          including talks. Anyone in violation of these policies may expelled
-          from Open Fresno network activities, events, and digital forums,
-          at the discretion of the event organizer or forum administrator.
+          Open Fresno is dedicated to providing a harassment-free experience for
+          everyone regardless of gender, gender identity and expression, sexual
+          orientation, disability, physical appearance, body size, race, age, or
+          religion. We do not tolerate harassment of staff, presenters, and
+          participants in any form. Sexual language and imagery is not
+          appropriate for any Open Fresno event or network activity, including
+          talks. Anyone in violation of these policies may expelled from Open
+          Fresno network activities, events, and digital forums, at the
+          discretion of the event organizer or forum administrator.
         </p>
 
         <p className={`conduct-item-paragraph`}>
@@ -73,13 +73,13 @@ export default function conductSectionPolicies() {
         <p className={`conduct-item-paragraph`}>
           If a participant engages in harassing behavior, the organizers may
           take any action they deem appropriate, including warning the offender
-          or expulsion from Open Fresno network activities, events, and
-          digital forums.
+          or expulsion from Open Fresno network activities, events, and digital
+          forums.
         </p>
 
         <p className={`conduct-item-paragraph`}>
           If you are being harassed, notice that someone else is being harassed,
-          or have any other concerns, please fill out{' '}
+          or have any other concerns, please fill out{" "}
           <Link href="https://forms.gle/JF3Q1AQA6pGxNSNS8">this form</Link>.
         </p>
 
@@ -95,5 +95,5 @@ export default function conductSectionPolicies() {
         </h3>
       </div>
     </section>
-  )
+  );
 }

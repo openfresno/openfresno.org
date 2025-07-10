@@ -1,2 +1,2 @@
-export const githubOwner = 'openfresnoorg'
-export const githubProject = 'openfresno.org'
+export const githubOwner = "openfresnoorg";
+export const githubProject = "openfresno.org";

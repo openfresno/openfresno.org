@@ -1,17 +1,17 @@
-import HeaderUnderline from '../../components/layout/HeaderUnderline'
-import instructionData from './instructions.json'
-import SidebarSection from '../../components/layout/SidebarSection'
-import Steps from '../../components/ui/Steps'
-import AppLayout from '@/components/layout/AppLayout'
+import HeaderUnderline from "../../components/layout/HeaderUnderline";
+import instructionData from "./instructions.json";
+import SidebarSection from "../../components/layout/SidebarSection";
+import Steps from "../../components/ui/Steps";
+import AppLayout from "@/components/layout/AppLayout";
 
 /**
  * Section type. Displays light or dark themes.
  * @type {{light: string, dark: string}}
  */
 export const SectionType = {
-  light: 'light',
-  dark: 'dark',
-}
+  light: "light",
+  dark: "dark",
+};
 
 /**
  * Page for information about how to pitch a project.
@@ -26,7 +26,7 @@ export default function PitchPage() {
           title="Pitch a project"
           description="Contribute Your Project Idea"
           large={true}
-          className={'general-section-container'}
+          className={"general-section-container"}
         />
         <div className={`general-section-container section-paragraph-small`}>
           Share your innovative ideas and collaborate with our community to turn
@@ -48,5 +48,5 @@ export default function PitchPage() {
         <Steps sectionType={SectionType.dark} steps={instructionData}></Steps>
       </SidebarSection>
     </AppLayout>
-  )
+  );
 }

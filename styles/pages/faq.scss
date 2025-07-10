@@ -1,5 +1,5 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 /*
 FAQ page layout.
@@ -23,6 +23,10 @@ FAQ page layout.
   }
 }
 
+.faq-container {
+  background-color: variables.$secondary-500;
+}
+
 .faq-nav-light {
   color: variables.$neutral-900;
   border: 1px solid variables.$primary-500;
@@ -42,11 +46,12 @@ FAQ page layout.
 
 .faq-nav a {
   @include mixins.nav-semi-bold;
-  color: variables.$primary-500;
-  text-decoration: none;
+  color: variables.$neutral-50;
   margin-right: 20px;
   display: inline-block;
   padding: 5px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 
   @media (max-width: variables.$screen-lg) {
     font-size: 16px;
@@ -102,7 +107,7 @@ details h4 {
 
 .faq-question a::after,
 details h4::after {
-  content: '';
+  content: "";
   flex-shrink: 0;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 6.5V12.5M12 12.5V18.5M12 12.5H18M12 12.5H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
   background-repeat: no-repeat;
@@ -116,7 +121,7 @@ details h4::after {
 
 .faq-question.question-open a::after,
 details[open] h4::after {
-  content: '';
+  content: "";
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 12H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
 }
 
@@ -155,7 +160,7 @@ details {
 }
 
 .faq-section-heading-underline::after {
-  content: '';
+  content: "";
   position: absolute;
   height: 1px;
   width: 43px;

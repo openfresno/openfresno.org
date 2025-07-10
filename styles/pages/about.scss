@@ -1,5 +1,5 @@
-@use '../abstracts/variables';
-@use '../abstracts/mixins';
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 /*
 About page layout.
@@ -69,7 +69,7 @@ About page layout.
   justify-content: space-between;
   align-items: center;
   padding: 192px 0 192px 80px;
-  background-image: url('/img/open_data_day_curved.png');
+  background-image: url("/img/open_data_day_curved.png");
   background-repeat: no-repeat;
   background-size: 45vw 40vw;
   background-position: right center;
@@ -175,7 +175,7 @@ About page layout.
 }
 
 .member-name {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 1.1em;
   line-height: 29px;
@@ -184,7 +184,7 @@ About page layout.
 }
 
 .member-title {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 21px;
@@ -283,7 +283,7 @@ About page layout.
 
 .opportunities-get-started {
   position: relative;
-  background-image: url('/img/about/rectangle.png');
+  background-image: url("/img/about/rectangle.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
