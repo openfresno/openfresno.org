@@ -2,7 +2,6 @@
 @use "../abstracts/variables";
 
 .general-heading-section {
-
   color: variables.$secondary-50;
   background-color: variables.$secondary-900;
   @include mixins.h1-section;

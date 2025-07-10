@@ -1,5 +1,5 @@
 import { SectionType } from "../../utils/constants/SectionType";
-import React from "react";
+
 /**
  * Header with underline styling.
  * @returns {JSX.Element}
