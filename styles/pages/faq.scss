@@ -23,6 +23,10 @@ FAQ page layout.
   }
 }
 
+.faq-container {
+  background-color: variables.$secondary-500;
+}
+
 .faq-nav-light {
   color: variables.$neutral-900;
   border: 1px solid variables.$primary-500;
@@ -42,11 +46,12 @@ FAQ page layout.
 
 .faq-nav a {
   @include mixins.nav-semi-bold;
-  color: variables.$primary-500;
-  text-decoration: none;
+  color: variables.$neutral-50;
   margin-right: 20px;
   display: inline-block;
   padding: 5px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 
   @media (max-width: variables.$screen-lg) {
     font-size: 16px;

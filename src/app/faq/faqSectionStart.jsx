@@ -5,7 +5,7 @@
 export default function FaqSectionStart({ sectionType }) {
   return (
     <section className={`general-section-${sectionType}`}>
-      <div className={`general-section-container heading-underline`}>
+      <div className={`general-section-container`}>
         <h1 className="general-heading-section">FAQ</h1>
         <h2 className="sub-heading faq-heading-section-sub">
           Frequently Asked Questions

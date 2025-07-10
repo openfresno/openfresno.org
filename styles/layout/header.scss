@@ -2,9 +2,15 @@
 @use "../abstracts/variables";
 
 .general-heading-section {
-  color: variables.$neutral-300;
+
+  color: variables.$secondary-50;
+  background-color: variables.$secondary-900;
   @include mixins.h1-section;
   margin: 0;
+
+  width: fit-content;
+  border: 10px solid variables.$secondary-900;
+  border-radius: 8px;
 }
 
 .general-heading-section-alt {
