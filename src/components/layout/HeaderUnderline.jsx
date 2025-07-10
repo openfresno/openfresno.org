@@ -1,5 +1,5 @@
-import { SectionType } from '../../app/home/home'
-
+import { SectionType } from "../../utils/constants/SectionType";
+import React from "react";
 /**
  * Header with underline styling.
  * @returns {JSX.Element}
@@ -15,24 +15,24 @@ export default function HeaderUnderline({
   return (
     <>
       <div
-        className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && 'underline-alt'}`}
+        className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}
       >
         <h1
-          className={`general-heading-section ${sectionType === SectionType.dark && 'general-heading-section-alt'}`}
+          className={`general-heading-section ${sectionType === SectionType.dark && "general-heading-section-alt"}`}
         >
           {title}
         </h1>
-        <h2 className={`${large ? 'sub-heading-large' : 'sub-heading'}`}>
+        <h2 className={`${large ? "sub-heading-large" : "sub-heading"}`}>
           {description}
         </h2>
       </div>
       {children && (
         <p
-          className={`heading-paragraph-large ${sectionType === SectionType.dark && 'heading-paragraph-color-dark'}`}
+          className={`heading-paragraph-large ${sectionType === SectionType.dark && "heading-paragraph-color-dark"}`}
         >
           {children}
         </p>
       )}
     </>
-  )
+  );
 }
