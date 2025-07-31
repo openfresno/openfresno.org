@@ -1,6 +1,7 @@
 import Button from "../../components/ui/buttons";
 import { Slider } from "../../components/ui";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -86,10 +87,12 @@ export default function HomePage() {
             </span>
           </p>
         </div>
-        <img
+        <Image
           src="/img/open_data_day_curved.png"
           alt="Open Data Day"
           className={`home-section-action-image`}
+          width={720}
+          height={574}
         />
       </section>
       <section className={`general-section-dark home-services-container`}>
@@ -103,7 +106,12 @@ export default function HomePage() {
         </div>
         <div className={`home-numbered-grid`}>
           <div className={`home-numbered-container`}>
-            <img src="/img/1.png" alt="Open Data Day" />
+            <Image
+              src="/img/1.png"
+              alt="Open Data Day"
+              width={81}
+              height={80}
+            />
             <h2 className={`home-numbered-header`}>
               Engage with Our Community
             </h2>
@@ -120,7 +128,12 @@ export default function HomePage() {
             />
           </div>
           <div className={`home-numbered-container`}>
-            <img src="/img/2.png" alt="Open Data Day" />
+            <Image
+              src="/img/2.png"
+              alt="Open Data Day"
+              width={80}
+              height={80}
+            />
             <h2 className={`home-numbered-header`}>
               Drive Innovation with Projects
             </h2>
@@ -136,7 +149,12 @@ export default function HomePage() {
             />
           </div>
           <div className={`home-numbered-container`}>
-            <img src="/img/3.png" alt="Open Data Day" />
+            <Image
+              src="/img/3.png"
+              alt="Open Data Day"
+              width={81}
+              height={80}
+            />
             <h2 className={`home-numbered-header`}>Pitch Your Vision</h2>
             <p className={`home-numbered-paragraph`}>
               Have a project idea that can benefit the community? Pitch it to us
@@ -225,10 +243,12 @@ export default function HomePage() {
                   platform!
                 </p>
               </div>
-              <img
+              <Image
                 src="/img/home/learningblocks.jpg"
                 alt="Learning Blocks"
                 className="home-section-project-image"
+                width={918}
+                height={469}
               />
             </div>
             <div className="keen-slider__slide">
@@ -239,10 +259,12 @@ export default function HomePage() {
                   images.
                 </p>
               </div>
-              <img
+              <Image
                 src="/img/TrashAI2.png"
                 alt="TrashAI"
                 className="home-section-project-image"
+                width={839}
+                height={412}
               />
             </div>
             <div className="keen-slider__slide">
@@ -253,10 +275,12 @@ export default function HomePage() {
                   Fresno.
                 </p>
               </div>
-              <img
+              <Image
                 src="https://raw.githubusercontent.com/openfresno/openbudgetsac.org/main/screenshot.jpg"
                 alt="Open Budget Sac"
                 className="home-section-project-image"
+                width={385}
+                height={211}
               />
             </div>
           </Slider>
@@ -278,7 +302,7 @@ export default function HomePage() {
             href={`https://www.cityofsacramento.gov/`}
             style={{ paddingRight: 26 }}
           >
-            <img
+            <Image
               src="/img/partnership-icons/cityofsacramento.png"
               width="300"
               height="73"
@@ -287,7 +311,7 @@ export default function HomePage() {
             />
           </Link>
           <Link href={`https://www.dbaarts.org/`}>
-            <img
+            <Image
               src="/img/partnership-icons/logo_dba_02.png"
               width="137"
               height="137"
@@ -295,11 +319,11 @@ export default function HomePage() {
             />
           </Link>
           <Link href={`https://codeforamerica.org/`}>
-            <img
+            <Image
               src="/img/partnership-icons/logo_openfresno_white_transparent_02.png"
               width="233"
               height="112"
-              alt="DBA"
+              alt="Code for America"
             />
           </Link>
         </div>
