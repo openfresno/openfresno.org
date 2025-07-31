@@ -3,11 +3,11 @@
 
 .side-section {
   position: relative;
-  background-image: url("/img/about/rectangle.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   margin: auto;
+  background-image: url("/img/about/rectangle.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @media (max-width: variables.$screen-sm) {
     width: 90vw;
@@ -20,12 +20,12 @@
 
 .side-section-get-started-anchor {
   @include mixins.h3-bold;
-  color: black;
-  width: 80%;
   position: absolute;
   top: 40%;
   left: 55%;
   transform: translate(-50%, -50%);
+  width: 80%;
+  color: black;
 
   @media (max-width: variables.$screen-sm) {
     font-size: 1.7em;
@@ -51,6 +51,6 @@
   color: variables.$secondary-500;
   @include mixins.subheading-bold;
   margin: 0;
-  padding-top: 16px;
   border-top: 1px variables.$neutral-50 solid;
+  padding-top: 16px;
 }

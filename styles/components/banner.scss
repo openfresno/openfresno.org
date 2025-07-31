@@ -3,34 +3,34 @@
 @use "../base/animations";
 
 .banner {
-  background-color: variables.$navbar-color;
-  border-bottom: 1px solid #343a40;
-  color: variables.$secondary-50;
-  font-size: 16px;
-  font-weight: 500;
-  padding: 8px 0;
-  width: 100%;
   display: flex;
   justify-content: center;
   opacity: 0;
-  max-height: 0;
-  overflow: hidden;
   transition:
     opacity 0.5s ease-in-out,
     max-height 0.5s ease-in-out,
     padding 0.5s ease-in-out;
+  border-bottom: 1px solid #343a40;
+  background-color: variables.$navbar-color;
+  padding: 8px 0;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  color: variables.$secondary-50;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .banner.animate-in {
   opacity: 1;
-  max-height: 100px;
   padding: 8px 0;
+  max-height: 100px;
 }
 
 .banner.animate-out {
   opacity: 0;
-  max-height: 0;
   padding: 0;
+  max-height: 0;
 }
 
 .banner-content {
@@ -41,14 +41,14 @@
 }
 
 .banner-dismiss {
-  background: none;
-  border: none;
   cursor: pointer;
+  margin-left: 16px;
+  border: none;
+  background: none;
+  padding: 0;
+  color: #6c757d;
   font-size: 1.5rem;
   line-height: 1;
-  padding: 0;
-  margin-left: 16px;
-  color: #6c757d;
 }
 
 .banner-dismiss:hover {

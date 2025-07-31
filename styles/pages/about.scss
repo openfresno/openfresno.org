@@ -6,8 +6,8 @@ About page layout.
  */
 
 .about-light-section {
-  padding: 7%;
   background-color: variables.$secondary-50;
+  padding: 7%;
 
   @media (max-width: variables.$screen-md) {
     padding: 16px;
@@ -19,8 +19,8 @@ About page layout.
   grid-template-rows: 1fr auto;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  width: fit-content;
   margin: auto;
+  width: fit-content;
 }
 
 .full-width-item {
@@ -34,20 +34,20 @@ About page layout.
 }
 
 .about-team-section {
-  padding: 0 0 64px 0;
   background-color: variables.$secondary-50;
+  padding: 0 0 64px 0;
   color: variables.$neutral-900;
 }
 
 .team-paragraph-container {
-  padding: 64px 80px;
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding: 64px 80px;
 
   @media (max-width: variables.$screen-md) {
-    padding: 64px 40px;
     gap: 12px;
+    padding: 64px 40px;
   }
 }
 
@@ -68,35 +68,35 @@ About page layout.
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 192px 0 192px 80px;
   background-image: url("/img/open_data_day_curved.png");
-  background-repeat: no-repeat;
-  background-size: 45vw 40vw;
   background-position: right center;
+  background-size: 45vw 40vw;
+  background-repeat: no-repeat;
+  padding: 192px 0 192px 80px;
 
   @media (min-width: 1700px) {
     background-size: 40% 80%;
   }
 
   @media (max-width: variables.$screen-lg) {
-    background-image: none;
-    padding: 0;
     flex-direction: column;
     align-items: flex-end;
+    background-image: none;
+    padding: 0;
   }
 }
 
 .mission-container {
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  width: 40%;
 
   @media (max-width: variables.$screen-lg) {
-    width: auto;
-    padding: 48px 40px 0 40px;
     margin: auto;
+    padding: 48px 40px 0 40px;
+    width: auto;
   }
 }
 
@@ -106,14 +106,14 @@ About page layout.
 
   @media (max-width: variables.$screen-lg) {
     display: block;
-    height: 50vw;
     margin-bottom: 80px;
+    height: 50vw;
   }
 
   @media (max-width: variables.$screen-md) {
     display: block;
-    height: 70vw;
     margin-bottom: 80px;
+    height: 70vw;
   }
 }
 
@@ -156,8 +156,8 @@ About page layout.
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 0 0 15px 0;
   border: solid 1px #eaecf0;
+  padding: 0 0 15px 0;
 }
 
 .member-info-container {
@@ -175,26 +175,26 @@ About page layout.
 }
 
 .member-name {
-  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #282828;
   font-weight: 600;
   font-size: 1.1em;
   line-height: 29px;
-  color: #282828;
-  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .member-title {
-  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #3e3e59;
   font-weight: 400;
   font-size: 13px;
   line-height: 21px;
-  color: #3e3e59;
-  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .member-quote {
-  color: #5f6980;
   margin-right: auto;
+  color: #5f6980;
 }
 
 .about-sub-heading {
@@ -211,12 +211,12 @@ About page layout.
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 64px 80px;
   gap: 24px;
+  padding: 64px 80px;
 
   @media (max-width: variables.$screen-md) {
-    padding: 48px 40px;
     gap: 40px;
+    padding: 48px 40px;
   }
 
   @media (max-width: variables.$screen-xs) {
@@ -265,12 +265,12 @@ About page layout.
 
 .opportunities-anchor {
   @include mixins.h3-bold;
-  color: black;
-  width: 85%;
   position: absolute;
   top: 40%;
   left: 55%;
   transform: translate(-50%, -50%);
+  width: 85%;
+  color: black;
 
   @media (min-width: variables.$screen-xxl) {
     width: 12em;
@@ -284,9 +284,9 @@ About page layout.
 .opportunities-get-started {
   position: relative;
   background-image: url("/img/about/rectangle.png");
-  background-repeat: no-repeat;
-  background-size: contain;
   background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @media (max-width: variables.$screen-lg) {
     display: none;
@@ -300,8 +300,8 @@ About page layout.
 .positions-heading {
   display: block;
   @include mixins.h3-bold;
-  color: variables.$secondary-500;
   padding-top: 20px;
+  color: variables.$secondary-500;
 
   @media (max-width: variables.$screen-md) {
     display: none;
@@ -311,8 +311,8 @@ About page layout.
 .positions-grid {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
 
   @media (max-width: variables.$screen-lg) {
@@ -340,6 +340,6 @@ About page layout.
 
 .position {
   @include mixins.subheading-bold;
-  font-weight: 600;
   color: variables.$neutral-200;
+  font-weight: 600;
 }

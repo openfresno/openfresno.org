@@ -6,9 +6,9 @@
   cursor: pointer;
   border-radius: 6px;
   padding: 16px 24px;
-  text-decoration: none;
   width: fit-content;
   height: fit-content;
+  text-decoration: none;
   white-space: nowrap;
 
   @include mixins.button-regular;
@@ -21,33 +21,33 @@
 }
 
 .btn-blue {
-  color: variables.$secondary-50;
-  background-color: variables.$primary-500;
   border: solid variables.$primary-500 1px;
+  background-color: variables.$primary-500;
+  color: variables.$secondary-50;
 
   @include animations.button-transition(variables.$vivid-blue, white);
 }
 
 .btn-alt-light {
-  color: variables.$secondary-50;
-  background-color: transparent;
   border: solid variables.$secondary-500 1px;
+  background-color: transparent;
+  color: variables.$secondary-50;
 
   @include animations.dark-button-transition;
 }
 
 .btn-alt-gold {
-  color: variables.$secondary-500;
-  background-color: transparent;
   border: solid variables.$secondary-500 1px;
+  background-color: transparent;
+  color: variables.$secondary-500;
 
   @include animations.dark-button-transition;
 }
 
 .btn-alt-blue {
-  color: variables.$primary-500;
-  background-color: transparent;
   border: solid variables.$primary-500 1px;
+  background-color: transparent;
+  color: variables.$primary-500;
 
   @include animations.dark-button-transition;
 }

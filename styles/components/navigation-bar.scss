@@ -28,47 +28,47 @@ It is made up of three sections.
 
 // Background behind the navbar. It requires the navbar to be transparent and offset page content. By default, this is not shown; it is overridden by the navbar-toolbar background color.
 .navbar-container {
-  background: transparent;
   position: fixed;
   top: 0;
-  margin: 0;
-  padding: 0;
   z-index: 4;
+  margin: 0;
+  background: transparent;
+  padding: 0;
   width: 100%;
 }
 
 .navbar-toolbar {
   @include mixins.h5-semi-bold;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  z-index: 5;
   background: variables.$landing-background-color;
   height: variables.$toolbar-height;
-  display: flex;
-  flex-wrap: wrap;
   color: variables.$secondary-50;
-  position: relative;
-  z-index: 5;
 
   a,
   .navbar-toolbar a:visited,
   .navbar-toolbar a:link {
+    margin: 0;
+    padding: 0;
     color: variables.$secondary-50;
     text-decoration: none;
-    padding: 0;
-    margin: 0;
   }
 }
 
 .navbar-toolbar-main {
-  width: 100%;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .navbar-toolbar-content {
-  max-width: 1320px;
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1;
   justify-content: space-between;
   align-items: center;
+  max-width: 1320px;
 }
 
 .navbar-link {
@@ -101,10 +101,10 @@ It is made up of three sections.
 .navbar-middle-section {
   display: none;
   position: relative;
-  list-style-type: none;
   column-gap: 50px;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
 
   @media screen and (min-width: variables.$screen-lg) {
     display: inline-flex;
@@ -112,44 +112,44 @@ It is made up of three sections.
 }
 
 .one ~ .navbar-underline {
-  margin-left: -86%;
   display: block;
+  margin-left: -86%;
 }
 
 .two ~ .navbar-underline {
-  margin-left: -34%;
   display: block;
+  margin-left: -34%;
 }
 
 .three ~ .navbar-underline {
-  margin-left: 23%;
   display: block;
+  margin-left: 23%;
 }
 
 .navbar-underline {
   display: none;
   position: absolute;
   top: 120%;
-  height: 2px;
-  width: 80px;
-  margin: 0;
-  background: variables.$secondary-50;
-  border: none;
-  transition: 0.3s ease-in-out;
   float: left;
+  transition: 0.3s ease-in-out;
+  margin: 0;
+  border: none;
+  background: variables.$secondary-50;
+  width: 80px;
+  height: 2px;
 }
 
 .navbar-right-container {
   display: inline-flex;
-  height: variables.$toolbar-height;
   padding: 10px 16px;
+  height: variables.$toolbar-height;
 }
 
 .navbar-right-section {
-  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   background: url("/img/navbar/menu_hamburger_light.svg") no-repeat center right;
 
   @media screen and (min-width: variables.$screen-lg) {
@@ -158,12 +158,12 @@ It is made up of three sections.
 }
 
 .navbar-extended-button {
-  border: none;
-  font: inherit;
-  outline: inherit;
   cursor: pointer;
+  outline: inherit;
+  border: none;
   background: transparent;
   color: transparent;
+  font: inherit;
 }
 
 .navbar-nested-parent-link {
@@ -175,12 +175,12 @@ It is made up of three sections.
 }
 
 .navbar-toolbar-extended {
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-basis: 100%;
   justify-content: center;
+  margin: 0;
   box-shadow: 0 4px 4px 0 rgba(variables.$navbar-color, 0.25);
+  padding: 0;
 }
 
 .navbar-extend-button-text {
@@ -203,16 +203,16 @@ It is made up of three sections.
 
 @media screen and (min-width: variables.$screen-lg) {
   .navbar-toolbar-extended {
-    background-color: variables.$secondary-50;
-    border-color: #ebeae5;
-    border-bottom-style: solid;
     border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #ebeae5;
+    background-color: variables.$secondary-50;
   }
 
   .navbar-extend-button-text {
+    display: inline;
     visibility: visible;
     color: inherit;
-    display: inline;
   }
 
   .navbar-toggle-extend-button {

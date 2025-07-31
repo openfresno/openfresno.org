@@ -25,7 +25,7 @@ export default function GetStartedPage() {
           title="Get started"
           description="Ready to Volunteer with Open Fresno"
           large={true}
-          className={"general-section-container "}
+          className={"general-section-container"}
         />
         <div
           className={`general-section-container section-${SectionType.light} section-paragraph`}

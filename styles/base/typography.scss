@@ -10,18 +10,18 @@ Application typography. The Inter font family is applied by next/font in layout.
 }
 
 .general-section-light {
-  color: variables.$neutral-900;
-  background-color: variables.$secondary-50;
-  padding: 96px 80px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 24px;
+  background-color: variables.$secondary-50;
+  padding: 96px 80px;
+  color: variables.$neutral-900;
 
   @media (max-width: variables.$screen-md) {
-    padding: 48px 40px;
     flex-direction: column;
+    padding: 48px 40px;
   }
 }
 

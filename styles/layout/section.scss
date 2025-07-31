@@ -42,8 +42,8 @@
 
 // Refactor this to use general section container class without light prefix. Dark is used but not defined.
 .general-section-container {
-  width: 50%;
   position: relative;
+  width: 50%;
 
   @media (max-width: variables.$screen-md) {
     width: 100%;
@@ -51,12 +51,12 @@
 }
 
 .section-container2 {
-  padding: 64px 80px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 24px;
+  padding: 64px 80px;
 
   @media (max-width: variables.$screen-lg) {
     flex-direction: column;

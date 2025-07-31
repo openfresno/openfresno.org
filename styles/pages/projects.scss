@@ -7,18 +7,18 @@ Projects page layout.
  */
 
 .projects-section-light {
-  color: variables.$neutral-900;
-  background-color: variables.$secondary-50;
-  padding: 48px 24px;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  background-color: variables.$secondary-50;
+  padding: 48px 24px;
+  color: variables.$neutral-900;
 
   @media (min-width: variables.$screen-lg) {
-    padding: 96px 80px;
     flex-direction: row;
     justify-content: space-between;
     gap: 48px;
+    padding: 96px 80px;
   }
 }
 
@@ -49,8 +49,8 @@ Projects page layout.
 .meeting-card-container {
   @media (min-width: variables.$screen-lg) {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
   }
 }
 
@@ -59,14 +59,14 @@ Projects page layout.
   border-bottom: 1px solid variables.$neutral-500;
 
   ul {
-    padding: 20px 10px;
-    border-top: 1px solid variables.$neutral-500;
-    border-bottom: 1px solid variables.$neutral-500;
-    width: 100%;
-    list-style-position: inside;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    border-top: 1px solid variables.$neutral-500;
+    border-bottom: 1px solid variables.$neutral-500;
+    padding: 20px 10px;
+    width: 100%;
+    list-style-position: inside;
 
     li {
       &:first-child {
@@ -102,10 +102,10 @@ Projects page layout.
 
   .meeting-card-link {
     @include mixins.p3-semi-bold;
-    color: variables.$neutral-900;
-    text-decoration: none;
     display: flex;
     align-items: center;
+    color: variables.$neutral-900;
+    text-decoration: none;
   }
 
   img {
@@ -170,11 +170,11 @@ Projects page layout.
     }
 
     img {
-      width: 18px;
-      height: 18px;
       position: absolute;
       right: 10px;
       bottom: 14px;
+      width: 18px;
+      height: 18px;
     }
   }
 
@@ -189,13 +189,13 @@ Projects page layout.
     }
 
     select {
-      margin-top: 4px;
-      padding: 10px 16px;
       appearance: none;
+      margin-top: 4px;
       background-image: url("/img/form-element/chevron-down.svg");
-      background-repeat: no-repeat;
-      background-size: 16px 16px;
       background-position: right 10px top 50%;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      padding: 10px 16px;
     }
   }
 
@@ -240,17 +240,17 @@ Projects page layout.
 }
 
 .projects-main {
+  border-bottom: 1px solid variables.$neutral-900;
   background-color: variables.$secondary-50;
   padding-bottom: 50px;
-  border-bottom: 1px solid variables.$neutral-900;
 }
 
 .projects-nav-light {
-  color: variables.$neutral-900;
-  border: 1px solid variables.$primary-500;
-  border-left: none;
-  border-right: none;
   margin: 0 80px;
+  border: 1px solid variables.$primary-500;
+  border-right: none;
+  border-left: none;
+  color: variables.$neutral-900;
 
   @media (max-width: variables.$screen-md) {
     margin: 0 40px;
@@ -259,11 +259,11 @@ Projects page layout.
 
 .projects-nav a {
   @include mixins.nav-semi-bold;
+  display: inline-block;
+  margin-right: 20px;
+  padding: 5px 0;
   color: variables.$primary-500;
   text-decoration: none;
-  margin-right: 20px;
-  display: inline-block;
-  padding: 5px 0;
 
   @media (max-width: variables.$screen-lg) {
     font-size: 16px;
@@ -271,15 +271,15 @@ Projects page layout.
 
   @media (max-width: variables.$screen-md) {
     display: block;
-    font-size: 20px;
     width: 100%;
+    font-size: 20px;
   }
 }
 
 .projects-container-margins h3 {
   @include mixins.h4-semi-bold;
-  padding: 40px 0;
   margin-top: 40px;
+  padding: 40px 0;
 
   @media (max-width: variables.$screen-md) {
     @include mixins.h5-semi-bold;
@@ -295,8 +295,8 @@ Projects page layout.
   padding: 24px 0;
 
   @media (max-width: variables.$screen-md) {
-    font-size: 16px;
     font-weight: 700;
+    font-size: 16px;
   }
 }
 
@@ -310,38 +310,38 @@ details > summary::-webkit-details-marker {
 
 .projects-question a,
 details h4 {
-  position: relative;
   display: flex;
+  position: relative;
   align-items: center;
   cursor: pointer;
 }
 
 .projects-question a::after,
 details h4::after {
-  content: "";
+  display: block;
   flex-shrink: 0;
   margin-left: auto;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 6.5V12.5M12 12.5V18.5M12 12.5H18M12 12.5H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-  background-repeat: no-repeat;
-  display: block;
-  background-size: 24px;
   background-position: center;
-  height: 44px;
-  width: 44px;
+  background-size: 24px;
+  background-repeat: no-repeat;
   padding: 10px;
+  width: 44px;
+  height: 44px;
+  content: "";
 }
 
 .projects-question.question-open a::after,
 details[open] h4::after {
-  content: "";
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 12H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  content: "";
 }
 
 /* ProjectCard Selectors */
 .project-cards-container {
-  padding: 0 24px;
   display: grid;
   grid-template-columns: 1fr;
+  padding: 0 24px;
   grid-column-gap: 24px;
   grid-row-gap: 32px;
 
@@ -361,42 +361,42 @@ details[open] h4::after {
 .project-card-container {
   display: flex;
   flex-direction: column;
-  color: variables.$neutral-900;
   padding: 0;
   min-width: 300px;
+  color: variables.$neutral-900;
 }
 
 .project-card-img-container {
   position: relative;
-  width: 100%;
   padding-bottom: 60%;
+  width: 100%;
 }
 
 .project-card-img-status {
   @include mixins.h6-semi-bold;
-  color: variables.$neutral-50;
   position: relative;
-  text-align: center;
-  width: fit-content;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, 0.8);
   top: 85%;
   left: 8%;
   z-index: 1000;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-right: 5px;
+  padding-left: 5px;
+  width: fit-content;
+  color: variables.$neutral-50;
+  text-align: center;
 }
 
 .project-card-img {
-  border-radius: 20px;
   position: absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
   top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project-card-tags {
@@ -413,11 +413,11 @@ details[open] h4::after {
 
 .project-card-tag {
   @include mixins.h6-semi-bold;
-  color: variables.$primary-100;
   border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
   background-color: variables.$primary-500;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: variables.$primary-100;
 }
 
 .project-card-heading {
@@ -437,15 +437,15 @@ details[open] h4::after {
 
 .project-card-last-updated {
   @include mixins.p1-regular;
-  color: variables.$neutral-700;
   margin-top: 16px;
+  color: variables.$neutral-700;
 }
 
 .project-card-buttons-container {
-  margin-top: 16px;
-  width: fit-content;
   display: flex;
   gap: 20px;
+  margin-top: 16px;
+  width: fit-content;
 }
 
 .project-heading-section {
@@ -459,10 +459,10 @@ details[open] h4::after {
 }
 
 .project-card-loading {
+  display: inline;
+  border: #e5e5e5;
   background: #e5e5e5;
   color: #e5e5e5;
-  border: #e5e5e5;
-  display: inline;
 }
 
 .project-cards-load-status-container {
@@ -536,8 +536,8 @@ details[open] h4::after {
 
 .project-heading {
   @include mixins.h1-small-semi-bold;
-  color: variables.$secondary-50;
   margin-bottom: 8px;
+  color: variables.$secondary-50;
 }
 
 .project-main-heading-container {
@@ -551,9 +551,9 @@ details[open] h4::after {
 }
 
 .project-info-line {
-  height: 1px;
   border: none;
   background: variables.$neutral-400;
+  height: 1px;
 }
 
 /* SingleProjectsSectionStart */
@@ -565,25 +565,25 @@ details[open] h4::after {
   padding: 26px 0 50px 0;
 
   @media (min-width: variables.$screen-lg) {
-    padding: 96px 0 93px 0;
     flex-direction: row;
     align-items: start;
     gap: 24px;
+    padding: 96px 0 93px 0;
   }
 }
 
 .project-main-image {
-  width: 100%;
-  padding-bottom: 56%;
+  border: 1px solid #ffffff;
   border-radius: 8px;
   background-size: cover;
-  object-fit: cover;
   background-repeat: no-repeat;
-  border: 1px solid #ffffff;
+  padding-bottom: 56%;
+  width: 100%;
+  object-fit: cover;
 
   @media (min-width: variables.$screen-lg) {
-    padding-bottom: 32%;
     order: 2;
+    padding-bottom: 32%;
   }
 }
 
@@ -604,30 +604,30 @@ details[open] h4::after {
 
 .project-status-label {
   display: inline-block;
-  border: 1px solid variables.$secondary-200;
-  color: variables.$secondary-200;
   margin-right: auto;
+  border: 1px solid variables.$secondary-200;
   padding: 5px 8px;
+  color: variables.$secondary-200;
 }
 
 /* SingleProjectsLinks */
 
 .project-link-container {
-  background: variables.$neutral-900;
   display: flex;
   flex-direction: column;
   gap: 24px;
   border-top: 1px solid variables.$secondary-50;
   border-bottom: 1px solid variables.$secondary-50;
+  background: variables.$neutral-900;
   padding: 16px 0;
 
   @media (min-width: variables.$screen-xl) {
     position: sticky;
     top: 84px;
-    z-index: 5;
-    padding: 16px 20px;
     flex-direction: row;
     gap: 46px;
+    z-index: 5;
+    padding: 16px 20px;
   }
 }
 
@@ -693,25 +693,25 @@ details[open] h4::after {
     row-gap: 32px;
   }
   @media (min-width: variables.$screen-lg) {
-    margin-top: 76px;
     grid-template-columns: repeat(3, 1fr);
+    margin-top: 76px;
   }
 }
 
 .project-screenshot {
-  width: 100%;
-  padding-bottom: 56%;
   border-radius: 8px;
   background-size: cover;
-  object-fit: cover;
   background-repeat: no-repeat;
+  padding-bottom: 56%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .project-blank-screenshot {
-  width: 100%;
-  padding-bottom: 56%;
   border-radius: 8px;
   background: #d9d9d9;
+  padding-bottom: 56%;
+  width: 100%;
 }
 
 /* SingleProjectsRoadmap */
@@ -788,8 +788,8 @@ details[open] h4::after {
 
 .project-roadmap-info-label-two {
   @include mixins.h5-semi-bold;
-  color: variables.$secondary-50;
   margin-top: 20px;
+  color: variables.$secondary-50;
 }
 
 .project-roadmap-container .project-info-line {
@@ -851,9 +851,9 @@ details[open] h4::after {
 /* SingleProjectsVolunteer */
 
 .project-volunteer-container {
-  padding: 48px 0 24px 0;
   display: grid;
   grid-template-columns: 1fr;
+  padding: 48px 0 24px 0;
 
   @media (min-width: variables.$screen-lg) {
     grid-template-columns: 2fr 1fr;
@@ -893,11 +893,11 @@ details[open] h4::after {
 
 .project-volunteer-anchor {
   @include mixins.h4-bold;
-  color: variables.$primary-900;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: variables.$primary-900;
   white-space: nowrap;
 }
 

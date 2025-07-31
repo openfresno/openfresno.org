@@ -26,20 +26,20 @@
   position: relative;
 
   &::before {
-    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     transition:
       top,
       right,
       bottom,
       left,
       0.3s ease-in-out;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
     border: variables.$secondary-500 5px solid;
     border-radius: 6px;
+    content: "";
   }
 
   &:hover::before,

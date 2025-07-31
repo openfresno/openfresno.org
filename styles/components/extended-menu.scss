@@ -6,60 +6,60 @@ Navigation bar extended drop down menu.
 */
 
 .dropdown-menu {
-  max-width: 1320px;
   width: 100%;
+  max-width: 1320px;
 }
 
 .navbar-extended-desktop-section-item {
-  max-width: 257px;
   display: block;
+  max-width: 257px;
 }
 
 .navbar-extended-button {
   display: block;
+  cursor: pointer;
+  border: 1px solid variables.$secondary-500 !important;
+  border-radius: 6px;
+  background-color: variables.$secondary-300 !important;
+  padding: 8px 12px !important;
   width: fit-content;
   font-weight: 600;
   font-size: 14px !important;
   line-height: 16px;
-  background-color: variables.$secondary-300 !important;
-  border: 1px solid variables.$secondary-500 !important;
-  border-radius: 6px;
-  padding: 8px 12px !important;
-  cursor: pointer;
 }
 
 .dropdown-menu .navbar-extended-text-wrapper-2 {
   @include mixins.h4-semi-bold;
-  color: variables.$neutral-900;
   position: relative;
-  white-space: nowrap;
   width: 220px;
+  color: variables.$neutral-900;
+  white-space: nowrap;
 }
 
 .text-wrapper-3 {
   cursor: pointer;
-  text-decoration: none;
   color: variables.$primary-900;
+  text-decoration: none;
   @include mixins.p-footer-bold;
   border-bottom: 1px solid variables.$primary-900;
 }
 
 .dropdown-menu .navbar-extended-desktop-section-content {
   @include mixins.p1-regular;
-  color: variables.$neutral-900;
   padding: 20px 0;
+  color: variables.$neutral-900;
 }
 
 .dropdown-menu .section-content-2 {
   @include mixins.p-footer;
-  color: variables.$neutral-900;
   padding-top: 20px;
+  color: variables.$neutral-900;
 }
 
 .navbar-extended-content ul {
-  list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .navbar-extended-mobile-content ul::before {
@@ -67,13 +67,13 @@ Navigation bar extended drop down menu.
 }
 
 .navbar-extended-mobile-section li.active a {
-  color: variables.$secondary-50;
   background: variables.$neutral-900;
+  color: variables.$secondary-50;
 }
 
 .navbar-extended-desktop-container {
-  padding: 40px 0;
   display: none;
+  padding: 40px 0;
 
   a {
     color: variables.$neutral-900 !important;
@@ -81,26 +81,26 @@ Navigation bar extended drop down menu.
 }
 
 .navbar-extended-mobile-content {
-  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  padding: 10px;
 }
 
 .navbar-extended-mobile-content-button-01 {
+  cursor: pointer;
   background: transparent url("/img/navbar/menu_chevron_right.png") no-repeat
     center right;
   padding: 0 18px 0 0;
   color: variables.$secondary-500;
-  cursor: pointer;
 }
 
 .navbar-extended-mobile-content-button-02 {
+  cursor: pointer;
   background: transparent url("/img/navbar/menu_chevron_left.png") no-repeat
     center left;
   padding: 0 0 0 17px;
   color: variables.$secondary-500;
-  cursor: pointer;
 }
 
 .mobile-nav-link {
@@ -109,22 +109,22 @@ Navigation bar extended drop down menu.
 }
 
 .navbar-extended-mobile-container {
-  height: 100%;
-  color: variables.$secondary-50 !important;
   background: variables.$neutral-900 !important;
   padding: 16px;
+  height: 100%;
+  color: variables.$secondary-50 !important;
 }
 
 @media (min-width: variables.$screen-lg) {
   .navbar-extended-desktop-section-item {
-    max-width: max-content;
     padding: 0 20px;
+    max-width: max-content;
   }
   .navbar-extended-desktop-container {
-    width: 100%;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-items: start;
+    width: 100%;
     grid-gap: 10px;
   }
 
@@ -136,12 +136,12 @@ Navigation bar extended drop down menu.
 @media (min-width: variables.$screen-xxl) {
   .navbar-extended-desktop-container {
     display: flex;
-    justify-content: space-between;
     flex-grow: 1;
+    justify-content: space-between;
   }
 
   .navbar-extended-desktop-section-item {
-    max-width: 257px;
     display: block;
+    max-width: 257px;
   }
 }
