@@ -10,11 +10,11 @@ It is made up of three sections.
 - Right: Dropdown link that displays extended section
  */
 
-.toolbar-after-content {
+.content-offset-by-toolbar {
   margin-top: variables.$toolbar-height;
 }
 
-.toolbar-after-content-with-banner {
+.content-offset-by-toolbar-with-banner {
   margin-top: variables.$toolbar-height-with-banner;
 }
 

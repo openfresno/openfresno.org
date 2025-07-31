@@ -5,8 +5,8 @@
 /*
 Home page layout.
  */
-.home-landing-image {
-  background-image: url("/img/towerbridgenight.png");
+  .home-landing-image {
+  background-image: url("/img/fresno_tower_blue_circle.png");
   background-position: right bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -14,11 +14,6 @@ Home page layout.
   @media (max-width: variables.$screen-sm) {
     background-image: none;
   }
-}
-
-.home-landing-background {
-  background-color: variables.$landing-background-color;
-  color: variables.$neutral-50;
 }
 
 .home-landing-container {
