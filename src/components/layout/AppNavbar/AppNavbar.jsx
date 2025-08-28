@@ -59,7 +59,7 @@ export default function AppNavbar({ fade = false }) {
   }, [websiteURL, fade]);
 
   return (
-    <div className={`navbar-container ${fade && "border-[BFBFC5]"}`}>
+    <div className={`${fade ? "navbar-container-fade" : "navbar-container"}`}>
       <nav
         className="navbar-toolbar"
         style={
@@ -79,10 +79,10 @@ export default function AppNavbar({ fade = false }) {
             <div className={"navbar-left-container"}>
               <Link className={"navbar-left-section"} href="/">
                 <img
-                  src="/img/logo_opensac_black_transparent_2.png"
+                  src="/assets/logo/logo-text-black.svg"
                   alt="Open Fresno logo"
-                  height="60"
-                  width="200"
+                  height="44"
+                  width="110"
                 />
               </Link>
             </div>

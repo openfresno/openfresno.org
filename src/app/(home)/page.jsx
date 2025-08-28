@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <AppLayout fadeNavbar={true}>
       <main className="">
-        <header className="bg-neutral-50">
+        <header className="">
           <div className="home-landing-image">
             <div className="home-landing-container">
               <h1 className="home-landing-heading">

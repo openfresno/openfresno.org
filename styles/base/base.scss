@@ -1,10 +1,13 @@
-@use "../abstracts/variables";
+@use "../abstracts/variables.scss";
+@use "../abstracts/mixins";
+@use "../base/animations";
 
 html,
 body {
-  background: variables.$landing-background-color;
+  background: variables.$secondary-50;
   scroll-behavior: smooth;
   scroll-padding-top: variables.$navbar-height;
+  color: variables.$neutral-900;
 }
 
 a {

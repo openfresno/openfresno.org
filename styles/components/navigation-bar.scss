@@ -27,7 +27,7 @@ It is made up of three sections.
 }
 
 // Background behind the navbar. It requires the navbar to be transparent and offset page content. By default, this is not shown; it is overridden by the navbar-toolbar background color.
-.navbar-container {
+.navbar-container-fade {
   position: fixed;
   top: 0;
   z-index: 4;
@@ -37,22 +37,36 @@ It is made up of three sections.
   width: 100%;
 }
 
+.navbar-container {
+  z-index: 4;
+  margin: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: variables.$neutral-300;
+  background: variables.$secondary-50;
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: variables.$screen-lg) {
+  .navbar-container {
+    border: none;
+  }
+}
 .navbar-toolbar {
   @include mixins.h5-semi-bold;
   display: flex;
   position: relative;
-  flex-wrap: wrap;
   z-index: 5;
-  background: variables.$landing-background-color;
   height: variables.$navbar-height;
-  color: variables.$secondary-50;
+  color: variables.$neutral-900;
 
   a,
   .navbar-toolbar a:visited,
   .navbar-toolbar a:link {
     margin: 0;
     padding: 0;
-    color: variables.$secondary-50;
+    color: variables.$neutral-900;
     text-decoration: none;
   }
 }
@@ -134,7 +148,7 @@ It is made up of three sections.
   transition: 0.3s ease-in-out;
   margin: 0;
   border: none;
-  background: variables.$secondary-50;
+  background-color: variables.$neutral-900;
   width: 80px;
   height: 2px;
 }
@@ -193,7 +207,7 @@ It is made up of three sections.
   }
 
   @media screen and (min-width: variables.$screen-lg) {
-    background: variables.$secondary-50;
+    background-color: variables.$secondary-50;
     color: variables.$neutral-900;
     .navbar-right-section {
       background: inherit;
@@ -205,8 +219,7 @@ It is made up of three sections.
   .navbar-toolbar-extended {
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-color: #ebeae5;
-    background-color: variables.$secondary-50;
+    border-color: variables.$neutral-300;
   }
 
   .navbar-extend-button-text {
@@ -219,7 +232,7 @@ It is made up of three sections.
     background: transparent url("/img/navbar/chevron_down.png") no-repeat center
       right;
     padding: 0 20px 0 0;
-    color: variables.$secondary-500;
+    color: variables.$vivid-blue;
   }
 
   .navbar-toggle-extend-button-extended {

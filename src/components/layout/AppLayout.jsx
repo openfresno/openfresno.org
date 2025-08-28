@@ -15,7 +15,9 @@ export default function AppLayout({ children, fadeNavbar = false }) {
   return (
     <>
       <AppNavbar fade={fadeNavbar} />
-      <div className={`toolbar-after-content`}>{children}</div>
+      <div className={`${fadeNavbar && "toolbar-after-content"}`}>
+        {children}
+      </div>
       <AppFooter />
     </>
   );

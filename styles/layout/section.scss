@@ -2,7 +2,7 @@
 @use "../abstracts/mixins";
 
 .toolbar-after-content {
-  margin-top: variables.$navbar-height
+  margin-top: variables.$navbar-height;
 }
 .section-dark {
   background-color: variables.$primary-900;
