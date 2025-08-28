@@ -2,13 +2,11 @@ import Button from "../../components/ui/buttons";
 import { Slider } from "../../components/ui";
 import Link from "next/link";
 import Image from "next/image";
-import AppNavbar from "@/components/layout/AppNavbar";
-import AppFooter from "@/components/layout/AppFooter";
+import AppLayout from "../../components/layout/AppLayout";
 
 export default function HomePage() {
   return (
-    <div className="">
-      <AppNavbar fade={true} />
+    <AppLayout fadeNavbar={true}>
       <main className="">
         <header className="bg-neutral-50">
           <div className="home-landing-image">
@@ -371,7 +369,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-      <AppFooter />
-    </div>
+    </AppLayout>
   );
 }

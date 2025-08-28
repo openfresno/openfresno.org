@@ -11,19 +11,19 @@ It is made up of three sections.
  */
 
 .content-offset-by-toolbar {
-  margin-top: variables.$toolbar-height;
+  margin-top: variables.$navbar-height;
 }
 
 .content-offset-by-toolbar-with-banner {
-  margin-top: variables.$toolbar-height-with-banner;
+  margin-top: variables.$navbar-height-with-banner;
 }
 
 .toolbar-normal {
-  height: variables.$toolbar-height;
+  height: variables.$navbar-height;
 }
 
 .toolbar-height-with-banner {
-  height: variables.$toolbar-height-with-banner;
+  height: variables.$navbar-height-with-banner;
 }
 
 // Background behind the navbar. It requires the navbar to be transparent and offset page content. By default, this is not shown; it is overridden by the navbar-toolbar background color.
@@ -44,7 +44,7 @@ It is made up of three sections.
   flex-wrap: wrap;
   z-index: 5;
   background: variables.$landing-background-color;
-  height: variables.$toolbar-height;
+  height: variables.$navbar-height;
   color: variables.$secondary-50;
 
   a,
@@ -142,7 +142,7 @@ It is made up of three sections.
 .navbar-right-container {
   display: inline-flex;
   padding: 10px 16px;
-  height: variables.$toolbar-height;
+  height: variables.$navbar-height;
 }
 
 .navbar-right-section {

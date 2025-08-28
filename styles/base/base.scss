@@ -4,7 +4,7 @@ html,
 body {
   background: variables.$landing-background-color;
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: variables.$navbar-height;
 }
 
 a {

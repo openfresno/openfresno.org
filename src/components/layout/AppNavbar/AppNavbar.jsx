@@ -52,8 +52,6 @@ export default function AppNavbar({ fade = false }) {
   useEffect(() => {
     showExtendedMenu(false);
     if (currentScrollHeight === 0) setCurrentScrollHeight(window.scrollY);
-
-    // Only register navbar fade layout if fade is true
     if (fade) {
       return registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight);
     }
@@ -61,19 +59,19 @@ export default function AppNavbar({ fade = false }) {
   }, [websiteURL, fade]);
 
   return (
-    <div className="navbar-container">
+    <div className={`navbar-container ${fade && "border-[BFBFC5]"}`}>
       <nav
         className="navbar-toolbar"
         style={
           fadeLayout && !extendedMenuVisible
             ? {
-                backgroundColor: `rgba(6, 7, 23, ${backgroundOpacity})`,
+                backgroundColor: `rgba(255, 252, 245, ${backgroundOpacity})`,
                 boxShadow:
                   backgroundOpacity > 0.2
                     ? `0 2px 4px rgba(0, 0, 0, ${backgroundOpacity * 0.1})`
                     : "none",
               }
-            : { backgroundColor: "rgba(6, 7, 23, 1)" }
+            : { backgroundColor: "rgba(255, 252, 245, 1)" }
         }
       >
         <div className={"navbar-toolbar-main"}>
