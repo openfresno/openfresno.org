@@ -13,7 +13,7 @@ export default function notFound() {
           <h1>Oops!</h1>
           <h4>404 Page Not Found</h4>
           <div className="not-found-text-container">
-            <p>Looks like this page hasn't been developed yet.</p>
+            <p>Looks like this page hasn&apos;t been developed yet.</p>
             <p>Would you like to join and be a part of creating it?</p>
           </div>
           <Link

@@ -2,14 +2,14 @@
 @use "../abstracts/variables";
 
 .general-heading-section {
-  color: variables.$secondary-50;
   background-color: variables.$secondary-900;
+  color: variables.$secondary-50;
   @include mixins.h1-section;
   margin: 0;
-
-  width: fit-content;
   border: 10px solid variables.$secondary-900;
   border-radius: 8px;
+
+  width: fit-content;
 }
 
 .general-heading-section-alt {
@@ -66,11 +66,11 @@
 }
 
 .heading-underline::after {
-  content: "";
   position: absolute;
-  height: 1px;
-  width: 43px;
   border-bottom: 4px solid variables.$neutral-900;
+  width: 43px;
+  height: 1px;
+  content: "";
 }
 
 .underline-alt::after {
@@ -82,11 +82,11 @@
 }
 
 .dark-heading-container::after {
-  content: "";
   position: absolute;
-  left: 0;
   right: 0;
-  height: 1px;
-  width: 43px;
+  left: 0;
   border-bottom: 4px solid variables.$neutral-50;
+  width: 43px;
+  height: 1px;
+  content: "";
 }

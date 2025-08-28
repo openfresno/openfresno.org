@@ -3,8 +3,8 @@
 html,
 body {
   background: variables.$landing-background-color;
-  scroll-padding-top: 80px;
   scroll-behavior: smooth;
+  scroll-padding-top: variables.$navbar-height;
 }
 
 a {

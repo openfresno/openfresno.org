@@ -6,29 +6,24 @@
 Home page layout.
  */
 .home-landing-image {
-  background-image: url("/img/towerbridgenight.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+  background-image: url("/img/fresno_tower_blue_circle.png");
   background-position: right bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   @media (max-width: variables.$screen-sm) {
     background-image: none;
   }
 }
 
-.home-landing-background {
-  background-color: variables.$landing-background-color;
-  color: variables.$neutral-50;
-}
-
 .home-landing-container {
-  width: 40%;
-  min-height: 721px;
-  padding: 0 30px 0 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 24px;
+  padding: 0 30px 0 80px;
+  width: 40%;
+  min-height: 721px;
   color: variables.$neutral-50;
 
   @media (max-width: variables.$screen-xl) {
@@ -36,9 +31,9 @@ Home page layout.
   }
 
   @media (max-width: variables.$screen-md) {
-    width: auto;
     justify-content: flex-start;
     padding: 30% 40px 60px;
+    width: auto;
   }
 
   @media (max-width: variables.$screen-sm) {
@@ -64,9 +59,9 @@ Home page layout.
 }
 
 .home-buttons-group {
-  width: fit-content;
   display: flex;
   gap: 20px;
+  width: fit-content;
 }
 
 .home-section-dark-container {
@@ -74,8 +69,8 @@ Home page layout.
 }
 
 .donate-section-underline::after {
-  padding-bottom: 18px;
   border-bottom: 8px solid variables.$neutral-50;
+  padding-bottom: 18px;
   width: 101px;
 }
 
@@ -85,16 +80,16 @@ Home page layout.
 }
 
 .home-about-container {
-  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
+  width: 40%;
 
   @media (max-width: variables.$screen-lg) {
-    width: auto;
-    padding: 48px 40px 0 40px;
     margin: auto;
+    padding: 48px 40px 0 40px;
+    width: auto;
   }
 }
 
@@ -106,17 +101,17 @@ Home page layout.
   padding: 192px 0 192px 80px;
 
   @media (max-width: variables.$screen-lg) {
-    padding: 0;
     flex-direction: column;
     align-items: flex-end;
+    padding: 0;
   }
 }
 
 .home-about-image {
   background-image: url("/img/open_data_day_curved.png");
-  background-repeat: no-repeat;
-  background-size: 45vw 40vw;
   background-position: right center;
+  background-size: 45vw 40vw;
+  background-repeat: no-repeat;
 
   @media (min-width: 1700px) {
     background-size: 40% 80%;
@@ -133,14 +128,14 @@ Home page layout.
 
   @media (max-width: variables.$screen-lg) {
     display: block;
-    height: 50vw;
     margin-bottom: 80px;
+    height: 50vw;
   }
 
   @media (max-width: variables.$screen-md) {
     display: block;
-    height: 70vw;
     margin-bottom: 80px;
+    height: 70vw;
   }
 }
 
@@ -157,11 +152,11 @@ Home page layout.
 }
 
 .home-numbered-grid {
-  margin: 40px 0 0 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 24px;
+  margin: 40px 0 0 0;
 
   @media (max-width: variables.$screen-md) {
     flex-wrap: wrap;
@@ -173,19 +168,19 @@ Home page layout.
 .home-numbered-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 24px;
   max-width: 600px;
 }
 
 .home-numbered-header {
   @include mixins.h3-bold;
-  text-align: center;
-  flex: 1;
   display: flex;
+  flex: 1;
   align-items: center;
   margin: 0;
+  text-align: center;
 
   @media (max-width: variables.$screen-sm) {
     @include mixins.h4-bold;
@@ -198,27 +193,27 @@ Home page layout.
 }
 
 .home-projects-section {
-  padding: 96px 80px;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   justify-content: space-between;
+  align-items: stretch;
   gap: 30px;
+  padding: 96px 80px;
 
   @media (max-width: 1300px) {
     flex-direction: column;
     justify-content: center;
-    padding: 48px 40px;
     gap: 80px;
+    padding: 48px 40px;
   }
 }
 
 .home-projects-info-container {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
+  width: 50%;
 
   @media (max-width: variables.$screen-xxl) {
     width: 100%;
@@ -226,8 +221,8 @@ Home page layout.
 }
 
 .home-section-project-image {
-  width: 100%;
   aspect-ratio: 2/1;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -251,34 +246,34 @@ Home page layout.
 }
 
 .partnership-section {
-  padding: 64px 80px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
+  padding: 64px 80px;
 
   @media (max-width: variables.$screen-lg) {
-    padding: 64px 40px;
     align-items: center;
+    padding: 64px 40px;
   }
 }
 
 .heading-underline-partnership::after {
-  content: "";
   position: absolute;
-  height: 1px;
-  width: 93px;
-  border-bottom: 8px solid variables.$secondary-50;
   margin-bottom: 20px;
+  border-bottom: 8px solid variables.$secondary-50;
+  width: 93px;
+  height: 1px;
+  content: "";
 }
 
 .donate-section {
-  padding: 64px 80px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 60px;
+  padding: 64px 80px;
 
   @media (max-width: variables.$screen-lg) {
     flex-direction: column;
@@ -323,23 +318,23 @@ Home page layout.
 }
 
 .home-projects-section-partnerships {
-  padding-left: 32px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   align-content: flex-start;
+  align-items: center;
   gap: 48px;
+  padding-left: 32px;
 
   @media (max-width: variables.$screen-lg) {
     flex-direction: column;
     justify-content: center;
-    padding: 0;
     gap: 60px;
+    padding: 0;
   }
 }
 
 .home-numbered-paragraph-partnerships {
   @include mixins.p3-regular;
-  text-align: left;
   margin-top: 24px;
+  text-align: left;
 }

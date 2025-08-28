@@ -20,7 +20,7 @@ export default function SingleProjectsSectionStart({ data }) {
           className={`project-main-heading-container heading-underline underline-alt`}
         >
           <span className={`project-type`}>{data.meta.project_type}</span>
-          <h1 className={`project-heading  mb-2`}>{data.meta.title}</h1>
+          <h1 className={`project-heading mb-2`}>{data.meta.title}</h1>
         </div>
         <span className={`project-status-label upper-first`}>
           Project Status: {data.meta.project_status}

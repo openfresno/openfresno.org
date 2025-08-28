@@ -120,10 +120,10 @@ Mixins are mostly used throughout the application for font attributes. It should
 }
 
 @mixin p2-bold {
-  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
+  font-family: "Inter", sans-serif;
 }
 
 @mixin p3-bold {

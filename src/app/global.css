@@ -1,3 +1,36 @@
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
+
+@theme {
+  --color-neutral-50: #f7f7f8;
+  --color-neutral-100: #eaeaec;
+  --color-neutral-200: #d4d4d8;
+  --color-neutral-300: #bfbfc5;
+  --color-neutral-400: #a9aab1;
+  --color-neutral-500: #72727d;
+  --color-neutral-600: #55555e;
+  --color-neutral-700: #3a3a40;
+  --color-neutral-800: #1d1d20;
+  --color-neutral-900: #060717;
+  --color-primary-50: #f0f4fe;
+  --color-primary-100: #d6e1fe;
+  --color-primary-200: #adc4fc;
+  --color-primary-300: #85a6fb;
+  --color-primary-400: #5b89fa;
+  --color-primary-500: #0d2866;
+  --color-primary-600: #0034ae;
+  --color-primary-700: #002377;
+  --color-primary-800: #00113c;
+  --color-primary-900: #00091e;
+  --color-secondary-50: #fffcf5;
+  --color-secondary-100: #fff9e7;
+  --color-secondary-200: #fff2cf;
+  --color-secondary-300: #ffe5a1;
+  --color-secondary-400: #ffd874;
+  --color-secondary-500: #ffbf32;
+  --color-secondary-600: #ecaf2c;
+  --color-secondary-700: #e9ad2e; /* Check this one, very similar to 600 */
+  --color-secondary-800: #251e0d;
+  --color-secondary-900: #0c0900;
+}

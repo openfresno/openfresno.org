@@ -4,12 +4,15 @@ const withMDX = require("@next/mdx")();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
-  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  images: {
+    unoptimized: true,
+  },
+  pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
   },
   transpilePackages: ["next-mdx-remote"],
 };

@@ -5,35 +5,35 @@
 conduct page layout
  */
 .conduct-light-theme {
-  color: variables.$neutral-900;
   background-color: variables.$secondary-50;
+  color: variables.$neutral-900;
 }
 
 .conduct-dark-theme {
-  color: variables.$neutral-50;
   background-color: variables.$neutral-900;
+  color: variables.$neutral-50;
 }
 
 .conduct-grey-theme {
-  color: variables.$neutral-50;
   background-color: variables.$neutral-500;
+  color: variables.$neutral-50;
 }
 
 .conduct-section-landing {
-  padding: 96px 80px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 24px;
+  padding: 96px 80px;
 
   @media (max-width: variables.$screen-md) {
     padding: 96px 60px;
   }
 
   @media (max-width: variables.$screen-md) {
-    padding: 48px 40px;
     flex-direction: column;
+    padding: 48px 40px;
   }
 }
 
@@ -43,16 +43,16 @@ conduct page layout
 }
 
 .conduct-list-container {
-  padding: 40px 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 30px;
+  padding: 40px 80px;
 
   @media (max-width: variables.$screen-md) {
-    padding: 0 25px 48px 25px;
     gap: 24px;
+    padding: 0 25px 48px 25px;
   }
 }
 
@@ -77,25 +77,25 @@ conduct page layout
 }
 
 .conduct-numbered-item {
-  padding: 10px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
   gap: 30px;
+  padding: 10px;
   width: 100%;
 
   @media (max-width: variables.$screen-md) {
+    align-items: flex-start;
     gap: 16px;
     padding: 0;
-    align-items: flex-start;
   }
 }
 
 .conduct-item-image {
   width: 10vw;
-  height: 10vw;
   max-width: 80px;
+  height: 10vw;
   max-height: 80px;
 }
 
@@ -116,12 +116,12 @@ conduct page layout
 // Policies
 
 .conduct-policy-landing-container {
-  padding: 96px 80px 40px 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 24px;
+  padding: 96px 80px 40px 80px;
 
   @media (max-width: variables.$screen-md) {
     padding: 48px 40px 0 40px;
@@ -129,16 +129,16 @@ conduct page layout
 }
 
 .conduct-policy-body-container {
-  padding: 40px 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 30px;
+  padding: 40px 80px;
 
   @media (max-width: variables.$screen-md) {
-    padding: 48px 40px;
     gap: 40px;
+    padding: 48px 40px;
   }
 }
 

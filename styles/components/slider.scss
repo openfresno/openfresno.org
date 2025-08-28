@@ -22,19 +22,19 @@
 
 .dots {
   display: flex;
-  padding: 10px 0;
   justify-content: center;
+  padding: 10px 0;
 }
 
 .dot {
+  cursor: pointer;
+  margin: 0 5px;
   border: none;
+  border-radius: 50%;
+  background: variables.$secondary-50;
+  padding: 5px;
   width: 10px;
   height: 10px;
-  background: variables.$secondary-50;
-  border-radius: 50%;
-  margin: 0 5px;
-  padding: 5px;
-  cursor: pointer;
 }
 
 .dot:focus {

@@ -22,8 +22,8 @@ export default function MarginTop() {
     <div
       className={`${
         delayedBannerVisible
-          ? "toolbar-after-content-with-banner"
-          : "toolbar-after-content"
+          ? "content-offset-by-toolbar-with-banner"
+          : "content-offset-by-toolbar"
       }`}
     ></div>
   );

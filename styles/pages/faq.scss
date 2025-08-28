@@ -10,9 +10,9 @@ FAQ page layout.
 }
 
 .faq-main {
+  border-bottom: 1px solid variables.$neutral-900;
   background-color: variables.$secondary-50;
   padding-bottom: 50px;
-  border-bottom: 1px solid variables.$neutral-900;
 }
 
 .faq-container-margins {
@@ -28,11 +28,11 @@ FAQ page layout.
 }
 
 .faq-nav-light {
-  color: variables.$neutral-900;
-  border: 1px solid variables.$primary-500;
-  border-left: none;
-  border-right: none;
   margin: 0 80px;
+  border: 1px solid variables.$primary-500;
+  border-right: none;
+  border-left: none;
+  color: variables.$neutral-900;
 
   @media (max-width: variables.$screen-md) {
     margin: 0 40px;
@@ -46,10 +46,10 @@ FAQ page layout.
 
 .faq-nav a {
   @include mixins.nav-semi-bold;
-  color: variables.$neutral-50;
-  margin-right: 20px;
   display: inline-block;
+  margin-right: 20px;
   padding: 5px 0;
+  color: variables.$neutral-50;
   text-decoration: underline;
   text-underline-offset: 4px;
 
@@ -59,15 +59,15 @@ FAQ page layout.
 
   @media (max-width: variables.$screen-md) {
     display: block;
-    font-size: 20px;
     width: 100%;
+    font-size: 20px;
   }
 }
 
 .faq-container-margins h3 {
   @include mixins.h4-semi-bold;
-  padding: 40px 0;
   margin-top: 40px;
+  padding: 40px 0;
 
   @media (max-width: variables.$screen-md) {
     @include mixins.h5-semi-bold;
@@ -83,8 +83,8 @@ FAQ page layout.
   padding: 24px 0;
 
   @media (max-width: variables.$screen-md) {
-    font-size: 16px;
     font-weight: 700;
+    font-size: 16px;
   }
 }
 
@@ -98,41 +98,41 @@ details > summary::-webkit-details-marker {
 
 .faq-question a,
 details h4 {
-  position: relative;
   display: flex;
-  align-items: center;
+  position: relative;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
 .faq-question a::after,
 details h4::after {
-  content: "";
-  flex-shrink: 0;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 6.5V12.5M12 12.5V18.5M12 12.5H18M12 12.5H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
-  background-repeat: no-repeat;
   display: block;
-  background-size: 24px;
-  background-position: center;
-  height: 44px;
-  width: 44px;
+  flex-shrink: 0;
   margin: 10px 0 10px auto;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='25' viewBox='0 0 24 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 6.5V12.5M12 12.5V18.5M12 12.5H18M12 12.5H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  width: 44px;
+  height: 44px;
+  content: "";
 }
 
 .faq-question.question-open a::after,
 details[open] h4::after {
-  content: "";
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18 12H6' stroke='%23060718' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+  content: "";
 }
 
 .question-text,
 details p {
   @include mixins.p3-regular;
-  max-width: 1060px;
-  color: variables.$neutral-900;
   margin: 0;
   padding-top: 0;
   padding-bottom: 20px;
+  max-width: 1060px;
+  color: variables.$neutral-900;
 
   @media (max-width: variables.$screen-md) {
     color: variables.$neutral-800;
@@ -160,9 +160,9 @@ details {
 }
 
 .faq-section-heading-underline::after {
-  content: "";
   position: absolute;
-  height: 1px;
-  width: 43px;
   border-bottom: 4px solid variables.$neutral-900;
+  width: 43px;
+  height: 1px;
+  content: "";
 }

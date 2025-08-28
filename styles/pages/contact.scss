@@ -11,8 +11,8 @@ contact page layout
 }
 
 .contact-light-section {
-  padding: 7%;
   background-color: variables.$secondary-50;
+  padding: 7%;
 
   @media (max-width: variables.$screen-md) {
     padding: 16px;
@@ -50,17 +50,17 @@ contact page layout
 }
 
 .contact-mission-container {
-  min-width: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
   background-color: variables.$neutral-900;
+  min-width: 50vw;
   color: variables.$neutral-50;
 
   @media (max-width: variables.$screen-lg) {
-    width: auto;
     margin: auto;
+    width: auto;
   }
 }
 
@@ -79,31 +79,31 @@ contact page layout
 .contactActionLinksAnchor {
   cursor: pointer;
   color: var(--secondary-secondary-500, #ffc107);
-  // font-family: Inter;
-  font-size: 20px;
   font-style: normal;
   font-weight: 600;
+  // font-family: Inter;
+  font-size: 20px;
   line-height: 32px;
   text-decoration-line: underline;
 }
 
 .form-holder {
   background-color: variables.$secondary-900;
+  padding: 80px 88px 80px 88px;
+  width: 100%;
   min-width: 50vh;
+  height: auto;
   color: var(--Neutral-Neutral-50, #f7f7f8);
-  font-family: Inter, sans-serif;
-  font-size: 12px;
   font-style: normal;
   font-weight: 500;
+  font-size: 12px;
   line-height: 20px; /* 166.667% */
-  width: 100%;
-  height: auto;
-  padding: 80px 88px 80px 88px;
+  font-family: Inter, sans-serif;
 
   @media (max-width: variables.$screen-lg) {
-    min-width: 100%;
     margin: auto;
     padding: 0;
+    min-width: 100%;
   }
 }
 
