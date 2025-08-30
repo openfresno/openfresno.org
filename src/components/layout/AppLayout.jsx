@@ -1,5 +1,5 @@
-import AppNavbar from "../layout/AppNavbar";
-import AppFooter from "../layout/AppFooter";
+import AppNavbar from "./AppNavbar";
+import AppFooter from "./AppFooter";
 
 /**
  * Default app layout.
@@ -15,7 +15,7 @@ export default function AppLayout({ children, fadeNavbar = false }) {
   return (
     <>
       <AppNavbar fade={fadeNavbar} />
-      <div className={`${fadeNavbar && "toolbar-after-content"}`}>
+      <div className={`toolbar-after-content`}>
         {children}
       </div>
       <AppFooter />
