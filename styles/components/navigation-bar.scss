@@ -9,51 +9,29 @@ It is made up of three sections.
 - Middle: Links with animated underline
 - Right: Dropdown link that displays extended section
  */
-
-.content-offset-by-toolbar {
-  margin-top: variables.$navbar-height;
-}
-
-.content-offset-by-toolbar-with-banner {
-  margin-top: variables.$navbar-height-with-banner;
-}
-
-.toolbar-normal {
-  height: variables.$navbar-height;
-}
-
-.toolbar-height-with-banner {
-  height: variables.$navbar-height-with-banner;
-}
-
 // Background behind the navbar. It requires the navbar to be transparent and offset page content. By default, this is not shown; it is overridden by the navbar-toolbar background color.
 .navbar-container {
   position: fixed;
-  top: 0;
+    top: 0;
   z-index: 4;
   margin: 0;
-  background: transparent;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: variables.$neutral-300;
   padding: 0;
   width: 100%;
-}
-
-.navbar-toolbar {
   @include mixins.h5-semi-bold;
-  display: flex;
-  position: relative;
-  flex-wrap: wrap;
   z-index: 5;
-  background: variables.$landing-background-color;
   height: variables.$navbar-height;
-  color: variables.$secondary-50;
-
-  a,
-  .navbar-toolbar a:visited,
-  .navbar-toolbar a:link {
-    margin: 0;
-    padding: 0;
-    color: variables.$secondary-50;
+  a {
     text-decoration: none;
+  }
+  &--fade {
+    background: transparent;
+  }
+
+  @media screen and (min-width: variables.$screen-lg) {
+    border: none;
   }
 }
 
@@ -61,6 +39,7 @@ It is made up of three sections.
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 100%;
 }
 
 .navbar-toolbar-content {
@@ -134,45 +113,38 @@ It is made up of three sections.
   transition: 0.3s ease-in-out;
   margin: 0;
   border: none;
-  background: variables.$secondary-50;
+  background-color: variables.$neutral-900;
   width: 80px;
   height: 2px;
 }
 
-.navbar-right-container {
-  display: inline-flex;
-  padding: 10px 16px;
-  height: variables.$navbar-height;
-}
 
-.navbar-right-section {
+.navbar-toggle-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: url("/img/navbar/menu_hamburger_light.svg") no-repeat center right;
+    color: variables.$vivid-blue;
+    margin-right: 16px;
+* {
+  display: none;
+}
 
-  @media screen and (min-width: variables.$screen-lg) {
-    background: transparent;
+  &--collapsed {
+    padding-right: 30px;
+  background: url("/img/navbar/chevron_down.svg") no-repeat center right;
   }
-}
-
-.navbar-extended-button {
-  cursor: pointer;
-  outline: inherit;
-  border: none;
-  background: transparent;
-  color: transparent;
-  font: inherit;
-}
-
-.navbar-nested-parent-link {
-  background: transparent;
-
-  button {
-    background-color: variables.$navbar-color;
+    &--extended {
+    padding-right: 30px;
+  background: url("/img/navbar/chevron_down.svg") no-repeat center right;
   }
+
+// @media screen and (min-width: variables.$screen-lg) {
+//     background: transparent url("/img/navbar/chevron_down.svg") no-repeat center
+//       right;
+// }
 }
+
 
 .navbar-toolbar-extended {
   display: flex;
@@ -181,51 +153,4 @@ It is made up of three sections.
   margin: 0;
   box-shadow: 0 4px 4px 0 rgba(variables.$navbar-color, 0.25);
   padding: 0;
-}
-
-.navbar-extend-button-text {
-  visibility: hidden;
-}
-
-.navbar-extend-background-active {
-  .navbar-right-section {
-    background: url("/img/navbar/menu_x.png") no-repeat center right;
-  }
-
-  @media screen and (min-width: variables.$screen-lg) {
-    background: variables.$secondary-50;
-    color: variables.$neutral-900;
-    .navbar-right-section {
-      background: inherit;
-    }
-  }
-}
-
-@media screen and (min-width: variables.$screen-lg) {
-  .navbar-toolbar-extended {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-color: #ebeae5;
-    background-color: variables.$secondary-50;
-  }
-
-  .navbar-extend-button-text {
-    display: inline;
-    visibility: visible;
-    color: inherit;
-  }
-
-  .navbar-toggle-extend-button {
-    background: transparent url("/img/navbar/chevron_down.png") no-repeat center
-      right;
-    padding: 0 20px 0 0;
-    color: variables.$secondary-500;
-  }
-
-  .navbar-toggle-extend-button-extended {
-    background: transparent url("/img/navbar/chevron_up.png") no-repeat center
-      right;
-    padding: 0 20px 0 0;
-    color: variables.$neutral-900;
-  }
 }

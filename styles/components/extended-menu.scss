@@ -8,6 +8,7 @@ Navigation bar extended drop down menu.
 .dropdown-menu {
   width: 100%;
   max-width: 1320px;
+  background: variables.$secondary-50;
 }
 
 .navbar-extended-desktop-section-item {
@@ -109,7 +110,6 @@ Navigation bar extended drop down menu.
 }
 
 .navbar-extended-mobile-container {
-  background: variables.$neutral-900 !important;
   padding: 16px;
   height: 100%;
   color: variables.$secondary-50 !important;
