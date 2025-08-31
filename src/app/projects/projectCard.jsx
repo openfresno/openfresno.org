@@ -1,4 +1,4 @@
-import Button from "../../components/ui/buttons";
+import Button from "../../components/ui/Button";
 
 /**
  * Projects start section.

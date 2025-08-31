@@ -1,4 +1,4 @@
-import Button from "../../components/ui/buttons";
+import Button from "../../components/ui/Button";
 import { Slider } from "../../components/ui";
 import Link from "next/link";
 import Image from "next/image";

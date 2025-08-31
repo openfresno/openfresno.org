@@ -1,6 +1,6 @@
-import HeaderUnderline from "../../components/layout/HeaderUnderline";
+import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import instructionData from "./instructions.json";
-import SidebarSection from "../../components/layout/SidebarSection";
+import SidebarSection from "../../components/ui/SidebarSection";
 import Steps from "../../components/ui/Steps";
 import AppLayout from "@/components/layout/AppLayout";
 
