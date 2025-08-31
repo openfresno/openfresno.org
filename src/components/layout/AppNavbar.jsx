@@ -115,21 +115,27 @@ export default function AppNavbar({ fade = false }) {
                   websiteURL === "/" ? "navbar-link-selected one" : ""
                 }`}
               >
-                <Link className="navbar-link" href="/">Home</Link>
+                <Link className="navbar-link" href="/">
+                  Home
+                </Link>
               </li>
               <li
                 className={`navbar-link-list-item ${
                   websiteURL === "/about" ? "navbar-link-selected two" : ""
                 }`}
               >
-                <Link className="navbar-link" href="/about">About</Link>
+                <Link className="navbar-link" href="/about">
+                  About
+                </Link>
               </li>
               <li
                 className={`navbar-link-list-item ${
                   websiteURL === "/contact" ? "navbar-link-selected three" : ""
                 }`}
               >
-                <Link className="navbar-link" href="/contact">Contact</Link>
+                <Link className="navbar-link" href="/contact">
+                  Contact
+                </Link>
               </li>
               <li className={`navbar-link-list-item`}>
                 <Link href="/donate">Donate</Link>

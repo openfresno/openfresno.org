@@ -7,10 +7,10 @@ Home page layout.
  */
 .home-landing-container {
   display: flex;
-  min-height: 418px;
-  max-width: variables.$screen-xxl + 80px;
-  padding: 4rem 40px;
   margin: auto;
+  padding: 4rem 40px;
+  max-width: variables.$screen-xxl + 80px;
+  min-height: 418px;
 }
 
 .home-landing-heading {

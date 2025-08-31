@@ -60,8 +60,8 @@ It is made up of three sections.
 }
 
 .navbar-link {
-  padding: 1rem;
   z-index: 15;
+  padding: 1rem;
 }
 
 .navbar-link-selected {
@@ -109,11 +109,11 @@ It is made up of three sections.
 }
 
 .navbar-underline {
-  z-index: 10;
   display: none;
   position: absolute;
   top: 82%;
   float: left;
+  z-index: 10;
   transition: 0.3s ease-in-out;
   margin: 0;
   border: none;

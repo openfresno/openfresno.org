@@ -1,5 +1,5 @@
 import Button from "../../components/ui/Button";
-import {Slider} from "../../components/ui";
+import { Slider } from "../../components/ui";
 import Link from "next/link";
 import Image from "next/image";
 import AppLayout from "../../components/layout/AppLayout";
@@ -9,13 +9,12 @@ export default function HomePage() {
     <AppLayout fadeNavbar={true}>
       <main className="">
         <header className="home-landing-container">
-          <div className="flex-1 flex flex-col justify-center">
-            <h1 className="home-landing-heading">
-              Welcome to Open Fresno
-            </h1>
+          <div className="flex flex-1 flex-col justify-center">
+            <h1 className="home-landing-heading">Welcome to Open Fresno</h1>
             <p className="home-landing-paragraph">
-              Become a part of the transformation in Fresno and the Central Valley Area through technology and open
-              data. Volunteer today for a brighter future!
+              Become a part of the transformation in Fresno and the Central
+              Valley Area through technology and open data. Volunteer today for
+              a brighter future!
             </p>
             <div className="home-buttons-group">
               <Button
@@ -31,9 +30,19 @@ export default function HomePage() {
             </div>
           </div>
           <div className="flex-1">
-            <div className="xl:ms-24 mx-auto ps-16 relative w-fit">
-              <Image src="/assets/logo/logo-blue.svg" className="absolute -top-10 right-0" width={200} height={397}/>
-              <Image src="/img/fresno_tower_circle.png" className="" width={418} height={397}/>
+            <div className="relative mx-auto w-fit ps-16 xl:ms-24">
+              <Image
+                src="/assets/logo/logo-blue.svg"
+                className="absolute -top-10 right-0"
+                width={200}
+                height={397}
+              />
+              <Image
+                src="/img/fresno_tower_circle.png"
+                className=""
+                width={418}
+                height={397}
+              />
             </div>
           </div>
         </header>
@@ -54,7 +63,7 @@ export default function HomePage() {
               </span>
               who come together to use technology and open data to address civic
               challenges and improve public services in the Fresno area.
-              <br/>
+              <br />
               leveraging technology and open data to address civic challenges
               and enhance public services in Fresno and the Central Valley area.
               Our community thrives on collaboration, innovation, and a shared
@@ -69,7 +78,7 @@ export default function HomePage() {
                 What we do
               </h1>
               <h2 className="sub-heading">
-                Building a Better Future <br/>
+                Building a Better Future <br />
                 in Fresno
               </h2>
             </div>
@@ -170,7 +179,7 @@ export default function HomePage() {
           <div className="general-section-container heading-underline">
             <h1 className="general-heading-section">Why volunteer</h1>
             <h2 className="sub-heading">
-              Empower Change with <br/>
+              Empower Change with <br />
               Open Fresno
             </h2>
           </div>
@@ -293,7 +302,7 @@ export default function HomePage() {
           <div className="home-projects-section-partnerships">
             <Link
               href="https://www.cityofsacramento.gov/"
-              style={{paddingRight: 26}}
+              style={{ paddingRight: 26 }}
             >
               <Image
                 src="/img/partnership-icons/cityofsacramento.png"
@@ -333,21 +342,21 @@ export default function HomePage() {
                 Your support, whether through donations or volunteering,
               </span>{" "}
               is instrumental in driving positive change with Open Fresno.
-              <br/>
-              <br/>
+              <br />
+              <br />
               <span>Donations fuel our technology</span>-driven initiatives that
               address civic challenges, enhance public services, and amplify
               community voices.
-              <br/>
-              <br/>
+              <br />
+              <br />
               <span>
                 {" "}
                 When you volunteer, you actively contribute your skills{" "}
               </span>
               - be it coding, designing, or any other expertise - to create
               tangible solutions that make a real impact.
-              <br/>
-              <br/>
+              <br />
+              <br />
               Together, we shape a better future for our city, amplifying
               voices, enhancing services, and driving innovation.
               <span>
