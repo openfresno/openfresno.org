@@ -52,11 +52,16 @@ It is made up of three sections.
   max-width: 1440px;
 }
 
-.navbar-link {
+.navbar-link-list-item {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-weight: normal;
+}
+
+.navbar-link {
+  padding: 1rem;
+  z-index: 15;
 }
 
 .navbar-link-selected {
@@ -90,23 +95,24 @@ It is made up of three sections.
 
 .one ~ .navbar-underline {
   display: block;
-  margin-left: -86%;
+  margin-left: -82%;
 }
 
 .two ~ .navbar-underline {
   display: block;
-  margin-left: -34%;
+  margin-left: -27%;
 }
 
 .three ~ .navbar-underline {
   display: block;
-  margin-left: 23%;
+  margin-left: 32%;
 }
 
 .navbar-underline {
+  z-index: 10;
   display: none;
   position: absolute;
-  top: 120%;
+  top: 82%;
   float: left;
   transition: 0.3s ease-in-out;
   margin: 0;
