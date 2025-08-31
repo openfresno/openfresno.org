@@ -10,8 +10,11 @@ export default function notFound() {
     <>
       <section className="not-found-container">
         <div className="not-found-content">
-          <h1 className="not-found-content-title-large">Oops!
-            <div className="not-found-content-title-small mt-4">404 Page Not Found</div>
+          <h1 className="not-found-content-title-large">
+            Oops!
+            <div className="not-found-content-title-small mt-4">
+              404 Page Not Found
+            </div>
           </h1>
           <div className="not-found-text">
             <p>Looks like this page hasn&apos;t been developed yet.</p>
@@ -26,7 +29,9 @@ export default function notFound() {
           >
             Get Started
           </Link>
-          <p className="not-found-text">Explore our site using the menu above.</p>
+          <p className="not-found-text">
+            Explore our site using the menu above.
+          </p>
         </div>
       </section>
     </>
