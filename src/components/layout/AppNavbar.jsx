@@ -13,7 +13,7 @@ import Image from "next/image";
  * @returns {number} opacity Ranges from 0 to 1.
  */
 function setOpacity(currentScrollHeight) {
-  // Start transparent and reach full opacity by the amount in pixels.
+  // Start transparent and reach full opacity by the number in pixels.
   return Math.min(currentScrollHeight / 520, 1);
 }
 
@@ -35,8 +35,8 @@ function registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight) {
 
 /**
  * Default application navigation bar. Links animate on page change. Extended menu that shows more text underneath the navbar.
- * - Desktop: Multiple navigation links in the center. Link on the right side to show extended menu.
- * - Mobile: All menu items are in collapsable menu.
+ * - Desktop: Multiple navigation links in the center. Link on the right side to show an extended menu.
+ * - Mobile: All menu items are in the collapsable menu.
  * @param {boolean} fade - Whether to enable fade effect on scroll
  * @returns {JSX.Element}
  */

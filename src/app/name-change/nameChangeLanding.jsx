@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 /**
  * Name change landing section.
  * @returns {JSX.Element}
@@ -24,9 +26,9 @@ export default function NameChangeSectionLanding({ sectionType }) {
         <br />
         <p className={`section-paragraph`}>
           This rebrand comes in response to the{" "}
-          <a href="https://codeforamerica.org/news/reflections-on-the-brigade-networks-next-chapter/">
+          <Link href="https://codeforamerica.org/news/reflections-on-the-brigade-networks-next-chapter/">
             end of Code for America's Brigade program
-          </a>
+          </Link>
           , but it's also a reflection of who we've become.{" "}
           <span className={`paragraph-bold`}>Open Fresno</span> better captures
           the incredible diversity of talents within our community. Yes, coding
@@ -47,7 +49,7 @@ export default function NameChangeSectionLanding({ sectionType }) {
           continue this journey and invite you to be part of it! Let's keep
           making Fresno better—together, under our new banner:{" "}
           <span className={`paragraph-bold`}>Open Fresno</span>! Get started{" "}
-          <a href="https://openfresno.org/get-started">here</a>.
+          <Link href="https://openfresno.org/get-started">here</Link>.
         </p>
         <br />
       </div>
