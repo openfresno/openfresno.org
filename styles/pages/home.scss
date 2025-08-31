@@ -5,39 +5,12 @@
 /*
 Home page layout.
  */
-.home-landing-image {
-  background-image: url("/img/fresno_tower_blue_circle.png");
-  background-position: right bottom;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  @media (max-width: variables.$screen-sm) {
-    background-image: none;
-  }
-}
-
 .home-landing-container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-  padding: 0 30px 0 80px;
-  width: 40%;
-  min-height: 721px;
-
-  @media (max-width: variables.$screen-xl) {
-    width: 70%;
-  }
-
-  @media (max-width: variables.$screen-md) {
-    justify-content: flex-start;
-    padding: 30% 40px 60px;
-    width: auto;
-  }
-
-  @media (max-width: variables.$screen-sm) {
-    min-height: 0;
-  }
+  min-height: 418px;
+  max-width: variables.$screen-xxl + 80px;
+  padding: 4rem 40px;
+  margin: auto;
 }
 
 .home-landing-heading {
@@ -55,6 +28,11 @@ Home page layout.
   @media (max-width: variables.$screen-sm) {
     @include mixins.h3-bold;
   }
+}
+
+.home-landing-paragraph {
+  @include mixins.nav-semi-bold;
+  max-width: 32rem;
 }
 
 .home-buttons-group {
