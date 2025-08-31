@@ -4,6 +4,11 @@
 .toolbar-after-content {
   margin-top: variables.$navbar-height;
 }
+
+.toolbar-after-content-with-banner {
+  margin-top: variables.$navbar-height-with-banner;
+}
+
 .section-dark {
   background-color: variables.$primary-900;
   color: white;
