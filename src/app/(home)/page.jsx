@@ -225,7 +225,7 @@ export default function HomePage() {
             />
           </div>
           <div className="test">
-            <Slider containerClass="navigation-wrapper">
+            <Slider className="navigation-wrapper">
               <div className="keen-slider__slide">
                 <div className="slide-content">
                   <h2 className="sub-heading">Learning Blocks</h2>

@@ -33,7 +33,7 @@ export default function SingleProjectsScreenshots({ data }) {
       <div className={`project-screenshots-images-container`}>
         {shownImages}
       </div>
-      <Slider containerClass={"project-screenshots-slider-container"}>
+      <Slider className={"project-screenshots-slider-container"}>
         {shownImages}
       </Slider>
     </section>
