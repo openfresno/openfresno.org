@@ -12,7 +12,7 @@ It is made up of three sections.
 // Background behind the navbar. It requires the navbar to be transparent and offset page content. By default, this is not shown; it is overridden by the navbar-toolbar background color.
 .navbar-container {
   position: fixed;
-    top: 0;
+  top: 0;
   z-index: 4;
   margin: 0;
   border-bottom-width: 1px;
@@ -118,33 +118,31 @@ It is made up of three sections.
   height: 2px;
 }
 
-
 .navbar-toggle-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-    color: variables.$vivid-blue;
-    margin-right: 16px;
-* {
-  display: none;
-}
+  margin-right: 16px;
+  color: variables.$vivid-blue;
+  * {
+    display: none;
+  }
 
   &--collapsed {
+    background: url("/img/navbar/chevron_down.svg") no-repeat center right;
     padding-right: 30px;
-  background: url("/img/navbar/chevron_down.svg") no-repeat center right;
   }
-    &--extended {
+  &--extended {
+    background: url("/img/navbar/chevron_down.svg") no-repeat center right;
     padding-right: 30px;
-  background: url("/img/navbar/chevron_down.svg") no-repeat center right;
   }
 
-// @media screen and (min-width: variables.$screen-lg) {
-//     background: transparent url("/img/navbar/chevron_down.svg") no-repeat center
-//       right;
-// }
+  // @media screen and (min-width: variables.$screen-lg) {
+  //     background: transparent url("/img/navbar/chevron_down.svg") no-repeat center
+  //       right;
+  // }
 }
-
 
 .navbar-toolbar-extended {
   display: flex;

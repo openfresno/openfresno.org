@@ -1,8 +1,10 @@
 import AppNavbar from "./AppNavbar";
 import AppFooter from "./AppFooter";
+import MarginTop from "./MarginTop";
+import Banner from "./Banner";
 
 /**
- * Default app layout.
+ * Default app layout that includes a navbar, banner and footer.
  * - Set "fade navbar" to enable a transparent navbar. You must set the background color of a root tag like <body> to control the color behind the navbar. The color should match the background of the first main content.
  * - The child of AppLayout is usually a <main> tag.
  * 
@@ -11,13 +13,17 @@ import AppFooter from "./AppFooter";
 <main></main>
 <AppLayout />
  */
-export default function AppLayout({ children, fadeNavbar = false }) {
+export default function AppLayout({
+  children,
+  banner = { active: false },
+  fadeNavbar = false,
+}) {
   return (
     <>
       <AppNavbar fade={fadeNavbar} />
-      <div className={`toolbar-after-content`}>
-        {children}
-      </div>
+      {banner.active && <Banner>{banner.message}</Banner>}
+      <MarginTop banner={banner.active} />
+      {children}
       <AppFooter />
     </>
   );
