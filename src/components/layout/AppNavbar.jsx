@@ -77,7 +77,7 @@ export default function AppNavbar({ fade = false }) {
       <div className={"navbar-toolbar-main"}>
         <div className={"navbar-toolbar-content container-xxl"}>
           <div className={"navbar-left-container"}>
-            <Link className={"navbar-left-section"} href="/public">
+            <Link className={"navbar-left-section"} href="/">
               <Image
                 src="/assets/logo/logo-text-black.svg"
                 alt="Open Fresno logo"
@@ -93,7 +93,7 @@ export default function AppNavbar({ fade = false }) {
                   websiteURL === "/" ? "navbar-link-selected one" : ""
                 }`}
               >
-                <Link href="/public">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li
                 className={`navbar-link ${

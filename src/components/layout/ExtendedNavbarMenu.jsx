@@ -19,7 +19,7 @@ const ExtendedNavbarMenu = (visible) => {
           className={`navbar-extended-mobile-content`}
           style={mobileNavPosition ? { display: "none" } : {}}
         >
-          <Link className={"mobile-nav-link"} href="/public">
+          <Link className={"mobile-nav-link"} href="/">
             Home
           </Link>
           <Link className={"mobile-nav-link"} href="/about">

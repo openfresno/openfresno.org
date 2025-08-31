@@ -1,6 +1,5 @@
 import AppNavbar from "./AppNavbar";
 import AppFooter from "./AppFooter";
-import MarginTop from "./MarginTop";
 import Banner from "./Banner";
 
 /**
@@ -22,8 +21,15 @@ export default function AppLayout({
     <>
       <AppNavbar fade={fadeNavbar} />
       {banner.active && <Banner>{banner.message}</Banner>}
-      <MarginTop banner={banner.active} />
-      {children}
+      <div
+        className={
+          banner.active
+            ? "toolbar-after-content-with-banner"
+            : "toolbar-after-content"
+        }
+      >
+        {children}
+      </div>
       <AppFooter />
     </>
   );
