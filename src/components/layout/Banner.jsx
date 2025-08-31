@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import useBanner from "@/hooks/useBanner";
+import useBanner from "@/utils/hooks/useBanner";
 
 /**
  * Banner component to display at the top of the page

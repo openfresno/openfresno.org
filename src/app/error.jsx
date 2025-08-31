@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 /**
  * The application error reporting.
@@ -11,14 +11,14 @@ import { useEffect } from 'react';
  * @returns {JSX.Element}
  */
 export default function Error({ error, reset }) {
-    useEffect(() => {
-        console.error(error);
-    }, [error]);
+  useEffect(() => {
+    console.error(error);
+  }, [error]);
 
-    return (
-        <div>
-            <h2>Something went wrong!</h2>
-            <button onClick={() => reset()}>Try again</button>
-        </div>
-    );
+  return (
+    <div>
+      <h2>Something went wrong!</h2>
+      <button onClick={() => reset()}>Try again</button>
+    </div>
+  );
 }
