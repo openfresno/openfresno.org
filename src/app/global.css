@@ -2,6 +2,7 @@
 
 @plugin "@tailwindcss/typography";
 
+/* This file is strictly for overriding the tailwind theme. Use styles/base/base.scss for global styles. */
 @theme {
   --color-neutral-50: #f7f7f8;
   --color-neutral-100: #eaeaec;
