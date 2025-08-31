@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import ExtendedNavbarMenu from "./ExtendedNavbarMenu";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import useBanner from "@/utils/hooks/useBanner";
 import Image from "next/image";
@@ -49,6 +49,8 @@ export default function AppNavbar({ fade = false }) {
   const { dismissBanner } = useBanner({
     id: "community-support-statement-2025-banner",
   });
+  // Create a ref for the navbar container
+  const navbarRef = useRef(null);
 
   useEffect(() => {
     showExtendedMenu(false);
@@ -59,8 +61,30 @@ export default function AppNavbar({ fade = false }) {
     return () => {};
   }, [websiteURL, fade]);
 
+  useEffect(() => {
+    /**
+     * If the user clicks outside of the navbar, hide the extended menu.
+     */
+    function handleClickOutside(event) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        showExtendedMenu(false);
+      }
+    }
+
+    // Add the event listener to the document only when the extended menu is visible
+    if (extendedMenuVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    // Cleanup the event listener when the component unmounts or the state changes
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [extendedMenuVisible]); // Re-run effect when menu visibility changes
+
   return (
     <nav
+      ref={navbarRef} // Attach the ref here
       className={`navbar-container ${fade && "navbar-container--fade"}`}
       style={
         fadeLayout && !extendedMenuVisible
@@ -75,17 +99,15 @@ export default function AppNavbar({ fade = false }) {
       }
     >
       <div className={"navbar-toolbar-main"}>
-        <div className={"navbar-toolbar-content container-xxl"}>
-          <div className={"navbar-left-container"}>
-            <Link className={"navbar-left-section"} href="/">
-              <Image
-                src="/assets/logo/logo-text-black.svg"
-                alt="Open Fresno logo"
-                height="44"
-                width="110"
-              />
-            </Link>
-          </div>
+        <div className={"navbar-toolbar-content"}>
+          <Link className={"navbar-left-section"} href="/">
+            <Image
+              src="/assets/logo/logo-text-black.svg"
+              alt="Open Fresno logo"
+              height="44"
+              width="110"
+            />
+          </Link>
           <div className={"navbar-middle-container"}>
             <ul className={"navbar-middle-section"}>
               <li
@@ -125,11 +147,9 @@ export default function AppNavbar({ fade = false }) {
           </button>
         </div>
       </div>
-      {extendedMenuVisible ? (
-        <div className={"navbar-toolbar-extended"}>
-          <ExtendedNavbarMenu visible={extendedMenuVisible} />
-        </div>
-      ) : null}
+      {extendedMenuVisible && (
+        <ExtendedNavbarMenu visible={extendedMenuVisible} />
+      )}
     </nav>
   );
 }

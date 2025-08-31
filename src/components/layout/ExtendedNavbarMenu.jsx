@@ -72,7 +72,7 @@ const ExtendedNavbarMenu = (visible) => {
           </div>
         </div>
       </div>
-      <div className={"navbar-extended-desktop-container container-xxl"}>
+      <div className={"navbar-extended-desktop-container"}>
         <div className="navbar-extended-desktop-section-item">
           <div className="navbar-extended-text-wrapper-2">Get Started</div>
           <p className="navbar-extended-desktop-section-content">

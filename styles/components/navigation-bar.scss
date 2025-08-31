@@ -13,7 +13,6 @@ It is made up of three sections.
 .navbar-container {
   position: fixed;
   top: 0;
-  z-index: 4;
   margin: 0;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -49,7 +48,8 @@ It is made up of three sections.
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
-  max-width: 1320px;
+  padding: 0 24px;
+  max-width: 1440px;
 }
 
 .navbar-link {
@@ -63,15 +63,11 @@ It is made up of three sections.
   font-weight: bold;
 }
 
-.navbar-left-container {
-  display: inline-flex;
-  padding: 10px 16px;
-}
-
 .navbar-left-section {
   display: inline-flex;
   justify-content: center;
-  align-items: center;
+  padding: 1rem;
+  height: 100%;
 }
 
 .navbar-middle-container {
@@ -125,7 +121,7 @@ It is made up of three sections.
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-right: 16px;
+  padding: 1rem;
   color: variables.$vivid-blue;
 
   * {
@@ -146,13 +142,4 @@ It is made up of three sections.
   //     background: transparent url("/img/navbar/chevron_down.svg") no-repeat center
   //       right;
   // }
-}
-
-.navbar-toolbar-extended {
-  display: flex;
-  flex-basis: 100%;
-  justify-content: center;
-  margin: 0;
-  box-shadow: 0 4px 4px 0 rgba(variables.$navbar-color, 0.25);
-  padding: 0;
 }

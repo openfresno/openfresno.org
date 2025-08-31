@@ -6,9 +6,21 @@ Navigation bar extended drop down menu.
 */
 
 .dropdown-menu {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: variables.$secondary-50;
   width: 100%;
-  max-width: 1320px;
+}
+
+.navbar-extended-desktop-container {
+  display: none;
+  padding: 40px 0;
+  max-width: variables.$screen-xxl;
+
+  a {
+    color: variables.$neutral-900 !important;
+  }
 }
 
 .navbar-extended-desktop-section-item {
@@ -45,7 +57,7 @@ Navigation bar extended drop down menu.
   border-bottom: 1px solid variables.$primary-900;
 }
 
-.dropdown-menu .navbar-extended-desktop-section-content {
+.navbar-extended-desktop-section-content {
   @include mixins.p1-regular;
   padding: 20px 0;
   color: variables.$neutral-900;
@@ -70,15 +82,6 @@ Navigation bar extended drop down menu.
 .navbar-extended-mobile-section li.active a {
   background: variables.$neutral-900;
   color: variables.$secondary-50;
-}
-
-.navbar-extended-desktop-container {
-  display: none;
-  padding: 40px 0;
-
-  a {
-    color: variables.$neutral-900 !important;
-  }
 }
 
 .navbar-extended-mobile-content {
@@ -116,10 +119,6 @@ Navigation bar extended drop down menu.
 }
 
 @media (min-width: variables.$screen-lg) {
-  .navbar-extended-desktop-section-item {
-    padding: 0 20px;
-    max-width: max-content;
-  }
   .navbar-extended-desktop-container {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -139,9 +138,15 @@ Navigation bar extended drop down menu.
     flex-grow: 1;
     justify-content: space-between;
   }
+}
 
-  .navbar-extended-desktop-section-item {
-    display: block;
-    max-width: 257px;
+.navbar-extended-desktop-section-item {
+  display: block;
+  @media (min-width: variables.$screen-lg) {
+    padding: 0 20px;
+    max-width: max-content;
+  }
+  @media (min-width: variables.$screen-xxl) {
+    max-width: 300px;
   }
 }
