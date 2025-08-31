@@ -1,1 +1,1 @@
-export { default as HamburgerOffset } from "./HamburgerOffset";
+export {default as HamburgerOffset} from "./HamburgerOffset";

@@ -23,9 +23,11 @@ It is made up of three sections.
   @include mixins.h5-semi-bold;
   z-index: 5;
   height: variables.$navbar-height;
+
   a {
     text-decoration: none;
   }
+
   &--fade {
     background: transparent;
   }
@@ -125,6 +127,7 @@ It is made up of three sections.
   cursor: pointer;
   margin-right: 16px;
   color: variables.$vivid-blue;
+
   * {
     display: none;
   }
@@ -133,6 +136,7 @@ It is made up of three sections.
     background: url("/img/navbar/chevron_down.svg") no-repeat center right;
     padding-right: 30px;
   }
+
   &--extended {
     background: url("/img/navbar/chevron_down.svg") no-repeat center right;
     padding-right: 30px;

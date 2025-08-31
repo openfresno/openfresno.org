@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import useBanner from "@/utils/hooks/useBanner";
 import Image from "next/image";
-import { HamburgerOffset } from "@/components/icon/HamburgerOffset";
-import { ChevronRight } from "@/integrations/tabler-icon";
 
 /**
  * Set toolbar opacity. Based on the scroll y-axis.
