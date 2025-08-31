@@ -1,19 +1,13 @@
 @use "../abstracts/variables";
 @use "../abstracts/mixins";
 
+/*
+Layout, text and color styles for the not found page. This is used in app/error.jsx.
+ */
 .not-found-container {
   display: grid;
   background-color: variables.$secondary-50;
   min-height: 100dvh;
-  text-align: center;
-}
-
-.not-found-content {
-  gap: 1rem;
-  margin: 8rem 1rem;
-}
-
-.not-found-text-container {
   text-align: center;
 }
 
@@ -23,43 +17,30 @@
   align-items: center;
   gap: 1rem;
   margin: 8rem 1rem;
-}
 
-@media (min-width: variables.$screen-md) {
-  .not-found-content {
+  @media (min-width: variables.$screen-md) {
     align-self: center;
     margin: 0 2rem;
   }
 }
 
-.not-found-content h1 {
-  @include mixins.h1-bold;
-  margin: 0;
-  color: variables.$primary-900;
-}
-
-.not-found-content h4 {
-  @include mixins.subheading-medium-bold;
-  margin: 0;
-  color: variables.$primary-900;
-}
-
-.not-found-content p {
+.not-found-text {
   @include mixins.p3-regular;
-  margin: 0;
-  color: variables.$neutral-300;
+  color: variables.$neutral-500;
   @media (max-width: variables.$screen-sm) {
     display: inline;
-  }
-}
-
-.not-found-content p:first-child {
-  @media (max-width: variables.$screen-sm) {
-    display: inline;
-    margin-right: 5px;
   }
 }
 
 .not-found-link {
-  color: variables.$neutral-900;
+  @include mixins.h5-semi-bold;
+  color: variables.$vivid-blue;
+}
+
+.not-found-content-title-large {
+  @include mixins.h1-bold;
+}
+
+.not-found-content-title-small {
+  @include mixins.subheading-medium-bold;
 }
