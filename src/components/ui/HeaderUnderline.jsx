@@ -1,4 +1,4 @@
-import { SectionType } from "../../utils/constants/SectionType";
+import { SectionType } from "../../utils/constants/theme";
 
 /**
  * Header with underline styling.

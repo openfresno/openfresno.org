@@ -1,8 +1,8 @@
-import { githubOwner } from "@/constants";
+import {githubOwner} from "../../../utils/constants/app-data";
 import SingleProject from "./singleProject";
-import AppNavbar from "@/components/layout/AppNavbar";
-import MarginTop from "@/components/layout/MarginTop";
-import AppFooter from "@/components/layout/AppFooter";
+import AppNavbar from "../../../components/layout/AppNavbar";
+import MarginTop from "../../../components/layout/MarginTop";
+import AppFooter from "../../../components/layout/AppFooter";
 
 // See https://nextjs.org/docs/app/api-reference/functions/generate-static-params
 export async function generateStaticParams() {
@@ -15,15 +15,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function Page({ params }) {
+export default function Page({params}) {
   return (
     <>
-      <AppNavbar fade={false} />
-      <MarginTop />
+      <AppNavbar fade={false}/>
+      <MarginTop/>
       <SingleProject
         githubFullName={`${githubOwner}/${params.project}`}
       ></SingleProject>
-      <AppFooter />
+      <AppFooter/>
     </>
   );
 }
