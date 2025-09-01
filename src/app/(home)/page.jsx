@@ -36,12 +36,14 @@ export default function HomePage() {
                 className="absolute -top-10 right-0"
                 width={200}
                 height={397}
+                alt="Open Fresno logo blue"
               />
               <Image
                 src="/img/fresno_tower_circle.png"
                 className=""
                 width={418}
                 height={397}
+                alt="Ariel photo of downtown Fresno and the iconic Tower Theatre."
               />
             </div>
           </div>
