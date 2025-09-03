@@ -46,14 +46,8 @@ Buttons
   transition:
     background-color 0.3s,
     color 0.3s;
-  border: solid var(--primary-500) 1px;
-  background-color: var(--primary-500);
+  background-color: var(--main-vivid-blue);
   color: var(--secondary-50);
-
-  &:hover {
-    background-color: var(--main-vivid-blue);
-    color: white;
-  }
 }
 
 .azbtn-alt-light {
