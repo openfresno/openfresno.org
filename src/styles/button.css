@@ -28,7 +28,7 @@ Buttons
       bottom,
       left,
       0.3s ease-in-out;
-    border: var(--main-vivid-blue) 5px solid;
+    border: var(--main-vivid-blue) 6px solid;
     border-radius: 6px;
     content: "";
   }
