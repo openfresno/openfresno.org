@@ -20,7 +20,7 @@ It is made up of three sections.
   padding: 0;
   width: 100%;
   @include mixins.h5-semi-bold;
-  z-index: 5;
+  z-index: 100;
   height: variables.$navbar-height;
 
   a {

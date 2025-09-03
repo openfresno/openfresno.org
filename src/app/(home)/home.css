@@ -17,31 +17,6 @@ Home page layout.
   }
 }
 
-.home-landing-title {
-  font-weight: 700;
-  font-size: 31px;
-  line-height: 38px;
-  letter-spacing: -0.02em;
-  @media (min-width: 640px) {
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: -0.04em;
-  }
-}
-
-.home-landing-paragraph {
-  max-width: 512px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 28px;
-  @media (min-width: 640px) {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 32px;
-  }
-}
-
 .home-buttons-group {
   display: flex;
   gap: 20px;
@@ -93,20 +68,8 @@ Home page layout.
 }
 
 .home-section-action-image {
-  display: none;
-  margin-top: 40px;
-
-  @media (max-width: 992px) {
-    display: block;
-    margin-bottom: 80px;
-    height: 50vw;
-  }
-
-  @media (max-width: var(--screen-md)) {
-    display: block;
-    margin-bottom: 80px;
-    height: 70vw;
-  }
+    position: relative;
+    margin-left: 108px;
 }
 
 .home-numbered-grid {
@@ -116,7 +79,7 @@ Home page layout.
   gap: 24px;
   margin: 40px 0 0 0;
 
-  @media (max-width: var(--screen-md)) {
+  @media (max-width: 768px) {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;

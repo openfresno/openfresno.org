@@ -16,11 +16,36 @@ Application typography. The Inter font family is applied by next/font in layout.
   color: var(--secondary-50);
 }
 
+.section-title {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+    letter-spacing: -0.02em;
+    @media (min-width: 640px) {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        letter-spacing: -0.04em;
+    }
+}
+
+.section-title-paragraph {
+    max-width: 512px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    @media (min-width: 640px) {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
 .section-paragraph {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  @media (max-width: 576px) {
+  @media (min-width: 576px) {
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
@@ -43,7 +68,7 @@ Application typography. The Inter font family is applied by next/font in layout.
   font-weight: 600;
   font-size: 31px;
   line-height: 38px;
-  @media (max-width: 576px) {
+  @media (min-width: 576px) {
     font-weight: 600;
     font-size: 39px;
     line-height: 47px;
