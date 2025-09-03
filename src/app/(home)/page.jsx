@@ -8,7 +8,7 @@ import "./home.css";
 export default function HomePage() {
   return (
     <AppLayout fadeNavbar={true}>
-      <main className="">
+      <main>
         <header className="home-landing-container">
           <div className="space-y-10">
             <h1 className="home-landing-title">Welcome to Open Fresno</h1>
@@ -46,23 +46,21 @@ export default function HomePage() {
             </div>
           </div>
         </header>
-        <section className="app-section--dark">
-          <div className="split-section gap-6 py-24 sm:px-10 lg:py-32">
+        <section className="app-color--dark">
+          <div className="split-section gap-6 px-6 py-24 lg:px-10 lg:py-32">
             <div>
-              <h1 className="heading-section heading-section-text--light">
-                Who we are
-              </h1>
+              <h1 className="heading-section app-color--light">Who we are</h1>
               <h2 className="sub-heading">
                 Creating a Brighter Future Through Innovation and Technology.
               </h2>
             </div>
             <p className="section-paragraph">
               Open Fresno is
-              <span className="paragraph-bold">
+              <b>
                 {" "}
                 a community of technologists, developers, designers, and
                 civic-minded individuals{" "}
-              </span>
+              </b>
               who come together to use technology and open data to address civic
               challenges and improve public services in the Central California.
               <br />
@@ -72,28 +70,26 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-        <section className="">
-          <div className="split-section gap-6 py-24 ps-10 lg:py-32">
+        <section>
+          <div className="split-section py-24 ps-10 lg:py-32">
             <div className="pe-6">
-              <h1 className="heading-section heading-section-text--dark">
-                What we do
-              </h1>
+              <h1 className="heading-section app-color--dark">What we do</h1>
               <h2 className="sub-heading">
                 Building a Better Future For Fresno and the Central Valley Area
               </h2>
               <p className="section-paragraph pt-10">
-                <span className="paragraph-bold">
+                <b>
                   Our mission is done by uniting programmers, designers, and
                   other talents, we transform ideas into tangible solutions that
                   impact lives throughout Central California.
-                </span>
+                </b>
                 {""}
                 Together, we drive innovation forward, building a future where
                 open source technology empowers citizens and uplifts our city.{" "}
-                <span className="paragraph-bold">
+                <b>
                   Join us in driving innovation through open-source tech and
                   empowering our community!
-                </span>
+                </b>
               </p>
             </div>
             <Image
@@ -105,13 +101,9 @@ export default function HomePage() {
             />
           </div>
         </section>
-        <section className="general-section-dark home-services-container">
-          <div className="general-section-container heading-underline underline-alt">
-            <h1 className="general-heading-section general-heading-section-alt">
-              Our services
-            </h1>
-            <h2 className="sub-heading">Explore Our Engagement Options</h2>
-          </div>
+        <section className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-10">
+          <h1 className="heading-section app-color--dark">Opportunities</h1>
+          <h2 className="sub-heading">Explore Our Volunteer Options</h2>
           <div className="home-numbered-grid">
             <div className="home-numbered-container">
               <Image

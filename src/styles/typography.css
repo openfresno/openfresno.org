@@ -1,17 +1,17 @@
 /*
 Application typography. The Inter font family is applied by next/font in layout.js.
  */
-.app-section--dark {
+.app-color--dark {
   background-color: var(--neutral-900);
   color: var(--secondary-50);
 }
 
-.app-section--light {
+.app-color--light {
   background-color: var(--secondary-50);
   color: var(--neutral-900);
 }
 
-.app-section--grey {
+.app-color--grey {
   background-color: var(--neutral-500);
   color: var(--secondary-50);
 }
@@ -48,12 +48,6 @@ Application typography. The Inter font family is applied by next/font in layout.
     font-size: 39px;
     line-height: 47px;
   }
-}
-
-.paragraph-bold {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
 }
 
 .subheading-regular {

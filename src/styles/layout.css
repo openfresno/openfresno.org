@@ -31,16 +31,6 @@ Application layout styles.
   text-transform: uppercase;
 }
 
-.heading-section-text--dark {
-  background-color: var(--neutral-900);
-  color: var(--secondary-50);
-}
-
-.heading-section-text--light {
-  background-color: var(--secondary-50);
-  color: var(--neutral-900);
-}
-
 .section-container2 {
   display: flex;
   flex-direction: row;

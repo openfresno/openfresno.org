@@ -7,7 +7,7 @@ Home page layout.
   align-items: center;
   gap: 6rem;
   margin: auto;
-  padding: 6.25rem 40px;
+  padding: 6.25rem 24px;
   max-width: calc(var(--screen-xxl) + 80px);
 
   @media (min-width: 992px) {
@@ -106,18 +106,6 @@ Home page layout.
     display: block;
     margin-bottom: 80px;
     height: 70vw;
-  }
-}
-
-.home-services-container {
-  padding: 0 80px 96px 80px;
-
-  @media (max-width: 992px) {
-    padding: 0 20px 96px 20px;
-  }
-
-  @media (max-width: var(--screen-md)) {
-    padding: 48px 40px;
   }
 }
 
