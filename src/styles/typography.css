@@ -1,0 +1,183 @@
+/*
+Mixins are mostly used throughout the application for font attributes. It should be up-to-date with the font library in Figma. Some styles are not documented in Figma, so adding additional styles here is appropriate.
+ */
+.subheading-regular {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.subheading-bold {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.subheading-medium-bold {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.subheading-medium-regular {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.h1-small-bold {
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 47px;
+}
+
+.h1-small-semi-bold {
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 47px;
+}
+
+.h1-semi-bold {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.h1-bold {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -4%;
+}
+
+/* The small font above each of the sections' header (refer to home page) */
+.h1-section {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.h2-semi-bold {
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 47px;
+}
+
+.h3-bold {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  letter-spacing: -2%;
+}
+
+.h3-semi-bold {
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 38px;
+}
+
+.h4-bold {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.h4-semi-bold {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.h5-semi-bold {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.h6-semi-bold {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.p1-regular {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.p1-bold {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.p2-regular {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.p2-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.p3-bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.p3-semi-bold {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.p3-regular {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.nav-semi-bold {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.p-footer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.p-footer-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.caption-regular-uppercase {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.caption-footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.button-regular {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 18px;
+}

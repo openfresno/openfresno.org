@@ -1,90 +1,109 @@
-@use "../abstracts/variables";
-@use "../abstracts/mixins";
-@use "../base/animations";
-
 /*
 Home page layout.
  */
-.home-landing-container {
-  display: flex;
+.azhome-landing-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 6rem;
   margin: auto;
-  padding: 4rem 40px;
-  max-width: variables.$screen-xxl + 80px;
-  min-height: 418px;
-}
+  padding: 6.25rem 40px;
+  max-width: calc(var(--screen-xxl) + 80px);
 
-.home-landing-heading {
-  @include mixins.h1-bold;
-  margin: 0;
-
-  @media (max-width: variables.$screen-sm) {
-    @include mixins.h3-bold;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 8.4rem 40px;
   }
 }
 
-.home-landing-heading span {
-  @include mixins.h1-small-bold;
-
-  @media (max-width: variables.$screen-sm) {
-    @include mixins.h3-bold;
+.azhome-landing-title {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  letter-spacing: -2%;
+  @media (min-width: 640px) {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -4%;
   }
 }
-
-.home-landing-paragraph {
-  @include mixins.nav-semi-bold;
-  max-width: 32rem;
+.azhome-landing-paragraph {
+  max-width: 512px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  @media (min-width: 640px) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
-
-.home-buttons-group {
+.azhome-buttons-group {
   display: flex;
   gap: 20px;
   width: fit-content;
 }
 
-.home-section-dark-container {
+.azhome-landing-image {
+  position: relative;
+  width: fit-content;
+
+  @media (min-width: 768px) {
+    margin-inline: auto;
+    padding-inline-start: 4rem;
+  }
+
+  @media (min-width: 1280px) {
+    margin-inline-start: 6rem;
+  }
+}
+
+.azhome-section-dark-container {
   position: relative;
 }
 
-.donate-section-underline::after {
-  border-bottom: 8px solid variables.$neutral-50;
+.azdonate-section-underline::after {
+  border-bottom: 8px solid var(--neutral-50);
   padding-bottom: 18px;
   width: 101px;
 }
 
-.home-section-paragraph-anchor {
-  color: variables.$neutral-900;
+.azhome-section-paragraph-anchor {
+  color: var(--neutral-900);
   font-weight: 700;
 }
 
-.home-about-container {
+.azhome-about-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 40px;
   width: 40%;
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     margin: auto;
     padding: 48px 40px 0 40px;
     width: auto;
   }
 }
 
-.home-section-dark-flex {
+.azhome-section-dark-flex {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 192px 0 192px 80px;
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     flex-direction: column;
     align-items: flex-end;
     padding: 0;
   }
 }
 
-.home-about-image {
+.azhome-about-image {
   background-image: url("/img/open_data_day_curved.png");
   background-position: right center;
   background-size: 45vw 40vw;
@@ -94,55 +113,55 @@ Home page layout.
     background-size: 40% 80%;
   }
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     background-image: none;
   }
 }
 
-.home-section-action-image {
+.azhome-section-action-image {
   display: none;
   margin-top: 40px;
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     display: block;
     margin-bottom: 80px;
     height: 50vw;
   }
 
-  @media (max-width: variables.$screen-md) {
+  @media (max-width: var(--screen-md)) {
     display: block;
     margin-bottom: 80px;
     height: 70vw;
   }
 }
 
-.home-services-container {
+.azhome-services-container {
   padding: 0 80px 96px 80px;
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     padding: 0 20px 96px 20px;
   }
 
-  @media (max-width: variables.$screen-md) {
+  @media (max-width: var(--screen-md)) {
     padding: 48px 40px;
   }
 }
 
-.home-numbered-grid {
+.azhome-numbered-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 24px;
   margin: 40px 0 0 0;
 
-  @media (max-width: variables.$screen-md) {
+  @media (max-width: var(--screen-md)) {
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
   }
 }
 
-.home-numbered-container {
+.azhome-numbered-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -151,25 +170,19 @@ Home page layout.
   max-width: 600px;
 }
 
-.home-numbered-header {
-  @include mixins.h3-bold;
+.azhome-numbered-header {
   display: flex;
   flex: 1;
   align-items: center;
   margin: 0;
   text-align: center;
-
-  @media (max-width: variables.$screen-sm) {
-    @include mixins.h4-bold;
-  }
 }
 
-.home-numbered-paragraph {
-  @include mixins.p3-regular;
+.azhome-numbered-paragraph {
   text-align: center;
 }
 
-.home-projects-section {
+.azhome-projects-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -185,35 +198,35 @@ Home page layout.
   }
 }
 
-.home-projects-info-container {
+.azhome-projects-info-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 40px;
   width: 50%;
 
-  @media (max-width: variables.$screen-xxl) {
+  @media (max-width: var(--screen-xxl)) {
     width: 100%;
   }
 }
 
-.home-section-project-image {
+.azhome-section-project-image {
   aspect-ratio: 2/1;
   width: 100%;
   object-fit: cover;
 }
 
-.slide-content {
+.azslide-content {
   width: 100%;
 }
 
-.slide-content p {
-  @media (max-width: variables.$screen-lg) {
+.azslide-content p {
+  @media (max-width: var(--screen-lg)) {
     margin-bottom: 10px;
   }
 }
 
-.test {
+.aztest {
   margin: auto;
   max-width: 100%;
 
@@ -222,29 +235,29 @@ Home page layout.
   }
 }
 
-.partnership-section {
+.azpartnership-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
   padding: 64px 80px;
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     align-items: center;
     padding: 64px 40px;
   }
 }
 
-.heading-underline-partnership::after {
+.azheading-underline-partnership::after {
   position: absolute;
   margin-bottom: 20px;
-  border-bottom: 8px solid variables.$secondary-50;
+  border-bottom: 8px solid var(--secondary-50);
   width: 93px;
   height: 1px;
   content: "";
 }
 
-.donate-section {
+.azdonate-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -252,49 +265,30 @@ Home page layout.
   gap: 60px;
   padding: 64px 80px;
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     flex-direction: column;
     padding: 64px 40px;
   }
 }
 
-.donate-section-paragraph-container {
+.azdonate-section-paragraph-container {
   display: flex;
   flex-direction: column;
 
-  @media (max-width: variables.$screen-xxl) {
+  @media (max-width: var(--screen-xxl)) {
     width: 100%;
   }
 }
 
-.heading-large-section-sub {
+.azheading-large-section-sub {
   margin: 10px 0;
-  @include mixins.h1-semi-bold;
-
-  @media (max-width: variables.$screen-lg) {
-    @include mixins.h3-semi-bold;
-  }
 }
 
-.home-section-dark-paragraph {
-  @include mixins.subheading-medium-regular;
+.azhome-section-dark-paragraph {
   margin: 0 0 30px 0;
-
-  @media (max-width: variables.$screen-lg) {
-    @include mixins.p3-regular;
-  }
 }
 
-.home-section-dark-paragraph-bold {
-  @include mixins.subheading-medium-bold;
-  margin: 0 0 30px 0;
-
-  @media (max-width: variables.$screen-lg) {
-    @include mixins.p3-bold;
-  }
-}
-
-.home-projects-section-partnerships {
+.azhome-projects-section-partnerships {
   display: flex;
   flex-direction: row;
   align-content: flex-start;
@@ -302,16 +296,10 @@ Home page layout.
   gap: 48px;
   padding-left: 32px;
 
-  @media (max-width: variables.$screen-lg) {
+  @media (max-width: var(--screen-lg)) {
     flex-direction: column;
     justify-content: center;
     gap: 60px;
     padding: 0;
   }
-}
-
-.home-numbered-paragraph-partnerships {
-  @include mixins.p3-regular;
-  margin-top: 24px;
-  text-align: left;
 }

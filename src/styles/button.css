@@ -1,0 +1,83 @@
+.azbtn {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 16px 24px;
+  width: fit-content;
+  height: fit-content;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.azbtn-primary {
+  position: relative;
+  background: var(--main-vivid-blue);
+  color: var(--neutral-50);
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition:
+      top,
+      right,
+      bottom,
+      left,
+      0.3s ease-in-out;
+    border: var(--main-vivid-blue) 5px solid;
+    border-radius: 6px;
+    content: "";
+  }
+
+  &:hover::before,
+  &:focus::before {
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    left: -3px;
+  }
+}
+
+.azbtn-blue {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  border: solid var(--primary-500) 1px;
+  background-color: var(--primary-500);
+  color: var(--secondary-50);
+
+  &:hover {
+    background-color: var(--main-vivid-blue);
+    color: white;
+  }
+}
+
+.azbtn-alt-light {
+  border: solid var(--main-vivid-blue) 1px;
+  background-color: transparent;
+  color: var(--neutral-900);
+}
+
+.azbtn-alt-gold {
+  border: solid var(--main-vivid-blue) 1px;
+  background-color: transparent;
+  color: var(--main-vivid-blue);
+}
+
+.azbtn-alt-blue {
+  border: solid var(--primary-500) 1px;
+  background-color: transparent;
+  color: var(--primary-500);
+}
+
+.dark-button-transition {
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+
+  &:hover {
+    background-color: var(--main-vivid-blue);
+    color: var(--secondary-50);
+  }
+}

@@ -3,34 +3,34 @@ import { Slider } from "../../components/ui";
 import Link from "next/link";
 import Image from "next/image";
 import AppLayout from "../../components/layout/AppLayout";
+import "./home.css";
 
 export default function HomePage() {
   return (
     <AppLayout fadeNavbar={true}>
       <main className="">
-        <header className="home-landing-container">
-          <div className="flex flex-1 flex-col justify-center">
-            <h1 className="home-landing-heading">Welcome to Open Fresno</h1>
-            <p className="home-landing-paragraph">
+        <header className="azhome-landing-container">
+          <div className="space-y-10">
+            <h1 className="azhome-landing-title">Welcome to Open Fresno</h1>
+            <p className="azhome-landing-paragraph">
               Become a part of the transformation in Fresno and the Central
               Valley Area through technology and open data. Volunteer today for
               a brighter future!
             </p>
-            <div className="home-buttons-group">
-              <Button
-                className="btn btn-alt-light"
+            <div className="azhome-buttons-group button-regular">
+              <Link
+                className="azbtn azbtn-alt-light dark-button-transition button-regular"
                 href="/get-started"
-                textContent="Get Started"
-              />
-              <Button
-                className="btn btn-gold"
-                href="/projects"
-                textContent="View Projects"
-              />
+              >
+                Get Started
+              </Link>
+              <Link className="azbtn azbtn-primary" href="/projects">
+                View Projects
+              </Link>
             </div>
           </div>
-          <div className="flex-1">
-            <div className="relative mx-auto w-fit ps-16 xl:ms-24">
+          <div>
+            <div className="azhome-landing-image">
               <Image
                 src="/assets/logo/logo-blue.svg"
                 className="absolute -top-10 right-0"
@@ -117,17 +117,17 @@ export default function HomePage() {
                 width={81}
                 height={80}
               />
-              <h2 className="home-numbered-header">
+              <h2 className="home-numbered-header sm:h3-bold h4-bold">
                 Engage with Our Community
               </h2>
-              <p className="home-numbered-paragraph">
+              <p className="home-numbered-paragraph p3-regular">
                 Connect with like-minded individuals, share ideas, and
                 collaborate on projects at our meetups. Join us to be a part of
                 a vibrant community dedicated to positive change through
                 technology.
               </p>
               <Button
-                className="btn btn-alt-gold"
+                className="azbtn azbtn-alt-gold dark-button-transition"
                 href="https://www.meetup.com/openfresno/"
                 target="_blank"
                 textContent="Visit Meetup"
@@ -140,16 +140,16 @@ export default function HomePage() {
                 width={80}
                 height={80}
               />
-              <h2 className="home-numbered-header">
+              <h2 className="home-numbered-header sm:h3-bold h4-bold">
                 Drive Innovation with Projects
               </h2>
-              <p className="home-numbered-paragraph">
+              <p className="home-numbered-paragraph p3-regular">
                 Discover how you can contribute your skills to projects that
                 address real challenges and enhance our city. Be part of a
                 dynamic team working on solutions that make a difference.
               </p>
               <Button
-                className="btn btn-alt-gold"
+                className="azbtn azbtn-alt-gold dark-button-transition"
                 href="/projects"
                 textContent="See Our Projects"
               />
@@ -161,14 +161,16 @@ export default function HomePage() {
                 width={81}
                 height={80}
               />
-              <h2 className="home-numbered-header">Pitch Your Vision</h2>
-              <p className="home-numbered-paragraph">
+              <h2 className="home-numbered-header sm:h3-bold h4-bold">
+                Pitch Your Vision
+              </h2>
+              <p className="home-numbered-paragraph p3-regular">
                 Have a project idea that can benefit the community? Pitch it to
                 us and join forces with our community of innovators to bring
                 your vision to life, driving positive change in Fresno.
               </p>
               <Button
-                className="btn btn-alt-gold"
+                className="azbtn azbtn-alt-gold dark-button-transition"
                 href="/pitch"
                 textContent="Pitch a Project"
               />
@@ -215,7 +217,7 @@ export default function HomePage() {
               <h1 className="general-heading-section general-heading-section-alt">
                 our projects
               </h1>
-              <h2 className="heading-large-section-sub">
+              <h2 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
                 Driving Innovation Through Tech and Collaboration
               </h2>
             </div>
@@ -231,7 +233,7 @@ export default function HomePage() {
             </p>
             <Button
               href="/projects"
-              className="btn btn-gold"
+              className="azbtn azbtn-primary"
               textContent="Find Projects"
             />
           </div>
@@ -240,7 +242,7 @@ export default function HomePage() {
               <div className="keen-slider__slide">
                 <div className="slide-content">
                   <h2 className="sub-heading">Learning Blocks</h2>
-                  <p className="home-section-dark-paragraph">
+                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
                     Unlock grades, schedules, and progress in one thrilling
                     platform!
                   </p>
@@ -256,7 +258,7 @@ export default function HomePage() {
               <div className="keen-slider__slide">
                 <div className="slide-content">
                   <h2 className="sub-heading">TrashAI</h2>
-                  <p className="home-section-dark-paragraph">
+                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
                     Developing machine learning technology to identify trash in
                     images.
                   </p>
@@ -272,7 +274,7 @@ export default function HomePage() {
               <div className="keen-slider__slide">
                 <div className="slide-content">
                   <h2 className="sub-heading">Open Budget Sac</h2>
-                  <p className="home-section-dark-paragraph">
+                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
                     Fiscal transparency and visualization web app for the City
                     of Fresno.
                   </p>
@@ -290,11 +292,11 @@ export default function HomePage() {
         </section>
         <section className="general-section-gray partnership-section">
           <div className="heading-underline-partnership">
-            <h1 className="heading-large-section-sub">
+            <h1 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
               Our Collaborations and Partnerships
             </h1>
           </div>
-          <p className="home-numbered-paragraph-partnerships">
+          <p className="home-numbered-paragraph p3-regular-partnerships">
             We have had the privilege of working with a diverse array of
             companies, organizations, and government entities, some of which are
             showcased below.
@@ -332,13 +334,13 @@ export default function HomePage() {
         </section>
         <section className="general-section-dark donate-section">
           <div className="general-section-container heading-underline donate-section-underline">
-            <h1 className="heading-large-section-sub">
+            <h1 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
               Help Support Open Fresno
             </h1>
           </div>
           <div className="donate-section-paragraph-container">
-            <p className="home-section-dark-paragraph">
-              <span className="home-section-dark-paragraph-bold">
+            <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
+              <span className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular-bold">
                 Your support, whether through donations or volunteering,
               </span>{" "}
               is instrumental in driving positive change with Open Fresno.
@@ -368,12 +370,12 @@ export default function HomePage() {
             <div className="home-buttons-group">
               <Button
                 href="/get-started"
-                className="btn btn-alt-gold"
+                className="azbtn azbtn-alt-gold dark-button-transition"
                 textContent="Get Started"
               />
               <Button
                 href="/donate"
-                className="btn btn-gold"
+                className="azbtn azbtn-primary"
                 textContent="Donate"
               />
             </div>
