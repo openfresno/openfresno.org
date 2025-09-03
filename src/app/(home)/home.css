@@ -67,11 +67,6 @@ Home page layout.
   }
 }
 
-.home-section-action-image {
-    position: relative;
-    margin-left: 108px;
-}
-
 .home-numbered-grid {
   display: flex;
   flex-direction: row;

@@ -1,10 +1,11 @@
 @import "./button.css";
 @import "./layout.css";
 @import "./typography.css";
+
 :root {
   /*
-  Application color theme.
-  */
+      Application color theme.
+      */
   --neutral-50: #f7f7f8;
   --neutral-100: #eaeaec;
   --neutral-200: #d4d4d8;
@@ -39,8 +40,8 @@
   --shades-white: #ffffff;
 
   /*
-  Brand colors.
-  */
+      Brand colors.
+      */
   --landing-background-color: var(--neutral-50);
   --navbar-color: var(--neutral-50);
   --main-vivid-blue: #004491;
@@ -49,9 +50,9 @@
   --main-white: var(--secondary-50);
   --main-black: #060718;
 
-  /* 
-  Screen breakpoints.
-  */
+  /*
+      Screen breakpoints.
+      */
   --screen-xs: 400px;
   --screen-sm: 576px;
   --screen-md: 768px;
@@ -59,9 +60,9 @@
   --screen-xl: 1200px;
   --screen-xxl: 1400px;
 
-  /* 
-  Layout variables.
-  */
+  /*
+      Layout variables.
+      */
   --navbar-height: 84px;
   --banner-height: 42px;
   --navbar-height-with-banner: calc(
