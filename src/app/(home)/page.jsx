@@ -9,15 +9,15 @@ export default function HomePage() {
   return (
     <AppLayout fadeNavbar={true}>
       <main className="">
-        <header className="azhome-landing-container">
+        <header className="home-landing-container">
           <div className="space-y-10">
-            <h1 className="azhome-landing-title">Welcome to Open Fresno</h1>
-            <p className="azhome-landing-paragraph">
+            <h1 className="home-landing-title">Welcome to Open Fresno</h1>
+            <p className="home-landing-paragraph">
               Become a part of the transformation in Fresno and the Central
               Valley Area through technology and open data. Volunteer today for
               a brighter future!
             </p>
-            <div className="azhome-buttons-group button-regular">
+            <div className="home-buttons-group button-regular">
               <Link
                 className="azbtn azbtn-alt-light dark-button-transition button-regular"
                 href="/get-started"
@@ -30,7 +30,7 @@ export default function HomePage() {
             </div>
           </div>
           <div>
-            <div className="azhome-landing-image">
+            <div className="home-landing-image">
               <Image
                 src="/assets/logo/logo-blue.svg"
                 className="absolute -top-10 right-0"
@@ -46,14 +46,16 @@ export default function HomePage() {
             </div>
           </div>
         </header>
-        <section className="general-section-light">
-          <div className="general-section-container heading-underline">
-            <h1 className="general-heading-section">Who we are</h1>
-            <h2 className="sub-heading">
-              Building a Brighter Fresno Through Innovation and Technology
-            </h2>
-          </div>
-          <div className="general-section-container">
+        <section className="app-section--dark">
+          <div className="split-section gap-6 py-24 sm:px-10 lg:py-32">
+            <div>
+              <h1 className="heading-section heading-section-text--light">
+                Who we are
+              </h1>
+              <h2 className="sub-heading">
+                Creating a Brighter Future Through Innovation and Technology.
+              </h2>
+            </div>
             <p className="section-paragraph">
               Open Fresno is
               <span className="paragraph-bold">
@@ -62,45 +64,46 @@ export default function HomePage() {
                 civic-minded individuals{" "}
               </span>
               who come together to use technology and open data to address civic
-              challenges and improve public services in the Fresno area.
+              challenges and improve public services in the Central California.
               <br />
-              leveraging technology and open data to address civic challenges
-              and enhance public services in Fresno and the Central Valley area.
-              Our community thrives on collaboration, innovation, and a shared
-              commitment to driving positive change.
+              <br />
+              We are passionate about fostering civic innovation and creating
+              positive impact through technology and community engagement.
             </p>
           </div>
         </section>
-        <section className="general-section-dark home-section-dark-flex">
-          <div className="home-about-container">
-            <div className="general-section-container heading-underline underline-alt">
-              <h1 className="general-heading-section general-heading-section-alt">
+        <section className="">
+          <div className="split-section gap-6 py-24 ps-10 lg:py-32">
+            <div className="pe-6">
+              <h1 className="heading-section heading-section-text--dark">
                 What we do
               </h1>
               <h2 className="sub-heading">
-                Building a Better Future <br />
-                in Fresno
+                Building a Better Future For Fresno and the Central Valley Area
               </h2>
+              <p className="section-paragraph pt-10">
+                <span className="paragraph-bold">
+                  Our mission is done by uniting programmers, designers, and
+                  other talents, we transform ideas into tangible solutions that
+                  impact lives throughout Central California.
+                </span>
+                {""}
+                Together, we drive innovation forward, building a future where
+                open source technology empowers citizens and uplifts our city.{" "}
+                <span className="paragraph-bold">
+                  Join us in driving innovation through open-source tech and
+                  empowering our community!
+                </span>
+              </p>
             </div>
-            <p className="section-paragraph">
-              Our mission is done by uniting programmers, designers, and other
-              talents, we transform ideas into tangible solutions that impact
-              lives throughout the Fresno area. Together, we drive innovation
-              forward, building a future where open source technology empowers
-              citizens and uplifts our city.{" "}
-              <span className="paragraph-bold">
-                Join us in driving innovation through open-source tech and
-                empowering our community!
-              </span>
-            </p>
+            <Image
+              src="/img/home/home2.png"
+              alt="Open Data Day"
+              className="home-section-action-image"
+              width={720}
+              height={574}
+            />
           </div>
-          <Image
-            src="/img/open_data_day_curved.png"
-            alt="Open Data Day"
-            className="home-section-action-image"
-            width={720}
-            height={574}
-          />
         </section>
         <section className="general-section-dark home-services-container">
           <div className="general-section-container heading-underline underline-alt">

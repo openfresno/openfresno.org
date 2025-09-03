@@ -1,6 +1,61 @@
 /*
-Mixins are mostly used throughout the application for font attributes. It should be up-to-date with the font library in Figma. Some styles are not documented in Figma, so adding additional styles here is appropriate.
+Application typography. The Inter font family is applied by next/font in layout.js.
  */
+.app-section--dark {
+  background-color: var(--neutral-900);
+  color: var(--secondary-50);
+}
+
+.app-section--light {
+  background-color: var(--secondary-50);
+  color: var(--neutral-900);
+}
+
+.app-section--grey {
+  background-color: var(--neutral-500);
+  color: var(--secondary-50);
+}
+
+.section-paragraph {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  @media (max-width: 576px) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.section-paragraph-small {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  @media (min-width: 576px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.sub-heading {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 38px;
+  @media (max-width: 576px) {
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+  }
+}
+
+.paragraph-bold {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
 .subheading-regular {
   font-weight: 400;
   font-size: 20px;

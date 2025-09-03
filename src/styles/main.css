@@ -14,7 +14,7 @@
   --neutral-600: #55555e;
   --neutral-700: #3a3a40;
   --neutral-800: #1d1d20;
-  --neutral-900: #060717;
+  --neutral-900: #060718;
   --primary-50: #f0f4fe;
   --primary-100: #d6e1fe;
   --primary-200: #adc4fc;
@@ -41,8 +41,8 @@
   /*
   Brand colors.
   */
-  --landing-background-color: --neutral-50;
-  --navbar-color: --neutral-50;
+  --landing-background-color: var(--neutral-50);
+  --navbar-color: var(--neutral-50);
   --main-vivid-blue: #004491;
   --main-light-blue: #00a6fb;
   --main-grey: #72727e;
@@ -67,7 +67,6 @@
   --navbar-height-with-banner: calc(
     var(--navbar-height) + var(--banner-height)
   );
-  --screen-xxl: 1200px;
 }
 
 h1,

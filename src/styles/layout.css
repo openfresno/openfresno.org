@@ -1,9 +1,65 @@
+/*
+Application layout styles.
+ */
+.toolbar-after-content {
+  margin-top: var(--navbar-height);
+}
+
+.toolbar-after-content-with-banner {
+  margin-top: var(--navbar-height-with-banner);
+}
+
 .split-section {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+  margin: auto;
+  max-width: calc(var(--screen-xxl) + 80px);
 
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.heading-section {
+  border-radius: 8px;
+  padding: 10px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.heading-section-text--dark {
+  background-color: var(--neutral-900);
+  color: var(--secondary-50);
+}
+
+.heading-section-text--light {
+  background-color: var(--secondary-50);
+  color: var(--neutral-900);
+}
+
+.section-container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 64px 80px;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+    padding: 8vw 4vw;
+  }
+}
+
+.split-section-content-container {
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
