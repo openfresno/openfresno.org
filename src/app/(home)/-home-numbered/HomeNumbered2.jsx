@@ -21,7 +21,7 @@ export default function HomeNumbered2() {
             Join us to be a part of a vibrant community dedicated to positive
             change through technology.
           </p>
-          <Link className="azbtn azbtn-blue button-regular" href="">
+          <Link className="btn btn-blue" href="">
             Visit Meetup
           </Link>
         </div>
@@ -37,7 +37,7 @@ export default function HomeNumbered2() {
             real challenges and enhance our city. Be part of a dynamic team
             working on solutions that make a difference.
           </p>
-          <Link className="azbtn azbtn-blue button-regular" href="">
+          <Link className="btn btn-blue" href="">
             See Our Project
           </Link>
         </div>
@@ -51,7 +51,7 @@ export default function HomeNumbered2() {
             and join forces with our community of innovators to bring your
             vision to life, driving positive change in Central California.
           </p>
-          <Link className="azbtn azbtn-blue button-regular" href="">
+          <Link className="btn btn-blue" href="">
             Pitch a Project
           </Link>
         </div>
@@ -68,7 +68,7 @@ export default function HomeNumbered2() {
             cozy lounge to laser cutting, workshops, and an electronics haven,
             explore what awaits you at our partner's space!{" "}
           </p>
-          <Link className="azbtn azbtn-blue button-regular" href="">
+          <Link className="btn btn-blue" href="">
             Check It Out
           </Link>
         </div>

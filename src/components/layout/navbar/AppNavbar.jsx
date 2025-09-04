@@ -136,7 +136,9 @@ export default function AppNavbar({ fade = false }) {
             </Link>
           </li>
           <li className={`navbar-link-list-item`}>
-            <Link className="navbar-link" href="/donate">Donate</Link>
+            <Link className="navbar-link" href="/donate">
+              Donate
+            </Link>
           </li>
           <hr className={"navbar-underline"} />
         </ul>

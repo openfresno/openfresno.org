@@ -1,5 +1,5 @@
 /*
-Navigation bar.
+The main application navigation bar.
 It is made up of three sections.
 - Left: Logo
 - Middle: Links with animated underline
@@ -25,10 +25,10 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
 }
 
 .navbar-toolbar-content {
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: auto;
   padding: 0 8px;
   max-width: calc(var(--screen-xxl) + 72px);
   height: 100%;
@@ -47,8 +47,8 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
 
 .navbar-link {
   z-index: 15;
+  margin: auto;
   padding: 1rem;
-  margin:auto;
 }
 
 .navbar-link-selected {

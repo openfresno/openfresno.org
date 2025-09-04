@@ -18,14 +18,14 @@ export default function HomePage() {
               Valley Area through technology and open data. Volunteer today for
               a brighter future!
             </p>
-            <div className="home-buttons-group button-regular">
+            <div className="home-buttons-group">
               <Link
-                className="azbtn azbtn-alt-light dark-button-transition button-regular"
+                className="btn btn-alt btn-alt--transition"
                 href="/get-started"
               >
                 Get Started
               </Link>
-              <Link className="azbtn azbtn-primary" href="/projects">
+              <Link className="btn btn--grow" href="/projects">
                 View Projects
               </Link>
             </div>
@@ -178,7 +178,7 @@ export default function HomePage() {
             </p>
             <Button
               href="/projects"
-              className="azbtn azbtn-primary"
+              className="btn btn--grow"
               textContent="Find Projects"
             />
           </div>
@@ -315,12 +315,12 @@ export default function HomePage() {
             <div className="home-buttons-group">
               <Button
                 href="/get-started"
-                className="azbtn azbtn-alt-gold dark-button-transition"
+                className="btn btn-alt btn-alt--transition"
                 textContent="Get Started"
               />
               <Button
                 href="/donate"
-                className="azbtn azbtn-primary"
+                className="btn btn--grow"
                 textContent="Donate"
               />
             </div>

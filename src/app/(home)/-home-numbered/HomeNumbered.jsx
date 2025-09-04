@@ -15,7 +15,7 @@ export default function HomeNumbered() {
           dedicated to positive change through technology.
         </p>
         <Button
-          className="azbtn azbtn-alt-gold dark-button-transition"
+          className="btn"
           href="https://www.meetup.com/openfresno/"
           target="_blank"
           textContent="Visit Meetup"
@@ -32,7 +32,7 @@ export default function HomeNumbered() {
           working on solutions that make a difference.
         </p>
         <Button
-          className="azbtn azbtn-alt-gold dark-button-transition"
+          className="btn"
           href="/projects"
           textContent="See Our Projects"
         />
@@ -47,11 +47,7 @@ export default function HomeNumbered() {
           join forces with our community of innovators to bring your vision to
           life, driving positive change in Fresno.
         </p>
-        <Button
-          className="azbtn azbtn-alt-gold dark-button-transition"
-          href="/pitch"
-          textContent="Pitch a Project"
-        />
+        <Button className="btn" href="/pitch" textContent="Pitch a Project" />
       </div>
     </div>
   );

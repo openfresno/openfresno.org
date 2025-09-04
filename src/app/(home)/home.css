@@ -19,8 +19,8 @@ Home page layout.
 
 .home-buttons-group {
   display: flex;
+  align-items: center;
   gap: 20px;
-  width: fit-content;
 }
 
 .home-landing-image {

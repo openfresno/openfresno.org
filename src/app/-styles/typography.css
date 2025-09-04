@@ -16,6 +16,11 @@ Application typography. The Inter font family is applied by next/font in layout.
   color: var(--secondary-50);
 }
 
+.app-color--primary {
+  background-color: var(--main-vivid-blue);
+  color: var(--secondary-50);
+}
+
 .section-title {
   font-weight: 700;
   font-size: 31px;
@@ -86,6 +91,12 @@ Application typography. The Inter font family is applied by next/font in layout.
     font-size: 31px;
     line-height: 38px;
   }
+}
+
+.nav-semi-bold {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
 }
 
 .subheading-regular {
@@ -231,12 +242,6 @@ Application typography. The Inter font family is applied by next/font in layout.
   line-height: 28px;
 }
 
-.nav-semi-bold {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
-}
-
 .p-footer {
   font-weight: 400;
   font-size: 16px;
@@ -249,13 +254,6 @@ Application typography. The Inter font family is applied by next/font in layout.
   line-height: 18px;
 }
 
-.caption-regular-uppercase {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-}
-
 .caption-footer {
   font-weight: 400;
   font-size: 14px;
@@ -263,8 +261,9 @@ Application typography. The Inter font family is applied by next/font in layout.
   text-transform: uppercase;
 }
 
-.button-regular {
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 18px;
+.caption-regular-uppercase {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
 }

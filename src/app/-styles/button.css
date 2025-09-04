@@ -1,21 +1,20 @@
 /*
 Buttons
  */
-.azbtn {
-  cursor: pointer;
+.btn {
   border-radius: 6px;
+  background: var(--main-vivid-blue);
   padding: 16px 24px;
-  width: fit-content;
-  height: fit-content;
+  color: var(--neutral-50);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 18px;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.azbtn-primary {
+.btn--grow {
   position: relative;
-  background: var(--main-vivid-blue);
-  color: var(--neutral-50);
-
   &::before {
     position: absolute;
     top: 0;
@@ -32,7 +31,6 @@ Buttons
     border-radius: 6px;
     content: "";
   }
-
   &:hover::before,
   &:focus::before {
     top: -3px;
@@ -42,33 +40,18 @@ Buttons
   }
 }
 
-.azbtn-blue {
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-  background-color: var(--main-vivid-blue);
-  color: var(--secondary-50);
-}
-
-.azbtn-alt-light {
-  border: solid var(--main-vivid-blue) 1px;
-  background-color: transparent;
-  color: var(--neutral-900);
-}
-
-.azbtn-alt-gold {
+.btn-alt {
   border: solid var(--main-vivid-blue) 1px;
   background-color: transparent;
   color: var(--main-vivid-blue);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 18px;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.azbtn-alt-blue {
-  border: solid var(--primary-500) 1px;
-  background-color: transparent;
-  color: var(--primary-500);
-}
-
-.dark-button-transition {
+.btn-alt--transition {
   transition:
     background-color 0.3s,
     color 0.3s;
@@ -77,4 +60,11 @@ Buttons
     background-color: var(--main-vivid-blue);
     color: var(--secondary-50);
   }
+}
+
+/* Deprecated */
+.btn-alt-gold {
+  border: solid var(--main-vivid-blue) 1px;
+  background-color: transparent;
+  color: var(--main-vivid-blue);
 }
