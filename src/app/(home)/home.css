@@ -173,3 +173,35 @@ Home page layout.
     padding: 0;
   }
 }
+
+.image-container {
+  /* This parent container acts as the positioning context. */
+  position: relative;
+  /* Maintain the aspect ratio of the container. 
+     (height of main image / width of main image) * 100 
+     (577 / 596) * 100 = 96.81 */
+  padding-top: 96.81%;
+  /* You can add a max-width to control the overall size on large screens. */
+  max-width: 596px;
+}
+
+.image-container .main-image {
+  /* Set the main image to absolute and stretch it to fill the container. */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.image-container .star-image {
+  /* Position the star with percentages relative to the main image's container. */
+  position: absolute;
+  /* Adjust these values to match the desired position. */
+  top: 30%; /* top-40 is roughly 30% of the container's height */
+  left: -20%; /* -left-26 is roughly -20% of the container's width */
+  /* Use a percentage for the star's width to make it scale. */
+  width: 50%; /* Adjust this to control its size relative to the main image. */
+  height: auto; /* Maintain aspect ratio */
+}

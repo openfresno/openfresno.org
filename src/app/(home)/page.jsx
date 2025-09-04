@@ -95,21 +95,28 @@ export default function HomePage() {
                 </b>
               </p>
             </div>
-            <div className="relative ms-[108px]">
+            <div className="image-container relative ms-[108px]">
               <Image
-                src="/img/home/home2.png"
                 alt="Open Data Day"
-                className="relative z-10"
+                loading="lazy"
                 width={596}
                 height={577}
+                decoding="async"
+                data-nimg="1"
+                className="main-image z-10"
+                style="color: transparent"
+                src="/img/home/home2.png"
               />
-
               <Image
-                src="/img/home/star.svg"
                 alt="Star shape"
-                className="absolute top-40 -left-26 z-0"
+                loading="lazy"
                 width={294}
                 height={308}
+                decoding="async"
+                data-nimg="1"
+                className="star-image z-0"
+                style="color: transparent"
+                src="/img/home/star.svg"
               />
             </div>
           </div>
