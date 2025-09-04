@@ -3,8 +3,8 @@ import { Slider } from "../../components/ui";
 import Link from "next/link";
 import Image from "next/image";
 import AppLayout from "../../components/layout/AppLayout";
+import HomeNumbered2 from "./-home-numbered/HomeNumbered2";
 import "./home.css";
-import HomeNumbered2 from "@/components/layout/HomeNumbered/HomeNumbered2";
 
 export default function HomePage() {
   return (
@@ -121,6 +121,7 @@ export default function HomePage() {
           </div>
           <HomeNumbered2 />
         </section>
+
         <section className="general-section-light">
           <div className="general-section-container heading-underline">
             <h1 className="general-heading-section">Why volunteer</h1>
