@@ -4,7 +4,7 @@ import Link from "next/link";
 import ExtendedNavbarMenu from "./ExtendedNavbarMenu";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import useBanner from "@/utils/hooks/useBanner";
+import useBanner from "../../../utils/hooks/useBanner";
 import Image from "next/image";
 
 /**
@@ -18,7 +18,7 @@ function setOpacity(currentScrollHeight) {
 }
 
 /**
- * Set the navbar to fade on scroll.
+ * Fade the navbar when scrolling.
  * @param setFadeLayout
  * @param setCurrentScrollHeight
  * @returns {function(): void} Cleanup function to remove event listener
@@ -34,7 +34,7 @@ function registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight) {
 }
 
 /**
- * Default application navigation bar. Links animate on page change. Extended menu that shows more text underneath the navbar.
+ * The default application navigation bar. The links animate when the page navigates. Extended menu that shows more text underneath the navbar.
  * - Desktop: Multiple navigation links in the center. Link on the right side to show an extended menu.
  * - Mobile: All menu items are in the collapsable menu.
  * @param {boolean} fade - Whether to enable fade effect on scroll
@@ -85,7 +85,7 @@ export default function AppNavbar({ fade = false }) {
   return (
     <nav
       ref={navbarRef} // Attach the ref here
-      className={`navbar-container ${fade && "navbar-container--fade"}`}
+      className="navbar-container h5-semi-bold"
       style={
         fadeLayout && !extendedMenuVisible
           ? {
@@ -98,60 +98,58 @@ export default function AppNavbar({ fade = false }) {
           : { backgroundColor: "rgba(255, 252, 245, 1)" }
       }
     >
-      <div className={"navbar-toolbar-main"}>
-        <div className={"navbar-toolbar-content"}>
-          <Link className={"navbar-left-section"} href="/">
-            <Image
-              src="/assets/logo/logo-text-black.svg"
-              alt="Open Fresno logo"
-              height="44"
-              width="110"
-            />
-          </Link>
-          <div className={"navbar-middle-container"}>
-            <ul className={"navbar-middle-section"}>
-              <li
-                className={`navbar-link-list-item ${
-                  websiteURL === "/" ? "navbar-link-selected one" : ""
-                }`}
-              >
-                <Link className="navbar-link" href="/">
-                  Home
-                </Link>
-              </li>
-              <li
-                className={`navbar-link-list-item ${
-                  websiteURL === "/about" ? "navbar-link-selected two" : ""
-                }`}
-              >
-                <Link className="navbar-link" href="/about">
-                  About
-                </Link>
-              </li>
-              <li
-                className={`navbar-link-list-item ${
-                  websiteURL === "/contact" ? "navbar-link-selected three" : ""
-                }`}
-              >
-                <Link className="navbar-link" href="/contact">
-                  Contact
-                </Link>
-              </li>
-              <li className={`navbar-link-list-item`}>
-                <Link href="/donate">Donate</Link>
-              </li>
-              <hr className={"navbar-underline"} />
-            </ul>
-          </div>
-          <button
-            className={`navbar-toggle-button ${extendedMenuVisible ? "navbar-toggle-button--extended" : "navbar-toggle-button--collapsed"}`}
-            onClick={() => {
-              showExtendedMenu(!extendedMenuVisible);
-            }}
+      <div className={"navbar-toolbar-content"}>
+        <Link className={"navbar-left-section"} href="/">
+          <Image
+            src="/assets/logo/logo-text-black.svg"
+            alt="Open Fresno logo"
+            height="44"
+            width="110"
+          />
+        </Link>
+        <ul className={"navbar-middle-section"}>
+          <li
+            className={`navbar-link-list-item ${
+              websiteURL === "/" ? "navbar-link-selected one" : ""
+            }`}
           >
-            Get Involved
-          </button>
-        </div>
+            <Link className="navbar-link" href="/">
+              Home
+            </Link>
+          </li>
+          <li
+            className={`navbar-link-list-item ${
+              websiteURL === "/about" ? "navbar-link-selected two" : ""
+            }`}
+          >
+            <Link className="navbar-link" href="/about">
+              About
+            </Link>
+          </li>
+          <li
+            className={`navbar-link-list-item ${
+              websiteURL === "/contact" ? "navbar-link-selected three" : ""
+            }`}
+          >
+            <Link className="navbar-link" href="/contact">
+              Contact
+            </Link>
+          </li>
+          <li className={`navbar-link-list-item`}>
+            <Link className="navbar-link" href="/donate">
+              Donate
+            </Link>
+          </li>
+          <hr className={"navbar-underline"} />
+        </ul>
+        <button
+          className={`navbar-toggle-button ${extendedMenuVisible ? "navbar-toggle-button--extended" : "navbar-toggle-button--collapsed"}`}
+          onClick={() => {
+            showExtendedMenu(!extendedMenuVisible);
+          }}
+        >
+          Get Involved
+        </button>
       </div>
       {extendedMenuVisible && (
         <ExtendedNavbarMenu visible={extendedMenuVisible} />

@@ -28,7 +28,8 @@ npm test -- src/components/AppFooter.test.jsx
 
 ## Architecture Overview
 
-This is a **Next.js 15** application using the **App Router** with static export (`output: "export"`). The site is built as a static site generator for the Open Fresno civic tech organization.
+This is a **Next.js 15** application using the **App Router** with static export (`output: "export"`). The site is built
+as a static site generator for the Open Fresno civic tech organization.
 
 ### Key Technologies
 
@@ -67,7 +68,8 @@ src/app/
 
 ### GitHub Projects Integration
 
-The `/projects` page dynamically fetches project data from GitHub repositories in the `openfresnoorg` organization. Each project repository should contain a `meta.yml` file with project metadata including:
+The `/projects` page dynamically fetches project data from GitHub repositories in the `openfresnoorg` organization. Each
+project repository should contain a `meta.yml` file with project metadata including:
 
 - Project description, status, and type
 - Lead contacts (technical lead, designer, project manager)
@@ -132,4 +134,5 @@ Pages are composed of section components that follow a consistent naming pattern
 
 ### GitHub Rate Limiting
 
-The projects page uses unauthenticated GitHub API requests (60/hour limit). Consider implementing caching with SWR for production use as noted in the code comments.
+The projects page uses unauthenticated GitHub API requests (60/hour limit). Consider implementing caching with SWR for
+production use as noted in the code comments.

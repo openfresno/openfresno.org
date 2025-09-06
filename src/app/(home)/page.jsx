@@ -3,210 +3,164 @@ import { Slider } from "../../components/ui";
 import Link from "next/link";
 import Image from "next/image";
 import AppLayout from "../../components/layout/AppLayout";
+import HomeNumbered2 from "./-home-numbered/HomeNumbered2";
+import "./home.css";
 
 export default function HomePage() {
   return (
     <AppLayout fadeNavbar={true}>
-      <main className="">
+      <main>
         <header className="home-landing-container">
-          <div className="flex flex-1 flex-col justify-center">
-            <h1 className="home-landing-heading">Welcome to Open Fresno</h1>
-            <p className="home-landing-paragraph">
+          <div className="space-y-10">
+            <h1 className="section-title">Welcome to Open Fresno</h1>
+            <p className="section-title-paragraph">
               Become a part of the transformation in Fresno and the Central
               Valley Area through technology and open data. Volunteer today for
               a brighter future!
             </p>
             <div className="home-buttons-group">
-              <Button
-                className="btn btn-alt-light"
+              <Link
+                className="btn btn-alt btn-alt--transition"
                 href="/get-started"
-                textContent="Get Started"
-              />
-              <Button
-                className="btn btn-gold"
-                href="/projects"
-                textContent="View Projects"
-              />
+              >
+                Get Started
+              </Link>
+              <Link className="btn btn--grow" href="/projects">
+                View Projects
+              </Link>
             </div>
           </div>
-          <div className="flex-1">
-            <div className="relative mx-auto w-fit ps-16 xl:ms-24">
+          <div>
+            <div className="home-landing-image">
               <Image
                 src="/assets/logo/logo-blue.svg"
                 className="absolute -top-10 right-0"
                 width={200}
                 height={397}
+                alt="Open Fresno logo blue"
               />
               <Image
                 src="/img/fresno_tower_circle.png"
                 className=""
                 width={418}
                 height={397}
+                alt="Ariel photo of downtown Fresno and the iconic Tower Theatre."
               />
             </div>
           </div>
         </header>
-        <section className="general-section-light">
-          <div className="general-section-container heading-underline">
-            <h1 className="general-heading-section">Who we are</h1>
-            <h2 className="sub-heading">
-              Building a Brighter Fresno Through Innovation and Technology
-            </h2>
-          </div>
-          <div className="general-section-container">
+        <section className="app-color--dark">
+          <div className="split-section gap-6 px-6 py-24 lg:px-10 lg:py-32">
+            <div>
+              <h1 className="heading-section app-color--light">Who we are</h1>
+              <h2 className="sub-heading">
+                Creating a Brighter Future Through Innovation and Technology.
+              </h2>
+            </div>
             <p className="section-paragraph">
               Open Fresno is
-              <span className="paragraph-bold">
+              <b>
                 {" "}
                 a community of technologists, developers, designers, and
                 civic-minded individuals{" "}
-              </span>
+              </b>
               who come together to use technology and open data to address civic
-              challenges and improve public services in the Fresno area.
+              challenges and improve public services in the Central California.
               <br />
-              leveraging technology and open data to address civic challenges
-              and enhance public services in Fresno and the Central Valley area.
-              Our community thrives on collaboration, innovation, and a shared
-              commitment to driving positive change.
+              <br />
+              We are passionate about fostering civic innovation and creating
+              positive impact through technology and community engagement.
             </p>
           </div>
         </section>
-        <section className="general-section-dark home-section-dark-flex">
-          <div className="home-about-container">
-            <div className="general-section-container heading-underline underline-alt">
-              <h1 className="general-heading-section general-heading-section-alt">
-                What we do
+        <section>
+          <div className="split-section px-6 py-24 lg:px-10 lg:py-32">
+            <div>
+              <h1 className="heading-section app-color--dark">What we do</h1>
+              <h2 className="sub-heading">
+                Building a Better Future For Fresno and the Central Valley Area
+              </h2>
+              <p className="section-paragraph pt-10">
+                <b>
+                  Our mission is done by uniting programmers, designers, and
+                  other talents, we transform ideas into tangible solutions that
+                  impact lives throughout Central California.
+                </b>
+                {""}
+                Together, we drive innovation forward, building a future where
+                open source technology empowers citizens and uplifts our city.{" "}
+                <b>
+                  Join us in driving innovation through open-source tech and
+                  empowering our community!
+                </b>
+              </p>
+            </div>
+            <div className="image-container relative ms-[108px]">
+              <Image
+                alt="Open Data Day"
+                loading="lazy"
+                width={596}
+                height={577}
+                decoding="async"
+                data-nimg="1"
+                className="main-image z-10"
+                style="color: transparent"
+                src="/img/home/home2.png"
+              />
+              <Image
+                alt="Star shape"
+                loading="lazy"
+                width={294}
+                height={308}
+                decoding="async"
+                data-nimg="1"
+                className="star-image z-0"
+                style="color: transparent"
+                src="/img/home/star.svg"
+              />
+            </div>
+          </div>
+        </section>
+        <section className="mx-auto mb-[4.5rem] max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10">
+          <div className="mb-28 hidden md:block">
+            <h1 className="heading-section app-color--dark">Opportunities</h1>
+            <h2 className="sub-heading">Explore Our Volunteer Options</h2>
+          </div>
+          <HomeNumbered2 />
+        </section>
+        <section className="app-color--dark">
+          <div className="split-section gap-6 px-6 py-24 lg:px-10">
+            <div className="general-section-container heading-underline">
+              <h1 className="heading-section app-color--light">
+                Why volunteer
               </h1>
               <h2 className="sub-heading">
-                Building a Better Future <br />
-                in Fresno
+                Empower Change with <br />
+                Open Fresno
               </h2>
             </div>
-            <p className="section-paragraph">
-              Our mission is done by uniting programmers, designers, and other
-              talents, we transform ideas into tangible solutions that impact
-              lives throughout the Fresno area. Together, we drive innovation
-              forward, building a future where open source technology empowers
-              citizens and uplifts our city.{" "}
-              <span className="paragraph-bold">
-                Join us in driving innovation through open-source tech and
-                empowering our community!
-              </span>
-            </p>
-          </div>
-          <Image
-            src="/img/open_data_day_curved.png"
-            alt="Open Data Day"
-            className="home-section-action-image"
-            width={720}
-            height={574}
-          />
-        </section>
-        <section className="general-section-dark home-services-container">
-          <div className="general-section-container heading-underline underline-alt">
-            <h1 className="general-heading-section general-heading-section-alt">
-              Our services
-            </h1>
-            <h2 className="sub-heading">Explore Our Engagement Options</h2>
-          </div>
-          <div className="home-numbered-grid">
-            <div className="home-numbered-container">
-              <Image
-                src="/img/1.png"
-                alt="Open Data Day"
-                width={81}
-                height={80}
-              />
-              <h2 className="home-numbered-header">
-                Engage with Our Community
-              </h2>
-              <p className="home-numbered-paragraph">
-                Connect with like-minded individuals, share ideas, and
-                collaborate on projects at our meetups. Join us to be a part of
-                a vibrant community dedicated to positive change through
-                technology.
+            <div className="general-section-container">
+              <p className="section-paragraph">
+                <b>Ready to make a difference? </b>
+                Join us at Open Fresno and use your skills to drive positive
+                change through technology and collaboration.
+                <b>
+                  {" "}
+                  Whether you&apos;re a designer, developer, or anyone eager to
+                  volunteer, together we&apos;re enhancing community services,
+                  amplifying voices, and giving you the opportunity to improve
+                  your resume and portfolio.
+                </b>{" "}
+                It&apos;s a journey of innovation and empowerment waiting for
+                you. Your impact starts{" "}
+                <Link
+                  href="/get-started"
+                  className="underline underline-offset-4"
+                >
+                  <b>here!</b>
+                </Link>
               </p>
-              <Button
-                className="btn btn-alt-gold"
-                href="https://www.meetup.com/openfresno/"
-                target="_blank"
-                textContent="Visit Meetup"
-              />
             </div>
-            <div className="home-numbered-container">
-              <Image
-                src="/img/2.png"
-                alt="Open Data Day"
-                width={80}
-                height={80}
-              />
-              <h2 className="home-numbered-header">
-                Drive Innovation with Projects
-              </h2>
-              <p className="home-numbered-paragraph">
-                Discover how you can contribute your skills to projects that
-                address real challenges and enhance our city. Be part of a
-                dynamic team working on solutions that make a difference.
-              </p>
-              <Button
-                className="btn btn-alt-gold"
-                href="/projects"
-                textContent="See Our Projects"
-              />
-            </div>
-            <div className="home-numbered-container">
-              <Image
-                src="/img/3.png"
-                alt="Open Data Day"
-                width={81}
-                height={80}
-              />
-              <h2 className="home-numbered-header">Pitch Your Vision</h2>
-              <p className="home-numbered-paragraph">
-                Have a project idea that can benefit the community? Pitch it to
-                us and join forces with our community of innovators to bring
-                your vision to life, driving positive change in Fresno.
-              </p>
-              <Button
-                className="btn btn-alt-gold"
-                href="/pitch"
-                textContent="Pitch a Project"
-              />
-            </div>
-          </div>
-        </section>
-        <section className="general-section-light">
-          <div className="general-section-container heading-underline">
-            <h1 className="general-heading-section">Why volunteer</h1>
-            <h2 className="sub-heading">
-              Empower Change with <br />
-              Open Fresno
-            </h2>
-          </div>
-          <div className="general-section-container">
-            <p className="section-paragraph">
-              <span className="paragraph-bold">
-                Ready to make a difference?{" "}
-              </span>
-              Join us at Open Fresno and use your skills to drive positive
-              change through technology and collaboration.
-              <span className="paragraph-bold">
-                {" "}
-                Whether you&apos;re a designer, developer, or anyone eager to
-                volunteer, together we&apos;re enhancing community services,
-                amplifying voices, and giving you the opportunity to improve
-                your resume and portfolio.
-              </span>{" "}
-              It&apos;s a journey of innovation and empowerment waiting for you.
-              Your impact starts{" "}
-              <Link
-                href="/get-started"
-                className="home-section-paragraph-anchor"
-              >
-                here
-              </Link>
-              !
-            </p>
           </div>
         </section>
         <section className="general-section-dark home-projects-section">
@@ -215,7 +169,7 @@ export default function HomePage() {
               <h1 className="general-heading-section general-heading-section-alt">
                 our projects
               </h1>
-              <h2 className="heading-large-section-sub">
+              <h2 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
                 Driving Innovation Through Tech and Collaboration
               </h2>
             </div>
@@ -231,7 +185,7 @@ export default function HomePage() {
             </p>
             <Button
               href="/projects"
-              className="btn btn-gold"
+              className="btn btn--grow"
               textContent="Find Projects"
             />
           </div>
@@ -240,7 +194,7 @@ export default function HomePage() {
               <div className="keen-slider__slide">
                 <div className="slide-content">
                   <h2 className="sub-heading">Learning Blocks</h2>
-                  <p className="home-section-dark-paragraph">
+                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
                     Unlock grades, schedules, and progress in one thrilling
                     platform!
                   </p>
@@ -256,7 +210,7 @@ export default function HomePage() {
               <div className="keen-slider__slide">
                 <div className="slide-content">
                   <h2 className="sub-heading">TrashAI</h2>
-                  <p className="home-section-dark-paragraph">
+                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
                     Developing machine learning technology to identify trash in
                     images.
                   </p>
@@ -272,7 +226,7 @@ export default function HomePage() {
               <div className="keen-slider__slide">
                 <div className="slide-content">
                   <h2 className="sub-heading">Open Budget Sac</h2>
-                  <p className="home-section-dark-paragraph">
+                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
                     Fiscal transparency and visualization web app for the City
                     of Fresno.
                   </p>
@@ -290,11 +244,11 @@ export default function HomePage() {
         </section>
         <section className="general-section-gray partnership-section">
           <div className="heading-underline-partnership">
-            <h1 className="heading-large-section-sub">
+            <h1 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
               Our Collaborations and Partnerships
             </h1>
           </div>
-          <p className="home-numbered-paragraph-partnerships">
+          <p className="home-numbered-paragraph p3-regular-partnerships">
             We have had the privilege of working with a diverse array of
             companies, organizations, and government entities, some of which are
             showcased below.
@@ -332,13 +286,13 @@ export default function HomePage() {
         </section>
         <section className="general-section-dark donate-section">
           <div className="general-section-container heading-underline donate-section-underline">
-            <h1 className="heading-large-section-sub">
+            <h1 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
               Help Support Open Fresno
             </h1>
           </div>
           <div className="donate-section-paragraph-container">
-            <p className="home-section-dark-paragraph">
-              <span className="home-section-dark-paragraph-bold">
+            <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
+              <span className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular-bold">
                 Your support, whether through donations or volunteering,
               </span>{" "}
               is instrumental in driving positive change with Open Fresno.
@@ -368,12 +322,12 @@ export default function HomePage() {
             <div className="home-buttons-group">
               <Button
                 href="/get-started"
-                className="btn btn-alt-gold"
+                className="btn btn-alt btn-alt--transition"
                 textContent="Get Started"
               />
               <Button
                 href="/donate"
-                className="btn btn-gold"
+                className="btn btn--grow"
                 textContent="Donate"
               />
             </div>

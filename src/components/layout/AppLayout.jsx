@@ -1,5 +1,5 @@
-import AppNavbar from "./AppNavbar";
-import AppFooter from "./AppFooter";
+import AppNavbar from "./navbar/AppNavbar";
+import AppFooter from "./footer/AppFooter";
 import Banner from "./Banner";
 
 /**

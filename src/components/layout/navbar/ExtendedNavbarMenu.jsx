@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 /**
- * Dropdown menu for navbar.
+ * An extended dropdown menu for the main application navbar.
  * @returns {JSX.Element}
  */
 const ExtendedNavbarMenu = (visible) => {
