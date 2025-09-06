@@ -5,6 +5,7 @@
 @import "./-styles/button.css";
 @import "../components/layout/navbar/app-navbar.css";
 @import "../components/layout/navbar/extended-menu.css";
+
 @plugin "@tailwindcss/typography";
 
 /* This file is strictly for overriding the tailwind theme. Use -styles/main.css for global styles. */

@@ -9,8 +9,17 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = [{
-  ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
-}, ...compat.extends("next/core-web-vitals")];
+const eslintConfig = [
+  {
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "out/**",
+      "build/**",
+      "next-env.d.ts",
+    ],
+  },
+  ...compat.extends("next/core-web-vitals"),
+];
 
 export default eslintConfig;

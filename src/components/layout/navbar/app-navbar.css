@@ -113,6 +113,7 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
   color: var(--main-vivid-blue);
 
   /* Hide potential text inside the button */
+
   * {
     display: none;
   }
@@ -122,6 +123,7 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
   background: url("/img/navbar/chevron_down.svg") no-repeat center right;
   padding-right: 30px;
 }
+
 .navbar-toggle-button--extended {
   background: url("/img/navbar/chevron_down.svg") no-repeat center right;
   padding-right: 30px;

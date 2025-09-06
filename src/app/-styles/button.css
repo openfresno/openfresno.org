@@ -15,6 +15,7 @@ Buttons
 
 .btn--grow {
   position: relative;
+
   &::before {
     position: absolute;
     top: 0;
@@ -31,6 +32,7 @@ Buttons
     border-radius: 6px;
     content: "";
   }
+
   &:hover::before,
   &:focus::before {
     top: -3px;
