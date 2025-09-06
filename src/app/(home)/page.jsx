@@ -74,8 +74,8 @@ export default function HomePage() {
           </div>
         </section>
         <section>
-          <div className="split-section py-24 ps-10 lg:py-32">
-            <div className="pe-6">
+          <div className="split-section px-6 py-24 lg:px-10 lg:py-32">
+            <div>
               <h1 className="heading-section app-color--dark">What we do</h1>
               <h2 className="sub-heading">
                 Building a Better Future For Fresno and the Central Valley Area
@@ -121,46 +121,46 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-10">
+        <section className="mx-auto mb-[4.5rem] max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10">
           <div className="mb-28 hidden md:block">
             <h1 className="heading-section app-color--dark">Opportunities</h1>
             <h2 className="sub-heading">Explore Our Volunteer Options</h2>
           </div>
           <HomeNumbered2 />
         </section>
-
-        <section className="general-section-light">
-          <div className="general-section-container heading-underline">
-            <h1 className="general-heading-section">Why volunteer</h1>
-            <h2 className="sub-heading">
-              Empower Change with <br />
-              Open Fresno
-            </h2>
-          </div>
-          <div className="general-section-container">
-            <p className="section-paragraph">
-              <span className="paragraph-bold">
-                Ready to make a difference?{" "}
-              </span>
-              Join us at Open Fresno and use your skills to drive positive
-              change through technology and collaboration.
-              <span className="paragraph-bold">
-                {" "}
-                Whether you&apos;re a designer, developer, or anyone eager to
-                volunteer, together we&apos;re enhancing community services,
-                amplifying voices, and giving you the opportunity to improve
-                your resume and portfolio.
-              </span>{" "}
-              It&apos;s a journey of innovation and empowerment waiting for you.
-              Your impact starts{" "}
-              <Link
-                href="/get-started"
-                className="home-section-paragraph-anchor"
-              >
-                here
-              </Link>
-              !
-            </p>
+        <section className="app-color--dark">
+          <div className="split-section gap-6 px-6 py-24 lg:px-10">
+            <div className="general-section-container heading-underline">
+              <h1 className="heading-section app-color--light">
+                Why volunteer
+              </h1>
+              <h2 className="sub-heading">
+                Empower Change with <br />
+                Open Fresno
+              </h2>
+            </div>
+            <div className="general-section-container">
+              <p className="section-paragraph">
+                <b>Ready to make a difference? </b>
+                Join us at Open Fresno and use your skills to drive positive
+                change through technology and collaboration.
+                <b>
+                  {" "}
+                  Whether you&apos;re a designer, developer, or anyone eager to
+                  volunteer, together we&apos;re enhancing community services,
+                  amplifying voices, and giving you the opportunity to improve
+                  your resume and portfolio.
+                </b>{" "}
+                It&apos;s a journey of innovation and empowerment waiting for
+                you. Your impact starts{" "}
+                <Link
+                  href="/get-started"
+                  className="underline underline-offset-4"
+                >
+                  <b>here!</b>
+                </Link>
+              </p>
+            </div>
           </div>
         </section>
         <section className="general-section-dark home-projects-section">

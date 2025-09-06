@@ -81,7 +81,6 @@ Application typography. The Inter font family is applied by next/font in layout.
 }
 
 .medium-heading-title {
-  margin-top: 10px;
   font-weight: 700;
   font-size: 25px;
   line-height: 32px;

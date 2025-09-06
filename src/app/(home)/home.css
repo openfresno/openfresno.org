@@ -47,11 +47,6 @@ Home page layout.
   width: 101px;
 }
 
-.home-section-paragraph-anchor {
-  color: var(--neutral-900);
-  font-weight: 700;
-}
-
 .home-projects-section {
   display: flex;
   flex-direction: row;
