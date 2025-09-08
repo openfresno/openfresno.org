@@ -53,114 +53,14 @@ Home page layout.
   }
 }
 
-.home-projects-info-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 40px;
-  width: 50%;
-
-  @media (max-width: var(--screen-xxl)) {
-    width: 100%;
-  }
-}
-
 .home-section-project-image {
+  margin-top: 2rem;
   aspect-ratio: 2/1;
   width: 100%;
   object-fit: cover;
 }
 
-.azslide-content {
-  width: 100%;
-}
-
-.azslide-content p {
-  @media (max-width: 992px) {
-    margin-bottom: 10px;
-  }
-}
-
-.aztest {
-  margin: auto;
-  max-width: 100%;
-
-  @media (min-width: 1300px) {
-    max-width: 60%;
-  }
-}
-
-.azpartnership-section {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 64px 80px;
-
-  @media (max-width: 992px) {
-    align-items: center;
-    padding: 64px 40px;
-  }
-}
-
-.azheading-underline-partnership::after {
-  position: absolute;
-  margin-bottom: 20px;
-  border-bottom: 8px solid var(--secondary-50);
-  width: 93px;
-  height: 1px;
-  content: "";
-}
-
-.azdonate-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
-  padding: 64px 80px;
-
-  @media (max-width: 992px) {
-    flex-direction: column;
-    padding: 64px 40px;
-  }
-}
-
-.azdonate-section-paragraph-container {
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: var(--screen-xxl)) {
-    width: 100%;
-  }
-}
-
-.azheading-large-section-sub {
-  margin: 10px 0;
-}
-
-.home-section-dark-paragraph {
-  margin: 0 0 30px 0;
-}
-
-.home-projects-section-partnerships {
-  display: flex;
-  flex-direction: row;
-  align-content: flex-start;
-  align-items: center;
-  gap: 48px;
-  padding-left: 32px;
-
-  @media (max-width: 992px) {
-    flex-direction: column;
-    justify-content: center;
-    gap: 60px;
-    padding: 0;
-  }
-}
-
 .image-container {
-  /* This parent container acts as the positioning context. */
   position: relative;
   /* Maintain the aspect ratio of the container. 
      (height of main image / width of main image) * 100 

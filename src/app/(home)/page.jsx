@@ -162,24 +162,17 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="gap-6 px-6 py-24 lg:px-10">
-          <div className="home-projects-info-container">
-            <div className="home-section-dark-container heading-underline underline-alt">
-              <h1 className="general-heading-section general-heading-section-alt">
-                our projects
-              </h1>
-              <h2 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
-                Driving Innovation Through Tech and Collaboration
-              </h2>
-            </div>
-            <p className="section-paragraph">
+        <section className="mx-auto flex max-w-[calc(var(--screen-xxl)_+_80px)] flex-col gap-6 px-6 py-24 lg:flex-row lg:px-10">
+          <div className="w-full lg:w-2/5">
+            <h1 className="heading-section app-color--dark">Our projects</h1>
+            <h2 className="sub-heading">
+              Driving Innovation Through Tech and Collaboration
+            </h2>
+            <p className="section-paragraph mb-10">
               We tackle tech projects addressing civic issues, enhancing
               services in Fresno. From open data initiatives to government
-              services and community platforms,
-              <span className="paragraph-bold">
-                {" "}
-                our open-source tech and collaboration drive innovation
-              </span>
+              services and community platforms,{" "}
+              <b>our open-source tech and collaboration drive innovation</b>
               for transparent, efficient, engaged local governance.
             </p>
             <Button
@@ -188,147 +181,129 @@ export default function HomePage() {
               textContent="Find Projects"
             />
           </div>
-          <div className="test">
-            <Slider className="navigation-wrapper">
-              <div className="keen-slider__slide">
-                <div className="slide-content">
-                  <h2 className="sub-heading">Learning Blocks</h2>
-                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
-                    Unlock grades, schedules, and progress in one thrilling
-                    platform!
-                  </p>
-                </div>
-                <Image
-                  src="/img/home/learningblocks.jpg"
-                  alt="Learning Blocks"
-                  className="home-section-project-image"
-                  width={918}
-                  height={469}
-                />
+          <Slider className="mt-10 w-full lg:mt-0 lg:w-3/5">
+            <div className="keen-slider__slide w-full">
+              <div>
+                <h2 className="heading-small">Learning Blocks</h2>
+                <p className="mt-4">
+                  Unlock grades, schedules, and progress in one thrilling
+                  platform!
+                </p>
               </div>
-              <div className="keen-slider__slide">
-                <div className="slide-content">
-                  <h2 className="sub-heading">TrashAI</h2>
-                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
-                    Developing machine learning technology to identify trash in
-                    images.
-                  </p>
-                </div>
-                <Image
-                  src="/img/TrashAI2.png"
-                  alt="TrashAI"
-                  className="home-section-project-image"
-                  width={839}
-                  height={412}
-                />
+              <Image
+                src="/img/home/learningblocks.jpg"
+                alt="Learning Blocks"
+                className="home-section-project-image"
+                width={918}
+                height={469}
+              />
+            </div>
+            <div className="keen-slider__slide w-full">
+              <div>
+                <h2 className="heading-small">TrashAI</h2>
+                <p className="mt-4">
+                  Developing machine learning technology to identify trash in
+                  images.
+                </p>
               </div>
-              <div className="keen-slider__slide">
-                <div className="slide-content">
-                  <h2 className="sub-heading">Open Budget Sac</h2>
-                  <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
-                    Fiscal transparency and visualization web app for the City
-                    of Fresno.
-                  </p>
-                </div>
-                <Image
-                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.jpg"
-                  alt="Open Budget Sac"
-                  className="home-section-project-image"
-                  width={385}
-                  height={211}
-                />
+              <Image
+                src="/img/TrashAI2.png"
+                alt="TrashAI"
+                className="home-section-project-image"
+                width={839}
+                height={412}
+              />
+            </div>
+            <div className="keen-slider__slide w-full">
+              <div>
+                <h2 className="heading-small">Open Budget Sac</h2>
+                <p className="mt-4">
+                  Fiscal transparency and visualization web app for the City of
+                  Fresno.
+                </p>
               </div>
-            </Slider>
-          </div>
+              <Image
+                src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.jpg"
+                alt="Open Budget Sac"
+                className="home-section-project-image"
+                width={385}
+                height={211}
+              />
+            </div>
+          </Slider>
         </section>
-        <section className="general-section-gray partnership-section">
-          <div className="heading-underline-partnership">
-            <h1 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
+        <section className="app-color--gray">
+          <div className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10">
+            <h1 className="section-title-semi-bold pt-12">
               Our Collaborations and Partnerships
             </h1>
-          </div>
-          <p className="home-numbered-paragraph p3-regular-partnerships">
-            We have had the privilege of working with a diverse array of
-            companies, organizations, and government entities, some of which are
-            showcased below.
-          </p>
-          <div className="home-projects-section-partnerships">
-            <Link
-              href="https://www.cityofsacramento.gov/"
-              style={{ paddingRight: 26 }}
-            >
-              <Image
-                src="/img/partnership-icons/cityofsacramento.png"
-                width="300"
-                height="73"
-                color="white"
-                alt="cityofsacramento"
-              />
-            </Link>
-            <Link href="https://www.dbaarts.org/">
-              <Image
-                src="/img/partnership-icons/logo_dba_02.png"
-                width="137"
-                height="137"
-                alt="DBA"
-              />
-            </Link>
-            <Link href="https://codeforamerica.org/">
-              <Image
-                src="/img/partnership-icons/logo_openfresno_white_transparent_02.png"
-                width="233"
-                height="112"
-                alt="Code for America"
-              />
-            </Link>
+            <p className="mt-10">
+              We have had the privilege of working with a diverse array of
+              companies, organizations, and government entities, some of which
+              are showcased below.
+            </p>
+            <div className="mt-12 flex flex-col items-center gap-16 pb-20 sm:flex-row lg:mt-20">
+              <Link href="https://opensac.org">
+                <Image
+                  src="/img/partnership-icons/cityofsacramento.png"
+                  width={300}
+                  height={73}
+                  alt="Open Sacramento"
+                />
+              </Link>
+              <Link href="https://rootaccess.org/">
+                <Image
+                  src="/img/partnership-icons/logo_dba_02.png"
+                  width={137}
+                  height={137}
+                  alt="Root Access"
+                />
+              </Link>
+            </div>
           </div>
         </section>
-        <section className="general-section-dark donate-section">
-          <div className="general-section-container heading-underline donate-section-underline">
-            <h1 className="heading-large-section-sub h3-semi-bold lg:h1-semi-bold">
-              Help Support Open Fresno
+        <section className="app-color--dark">
+          <div className="split-section gap-6 px-6 py-16 lg:px-10">
+            <h1 className="section-title-semi-bold">
+              Help
+              <br />
+              Support
+              <br />
+              Open Fresno
             </h1>
-          </div>
-          <div className="donate-section-paragraph-container">
-            <p className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular">
-              <span className="home-section-dark-paragraph p3-regular lg:subheading-medium-regular-bold">
-                Your support, whether through donations or volunteering,
-              </span>{" "}
-              is instrumental in driving positive change with Open Fresno.
-              <br />
-              <br />
-              <span>Donations fuel our technology</span>-driven initiatives that
-              address civic challenges, enhance public services, and amplify
-              community voices.
-              <br />
-              <br />
-              <span>
-                {" "}
-                When you volunteer, you actively contribute your skills{" "}
-              </span>
-              - be it coding, designing, or any other expertise - to create
-              tangible solutions that make a real impact.
-              <br />
-              <br />
-              Together, we shape a better future for our city, amplifying
-              voices, enhancing services, and driving innovation.
-              <span>
-                {" "}
-                Join us today and be a catalyst for lasting, community-driven
+            <div>
+              <p>
+                Your support, whether through <b>donations or volunteering,</b>{" "}
+                is instrumental in driving positive change with Open Fresno.
+                <br />
+                <br />
+                <b>Donations fuel our technology</b>-driven initiatives that
+                address civic challenges, enhance public services, and amplify
+                community voices.
+                <br />
+                <br />{" "}
+                <b>When you volunteer, you actively contribute your skills</b> –
+                be it coding, designing, or any other expertise – to create
+                tangible solutions that make a real impact.
+                <br />
+                <br />
+                Together, we shape a better future for our city, amplifying
+                voices, enhancing services, and driving innovation. Join us
+                today and be a catalyst for lasting, community-driven
                 transformation!
-              </span>
-            </p>
-            <div className="home-buttons-group">
-              <Button
-                href="/get-started"
-                className="btn btn-alt btn-alt--transition"
-                textContent="Get Started"
-              />
-              <Button
-                href="/donate"
-                className="btn btn--grow"
-                textContent="Donate"
-              />
+              </p>
+              <div className="home-buttons-group mt-10">
+                <Button
+                  href="/get-started"
+                  className="btn btn-alt btn-alt--transition"
+                  textContent="Get Started"
+                />
+                <Button
+                  href="/donate"
+                  className="btn btn--grow"
+                  textContent="Donate"
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -23,7 +23,7 @@
   --neutral-200: #d4d4d8;
   --neutral-300: #bfbfc5;
   --neutral-400: #a9aab1;
-  --neutral-500: #72727d;
+  --neutral-500: #72727e;
   --neutral-600: #55555e;
   --neutral-700: #3a3a40;
   --neutral-800: #1d1d20;
@@ -56,7 +56,7 @@
   --navbar-color: var(--secondary-50);
   --main-vivid-blue: #004491;
   --main-light-blue: #00a6fb;
-  --main-grey: #72727e;
+  --main-gray: var(--neutral-500);
   --main-white: var(--secondary-50);
   --main-black: #060718;
 
