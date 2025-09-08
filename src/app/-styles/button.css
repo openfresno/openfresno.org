@@ -5,6 +5,7 @@ Buttons
   border-radius: 6px;
   background: var(--main-vivid-blue);
   padding: 16px 24px;
+  width: fit-content;
   color: var(--neutral-50);
   font-weight: 600;
   font-size: 1rem;

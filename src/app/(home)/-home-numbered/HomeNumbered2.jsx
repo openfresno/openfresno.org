@@ -3,7 +3,7 @@ import "./home-numbered2.css";
 
 export default function HomeNumbered2() {
   return (
-    <div className="timeline p3-regular">
+    <div className="timeline">
       <div className="mt-10 ps-8 pb-10 md:hidden">
         <h1 className="heading-section app-color--dark">Opportunities</h1>
         <h2 className="h4-semi-bold mt-[10px]">
@@ -21,7 +21,7 @@ export default function HomeNumbered2() {
             Join us to be a part of a vibrant community dedicated to positive
             change through technology.
           </p>
-          <Link className="btn btn-blue mx-auto mt-2" href="">
+          <Link className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
             Visit Meetup
           </Link>
         </div>
@@ -37,7 +37,7 @@ export default function HomeNumbered2() {
             real challenges and enhance our city. Be part of a dynamic team
             working on solutions that make a difference.
           </p>
-          <Link className="btn btn-blue mx-auto mt-2" href="">
+          <Link className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
             See Our Project
           </Link>
         </div>
@@ -51,7 +51,7 @@ export default function HomeNumbered2() {
             and join forces with our community of innovators to bring your
             vision to life, driving positive change in Central California.
           </p>
-          <Link className="btn btn-blue mx-auto mt-2" href="">
+          <Link className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
             Pitch a Project
           </Link>
         </div>
@@ -68,7 +68,7 @@ export default function HomeNumbered2() {
             cozy lounge to laser cutting, workshops, and an electronics haven,
             explore what awaits you at our partner's space!{" "}
           </p>
-          <Link className="btn btn-blue mx-auto mt-2" href="">
+          <Link className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
             Check It Out
           </Link>
         </div>

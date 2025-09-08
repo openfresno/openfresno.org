@@ -41,7 +41,6 @@ export default function HomePage() {
               />
               <Image
                 src="/img/fresno_tower_circle.png"
-                className=""
                 width={418}
                 height={397}
                 alt="Ariel photo of downtown Fresno and the iconic Tower Theatre."
@@ -130,7 +129,7 @@ export default function HomePage() {
         </section>
         <section className="app-color--dark">
           <div className="split-section gap-6 px-6 py-24 lg:px-10">
-            <div className="general-section-container heading-underline">
+            <div>
               <h1 className="heading-section app-color--light">
                 Why volunteer
               </h1>
@@ -139,7 +138,7 @@ export default function HomePage() {
                 Open Fresno
               </h2>
             </div>
-            <div className="general-section-container">
+            <div>
               <p className="section-paragraph">
                 <b>Ready to make a difference? </b>
                 Join us at Open Fresno and use your skills to drive positive
@@ -163,7 +162,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="general-section-dark home-projects-section">
+        <section className="gap-6 px-6 py-24 lg:px-10">
           <div className="home-projects-info-container">
             <div className="home-section-dark-container heading-underline underline-alt">
               <h1 className="general-heading-section general-heading-section-alt">

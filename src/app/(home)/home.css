@@ -37,16 +37,6 @@ Home page layout.
   }
 }
 
-.home-section-dark-container {
-  position: relative;
-}
-
-.azdonate-section-underline::after {
-  border-bottom: 8px solid var(--neutral-50);
-  padding-bottom: 18px;
-  width: 101px;
-}
-
 .home-projects-section {
   display: flex;
   flex-direction: row;
