@@ -97,24 +97,16 @@ export default function HomePage() {
             <div className="image-container relative ms-[108px]">
               <Image
                 alt="Open Data Day"
-                loading="lazy"
                 width={596}
                 height={577}
-                decoding="async"
-                data-nimg="1"
                 className="main-image z-10"
-                style="color: transparent"
                 src="/img/home/home2.png"
               />
               <Image
                 alt="Star shape"
-                loading="lazy"
                 width={294}
                 height={308}
-                decoding="async"
-                data-nimg="1"
                 className="star-image z-0"
-                style="color: transparent"
                 src="/img/home/star.svg"
               />
             </div>
