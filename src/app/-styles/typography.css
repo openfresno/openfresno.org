@@ -1,6 +1,9 @@
 /*
 Application typography. The Inter font family is applied by next/font in layout.js.
  */
+
+/* Application colors */
+
 .app-color--dark {
   background-color: var(--neutral-900);
   color: var(--secondary-50);
@@ -21,7 +24,9 @@ Application typography. The Inter font family is applied by next/font in layout.
   color: var(--secondary-50);
 }
 
-.section-title {
+/* Combination fonts. */
+
+.title {
   font-weight: 700;
   font-size: 31px;
   line-height: 38px;
@@ -33,7 +38,7 @@ Application typography. The Inter font family is applied by next/font in layout.
   }
 }
 
-.section-title-semi-bold {
+.title-semi-bold {
   font-weight: 600;
   font-size: 31px;
   line-height: 38px;
@@ -45,7 +50,66 @@ Application typography. The Inter font family is applied by next/font in layout.
   }
 }
 
-.section-title-paragraph {
+.sub-heading-main {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  @media (min-width: 576px) {
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+  }
+}
+
+.heading-small {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  @media (min-height: 768px) {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+  }
+}
+
+.heading-medium {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  @media (min-width: 576px) {
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+  }
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  @media (min-width: 576px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.paragraph-large {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  @media (min-width: 576px) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.paragraph-bold {
   max-width: 512px;
   font-weight: 700;
   font-size: 18px;
@@ -57,66 +121,7 @@ Application typography. The Inter font family is applied by next/font in layout.
   }
 }
 
-.section-paragraph {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  @media (min-width: 576px) {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-  }
-}
-
-.section-paragraph-small {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  @media (min-width: 576px) {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-  }
-}
-
-.sub-heading {
-  margin: 10px 0;
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 38px;
-  letter-spacing: 0.02em;
-  @media (min-width: 576px) {
-    font-weight: 600;
-    font-size: 39px;
-    line-height: 47px;
-    letter-spacing: 0.04em;
-  }
-}
-
-.heading-small {
-  font-weight: 600;
-  font-size: 25px;
-  line-height: 32px;
-  letter-spacing: 0.02em;
-  @media (min-width: 576px) {
-    font-weight: 600;
-    font-size: 39px;
-    line-height: 47px;
-    letter-spacing: 0.04em;
-  }
-}
-
-.medium-heading-title {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 32px;
-  letter-spacing: 0.02em;
-  @media (min-height: 768px) {
-    font-weight: 700;
-    font-size: 31px;
-    line-height: 38px;
-  }
-}
+/* The fonts below should be kept as reference, even if they are not being used. */
 
 .nav-semi-bold {
   font-weight: 600;
@@ -173,7 +178,6 @@ Application typography. The Inter font family is applied by next/font in layout.
   letter-spacing: 0.04em;
 }
 
-/* The small font above each of the sections' header (refer to home page) */
 .h1-section {
   font-weight: 700;
   font-size: 14px;

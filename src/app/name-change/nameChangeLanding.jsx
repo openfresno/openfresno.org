@@ -8,12 +8,12 @@ export default function NameChangeSectionLanding({ sectionType }) {
   return (
     <section className={`general-section-${sectionType}`}>
       <div className={`general-section-container heading-underline`}>
-        <h1 className={`general-heading-section`}>Introducing</h1>
-        <h2 className={`contact-sub-heading`}>Open Fresno!</h2>
+        <h1 className={`general-heading-main`}>Introducing</h1>
+        <h2 className={`contact-sub-heading-main`}>Open Fresno!</h2>
       </div>
 
       <div className={`general-section-container`}>
-        <p className={`section-paragraph-small`}>
+        <p className={`paragraph`}>
           We&#39;re thrilled to announce that{" "}
           <span className={`paragraph-bold`}>
             Code for Fresno is now Open Fresno!
@@ -24,7 +24,7 @@ export default function NameChangeSectionLanding({ sectionType }) {
           and solving civic challenges in the Fresno area.
         </p>
         <br />
-        <p className={`section-paragraph`}>
+        <p className={`paragraph-large`}>
           This rebrand comes in response to the{" "}
           <Link href="https://codeforamerica.org/news/reflections-on-the-brigade-networks-next-chapter/">
             end of Code for America's Brigade program
@@ -41,7 +41,7 @@ export default function NameChangeSectionLanding({ sectionType }) {
           challenges in the Fresno area.
         </p>
         <br />
-        <p className={`section-paragraph`}>
+        <p className={`paragraph-large`}>
           From data analysis to design thinking, coding to project management,
           our volunteers bring a wide range of skills to the table. That's what
           makes us special, and that's why we believe this new name truly

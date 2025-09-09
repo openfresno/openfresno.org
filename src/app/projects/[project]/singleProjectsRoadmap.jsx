@@ -41,7 +41,7 @@ export default function SingleProjectsRoadmap({ data }) {
           Roadmap
         </h2>
       </div>
-      <p className={`section-paragraph project-section-paragraph`}>
+      <p className={`paragraph-large project-paragraph-large`}>
         Know the current progress, scope, and stage of project
       </p>
       <div className={`project-info-container-alt`}>

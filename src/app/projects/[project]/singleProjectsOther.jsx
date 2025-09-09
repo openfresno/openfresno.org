@@ -4,7 +4,7 @@ export default function SingleProjectsOther({ data }) {
       <div className={`project-main-heading-container heading-underline`}>
         <h2 className={`project-heading project-heading-underline`}>Other</h2>
       </div>
-      <p className={`section-paragraph-small`}>
+      <p className={`paragraph`}>
         Any volunteers can contribute by writing documentation, generating
         ideas, attending meetings, helping out the community, and more.
       </p>

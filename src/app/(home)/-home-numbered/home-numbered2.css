@@ -3,9 +3,7 @@
   position: relative;
   /* (1) Initialize a counter for timeline items */
   counter-reset: timeline-counter;
-  margin: auto;
   max-width: 1280px;
-
   /* The vertical line running through the middle */
   &::before {
     position: absolute;

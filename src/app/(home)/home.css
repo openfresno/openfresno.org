@@ -7,7 +7,7 @@ Home page layout.
   align-items: center;
   gap: 6rem;
   margin: auto;
-  padding: 6.25rem 24px;
+  padding: 6.25rem 1.5rem 4rem 1.5rem;
   max-width: calc(var(--screen-xxl) + 80px);
 
   @media (min-width: 992px) {
@@ -15,12 +15,6 @@ Home page layout.
     gap: 0;
     padding: 8.4rem 40px;
   }
-}
-
-.home-buttons-group {
-  display: flex;
-  align-items: center;
-  gap: 20px;
 }
 
 .home-landing-image {

@@ -6,7 +6,7 @@ export default function SingleProjectsDesigner({ data }) {
           Designer
         </h2>
       </div>
-      <p className={`section-paragraph-small`}>
+      <p className={`paragraph`}>
         Designers can actively contribute to the project by creating content,
         updating Figma files, and more.
       </p>

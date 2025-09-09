@@ -7,7 +7,7 @@ export default function conductSectionBullets({ sectionType }) {
         <div
           className={`conduct-section-heading-container conduct-heading-underline underline-alt`}
         >
-          <h1 className={`general-heading-section general-heading-section-alt`}>
+          <h1 className={`general-heading-main general-heading-main-alt`}>
             anti-harassment reporting
           </h1>
           <h2 className={`conduct-sub-h1-heading`}>Conflict Reporting Form</h2>

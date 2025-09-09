@@ -18,11 +18,13 @@ export default function HeaderUnderline({
         className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}
       >
         <h1
-          className={`general-heading-section ${sectionType === SectionType.dark && "general-heading-section-alt"}`}
+          className={`general-heading-main ${sectionType === SectionType.dark && "general-heading-main-alt"}`}
         >
           {title}
         </h1>
-        <h2 className={`${large ? "sub-heading-large" : "sub-heading"}`}>
+        <h2
+          className={`${large ? "sub-heading-main-large" : "sub-heading-main"}`}
+        >
           {description}
         </h2>
       </div>

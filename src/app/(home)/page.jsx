@@ -12,13 +12,13 @@ export default function HomePage() {
       <main>
         <header className="home-landing-container">
           <div className="space-y-10">
-            <h1 className="section-title">Welcome to Open Fresno</h1>
-            <p className="section-title-paragraph">
+            <h1 className="title">Welcome to Open Fresno</h1>
+            <p className="paragraph-bold">
               Become a part of the transformation in Fresno and the Central
               Valley Area through technology and open data. Volunteer today for
               a brighter future!
             </p>
-            <div className="home-buttons-group">
+            <div className="space-x-5">
               <Link
                 className="btn btn-alt btn-alt--transition"
                 href="/get-started"
@@ -48,15 +48,15 @@ export default function HomePage() {
             </div>
           </div>
         </header>
-        <section className="app-color--dark">
-          <div className="split-section gap-6 px-6 py-24 lg:px-10 lg:py-32">
+        <section className="app-color--dark py-12 lg:py-24">
+          <div className="split-section gap-6">
             <div>
-              <h1 className="heading-section app-color--light">Who we are</h1>
-              <h2 className="sub-heading">
+              <h1 className="heading-main app-color--light">Who we are</h1>
+              <h2 className="sub-heading-main">
                 Creating a Brighter Future Through Innovation and Technology.
               </h2>
             </div>
-            <p className="section-paragraph">
+            <p className="paragraph-large">
               Open Fresno is
               <b>
                 {" "}
@@ -72,14 +72,14 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-        <section>
-          <div className="split-section px-6 py-24 lg:px-10 lg:py-32">
+        <section className="pt-12 lg:py-24">
+          <div className="split-section lg:gap-6">
             <div>
-              <h1 className="heading-section app-color--dark">What we do</h1>
-              <h2 className="sub-heading">
+              <h1 className="heading-main app-color--dark">What we do</h1>
+              <h2 className="sub-heading-main">
                 Building a Better Future For Fresno and the Central Valley Area
               </h2>
-              <p className="section-paragraph pt-10">
+              <p className="paragraph-large pt-10">
                 <b>
                   Our mission is done by uniting programmers, designers, and
                   other talents, we transform ideas into tangible solutions that
@@ -120,26 +120,28 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="mx-auto mb-[4.5rem] max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10">
-          <div className="mb-28 hidden md:block">
-            <h1 className="heading-section app-color--dark">Opportunities</h1>
-            <h2 className="sub-heading">Explore Our Volunteer Options</h2>
+        <section className="pb-8 lg:pb-18">
+          <div className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] pe-6 lg:px-10">
+            <div className="mb-24 hidden md:block">
+              <h1 className="heading-main app-color--dark">Opportunities</h1>
+              <h2 className="sub-heading-main">
+                Explore Our Volunteer Options
+              </h2>
+            </div>
+            <HomeNumbered2 className="" />
           </div>
-          <HomeNumbered2 />
         </section>
-        <section className="app-color--dark">
-          <div className="split-section gap-6 px-6 py-24 lg:px-10">
+        <section className="app-color--dark py-12 lg:py-24">
+          <div className="split-section gap-6">
             <div>
-              <h1 className="heading-section app-color--light">
-                Why volunteer
-              </h1>
-              <h2 className="sub-heading">
+              <h1 className="heading-main app-color--light">Why volunteer</h1>
+              <h2 className="sub-heading-main">
                 Empower Change with <br />
                 Open Fresno
               </h2>
             </div>
             <div>
-              <p className="section-paragraph">
+              <p className="paragraph-large">
                 <b>Ready to make a difference? </b>
                 Join us at Open Fresno and use your skills to drive positive
                 change through technology and collaboration.
@@ -162,82 +164,82 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="mx-auto flex max-w-[calc(var(--screen-xxl)_+_80px)] flex-col gap-6 px-6 py-24 lg:flex-row lg:px-10">
-          <div className="w-full lg:w-2/5">
-            <h1 className="heading-section app-color--dark">Our projects</h1>
-            <h2 className="sub-heading">
-              Driving Innovation Through Tech and Collaboration
-            </h2>
-            <p className="section-paragraph mb-10">
-              We tackle tech projects addressing civic issues, enhancing
-              services in Fresno. From open data initiatives to government
-              services and community platforms,{" "}
-              <b>our open-source tech and collaboration drive innovation</b>
-              for transparent, efficient, engaged local governance.
-            </p>
-            <Button
-              href="/projects"
-              className="btn btn--grow"
-              textContent="Find Projects"
-            />
+        <section className="pt-10 lg:py-24">
+          <div className="page-container flex flex-col gap-6 lg:flex-row">
+            <div className="w-full lg:w-2/5">
+              <h1 className="heading-main app-color--dark">Our projects</h1>
+              <h2 className="sub-heading-main">
+                Driving Innovation Through Tech and Collaboration
+              </h2>
+              <p className="paragraph-large mb-10">
+                We tackle tech projects addressing civic issues, enhancing
+                services in Fresno. From open data initiatives to government
+                services and community platforms,{" "}
+                <b>our open-source tech and collaboration drive innovation</b>
+                for transparent, efficient, engaged local governance.
+              </p>
+              <Link href="/projects" className="btn btn--grow">
+                Find Projects
+              </Link>
+            </div>
+            <Slider className="lg:w-3/5">
+              <div className="keen-slider__slide">
+                <div>
+                  <h2 className="heading-medium">Learning Blocks</h2>
+                  <p className="mt-4">
+                    Unlock grades, schedules, and progress in one thrilling
+                    platform!
+                  </p>
+                </div>
+                <Image
+                  src="/img/home/learningblocks.jpg"
+                  alt="Learning Blocks"
+                  className="home-section-project-image"
+                  width={918}
+                  height={469}
+                />
+              </div>
+              <div className="keen-slider__slide">
+                <div>
+                  <h2 className="heading-medium">TrashAI</h2>
+                  <p className="mt-4">
+                    Developing machine learning technology to identify trash in
+                    images.
+                  </p>
+                </div>
+                <Image
+                  src="/img/TrashAI2.png"
+                  alt="TrashAI"
+                  className="home-section-project-image"
+                  width={839}
+                  height={412}
+                />
+              </div>
+              <div className="keen-slider__slide">
+                <div>
+                  <h2 className="heading-medium">Open Budget Sac</h2>
+                  <p className="mt-4">
+                    Fiscal transparency and visualization web app for the City
+                    of Fresno.
+                  </p>
+                </div>
+                <Image
+                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.jpg"
+                  alt="Open Budget Sac"
+                  className="home-section-project-image"
+                  width={385}
+                  height={211}
+                />
+              </div>
+            </Slider>
           </div>
-          <Slider className="mt-10 w-full lg:mt-0 lg:w-3/5">
-            <div className="keen-slider__slide w-full">
-              <div>
-                <h2 className="heading-small">Learning Blocks</h2>
-                <p className="mt-4">
-                  Unlock grades, schedules, and progress in one thrilling
-                  platform!
-                </p>
-              </div>
-              <Image
-                src="/img/home/learningblocks.jpg"
-                alt="Learning Blocks"
-                className="home-section-project-image"
-                width={918}
-                height={469}
-              />
-            </div>
-            <div className="keen-slider__slide w-full">
-              <div>
-                <h2 className="heading-small">TrashAI</h2>
-                <p className="mt-4">
-                  Developing machine learning technology to identify trash in
-                  images.
-                </p>
-              </div>
-              <Image
-                src="/img/TrashAI2.png"
-                alt="TrashAI"
-                className="home-section-project-image"
-                width={839}
-                height={412}
-              />
-            </div>
-            <div className="keen-slider__slide w-full">
-              <div>
-                <h2 className="heading-small">Open Budget Sac</h2>
-                <p className="mt-4">
-                  Fiscal transparency and visualization web app for the City of
-                  Fresno.
-                </p>
-              </div>
-              <Image
-                src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.jpg"
-                alt="Open Budget Sac"
-                className="home-section-project-image"
-                width={385}
-                height={211}
-              />
-            </div>
-          </Slider>
         </section>
         <section className="app-color--gray">
-          <div className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10">
-            <h1 className="section-title-semi-bold pt-12">
+          <div className="page-container">
+            <h1 className="title-semi-bold pt-12">
               Our Collaborations and Partnerships
             </h1>
-            <p className="mt-10">
+            <p className="paragraph-large mt-10">
               We have had the privilege of working with a diverse array of
               companies, organizations, and government entities, some of which
               are showcased below.
@@ -262,9 +264,9 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="app-color--dark">
-          <div className="split-section gap-6 px-6 py-16 lg:px-10">
-            <h1 className="section-title-semi-bold">
+        <section className="app-color--dark py-16">
+          <div className="split-section gap-6">
+            <h1 className="title-semi-bold">
               Help
               <br />
               Support
@@ -292,7 +294,7 @@ export default function HomePage() {
                 today and be a catalyst for lasting, community-driven
                 transformation!
               </p>
-              <div className="home-buttons-group mt-10">
+              <div className="mt-10 space-x-5">
                 <Button
                   href="/get-started"
                   className="btn btn-alt btn-alt--transition"

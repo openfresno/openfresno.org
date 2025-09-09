@@ -2,6 +2,7 @@
 Buttons
  */
 .btn {
+  display: inline;
   border-radius: 6px;
   background: var(--main-vivid-blue);
   padding: 16px 24px;
@@ -11,7 +12,7 @@ Buttons
   font-size: 1rem;
   line-height: 18px;
   text-decoration: none;
-  white-space: nowrap;
+  text-wrap: nowrap;
 }
 
 .btn--grow {

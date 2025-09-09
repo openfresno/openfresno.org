@@ -28,7 +28,7 @@ export default function PitchPage() {
           large={true}
           className={"general-section-container"}
         />
-        <div className={`general-section-container section-paragraph-small`}>
+        <div className={`general-section-container paragraph`}>
           Share your innovative ideas and collaborate with our community to turn
           them into reality. Pitch your project to make a positive impact on
           Fresno using technology and civic engagement.

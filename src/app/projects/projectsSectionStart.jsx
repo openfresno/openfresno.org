@@ -13,13 +13,13 @@ export default function ProjectsSectionStart({ sectionType }) {
         <div
           className={`projects-section-${sectionType}-container heading-underline`}
         >
-          <h1 className={`general-heading-section`}>PROJECTS</h1>
-          <h2 className={`projects-heading-section-sub`}>
+          <h1 className={`general-heading-main`}>PROJECTS</h1>
+          <h2 className={`projects-heading-main-sub`}>
             Building a Better Community
           </h2>
         </div>
         <div className={`projects-section-${sectionType}-container`}>
-          <p className={`section-paragraph-small`}>
+          <p className={`paragraph`}>
             Discover the diverse range of projects at Open Fresno, where
             we&apos;re using technology and collaboration to tackle civic
             challenges and enhance public services. Join our dedicated team of
