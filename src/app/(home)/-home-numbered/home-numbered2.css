@@ -1,0 +1,106 @@
+/* Main timeline container */
+.timeline {
+  position: relative;
+  /* (1) Initialize a counter for timeline items */
+  counter-reset: timeline-counter;
+  max-width: 1280px;
+  /* The vertical line running through the middle */
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    transform: translateX(-50%);
+    background-color: var(--color-neutral-900);
+    width: 1px;
+    content: "";
+  }
+
+  /* Circle at the top of the line */
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateX(-50%);
+    z-index: 1; /* Ensure it's above the line */
+    border-radius: 50%;
+    background-color: var(--color-neutral-900);
+    width: 12px;
+    height: 12px;
+    content: "";
+  }
+
+  @media (min-width: 768px) {
+    /* Move the timeline line to the left */
+    &::before {
+      left: 50%;
+    }
+
+    /* Move the top circle to the left */
+    &::after {
+      left: 50%;
+    }
+  }
+}
+
+/* Each item in the timeline */
+.timeline-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  /* Stack all items on the right side of the line */
+  justify-content: flex-start;
+  align-items: center;
+  /* (2) Increment the counter for each item */
+  counter-increment: timeline-counter;
+  padding-bottom: 2.5rem;
+  padding-left: 32px; /* Add space for the circle and line */
+  width: 100%;
+
+  &:nth-child(even) {
+    justify-content: flex-start;
+  }
+
+  &:nth-child(odd) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding-left: 0;
+  }
+}
+
+.timeline-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%; /* Content takes full available width */
+  text-align: center;
+  @media (min-width: 768px) {
+    position: relative;
+    /* (3) Set width to half, minus space for the circle */
+    width: calc(50% - 128px);
+    text-align: left !important;
+  }
+}
+
+.timeline-blue-circle {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 100%;
+  background: var(--main-vivid-blue);
+  width: 5rem;
+  height: 5rem;
+  color: var(--main-white);
+  font-weight: 800;
+  font-size: 3rem;
+
+  @media (min-width: 786px) {
+    margin-right: 1rem;
+  }
+}

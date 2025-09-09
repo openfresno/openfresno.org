@@ -1,0 +1,43 @@
+/*
+Application layout styles.
+ */
+.toolbar-after-content {
+  margin-top: var(--navbar-height);
+}
+
+.toolbar-after-content-with-banner {
+  margin-top: var(--navbar-height-with-banner);
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin: auto;
+  padding: 0 1.5rem;
+  max-width: calc(var(--screen-xxl) + 80px);
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2.5rem;
+  }
+}
+
+/* Tailwind styles: mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10 */
+.page-container {
+  margin: auto;
+  padding: 0 1.5rem;
+  max-width: calc(var(--screen-xxl) + 80px);
+  @media (min-width: 992px) {
+    padding: 0 2.5rem;
+  }
+}
+
+.heading-main {
+  border-radius: 8px;
+  padding: 10px;
+  width: fit-content;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}

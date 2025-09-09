@@ -6,7 +6,7 @@ export default function SingleProjectsDeveloper({ data }) {
       >
         <h2 className={`project-heading`}>Developer</h2>
       </div>
-      <p className={`section-paragraph project-section-paragraph`}>
+      <p className={`paragraph-large project-paragraph-large`}>
         Developers can actively contribute to the project by submitting pull
         requests with code enhancements or bug fixes via the project&apos;s
         GitHub repository.

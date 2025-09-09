@@ -28,7 +28,7 @@ export default function GetStartedPage() {
           className={"general-section-container"}
         />
         <div
-          className={`general-section-container section-${SectionType.light} section-paragraph`}
+          className={`general-section-container section-${SectionType.light} paragraph-large`}
         >
           We&apos;re thrilled that you&apos;re eager to join our community of
           civic-minded individuals and make a positive impact on Fresno.

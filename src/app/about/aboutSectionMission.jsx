@@ -9,14 +9,14 @@ export default function AboutSectionMission({ sectionType }) {
         <div
           className={`about-${sectionType}-heading-container heading-underline underline-alt`}
         >
-          <h1 className={`general-heading-section general-heading-section-alt`}>
+          <h1 className={`general-heading-main general-heading-main-alt`}>
             OUR MISSION
           </h1>
-          <h2 className={`sub-heading`}>
+          <h2 className={`sub-heading-main`}>
             Driving Civic Innovation through Technology
           </h2>
         </div>
-        <p className={`section-paragraph`}>
+        <p className={`paragraph-large`}>
           At Open Fresno, we roll up our sleeves and dive into a wide range of
           technology-driven projects. From open data initiatives and government
           service enhancements to community engagement platforms and education

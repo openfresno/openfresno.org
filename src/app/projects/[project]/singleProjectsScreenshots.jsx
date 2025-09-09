@@ -26,7 +26,7 @@ export default function SingleProjectsScreenshots({ data }) {
       >
         <h2 className={`project-heading`}>Screenshots</h2>
       </div>
-      <p className={`section-paragraph project-paragraph`}>
+      <p className={`paragraph-large project-paragraph`}>
         Explore our project through screenshots, providing visual insights into
         its design and functionality.
       </p>

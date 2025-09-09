@@ -1,0 +1,19 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: pretty;
+}
+
+body {
+  background-color: var(--main-white);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  @media (min-width: 576px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

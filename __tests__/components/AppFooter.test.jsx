@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
-import AppFooter from "../../src/components/layout/AppFooter";
+import AppFooter from "../../src/components/layout/footer/AppFooter";
 
 render(<AppFooter />);
 

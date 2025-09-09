@@ -1,0 +1,34 @@
+.home-numbered-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 40px 0 0 0;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+.home-numbered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  max-width: 600px;
+}
+
+.home-numbered-header {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+}
+
+.home-numbered-paragraph {
+  text-align: center;
+}

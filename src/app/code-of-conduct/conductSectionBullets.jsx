@@ -1,7 +1,7 @@
 export default function conductSectionBullets({ sectionType }) {
   return (
     <section className={`conduct-list-container conduct-${sectionType}-theme`}>
-      <p className={`conduct-sub-heading`}>
+      <p className={`conduct-sub-heading-main`}>
         Open Fresno fosters a community that:
       </p>
 
@@ -137,7 +137,7 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <p className={`conduct-sub-heading`}>
+      <p className={`conduct-sub-heading-main`}>
         Open Fresno reserves the right to ask anyone in violation of these
         policies not to participate in Open Fresno network activities, events,
         and digital forums.

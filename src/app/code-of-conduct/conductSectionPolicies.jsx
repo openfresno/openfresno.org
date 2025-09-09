@@ -7,7 +7,7 @@ export default function conductSectionPolicies() {
         <div
           className={`conduct-section-heading-container conduct-heading-underline underline-alt`}
         >
-          <h1 className={`general-heading-section general-heading-section-alt`}>
+          <h1 className={`general-heading-main general-heading-main-alt`}>
             anti-harassment policy
           </h1>
           <h2 className={`conduct-sub-h1-heading`}>
@@ -33,7 +33,7 @@ export default function conductSectionPolicies() {
       </div>
 
       <div className={`conduct-policy-body-container`}>
-        <h3 className={`conduct-sub-heading`}>
+        <h3 className={`conduct-sub-heading-main`}>
           Open Fresno fosters a community that:
         </h3>
 
@@ -89,7 +89,7 @@ export default function conductSectionPolicies() {
           environment that is welcoming to all.
         </p>
 
-        <h3 className={`conduct-sub-heading`}>
+        <h3 className={`conduct-sub-heading-main`}>
           We value your attendance and hope that by communicating these
           expectations widely we can all enjoy a harassment-free environment.
         </h3>

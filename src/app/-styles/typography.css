@@ -1,0 +1,298 @@
+/*
+Application typography. The Inter font family is applied by next/font in layout.js.
+ */
+
+/* Application colors */
+
+.app-color--dark {
+  background-color: var(--neutral-900);
+  color: var(--secondary-50);
+}
+
+.app-color--light {
+  background-color: var(--secondary-50);
+  color: var(--neutral-900);
+}
+
+.app-color--gray {
+  background-color: var(--neutral-500);
+  color: var(--secondary-50);
+}
+
+.app-color--primary {
+  background-color: var(--main-vivid-blue);
+  color: var(--secondary-50);
+}
+
+/* Combination fonts. */
+
+.title {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  @media (min-width: 640px) {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.04em;
+  }
+}
+
+.title-semi-bold {
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  @media (min-width: 640px) {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.04em;
+  }
+}
+
+.sub-heading-main {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  @media (min-width: 576px) {
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+  }
+}
+
+.heading-small {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  @media (min-height: 768px) {
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+  }
+}
+
+.heading-medium {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+  @media (min-width: 576px) {
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+  }
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  @media (min-width: 576px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+.paragraph-large {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  @media (min-width: 576px) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.paragraph-bold {
+  max-width: 512px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  @media (min-width: 640px) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+/* The fonts below should be kept as reference, even if they are not being used. */
+
+.nav-semi-bold {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.subheading-regular {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.subheading-bold {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.subheading-medium-bold {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.subheading-medium-regular {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.h1-small-bold {
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 47px;
+}
+
+.h1-small-semi-bold {
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 47px;
+}
+
+.h1-semi-bold {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.h1-bold {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0.04em;
+}
+
+.h1-section {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+
+.h2-semi-bold {
+  font-weight: 600;
+  font-size: 39px;
+  line-height: 47px;
+}
+
+.h3-bold {
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 38px;
+  letter-spacing: 0.02em;
+}
+
+.h3-semi-bold {
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 38px;
+}
+
+.h4-bold {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.h4-semi-bold {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+}
+
+.h5-semi-bold {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.h6-semi-bold {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.p1-regular {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.p1-bold {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.p2-regular {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.p2-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.p3-bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.p3-semi-bold {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.p3-regular {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.p-footer {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.p-footer-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.caption-footer {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.caption-regular-uppercase {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+}
