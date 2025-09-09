@@ -1,9 +1,9 @@
 export const HamburgerOffset = ({
-                                  width = 32,
-                                  height = 33,
-                                  className = '',
-                                  color = 'inherit'
-                                }) => {
+  width = 32,
+  height = 33,
+  className = "",
+  color = "inherit",
+}) => {
   return (
     <svg
       width={width}
@@ -21,5 +21,5 @@ export const HamburgerOffset = ({
         strokeLinejoin="round"
       />
     </svg>
-  )
-}
+  );
+};

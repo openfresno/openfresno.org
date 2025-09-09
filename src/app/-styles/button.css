@@ -17,6 +17,7 @@ Buttons
 
 .btn--grow {
   position: relative;
+
   &::before {
     position: absolute;
     top: 0;
