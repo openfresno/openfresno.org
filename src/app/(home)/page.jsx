@@ -236,7 +236,7 @@ export default function HomePage() {
         </section>
         <section className="app-color--gray">
           <div className="page-container">
-            <h1 className="title-semi-bold pt-12">
+            <h1 className="title-semi-bold pt-12 lg:pt-16">
               Our Collaborations and Partnerships
             </h1>
             <p className="paragraph-large mt-10">
