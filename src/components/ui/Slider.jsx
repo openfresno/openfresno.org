@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import "keen-slider/keen-slider.min.css";
 import KeenSlider from "../../integrations/keen-slider/KeenSlider";
 
 export default function Slider({ className, children }) {
