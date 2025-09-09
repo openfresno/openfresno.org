@@ -237,20 +237,20 @@ export default function HomePage() {
               are showcased below.
             </p>
             <div className="mt-12 flex flex-col items-center gap-16 pb-20 sm:flex-row lg:mt-20">
-              <Link href="https://opensac.org">
-                <Image
-                  src="/img/partnership-icons/cityofsacramento.png"
-                  width={300}
-                  height={73}
-                  alt="Open Sacramento"
-                />
-              </Link>
               <Link href="https://rootaccess.org/">
                 <Image
-                  src="/img/partnership-icons/logo_dba_02.png"
-                  width={137}
-                  height={137}
+                  src="/img/partnership-icons/root-access-white-transparent.svg"
+                  width={239}
+                  height={146}
                   alt="Root Access"
+                />
+              </Link>
+              <Link href="https://opensac.org">
+                <Image
+                  src="/img/partnership-icons/open-sacramento-black-transparent.svg"
+                  width={242}
+                  height={88}
+                  alt="Open Sacramento"
                 />
               </Link>
             </div>
