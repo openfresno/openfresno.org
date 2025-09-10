@@ -1,9 +1,13 @@
-import createMDX from "@next/mdx";
-import path from "path";
+const createMDX = require("@next/mdx");
+const path = require("path");
 
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Make GH Pages work for forks as well as the main openfresno.org repo.
+const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
+const isMainRepo =
+  process.env.GITHUB_REPOSITORY === "openfresno/openfresno.org";
+
+// Only set basePath if it's a fork.
+const basePath = isGitHubActions && !isMainRepo ? "/openfresno.org" : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,6 +15,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  basePath,
+  assetPrefix: basePath,
   images: {
     unoptimized: true,
   },
@@ -18,11 +24,15 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  trailingSlash: true,
   transpilePackages: ["next-mdx-remote"],
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
 });
 
-export default withMDX(nextConfig);
+module.exports = withMDX(nextConfig);

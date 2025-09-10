@@ -1,7 +1,7 @@
 import Button from "../../components/ui/Button";
 import { Slider } from "../../components/ui";
 import Link from "next/link";
-import Image from "next/image";
+import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import AppLayout from "../../components/layout/AppLayout";
 import HomeNumbered2 from "./-home-numbered/HomeNumbered2";
 import "./home.css";
@@ -32,14 +32,14 @@ export default function HomePage() {
           </div>
           <div>
             <div className="home-landing-image">
-              <Image
+              <BasePathImage
                 src="/assets/logo/logo-blue.svg"
                 className="absolute -top-10 right-0"
                 width={200}
                 height={397}
                 alt="Open Fresno logo blue"
               />
-              <Image
+              <BasePathImage
                 src="/img/fresno_tower_circle.png"
                 width={418}
                 height={397}
@@ -95,14 +95,14 @@ export default function HomePage() {
               </p>
             </div>
             <div className="image-container relative ms-[108px]">
-              <Image
+              <BasePathImage
                 alt="Open Data Day"
                 width={596}
                 height={577}
                 className="main-image z-10"
                 src="/img/home/home2.png"
               />
-              <Image
+              <BasePathImage
                 alt="Star shape"
                 width={294}
                 height={308}
@@ -183,7 +183,7 @@ export default function HomePage() {
                     platform!
                   </p>
                 </div>
-                <Image
+                <BasePathImage
                   src="/img/home/learningblocks.jpg"
                   alt="Learning Blocks"
                   className="home-section-project-image"
@@ -199,7 +199,7 @@ export default function HomePage() {
                     images.
                   </p>
                 </div>
-                <Image
+                <BasePathImage
                   src="/img/TrashAI2.png"
                   alt="TrashAI"
                   className="home-section-project-image"
@@ -215,7 +215,7 @@ export default function HomePage() {
                     of Fresno.
                   </p>
                 </div>
-                <Image
+                <BasePathImage
                   src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.jpg"
                   alt="Open Budget Sac"
                   className="home-section-project-image"
@@ -238,7 +238,7 @@ export default function HomePage() {
             </p>
             <div className="mt-12 flex flex-col items-center gap-16 pb-20 sm:flex-row lg:mt-20">
               <Link href="https://rootaccess.org/">
-                <Image
+                <BasePathImage
                   src="/img/partnership-icons/root-access-white-transparent.svg"
                   width={239}
                   height={146}
@@ -246,7 +246,7 @@ export default function HomePage() {
                 />
               </Link>
               <Link href="https://opensac.org">
-                <Image
+                <BasePathImage
                   src="/img/partnership-icons/open-sacramento-black-transparent.svg"
                   width={242}
                   height={88}
