@@ -25,7 +25,6 @@ const nextConfig = {
     includePaths: [path.join(__dirname, "styles")],
   },
   trailingSlash: true,
-  transpilePackages: ["next-mdx-remote"],
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
