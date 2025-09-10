@@ -3,7 +3,6 @@
   "version": "2.0.0-alpha.1",
   "description": "Website for Open Fresno",
   "private": false,
-  "type": "module",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
