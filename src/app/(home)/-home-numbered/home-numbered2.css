@@ -104,3 +104,13 @@
     margin-right: 1rem;
   }
 }
+
+/*this is the line that moves the pointer*/
+
+.timeline-progress-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-neutral-900); /* black */
+  z-index: 10;
+}
