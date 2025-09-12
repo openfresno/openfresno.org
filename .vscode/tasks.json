@@ -1,0 +1,122 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Git: Status",
+      "type": "shell",
+      "command": "git status"
+    },
+    {
+      "label": "Git: Add All & Commit",
+      "type": "shell",
+      "command": "git add . && git commit -m '${input:commitMessage}'"
+    },
+    {
+      "label": "Git: Push to Origin",
+      "type": "shell",
+      "command": "git push origin main"
+    },
+    {
+      "label": "Git: Pull from Origin",
+      "type": "shell",
+      "command": "git pull origin main"
+    },
+    {
+      "label": "Git: Add Upstream Remote",
+      "type": "shell",
+      "command": "git remote add upstream ${input:upstreamURL}"
+    },
+    {
+      "label": "Git: Fetch from Upstream",
+      "type": "shell",
+      "command": "git fetch upstream"
+    },
+    {
+      "label": "Git: Merge Upstream to Main",
+      "type": "shell",
+      "command": "git merge upstream/main"
+    },
+    {
+      "label": "Git: Pull from Upstream (Update Fork)",
+      "type": "shell",
+      "command": "git pull upstream main"
+    },
+    {
+      "label": "Git: Create New Branch",
+      "type": "shell",
+      "command": "git checkout -b ${input:newBranchName}"
+    },
+    {
+      "label": "Git: Checkout Branch",
+      "type": "shell",
+      "command": "git checkout ${input:branchToCheckout}"
+    },
+    {
+      "label": "Git: Stash Changes",
+      "type": "shell",
+      "command": "git stash push -m '${input:stashMessage}'"
+    },
+    {
+      "label": "Git: Apply Stash",
+      "type": "shell",
+      "command": "git stash pop"
+    },
+    {
+      "label": "Git: Discard All Local Changes",
+      "type": "shell",
+      "command": "git reset --hard"
+    },
+    {
+      "label": "Git: Log (One-line)",
+      "type": "shell",
+      "command": "git log --oneline --decorate --graph"
+    },
+    {
+      "label": "Git: Clone Repository",
+      "type": "shell",
+      "command": "git clone ${input:repoURL}"
+    },
+    {
+      "label": "Git: Rebase Interactive",
+      "type": "shell",
+      "command": "git rebase -i HEAD~${input:rebaseCommits}"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "commitMessage",
+      "type": "promptString",
+      "description": "Enter the commit message:"
+    },
+    {
+      "id": "upstreamURL",
+      "type": "promptString",
+      "description": "Enter the URL of the upstream repository:"
+    },
+    {
+      "id": "newBranchName",
+      "type": "promptString",
+      "description": "Enter the name for the new branch:"
+    },
+    {
+      "id": "branchToCheckout",
+      "type": "promptString",
+      "description": "Enter the branch to checkout:"
+    },
+    {
+      "id": "stashMessage",
+      "type": "promptString",
+      "description": "Enter a message for the stash:"
+    },
+    {
+      "id": "repoURL",
+      "type": "promptString",
+      "description": "Enter the repository URL to clone:"
+    },
+    {
+      "id": "rebaseCommits",
+      "type": "promptString",
+      "description": "Enter the number of commits to rebase (e.g., 5):"
+    }
+  ]
+}
