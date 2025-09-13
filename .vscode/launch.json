@@ -20,7 +20,8 @@
       "cwd": "${workspaceFolder}",
       "presentation": {
         "hidden": true
-      }
+      },
+      "internalConsoleOptions": "neverOpen"
     }
   ],
   "compounds": [
