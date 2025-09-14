@@ -216,7 +216,7 @@ export default function HomePage() {
                   </p>
                 </div>
                 <BasePathImage
-                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.jpg"
+                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.png"
                   alt="Open Budget Sac"
                   className="home-section-project-image"
                   width={385}

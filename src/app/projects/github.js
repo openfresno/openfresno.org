@@ -74,7 +74,7 @@ const metaFile = "meta.yml";
  project_type: website
  project_status: active
  description: The Open Fresno website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Fresno area and beyond through technology
- image_url: openfresno.jpg
+ image_url: openfresno.png
  project_partner: Dan Fey
  project_lead: Brianda Hernandez
  technical_lead: Nate Bass
@@ -117,7 +117,7 @@ const metaFile = "meta.yml";
  outcome: People interested in Open Fresno are now aware of OpenSac.org
  resources:
  screenshots:
- - openfresno.jpg
+ - openfresno.png
  *
  * @param ghFullName
  * @param defaultBranchName
@@ -155,7 +155,7 @@ description: The Open Fresno website serves as a hub for technologists, develope
 comments: This is a great project for new members to get used to working one issues and tasks. It is one of the more approachable projects.
 communications: Slack
 channels: \#proj-openfresnoorg
-image_url: openfresno.jpg
+image_url: openfresno.png
 project_partner: Dan Fey
 project_lead: Brianda Hernandez
 technical_lead: Nate Bass
@@ -198,5 +198,5 @@ resources:
   meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
   office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:
-  - openfresno.jpg
+  - openfresno.png
 `);
