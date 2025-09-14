@@ -50,6 +50,10 @@ With `next dev` running, you should be able to access the site on [http://localh
 
 Contribute, change things, submit a pull request! We will all contribute.
 
+### Tests and documentation
+
+Tests and documentation for the Open Fresno website are available at [fe-openfresno.org-doc](https://github.com/openfresno/openfresno.org).
+
 ## Other Resources
 
 [Code of Conduct](https://github.com/openfresno/codeofconduct)

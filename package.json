@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/openfresno/openfresno.org/issues"
   },
-  "homepage": "https://github.com/openfresno/openfresno.org#readme",
+  "homepage": "https://openfresno.org",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
@@ -47,18 +47,13 @@
     "@eslint/eslintrc": "^3.3.1",
     "@tailwindcss/postcss": "^4.1.13",
     "@tailwindcss/typography": "^0.5.16",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@vitejs/plugin-react": "^5.0.2",
     "eslint": "^9.35.0",
     "eslint-config-next": "^15.5.2",
-    "jsdom": "^26.1.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "prettier-plugin-css-order": "^2.1.2",
     "prettier-plugin-tailwindcss": "^0.6.14",
     "sass": "^1.92.1",
-    "tailwindcss": "^4.1.13",
-    "vitest": "^3.2.4"
+    "tailwindcss": "^4.1.13"
   }
 }
