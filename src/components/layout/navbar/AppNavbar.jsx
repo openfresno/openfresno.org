@@ -55,25 +55,21 @@ export default function AppNavbar({ fade = false }) {
         </Link>
         <ul className="navbar-middle-section">
           <li
-            className={`${websiteURL === "/" ? "nav-semi-bold navbar-link--selected__one" : ""}`}
+            className={`${websiteURL === "/" && "nav-semi-bold navbar-link--selected__one"}`}
           >
             <Link className="navbar-link" href="/">
               Home
             </Link>
           </li>
           <li
-            className={`${websiteURL === "/about" ? "nav-semi-bold navbar-link--selected__two" : ""}`}
+            className={`${websiteURL === "/about" && "nav-semi-bold navbar-link--selected__two"}`}
           >
             <Link className="navbar-link" href="/about">
               About
             </Link>
           </li>
           <li
-            className={`${
-              websiteURL === "/contact"
-                ? "nav-semi-bold navbar-link--selected__three"
-                : ""
-            }`}
+            className={`${websiteURL === "/contact" && "nav-semi-bold navbar-link--selected__three"}`}
           >
             <Link className="navbar-link" href="/contact">
               Contact
