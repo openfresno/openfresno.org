@@ -4,105 +4,47 @@ import Link from "next/link";
 import ExtendedNavbarMenu from "./ExtendedNavbarMenu";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import useBanner from "../../../utils/hooks/useBanner";
 import Image from "next/image";
+import { ChevronDown, ChevronUp } from "../../../integrations/tabler-icon";
 
 import "./app-navbar.css";
-import { ChevronDown } from "@/integrations/tabler-icon";
-import { ChevronUp } from "@/integrations/tabler-icon/ChevronUp";
 
 /**
- * Set toolbar opacity. Based on the scroll y-axis.
- * @param {number} currentScrollHeight
- * @returns {number} opacity Ranges from 0 to 1.
- */
-function setOpacity(currentScrollHeight) {
-  // Start transparent and reach full opacity by the number in pixels.
-  return Math.min(currentScrollHeight / 520, 1);
-}
-
-/**
- * Fade the navbar when scrolling.
- * @param setFadeLayout
- * @param setCurrentScrollHeight
- * @returns {function(): void} Cleanup function to remove event listener
- */
-function registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight) {
-  setFadeLayout(true);
-  const onScroll = () => {
-    setCurrentScrollHeight(window.scrollY);
-  };
-  window.removeEventListener("scroll", onScroll);
-  window.addEventListener("scroll", onScroll, { passive: true });
-  return () => window.removeEventListener("scroll", onScroll);
-}
-
-/**
- * The default application navigation bar. The links animate when the page navigates. Extended menu that shows more text underneath the navbar.
- * - Desktop: Multiple navigation links in the center. Link on the right side to show an extended menu.
- * - Mobile: All menu items are in the collapsable menu.
+ * The default application navigation bar. It includes an extended menu that exapnds to shows more text underneath the navbar.
+ * EXPERIMENTAL: The desktop links have a sliding underline animation when the page navigates.
+ * EXPERIMENTAL: The fade on-scroll effect uses CSS scroll-driven animations. It is not supported by Chrome < 115, Firefox, Firefox for Android, Safari, Safari on iOS. On unsupprted platforms it functions the same as fade = false.
  * @param {boolean} fade - Whether to enable fade effect on scroll
  * @returns {JSX.Element}
  */
 export default function AppNavbar({ fade = false }) {
   const [extendedMenuVisible, showExtendedMenu] = useState(false);
-  const [fadeLayout, setFadeLayout] = useState(fade);
-  const [currentScrollHeight, setCurrentScrollHeight] = useState(0);
-  const backgroundOpacity = setOpacity(currentScrollHeight);
   const websiteURL = usePathname();
-  const { dismissBanner } = useBanner({
-    id: "community-support-statement-2025-banner",
-  });
-  // Create a ref for the navbar container
   const navbarRef = useRef(null);
 
+  // Close the menu when the route changes.
   useEffect(() => {
     showExtendedMenu(false);
-    if (currentScrollHeight === 0) setCurrentScrollHeight(window.scrollY);
-    if (fade) {
-      return registerNavbarFadeLayout(setFadeLayout, setCurrentScrollHeight);
-    }
-    return () => {};
-  }, [websiteURL, fade]);
+  }, [websiteURL]);
 
+  // Close the menu when clicking outside the menu.
   useEffect(() => {
-    /**
-     * If the user clicks outside of the navbar, hide the extended menu.
-     */
     function handleClickOutside(event) {
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+      if (navbarRef.current && !navbarRef.current.contains(event.target))
         showExtendedMenu(false);
-      }
     }
-
-    // Add the event listener to the document only when the extended menu is visible
-    if (extendedMenuVisible) {
+    if (extendedMenuVisible)
       document.addEventListener("mousedown", handleClickOutside);
-    }
-
-    // Cleanup the event listener when the component unmounts or the state changes
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [extendedMenuVisible]); // Re-run effect when menu visibility changes
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [extendedMenuVisible]);
 
   return (
     <nav
-      ref={navbarRef} // Attach the ref here
-      className="navbar-container"
-      style={
-        fadeLayout && !extendedMenuVisible
-          ? {
-              backgroundColor: `rgba(255, 252, 245, ${backgroundOpacity})`,
-              boxShadow:
-                backgroundOpacity > 0.2
-                  ? `0 2px 4px rgba(0, 0, 0, ${backgroundOpacity * 0.1})`
-                  : "none",
-            }
-          : { backgroundColor: "rgba(255, 252, 245, 1)" }
-      }
+      ref={navbarRef}
+      className={`navbar-container ${
+        fade && !extendedMenuVisible ? "navbar-container--fading" : ""
+      }`}
     >
-      <div className="navbar-toolbar-content nav-regular">
+      <div className="navbar-main-content nav-regular">
         <Link className="p-4" href="/">
           <Image
             src="/assets/logo/logo-text-black.svg"

@@ -9,13 +9,14 @@ It is made up of three sections.
 | ( LOGO ) |          Home    About    Contact          [v] Expand |
 ===================================================================
 
-NOTE: The navbar inherits it's background (not explicitly set) because it is designed to be transparent. If you want a solid background, remove the transparency in the React component styles and add a background color.
+NOTE: The navbar is initially transparent when the fade on-scroll animation is enabled. Define light background color or image in the page styles in order to not conflict with the black text.
 */
 .navbar-container {
   position: fixed;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--neutral-300);
+  background-color: rgb(255, 252, 245);
   width: 100%;
   height: var(--navbar-height);
   @media screen and (min-width: 992px) {
@@ -23,7 +24,25 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
   }
 }
 
-.navbar-toolbar-content {
+@keyframes fade-in-navbar {
+  from {
+    box-shadow: none;
+    background-color: rgba(255, 252, 245, 0);
+  }
+  to {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 252, 245);
+  }
+}
+
+.navbar-container--fading {
+  animation: fade-in-navbar linear;
+  animation-timeline: scroll(root block);
+  animation-range: 0 520px;
+  animation-fill-mode: both;
+}
+
+.navbar-main-content {
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -8,6 +8,7 @@ export * from "./ChevronDown";
 export * from "./ChevronDownStroke";
 export * from "./ChevronLeft";
 export * from "./ChevronRight";
+export * from "./ChevronUp";
 export * from "./ClipboardList";
 export * from "./DeviceDesktop";
 export * from "./Dot";
