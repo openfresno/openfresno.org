@@ -24,7 +24,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-  trailingSlash: true,
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
