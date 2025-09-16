@@ -7,6 +7,8 @@ import { usePathname } from "next/navigation";
 import useBanner from "../../../utils/hooks/useBanner";
 import Image from "next/image";
 
+import "./app-navbar.css";
+
 /**
  * Set toolbar opacity. Based on the scroll y-axis.
  * @param {number} currentScrollHeight

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+import "./extended-menu.css";
+
 /**
  * An extended dropdown menu for the main application navbar.
  * @returns {JSX.Element}

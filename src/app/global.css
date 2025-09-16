@@ -3,8 +3,6 @@
 @import "./-styles/typography.css";
 @import "./-styles/layout.css";
 @import "./-styles/button.css";
-@import "../components/layout/navbar/app-navbar.css";
-@import "../components/layout/navbar/extended-menu.css";
 
 @plugin "@tailwindcss/typography";
 
