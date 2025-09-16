@@ -123,10 +123,18 @@ Application typography. The Inter font family is applied by next/font in layout.
 
 /* The fonts below should be kept as reference, even if they are not being used. */
 
+.nav-regular {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
+}
+
 .nav-semi-bold {
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;
+  letter-spacing: -0.02em;
 }
 
 .subheading-regular {

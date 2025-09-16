@@ -18,7 +18,6 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
   border-bottom: 1px solid var(--neutral-300);
   width: 100%;
   height: var(--navbar-height);
-
   @media screen and (min-width: 992px) {
     border: none;
   }
@@ -32,76 +31,48 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
   padding: 0 8px;
   max-width: calc(var(--screen-xxl) + 72px);
   height: 100%;
-
   @media (min-width: 992px) {
     padding: 0 24px;
   }
 }
 
-.navbar-link-list-item {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: normal;
+.navbar-middle-section {
+  display: none;
+  position: relative;
+  gap: 3.125rem;
+  height: 100%;
+  @media screen and (min-width: 992px) {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 .navbar-link {
   z-index: 15;
-  margin: auto;
   padding: 1rem;
-}
-
-.navbar-link-selected {
-  font-weight: bold;
-}
-
-.navbar-left-section {
-  display: inline-flex;
-  align-items: center;
-  padding: 1rem;
-  height: 100%;
-}
-
-.navbar-middle-section {
-  display: none;
-  position: relative;
-  column-gap: 50px;
-  justify-content: center;
-  list-style-type: none;
-
-  @media screen and (min-width: 992px) {
-    display: inline-flex;
-  }
-}
-
-/* Sibling selectors to position the underline */
-.one ~ .navbar-underline {
-  display: block;
-  margin-left: -82%;
-}
-
-.two ~ .navbar-underline {
-  display: block;
-  margin-left: -27%;
-}
-
-.three ~ .navbar-underline {
-  display: block;
-  margin-left: 32%;
 }
 
 .navbar-underline {
-  display: none;
   position: absolute;
-  top: 82%;
-  float: left;
+  top: 70%;
   z-index: 10;
   transition: 0.3s ease-in-out;
-  margin: 0;
-  border: none;
   background-color: var(--neutral-900);
   width: 5rem;
   height: 2px;
+}
+
+/* Sibling selectors to position the underline */
+.navbar-link--selected__one ~ .navbar-underline {
+  left: 0.25rem;
+}
+
+.navbar-link--selected__two ~ .navbar-underline {
+  left: calc(0.25rem * 35);
+}
+
+.navbar-link--selected__three ~ .navbar-underline {
+  left: calc(0.25rem * 71.5);
 }
 
 .navbar-toggle-button {
@@ -109,22 +80,7 @@ NOTE: The navbar inherits it's background (not explicitly set) because it is des
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  padding: 1rem;
+  padding-right: 0.8rem;
+  padding-left: 1rem;
   color: var(--main-vivid-blue);
-
-  /* Hide potential text inside the button */
-
-  * {
-    display: none;
-  }
-}
-
-.navbar-toggle-button--collapsed {
-  background: url("/img/navbar/chevron_down.svg") no-repeat center right;
-  padding-right: 30px;
-}
-
-.navbar-toggle-button--extended {
-  background: url("/img/navbar/chevron_down.svg") no-repeat center right;
-  padding-right: 30px;
 }

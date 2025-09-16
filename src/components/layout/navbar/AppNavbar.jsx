@@ -8,6 +8,8 @@ import useBanner from "../../../utils/hooks/useBanner";
 import Image from "next/image";
 
 import "./app-navbar.css";
+import { ChevronDown } from "@/integrations/tabler-icon";
+import { ChevronUp } from "@/integrations/tabler-icon/ChevronUp";
 
 /**
  * Set toolbar opacity. Based on the scroll y-axis.
@@ -87,7 +89,7 @@ export default function AppNavbar({ fade = false }) {
   return (
     <nav
       ref={navbarRef} // Attach the ref here
-      className="navbar-container h5-semi-bold"
+      className="navbar-container"
       style={
         fadeLayout && !extendedMenuVisible
           ? {
@@ -100,37 +102,35 @@ export default function AppNavbar({ fade = false }) {
           : { backgroundColor: "rgba(255, 252, 245, 1)" }
       }
     >
-      <div className={"navbar-toolbar-content"}>
-        <Link className={"navbar-left-section"} href="/">
+      <div className="navbar-toolbar-content nav-regular">
+        <Link className="p-4" href="/">
           <Image
             src="/assets/logo/logo-text-black.svg"
             alt="Open Fresno logo"
-            height="44"
-            width="110"
+            height={45}
+            width={110}
           />
         </Link>
-        <ul className={"navbar-middle-section"}>
+        <ul className="navbar-middle-section">
           <li
-            className={`navbar-link-list-item ${
-              websiteURL === "/" ? "navbar-link-selected one" : ""
-            }`}
+            className={`${websiteURL === "/" ? "nav-semi-bold navbar-link--selected__one" : ""}`}
           >
             <Link className="navbar-link" href="/">
               Home
             </Link>
           </li>
           <li
-            className={`navbar-link-list-item ${
-              websiteURL === "/about" ? "navbar-link-selected two" : ""
-            }`}
+            className={`${websiteURL === "/about" ? "nav-semi-bold navbar-link--selected__two" : ""}`}
           >
             <Link className="navbar-link" href="/about">
               About
             </Link>
           </li>
           <li
-            className={`navbar-link-list-item ${
-              websiteURL === "/contact" ? "navbar-link-selected three" : ""
+            className={`${
+              websiteURL === "/contact"
+                ? "nav-semi-bold navbar-link--selected__three"
+                : ""
             }`}
           >
             <Link className="navbar-link" href="/contact">
@@ -142,15 +142,18 @@ export default function AppNavbar({ fade = false }) {
               Donate
             </Link>
           </li>
-          <hr className={"navbar-underline"} />
+          <hr className="navbar-underline" />
         </ul>
         <button
-          className={`navbar-toggle-button ${extendedMenuVisible ? "navbar-toggle-button--extended" : "navbar-toggle-button--collapsed"}`}
-          onClick={() => {
-            showExtendedMenu(!extendedMenuVisible);
-          }}
+          className="navbar-toggle-button nav-semi-bold"
+          onClick={() => showExtendedMenu(!extendedMenuVisible)}
         >
           Get Involved
+          {extendedMenuVisible ? (
+            <ChevronUp className="ms-2" />
+          ) : (
+            <ChevronDown className="ms-2" />
+          )}
         </button>
       </div>
       {extendedMenuVisible && (
