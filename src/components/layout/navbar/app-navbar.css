@@ -19,9 +19,6 @@ NOTE: The navbar is initially transparent when the fade on-scroll animation is e
   background-color: rgb(255, 252, 245);
   width: 100%;
   height: var(--navbar-height);
-  @media screen and (min-width: 992px) {
-    border: none;
-  }
 }
 
 @keyframes fade-in-navbar {
@@ -40,6 +37,9 @@ NOTE: The navbar is initially transparent when the fade on-scroll animation is e
   animation-timeline: scroll(root block);
   animation-range: 0 520px;
   animation-fill-mode: both;
+  @media screen and (min-width: 992px) {
+    border: none;
+  }
 }
 
 .navbar-main-content {
