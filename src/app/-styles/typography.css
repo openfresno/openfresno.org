@@ -1,9 +1,4 @@
-/*
-Application typography. The Inter font family is applied by next/font in layout.js.
- */
-
-/* Application colors */
-
+/* Application typography colors */
 .app-color--dark {
   background-color: var(--neutral-900);
   color: var(--secondary-50);
@@ -23,8 +18,6 @@ Application typography. The Inter font family is applied by next/font in layout.
   background-color: var(--main-vivid-blue);
   color: var(--secondary-50);
 }
-
-/* Combination fonts. */
 
 .title {
   font-weight: 700;
@@ -121,8 +114,6 @@ Application typography. The Inter font family is applied by next/font in layout.
   }
 }
 
-/* The fonts below should be kept as reference, even if they are not being used. */
-
 .nav-regular {
   font-weight: 400;
   font-size: 20px;
@@ -137,6 +128,8 @@ Application typography. The Inter font family is applied by next/font in layout.
   letter-spacing: -0.02em;
 }
 
+
+/* The fonts below should be kept as reference, even if they are not being used. */
 .subheading-regular {
   font-weight: 400;
   font-size: 20px;

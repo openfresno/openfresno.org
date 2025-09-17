@@ -49,7 +49,7 @@ export default function HomePage() {
           </div>
         </header>
         <section className="app-color--dark py-12 lg:py-24">
-          <div className="split-section gap-6">
+          <div className="page-split gap-6">
             <div>
               <h1 className="heading-main app-color--light">Who we are</h1>
               <h2 className="sub-heading-main">
@@ -73,7 +73,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="pt-12 lg:py-24">
-          <div className="split-section lg:gap-6">
+          <div className="page-split lg:gap-6">
             <div>
               <h1 className="heading-main app-color--dark">What we do</h1>
               <h2 className="sub-heading-main">
@@ -124,7 +124,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="app-color--dark py-12 lg:py-24">
-          <div className="split-section gap-6">
+          <div className="page-split gap-6">
             <div>
               <h1 className="heading-main app-color--light">Why volunteer</h1>
               <h2 className="sub-heading-main">
@@ -257,7 +257,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="app-color--dark py-16">
-          <div className="split-section gap-6">
+          <div className="page-split gap-6">
             <h1 className="title-semi-bold">
               Help
               <br />

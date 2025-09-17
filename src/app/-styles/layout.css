@@ -1,15 +1,19 @@
+/* Reusable Tailwind styles: mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10 */
+.page-container {
+  margin: auto;
+  padding: 0 1.5rem;
+  max-width: calc(var(--screen-xxl) + 80px);
+  @media (min-width: 992px) {
+    padding: 0 2.5rem;
+  }
+}
 /*
-Application layout styles.
+
+   ╭───────────────────────────────────────────────────╮
+   │  |    Split layout 1    |    Split layout 2    │  |
+   ╰───────────────────────────────────────────────────╯
  */
-.toolbar-after-content {
-  margin-top: var(--navbar-height);
-}
-
-.toolbar-after-content-with-banner {
-  margin-top: var(--navbar-height-with-banner);
-}
-
-.split-section {
+.page-split {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
@@ -22,16 +26,12 @@ Application layout styles.
   }
 }
 
-/* Tailwind styles: mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10 */
-.page-container {
-  margin: auto;
-  padding: 0 1.5rem;
-  max-width: calc(var(--screen-xxl) + 80px);
-  @media (min-width: 992px) {
-    padding: 0 2.5rem;
-  }
-}
-
+/*
+  <h1> tags on the homepage have a smaller text size and a rounded border.
+   ╭──────────╮
+   │ Header 1 │
+   ╰──────────╯
+*/
 .heading-main {
   border-radius: 8px;
   padding: 10px;
@@ -40,4 +40,15 @@ Application layout styles.
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
+}
+
+/*
+  Pages have a top margin due to the fade on-scroll animation requiring a transparent navbar.
+ */
+.toolbar-after-content {
+  margin-top: var(--navbar-height);
+}
+
+.toolbar-after-content-with-banner {
+  margin-top: var(--navbar-height-with-banner);
 }
