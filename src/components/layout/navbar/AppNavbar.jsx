@@ -4,7 +4,7 @@ import Link from "next/link";
 import ExtendedNavbarMenu from "./ExtendedNavbarMenu";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import BasePathImage from "../../../integrations/gh-pages/BasePathImage";
 import { ChevronDown, ChevronUp } from "../../../integrations/tabler-icon";
 
 import "./app-navbar.css";
@@ -46,7 +46,7 @@ export default function AppNavbar({ fade = false }) {
     >
       <div className="navbar-main-content nav-regular">
         <Link className="p-4" href="/">
-          <Image
+          <BasePathImage
             src="/assets/logo/logo-text-black.svg"
             alt="Open Fresno logo"
             height={45}
