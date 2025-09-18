@@ -83,7 +83,7 @@ export default function AppNavbar({ fade = false }) {
           <hr className="navbar-underline" />
         </ul>
         <button
-          className="navbar-toggle-button nav-semi-bold"
+          className="navbar-toggle-button nav-semi-bold ps-4 pe-[0.8rem]"
           onClick={() => showExtendedMenu(!extendedMenuVisible)}
         >
           Get Involved

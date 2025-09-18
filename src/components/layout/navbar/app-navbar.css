@@ -93,13 +93,3 @@ NOTE: The navbar is initially transparent when the fade on-scroll animation is e
 .navbar-link--selected__three ~ .navbar-underline {
   left: calc(0.25rem * 71.5);
 }
-
-.navbar-toggle-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  padding-right: 0.8rem;
-  padding-left: 1rem;
-  color: var(--main-vivid-blue);
-}

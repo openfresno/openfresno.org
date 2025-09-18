@@ -2,134 +2,98 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 import "./extended-menu.css";
+import { ChevronRight } from "@/integrations/tabler-icon";
 
 /**
  * An extended dropdown menu for the main application navbar.
  * @returns {JSX.Element}
  */
-const ExtendedNavbarMenu = (visible) => {
-  function hide() {
-    visible = false;
-  }
-
+const ExtendedNavbarMenu = ({ className = "" }) => {
   const [mobileNavPosition, toggleMobileNavPosition] = useState(false);
 
   return (
-    <div className="dropdown-menu" style={visible ? {} : { display: "none" }}>
-      <div className={"navbar-extended-mobile-container"}>
-        <div
-          className={`navbar-extended-mobile-content`}
-          style={mobileNavPosition ? { display: "none" } : {}}
-        >
-          <Link className={"mobile-nav-link"} href="/">
-            Home
-          </Link>
-          <Link className={"mobile-nav-link"} href="/about">
-            About
-          </Link>
-          <Link className={"mobile-nav-link"} href="/contact">
-            Contact
-          </Link>
-          <Link className={"mobile-nav-link"} href="/donate">
+    <div className={`navbar-extended-container p2-regular ${className}`}>
+      <ul
+        className={`navbar-extended-mobile-container nav-semi-bold page-container space-y-7`}
+      >
+        <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
+          <Link href="/about">About</Link>
+        </li>
+        <li>
+          <Link href="/contact">Contact</Link>
+        </li>
+        <li>
+          <Link className="" href="/donate">
             Donate
           </Link>
-          <div>
-            <span
-              className={"navbar-extended-mobile-content-button-01"}
-              onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
-            >
-              Get Involved
-            </span>
-          </div>
-        </div>
-        <div
-          className={"navbar-extended-mobile-content"}
-          style={!mobileNavPosition ? { display: "none" } : {}}
+        </li>
+        <button
+          className="navbar-toggle-button nav-semi-bold mt-[4.5rem] mb-4"
+          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
         >
-          <Link className={"mobile-nav-link"} href="/get-started">
-            Get Started
-          </Link>
-          <Link className={"mobile-nav-link"} href="/projects">
-            Projects
-          </Link>
-          <Link className={"mobile-nav-link"} href="/pitch">
-            Pitch a Project
-          </Link>
-          <Link
-            className={"mobile-nav-link"}
-            href="https://www.meetup.com/openfresno/"
-          >
-            Meetup
-          </Link>
-          <Link className={"mobile-nav-link"} href="/faq">
-            FAQs
-          </Link>
-          <div>
-            <span
-              className={"navbar-extended-mobile-content-button-02"}
-              onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
-            >
-              Back
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className={"navbar-extended-desktop-container"}>
-        <div className="navbar-extended-desktop-section-item">
-          <div className="navbar-extended-text-wrapper-2">Get Started</div>
-          <p className="navbar-extended-desktop-section-content">
+          Get Involved
+          <ChevronRight className="ms-1" height={20} width={20} />
+        </button>
+      </ul>
+      <div className="navbar-extended-desktop-container page-container">
+        <section className="navbar-extended-desktop-section">
+          <h4 className="navbar-extended-header h4-semi-bold">Get Started</h4>
+          <p className="grow-1">
             Get started today and volunteer with us to drive positive change
             through technology, making a meaningful impact in your community!
           </p>
-          <Link
-            href="/get-started"
-            className="navbar-extended-button"
-            onClick={hide}
-          >
+          <Link href="/get-started" className="btn-small">
             Get Started
           </Link>
-        </div>
-        <div className="navbar-extended-desktop-section-item">
-          <div className="navbar-extended-text-wrapper-2">Projects</div>
-          <p className="navbar-extended-desktop-section-content">
+        </section>
+        <section className="navbar-extended-desktop-section">
+          <h4 className="navbar-extended-header h4-semi-bold">Projects</h4>
+          <p className="grow-1">
             Explore our projects and discover how you can contribute your skills
             to drive innovation and create positive change.
           </p>
-          <Link href="/projects" className="navbar-extended-button">
+          <Link href="/projects" className="btn-small">
             See Projects
           </Link>
-        </div>
-        <div className="navbar-extended-desktop-section-item">
-          <div className="navbar-extended-text-wrapper-2">Pitch a Project</div>
-          <p className="navbar-extended-desktop-section-content">
+        </section>
+        <section className="navbar-extended-desktop-section">
+          <h4 className="navbar-extended-header h4-semi-bold">
+            Pitch a Project
+          </h4>
+          <p className="grow-1">
             Get the latest information and guidance for anyone who wants to
             propose new projects or ideas to the Open Fresno community.
           </p>
-          <Link href="/pitch" className="navbar-extended-button">
+          <Link href="/pitch" className="btn-small">
             Pitch a Project
           </Link>
-        </div>
-        <div className="navbar-extended-desktop-section-item">
-          <p className="section-content-2">
+        </section>
+        <section className="p3-regular col-span-2 my-auto space-y-5">
+          {/* <div> */}
+          <p>
             Join us for our weekly meetings on{" "}
             <Link
               href="https://www.meetup.com/openfresno/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-wrapper-3"
+              className="navbar-extended-link"
             >
               meetup
             </Link>
             .
           </p>
-          <p className="section-content-2">
+          <p>
             For any questions, visit our{" "}
-            <Link href="/faq" className="text-wrapper-3">
+            <Link href="/faq" className="navbar-extended-link">
               FAQs
             </Link>
             .
           </p>
-        </div>
+          {/* </div> */}
+        </section>
       </div>
     </div>
   );

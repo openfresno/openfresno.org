@@ -41,6 +41,21 @@
   }
 }
 
+.btn-small {
+  display: inline;
+  cursor: pointer;
+  border-radius: 6px;
+  background: var(--main-vivid-blue);
+  padding: 0.65rem 0.9rem;
+  width: fit-content;
+  color: var(--neutral-50);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 18px;
+  text-decoration: none;
+  text-wrap: nowrap;
+}
+
 .btn-alt {
   border: solid var(--main-vivid-blue) 1px;
   background-color: transparent;
@@ -61,6 +76,14 @@
     background-color: var(--main-vivid-blue);
     color: var(--secondary-50);
   }
+}
+
+.navbar-toggle-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: var(--main-vivid-blue);
 }
 
 /* Deprecated */
