@@ -71,7 +71,7 @@ const ExtendedNavbarMenu = ({ className = "" }) => {
             Pitch a Project
           </Link>
         </section>
-        <section className="p3-regular col-span-2 my-auto space-y-5">
+        <section className="navbar-extended-desktop-section p3-regular justify-center">
           {/* <div> */}
           <p>
             Join us for our weekly meetings on{" "}
