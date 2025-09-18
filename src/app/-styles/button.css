@@ -78,11 +78,38 @@
   }
 }
 
-.navbar-toggle-button {
+.navbar-toggle-button--desktop {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  width: fit-content;
+  color: var(--main-vivid-blue);
+  @media (min-width: 996px) {
+    display: inline-flex;
+  }
+}
+
+.navbar-toggle-button--mobile {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  padding: 1rem;
+  width: fit-content;
+  @media (min-width: 996px) {
+    display: none;
+  }
+}
+
+.navbar-extended-toggle-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  width: fit-content;
   color: var(--main-vivid-blue);
 }
 

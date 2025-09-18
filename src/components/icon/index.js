@@ -1,1 +1,2 @@
-export { default as HamburgerOffset } from "./HamburgerOffset";
+export * from "./HamburgerStaggered";
+export * from "./IconX";

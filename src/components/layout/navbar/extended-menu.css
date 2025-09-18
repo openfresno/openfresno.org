@@ -3,15 +3,20 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-top: 1px solid #ebeae5;
   background: var(--secondary-50);
-  padding: 1.75rem 0;
+  padding: 1.75rem 0 0.75rem 0;
   width: 100%;
 }
 
 .navbar-extended-mobile-container {
+  gap: 1.75rem;
   margin: auto;
-  padding: 0 1.5rem;
+  padding: 0 0.5rem;
   @media (min-width: 992px) {
     display: none;
+  }
+
+  a {
+    padding: 1rem;
   }
 }
 
@@ -27,6 +32,7 @@
   > *:last-child {
     grid-column: span 2 / span 2;
   }
+
   @media (min-width: 992px) {
     display: grid;
   }

@@ -1,10 +1,14 @@
-export const ChevronRight = ({ width = 24, height = 24, className = "" }) => {
+export const HamburgerStaggered = ({
+  width = 44,
+  height = 44,
+  className = "",
+}) => {
   return (
     <svg
       width={width}
       height={height}
       className={`inline ${className}`}
-      viewBox="0 0 24 24"
+      viewBox="0 0 44 44"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       stroke="#004491"
@@ -12,8 +16,7 @@ export const ChevronRight = ({ width = 24, height = 24, className = "" }) => {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M9 6l6 6l-6 6" />
+      <path d="M24.625 33H36M10 11H36H10ZM10 22H36H10Z" stroke="#060718" />
     </svg>
   );
 };

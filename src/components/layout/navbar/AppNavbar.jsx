@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import BasePathImage from "../../../integrations/gh-pages/BasePathImage";
 import { ChevronDown, ChevronUp } from "../../../integrations/tabler-icon";
+import { HamburgerStaggered, IconX } from "../../icon";
 
 import "./app-navbar.css";
 
@@ -83,7 +84,13 @@ export default function AppNavbar({ fade = false }) {
           <hr className="navbar-underline" />
         </ul>
         <button
-          className="navbar-toggle-button nav-semi-bold ps-4 pe-[0.8rem]"
+          className={`navbar-toggle-button--mobile`}
+          onClick={() => showExtendedMenu(!extendedMenuVisible)}
+        >
+          {extendedMenuVisible ? <IconX /> : <HamburgerStaggered />}
+        </button>
+        <button
+          className={`navbar-toggle-button--desktop nav-semi-bold ps-4 pe-[0.8rem]`}
           onClick={() => showExtendedMenu(!extendedMenuVisible)}
         >
           Get Involved

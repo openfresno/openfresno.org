@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { ChevronLeft, ChevronRight } from "../../../integrations/tabler-icon";
 
 import "./extended-menu.css";
-import { ChevronRight } from "@/integrations/tabler-icon";
 
 /**
  * An extended dropdown menu for the main application navbar.
@@ -14,7 +14,7 @@ const ExtendedNavbarMenu = ({ className = "" }) => {
   return (
     <div className={`navbar-extended-container p2-regular ${className}`}>
       <ul
-        className={`navbar-extended-mobile-container nav-semi-bold page-container space-y-7`}
+        className={`${mobileNavPosition ? "hidden" : "grid"} navbar-extended-mobile-container nav-semi-bold`}
       >
         <li>
           <Link href="/">Home</Link>
@@ -26,16 +26,40 @@ const ExtendedNavbarMenu = ({ className = "" }) => {
           <Link href="/contact">Contact</Link>
         </li>
         <li>
-          <Link className="" href="/donate">
-            Donate
-          </Link>
+          <Link href="/donate">Donate</Link>
         </li>
         <button
-          className="navbar-toggle-button nav-semi-bold mt-[4.5rem] mb-4"
+          className="navbar-extended-toggle-button nav-semi-bold"
           onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
         >
           Get Involved
           <ChevronRight className="ms-1" height={20} width={20} />
+        </button>
+      </ul>
+      <ul
+        className={`${mobileNavPosition ? "grid" : "hidden"} navbar-extended-mobile-container nav-semi-bold`}
+      >
+        <li>
+          <Link href="/get-started">Get Started</Link>
+        </li>
+        <li>
+          <Link href="/projects">Projects</Link>
+        </li>
+        <li>
+          <Link href="/pitch">Pitch a Project</Link>
+        </li>
+        <li>
+          <Link href="/meetup">Meetup</Link>
+        </li>
+        <li>
+          <Link href="/faq">FAQs</Link>
+        </li>
+        <button
+          className="navbar-extended-toggle-button nav-semi-bold"
+          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
+        >
+          <ChevronLeft className="-ms-1 me-1" height={20} width={20} />
+          Back
         </button>
       </ul>
       <div className="navbar-extended-desktop-container page-container">

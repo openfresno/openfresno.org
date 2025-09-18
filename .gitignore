@@ -615,8 +615,8 @@ $RECYCLE.BIN/
 ### macOS template
 # General
 
-# Icon must end with two \r
-Icon
+# Ignore the Icon file
+*/Icon
 
 # Thumbnails
 
