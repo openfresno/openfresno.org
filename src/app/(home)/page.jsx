@@ -84,10 +84,10 @@ export default function HomePage() {
                   Our mission is done by uniting programmers, designers, and
                   other talents, we transform ideas into tangible solutions that
                   impact lives throughout Central California.
-                </b>
-                {""}
+                </b>{" "}
                 Together, we drive innovation forward, building a future where
-                open source technology empowers citizens and uplifts our city.{" "}
+                open source technology empowers citizens and uplifts Fresno and
+                the surrounding areas.{" "}
                 <b>
                   Join us in driving innovation through open-source tech and
                   empowering our community!
