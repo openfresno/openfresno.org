@@ -72,14 +72,14 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-        <section className="pt-12 lg:py-24">
-          <div className="page-split lg:gap-6">
+        <section className="pt-12">
+          <div className="home-image-split-container">
             <div>
               <h1 className="heading-main app-color--dark">What we do</h1>
               <h2 className="sub-heading-main">
                 Building a Better Future For Fresno and the Central Valley Area
               </h2>
-              <p className="paragraph-large pt-10">
+              <p className="paragraph-large mb-20 pt-10">
                 <b>
                   Our mission is done by uniting programmers, designers, and
                   other talents, we transform ideas into tangible solutions that
@@ -94,7 +94,7 @@ export default function HomePage() {
                 </b>
               </p>
             </div>
-            <div className="image-container relative ms-[108px]">
+            <div className="home-split-image-container relative ms-[90px]">
               <BasePathImage
                 alt="Open Data Day"
                 width={596}
@@ -124,7 +124,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="app-color--dark py-12 lg:py-24">
-          <div className="page-split gap-6">
+          <div className="page-split">
             <div>
               <h1 className="heading-main app-color--light">Why volunteer</h1>
               <h2 className="sub-heading-main">
@@ -257,7 +257,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="app-color--dark py-16">
-          <div className="page-split gap-6">
+          <div className="page-split items-center">
             <h1 className="title-semi-bold">
               Help
               <br />

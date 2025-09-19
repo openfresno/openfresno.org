@@ -16,7 +16,7 @@
 .page-split {
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
+  gap: 1.5rem;
   margin: auto;
   padding: 0 1.5rem;
   max-width: calc(var(--screen-xxl) + 80px);
