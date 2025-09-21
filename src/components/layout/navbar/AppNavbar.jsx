@@ -11,7 +11,10 @@ import { HamburgerStaggered, IconX } from "../../icon";
 import "./app-navbar.css";
 
 /**
- * The default application navigation bar. It includes an extended menu that exapnds to shows more text underneath the navbar.
+ * The default application navigation bar.
+ *
+ * - Includes an extended menu that exapnds to shows more text underneath the navbar.
+ *   - @see ExtendedNavbarMenu
  * EXPERIMENTAL: The desktop links have a sliding underline animation when the page navigates.
  * EXPERIMENTAL: The fade on-scroll effect uses CSS scroll-driven animations. It is not supported by Chrome < 115, Firefox, Firefox for Android, Safari, Safari on iOS. On unsupprted platforms it functions the same as fade = false.
  * @param {boolean} fade - Whether to enable fade effect on scroll
@@ -56,27 +59,27 @@ export default function AppNavbar({ fade = false }) {
         </Link>
         <ul className="navbar-middle-section">
           <li
-            className={`${websiteURL === "/" && "nav-semi-bold navbar-link--selected__one"}`}
+            className={`${websiteURL === "/" && "nav-semi-bold navbar-link--underline__one"}`}
           >
             <Link className="navbar-link" href="/">
               Home
             </Link>
           </li>
           <li
-            className={`${websiteURL === "/about" && "nav-semi-bold navbar-link--selected__two"}`}
+            className={`${websiteURL === "/about" && "nav-semi-bold navbar-link--underline__two"}`}
           >
             <Link className="navbar-link" href="/about">
               About
             </Link>
           </li>
           <li
-            className={`${websiteURL === "/contact" && "nav-semi-bold navbar-link--selected__three"}`}
+            className={`${websiteURL === "/contact" && "nav-semi-bold navbar-link--underline__three"}`}
           >
             <Link className="navbar-link" href="/contact">
               Contact
             </Link>
           </li>
-          <li className={`navbar-link-list-item`}>
+          <li>
             <Link className="navbar-link" href="/donate">
               Donate
             </Link>
@@ -84,13 +87,13 @@ export default function AppNavbar({ fade = false }) {
           <hr className="navbar-underline" />
         </ul>
         <button
-          className={`navbar-toggle-button--mobile`}
+          className="navbar-toggle-button--mobile"
           onClick={() => showExtendedMenu(!extendedMenuVisible)}
         >
           {extendedMenuVisible ? <IconX /> : <HamburgerStaggered />}
         </button>
         <button
-          className={`navbar-toggle-button--desktop nav-semi-bold ps-4 pe-[0.8rem]`}
+          className="navbar-toggle-button--desktop"
           onClick={() => showExtendedMenu(!extendedMenuVisible)}
         >
           Get Involved

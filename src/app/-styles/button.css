@@ -86,6 +86,10 @@
   padding: 1rem;
   width: fit-content;
   color: var(--main-vivid-blue);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
   @media (min-width: 996px) {
     display: inline-flex;
   }
@@ -111,6 +115,10 @@
   padding: 1rem;
   width: fit-content;
   color: var(--main-vivid-blue);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.02em;
 }
 
 /* Deprecated */

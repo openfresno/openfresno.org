@@ -82,14 +82,14 @@ NOTE: The navbar is initially transparent when the fade on-scroll animation is e
 }
 
 /* Sibling selectors to position the underline */
-.navbar-link--selected__one ~ .navbar-underline {
+.navbar-link--underline__one ~ .navbar-underline {
   left: 0.25rem;
 }
 
-.navbar-link--selected__two ~ .navbar-underline {
+.navbar-link--underline__two ~ .navbar-underline {
   left: calc(0.25rem * 35);
 }
 
-.navbar-link--selected__three ~ .navbar-underline {
+.navbar-link--underline__three ~ .navbar-underline {
   left: calc(0.25rem * 71.5);
 }

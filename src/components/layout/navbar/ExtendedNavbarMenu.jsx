@@ -6,9 +6,11 @@ import "./extended-menu.css";
 
 /**
  * An extended dropdown menu for the main application navbar.
+ *
+ * - Mobile menu switches between two distint nav menus.
  * @returns {JSX.Element}
  */
-const ExtendedNavbarMenu = ({ className = "" }) => {
+export default function ExtendedNavbarMenu({ className = "" }) {
   const [mobileNavPosition, toggleMobileNavPosition] = useState(false);
 
   return (
@@ -29,7 +31,7 @@ const ExtendedNavbarMenu = ({ className = "" }) => {
           <Link href="/donate">Donate</Link>
         </li>
         <button
-          className="navbar-extended-toggle-button nav-semi-bold"
+          className="navbar-extended-toggle-button"
           onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
         >
           Get Involved
@@ -55,7 +57,7 @@ const ExtendedNavbarMenu = ({ className = "" }) => {
           <Link href="/faq">FAQs</Link>
         </li>
         <button
-          className="navbar-extended-toggle-button nav-semi-bold"
+          className="navbar-extended-toggle-button"
           onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
         >
           <ChevronLeft className="-ms-1 me-1" height={20} width={20} />
@@ -95,8 +97,7 @@ const ExtendedNavbarMenu = ({ className = "" }) => {
             Pitch a Project
           </Link>
         </section>
-        <section className="navbar-extended-desktop-section p3-regular justify-center">
-          {/* <div> */}
+        <section className="p3-regular space-y-8 self-center">
           <p>
             Join us for our weekly meetings on{" "}
             <Link
@@ -116,11 +117,8 @@ const ExtendedNavbarMenu = ({ className = "" }) => {
             </Link>
             .
           </p>
-          {/* </div> */}
         </section>
       </div>
     </div>
   );
-};
-
-export default ExtendedNavbarMenu;
+}
