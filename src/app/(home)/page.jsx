@@ -94,19 +94,19 @@ export default function HomePage() {
                 </b>
               </p>
             </div>
-            <div className="home-split-image-container relative ms-[90px]">
+            <div className="home-split-image-container">
               <BasePathImage
                 alt="Open Data Day"
                 width={596}
                 height={577}
-                className="main-image z-10"
+                className="home-split-image--main"
                 src="/img/home/home2.png"
               />
               <BasePathImage
                 alt="Star shape"
                 width={294}
                 height={308}
-                className="star-image z-0"
+                className="home-split-image--star"
                 src="/img/home/star.svg"
               />
             </div>
