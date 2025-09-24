@@ -66,7 +66,7 @@ export default function HomeNumbered2(className) {
             cozy lounge to laser cutting, workshops, and an electronics haven,{" "}
             <b>explore what awaits you at our partner's space!</b>
           </p>
-          <div className="mt-2 space-y-24 space-x-5">
+          <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
             <Link className="btn btn--grow" href="">
               Check it Out
             </Link>
