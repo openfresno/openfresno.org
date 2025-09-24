@@ -32,83 +32,19 @@ Home page layout.
   }
 }
 
-.home-projects-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 30px;
-  padding: 96px 80px;
-
-  @media (max-width: 1300px) {
-    flex-direction: column;
-    justify-content: center;
-    gap: 80px;
-    padding: 48px 40px;
-  }
-}
-
-.home-section-project-image {
+.home-project-image {
   margin-top: 2rem;
   aspect-ratio: 2/1;
   width: 100%;
   object-fit: cover;
 }
 
-.home-image-split-container {
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr;
-  align-items: center;
-  margin: auto auto auto 90px;
-  padding: 1.5rem;
-  max-width: calc(var(--screen-xxl) + 80px);
-  @media (min-width: 992px) {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1.5rem;
-    padding-right: 0;
-    padding-left: 2.5rem;
-  }
-  @media (min-width: 1100px) {
-    column-gap: 3rem;
-  }
-  @media (min-width: 1400px) {
-    column-gap: 5rem;
-  }
-}
-
-.home-split-image-container {
-  position: relative;
+.home-split-image--main {
   margin-right: -1.5rem;
-  /* Maintain the aspect ratio of the container. 
-     (height of main image / width of main image) * 100 
-     (577 / 596) * 100 = 96.81 */
-  padding-top: 96.81%;
-  /* You can add a max-width to control the overall size on large screens. */
-  max-width: 596px;
-  @media (min-width: 992px) {
-    margin-right: 0;
-  }
-}
-
-.home-split-image-container .home-split-image--main {
-  /* Set the main image to absolute and stretch it to fill the container. */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.home-split-image-container .home-split-image--star {
-  /* Position the star with percentages relative to the main image's container. */
-  position: absolute;
-  /* Adjust these values to match the desired position. */
-  top: 35%;
-  left: -18%;
-  /* Use a percentage for the star's width to make it scale. */
-  width: 50%; /* Adjust this to control its size relative to the main image. */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 512px;
+  @media (min-width: 992px) {
+    margin-right: -2.5rem;
+    max-width: 100%;
+  }
 }

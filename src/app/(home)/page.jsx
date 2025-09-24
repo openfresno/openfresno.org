@@ -72,42 +72,38 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-        <section className="pt-12">
-          <div className="home-image-split-container">
-            <div>
-              <h1 className="heading-main app-color--dark">What we do</h1>
-              <h2 className="sub-heading-main">
-                Building a Better Future For Fresno and the Central Valley Area
-              </h2>
-              <p className="paragraph-large mb-20 pt-10">
-                <b>
-                  Our mission is done by uniting programmers, designers, and
-                  other talents, we transform ideas into tangible solutions that
-                  impact lives throughout Central California.
-                </b>{" "}
-                Together, we drive innovation forward, building a future where
-                open source technology empowers citizens and uplifts Fresno and
-                the surrounding areas.{" "}
-                <b>
-                  Join us in driving innovation through open-source tech and
-                  empowering our community!
-                </b>
-              </p>
+        <section className="py-12 lg:py-24">
+          <div className="mx-auto grid max-w-[calc(var(--screen-xxl)+80px)] grid-cols-1 gap-y-10 px-6 md:grid-cols-2 md:px-10">
+            <div className="grid items-center">
+              <div>
+                <h1 className="heading-main app-color--dark">What we do</h1>
+                <h2 className="sub-heading-main">
+                  Building a Better Future For Fresno and the Central Valley
+                  Area
+                </h2>
+                <p className="paragraph-large pt-10">
+                  <b>
+                    Our mission is done by uniting programmers, designers, and
+                    other talents, we transform ideas into tangible solutions
+                    that impact lives throughout Central California.
+                  </b>{" "}
+                  Together, we drive innovation forward, building a future where
+                  open source technology empowers citizens and uplifts Fresno
+                  and the surrounding areas.{" "}
+                  <b>
+                    Join us in driving innovation through open-source tech and
+                    empowering our community!
+                  </b>
+                </p>
+              </div>
             </div>
-            <div className="home-split-image-container">
+            <div className="grid items-center justify-end">
               <BasePathImage
                 alt="Open Data Day"
-                width={596}
+                width={728}
                 height={577}
-                className="home-split-image--main"
-                src="/img/home/home2.png"
-              />
-              <BasePathImage
-                alt="Star shape"
-                width={294}
-                height={308}
-                className="home-split-image--star"
-                src="/img/home/star.svg"
+                className="home-split-image translate-x-6 lg:translate-x-10"
+                src="/img/home/home3.png"
               />
             </div>
           </div>
@@ -120,7 +116,7 @@ export default function HomePage() {
                 Explore Our Volunteer Options
               </h2>
             </div>
-            <HomeNumbered2 className="" />
+            <HomeNumbered2 />
           </div>
         </section>
         <section className="app-color--dark py-12 lg:py-24">
@@ -186,7 +182,7 @@ export default function HomePage() {
                 <BasePathImage
                   src="/img/home/learningblocks.jpg"
                   alt="Learning Blocks"
-                  className="home-section-project-image"
+                  className="home-project-image"
                   width={918}
                   height={469}
                 />
@@ -202,7 +198,7 @@ export default function HomePage() {
                 <BasePathImage
                   src="/img/TrashAI2.png"
                   alt="TrashAI"
-                  className="home-section-project-image"
+                  className="home-project-image"
                   width={839}
                   height={412}
                 />
@@ -218,7 +214,7 @@ export default function HomePage() {
                 <BasePathImage
                   src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.png"
                   alt="Open Budget Sac"
-                  className="home-section-project-image"
+                  className="home-project-image"
                   width={385}
                   height={211}
                 />
