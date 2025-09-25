@@ -8,9 +8,9 @@ import Banner from "./Banner";
  * - The child of AppLayout is usually a <main> tag.
  *
  * Example:
- <AppLayout fadeNavbar={true} />
- <main></main>
- <AppLayout />
+<AppLayout fadeNavbar={true} />
+<main></main>
+<AppLayout />
  */
 export default function AppLayout({
   children,

@@ -1,4 +1,4 @@
-import { githubOwner } from "../../utils/constants/app-data";
+import { githubOwner } from "../../utility/constants/app-data";
 import Projects from "./projects";
 import AppLayout from "../../components/layout/AppLayout";
 

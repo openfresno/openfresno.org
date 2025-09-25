@@ -1,4 +1,4 @@
-import { githubOwner, githubProject } from "../../utils/constants/app-data";
+import { githubOwner, githubProject } from "../../utility/constants/app-data";
 import * as yaml from "yaml";
 
 /**

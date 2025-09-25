@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import ProjectsCardsContainer from "@/app/projects/projectsCardsContainer";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
 import ProjectSearch from "@/app/projects/projectSearch";
-import { jsonResponse } from "@/utils/response";
+import { jsonResponse } from "@/utility/response";
 import useSWR from "swr";
 import { fetchGithubProjectData } from "./github";
 

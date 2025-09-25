@@ -5,10 +5,31 @@ import { ChevronLeft, ChevronRight } from "../../../integrations/tabler-icon";
 import "./extended-menu.css";
 
 /**
- * An extended dropdown menu for the main application navbar.
+ * `ExtendedNavbarMenu` is a responsive navigation component that provides
+ * both mobile and desktop menu layouts for the main application navbar.
  *
- * - Mobile menu switches between two distint nav menus.
- * @returns {JSX.Element}
+ * ### Features
+ * - **Mobile view**: Toggles between two distinct navigation menus:
+ *   - Primary menu: Home, About, Contact, Donate, and a "Get Involved" toggle.
+ *   - Secondary menu: Get Started, Projects, Pitch a Project, Meetup, FAQs, and a "Back" toggle.
+ * - **Desktop view**: Displays multiple sections with descriptive text and
+ *   call-to-action links (e.g., Get Started, Projects, Pitch a Project).
+ * - Uses icons (`ChevronLeft`, `ChevronRight`) to indicate navigation transitions.
+ * - Accepts an optional `className` for custom styling.
+ *
+ * @component
+ *
+ * @param {Object} props - The component props.
+ * @param {string} [props.className=""] - Optional additional CSS class names
+ *   applied to the root container for layout or styling overrides.
+ *
+ * @returns {JSX.Element} A responsive extended navbar with mobile toggle menus
+ *   and desktop sections containing navigation links and descriptions.
+ *
+ * @example
+ * ```tsx
+<ExtendedNavbarMenu className="custom-navbar" />
+ * ```
  */
 export default function ExtendedNavbarMenu({ className = "" }) {
   const [mobileNavPosition, toggleMobileNavPosition] = useState(false);

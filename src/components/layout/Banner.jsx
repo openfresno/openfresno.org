@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import useBanner from "@/utils/hooks/useBanner";
+import useBanner from "@/utility/hooks/useBanner";
 
 /**
  * Banner component to display at the top of the page
@@ -24,8 +24,7 @@ import useBanner from "@/utils/hooks/useBanner";
  .
  </Banner>
  *  ```
- * @param {Object} props
- * @param {JSX.Element} props.children - The message to display in the banner
+ * @param {JSX.Element} children - The message to display in the banner
  * @returns {JSX.Element|null}
  */
 export default function Banner({ children }) {
