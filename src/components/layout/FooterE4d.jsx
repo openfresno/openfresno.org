@@ -1,4 +1,5 @@
 import Link from "next/link";
+import "./app-footer.css";
 
 /**
  * The default footer for the application.
