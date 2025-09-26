@@ -1,7 +1,7 @@
 import Link from "next/link";
 import "./home-numbered2.css";
 
-export default function HomeNumbered2(className) {
+export default function HomeNumbered2({ className }) {
   return (
     <div className={`timeline ${className}`}>
       <div className="mt-10 ps-8 pb-10 md:hidden">
@@ -11,7 +11,7 @@ export default function HomeNumbered2(className) {
         </h2>
       </div>
       <div className="timeline-item">
-        <div className="timeline-blue-circle">1</div>
+        <div className="timeline-number">1</div>
         <div className="timeline-item-content">
           <h2 className="heading-small">Engage with Our Community</h2>
           <p>
@@ -27,7 +27,7 @@ export default function HomeNumbered2(className) {
         </div>
       </div>
       <div className="timeline-item">
-        <div className="timeline-blue-circle">2</div>
+        <div className="timeline-number">2</div>
         <div className="timeline-item-content">
           <h2 className="heading-small">Drive Innovation with Projects</h2>
           <p>
@@ -41,7 +41,7 @@ export default function HomeNumbered2(className) {
         </div>
       </div>
       <div className="timeline-item">
-        <div className="timeline-blue-circle">3</div>
+        <div className="timeline-number">3</div>
         <div className="timeline-item-content">
           <h2 className="heading-small">Pitch Your Vision</h2>
           <p>
@@ -55,7 +55,7 @@ export default function HomeNumbered2(className) {
         </div>
       </div>
       <div className="timeline-item">
-        <div className="timeline-blue-circle">4</div>
+        <div className="timeline-number">4</div>
         <div className="timeline-item-content">
           <h2 className="heading-small">
             Explore On-Site Opportunities with Root Access

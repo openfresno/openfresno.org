@@ -49,7 +49,7 @@ export default function HomePage() {
           </div>
         </header>
         <section className="app-color--dark py-12 lg:py-24">
-          <div className="page-split gap-6">
+          <div className="page-split">
             <div>
               <h1 className="heading-main app-color--light">Who we are</h1>
               <h2 className="sub-heading-main">
@@ -73,7 +73,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="py-12 lg:py-24">
-          <div className="mx-auto grid max-w-[calc(var(--screen-xxl)+80px)] grid-cols-1 gap-y-10 px-6 md:grid-cols-2 md:px-10">
+          <div className="home-split-wide">
             <div className="grid items-center">
               <div>
                 <h1 className="heading-main app-color--dark">What we do</h1>
@@ -108,16 +108,12 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-        <section className="pb-8 lg:pb-18">
-          <div className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] pe-6 lg:px-10">
-            <div className="mb-24 hidden md:block">
-              <h1 className="heading-main app-color--dark">Opportunities</h1>
-              <h2 className="sub-heading-main">
-                Explore Our Volunteer Options
-              </h2>
-            </div>
-            <HomeNumbered2 />
+        <section className="mx-auto mb-10 max-w-[calc(var(--screen-xxl)_+_80px)]">
+          <div className="home-timeline-header">
+            <h1 className="heading-main app-color--dark">Opportunities</h1>
+            <h2 className="sub-heading-main">Explore Our Volunteer Options</h2>
           </div>
+          <HomeNumbered2 />
         </section>
         <section className="app-color--dark py-12 lg:py-24">
           <div className="page-split">

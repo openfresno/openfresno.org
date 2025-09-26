@@ -1,9 +1,66 @@
-/* Main timeline container */
+/*
+======================================
+Timeline layout (mobile vs. desktop)
+======================================
+
+Mobile (<= 768px)
+-----------------
+ [ timeline ]                (line at 20px, small circle)
+    ●                        top circle (12px)
+    |                        vertical line (1px)
+    |    [#1]                timeline-number (5rem circle)
+    |  [Title]               timeline-item-content (full width, centered)
+    |   [Body]
+    |
+    |    [#2]
+    |  [Title]
+    |   [Body]
+    |
+    ' (continues)
+
+- Items stack in a single column, centered text.
+- .timeline-item is column-oriented.
+- Counter increments per item; nth-child even/odd alignments are moot on mobile.
+
+
+Desktop (>= 768px)
+------------------
+                        ●     top circle (36px) centered at 50%
+                        |     vertical line (1.5px) at 50%
+   LEFT SIDE            |     RIGHT SIDE
+  ┌───────────────────┐ |   ┌───────────────────┐
+  │ [#1]  [Title]     │ |   │     [Title]  [#2] │
+  │        [Body]     │ |   │        [Body]     │
+  └───────────────────┘ |   └───────────────────┘
+
+- Line and circle move to center (left: 50%).
+- .timeline-item becomes row-oriented; items alternate:
+  - odd: content right side of line (justify-content: flex-end)
+  - even: content left side of line (justify-content: flex-start)
+- .timeline-item-content width: calc(50% - 128px), text-align: left.
+- .timeline-number (5rem circle) sits near the center line with a small right margin.
+
+Key selectors
+-------------
+- .timeline::before  → vertical line
+- .timeline::after   → top circle
+- .timeline-item     → flex container (column → row at >=768px)
+- .timeline-item-content → text block (full → half width at >=768px)
+- .timeline-number   → numbered circle
+
+ (1) Initialize a counter for timeline items
+ counter-reset: timeline-counter;
+ (2) Increment the counter for each item
+ counter-increment: timeline-counter;
+ (3) Set width to half, minus space for the circle
+ width: calc(50% - 128px);
+*/
+
 .timeline {
   position: relative;
-  /* (1) Initialize a counter for timeline items */
   counter-reset: timeline-counter;
-  max-width: 1280px;
+  margin: auto;
+
   /* The vertical line running through the middle */
 
   &::before {
@@ -17,14 +74,12 @@
     content: "";
   }
 
-  /* Circle at the top of the line */
-
   &::after {
     position: absolute;
     top: 0;
     left: 20px;
     transform: translateX(-50%);
-    z-index: 1; /* Ensure it's above the line */
+    z-index: 1;
     border-radius: 50%;
     background-color: var(--color-neutral-900);
     width: 12px;
@@ -33,31 +88,27 @@
   }
 
   @media (min-width: 768px) {
-    /* Move the timeline line to the left */
     &::before {
       left: 50%;
+      width: 1.5px;
     }
 
-    /* Move the top circle to the left */
     &::after {
       left: 50%;
+      width: 36px;
+      height: 36px;
     }
   }
 }
 
-/* Each item in the timeline */
 .timeline-item {
   display: flex;
   position: relative;
   flex-direction: column;
-  /* Stack all items on the right side of the line */
   justify-content: flex-start;
   align-items: center;
-  /* (2) Increment the counter for each item */
   counter-increment: timeline-counter;
-  padding-bottom: 2.5rem;
-  padding-left: 32px; /* Add space for the circle and line */
-  width: 100%;
+  padding: 1rem 1.5rem 2.5rem 2rem;
 
   &:nth-child(even) {
     justify-content: flex-start;
@@ -69,7 +120,7 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
-    padding-left: 0;
+    padding: 1rem 1.5rem 2.5rem 1rem;
   }
 }
 
@@ -78,17 +129,16 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: 1.5rem;
-  width: 100%; /* Content takes full available width */
+  width: 100%;
   text-align: center;
   @media (min-width: 768px) {
     position: relative;
-    /* (3) Set width to half, minus space for the circle */
     width: calc(50% - 128px);
-    text-align: left !important;
+    text-align: left;
   }
 }
 
-.timeline-blue-circle {
+.timeline-number {
   display: grid;
   align-items: center;
   justify-items: center;

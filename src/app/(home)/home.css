@@ -48,3 +48,43 @@ Home page layout.
     max-width: 100%;
   }
 }
+
+.home-split-wide {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.5rem;
+  margin: auto;
+  padding: 0 1.5rem;
+  max-width: calc(var(--screen-xxl) + 80px);
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2.5rem;
+  }
+}
+
+.home-split-wide {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 2.5rem;
+  margin: auto;
+  padding: 0 1.5rem;
+  max-width: calc(var(--screen-xxl) + 80px);
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2.5rem;
+  }
+}
+
+.home-timeline-header {
+  display: none;
+  margin-bottom: 6rem;
+  padding: 0 1.5rem;
+  max-width: calc(var(--screen-xxl) + 80px);
+  @media (min-width: 768px) {
+    display: block;
+  }
+  @media (min-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2.5rem;
+  }
+}
