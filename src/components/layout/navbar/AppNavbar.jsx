@@ -5,9 +5,7 @@ import ExtendedNavbarMenu from "./ExtendedNavbarMenu";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import BasePathImage from "../../../integrations/gh-pages/BasePathImage";
-import { ChevronDown, ChevronUp } from "../../../integrations/tabler-icon";
-import { HamburgerStaggered, IconX } from "../../icon";
-
+import { NavToggle } from "../../../components/ui";
 import "./app-navbar.css";
 
 /**
@@ -86,23 +84,16 @@ export default function AppNavbar({ fade = false }) {
           </li>
           <hr className="navbar-underline" />
         </ul>
-        <button
-          className="navbar-toggle-button--mobile"
-          onClick={() => showExtendedMenu(!extendedMenuVisible)}
-        >
-          {extendedMenuVisible ? <IconX /> : <HamburgerStaggered />}
-        </button>
-        <button
-          className="navbar-toggle-button--desktop"
-          onClick={() => showExtendedMenu(!extendedMenuVisible)}
-        >
-          Get Involved
-          {extendedMenuVisible ? (
-            <ChevronUp className="ms-2" />
-          ) : (
-            <ChevronDown className="ms-2" />
-          )}
-        </button>
+        <NavToggle
+          extendedMenuVisible={extendedMenuVisible}
+          showExtendedMenu={showExtendedMenu}
+          mobile={true}
+        />
+        <NavToggle
+          extendedMenuVisible={extendedMenuVisible}
+          showExtendedMenu={showExtendedMenu}
+          mobile={false}
+        />
       </div>
       {extendedMenuVisible && (
         <ExtendedNavbarMenu visible={extendedMenuVisible} />

@@ -1,4 +1,4 @@
-import { Slider, Timeline, Button } from "../../components/ui";
+import { Button, Slider, Timeline } from "../../components/ui";
 import Link from "next/link";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import AppLayout from "../../components/layout/AppLayout";
@@ -160,9 +160,9 @@ export default function HomePage() {
                 <b>our open-source tech and collaboration drive innovation</b>
                 for transparent, efficient, engaged local governance.
               </p>
-              <Link href="/projects" className="btn btn--grow">
+              <Button href="/projects" className="btn btn--grow">
                 Find Projects
-              </Link>
+              </Button>
             </div>
             <Slider className="lg:w-3/5">
               <div className="keen-slider__slide">

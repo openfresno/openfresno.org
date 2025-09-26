@@ -1,5 +1,5 @@
 import moment from "moment";
-import Button from "../../../components/ui/button/Button";
+import { Button } from "../../../components/ui";
 
 /**
  * Single project start section.

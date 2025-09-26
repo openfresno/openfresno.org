@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "../../../integrations/tabler-icon";
-
+import { NavExtendedToggle } from "../../../components/ui";
 import "./extended-menu.css";
 
 /**
@@ -51,13 +50,10 @@ export default function ExtendedNavbarMenu({ className = "" }) {
         <li>
           <Link href="/donate">Donate</Link>
         </li>
-        <button
-          className="navbar-extended-toggle-button"
-          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
-        >
-          Get Involved
-          <ChevronRight className="ms-1" height={20} width={20} />
-        </button>
+        <NavExtendedToggle
+          mobileNavPosition={mobileNavPosition}
+          toggleMobileNavPosition={toggleMobileNavPosition}
+        />
       </ul>
       <ul
         className={`${mobileNavPosition ? "grid" : "hidden"} navbar-extended-mobile-container nav-semi-bold`}
@@ -77,13 +73,10 @@ export default function ExtendedNavbarMenu({ className = "" }) {
         <li>
           <Link href="/faq">FAQs</Link>
         </li>
-        <button
-          className="navbar-extended-toggle-button"
-          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
-        >
-          <ChevronLeft className="-ms-1 me-1" height={20} width={20} />
-          Back
-        </button>
+        <NavExtendedToggle
+          mobileNavPosition={mobileNavPosition}
+          toggleMobileNavPosition={toggleMobileNavPosition}
+        />
       </ul>
       <div className="navbar-extended-desktop-container page-container">
         <section className="navbar-extended-desktop-section">

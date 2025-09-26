@@ -1,51 +1,125 @@
+import { HamburgerStaggered, IconX } from "../../../components/icon";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp,
+} from "../../../integrations/tabler-icon";
 import Link from "next/link";
+import "./button.css";
 
 /**
- * `Button` is a flexible component that renders either:
- * - A styled `<Link>` (for navigation), when an `href` is provided.
- * - A styled `<button>` (for actions), when no `href` is provided.
+ * A flexible, multi-purpose component for rendering a styled button or link.
  *
- * This allows consistent styling and behavior across links and buttons
- * in the application.
+ * This component acts as a smart wrapper, rendering either a Next.js `<Link>`
+ * or a native `<button>` element based on whether the `href` prop is provided.
+ * This ensures consistent styling and behavior for all interactive elements
+ * while keeping the core component logic minimal. The specific appearance is
+ * controlled entirely by the CSS classes passed via the `className` prop.
  *
- * @component
- *
- * @param {Object} props - The component props.
- * @param {string} [props.className] - Optional CSS class names for styling.
- * @param {string} [props.href] - If provided, renders a Next.js `<Link>` with this URL.
- * @param {string} [props.target="_self"] - Specifies where to open the linked document
- *   (e.g., `_blank` for new tab). Only applies when `href` is set.
- * @param {function} [props.onClick] - Click handler function. Only applies when rendering as a `<button>`.
- * @param {string|React.ReactNode} props.textContent - The text or content displayed inside the button or link.
- *
- * @returns {JSX.Element} A styled button or link element.
+ * @param {object} props - The component props.
+ * @param {string} [props.className] - The CSS class names to apply for styling (e.g., 'btn', 'btn-small', 'btn-alt--transition').
+ * @param {string} [props.href] - If provided, the component renders a `<Link>` with this URL.
+ * @param {string} [props.target="_self"] - Specifies where to open the linked document (e.g., `_blank` for a new tab). Only applies when `href` is set.
+ * @param {function} [props.onClick] - Click handler function. Only applies when the component renders as a `<button>`.
+ * @param {React.ReactNode} props.children - The content to be rendered inside the button or link (e.g., text, icons, other components).
+ * @param {string|React.ReactNode} props.textContent - DEPRECATED: Use children instead. The text or content displayed inside the button or link.
  *
  * @example
-// Renders a link
-<Button
-  className="btn-primary"
-  href="/about"
-  textContent="Learn More"
-/>
+// Renders a link with default styles
+<BaseButton className="btn" href="/about">
+  Learn More
+</BaseButton>
  *
  * @example
-// Renders a button
-<Button
-  className="btn-secondary"
-  onClick={() => alert("Clicked!")}
-  textContent="Click Me"
-/>
+// Renders a link with a growing border effect
+<BaseButton className="btn btn--grow" href="/contact">
+  Get In Touch
+</BaseButton>
+ *
+ * @example
+// Renders a button with the 'alt' style
+<BaseButton className="btn btn-alt" onClick={() => console.log('Button clicked!')}>
+  Submit
+</BaseButton>
  */
-const Button = ({ className, href, target, onClick, textContent }) => {
-  return href ? (
-    <Link className={className} href={href} target={target ? target : "_self"}>
-      {textContent}
-    </Link>
-  ) : (
-    <button className={className} onClick={onClick ? onClick : null}>
-      {textContent}
+const BaseButton = ({
+  className,
+  href,
+  target,
+  onClick,
+  children,
+  textContent,
+}) => {
+  if (href) {
+    return (
+      <Link
+        className={className}
+        href={href}
+        target={target ? target : "_self"}
+      >
+        {children || textContent}
+      </Link>
+    );
+  }
+  return (
+    <button className={className} onClick={onClick}>
+      {children || textContent}
     </button>
   );
 };
 
-export default Button;
+const NavToggle = ({ mobile, extendedMenuVisible, showExtendedMenu }) => {
+  if (mobile) {
+    return (
+      <BaseButton
+        className="navbar-toggle-button--desktop"
+        onClick={() => showExtendedMenu(!extendedMenuVisible)}
+      >
+        Get Involved
+        {extendedMenuVisible ? (
+          <ChevronUp className="ms-2" />
+        ) : (
+          <ChevronDown className="ms-2" />
+        )}
+      </BaseButton>
+    );
+  } else {
+    return (
+      <BaseButton
+        className="navbar-toggle-button--mobile"
+        onClick={() => showExtendedMenu(!extendedMenuVisible)}
+      >
+        {extendedMenuVisible ? <IconX /> : <HamburgerStaggered />}
+      </BaseButton>
+    );
+  }
+};
+
+const NavExtendedToggle = ({ toggleMobileNavPosition, mobileNavPosition }) => {
+  {
+    if (mobileNavPosition) {
+      return (
+        <BaseButton
+          className="navbar-extended-toggle-button"
+          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
+        >
+          <ChevronLeft className="-ms-1 me-1" height={20} width={20} />
+          Back
+        </BaseButton>
+      );
+    } else {
+      return (
+        <BaseButton
+          className="navbar-extended-toggle-button"
+          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
+        >
+          Get Involved
+          <ChevronRight className="ms-1" height={20} width={20} />
+        </BaseButton>
+      );
+    }
+  }
+};
+
+export { NavExtendedToggle, NavToggle, BaseButton };
