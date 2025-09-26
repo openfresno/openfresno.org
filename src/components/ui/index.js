@@ -3,3 +3,4 @@ export { default as Button } from "./Button";
 export { default as HeaderUnderline } from "./HeaderUnderline";
 export { default as SidebarSection } from "./SidebarSection";
 export { default as Steps } from "./Steps";
+export { default as Timeline } from "./timeline/Timeline";

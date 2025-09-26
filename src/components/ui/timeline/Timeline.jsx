@@ -1,7 +1,18 @@
 import Link from "next/link";
-import "./home-numbered2.css";
+import "./timeline.css";
 
-export default function HomeNumbered2({ className }) {
+/**
+ * A responsive, multi-step timeline component for displaying a list of opportunities.
+ *
+ * This component renders a vertical timeline that transitions from a single-column
+ * layout on mobile to an alternating two-column layout on desktop. The styling
+ * and layout logic are fully described in the associated CSS file's comments.
+ *
+ * @component
+ * @param {object} props
+ * @param {string} [props.className] Optional CSS classes to apply to the root div element.
+ */
+export default function Timeline({ className }) {
   return (
     <div className={`timeline ${className}`}>
       <div className="mt-10 ps-8 pb-10 md:hidden">

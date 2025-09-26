@@ -1,9 +1,7 @@
-import Button from "../../components/ui/Button";
-import { Slider } from "../../components/ui";
+import { Slider, Timeline, Button } from "../../components/ui";
 import Link from "next/link";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import AppLayout from "../../components/layout/AppLayout";
-import HomeNumbered2 from "./-home-numbered/HomeNumbered2";
 import "./home.css";
 
 export default function HomePage() {
@@ -113,7 +111,7 @@ export default function HomePage() {
             <h1 className="heading-main app-color--dark">Opportunities</h1>
             <h2 className="sub-heading-main">Explore Our Volunteer Options</h2>
           </div>
-          <HomeNumbered2 />
+          <Timeline />
         </section>
         <section className="app-color--dark py-12 lg:py-24">
           <div className="page-split">
