@@ -68,7 +68,7 @@ export default function ExtendedNavbarMenu({ className = "" }) {
           <Link href="/pitch">Pitch a Project</Link>
         </li>
         <li>
-          <Link href="/meetup">Meetup</Link>
+          <Link href="https://www.meetup.com/openfresno">Meetup</Link>
         </li>
         <li>
           <Link href="/faq">FAQs</Link>
