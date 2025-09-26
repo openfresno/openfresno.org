@@ -1,4 +1,9 @@
-/* Styles for the extended dropdown menu in the navigation bar. */
+/*
+  Styles for the extended dropdown menu in the navigation bar.
+  - Mobile view: Toggles between two distinct navigation menus.
+  - Desktop view: Displays multiple sections with descriptive text and
+  call-to-action links.
+*/
 .navbar-extended-container {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-top: 1px solid #ebeae5;

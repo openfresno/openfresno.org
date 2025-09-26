@@ -2,7 +2,7 @@ import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import SidebarSection from "../../components/ui/SidebarSection";
 import Steps from "../../components/ui/Steps";
 import instructionData from "./instructions.json";
-import AppLayout from "@/components/layout/AppLayout";
+import LayoutE53 from "@/components/layout/LayoutE53";
 
 /**
  * Section type. Displays light or dark themes.
@@ -18,7 +18,7 @@ export const SectionType = {
  */
 export default function GetStartedPage() {
   return (
-    <AppLayout>
+    <LayoutE53>
       <section className={`general-section-${SectionType.light}`}>
         <HeaderUnderline
           sectionType={SectionType.light}
@@ -58,6 +58,6 @@ export default function GetStartedPage() {
         </div>
         <Steps sectionType={SectionType.dark} steps={instructionData}></Steps>
       </SidebarSection>
-    </AppLayout>
+    </LayoutE53>
   );
 }

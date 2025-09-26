@@ -1,12 +1,12 @@
 import { Button, Slider, Timeline } from "../../components/ui";
 import Link from "next/link";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
-import AppLayout from "../../components/layout/AppLayout";
+import LayoutE53 from "../../components/layout/LayoutE53";
 import "./home.css";
 
 export default function HomePage() {
   return (
-    <AppLayout fadeNavbar={true}>
+    <LayoutE53 fadeNavbar={true}>
       <main>
         <header className="home-landing-container">
           <div className="space-y-10">
@@ -17,15 +17,15 @@ export default function HomePage() {
               a brighter future!
             </p>
             <div className="space-x-5">
-              <Link
+              <Button
                 className="btn btn-alt btn-alt--transition"
                 href="/get-started"
               >
                 Get Started
-              </Link>
-              <Link className="btn btn--grow" href="/projects">
+              </Button>
+              <Button className="btn btn--grow" href="/projects">
                 View Projects
-              </Link>
+              </Button>
             </div>
           </div>
           <div>
@@ -292,6 +292,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-    </AppLayout>
+    </LayoutE53>
   );
 }

@@ -1,17 +1,15 @@
 import Link from "next/link";
 
 /**
- * This component provides the main application footer for the application.
- *
+ * The default footer for the application.
  * - "Get Involved" message: Describes Open Fresno's mission and fiscal sponsorship.
  * - Action links: Provides quick links to the Open Fresno Meetup group, projects, and FAQs.
  * - Social media links: Includes icons that link to the organization's Facebook, X (formerly Twitter), and YouTube pages.
  * - Bottom section displays the "Open Fresno" title and additional links
  * for getting started, learning about the team, and viewing the code of conduct.
- *
  * @returns {JSX.Element} The rendered footer component.
  */
-export default function AppFooter() {
+export default function FooterE4d() {
   return (
     <footer>
       <div className="footerContainerTop">

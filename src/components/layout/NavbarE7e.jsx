@@ -1,24 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import ExtendedNavbarMenu from "./ExtendedNavbarMenu";
+import NavbarMenuE87 from "./NavbarMenuE87";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import BasePathImage from "../../../integrations/gh-pages/BasePathImage";
-import { NavToggle } from "../../../components/ui";
+import BasePathImage from "../../integrations/gh-pages/BasePathImage";
+import { NavToggle } from "../ui";
 import "./app-navbar.css";
 
 /**
- * The default application navigation bar.
- *
- * - Includes an extended menu that exapnds to shows more text underneath the navbar.
- *   - @see ExtendedNavbarMenu
+ * The default navigation bar for the application.
+ * - Includes an extended menu that expands to show more text underneath the navbar.
  * EXPERIMENTAL: The desktop links have a sliding underline animation when the page navigates.
  * EXPERIMENTAL: The fade on-scroll effect uses CSS scroll-driven animations. It is not supported by Chrome < 115, Firefox, Firefox for Android, Safari, Safari on iOS. On unsupprted platforms it functions the same as fade = false.
  * @param {boolean} fade - Whether to enable fade effect on scroll
  * @returns {JSX.Element}
  */
-export default function AppNavbar({ fade = false }) {
+export default function NavbarE7e({ fade = false }) {
   const [extendedMenuVisible, showExtendedMenu] = useState(false);
   const websiteURL = usePathname();
   const navbarRef = useRef(null);
@@ -95,9 +93,7 @@ export default function AppNavbar({ fade = false }) {
           mobile={false}
         />
       </div>
-      {extendedMenuVisible && (
-        <ExtendedNavbarMenu visible={extendedMenuVisible} />
-      )}
+      {extendedMenuVisible && <NavbarMenuE87 />}
     </nav>
   );
 }

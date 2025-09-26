@@ -1,5 +1,5 @@
-import Link from "next/link";
 import "./timeline.css";
+import { Button } from "@/components/ui";
 
 /**
  * A responsive, multi-step timeline component for displaying a list of opportunities.
@@ -32,9 +32,12 @@ export default function Timeline({ className }) {
             Join us to be a part of a vibrant community dedicated to positive
             change through technology.
           </p>
-          <Link className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
+          <Button
+            className="btn btn--grow mx-auto mt-2 lg:mx-0"
+            href="https://www.meetup.com/openfresno"
+          >
             Visit Meetup
-          </Link>
+          </Button>
         </div>
       </div>
       <div className="timeline-item">
@@ -46,9 +49,9 @@ export default function Timeline({ className }) {
             real challenges and enhance our city. Be part of a dynamic team
             working on solutions that make a difference.
           </p>
-          <Link className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
+          <Button className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
             See Our Project
-          </Link>
+          </Button>
         </div>
       </div>
       <div className="timeline-item">
@@ -60,9 +63,9 @@ export default function Timeline({ className }) {
             and join forces with our community of innovators to bring your
             vision to life, driving positive change in Central California.
           </p>
-          <Link className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
+          <Button className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
             Pitch a Project
-          </Link>
+          </Button>
         </div>
       </div>
       <div className="timeline-item">
@@ -78,12 +81,12 @@ export default function Timeline({ className }) {
             <b>explore what awaits you at our partner's space!</b>
           </p>
           <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <Link className="btn btn--grow" href="">
+            <Button className="btn btn--grow" href="">
               Check it Out
-            </Link>
-            <Link className="btn btn--grow" href="">
+            </Button>
+            <Button className="btn btn--grow" href="">
               Explore Calendar
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

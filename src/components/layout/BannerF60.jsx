@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import useBanner from "@/utility/hooks/useBanner";
+import useBanner from "../../utility/hooks/useBanner";
 
 /**
- * Banner component to display at the top of the page
+ * A banner at the top of the page
  *
  * @example
  * ```
@@ -27,7 +27,7 @@ import useBanner from "@/utility/hooks/useBanner";
  * @param {JSX.Element} children - The message to display in the banner
  * @returns {JSX.Element|null}
  */
-export default function Banner({ children }) {
+export default function BannerF60({ children }) {
   const { visible: bannerVisible, dismissBanner } = useBanner({
     id: "community-support-statement-2025-banner",
   });
