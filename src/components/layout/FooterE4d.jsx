@@ -1,5 +1,5 @@
 import Link from "next/link";
-import "./app-footer.css";
+import Image from "next/image";
 
 /**
  * The default footer for the application.
@@ -13,22 +13,21 @@ import "./app-footer.css";
 export default function FooterE4d() {
   return (
     <footer>
-      <div className="footerContainerTop">
-        <div className="footerMessage">
-          <h2 className="footerMessageHeader">Get Involved.</h2>
-          <p className="footerMessageParagraph">
+      <div className="footer-top-content p2-regular">
+        <section>
+          <h2 className="sub-heading-main">Get Involved.</h2>
+          <p>
             Open Fresno is a tax-deductible civic-tech community dedicated to
             using technology and open data for positive civic change in Fresno.
             Open Fresno is fiscally sponsored by{" "}
             <Link href="https://www.dbaarts.org/">DBA Arts</Link>.
           </p>
-        </div>
-
-        <div className="footerActionLinks">
-          <p className="footerActionLinksItem">
+        </section>
+        <section className="grid h-full items-center gap-y-4">
+          <p>
             Join us for our weekly meetings on{" "}
             <Link
-              className="footerActionLinksAnchor"
+              className="footer-link--underline"
               href="https://www.meetup.com/openfresno/"
               target="_blank"
               rel="noopener noreferrer"
@@ -38,74 +37,68 @@ export default function FooterE4d() {
             </Link>
             .
           </p>
-          <p className="footerActionLinksItem">
+          <p>
             See our{" "}
-            <Link href="/projects" className="footerActionLinksAnchor">
+            <Link href="/projects" className="footer-link--underline">
               projects
             </Link>
             .
           </p>
-          <p className="footerActionLinksItem">
+          <p>
             For any questions, visit our{" "}
-            <Link href="/faq" className="footerActionLinksAnchor">
+            <Link href="/faq" className="footer-link--underline">
               FAQs
             </Link>
             .
           </p>
-        </div>
-
-        <div className="footerSocialMedia">
+        </section>
+        <section className="flex justify-end gap-12">
           <Link
             href="https://www.facebook.com/openfresno"
             target="_blank"
             rel="noopener noreferrer"
-            className="footerSocialMediaLink"
           >
-            <img
+            <Image
               src="/img/socialmedia/facebook.svg"
               alt="Facebook"
-              className="footerSocialMediaIcon"
+              width={46}
+              height={46}
             />
           </Link>
           <Link
             href="https://twitter.com/openfresno"
             target="_blank"
             rel="noopener noreferrer"
-            className="footerSocialMediaLink"
           >
-            <img
+            <Image
               src="/img/socialmedia/twitter.svg"
               alt="X"
-              className="footerSocialMediaIcon"
+              width={46}
+              height={46}
             />
           </Link>
           <Link
             href="https://www.youtube.com/@openfresno"
             target="_blank"
             rel="noopener noreferrer"
-            className="footerSocialMediaLink"
           >
-            <img
+            <Image
               src="/img/socialmedia/youtube.svg"
               alt="Youtube"
-              className="footerSocialMediaIcon"
+              width={46}
+              height={46}
             />
           </Link>
-        </div>
+        </section>
       </div>
-
-      <div className="footerBottomContainer">
-        <div className="footerBottomTitle">Open Fresno</div>
-        <div className="footerBottomLinksContainer">
-          <Link href="/get-started" className="footerBottomLink">
-            get started
-          </Link>
-          <Link href="/about/#team" className="footerBottomLink">
-            our team
-          </Link>
-          <Link href="/code-of-conduct" className="footerBottomLink">
-            code of conduct
-          </Link>
+      <div className="border-t-1">
+        <div className="footer-bottom-content">
+          <div className="caption-footer">Open Fresno</div>
+          <div className="caption-regular-uppercase space-x-10">
+            <Link href="/get-started">Get started</Link>
+            <Link href="/about/#team">Our team</Link>
+            <Link href="/code-of-conduct">Code of conduct</Link>
+          </div>
         </div>
       </div>
     </footer>
