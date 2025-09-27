@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import { NavToggle } from "../ui";
-import "./app-navbar.css";
 
 /**
  * The default navigation bar for the application.

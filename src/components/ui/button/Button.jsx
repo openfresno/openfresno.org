@@ -6,7 +6,6 @@ import {
   ChevronUp,
 } from "../../../integrations/tabler-icon";
 import Link from "next/link";
-import "./button.css";
 
 /**
  * A flexible, multi-purpose component for rendering a styled button or link.

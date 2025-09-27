@@ -1,4 +1,3 @@
-import "./instructions.css";
 /**
  * `Steps` is a presentational component that displays a sequence of numbered
  * instructional steps, each with an image, title, and descriptive body text.

@@ -1,5 +1,13 @@
 @import "./typography.css";
 @import "./layout.css";
+@import "../../components/layout/app-footer.css";
+@import "../../components/layout/app-navbar.css";
+@import "../../components/layout/extended-menu.css";
+@import "../../components/ui/button/button.css";
+@import "../../components/ui/instructions/instructions.css";
+@import "../../components/ui/slider/slider.css";
+@import "../../components/ui/timeline/timeline.css";
+@import "../(home)/home.css";
 
 /*
 Global styles for the Open Fresno website.
@@ -7,7 +15,6 @@ Global styles for the Open Fresno website.
 This project also includes Tailwind CSS preflight styles.
 @See https://tailwindcss.com/docs/preflight
  */
-
 h1,
 h2,
 h3,

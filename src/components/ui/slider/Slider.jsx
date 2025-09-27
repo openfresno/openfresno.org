@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import KeenSlider from "../../../integrations/keen-slider/KeenSlider";
-import "./slider.css";
 
 /**
  * The slider for application features, like the projects slideshow.
