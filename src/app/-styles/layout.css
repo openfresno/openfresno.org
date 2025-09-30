@@ -35,6 +35,7 @@
    ╰──────────╯
 */
 .heading-main {
+  margin-bottom: 0.75rem;
   border-radius: 8px;
   padding: 10px;
   width: fit-content;

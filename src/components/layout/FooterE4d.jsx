@@ -15,7 +15,7 @@ export default function FooterE4d() {
     <footer>
       <div className="footer-top-content p2-regular">
         <section>
-          <h2 className="sub-heading-main">Get Involved.</h2>
+          <h2 className="sub-heading-main mb-8">Get Involved.</h2>
           <p>
             Open Fresno is a tax-deductible civic-tech community dedicated to
             using technology and open data for positive civic change in Fresno.
@@ -23,7 +23,7 @@ export default function FooterE4d() {
             <Link href="https://www.dbaarts.org/">DBA Arts</Link>.
           </p>
         </section>
-        <section className="grid h-full items-center gap-y-4">
+        <section className="grid auto-rows-min gap-y-8">
           <p>
             Join us for our weekly meetings on{" "}
             <Link
@@ -52,7 +52,7 @@ export default function FooterE4d() {
             .
           </p>
         </section>
-        <section className="flex justify-end gap-12">
+        <section className="footer-socials">
           <Link
             href="https://www.facebook.com/openfresno"
             target="_blank"
