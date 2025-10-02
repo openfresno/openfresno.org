@@ -56,13 +56,33 @@ Key selectors
  width: calc(50% - 128px);
 */
 
+/*
+Magic numbers based on guess and check.
+would need unknown-to-me css magic or js
+*/
+@keyframes timeline-animation{
+  0%{
+    top: 10%;
+  }
+  25%{
+    top: 34%;
+  }
+  50%{
+    top: 56%;
+  }
+  100%{
+    top: 85%;
+  }
+  
+}
 .timeline {
   position: relative;
   counter-reset: timeline-counter;
   margin: auto;
+  /* Used to animate the dot based on this element's view in the browser*/
+  view-timeline: --timelineAnimation block 20% 20%;
 
   /* The vertical line running through the middle */
-
   &::before {
     position: absolute;
     top: 0;
@@ -74,6 +94,7 @@ Key selectors
     content: "";
   }
 
+  /* The dot that moves along the vertical line */
   &::after {
     position: absolute;
     top: 0;
@@ -85,6 +106,10 @@ Key selectors
     width: 12px;
     height: 12px;
     content: "";
+    animation-timeline: --timelineAnimation;
+    animation-timing-function: ease-in-out;
+    animation-name: timeline-animation;
+    animation-fill-mode: both;
   }
 
   @media (min-width: 768px) {
