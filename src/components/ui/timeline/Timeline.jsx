@@ -122,7 +122,7 @@ export default function Timeline({ className }) {
               // i-1 is because the array is 1 indexed (timelineNumbers[0] === null)
               let percentageValue = Math.round((i-1) * stepSize);
               // as a pixel value
-              let topValue = bounds.y - clientRect.y;
+              let topValue = bounds.y - clientRect.y + (bounds.height/4);
               styleText+=`\t${percentageValue}% {\n
                           \t\ttop: ${topValue}px;\n
                           \t}\n`;
