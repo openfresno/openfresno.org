@@ -9,6 +9,25 @@ export class SimpleButton {
     }
 }
 
+/**
+ * A responsive component for displaying a single opportunity.
+ *
+ * This component renders single slice of a vertical timeline that transitions
+ * from a single-column layout on mobile to an alternating two-column layout on
+ * desktop. The styling and layout logic are fully described in the associated 
+ * CSS file's comments.
+ *
+ * @component
+ * @param {object} props
+ * @param {integer} [props.number] The number to display
+ * @param {string} [props.heading] The heading text to display
+ * @param {SimpleButton[]} [props.button] A list of buttons to display, with 
+ *        adaptive rendering for single buttons and pairs of buttons
+ * @param {(integer, DOMRect)=>null} [props.updateTimelineNumbers] A callback function from the
+ *        parent to get the position of the timeline number for animation purposes
+ * @param {React.JSX.Element} [props.children] The text to display within the timeline column.
+ *        Inserted using <TimelineItem ...props> ...children</TimelineItem>
+ */
 export function TimelineItem({
     number = 0,
     heading,
@@ -41,7 +60,6 @@ export function TimelineItem({
                         <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
                             {
                                 buttons.map((button, index) => {
-                                    console.log(button, index);
                                     return (<Button className="btn btn--grow" href={button.href} key={index}>
                                         {button.text}
                                     </Button>)

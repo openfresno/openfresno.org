@@ -40,7 +40,6 @@ export default function Timeline({ className }) {
         return copy;
       });
     }
-    console.log("Numbers:", timelineNumbers);
   }
 
 
@@ -114,7 +113,7 @@ export default function Timeline({ className }) {
       <style>
         {(()=>{
           //the array is 1 indexed;
-          let itemCount = timelineNumbers.length - 1;
+          let itemCount = timelineNumbers.length;
           let stepSize = 100 / (itemCount - 1);
           let styleText = `@keyframes timeline-animation{\n`
           timelineNumbers.forEach((bounds, i) => {
@@ -123,7 +122,7 @@ export default function Timeline({ className }) {
               // i-1 is because the array is 1 indexed (timelineNumbers[0] === null)
               let percentageValue = Math.round((i-1) * stepSize);
               // as a pixel value
-              let topValue = bounds.y - clientRect.y+(bounds.height/2);
+              let topValue = bounds.y - clientRect.y;
               styleText+=`\t${percentageValue}% {\n
                           \t\ttop: ${topValue}px;\n
                           \t}\n`;
@@ -133,7 +132,7 @@ export default function Timeline({ className }) {
           // because will not work if it is loaded first in the stylesheet.
           let animationStyle = "}\n" + `
             .timeline {\n
-            \tview-timeline: --timelineAnimation block 20% 20%;\n
+            \tview-timeline: --timelineAnimation block -20% 20%;\n
             \t&::after {\n
             \t\tanimation-timeline: --timelineAnimation;\n
             \t\tanimation-timing-function: ease-in-out;\n
