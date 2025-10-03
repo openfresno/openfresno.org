@@ -60,6 +60,7 @@ Key selectors
 Magic numbers based on guess and check.
 would need unknown-to-me css magic or js
 */
+/*
 @keyframes timeline-animation{
   0%{
     top: 10%;
@@ -75,6 +76,7 @@ would need unknown-to-me css magic or js
   }
   
 }
+*/
 .timeline {
   position: relative;
   counter-reset: timeline-counter;
