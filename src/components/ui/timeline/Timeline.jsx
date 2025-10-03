@@ -36,9 +36,7 @@ export default function Timeline({ className }) {
     } else {
       setTimelineNumbers((previousTimelineNumbers) => {
         let copy = [...previousTimelineNumbers];
-        console.log("before inserting", copy);
         copy[timelineNumber] = bounds;
-        console.log("after inserting", copy);
         return copy;
       });
     }
@@ -143,11 +141,7 @@ export default function Timeline({ className }) {
             \t\tanimation-fill-mode: both;\n
             \t}\n
           }`;
-          console.log(styleText+animationStyle);
-          console.log("timelineNumbers: ", timelineNumbers);
-          console.log("clientRect", clientRect);
           return styleText+animationStyle;
-
         })()}
         {}
       </style>

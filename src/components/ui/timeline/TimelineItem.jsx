@@ -21,7 +21,6 @@ export function TimelineItem({
         if (refContainer.current) {
             updateTimelineNumbers(number, refContainer.current.getBoundingClientRect());
         }
-        console.log(`button count: ${buttons.length}`)
     }, []);
     return (
         <div className="timeline-item">
