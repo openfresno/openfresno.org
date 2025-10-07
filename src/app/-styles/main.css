@@ -5,9 +5,9 @@
 @import "../../components/layout/navbar-menu.css";
 @import "../../components/ui/button/button.css";
 @import "../../components/ui/instructions/instructions.css";
-@import "../../components/ui/slider/slider.css";
 @import "../../components/ui/timeline/timeline.css";
 @import "../(home)/home.css";
+/* Include all styles here 👆. PostCSS will bundle this into 1 file. */
 
 /*
 Global styles for the Open Fresno website.
@@ -29,7 +29,6 @@ body {
   font-size: 16px;
   line-height: 24px;
   @media (min-width: 576px) {
-    font-weight: 400;
     font-size: 18px;
     line-height: 28px;
   }
