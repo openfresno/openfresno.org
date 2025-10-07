@@ -1,4 +1,4 @@
-import { HamburgerStaggered, IconX } from "../../../components/icon";
+import { HamburgerStaggered, IconX } from "..";
 import {
   ChevronDown,
   ChevronLeft,
