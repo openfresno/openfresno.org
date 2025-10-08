@@ -1,6 +1,6 @@
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from '@playwright/test'
 export default defineConfig({
-  testDir: './__tests__',
+  testDir: './tests',
   use: {
     baseURL: 'http://localhost:3000',
     browserName: 'chromium',
@@ -18,7 +18,7 @@ export default defineConfig({
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000, // give Next.js plenty of time to boot
   },
-});
+})
 
 
 /**
