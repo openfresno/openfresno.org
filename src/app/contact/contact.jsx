@@ -11,6 +11,10 @@ import { createTheme } from "@mui/material/styles";
 export const SectionType = {
   light: "light",
   dark: "dark",
+  invert: (type) => {
+    if(type === "light") return "dark";
+    if(type === "dark") return "light";
+  }
 };
 
 /**

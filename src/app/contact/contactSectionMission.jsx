@@ -2,6 +2,7 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
 import { useState } from "react";
+import { SectionType } from "./contact";
 
 /**
  * contact mission section.
@@ -22,15 +23,19 @@ export default function ContactSectionMission({ sectionType }) {
 
   return (
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
-    <section className={`contact-section-mission`}>
-      <div className={`contact-mission-container contact-mission-padding`}>
+    <section className={`general-section-${sectionType}`}>
+      <div className={`general-section-container contact-mission-padding`}>
         <div
           className={`contact-${sectionType}-heading-container heading-underline underline-alt`}
         >
-          <h1 className={`general-heading-main general-heading-main-alt`}>
+          <h1 className={`general-heading-main general-heading-${sectionType}`}>
             CONTACT FORM
           </h1>
-          <h2 className={`sub-heading-main`}>Get In Touch</h2>
+          <h2
+            className={`general-sub-heading-main general-sub-heading-${sectionType}`}
+          >
+            Get In Touch
+          </h2>
         </div>
         <p className={`paragraph-large`}>
           <span className={`paragraph-bold`}>
@@ -60,7 +65,7 @@ export default function ContactSectionMission({ sectionType }) {
           .
         </p>
       </div>
-      <div className="form-holder mission-container">
+      <div className="general-section-container form-holder">
         <form>
           <div className="form-input">
             <TextField
@@ -212,19 +217,21 @@ export default function ContactSectionMission({ sectionType }) {
               }}
             />
           </div>
-          <Button
-            href={mailtoUri}
-            variant="contained"
-            size="large"
-            sx={{
-              whiteSpace: "nowrap",
-              background: "white",
-              color: "black",
-              marginLeft: "80%",
-            }}
-          >
-            Send Message
-          </Button>
+          <div>
+            <Button
+              href={mailtoUri}
+              variant="contained"
+              size="large"
+              sx={{
+                whiteSpace: "nowrap",
+                background: "white",
+                color: "black",
+                float: "right",
+              }}
+            >
+              Send Message
+            </Button>
+          </div>
         </form>
       </div>
     </section>

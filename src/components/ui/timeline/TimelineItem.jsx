@@ -10,7 +10,7 @@ export class SimpleButton {
 }
 
 /**
- * A responsive component for displaying a single opportunity.
+ * A responsive component for displaying a single volunteer opportunity.
  *
  * This component renders single slice of a vertical timeline that transitions
  * from a single-column layout on mobile to an alternating two-column layout on

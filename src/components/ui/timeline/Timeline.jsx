@@ -4,15 +4,15 @@ import { Button } from "../../ui";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
 
 /**
- * A responsive, multi-step timeline component for displaying a list of opportunities.
+ * a responsive, multi-step timeline component for displaying a list of opportunities.
  *
- * This component renders a vertical timeline that transitions from a single-column
- * layout on mobile to an alternating two-column layout on desktop. The styling
- * and layout logic are fully described in the associated CSS file's comments.
+ * this component renders a vertical timeline that transitions from a single-column
+ * layout on mobile to an alternating two-column layout on desktop. the styling
+ * and layout logic are fully described in the associated css file's comments.
  *
  * @component
  * @param {object} props
- * @param {string} [props.className] Optional CSS classes to apply to the root div element.
+ * @param {string} [props.classname] optional css classes to apply to the root div element.
  */
 
 export default function Timeline({ className }) {
@@ -26,22 +26,20 @@ export default function Timeline({ className }) {
     }
   }, []);
 
-  function updateTimelineNumbers(timelineNumber, bounds){
-    if(timelineNumbers[timelineNumber]){
-      setTimelineNumbers((previousTimelineNumbers) => {
-        previousTimelineNumbers.map((_, i) =>{
-          if(i == timelineNumber) return bounds;
-        })
-      });
-    } else {
-      setTimelineNumbers((previousTimelineNumbers) => {
+
+  function updateTimelineNumbers(timelineNumber, bounds) {
+    setTimelineNumbers((previousTimelineNumbers) => {
+      if (timelineNumbers[timelineNumber]) {
+        return previousTimelineNumbers.map((_, i) => {
+          if (i == timelineNumber) return bounds;
+        });
+      } else {
         let copy = [...previousTimelineNumbers];
         copy[timelineNumber] = bounds;
         return copy;
-      });
-    }
+      }
+    });
   }
-
 
   return (
     <div className={`timeline ${className}`} ref={refContainer}>
@@ -52,7 +50,7 @@ export default function Timeline({ className }) {
         </h2>
       </div>
       <TimelineItem
-        number="1"
+        number={1}
         heading="Engage with Our Community"
         buttons={[
           new SimpleButton(
@@ -68,7 +66,7 @@ export default function Timeline({ className }) {
         change through technology.
       </TimelineItem>
       <TimelineItem
-        number="2"
+        number={2}
         heading="Drive Innovation with Projects"
         buttons={[
           new SimpleButton(
@@ -81,7 +79,7 @@ export default function Timeline({ className }) {
         working on solutions that make a difference.
       </TimelineItem>
       <TimelineItem
-        number="3"
+        number={3}
         heading="Pitch Your Vision"
         buttons={[
           new SimpleButton(
@@ -94,7 +92,7 @@ export default function Timeline({ className }) {
         vision to life, driving positive change in Central California.
       </TimelineItem>
       <TimelineItem
-        number="4"
+        number={4}
         heading="Explore On-Site Opportunities with Root Access"
         buttons={[
           new SimpleButton(
@@ -110,12 +108,23 @@ export default function Timeline({ className }) {
         and join forces with our community of innovators to bring your
         vision to life, driving positive change in Central California.
       </TimelineItem>
+      <TimelineItem
+        number={5}
+        heading="Drive Innovation with Projects"
+        buttons={[
+          new SimpleButton(
+          "See Our Project"
+        )]}
+        updateTimelineNumbers={updateTimelineNumbers}
+      >
+        Test text
+      </TimelineItem>
       <style>
         {(()=>{
           //the array is 1 indexed;
           let itemCount = timelineNumbers.length;
           let stepSize = 100 / (itemCount - 1);
-          let styleText = `@keyframes timeline-animation{\n`
+          let styleText = `@keyframes timeline-animation\{\n`
           timelineNumbers.forEach((bounds, i) => {
             if(bounds != null){
               // animates with the progress of viewing the timeline at equal intervals
@@ -130,7 +139,7 @@ export default function Timeline({ className }) {
           });
           // This is cursed, but animation styles have to be declared here
           // because will not work if it is loaded first in the stylesheet.
-          let animationStyle = "}\n" + `
+          let animationStyle = `}\n
             .timeline {\n
             \tview-timeline: --timelineAnimation block -20% 20%;\n
             \t&::after {\n
@@ -139,7 +148,8 @@ export default function Timeline({ className }) {
             \t\tanimation-name: timeline-animation;\n
             \t\tanimation-fill-mode: both;\n
             \t}\n
-          }`;
+            }
+          `;
           return styleText+animationStyle;
         })()}
       </style>

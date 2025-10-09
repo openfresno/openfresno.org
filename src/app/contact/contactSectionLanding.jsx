@@ -1,3 +1,4 @@
+import { SectionType } from "./contact";
 /**
  * contact landing section.
  * @returns {JSX.Element}
@@ -6,8 +7,8 @@ export default function ContactSectionLanding({ sectionType }) {
   return (
     <section className={`general-section-${sectionType}`}>
       <div className={`general-section-container heading-underline`}>
-        <h1 className={`general-heading-main`}>Contact Us</h1>
-        <h2 className={`contact-sub-heading-main`}>
+        <h1 className={`general-heading-main general-heading-${sectionType}`}>Contact Us</h1>
+        <h2 className={`general-sub-heading-main general-sub-heading-${sectionType}`}>
           Contact<br></br> Open Fresno
         </h2>
       </div>
