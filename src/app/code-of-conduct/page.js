@@ -1,10 +1,10 @@
 import Conduct from "./conduct";
-import AppLayout from "@/components/layout/AppLayout";
+import LayoutE53 from "@/components/layout/LayoutE53";
 
 export default function ConductPage() {
   return (
-    <AppLayout>
+    <LayoutE53>
       <Conduct></Conduct>
-    </AppLayout>
+    </LayoutE53>
   );
 }

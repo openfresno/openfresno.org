@@ -1,7 +1,7 @@
 import Link from "next/link";
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import SidebarSection from "../../components/ui/SidebarSection";
-import AppLayout from "@/components/layout/AppLayout";
+import LayoutE53 from "@/components/layout/LayoutE53";
 
 /**
  * Section type. Displays light or dark themes.
@@ -18,7 +18,7 @@ export const SectionType = {
  */
 export default function CommunitySupportStatementPage() {
   return (
-    <AppLayout>
+    <LayoutE53>
       <SidebarSection sectionType={SectionType.light}>
         <div className={`sidebar-info-container`}>
           <HeaderUnderline
@@ -114,6 +114,6 @@ export default function CommunitySupportStatementPage() {
           </p>
         </div>
       </SidebarSection>
-    </AppLayout>
+    </LayoutE53>
   );
 }

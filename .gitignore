@@ -615,8 +615,8 @@ $RECYCLE.BIN/
 ### macOS template
 # General
 
-# Icon must end with two \r
-Icon
+# Ignore the Icon file
+*/Icon
 
 # Thumbnails
 
@@ -663,3 +663,10 @@ Temporary Items
 
 # typescript
 next-env.d.ts
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/

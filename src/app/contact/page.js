@@ -1,10 +1,10 @@
 import Contact from "./contact";
-import AppLayout from "@/components/layout/AppLayout";
+import LayoutE53 from "@/components/layout/LayoutE53";
 
 export default function ContactPage() {
   return (
-    <AppLayout>
+    <LayoutE53>
       <Contact></Contact>
-    </AppLayout>
+    </LayoutE53>
   );
 }

@@ -1,14 +1,11 @@
-import Button from "../../components/ui/Button";
-import { Slider } from "../../components/ui";
+import { Button, Slider, Timeline } from "../../components/ui";
 import Link from "next/link";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
-import AppLayout from "../../components/layout/AppLayout";
-import HomeNumbered2 from "./-home-numbered/HomeNumbered2";
-import "./home.css";
+import LayoutE53 from "../../components/layout/LayoutE53";
 
 export default function HomePage() {
   return (
-    <AppLayout fadeNavbar={true}>
+    <LayoutE53 fadeNavbar={true}>
       <main>
         <header className="home-landing-container">
           <div className="space-y-10">
@@ -19,15 +16,15 @@ export default function HomePage() {
               a brighter future!
             </p>
             <div className="space-x-5">
-              <Link
+              <Button
                 className="btn btn-alt btn-alt--transition"
                 href="/get-started"
               >
                 Get Started
-              </Link>
-              <Link className="btn btn--grow" href="/projects">
+              </Button>
+              <Button className="btn btn--grow" href="/projects">
                 View Projects
-              </Link>
+              </Button>
             </div>
           </div>
           <div>
@@ -49,7 +46,7 @@ export default function HomePage() {
           </div>
         </header>
         <section className="app-color--dark py-12 lg:py-24">
-          <div className="split-section gap-6">
+          <div className="page-split">
             <div>
               <h1 className="heading-main app-color--light">Who we are</h1>
               <h2 className="sub-heading-main">
@@ -72,59 +69,51 @@ export default function HomePage() {
             </p>
           </div>
         </section>
-        <section className="pt-12 lg:py-24">
-          <div className="split-section lg:gap-6">
-            <div>
-              <h1 className="heading-main app-color--dark">What we do</h1>
-              <h2 className="sub-heading-main">
-                Building a Better Future For Fresno and the Central Valley Area
-              </h2>
-              <p className="paragraph-large pt-10">
-                <b>
-                  Our mission is done by uniting programmers, designers, and
-                  other talents, we transform ideas into tangible solutions that
-                  impact lives throughout Central California.
-                </b>
-                {""}
-                Together, we drive innovation forward, building a future where
-                open source technology empowers citizens and uplifts our city.{" "}
-                <b>
-                  Join us in driving innovation through open-source tech and
-                  empowering our community!
-                </b>
-              </p>
+        <section className="py-12 lg:py-24">
+          <div className="home-split-wide">
+            <div className="grid items-center">
+              <div>
+                <h1 className="heading-main app-color--dark">What we do</h1>
+                <h2 className="sub-heading-main">
+                  Building a Better Future For Fresno and the Central Valley
+                  Area
+                </h2>
+                <p className="paragraph-large pt-10">
+                  <b>
+                    Our mission is done by uniting programmers, designers, and
+                    other talents, we transform ideas into tangible solutions
+                    that impact lives throughout Central California.
+                  </b>{" "}
+                  Together, we drive innovation forward, building a future where
+                  open source technology empowers citizens and uplifts Fresno
+                  and the surrounding areas.{" "}
+                  <b>
+                    Join us in driving innovation through open-source tech and
+                    empowering our community!
+                  </b>
+                </p>
+              </div>
             </div>
-            <div className="image-container relative ms-[108px]">
+            <div className="grid items-center justify-end">
               <BasePathImage
                 alt="Open Data Day"
-                width={596}
+                width={728}
                 height={577}
-                className="main-image z-10"
-                src="/img/home/home2.png"
-              />
-              <BasePathImage
-                alt="Star shape"
-                width={294}
-                height={308}
-                className="star-image z-0"
-                src="/img/home/star.svg"
+                className="home-split-image translate-x-6 lg:translate-x-10"
+                src="/img/home/home3.png"
               />
             </div>
           </div>
         </section>
-        <section className="pb-8 lg:pb-18">
-          <div className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] pe-6 lg:px-10">
-            <div className="mb-24 hidden md:block">
-              <h1 className="heading-main app-color--dark">Opportunities</h1>
-              <h2 className="sub-heading-main">
-                Explore Our Volunteer Options
-              </h2>
-            </div>
-            <HomeNumbered2 className="" />
+        <section className="mx-auto mb-10 max-w-[calc(var(--screen-xxl)_+_80px)]">
+          <div className="home-timeline-header">
+            <h1 className="heading-main app-color--dark">Opportunities</h1>
+            <h2 className="sub-heading-main">Explore Our Volunteer Options</h2>
           </div>
+          <Timeline />
         </section>
         <section className="app-color--dark py-12 lg:py-24">
-          <div className="split-section gap-6">
+          <div className="page-split">
             <div>
               <h1 className="heading-main app-color--light">Why volunteer</h1>
               <h2 className="sub-heading-main">
@@ -170,9 +159,9 @@ export default function HomePage() {
                 <b>our open-source tech and collaboration drive innovation</b>
                 for transparent, efficient, engaged local governance.
               </p>
-              <Link href="/projects" className="btn btn--grow">
+              <Button href="/projects" className="btn btn--grow">
                 Find Projects
-              </Link>
+              </Button>
             </div>
             <Slider className="lg:w-3/5">
               <div className="keen-slider__slide">
@@ -186,7 +175,7 @@ export default function HomePage() {
                 <BasePathImage
                   src="/img/home/learningblocks.jpg"
                   alt="Learning Blocks"
-                  className="home-section-project-image"
+                  className="home-project-image"
                   width={918}
                   height={469}
                 />
@@ -202,7 +191,7 @@ export default function HomePage() {
                 <BasePathImage
                   src="/img/TrashAI2.png"
                   alt="TrashAI"
-                  className="home-section-project-image"
+                  className="home-project-image"
                   width={839}
                   height={412}
                 />
@@ -216,9 +205,9 @@ export default function HomePage() {
                   </p>
                 </div>
                 <BasePathImage
-                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.jpg"
+                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.png"
                   alt="Open Budget Sac"
-                  className="home-section-project-image"
+                  className="home-project-image"
                   width={385}
                   height={211}
                 />
@@ -257,7 +246,7 @@ export default function HomePage() {
           </div>
         </section>
         <section className="app-color--dark py-16">
-          <div className="split-section gap-6">
+          <div className="page-split items-center">
             <h1 className="title-semi-bold">
               Help
               <br />
@@ -302,6 +291,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-    </AppLayout>
+    </LayoutE53>
   );
 }

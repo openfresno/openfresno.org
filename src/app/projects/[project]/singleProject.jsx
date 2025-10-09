@@ -1,5 +1,5 @@
 "use client";
-import { jsonResponse } from "@/utils/response";
+import { jsonResponse } from "@/utility/response";
 import useSWR from "swr";
 import { fetchGithubSingleProject } from "../github";
 

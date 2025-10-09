@@ -1,11 +1,11 @@
-import { githubOwner } from "../../utils/constants/app-data";
+import { githubOwner } from "../../utility/constants/app-data";
 import Projects from "./projects";
-import AppLayout from "../../components/layout/AppLayout";
+import LayoutE53 from "../../components/layout/LayoutE53";
 
 export default function Page() {
   return (
-    <AppLayout>
+    <LayoutE53>
       <Projects githubOwner={githubOwner}></Projects>
-    </AppLayout>
+    </LayoutE53>
   );
 }

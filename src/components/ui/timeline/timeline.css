@@ -1,0 +1,156 @@
+/*
+======================================
+Timeline layout (mobile vs. desktop)
+======================================
+
+Mobile (<= 768px)
+-----------------
+ [ timeline ]                (line at 20px, small circle)
+    ●                        top circle (12px)
+    |                        vertical line (1px)
+    |    [#1]                timeline-number (5rem circle)
+    |  [Title]               timeline-item-content (full width, centered)
+    |   [Body]
+    |
+    |    [#2]
+    |  [Title]
+    |   [Body]
+    |
+    ' (continues)
+
+- Items stack in a single column, centered text.
+- .timeline-item is column-oriented.
+- Counter increments per item; nth-child even/odd alignments are moot on mobile.
+
+
+Desktop (>= 768px)
+------------------
+                        ●     top circle (36px) centered at 50%
+                        |     vertical line (1.5px) at 50%
+   LEFT SIDE            |     RIGHT SIDE
+  ┌───────────────────┐ |   ┌───────────────────┐
+  │ [#1]  [Title]     │ |   │     [Title]  [#2] │
+  │        [Body]     │ |   │        [Body]     │
+  └───────────────────┘ |   └───────────────────┘
+
+- Line and circle move to center (left: 50%).
+- .timeline-item becomes row-oriented; items alternate:
+  - odd: content right side of line (justify-content: flex-end)
+  - even: content left side of line (justify-content: flex-start)
+- .timeline-item-content width: calc(50% - 128px), text-align: left.
+- .timeline-number (5rem circle) sits near the center line with a small right margin.
+
+Key selectors
+-------------
+- .timeline::before  → vertical line
+- .timeline::after   → top circle
+- .timeline-item     → flex container (column → row at >=768px)
+- .timeline-item-content → text block (full → half width at >=768px)
+- .timeline-number   → numbered circle
+
+ (1) Initialize a counter for timeline items
+ counter-reset: timeline-counter;
+ (2) Increment the counter for each item
+ counter-increment: timeline-counter;
+ (3) Set width to half, minus space for the circle
+ width: calc(50% - 128px);
+*/
+
+.timeline {
+  position: relative;
+  counter-reset: timeline-counter;
+  margin: auto;
+
+  /* The vertical line running through the middle */
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    transform: translateX(-50%);
+    background-color: var(--color-neutral-900);
+    width: 1px;
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 50%;
+    background-color: var(--color-neutral-900);
+    width: 12px;
+    height: 12px;
+    content: "";
+  }
+
+  @media (min-width: 768px) {
+    &::before {
+      left: 50%;
+      width: 1.5px;
+    }
+
+    &::after {
+      left: 50%;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+.timeline-item {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  counter-increment: timeline-counter;
+  padding: 1rem 1.5rem 2.5rem 2rem;
+
+  &:nth-child(even) {
+    justify-content: flex-start;
+  }
+
+  &:nth-child(odd) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding: 1rem 1.5rem 2.5rem 1rem;
+  }
+}
+
+.timeline-item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+  text-align: center;
+  @media (min-width: 768px) {
+    position: relative;
+    width: calc(50% - 128px);
+    text-align: left;
+  }
+}
+
+.timeline-number {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border-radius: 100%;
+  background: var(--main-vivid-blue);
+  width: 5rem;
+  height: 5rem;
+  color: var(--main-white);
+  font-weight: 800;
+  font-size: 3rem;
+
+  @media (min-width: 786px) {
+    margin-right: 1rem;
+  }
+}

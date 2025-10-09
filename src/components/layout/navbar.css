@@ -1,0 +1,95 @@
+/*
+The main application navigation bar.
+It is made up of three sections.
+- Left: Logo
+- Middle: Links with animated underline
+- Right: Dropdown link that displays extended section
+
+===================================================================
+| ( LOGO ) |          Home    About    Contact          [v] Expand |
+===================================================================
+
+NOTE: The navbar is initially transparent when the fade on-scroll animation is enabled. Define light background color or image in the page styles in order to not conflict with the black text.
+*/
+.navbar-container {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--neutral-300);
+  background-color: rgb(255, 252, 245);
+  width: 100%;
+  height: var(--navbar-height);
+}
+
+@keyframes fade-in-navbar {
+  from {
+    box-shadow: none;
+    background-color: rgba(255, 252, 245, 0);
+  }
+  to {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 252, 245);
+  }
+}
+
+.navbar-container--fading {
+  animation: fade-in-navbar linear;
+  animation-timeline: scroll(root block);
+  animation-range: 0 520px;
+  animation-fill-mode: both;
+  @media screen and (min-width: 992px) {
+    border: none;
+  }
+}
+
+.navbar-main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 8px;
+  max-width: calc(var(--screen-xxl) + 72px);
+  height: 100%;
+  @media (min-width: 992px) {
+    padding: 0 24px;
+  }
+}
+
+.navbar-middle-section {
+  display: none;
+  position: relative;
+  gap: 3.125rem;
+  height: 100%;
+  @media screen and (min-width: 992px) {
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+.navbar-link {
+  z-index: 15;
+  padding: 1rem;
+}
+
+.navbar-underline {
+  position: absolute;
+  top: 70%;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
+  background-color: var(--neutral-900);
+  width: 5rem;
+  height: 2px;
+}
+
+/* Sibling selectors to position the underline */
+.navbar-link--underline__one ~ .navbar-underline {
+  left: 0.25rem;
+}
+
+.navbar-link--underline__two ~ .navbar-underline {
+  left: calc(0.25rem * 35);
+}
+
+.navbar-link--underline__three ~ .navbar-underline {
+  left: calc(0.25rem * 71.5);
+}

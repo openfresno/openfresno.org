@@ -1,4 +1,4 @@
-import { getWednesday } from "@/utils/get-wednesday";
+import { getWednesday } from "@/utility/get-wednesday";
 import Link from "next/link";
 
 /**

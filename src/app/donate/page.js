@@ -1,10 +1,10 @@
 import Donate from "./donate";
-import AppLayout from "@/components/layout/AppLayout";
+import LayoutE53 from "@/components/layout/LayoutE53";
 
 export default function DonatePage() {
   return (
-    <AppLayout>
+    <LayoutE53>
       <Donate></Donate>
-    </AppLayout>
+    </LayoutE53>
   );
 }

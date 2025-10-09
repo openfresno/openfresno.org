@@ -1,8 +1,25 @@
 import Link from "next/link";
 
 /**
- * Get started instructions section.
- * @returns {JSX.Element}
+ * `SidebarSection` is a layout component that renders a main instructions area
+ * alongside a sidebar with helpful links and a "Get Started" call-to-action.
+ *
+ * It is typically used in onboarding or informational pages to guide users
+ * toward key resources such as the code of conduct, new member form, or meeting links.
+ * @component
+ * @param {Object} props - The component props.
+ * @param {React.ReactNode} props.children - Main instructional content displayed
+ *   in the left section of the layout.
+ * @param {string} props.sectionType - A style variant applied to the section container
+ *   (e.g., `"light"` or `"dark"`), used to theme the section appropriately.
+ * @returns {JSX.Element} A structured section with instructions and a sidebar of resource links.
+ * @example
+ * ```tsx
+<SidebarSection sectionType="light">
+  <h2>Welcome to the community!</h2>
+  <p>Follow the steps below to get started.</p>
+</SidebarSection>
+ * ```
  */
 export default function SidebarSection({ children, sectionType }) {
   return (
