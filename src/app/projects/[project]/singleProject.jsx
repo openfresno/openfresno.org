@@ -15,15 +15,7 @@ import SingleProjectsOther from "./singleProjectsOther";
 import SingleProjectsResources from "./singleProjectsResources";
 import SingleProjectsVolunteer from "./singleProjectsVolunteer";
 import { useState } from "react";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme"
 
 const fetcher = (...args) =>
   fetch(...args)

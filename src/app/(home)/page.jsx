@@ -3,6 +3,13 @@ import Link from "next/link";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import LayoutE53 from "../../components/layout/LayoutE53";
 
+import GeneralSection from "@/components/ui/GeneralSection";
+
+
+/**
+* Open Fresno's Home page
+* @returns {JSX.Element}
+*/
 export default function HomePage() {
   return (
     <LayoutE53 fadeNavbar={true}>

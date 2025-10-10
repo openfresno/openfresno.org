@@ -3,19 +3,7 @@ import ContactSectionLanding from "./contactSectionLanding";
 import ContactSectionMission from "./contactSectionMission";
 import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-  invert: (type) => {
-    if(type === "light") return "dark";
-    if(type === "dark") return "light";
-  }
-};
+import { SectionType } from "../(home)/page";
 
 /**
  * About page.

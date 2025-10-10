@@ -4,15 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
 import MDXComponents from "./MDXComponents";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme"
 
 function extractToc(content) {
   const headers = [];

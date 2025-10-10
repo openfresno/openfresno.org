@@ -1,14 +1,6 @@
 "use client";
 import DonateSectionLanding from "./donateSectionLanding";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme"
 
 /**
  * About page.

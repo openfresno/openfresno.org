@@ -2,15 +2,7 @@ import Link from "next/link";
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import SidebarSection from "../../components/ui/SidebarSection";
 import LayoutE53 from "@/components/layout/LayoutE53";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme"
 
 /**
  * Page for information about how to pitch a project.
