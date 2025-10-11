@@ -3,6 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Button } from "../../ui";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
 
+
 /**
  * a responsive, multi-step timeline component for displaying a list of opportunities.
  *
