@@ -3,7 +3,7 @@ import ContactSectionLanding from "./contactSectionLanding";
 import ContactSectionMission from "./contactSectionMission";
 import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-import { SectionType } from "../(home)/page";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About page.
