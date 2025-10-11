@@ -1,5 +1,5 @@
-'use client';
-import React, {useRef, useState, useEffect} from "react";
+"use client";
+import React, { useRef, useState, useEffect } from "react";
 import { Button } from "../../ui";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
 
@@ -25,7 +25,6 @@ export default function Timeline({ className }) {
       setClientRect(refContainer.current.getBoundingClientRect());
     }
   }, []);
-
 
   function updateTimelineNumbers(timelineNumber, bounds) {
     setTimelineNumbers((previousTimelineNumbers) => {
@@ -53,93 +52,76 @@ export default function Timeline({ className }) {
         number={1}
         heading="Engage with Our Community"
         buttons={[
-          new SimpleButton(
-          "Visit Meetup",
-          "https://www.meetup.com/openfresno",
-        )]}
+          new SimpleButton("Visit Meetup", "https://www.meetup.com/openfresno"),
+        ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Connect with like-minded individuals, share ideas, and collaborate
-        on projects at our meetups.
+        Connect with like-minded individuals, share ideas, and collaborate on
+        projects at our meetups.
         <br />
-        Join us to be a part of a vibrant community dedicated to positive
-        change through technology.
+        Join us to be a part of a vibrant community dedicated to positive change
+        through technology.
       </TimelineItem>
       <TimelineItem
         number={2}
         heading="Drive Innovation with Projects"
-        buttons={[
-          new SimpleButton(
-          "See Our Project"
-        )]}
+        buttons={[new SimpleButton("See Our Project")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
         Discover how you can contribute your skills to projects that address
-        real challenges and enhance our city. Be part of a dynamic team
-        working on solutions that make a difference.
+        real challenges and enhance our city. Be part of a dynamic team working
+        on solutions that make a difference.
       </TimelineItem>
       <TimelineItem
         number={3}
         heading="Pitch Your Vision"
-        buttons={[
-          new SimpleButton(
-            "Pitch a Project"
-        )]}
+        buttons={[new SimpleButton("Pitch a Project")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Have a project idea that can benefit the community? Pitch it to us
-        and join forces with our community of innovators to bring your
-        vision to life, driving positive change in Central California.
+        Have a project idea that can benefit the community? Pitch it to us and
+        join forces with our community of innovators to bring your vision to
+        life, driving positive change in Central California.
       </TimelineItem>
       <TimelineItem
         number={4}
         heading="Explore On-Site Opportunities with Root Access"
         buttons={[
-          new SimpleButton(
-            "Check it Out"
-          ),
-          new SimpleButton(
-            "Explore Calendar"
-          ),
+          new SimpleButton("Check it Out"),
+          new SimpleButton("Explore Calendar"),
         ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Have a project idea that can benefit the community? Pitch it to us
-        and join forces with our community of innovators to bring your
-        vision to life, driving positive change in Central California.
-      </TimelineItem>
-      <TimelineItem
-        number={5}
-        heading="Drive Innovation with Projects"
-        buttons={[
-          new SimpleButton(
-          "See Our Project"
-        )]}
-        updateTimelineNumbers={updateTimelineNumbers}
-      >
-        Test text
+        Have a project idea that can benefit the community? Pitch it to us and
+        join forces with our community of innovators to bring your vision to
+        life, driving positive change in Central California.
       </TimelineItem>
       <style>
-        {(()=>{
+        {(() => {
           //the array is 1 indexed;
           let itemCount = timelineNumbers.length;
           let stepSize = 100 / (itemCount - 1);
-          let styleText = `@keyframes timeline-animation\{\n`
+          let styleText = `@keyframes timeline-animation\{\n`;
           timelineNumbers.forEach((bounds, i) => {
-            if(bounds != null){
+            if (bounds != null) {
               // animates with the progress of viewing the timeline at equal intervals
               // i-1 is because the array is 1 indexed (timelineNumbers[0] === null)
-              let percentageValue = Math.round((i-1) * stepSize);
+              let percentageValue = Math.round((i - 1) * stepSize);
               // as a pixel value
-              let topValue = bounds.y - clientRect.y + (bounds.height/4);
-              styleText+=`\t${percentageValue}% {\n
+              let topValue = bounds.y - clientRect.y + bounds.height / 4;
+              styleText += `\t${percentageValue}% {\n
                           \t\ttop: ${topValue}px;\n
                           \t}\n`;
+              if (i + 1 == timelineNumbers.length) {
+                styleText += `\t100% {\n
+                              \t\ttop: ${topValue}px;\n
+                              \t}\n
+                              }\n`;
+              }
             }
           });
           // This is cursed, but animation styles have to be declared here
           // because will not work if it is loaded first in the stylesheet.
-          let animationStyle = `}\n
+          let animationStyle = `
             .timeline {\n
             \tview-timeline: --timelineAnimation block -20% 20%;\n
             \t&::after {\n
@@ -148,13 +130,12 @@ export default function Timeline({ className }) {
             \t\tanimation-name: timeline-animation;\n
             \t\tanimation-fill-mode: both;\n
             \t}\n
-            }
+            }\n
           `;
-          return styleText+animationStyle;
+          return styleText + animationStyle;
         })()}
       </style>
       {/*
-
       <div className="timeline-item">
         <div className="timeline-number">1</div>
         <div className="timeline-item-content">

@@ -18,15 +18,16 @@ export class SimpleButton {
  * CSS file's comments.
  *
  * @component
- * @param {object} props
+ * @param {object} [props]
  * @param {integer} [props.number] The number to display
  * @param {string} [props.heading] The heading text to display
  * @param {SimpleButton[]} [props.button] A list of buttons to display, with 
  *        adaptive rendering for single buttons and pairs of buttons
- * @param {(integer, DOMRect)=>null} [props.updateTimelineNumbers] A callback function from the
+ * @param {(number: integer, boundingRect: DOMRect)=>null} [props.updateTimelineNumbers] A callback function from the
  *        parent to get the position of the timeline number for animation purposes
- * @param {React.JSX.Element} [props.children] The text to display within the timeline column.
+ * @param {JSX.Element} [props.children] The text to display within the timeline column.
  *        Inserted using <TimelineItem ...props> ...children</TimelineItem>
+ * @returns {JSX.Element}
  */
 export function TimelineItem({
     number = 0,
