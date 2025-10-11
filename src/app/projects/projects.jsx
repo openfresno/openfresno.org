@@ -6,15 +6,7 @@ import ProjectSearch from "@/app/projects/projectSearch";
 import { jsonResponse } from "@/utility/response";
 import useSWR from "swr";
 import { fetchGithubProjectData } from "./github";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme"
 
 const fetcher = (...args) =>
   fetch(...args)

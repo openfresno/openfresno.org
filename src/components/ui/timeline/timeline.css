@@ -62,7 +62,6 @@ Key selectors
   margin: auto;
 
   /* The vertical line running through the middle */
-
   &::before {
     position: absolute;
     top: 0;
@@ -74,6 +73,7 @@ Key selectors
     content: "";
   }
 
+  /* The dot that moves along the vertical line */
   &::after {
     position: absolute;
     top: 0;

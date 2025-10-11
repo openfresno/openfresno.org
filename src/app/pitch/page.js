@@ -3,15 +3,7 @@ import instructionData from "./instructions.json";
 import SidebarSection from "../../components/ui/SidebarSection";
 import Steps from "../../components/ui/instructions/Steps";
 import LayoutE53 from "@/components/layout/LayoutE53";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme"
 
 /**
  * Page for information about how to pitch a project.

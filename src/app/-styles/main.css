@@ -1,5 +1,6 @@
 @import "./typography.css";
 @import "./layout.css";
+@import "./general.css";
 @import "../../components/layout/footer.css";
 @import "../../components/layout/navbar.css";
 @import "../../components/layout/navbar-menu.css";
