@@ -24,7 +24,7 @@ export default function ContactSectionMission({ sectionType }) {
   return (
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`general-section-${sectionType}`}>
-      <div className={`general-section-container contact-mission-padding`}>
+      <div className={`general-section-container contact-mission-padding max-lg:mb-6`}>
         <div
           className={`contact-${sectionType}-heading-container heading-underline underline-alt`}
         >
@@ -32,7 +32,7 @@ export default function ContactSectionMission({ sectionType }) {
             CONTACT FORM
           </h1>
           <h2
-            className={`general-sub-heading-main general-sub-heading-${sectionType}`}
+            className={`general-sub-heading-main general-sub-heading-${sectionType} mb-4`}
           >
             Get In Touch
           </h2>
@@ -69,6 +69,7 @@ export default function ContactSectionMission({ sectionType }) {
         <form>
           <div className="form-input">
             <TextField
+              className="w-full md:w-[45%]"
               id="standard-helperText"
               label="First Name"
               // defaultValue="John"
@@ -78,7 +79,6 @@ export default function ContactSectionMission({ sectionType }) {
               variant="standard"
               margin="dense"
               sx={{
-                width: "45%",
                 marginRight: "10%",
                 "& .MuiInputLabel-root": {
                   color: "white",
@@ -98,6 +98,7 @@ export default function ContactSectionMission({ sectionType }) {
               }}
             />
             <TextField
+              className="w-full md:w-[45%]"
               id="standard-helperText"
               label="Last Name"
               // defaultValue="John"
@@ -107,7 +108,6 @@ export default function ContactSectionMission({ sectionType }) {
               variant="standard"
               margin="dense"
               sx={{
-                width: "45%",
                 "& .MuiInputLabel-root": {
                   color: "white",
                 },
