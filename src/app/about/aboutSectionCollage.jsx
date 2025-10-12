@@ -10,8 +10,15 @@ export default function AboutSectionCollage({ sectionType }) {
   const containerRef = useRef(null);
   const [containerWidth, setContainerWidth] = useState(1280);
   useEffect(() => {
-    if(containerRef.current){
-      setContainerWidth(containerRef.current.clientWidth);
+    let updateContainerWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.clientWidth);
+      }
+    }
+    window.addEventListener("resize", updateContainerWidth);
+    updateContainerWidth();
+    return () => {
+      window.addEventListener("resize", updateContainerWidth);
     }
   })
   return (
