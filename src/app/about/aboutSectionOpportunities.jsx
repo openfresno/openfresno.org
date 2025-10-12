@@ -10,7 +10,7 @@ import AboutSectionPositionList from "@/app/about/components/aboutSectionPositio
 export default function AboutSectionOpportunities({ sectionType }) {
   return (
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
-      <div className={`w-full page-container`}>
+      <div className={`w-full page-container overflow-hidden`}>
         <div className="w-full overflow-hidden">
           <div className={`w-[55%] float-left about-${sectionType}-heading-container about-heading-underline about-underline-alt`}>
               <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>opportunities</h1>
@@ -25,7 +25,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
                 joining our dedicated team.
               </p>
           </div>
-          <div className={`w-[45%] h-fit opportunities-get-started relative float-right`}>
+          <div className={`max-lg:hidden w-[45%] h-fit opportunities-get-started relative float-right`}>
             <CenteredInImage
               src="/img/about/rectangle-blue.png"
               alt="rectangle"
@@ -76,6 +76,19 @@ export default function AboutSectionOpportunities({ sectionType }) {
               "Director of Data Science"
             ]}
           />
+        </div>
+        <div className={`lg:hidden w-full h-fit relative`}>
+          <CenteredInImage
+            src="/img/about/rectangle-blue.png"
+            alt="rectangle"
+            float="center"
+          >
+            <div className="w-fit mx-auto font text-3xl font-bold">
+              <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
+              <br />
+              <Link href="/get-started" className="underline">Get Started</Link>
+            </div>
+          </CenteredInImage>
         </div>
       </div>
     </section>

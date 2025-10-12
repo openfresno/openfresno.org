@@ -1,4 +1,5 @@
 import { SectionType } from "@/utility/constants/theme";
+import AboutSectionTeamMember from "@/app/about/components/aboutSectionTeamMember";
 
 /**
  * About team section.
@@ -10,7 +11,7 @@ export default function AboutSectionTeam({
   return (
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
       <div className={`page-container`}>
-        <div className={`team-paragraph-container w-[60%]`}>
+        <div className={`team-paragraph-container md:w-[60%]`}>
           <div className="mb-6">
             <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>OUR TEAM</h1>
             <h2 className="sub-heading-main">
@@ -28,79 +29,36 @@ export default function AboutSectionTeam({
 
         <div className={`team-members-container`}>
           <div className={`grid auto-cols-min grid-cols-autofill`}>
-            <div className={`team-grid-item`}>
-              <img src="/img/about/dan_fey.jpg" alt="Team Member Name" />
-              <div className={`member-info-container`}>
-                <div className={`member-name-container`}>
-                  <h2 className={`member-name`}>Dan Fey</h2>
-                  <h3 className={`member-title`}>
-                    Executive Director, Open Fresno
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className={`team-grid-item`}>
-              <img src="/img/about/mary_fey_norris.jpg" alt="Team Member Name" />
-              <div className={`member-info-container`}>
-                <div className={`member-name-container`}>
-                  <h2 className={`member-name`}>Mary Fey Norris</h2>
-                  <h3 className={`member-title`}>
-                    Executive Director, Open Fresno
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className={`team-grid-item`}>
-              <img src="/img/about/walter_yu.png" alt="Team Member Name" />
-              <div className={`member-info-container`}>
-                <div className={`member-name-container`}>
-                  <h2 className={`member-name`}>Walter Yu</h2>
-                  <h3 className={`member-title`}>Senior Director, Platform</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className={`team-grid-item`}>
-              <img
-                src="/img/about/brianda_hernandez.png"
-                alt="Team Member Name"
+            <AboutSectionTeamMember
+              src={"/img/about/dan_fey.jpg"}
+              name="Dan Fey"
+              title="Executive Director, Open Fresno"
               />
-              <div className={`member-info-container`}>
-                <div className={`member-name-container`}>
-                  <h2 className={`member-name`}>Brianda Hernandez</h2>
-                  <h3 className={`member-title`}>
-                    Senior Director, Communications
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            <div className={`team-grid-item`}>
-              <img src="/img/about/nate_bass.jpg" alt="Team Member Name" />
-              <div className={`member-info-container`}>
-                <div className={`member-name-container`}>
-                  <h2 className={`member-name`}>Nate Bass</h2>
-                  <h3 className={`member-title`}>Senior Director, Product</h3>
-                </div>
-              </div>
-            </div>
-
-            <div className={`team-grid-item`}>
-              <img
-                src="/img/about/alexandre_steinhauslin.jpg"
-                alt="Team Member Name"
+            <AboutSectionTeamMember
+              src={"/img/about/mary_fey_norris.jpg"}
+              name="Mary Fey Norris"
+              title="Executive Director, Open Fresno"
+            />
+            <AboutSectionTeamMember
+              src="/img/about/walter_yu.png"
+              name="Walter Yu"
+              title="Senior Director, Platform"
               />
-              <div className={`member-info-container`}>
-                <div className={`member-name-container`}>
-                  <h2 className={`member-name`}>Alexandre Steinhauslin</h2>
-                  <h3 className={`member-title`}>
-                    Director, Frontend Engineering
-                  </h3>
-                </div>
-              </div>
-            </div>
+            <AboutSectionTeamMember
+              src="/img/about/brianda_hernandez.png"
+              name="Brianda Hernandez"
+              title="Senior Director, Communications"
+            />
+            <AboutSectionTeamMember
+              src="/img/about/nate_bass.jpg"
+              name="Nate Bass"
+              title="Senior Director, Product"
+            />
+            <AboutSectionTeamMember
+              src="/img/about/alexandre_steinhauslin.jpg"
+              name="Alexandre Steinhauslin"
+              title="Director, Frontend Engineering"
+            />
           </div>
         </div>
       </div>

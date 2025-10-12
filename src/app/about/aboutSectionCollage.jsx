@@ -17,7 +17,7 @@ export default function AboutSectionCollage({ sectionType }) {
   return (
     <section className={`py-12 lg:py-24 `}>
       <div className={`page-container flex flex-col content-center`}>
-        <div className={`w-full`} ref={containerRef}>
+        <div className={`w-full mb-[5%]`} ref={containerRef}>
           <BasePathImage
             src="/img/about/towerbridgeside.png"
             alt="Tower bridge"
@@ -31,14 +31,14 @@ export default function AboutSectionCollage({ sectionType }) {
             src="/img/about/tablet.png"
             alt="Tablet"
             className={`grid-item`}
-            width={590}
+            width={containerWidth*0.475}
             height={426}
           />
           <BasePathImage
             src="/img/about/meeting.png"
             alt="Meeting"
             className={`grid-item`}
-            width={590}
+            width={containerWidth*0.475}
             height={426}
           />
         </div>

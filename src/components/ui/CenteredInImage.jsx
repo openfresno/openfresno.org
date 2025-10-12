@@ -5,7 +5,7 @@ export default function CenteredInImage({
   children=(<></>)
 }){
   return(
-  <div className={`w-fit relative float-${float}`}>
+  <div className={`w-fit relative ${float==="center"?"mx-auto":`float-${float}`}`}>
     <img src={src} alt={alt} />
     {/*used to place the text over the image*/}
     <div className={`w-full h-full absolute bottom-0`}>
