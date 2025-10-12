@@ -1,4 +1,13 @@
 /* Application typography colors */
+.app-text--light{
+    color: var(--neutral-900);
+}
+.app-text--dark{
+    color: var(--secondary-50);
+}
+.app-text--primary{
+    color: var(--main-light-blue);
+}
 .app-color--dark {
   background-color: var(--neutral-900);
   color: var(--secondary-50);
