@@ -4,6 +4,8 @@ import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import LayoutE53 from "../../components/layout/LayoutE53";
 
 import GeneralSection from "@/components/ui/GeneralSection";
+import ImageSection from "@/components/ui/ImageSection";
+import { SectionType } from "@/utility/constants/theme";
 
 
 /**
@@ -52,66 +54,41 @@ export default function HomePage() {
             </div>
           </div>
         </header>
-        <section className="app-color--dark py-12 lg:py-24">
-          <div className="page-split">
-            <div>
-              <h1 className="heading-main app-color--light">Who we are</h1>
-              <h2 className="sub-heading-main">
-                Creating a Brighter Future Through Innovation and Technology.
-              </h2>
-            </div>
-            <p className="paragraph-large">
-              Open Fresno is
-              <b>
-                {" "}
-                a community of technologists, developers, designers, and
-                civic-minded individuals{" "}
-              </b>
-              who come together to use technology and open data to address civic
-              challenges and improve public services in the Central California.
-              <br />
-              <br />
-              We are passionate about fostering civic innovation and creating
-              positive impact through technology and community engagement.
-            </p>
-          </div>
-        </section>
-        <section className="py-12 lg:py-24">
-          <div className="home-split-wide">
-            <div className="grid items-center">
-              <div>
-                <h1 className="heading-main app-color--dark">What we do</h1>
-                <h2 className="sub-heading-main">
-                  Building a Better Future For Fresno and the Central Valley
-                  Area
-                </h2>
-                <p className="paragraph-large pt-10">
-                  <b>
-                    Our mission is done by uniting programmers, designers, and
-                    other talents, we transform ideas into tangible solutions
-                    that impact lives throughout Central California.
-                  </b>{" "}
-                  Together, we drive innovation forward, building a future where
-                  open source technology empowers citizens and uplifts Fresno
-                  and the surrounding areas.{" "}
-                  <b>
-                    Join us in driving innovation through open-source tech and
-                    empowering our community!
-                  </b>
-                </p>
-              </div>
-            </div>
-            <div className="grid items-center justify-end">
-              <BasePathImage
-                alt="Open Data Day"
-                width={728}
-                height={577}
-                className="home-split-image translate-x-6 lg:translate-x-10"
-                src="/img/home/home3.png"
-              />
-            </div>
-          </div>
-        </section>
+        <GeneralSection
+          heading="Who we are"
+          subHeading="Creating a Brighter Future Through Innovation and Technology."
+          sectionType={SectionType.dark}
+        >
+          Open Fresno is
+          <b>
+            {" "}
+            a community of technologists, developers, designers, and
+            civic-minded individuals{" "}
+          </b>
+          who come together to use technology and open data to address civic
+          challenges and improve public services in the Central California.
+          <br />
+          <br />
+          We are passionate about fostering civic innovation and creating
+          positive impact through technology and community engagement.
+        </GeneralSection>
+        <ImageSection
+          heading="What we do"
+          subHeading="Building a Better Future For Fresno and the Central Valley Area"
+          >
+          <b>
+            Our mission is done by uniting programmers, designers, and
+            other talents, we transform ideas into tangible solutions
+            that impact lives throughout Central California.
+          </b>{" "}
+          Together, we drive innovation forward, building a future where
+          open source technology empowers citizens and uplifts Fresno
+          and the surrounding areas.{" "}
+          <b>
+            Join us in driving innovation through open-source tech and
+            empowering our community!
+          </b>
+        </ImageSection>
         <section className="mx-auto mb-10 max-w-[calc(var(--screen-xxl)_+_80px)]">
           <div className="home-timeline-header">
             <h1 className="heading-main app-color--dark">Opportunities</h1>
@@ -119,39 +96,34 @@ export default function HomePage() {
           </div>
           <Timeline />
         </section>
-        <section className="app-color--dark py-12 lg:py-24">
-          <div className="page-split">
-            <div>
-              <h1 className="heading-main app-color--light">Why volunteer</h1>
-              <h2 className="sub-heading-main">
-                Empower Change with <br />
-                Open Fresno
-              </h2>
-            </div>
-            <div>
-              <p className="paragraph-large">
-                <b>Ready to make a difference? </b>
-                Join us at Open Fresno and use your skills to drive positive
-                change through technology and collaboration.
-                <b>
-                  {" "}
-                  Whether you&apos;re a designer, developer, or anyone eager to
-                  volunteer, together we&apos;re enhancing community services,
-                  amplifying voices, and giving you the opportunity to improve
-                  your resume and portfolio.
-                </b>{" "}
-                It&apos;s a journey of innovation and empowerment waiting for
-                you. Your impact starts{" "}
-                <Link
-                  href="/get-started"
-                  className="underline underline-offset-4"
-                >
-                  <b>here!</b>
-                </Link>
-              </p>
-            </div>
-          </div>
-        </section>
+        <GeneralSection
+          heading="Why Volunteer"
+          subHeading={(<>
+            Empower Change with <br />
+            Open Fresno
+          </>)}
+          sectionType={SectionType.dark}
+          >
+
+          <b>Ready to make a difference? </b>
+          Join us at Open Fresno and use your skills to drive positive
+          change through technology and collaboration.
+          <b>
+            {" "}
+            Whether you&apos;re a designer, developer, or anyone eager to
+            volunteer, together we&apos;re enhancing community services,
+            amplifying voices, and giving you the opportunity to improve
+            your resume and portfolio.
+          </b>{" "}
+          It&apos;s a journey of innovation and empowerment waiting for
+          you. Your impact starts{" "}
+          <Link
+            href="/get-started"
+            className="underline underline-offset-4"
+          >
+            <b>here!</b>
+          </Link>
+        </GeneralSection>
         <section className="pt-10 lg:py-24">
           <div className="page-container flex flex-col gap-6 lg:flex-row">
             <div className="w-full lg:w-2/5">

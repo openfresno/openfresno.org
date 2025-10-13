@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Button } from "../../ui";
 
 export class SimpleButton {
@@ -21,7 +21,7 @@ export class SimpleButton {
  * @param {object} [props]
  * @param {integer} [props.number] The number to display
  * @param {string} [props.heading] The heading text to display
- * @param {SimpleButton[]} [props.button] A list of buttons to display, with 
+ * @param {SimpleButton[]} [props.buttons] A list of buttons to display, with
  *        adaptive rendering for single buttons and pairs of buttons
  * @param {(number: integer, boundingRect: DOMRect)=>null} [props.updateTimelineNumbers] A callback function from the
  *        parent to get the position of the timeline number for animation purposes
@@ -38,9 +38,16 @@ export function TimelineItem({
 }) {
     const refContainer = useRef();
     useEffect(() => {
+      let updateContainerRect = () => {
         if (refContainer.current) {
-            updateTimelineNumbers(number, refContainer.current.getBoundingClientRect());
+          updateTimelineNumbers(number, refContainer.current.getBoundingClientRect());
         }
+      }
+      window.addEventListener("resize", updateContainerRect);
+      updateContainerRect()
+      return () => {
+        window.removeEventListener("resize", updateContainerRect);
+      }
     }, []);
     return (
         <div className="timeline-item">
@@ -51,7 +58,7 @@ export function TimelineItem({
                     {children}
                 </p>
                 {
-                    buttons.length == 0 ? (
+                    buttons.length === 0 ? (
                         <Button
                             className="btn btn--grow mx-auto mt-2 lg:mx-0" href={buttons[0].href}
                         >

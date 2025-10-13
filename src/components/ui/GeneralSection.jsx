@@ -21,7 +21,7 @@ export default function GeneralSection({
           <div className="page-split">
             <div>
               <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>{heading}</h1>
-              <h2 className="sub-heading-main">
+              <h2 className="sub-heading-main w-[70%]">
                 {subHeading}
               </h2>
             </div>
