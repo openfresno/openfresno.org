@@ -1,6 +1,5 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
-import { Button } from "../../ui";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
 
 
@@ -13,7 +12,7 @@ import { SimpleButton, TimelineItem } from "./TimelineItem";
  *
  * @component
  * @param {object} props
- * @param {string} [props.classname] optional css classes to apply to the root div element.
+ * @param {string} [props.className] optional css classes to apply to the root div element.
  */
 
 export default function Timeline({ className }) {
@@ -22,8 +21,15 @@ export default function Timeline({ className }) {
   const [clientRect, setClientRect] = useState();
 
   useEffect(() => {
-    if (refContainer.current) {
-      setClientRect(refContainer.current.getBoundingClientRect());
+    let updateClientRect = () => {
+      if (refContainer.current) {
+        setClientRect(refContainer.current.getBoundingClientRect());
+      }
+    }
+    updateClientRect()
+    window.addEventListener("resize", updateClientRect);
+    return () =>{
+      window.removeEventListener("resize", updateClientRect);
     }
   }, []);
 
@@ -31,7 +37,7 @@ export default function Timeline({ className }) {
     setTimelineNumbers((previousTimelineNumbers) => {
       if (timelineNumbers[timelineNumber]) {
         return previousTimelineNumbers.map((_, i) => {
-          if (i == timelineNumber) return bounds;
+          if (i === timelineNumber) return bounds;
         });
       } else {
         let copy = [...previousTimelineNumbers];
@@ -97,32 +103,33 @@ export default function Timeline({ className }) {
         life, driving positive change in Central California.
       </TimelineItem>
       <style>
-        {(() => {
+        {((_timelineNumbers, _clientRect) => {
           //the array is 1 indexed;
-          let itemCount = timelineNumbers.length;
+          let itemCount = _timelineNumbers.length;
           let stepSize = 100 / (itemCount - 1);
-          let styleText = `@keyframes timeline-animation\{\n`;
-          timelineNumbers.forEach((bounds, i) => {
-            if (bounds != null) {
-              // animates with the progress of viewing the timeline at equal intervals
-              // i-1 is because the array is 1 indexed (timelineNumbers[0] === null)
-              let percentageValue = Math.round((i - 1) * stepSize);
-              // as a pixel value
-              let topValue = bounds.y - clientRect.y + bounds.height / 4;
-              styleText += `\t${percentageValue}% {\n
+          let keyframeStyle = `@keyframes timeline-animation\{\n`;
+          if(_timelineNumbers.length > 0) {
+            _timelineNumbers.forEach((bounds, i) => {
+              if (bounds != null) {
+                // animates with the progress of viewing the timeline at equal intervals
+                // i-1 is because the array is 1 indexed (_timelineNumbers[0] === null)
+                let percentageValue = Math.round((i - 1) * stepSize);
+                // as a pixel value
+                let topValue = bounds.y - _clientRect.y + bounds.height / 4;
+                keyframeStyle += `\t${percentageValue}% {\n
                           \t\ttop: ${topValue}px;\n
                           \t}\n`;
-              if (i + 1 == timelineNumbers.length) {
-                styleText += `\t100% {\n
+                if (i + 1 === _timelineNumbers.length) {
+                  keyframeStyle += `\t100% {\n
                               \t\ttop: ${topValue}px;\n
                               \t}\n
                               }\n`;
+                }
               }
-            }
-          });
-          // This is cursed, but animation styles have to be declared here
-          // because will not work if it is loaded first in the stylesheet.
-          let animationStyle = `
+            });
+            // This is cursed, but animation styles have to be declared here
+            // because will not work if it is loaded first in the stylesheet.
+            let animationStyle = `
             .timeline {\n
             \tview-timeline: --timelineAnimation block -20% 20%;\n
             \t&::after {\n
@@ -133,80 +140,15 @@ export default function Timeline({ className }) {
             \t}\n
             }\n
           `;
-          return styleText + animationStyle;
-        })()}
+            console.log("generated style:", keyframeStyle + animationStyle, Date.now());
+            return keyframeStyle + animationStyle;
+          } else {
+            console.log("_timelineNumbers", _timelineNumbers);
+            console.log(_timelineNumbers, _clientRect);
+          }
+        })(timelineNumbers, clientRect)
+        }
       </style>
-      {/*
-      <div className="timeline-item">
-        <div className="timeline-number">1</div>
-        <div className="timeline-item-content">
-          <h2 className="heading-small">Engage with Our Community</h2>
-          <p>
-            Connect with like-minded individuals, share ideas, and collaborate
-            on projects at our meetups.
-            <br />
-            Join us to be a part of a vibrant community dedicated to positive
-            change through technology.
-          </p>
-          <Button
-            className="btn btn--grow mx-auto mt-2 lg:mx-0"
-            href="https://www.meetup.com/openfresno"
-          >
-            Visit Meetup
-          </Button>
-        </div>
-      </div>
-      <div className="timeline-item">
-        <div className="timeline-number">2</div>
-        <div className="timeline-item-content">
-          <h2 className="heading-small">Drive Innovation with Projects</h2>
-          <p>
-            Discover how you can contribute your skills to projects that address
-            real challenges and enhance our city. Be part of a dynamic team
-            working on solutions that make a difference.
-          </p>
-          <Button className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
-            See Our Project
-          </Button>
-        </div>
-      </div>
-      <div className="timeline-item">
-        <div className="timeline-number">3</div>
-        <div className="timeline-item-content">
-          <h2 className="heading-small">Pitch Your Vision</h2>
-          <p>
-            Have a project idea that can benefit the community? Pitch it to us
-            and join forces with our community of innovators to bring your
-            vision to life, driving positive change in Central California.
-          </p>
-          <Button className="btn btn--grow mx-auto mt-2 lg:mx-0" href="">
-            Pitch a Project
-          </Button>
-        </div>
-      </div>
-      <div className="timeline-item">
-        <div className="timeline-number">4</div>
-        <div className="timeline-item-content">
-          <h2 className="heading-small">
-            Explore On-Site Opportunities with Root Access
-          </h2>
-          <p>
-            Discover Root Access on Van Ness Ave in the Tower District, just a
-            block south of Fresno City College. From advanced 3D printers and a
-            cozy lounge to laser cutting, workshops, and an electronics haven,{" "}
-            <b>explore what awaits you at our partner's space!</b>
-          </p>
-          <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
-            <Button className="btn btn--grow" href="">
-              Check it Out
-            </Button>
-            <Button className="btn btn--grow" href="">
-              Explore Calendar
-            </Button>
-          </div>
-        </div>
-      </div>
-      */}
     </div>
   );
 }

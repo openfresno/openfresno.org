@@ -18,12 +18,12 @@ export default function AboutSectionCollage({ sectionType }) {
     window.addEventListener("resize", updateContainerWidth);
     updateContainerWidth();
     return () => {
-      window.addEventListener("resize", updateContainerWidth);
+      window.removeEventListener("resize", updateContainerWidth);
     }
   })
   return (
     <section className={`py-12 lg:py-24 `}>
-      <div className={`page-container flex flex-col content-center`}>
+      <div className={`page-container flex flex-col content-center app-color--${sectionType}`}>
         <div className={`w-full mb-[5%]`} ref={containerRef}>
           <BasePathImage
             src="/img/about/towerbridgeside.png"
