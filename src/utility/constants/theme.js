@@ -18,4 +18,9 @@ export const SectionType = {
     if(toInvert === "grey") return "grey";
     if(toInvert === "dark") return "light";
   },
+  toColor: (toConvert) => {
+    if(toConvert === "light") return "primary";
+    if(toConvert === "grey") return "secondary";
+    if(toConvert === "dark") return "secondary";
+  }
 };

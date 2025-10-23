@@ -131,7 +131,7 @@ export default function Timeline({ className }) {
             // because will not work if it is loaded first in the stylesheet.
             let animationStyle = `
             .timeline {\n
-            \tview-timeline: --timelineAnimation block -20% 20%;\n
+            \tview-timeline: --timelineAnimation block -20% 40%;\n
             \t&::after {\n
             \t\tanimation-timeline: --timelineAnimation;\n
             \t\tanimation-timing-function: ease-in-out;\n
@@ -140,11 +140,7 @@ export default function Timeline({ className }) {
             \t}\n
             }\n
           `;
-            console.log("generated style:", keyframeStyle + animationStyle, Date.now());
             return keyframeStyle + animationStyle;
-          } else {
-            console.log("_timelineNumbers", _timelineNumbers);
-            console.log(_timelineNumbers, _clientRect);
           }
         })(timelineNumbers, clientRect)
         }

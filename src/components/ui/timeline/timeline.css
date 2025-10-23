@@ -138,19 +138,21 @@ Key selectors
   }
 }
 
-.timeline-number {
+.circled-number {
   display: grid;
   align-items: center;
   justify-items: center;
   border-radius: 100%;
-  background: var(--main-vivid-blue);
-  width: 5rem;
-  height: 5rem;
-  color: var(--main-white);
+  aspect-ratio: 1/1;
+  width: 2.5rem;
+  height: 2.5rem;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 1.5rem;
 
   @media (min-width: 786px) {
     margin-right: 1rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
   }
 }

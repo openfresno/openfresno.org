@@ -1,6 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from "react";
 import { Button } from "../../ui";
+import { SectionType } from "@/utility/constants/theme";
 
 export class SimpleButton {
     constructor(text = "", href = "") {
@@ -25,6 +26,7 @@ export class SimpleButton {
  *        adaptive rendering for single buttons and pairs of buttons
  * @param {(number: integer, boundingRect: DOMRect)=>null} [props.updateTimelineNumbers] A callback function from the
  *        parent to get the position of the timeline number for animation purposes
+ * @param {SectionType} [props.sectionType] The SectionType to modify display styling
  * @param {JSX.Element} [props.children] The text to display within the timeline column.
  *        Inserted using <TimelineItem ...props> ...children</TimelineItem>
  * @returns {JSX.Element}
@@ -34,6 +36,7 @@ export function TimelineItem({
     heading,
     buttons = [],
     updateTimelineNumbers,
+    sectionType = SectionType.light,
     children = (<></>)
 }) {
     const refContainer = useRef();
@@ -51,7 +54,7 @@ export function TimelineItem({
     }, []);
     return (
         <div className="timeline-item">
-            <div className="timeline-number" ref={refContainer}>{number}</div>
+            <div className={`circled-number app-color--${SectionType.toColor(sectionType)}`} ref={refContainer}>{number}</div>
             <div className="timeline-item-content">
                 <h2 className="heading-small">{heading}</h2>
                 <p>
