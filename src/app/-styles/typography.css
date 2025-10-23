@@ -21,6 +21,9 @@
 .app-color--dark-split{
   background-image: linear-gradient(to right, var(--primary-900) 50%, var(--secondary-900) 50%);
   color: var(--primary-50);
+  @media(max-width: 992px){
+    background-image: linear-gradient(to bottom, var(--primary-900) 50%, var(--secondary-900) 50%);
+  }
 }
 
 .app-color--light-split{
