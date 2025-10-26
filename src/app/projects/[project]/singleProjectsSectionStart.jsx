@@ -41,15 +41,15 @@ export default function SingleProjectsSectionStart({
             Last Updated:{" "}
             {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
           </p>
-          <div className={`flex flex-row gap-4 project-button-container`}>
+          <div className={`flex max-lg:justify-between flex-row lg:gap-4`}>
             <Button
-              className={"btn btn-gold"}
+              className={"btn"}
               href={data.html_url}
               target={"_blank"}
               textContent={"View Source Code"}
             />
             <Button
-              className={"btn btn-gold"}
+              className={"btn"}
               href={"/get-started"}
               textContent={"Get Started"}
             />

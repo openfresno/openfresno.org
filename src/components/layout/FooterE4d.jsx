@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import BasePathImage from "next/image";
 
 /**
  * The default footer for the application.
@@ -58,7 +58,7 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <BasePathImage
               src="/img/socialmedia/facebook.svg"
               alt="Facebook"
               width={46}
@@ -70,7 +70,7 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <BasePathImage
               src="/img/socialmedia/twitter.svg"
               alt="X"
               width={46}
@@ -82,7 +82,7 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <BasePathImage
               src="/img/socialmedia/youtube.svg"
               alt="Youtube"
               width={46}

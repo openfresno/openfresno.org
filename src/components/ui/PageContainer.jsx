@@ -1,3 +1,5 @@
+import { SectionType } from "@/utility/constants/theme";
+
 /**General use Page Container used throughout the website.
  *
  * @param {Object} [props]
@@ -6,10 +8,17 @@
  * @returns {JSX.Element}
  * @constructor
  */
-export default function PageContainer({ className, sectionType, children, noFlex, noPadding}) {
+export default function PageContainer({
+  className = "",
+  divClassName = "",
+  sectionType = SectionType.light,
+  children = (<></>),
+  noFlex,
+  noPadding
+}) {
   return(
     <section className={`${noPadding ? "" : "py-6 lg:py-12"} app-color--${sectionType} ${className}`}>
-      <div className={`page-container ${noFlex ? "" : "flex flex-col"}`}>
+      <div className={`page-container ${noFlex ? "" : "flex flex-col"} ${divClassName}`}>
         {children}
       </div>
     </section>

@@ -46,13 +46,6 @@ export default function Steps({ children, sectionType = SectionType.light, steps
               number={item.id}
               sectionType={sectionType}
               />
-            {/*
-            <img
-              src={`/img/${item.id}.png`}
-              alt={`Step ${item.id}`}
-              className={`step-image`}
-            />
-            */}
             <div className={`step-container`}>
               <h3 className={`step-header font-semibold`}>{item.title}</h3>
               <div

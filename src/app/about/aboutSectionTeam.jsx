@@ -28,7 +28,7 @@ export default function AboutSectionTeam({
         </div>
 
         <div className={`team-members-container`}>
-          <div className={`grid auto-cols-min grid-cols-autofill`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4`}>
             <AboutSectionTeamMember
               src={"/img/about/dan_fey.jpg"}
               name="Dan Fey"

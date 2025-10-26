@@ -1,5 +1,4 @@
 import { Slider } from "@/components/ui";
-import { generateRows } from "@/app/projects/projectsCardsContainer";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 export default function SingleProjectsScreenshots({
@@ -9,7 +8,7 @@ export default function SingleProjectsScreenshots({
   let shownImages = data.meta.screenshots.map((screenshot) => (
     <div
       key={data.full_name.concat(screenshot)}
-      className={`keen-slider__slide lg:w-[32%] aspect-2/1 lg:rounded-lg project-screenshot`}
+      className={`keen-slider__slide aspect-2/1 lg:rounded-lg project-screenshot`}
       style={{
         backgroundImage: `url()`,
       }}
@@ -23,7 +22,7 @@ export default function SingleProjectsScreenshots({
   for (let i = shownImages.length; i < 6; i++) {
     shownImages.push(
       <div
-        className={`keen-slider__slide lg:w-[32%] aspect-2/1 lg:rounded-lg bg-neutral-400 project-blank-screenshot`}
+        className={`keen-slider__slide aspect-2/1 lg:rounded-lg bg-neutral-400 project-blank-screenshot`}
         key={data.full_name + i}
       />
     );
@@ -37,8 +36,8 @@ export default function SingleProjectsScreenshots({
           Explore our project through screenshots, providing visual insights into
           its design and functionality.
         </p>
-        <div className={`flex flex-col space-between gap-4 flex-wrap max-lg:hidden`}>
-          {generateRows(shownImages)}
+        <div className={`grid grid-cols-3 gap-4 max-lg:hidden`}>
+          {shownImages}
         </div>
         <Slider className={"project-screenshots-slider-container lg:hidden"}>
           {shownImages}

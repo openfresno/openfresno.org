@@ -12,7 +12,7 @@ export default function SingleProjectsRoadmapMilestone({
     <>
       <div className={`project-roadmap-info-container flex flex-row gap-4 w-fit`}>
         <BasePathImage
-          className={`project-roadmap-icon`}
+          className={`project-roadmap-icon aspect-1/1`}
           src={
             data.meta.roadmap[milestone].status === "completed"
               ? "/img/project-roadmap/check-circle.svg"
@@ -31,7 +31,8 @@ export default function SingleProjectsRoadmapMilestone({
       </div>
       {!isLastIndex && (
         <BasePathImage
-          className={`w-[2px] ml-[15px] project-roadmap-icon-line`}
+          className={`w-[2px] h-8 origin-bottom-left project-roadmap-icon-line`}
+          imgClassName={`inline-block relative left-3.5 -top-3 h-8`}
           src={
             data.meta.roadmap[milestone].status === "completed"
               ? "/img/project-roadmap/line-4.svg"

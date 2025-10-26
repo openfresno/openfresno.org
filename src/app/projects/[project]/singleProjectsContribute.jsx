@@ -10,6 +10,7 @@ export default function SingleProjectsContribute({
   setContributeAs,
   sectionType,
 }) {
+  console.log(data.meta.contributing);
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>How to Contribute</h2>
@@ -19,7 +20,7 @@ export default function SingleProjectsContribute({
         Explore the various ways you can make a difference.
       </p>
       <h4 className={`project-info-label font-semibold mb-2`}>Get Involved As</h4>
-      <div className={`flex flex-row max-lg:justify-between lg:gap-4`}>
+      <div className={`flex max-sm:justify-between sm:gap-4 flex-row`}>
         {Object.keys(data.meta.contributing).map((role, i) => (
           <Button
             key={role+i}

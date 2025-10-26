@@ -9,7 +9,7 @@ import { HeaderUnderline } from "@/components/ui";
  * @returns {JSX.Element}
  */
 export default function SingleProjectsVolunteer({
-                                                  sectionType,
+                                                  sectionType = SectionType.light,
                                                 }) {
   return (
     <section id="project-section-start" className={`py-6 app-color--${sectionType}`}>
@@ -33,7 +33,7 @@ export default function SingleProjectsVolunteer({
             alt="rectangle"
             float="center"
           >
-            <div className="w-fit mx-auto font text-3xl font-bold">
+            <div className="w-fit mx-auto text-xl sm:text-3xl font-bold">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
               <br />
               <Link href="/get-started" className="underline">Get Started</Link>

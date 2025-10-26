@@ -31,10 +31,11 @@ export default function BasePathImage({ src, className="", imgClassName="", ...p
       ? `${basePath}${src}`
       : src;
 
+  console.log("basePath: ", basePath)
   // eslint-disable-next-line jsx-a11y/alt-text
   return (
     <div className={className}>
-      <img className={`object-cover${imgClassName}${props.width===undefined&&" w-full"}${props.height===undefined&&" h-full"}`} src={finalSrc} {...props} />
+      <img className={`object-cover ${imgClassName}${props.width===undefined&&" w-full"}`} src={finalSrc} {...props} />
     </div>
   );
 }

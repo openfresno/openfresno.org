@@ -1,6 +1,7 @@
 import { Button } from "../../components/ui";
 import { titleCase } from "@/utility/string";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import { SectionType } from "@/utility/constants/theme";
 
 export default function ProjectCard({
   isLoading = true,
@@ -12,10 +13,10 @@ export default function ProjectCard({
   githubUrl,
   tags,
   lastUpdatedTimestamp,
-  sectionType
+  sectionType = SectionType.light,
 }) {
   return (
-    <div className={`lg:max-w-[33%] grow-1 basis-0`}>
+    <div className={`flex flex-col app-color--${sectionType}`}>
       <div className="relative project-card-img-container w-full">
         <div
           className={`absolute top-3 left-6 font-semibold rounded-md px-1.5 w-fit app-color--grey ${isLoading && "project-card-loading"}`}

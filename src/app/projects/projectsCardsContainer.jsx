@@ -7,44 +7,19 @@ const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export function generateRows(projectCards){
-  let remainder = projectCards.length % 3;
-  let incompleteDivision = remainder > 0;
-  let output = [];
-  for(var i = 0; i < Math.ceil(projectCards.length/3); i++){
-    let count = 3;
-    if(incompleteDivision && i === Math.floor(projectCards.length/3)){
-      count = remainder;
-    }
-    let elements = projectCards.slice(3 * i, 3 * i + count);
-    output.push(
-      <div key={`project-row-${i}`} className={`w-full flex grow-1 basis-0 flex-col lg:flex-row gap-1 gap-6 ${count === 3 && "justify-between"}`}>
-        {elements}
-        {/*Cursed invisible element at end of last row for spacing purposes.*/}
-        {Array.apply(null, Array(3-count)).map((_, i) => {return <div key={i} className="max-lg:hidden lg:max-w-[33%] grow-1 basis-0"></div>})}
-      </div>
-    )
-  }
-  return output;
-}
-
 const ProjectsCardsContainer = ({
                                   error = false,
                                   isLoading = true,
                                   projectsData = "",
                                   sectionType = SectionType.light,
                                 }) => {
-  //Couldn't think of a better way to break up elements into rows of three
-  //This is done for formatting purposes, because beauty is pain. Result:
-  // 4        | 5        | 6
-  // [] [] [] | [] [] [] | [] [] []
-  // []       | [] []    | [] [] []
   return isLoading ? (
     <section className={`page-container app-color--${sectionType}`}>
-      <div className="w-full flex flex-col gap-4">
-        {generateRows(Array.from({ length: 3 }).map((_, index) => (
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {Array.from({ length: 3 }).map((_, index) => (
           <ProjectCard
             key={index}
+            sectionType={sectionType}
             isLoading={isLoading}
             projectStatus="."
             projectTitle="Loading..."
@@ -52,7 +27,7 @@ const ProjectsCardsContainer = ({
             tags={["loading"]}
             lastUpdatedTimestamp={moment("2024-05-02T03:07:22Z")}
           />
-        )))}
+        ))}
       </div>
     </section>
   ) : error || projectsData.length === 0 ? (
@@ -67,7 +42,7 @@ const ProjectsCardsContainer = ({
     </section>
   ) : (
     <section className={`page-container app-color--${sectionType}`}>
-      <div className="w-full flex flex-col gap-4">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {(() => {
           let shuffleArray = (array) => {
             let copyArray = [...array];
@@ -92,7 +67,7 @@ const ProjectsCardsContainer = ({
               lastUpdatedTimestamp={moment(project.updated_at)}
             />
           ));
-          return generateRows(dataArray);
+          return dataArray;
           let images = [
             "open_data_day.jpg",
             "open_data_day_curved.png",
@@ -100,7 +75,7 @@ const ProjectsCardsContainer = ({
             "towerbridgenight.png",
             "bigdog-2017-fb.jpg",
           ];
-          return generateRows(images.map((image, i) => {
+          return images.map((image, i) => {
             let randomMoment = moment().subtract(randomInt(4, 30), "days").add(randomInt(0, 30), "hours").add(randomInt(0, 60), "minutes");
             return(
               <ProjectCard
@@ -114,7 +89,7 @@ const ProjectsCardsContainer = ({
                 lastUpdatedTimestamp={randomMoment}
               />
             )
-          }));
+          });
 
         })()}
         {/*)*/}
