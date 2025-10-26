@@ -4,6 +4,7 @@ import { SectionType } from "@/utility/constants/theme";
 import HeadingPair from "@/components/ui/HeadingPair";
 
 import { titleCase } from "@/utility/string";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
  * Single project start section.
@@ -20,9 +21,9 @@ export default function SingleProjectsSectionStart({
         <div
           className={`w-fit rounded-lg lg:ml-8 lg:min-w-[60%] border`}
         >
-          <img
+          <BasePathImage
             alt={data.meta.title}
-            className={`aspect-2/1 object-cover rounded-xl w-full`}
+            imgClassName={`aspect-2/1 object-cover rounded-xl w-full`}
             src={`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}
           />
         </div>

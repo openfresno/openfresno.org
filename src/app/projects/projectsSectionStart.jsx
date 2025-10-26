@@ -1,6 +1,7 @@
 import { getWednesday } from "@/utility/get-wednesday";
 import Link from "next/link";
 import { HeaderUnderline } from "@/components/ui";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
  * Projects start section.
@@ -31,7 +32,7 @@ export default function ProjectsSectionStart({ sectionType }) {
           </div>
           <div className={`flex flex-col gap-4 p-8 border-t border-neutral-500`}>
               <div>
-                <img
+                <BasePathImage
                   className="inline-block mr-4"
                   src="/img/meeting-card/calender.svg"
                   alt="Calendar"
@@ -41,7 +42,7 @@ export default function ProjectsSectionStart({ sectionType }) {
                 </span>
               </div>
               <div>
-                <img
+                <BasePathImage
                   className="inline-block mr-4"
                   src="/img/meeting-card/clock.svg"
                   alt="Clock"
@@ -51,7 +52,7 @@ export default function ProjectsSectionStart({ sectionType }) {
                 </span>
               </div>
               <div>
-                <img
+                <BasePathImage
                   className="inline-block mr-4"
                   src="/img/meeting-card/document-txt.svg"
                   alt="Document"
@@ -70,7 +71,7 @@ export default function ProjectsSectionStart({ sectionType }) {
               aria-label="Link to Meetup."
             >
               <span>Go to meetup</span>
-              <img
+              <BasePathImage
                 className="inline-block ml-2 -mt-0.5"
                 src="./img/meeting-card/arrow-right.svg"
                 alt="Arrow right."

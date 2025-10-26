@@ -1,5 +1,6 @@
 import { Button } from "../../components/ui";
 import { titleCase } from "@/utility/string";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 export default function ProjectCard({
   isLoading = true,
@@ -21,11 +22,11 @@ export default function ProjectCard({
         >
           {titleCase(projectStatus)}
         </div>
-        <img
+        <BasePathImage
           className={`aspect-2/1 object-cover rounded-xl w-full`}
           src={imgUrl}
           alt={"Default project image"}
-        ></img>
+        />
       </div>
       <ul className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto`}>
         {tags.map((tag, index) => (

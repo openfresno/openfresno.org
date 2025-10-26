@@ -1,5 +1,6 @@
 import { Slider } from "@/components/ui";
 import { generateRows } from "@/app/projects/projectsCardsContainer";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 export default function SingleProjectsScreenshots({
                                                     data,
@@ -13,7 +14,7 @@ export default function SingleProjectsScreenshots({
         backgroundImage: `url()`,
       }}
     >
-      <img
+      <BasePathImage
         className={`object-cover aspect-2/1 `}
         src={`https://raw.githubusercontent.com/${data.full_name}/main/${screenshot}`}
       />

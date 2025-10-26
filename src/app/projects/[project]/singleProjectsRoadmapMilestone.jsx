@@ -1,5 +1,6 @@
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 export default function SingleProjectsRoadmapMilestone({
   data,
@@ -10,7 +11,7 @@ export default function SingleProjectsRoadmapMilestone({
   return (
     <>
       <div className={`project-roadmap-info-container flex flex-row gap-4 w-fit`}>
-        <img
+        <BasePathImage
           className={`project-roadmap-icon`}
           src={
             data.meta.roadmap[milestone].status === "completed"
@@ -29,7 +30,7 @@ export default function SingleProjectsRoadmapMilestone({
         </div>
       </div>
       {!isLastIndex && (
-        <img
+        <BasePathImage
           className={`w-[2px] ml-[15px] project-roadmap-icon-line`}
           src={
             data.meta.roadmap[milestone].status === "completed"

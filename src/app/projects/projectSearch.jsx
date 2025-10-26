@@ -1,5 +1,6 @@
 import {InputLabel, Select, MenuItem, OutlinedInput, InputAdornment, IconButton, TextField} from "@mui/material";
 import Link from "next/link";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
  * Projects search section.
@@ -55,7 +56,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
                   type="submit"
                   onClick={() => {}}
                 >
-                  <img
+                  <BasePathImage
                     src="/img/form-element/search.svg" alt="Search icon."
                   />
 
