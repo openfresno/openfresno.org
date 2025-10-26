@@ -19,7 +19,7 @@ export default function SingleProjectsContribute({
         Explore the various ways you can make a difference.
       </p>
       <h4 className={`project-info-label font-semibold mb-2`}>Get Involved As</h4>
-      <div className={`flex flex-row max-lg:justify-between lg:gap-4`}>
+      <div className={`flex flex-col gap-4 lg:flex-row`}>
         {Object.keys(data.meta.contributing).map((role, i) => (
           <Button
             key={role+i}
