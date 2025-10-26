@@ -1,7 +1,11 @@
 import moment from "moment";
 import SingleProjectsRoadmapMilestone from "./singleProjectsRoadmapMilestone.jsx";
+import { SectionType } from "@/utility/constants/theme";
 
-export default function SingleProjectsRoadmap({ data }) {
+export default function SingleProjectsRoadmap({
+  data,
+  sectionType
+}) {
   const milestones = parseRoadmapMilestones(data.meta.roadmap);
   parseRoadmapTimelineStatus(data.meta.roadmap);
 
@@ -33,47 +37,45 @@ export default function SingleProjectsRoadmap({ data }) {
   }
 
   return (
-    <section id="roadmap" className={`project-roadmap-container`}>
-      <div
-        className={`project-main-heading-container heading-underline underline-alt`}
-      >
-        <h2 className={`project-heading project-heading-underline mb-2`}>
-          Roadmap
-        </h2>
-      </div>
-      <p className={`paragraph-large project-paragraph-large`}>
-        Know the current progress, scope, and stage of project
-      </p>
-      <div className={`project-info-container-alt`}>
-        <div className={`project-roadmap-milestone-container`}>
-          <div>
-            {milestones.map((milestone, index) => {
-              return (
-                <SingleProjectsRoadmapMilestone
-                  key={milestone + index}
-                  data={data}
-                  milestone={milestone}
-                  isLastIndex={index === milestones.length - 1}
-                />
-              );
-            })}
+    <section className={`py-12 app-color--${sectionType}`}>
+      <div className={`page-container flex flex-col`}>
+        <h2 className={`sub-heading-main`}>Roadmap</h2>
+        <div className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}/>
+        <p className={`paragraph-large project-paragraph-large mb-8 lg:mb-18`}>
+          Know about the current progress, scope, and stage of project
+        </p>
+        <div className={`flex flex-col lg:flex-row lg:gap-70 lg:my-6`}>
+          <div className={`grow-1 basis-0`}>
+            <div className={`lg:ml-[15%]`}>
+              {milestones.map((milestone, index) => {
+                return (
+                  <SingleProjectsRoadmapMilestone
+                    key={milestone + index}
+                    data={data}
+                    milestone={milestone}
+                    isLastIndex={index === milestones.length - 1}
+                    sectionType={sectionType}
+                  />
+                );
+              })}
+            </div>
           </div>
-        </div>
-        <div className="project-roadmap-details-container">
-          <div>
-            <h4 className={`project-roadmap-info-label-two`}>Objective</h4>
-            <hr className="project-info-line" />
-            <p className="project-paragraph-alt">
-              {data.meta.roadmap.objective}
-            </p>
-            <h4 className={`project-roadmap-info-label-two`}>Comments</h4>
-            <hr className="project-info-line" />
-            <p className="project-paragraph-alt">
-              {data.meta.roadmap.comments}
-            </p>
-            <h4 className={`project-roadmap-info-label-two`}>Outcome</h4>
-            <hr className="project-info-line" />
-            <p className="project-paragraph-alt">{data.meta.roadmap.outcome}</p>
+          <div className="project-roadmap-details-container grow-1 basis-0 max-lg:mt-12">
+            <div>
+              <h4 className={`project-roadmap-info-label-two`}>Objective</h4>
+              <hr className="project-info-line my-2" />
+              <p className="project-paragraph-alt mb-8">
+                {data.meta.roadmap.objective}
+              </p>
+              <h4 className={`project-roadmap-info-label-two`}>Comments</h4>
+              <hr className="project-info-line my-2" />
+              <p className="project-paragraph-alt mb-8">
+                {data.meta.roadmap.comments}
+              </p>
+              <h4 className={`project-roadmap-info-label-two`}>Outcome</h4>
+              <hr className="project-info-line my-2" />
+              <p className="project-paragraph-alt">{data.meta.roadmap.outcome}</p>
+            </div>
           </div>
         </div>
       </div>

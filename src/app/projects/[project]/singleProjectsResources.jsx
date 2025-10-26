@@ -1,9 +1,27 @@
 import Link from "next/link";
+import LinedSection from "@/components/ui/LinedSection";
+import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
-export default function SingleProjectsResources({ data }) {
-  if (!data.meta.resources) {
-    return <section id="resources" className={``}></section>;
-  }
+export default function SingleProjectsResources({
+  data,
+  sectionType = SectionType.light,
+}) {
+  return (data.meta.resources &&
+    <LinedSection
+      title = "Resources"
+      sectionType={sectionType}
+      lines={
+        Object.entries(data.meta.resources)
+          .filter((k, v)=>(k!=="description"))
+          .map(([k, v]) => (
+            [titleCase(k.replaceAll("_", " ")), v]
+          ))
+      }
+    >
+      <p className="paragraph-large">{data.meta.resources.description}</p>
+    </LinedSection>
+  )
 
   return (
     <section id="resources" className={`project-resources-container`}>

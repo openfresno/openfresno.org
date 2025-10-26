@@ -72,7 +72,7 @@ export default function Timeline({ className }) {
       <TimelineItem
         number={2}
         heading="Drive Innovation with Projects"
-        buttons={[new SimpleButton("See Our Project")]}
+        buttons={[new SimpleButton("See Our Projects", "/projects")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
         Discover how you can contribute your skills to projects that address
@@ -82,7 +82,7 @@ export default function Timeline({ className }) {
       <TimelineItem
         number={3}
         heading="Pitch Your Vision"
-        buttons={[new SimpleButton("Pitch a Project")]}
+        buttons={[new SimpleButton("Pitch a Project", "pitch")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
         Have a project idea that can benefit the community? Pitch it to us and

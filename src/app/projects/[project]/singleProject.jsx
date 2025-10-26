@@ -9,13 +9,12 @@ import SingleProjectsBrief from "./singleProjectsBrief";
 import SingleProjectsScreenshots from "./singleProjectsScreenshots";
 import SingleProjectsRoadmap from "./singleProjectsRoadmap";
 import SingleProjectsContribute from "./singleProjectsContribute";
-import SingleProjectsDeveloper from "./singleProjectsDeveloper";
-import SingleProjectsDesigner from "./singleProjectsDesigner";
-import SingleProjectsOther from "./singleProjectsOther";
 import SingleProjectsResources from "./singleProjectsResources";
 import SingleProjectsVolunteer from "./singleProjectsVolunteer";
 import { useState } from "react";
 import { SectionType } from "@/utility/constants/theme"
+import SingleProjectsContributor from "@/app/projects/[project]/singleProjectsContributor";
+import PageContainer from "@/components/ui/PageContainer";
 
 const fetcher = (...args) =>
   fetch(...args)
@@ -27,7 +26,10 @@ const fetcher = (...args) =>
  *
  * @returns {JSX.Element}
  */
-export default function SingleProject({ githubFullName }) {
+export default function SingleProject({
+  githubFullName,
+  sectionType = SectionType.light,
+}) {
   const [contributeAs, setContributeAs] = useState("developer");
 
   const { data, error, isLoading } = useSWR(
@@ -38,28 +40,32 @@ export default function SingleProject({ githubFullName }) {
 
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
-
   return (
-    <div className={`project-section-${SectionType.dark}`}>
-      <SingleProjectsSectionStart sectionType={SectionType.dark} data={data} />
-      <SingleProjectsLinks sectionType={SectionType.dark} />
-      <SingleProjectsBrief sectionType={SectionType.dark} data={data} />
-      <SingleProjectsScreenshots sectionType={SectionType.dark} data={data} />
-      <SingleProjectsRoadmap sectionType={SectionType.dark} data={data} />
+    <>
+      <SingleProjectsSectionStart sectionType={sectionType} data={data} />
+      <SingleProjectsLinks sectionType={sectionType} />
+      <SingleProjectsBrief sectionType={sectionType} data={data} />
+      <PageContainer noFlex noPadding sectionType={sectionType}>
+      <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
+      </PageContainer>
+      <SingleProjectsScreenshots sectionType={sectionType} data={data} />
+      <SingleProjectsRoadmap sectionType={SectionType.invert(sectionType)} data={data} />
       <SingleProjectsContribute
-        sectionType={SectionType.dark}
+        data={data}
+        sectionType={sectionType}
         contributeAs={contributeAs}
         setContributeAs={setContributeAs}
       />
-      {contributeAs === "developer" ? (
-        <SingleProjectsDeveloper sectionType={SectionType.dark} data={data} />
-      ) : contributeAs === "designer" ? (
-        <SingleProjectsDesigner sectionType={SectionType.dark} data={data} />
-      ) : (
-        <SingleProjectsOther sectionType={SectionType.dark} data={data} />
-      )}
-      <SingleProjectsResources sectionType={SectionType.dark} data={data} />
-      <SingleProjectsVolunteer sectionType={SectionType.dark} data={data} />
-    </div>
+      <SingleProjectsContributor
+        data={data}
+        role={contributeAs}
+        sectionType={sectionType}
+      />
+      <SingleProjectsResources sectionType={sectionType} data={data} />
+      <PageContainer noFlex className="max-lg:hidden" sectionType={sectionType}>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
+      </PageContainer>
+      <SingleProjectsVolunteer sectionType={SectionType.invert(sectionType)} data={data} />
+    </>
   );
 }

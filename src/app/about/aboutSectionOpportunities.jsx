@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SectionType } from "@/utility/constants/theme";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import AboutSectionPositionList from "@/app/about/components/aboutSectionPositionList";
+import HeadingPair from "@/components/ui/HeadingPair";
 
 /**
  * About opportunities section.
@@ -13,24 +14,27 @@ export default function AboutSectionOpportunities({ sectionType }) {
       <div className={`w-full page-container overflow-hidden`}>
         <div className="w-full overflow-hidden">
           <div className={`w-[55%] float-left about-${sectionType}-heading-container about-heading-underline about-underline-alt`}>
-              <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>opportunities</h1>
-              <h2 className={`sub-heading-main`}>Join Our Team</h2>
-              <p className={`opportunities-intro-paragraph`}>
+            <HeadingPair
+              heading="Opportunities"
+              subHeading="Join Our Team"
+              sectionType={sectionType}
+              />
+            <p className={`opportunities-intro-paragraph`}>
             <span className={`paragraph-bold`}>
               Are you passionate about civic tech leadership?
             </span>{" "}
-                Open Fresno invites you to join our Core Team, organizing events,
-                fostering partnerships, and driving community impact. Shape
-                Fresno&apos;s civic innovation future – connect with us and explore
-                joining our dedicated team.
-              </p>
+              Open Fresno invites you to join our Core Team, organizing events,
+              fostering partnerships, and driving community impact. Shape
+              Fresno&apos;s civic innovation future – connect with us and explore
+              joining our dedicated team.
+            </p>
           </div>
           <div className={`max-lg:hidden w-[45%] h-fit opportunities-get-started relative float-right`}>
             <CenteredInImage
               src="/img/about/rectangle-blue.png"
               alt="rectangle"
               float="right"
-              >
+            >
               <div className="w-fit mx-auto font text-3xl font-bold">
                 <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
                 <br />

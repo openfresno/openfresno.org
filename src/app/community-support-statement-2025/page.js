@@ -28,7 +28,7 @@ export default function CommunitySupportStatementPage() {
               fostering a community that is safe, respectful, and inclusive for
               all.
             </b>{" "}
-            We take our roles in the Greater Fresno and Greater Fresno areas
+            We take our roles in the Fresno and Central Valley areas
             seriously, and supporting diversity and inclusion is not about
             taking sides—it&apos;s about doing what&apos;s right for our
             community and being good people.

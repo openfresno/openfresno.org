@@ -3,32 +3,34 @@ import SingleProject from "./singleProject";
 import NavbarE7e from "../../../components/layout/NavbarE7e";
 // import MarginTop from "../../../components/layout/MarginTop";
 import FooterE4d from "../../../components/layout/FooterE4d";
+import LayoutE53 from "@/components/layout/LayoutE53";
+import { SectionType } from "@/utility/constants/theme";
 
 // See https://nextjs.org/docs/app/api-reference/functions/generate-static-params
 export async function generateStaticParams() {
-  // const ghResponses = await fetch(
-  //   `https://api.github.com/orgs/${githubOwner}/repos?per_page=20&sort=updated&direction=desc`,
-  // ).then((res) => res.json());
+  const ghResponses = await fetch(
+    `https://api.github.com/orgs/${githubOwner}/repos?per_page=21&sort=updated&direction=desc`,
+  ).then((res) => res.json());
 
-  // return ghResponses.map((ghResponse) => ({
-  //   project: ghResponse.name,
-  // }));
+  return ghResponses.map((ghResponse) => ({
+     project: ghResponse.name,
+  }));
+  /*
   return [
     { project: "project1" },
     { project: "project2" },
     { project: "project3" },
   ];
+   */
 }
 
-export default function Page({ params }) {
+export default async function Page({ params }) {
   return (
-    <>
-      <NavbarE7e fade={false} />
-      {/* <MarginTop /> */}
+    <LayoutE53>
       <SingleProject
-        githubFullName={`${githubOwner}/${params.project}`}
+        githubFullName={`${githubOwner}/${(await params).project}`}
+        sectionType={SectionType.light}
       ></SingleProject>
-      <FooterE4d />
-    </>
+    </LayoutE53>
   );
 }

@@ -1,3 +1,6 @@
+import {InputLabel, Select, MenuItem, OutlinedInput, InputAdornment, IconButton, TextField} from "@mui/material";
+import Link from "next/link";
+
 /**
  * Projects search section.
  * @returns {JSX.Element}
@@ -5,6 +8,8 @@
 
 const ProjectSearch = ({ data, setProjectsData }) => {
   const search = (formData) => {
+    console.log(formData);
+    if(!data || !setProjectsData) return;
     const projectSearch = formData.get("project-search").toLowerCase();
     const projectFilter = formData.get("project-filter");
     const projectSortBy = formData.get("project-sort-by");
@@ -34,45 +39,67 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   };
 
   return (
-    <div className={`project-search-section`}>
-      <form className={`project-search-form`} action={search}>
-        <div className={`form-row project-search-row`}>
-          <input
-            className={`projectSearch`}
+    <section className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] mb-8 px-4 lg:px-8`}>
+      <form className={`w-full flex flex-col lg:flex-row gap-4 lg:gap-8 items-end`} action={search}>
+        <div className={`max-lg:w-full grow-3 basis-0`}>
+          <OutlinedInput
+            className={`w-full`}
             name="project-search"
             type="search"
             placeholder="Search"
             onChange={handleChange}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="search"
+                  type="submit"
+                  onClick={() => {}}
+                >
+                  <img
+                    src="/img/form-element/search.svg" alt="Search icon."
+                  />
+
+                </IconButton>
+
+              </InputAdornment>
+            }
           />
-          <img src="/img/form-element/search.svg" alt="Search icon." />
+          <Link
+            href=""
+            className="relative inline-block -left-7"
+          >
+          </Link>
         </div>
-        <div className={`select-container`}>
-          <div className={`form-row`}>
-            <label htmlFor="project-filter">Filter</label>
-            <select
-              name="project-filter"
-              id="project-filter"
-              defaultValue="all"
-              onChange={handleChange}
-            >
-              <option value="all">All</option>
-              <option value="active">Active</option>
-            </select>
-          </div>
-          <div className={`form-row`}>
-            <label htmlFor="project-sort-by">Sort By</label>
-            <select
-              name="project-sort-by"
-              id="project-sort-by"
-              onChange={handleChange}
-            >
-              <option value="created_at">Most Recent</option>
-              <option value="updated_at">Last Updated</option>
-            </select>
-          </div>
+        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
+          <InputLabel id="project-filter-label">Filter</InputLabel>
+          <Select
+            className="w-full"
+            id="project-filter"
+            label="Filter"
+            defaultValue="all"
+            native={false}
+            onChange={handleChange}
+          >
+            <MenuItem value="all">All</MenuItem>
+            <MenuItem value="active">Active</MenuItem>
+          </Select>
+        </div>
+        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
+          <InputLabel id="project-sort-by-label">Sort By</InputLabel>
+          <Select
+            className="w-full"
+            id="project-sort-by"
+            label={"Sort By"}
+            defaultValue="created_at"
+            native={false}
+            onChange={handleChange}
+          >
+            <MenuItem value="created_at">Most Recent</MenuItem>
+            <MenuItem value="updated_at">Last Updated</MenuItem>
+          </Select>
         </div>
       </form>
-    </div>
+    </section>
   );
 };
 

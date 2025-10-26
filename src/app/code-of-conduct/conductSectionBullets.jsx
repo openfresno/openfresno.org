@@ -1,59 +1,56 @@
+import CircledNumber from "@/components/ui/CircledNumber";
+
 export default function conductSectionBullets({ sectionType }) {
   return (
-    <section className={`conduct-list-container conduct-${sectionType}-theme`}>
-      <p className={`conduct-sub-heading-main`}>
+    <section className={`max-w-[calc(var(--screen-xxl)_+_80px)] px-2 mx-auto my-12 lg:my-24 conduct-list-container conduct-${sectionType}-theme flex flex-col gap-4 lg:gap-8`}>
+      <p className={`conduct-sub-heading-main font-semibold`}>
         Open Fresno fosters a community that:
       </p>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/1.png`}
-          alt={`Point 1`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {1}
+          sectionType={sectionType}
         />
-        <p className={`conduct-item-paragraph`}>
+        <p className={`conduct-item-paragraph h-min align-middle`}>
           Is a safe and respectful environment for all participants.
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/2.png`}
-          alt={`Point 2`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {2}
+          sectionType={sectionType}
         />
-        <p className={`conduct-item-paragraph`}>
+        <p className={`conduct-item-paragraph h-min`}>
           Allows for the free expression of all identities.
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/3.png`}
-          alt={`Point 3`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {3}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Welcomes everyone&apos;s ideas, skills, and contributions.
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/4.png`}
-          alt={`Point 4`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {4}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Actively invites curiosity instead of assumptions.
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/5.png`}
-          alt={`Point 5`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {5}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Encourages people to find and utilize their strengths and skills
@@ -62,11 +59,10 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/6.png`}
-          alt={`Point 6`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {6}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Invites members and leaders to practice active listening to better
@@ -74,11 +70,10 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/7.png`}
-          alt={`Point 7`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {7}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Strives to build open source tools for public use. Private gain is not
@@ -86,11 +81,10 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/8.png`}
-          alt={`Point 8`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {8}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Sees the strength in diverse teams and seeks input from those
@@ -98,11 +92,10 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/9.png`}
-          alt={`Point 9`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {9}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Works to bring in people who are not recognized as &quot;main
@@ -112,11 +105,10 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/10.png`}
-          alt={`Point 10`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {10}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Seeks out people with subject matter expertise in the decision making
@@ -124,11 +116,10 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <div className={`conduct-numbered-item`}>
-        <img
-          src={`/img/11.png`}
-          alt={`Point 11`}
-          className={`conduct-item-image`}
+      <div className={`flex flex-row lg:items-center h-fit gap-4 lg:gap-8`}>
+        <CircledNumber
+          number = {11}
+          sectionType={sectionType}
         />
         <p className={`conduct-item-paragraph`}>
           Ensure that the relationships and conversations between community

@@ -1,11 +1,15 @@
+import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
+
 export default function SingleProjectsRoadmapMilestone({
   data,
   milestone,
   isLastIndex,
+  sectionType,
 }) {
   return (
     <>
-      <div className={`project-roadmap-info-container`}>
+      <div className={`project-roadmap-info-container flex flex-row gap-4 w-fit`}>
         <img
           className={`project-roadmap-icon`}
           src={
@@ -18,15 +22,15 @@ export default function SingleProjectsRoadmapMilestone({
           alt="Project roadmap status image."
         />
         <div className={`project-info-text-container`}>
-          <p className={`project-roadmap-info-label`}>{milestone}</p>
-          <p className={`project-info-alt`}>
+          <p className={`text-lg font-bold`}>{titleCase(milestone)}</p>
+          <p className={`text-base font-light ${sectionType===SectionType.dark&&"text-neutral-300"}`}>
             {data.meta.roadmap[milestone].time_range}
           </p>
         </div>
       </div>
       {!isLastIndex && (
         <img
-          className={`project-roadmap-icon-line`}
+          className={`w-[2px] ml-[15px] project-roadmap-icon-line`}
           src={
             data.meta.roadmap[milestone].status === "completed"
               ? "/img/project-roadmap/line-4.svg"

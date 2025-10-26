@@ -23,7 +23,7 @@ export default function GeneralSection({
         <HeadingPair
           heading={heading}
           subHeading={subHeading}
-          section={sectionType}
+          sectionType={sectionType}
         />
         <p className="paragraph-large">
           {children}

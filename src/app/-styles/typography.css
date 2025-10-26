@@ -1,13 +1,30 @@
 /* Application typography colors */
 .app-text--light{
-    color: var(--neutral-900);
+  color: var(--neutral-900);
 }
 .app-text--dark{
-    color: var(--secondary-50);
+  color: var(--secondary-50);
 }
+
+.app-text--grey{
+  color: var(--neutral-500);
+}
+
 .app-text--primary{
-    color: var(--main-light-blue);
+  color: var(--main-light-blue);
 }
+
+.app-fill--light{
+  background-color: var(--secondary-50);
+}
+
+.app-fill--grey{
+  background-color: var(--neutral-500);
+}
+.app-fill--dark{
+  background-color: var(--neutral-900);
+}
+
 .app-color--dark {
   background-color: var(--neutral-900);
   color: var(--secondary-50);

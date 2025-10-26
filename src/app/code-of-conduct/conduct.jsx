@@ -8,8 +8,8 @@ export default function Conduct() {
   return (
     <div className="">
       <ConductSectionLanding sectionType={SectionType.light} />
-      <ConductSectionBullets sectionType={SectionType.dark} />
-      <ConductSectionPolicies sectionType={SectionType.light} />
+      <ConductSectionBullets sectionType={SectionType.light} />
+      <ConductSectionPolicies sectionType={SectionType.dark} />
       <ConductSectionEmail sectionType={SectionType.grey} />
     </div>
   );

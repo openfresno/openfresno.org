@@ -35,17 +35,15 @@ export default function Projects({ githubOwner }) {
   }, [data]);
 
   return (
-    <>
-      <div className={`projects-main`}>
-        <ProjectsSectionStart sectionType={SectionType.light} />
-        <ProjectSearch data={data} setProjectsData={setProjectsData} />
-        <ProjectsCardsContainer
-          error={error}
-          isLoading={isLoading}
-          projectsData={projectsData}
-          sectionType={SectionType.light}
-        />
-      </div>
-    </>
+    <div className={`projects-main`}>
+      <ProjectsSectionStart sectionType={SectionType.light} />
+      <ProjectSearch data={data} setProjectsData={setProjectsData} />
+      <ProjectsCardsContainer
+        error={error}
+        isLoading={isLoading}
+        projectsData={projectsData}
+        sectionType={SectionType.light}
+      />
+    </div>
   );
 }

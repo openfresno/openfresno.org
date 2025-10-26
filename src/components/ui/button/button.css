@@ -1,5 +1,5 @@
 .btn {
-  display: inline;
+  display: inline-block;
   border-radius: 6px;
   background: var(--main-vivid-blue);
   padding: 16px 24px;
@@ -10,6 +10,9 @@
   line-height: 18px;
   text-decoration: none;
   text-wrap: nowrap;
+  @media (max-width: 992px){
+    padding: 0.65rem 0.9rem;
+  }
 }
 
 .btn--grow {
