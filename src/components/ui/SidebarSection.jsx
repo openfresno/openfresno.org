@@ -34,7 +34,7 @@ export default function SidebarSection({ children, sectionType }) {
             alt="rectangle"
             float="right"
           >
-            <div className="w-fit mx-auto font text-3xl font-bold">
+            <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
               <br />
               <Link href="/get-started" className="underline">Get Started</Link>

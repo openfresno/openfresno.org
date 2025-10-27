@@ -54,7 +54,7 @@
   cursor: pointer;
   border-radius: 6px;
   background: var(--main-vivid-blue);
-  padding: 0.3rem 0.5rem;
+  padding: 8px 12px;
   width: fit-content;
   color: var(--neutral-50);
   font-weight: 600;
