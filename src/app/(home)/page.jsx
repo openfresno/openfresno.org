@@ -73,6 +73,7 @@ export default function HomePage() {
           positive impact through technology and community engagement.
         </GeneralSection>
         <ImageSection
+          src={"/img/open_data_day_curved_blue.png"}
           heading="What we do"
           subHeading="Building a Better Future For Fresno and the Central Valley Area"
           >

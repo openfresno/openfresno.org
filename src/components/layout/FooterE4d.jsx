@@ -1,5 +1,5 @@
 import Link from "next/link";
-import BasePathImage from "next/image";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
  * The default footer for the application.
