@@ -2,15 +2,18 @@ import { getWednesday } from "@/utility/get-wednesday";
 import Link from "next/link";
 import { HeaderUnderline } from "@/components/ui";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * Projects start section.
  * @returns {JSX.Element}
  */
-export default function ProjectsSectionStart({ sectionType }) {
+export default function ProjectsSectionStart({
+  sectionType = SectionType.light,
+}) {
   return (
     // TODO fix styling classes to represent the projects page?
-    <section className={`max-w-[calc(var(--screen-xxl)_+_80px)] mx-auto py-12 lg:px-6 lg:py-24 flex max-lg:flex-col`}>
+    <section className={`max-w-[calc(var(--screen-xxl)_+_80px)] mx-auto py-12 lg:px-6 lg:py-24 flex max-lg:flex-col app-color--${sectionType}`}>
       <div className={`projects-section-text-container w-full grow-3 basis-0 max-lg:px-6`}>
         <HeaderUnderline
           title="Projects"
@@ -73,7 +76,7 @@ export default function ProjectsSectionStart({ sectionType }) {
               <span>Go to meetup</span>
               <BasePathImage
                 className="inline-block ml-2 -mt-0.5"
-                src="./img/meeting-card/arrow-right.svg"
+                src="/img/meeting-card/arrow-right.svg"
                 alt="Arrow right."
               />
             </Link>
