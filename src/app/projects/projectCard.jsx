@@ -29,7 +29,9 @@ export default function ProjectCard({
           alt={"Default project image"}
         />
       </div>
-      <ul className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto`}>
+      <ul
+        className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto`}
+      >
         {tags.map((tag, index) => (
           <div
             key={projectTitle + tag}

@@ -36,16 +36,17 @@ import { SectionType } from "@/utility/constants/theme";
 />
  * ```
  */
-export default function Steps({ children, sectionType = SectionType.light, steps }) {
+export default function Steps({
+  children,
+  sectionType = SectionType.light,
+  steps,
+}) {
   return (
     <>
       <div className={`steps-steps-container`}>
         {steps.map((item, index) => (
           <div className={`steps-step-container`} key={index}>
-            <CircledNumber
-              number={item.id}
-              sectionType={sectionType}
-              />
+            <CircledNumber number={item.id} sectionType={sectionType} />
             <div className={`step-container`}>
               <h3 className={`step-header font-semibold`}>{item.title}</h3>
               <div

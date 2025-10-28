@@ -14,19 +14,21 @@ import { SectionType } from "@/utility/constants/theme";
  */
 export default function HeadingPair({
   heading = "",
-  subHeading = (<></>),
+  subHeading = <></>,
   subHeadingWidth = "70%",
-  className="",
+  className = "",
   sectionType = SectionType.light,
 }) {
   return (
     <div className={className}>
-      <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>
+      <h1
+        className={`heading-main app-color--${SectionType.invert(sectionType)}`}
+      >
         {heading}
       </h1>
       <h2 className={`sub-heading-main w-[${subHeadingWidth}]`}>
         {subHeading}
       </h2>
     </div>
-  )
+  );
 }

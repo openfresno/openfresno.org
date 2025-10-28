@@ -13,7 +13,7 @@ export async function generateStaticParams() {
   ).then((res) => res.json());
 
   return ghResponses.map((ghResponse) => ({
-     project: ghResponse.name,
+    project: ghResponse.name,
   }));
   /*
   return [

@@ -13,19 +13,23 @@ export default function SingleProjectsContribute({
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>How to Contribute</h2>
-      <div className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}/>
+      <div
+        className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}
+      />
       <p className={`project-paragraph my-4 lg:w-[50%]`}>
         Open Fresno is run by volunteers. We are always looking for help.
         Explore the various ways you can make a difference.
       </p>
-      <h4 className={`project-info-label font-semibold mb-2`}>Get Involved As</h4>
+      <h4 className={`project-info-label font-semibold mb-2`}>
+        Get Involved As
+      </h4>
       <div className={`flex flex-col max-sm:justify-between gap-4 sm:flex-row`}>
         {Object.keys(data.meta.contributing).map((role, i) => (
           <Button
-            key={role+i}
+            key={role + i}
             className={`btn cursor-pointer ${contributeAs === role ? "btn-gold" : "btn-alt-gold"}`}
             onClick={() => setContributeAs(role)}
-            textContent={titleCase(role.replaceAll("_"," "))}
+            textContent={titleCase(role.replaceAll("_", " "))}
           />
         ))}
       </div>

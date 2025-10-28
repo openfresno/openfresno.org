@@ -1,8 +1,8 @@
-.faq-summary{
+.faq-summary {
   position: relative;
   cursor: pointer;
   anchor-name: --summary;
-  &::marker{
+  &::marker {
     content: "";
   }
 
@@ -21,11 +21,11 @@
 
     /* Anchor the shape to the summary */
     position: absolute;
-    top: calc(8*var(--spacing));
+    top: calc(8 * var(--spacing));
     /*position-anchor: --summary;
     position-area: end end;*/
-    @media (width >= 992px){
-      right: calc(4*var(--spacing))!important;
+    @media (width >= 992px) {
+      right: calc(4 * var(--spacing)) !important;
     }
   }
 
@@ -33,12 +33,12 @@
   &::after {
     transform: rotate(90deg);
     transform-origin: 50%;
-    transition: transform .2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
   }
 }
 
 details[open] .faq-summary::after {
   transform: rotate(180deg);
 }
-.faq-details{
+.faq-details {
 }

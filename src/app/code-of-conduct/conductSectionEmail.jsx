@@ -14,7 +14,13 @@ export default function conductSectionBullets({ sectionType }) {
         >
           If you are being harassed, notice that someone else is being harassed,
           or have any other concerns, please fill out{" "}
-          <Link className="underline app-text--primary" href="https://forms.gle/JF3Q1AQA6pGxNSNS8">this form</Link>.
+          <Link
+            className="underline app-text--primary"
+            href="https://forms.gle/JF3Q1AQA6pGxNSNS8"
+          >
+            this form
+          </Link>
+          .
         </HeaderUnderline>
       </div>
     </section>

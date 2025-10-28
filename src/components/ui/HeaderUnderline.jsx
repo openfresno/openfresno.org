@@ -36,9 +36,10 @@ export default function HeaderUnderline({
   title,
   description,
   large,
-}){
+}) {
   return (
-    <div className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}
+    <div
+      className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}
     >
       <HeadingPair
         heading={title}
@@ -48,11 +49,12 @@ export default function HeaderUnderline({
         className="lg:mb-4"
       />
       {children && (
-        <p className={`heading-paragraph-large ${sectionType === SectionType.dark && "heading-paragraph-color-dark"}`}
+        <p
+          className={`heading-paragraph-large ${sectionType === SectionType.dark && "heading-paragraph-color-dark"}`}
         >
           {children}
         </p>
       )}
     </div>
   );
-};
+}

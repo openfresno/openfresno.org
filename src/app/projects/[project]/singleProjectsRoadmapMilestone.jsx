@@ -10,7 +10,9 @@ export default function SingleProjectsRoadmapMilestone({
 }) {
   return (
     <>
-      <div className={`project-roadmap-info-container flex flex-row gap-4 w-fit`}>
+      <div
+        className={`project-roadmap-info-container flex flex-row gap-4 w-fit`}
+      >
         <BasePathImage
           className={`project-roadmap-icon aspect-1/1`}
           src={
@@ -24,7 +26,9 @@ export default function SingleProjectsRoadmapMilestone({
         />
         <div className={`project-info-text-container`}>
           <p className={`text-lg font-bold`}>{titleCase(milestone)}</p>
-          <p className={`text-base font-light ${sectionType===SectionType.dark&&"text-neutral-300"}`}>
+          <p
+            className={`text-base font-light ${sectionType === SectionType.dark && "text-neutral-300"}`}
+          >
             {data.meta.roadmap[milestone].time_range}
           </p>
         </div>

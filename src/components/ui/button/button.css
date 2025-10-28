@@ -10,11 +10,11 @@
   line-height: 18px;
   text-decoration: none;
   text-wrap: nowrap;
-  @media (max-width: 500px){
+  @media (max-width: 500px) {
     font-size: 0.9rem;
     padding: 0.6rem 0.7rem;
   }
-  @media (max-width: 300px){
+  @media (max-width: 300px) {
     font-size: 0.7rem;
     padding: 0.6rem 0.3rem;
   }

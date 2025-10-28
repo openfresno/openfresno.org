@@ -1,6 +1,6 @@
 "use client";
 import NameChangeSectionLanding from "./nameChangeLanding";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About page.

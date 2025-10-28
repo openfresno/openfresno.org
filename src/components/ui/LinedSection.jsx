@@ -1,21 +1,16 @@
 import PageContainer from "@/components/ui/PageContainer";
 import { SectionType } from "@/utility/constants/theme";
 
-export function SectionLine({
-  title = "",
-  children = (<></>)
-}){
-  return(
+export function SectionLine({ title = "", children = <></> }) {
+  return (
     <>
-      <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`}/>
+      <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
       <div className={`flex flex-col lg:flex-row`}>
         <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>{title}</div>
-        <div className={`grow-2 basis-0`}>
-          {children}
-        </div>
+        <div className={`grow-2 basis-0`}>{children}</div>
       </div>
     </>
-  )
+  );
 }
 
 /**
@@ -31,21 +26,24 @@ export function SectionLine({
  */
 export default function LinedSection({
   title = "",
-  children = (<></>),
+  children = <></>,
   lines = null,
   sectionType = SectionType.light,
 }) {
-  return(
+  return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>{title}</h2>
-      <div className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}/>
+      <div
+        className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}
+      />
       {children ? children : ""}
-      {lines ? lines.map((line, i) => (
-          <SectionLine title={line[0]} key={line[0]+i}>
-            {line[1]}
-          </SectionLine>
-        )) : ""
-      }
+      {lines
+        ? lines.map((line, i) => (
+            <SectionLine title={line[0]} key={line[0] + i}>
+              {line[1]}
+            </SectionLine>
+          ))
+        : ""}
     </PageContainer>
-  )
+  );
 }

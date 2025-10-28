@@ -4,7 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
 import MDXComponents from "./MDXComponents";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 
 function extractToc(content) {
   const headers = [];

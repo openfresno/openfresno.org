@@ -5,10 +5,12 @@ import { HeaderUnderline } from "@/components/ui";
 
 export default function conductSectionPolicies({
   sectionType = SectionType.dark,
-                                               }) {
+}) {
   return (
     <section className={`py-12 lg:py-24 app-color--${sectionType}`}>
-      <div className={`page-container conduct-policy-landing-container conduct-dark-theme flex flex-col gap-4 lg:gap-8`}>
+      <div
+        className={`page-container conduct-policy-landing-container conduct-dark-theme flex flex-col gap-4 lg:gap-8`}
+      >
         <HeaderUnderline
           title="Anti-harassment Policy"
           description="Promoting a Safe and Respectful Community"
@@ -32,7 +34,10 @@ export default function conductSectionPolicies({
         </HeaderUnderline>
 
         <h3 className={`conduct-sub-heading-main font-semibold`}>
-          All Open Sacramento network activities, events, and digital forums and their staff, presenters, and participants are held to an anti-harassment policy, included below.        </h3>
+          All Open Sacramento network activities, events, and digital forums and
+          their staff, presenters, and participants are held to an
+          anti-harassment policy, included below.{" "}
+        </h3>
 
         <p className={`conduct-item-paragraph`}>
           In addition to governing our own events by this policy, Open Fresno

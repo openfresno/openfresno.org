@@ -3,7 +3,7 @@ import instructionData from "./instructions.json";
 import SidebarSection from "@/components/ui/SidebarSection";
 import Steps from "../../components/ui/instructions/Steps";
 import LayoutE53 from "@/components/layout/LayoutE53";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 import GeneralSection from "@/components/ui/GeneralSection";
 
 /**
@@ -21,7 +21,7 @@ export default function PitchPage() {
         them into reality. Pitch your project to make a positive impact on
         Fresno using technology and civic engagement.
       </GeneralSection>
-      <hr className="mx-auto mb-12 lg:mb-24 max-w-[calc(var(--screen-xxl)_+_80px)] border-0 h-px bg-(--neutral-400)"/>
+      <hr className="mx-auto mb-12 lg:mb-24 max-w-[calc(var(--screen-xxl)_+_80px)] border-0 h-px bg-(--neutral-400)" />
       <SidebarSection sectionType={SectionType.light}>
         <div className={`sidebar-info-container`}>
           <HeaderUnderline

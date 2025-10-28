@@ -1,27 +1,27 @@
 /* Application typography colors */
-.app-text--light{
+.app-text--light {
   color: var(--neutral-900);
 }
-.app-text--dark{
+.app-text--dark {
   color: var(--secondary-50);
 }
 
-.app-text--gray{
+.app-text--gray {
   color: var(--neutral-500);
 }
 
-.app-text--primary{
+.app-text--primary {
   color: var(--main-light-blue);
 }
 
-.app-fill--light{
+.app-fill--light {
   background-color: var(--secondary-50);
 }
 
-.app-fill--gray{
+.app-fill--gray {
   background-color: var(--neutral-500);
 }
-.app-fill--dark{
+.app-fill--dark {
   background-color: var(--neutral-900);
 }
 
@@ -35,16 +35,28 @@
   color: var(--neutral-900);
 }
 
-.app-color--dark-split{
-  background-image: linear-gradient(to right, var(--primary-900) 50%, var(--secondary-900) 50%);
+.app-color--dark-split {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-900) 50%,
+    var(--secondary-900) 50%
+  );
   color: var(--primary-50);
-  @media(max-width: 992px){
-    background-image: linear-gradient(to bottom, var(--primary-900) 50%, var(--secondary-900) 50%);
+  @media (max-width: 992px) {
+    background-image: linear-gradient(
+      to bottom,
+      var(--primary-900) 50%,
+      var(--secondary-900) 50%
+    );
   }
 }
 
-.app-color--light-split{
-  background-image: linear-gradient(to right, var(--primary-50) 50%, var(--secondary-50) 50%);
+.app-color--light-split {
+  background-image: linear-gradient(
+    to right,
+    var(--primary-50) 50%,
+    var(--secondary-50) 50%
+  );
   color: var(--neutral-900);
 }
 

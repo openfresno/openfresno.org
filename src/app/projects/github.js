@@ -135,9 +135,7 @@ const fetchMetaFile = async (ghFullName, defaultBranchName) => {
     ghFullName === `${githubOwner}/${githubProject}` &&
     process.env.NODE_ENV === "development"
   ) {
-    metaResponse = await fetch(
-      `http://localhost:3000/meta.yml`,
-    );
+    metaResponse = await fetch(`http://localhost:3000/meta.yml`);
   } else {
     metaResponse = await fetch(
       `https://raw.githubusercontent.com/${ghFullName}/${defaultBranchName}/${metaFile}`,

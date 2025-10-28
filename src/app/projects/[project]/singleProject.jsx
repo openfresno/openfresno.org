@@ -12,7 +12,7 @@ import SingleProjectsContribute from "./singleProjectsContribute";
 import SingleProjectsResources from "./singleProjectsResources";
 import SingleProjectsVolunteer from "./singleProjectsVolunteer";
 import { useState } from "react";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 import SingleProjectsContributor from "@/app/projects/[project]/singleProjectsContributor";
 import PageContainer from "@/components/ui/PageContainer";
 
@@ -46,10 +46,13 @@ export default function SingleProject({
       <SingleProjectsLinks sectionType={sectionType} />
       <SingleProjectsBrief sectionType={sectionType} data={data} />
       <PageContainer noFlex noPadding sectionType={sectionType}>
-      <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
       </PageContainer>
       <SingleProjectsScreenshots sectionType={sectionType} data={data} />
-      <SingleProjectsRoadmap sectionType={SectionType.invert(sectionType)} data={data} />
+      <SingleProjectsRoadmap
+        sectionType={SectionType.invert(sectionType)}
+        data={data}
+      />
       <SingleProjectsContribute
         data={data}
         sectionType={sectionType}
@@ -65,7 +68,10 @@ export default function SingleProject({
       <PageContainer noFlex className="max-lg:hidden" sectionType={sectionType}>
         <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
       </PageContainer>
-      <SingleProjectsVolunteer sectionType={SectionType.invert(sectionType)} data={data} />
+      <SingleProjectsVolunteer
+        sectionType={SectionType.invert(sectionType)}
+        data={data}
+      />
     </>
   );
 }

@@ -9,21 +9,27 @@ import { HeaderUnderline } from "@/components/ui";
  * @returns {JSX.Element}
  */
 export default function SingleProjectsVolunteer({
-                                                  sectionType = SectionType.light,
-                                                }) {
+  sectionType = SectionType.light,
+}) {
   return (
-    <section id="project-section-start" className={`py-6 app-color--${sectionType}`}>
+    <section
+      id="project-section-start"
+      className={`py-6 app-color--${sectionType}`}
+    >
       <div className={`page-container flex flex-col lg:flex-row lg:gap-[20%]`}>
-        <div className={`project-volunteer-info-container grow-2 basis-0 max-lg:mb-12`}>
+        <div
+          className={`project-volunteer-info-container grow-2 basis-0 max-lg:mb-12`}
+        >
           <HeaderUnderline
             title={"Volunteer"}
             description={"Why Join Open Fresno?"}
             sectionType={sectionType}
           >
             <span className={`text-md`}>
-            Join us at Open Fresno to collaborate on impactful civic tech projects
-            and connect with a diverse community of like-minded individuals.
-            It&apos;s a rewarding way to make a meaningful difference in our city.
+              Join us at Open Fresno to collaborate on impactful civic tech
+              projects and connect with a diverse community of like-minded
+              individuals. It&apos;s a rewarding way to make a meaningful
+              difference in our city.
             </span>
           </HeaderUnderline>
         </div>
@@ -34,9 +40,13 @@ export default function SingleProjectsVolunteer({
             float="center"
           >
             <div className="w-fit mx-auto text-xl sm:text-3xl font-bold">
-              <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
+              <span className={`app-text--${SectionType.invert(sectionType)}`}>
+                Not a volunteer yet?
+              </span>
               <br />
-              <Link href="/get-started" className="underline">Get Started</Link>
+              <Link href="/get-started" className="underline">
+                Get Started
+              </Link>
             </div>
           </CenteredInImage>
         </div>

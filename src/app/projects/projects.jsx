@@ -6,7 +6,7 @@ import ProjectSearch from "@/app/projects/projectSearch";
 import { jsonResponse } from "@/utility/response";
 import useSWR from "swr";
 import { fetchGithubProjectData } from "./github";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 
 const fetcher = (...args) =>
   fetch(...args)

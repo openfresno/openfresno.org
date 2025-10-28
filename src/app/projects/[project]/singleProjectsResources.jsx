@@ -7,21 +7,19 @@ export default function SingleProjectsResources({
   data,
   sectionType = SectionType.light,
 }) {
-  return (data.meta.resources &&
-    <LinedSection
-      title = "Resources"
-      sectionType={sectionType}
-      lines={
-        Object.entries(data.meta.resources)
-          .filter((k, v)=>(k!=="description"))
-          .map(([k, v]) => (
-            [titleCase(k.replaceAll("_", " ")), v]
-          ))
-      }
-    >
-      <p className="paragraph-large">{data.meta.resources.description}</p>
-    </LinedSection>
-  )
+  return (
+    data.meta.resources && (
+      <LinedSection
+        title="Resources"
+        sectionType={sectionType}
+        lines={Object.entries(data.meta.resources)
+          .filter((k, v) => k !== "description")
+          .map(([k, v]) => [titleCase(k.replaceAll("_", " ")), v])}
+      >
+        <p className="paragraph-large">{data.meta.resources.description}</p>
+      </LinedSection>
+    )
+  );
 
   return (
     <section id="resources" className={`project-resources-container`}>

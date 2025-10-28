@@ -13,19 +13,24 @@ export default function DonateSectionLanding({
     <>
       <GeneralSection
         heading="Donate"
-        subHeading={(<>Support<br/> Our Mission</>)}
+        subHeading={
+          <>
+            Support
+            <br /> Our Mission
+          </>
+        }
         sectionType={sectionType}
       >
-      <span className={`paragraph-bold`}>
-            Choose the option that suits you best.
-          </span>{" "}
+        <span className={`paragraph-bold`}>
+          Choose the option that suits you best.
+        </span>{" "}
         Make a one-time donation to support our mission instantly
         {/*, or become a sustaining supporter by selecting the monthly donation option*/}
         . Your tax-deductible donation fuels innovation, empowers civic
-        engagement, and enhances public services while shaping a brighter
-        future for Fresno. Thank you for your generous support!
+        engagement, and enhances public services while shaping a brighter future
+        for Fresno. Thank you for your generous support!
       </GeneralSection>
-      <PageContainer sectionType={sectionType} divClassName={"items-center"} >
+      <PageContainer sectionType={sectionType} divClassName={"items-center"}>
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
         <stripe-buy-button

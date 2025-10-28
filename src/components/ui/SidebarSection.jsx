@@ -25,7 +25,9 @@ import { SectionType } from "@/utility/constants/theme";
  */
 export default function SidebarSection({ children, sectionType }) {
   return (
-    <section className={`app-color--${sectionType} page-container py-12 lg:py-24 flex flex-col lg:flex-row gap-2`}>
+    <section
+      className={`app-color--${sectionType} page-container py-12 lg:py-24 flex flex-col lg:flex-row gap-2`}
+    >
       <div className={`instructions-container`}>{children}</div>
       <div className={`sidebar-container`}>
         <div className={`side-section lg:w-[411px]`}>
@@ -35,18 +37,22 @@ export default function SidebarSection({ children, sectionType }) {
             float="right"
           >
             <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
-              <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
+              <span className={`app-text--${SectionType.invert(sectionType)}`}>
+                Not a volunteer yet?
+              </span>
               <br />
-              <Link href="/get-started" className="underline">Get Started</Link>
+              <Link href="/get-started" className="underline">
+                Get Started
+              </Link>
             </div>
           </CenteredInImage>
         </div>
         <div className={`side-section-anchors-container`}>
-          <hr className="mb-2 border-0 h-px bg-(--neutral-400)"/>
+          <hr className="mb-2 border-0 h-px bg-(--neutral-400)" />
           <Link href="/code-of-conduct" className="app-text--primary underline">
             Code of Conduct
           </Link>
-          <hr className="my-2 border-0 h-px bg-(--neutral-400)"/>
+          <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
           <Link
             className="app-text--primary underline"
             href="https://forms.gle/JA3jAV9wE1645i9LA"
@@ -56,7 +62,7 @@ export default function SidebarSection({ children, sectionType }) {
           >
             New Member Form
           </Link>
-          <hr className="my-2 border-0 h-px bg-(--neutral-400)"/>
+          <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
           <Link
             className="app-text--primary underline"
             href="https://www.meetup.com/openfresno/"

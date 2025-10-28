@@ -14,15 +14,19 @@ export default function PageContainer({
   className = "",
   divClassName = "",
   sectionType = SectionType.light,
-  children = (<></>),
+  children = <></>,
   noFlex = false,
   noPadding = false,
 }) {
-  return(
-    <section className={`${noPadding ? "" : "py-6 lg:py-12"} app-color--${sectionType} ${className}`}>
-      <div className={`page-container ${noFlex ? "" : `flex flex-col`} ${divClassName}`}>
+  return (
+    <section
+      className={`${noPadding ? "" : "py-6 lg:py-12"} app-color--${sectionType} ${className}`}
+    >
+      <div
+        className={`page-container ${noFlex ? "" : `flex flex-col`} ${divClassName}`}
+      >
         {children}
       </div>
     </section>
-  )
+  );
 }

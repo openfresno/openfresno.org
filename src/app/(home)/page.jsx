@@ -7,11 +7,10 @@ import GeneralSection from "@/components/ui/GeneralSection";
 import ImageSection from "@/components/ui/ImageSection";
 import { SectionType } from "@/utility/constants/theme";
 
-
 /**
-* Open Fresno's Home page
-* @returns {JSX.Element}
-*/
+ * Open Fresno's Home page
+ * @returns {JSX.Element}
+ */
 export default function HomePage() {
   return (
     <LayoutE53 fadeNavbar={true}>
@@ -76,15 +75,15 @@ export default function HomePage() {
           src={"/img/open_data_day_curved_blue.png"}
           heading="What we do"
           subHeading="Building a Better Future For Fresno and the Central Valley Area"
-          >
+        >
           <b>
-            Our mission is done by uniting programmers, designers, and
-            other talents, we transform ideas into tangible solutions
-            that impact lives throughout Central California.
+            Our mission is done by uniting programmers, designers, and other
+            talents, we transform ideas into tangible solutions that impact
+            lives throughout Central California.
           </b>{" "}
-          Together, we drive innovation forward, building a future where
-          open source technology empowers citizens and uplifts Fresno
-          and the surrounding areas.{" "}
+          Together, we drive innovation forward, building a future where open
+          source technology empowers citizens and uplifts Fresno and the
+          surrounding areas.{" "}
           <b>
             Join us in driving innovation through open-source tech and
             empowering our community!
@@ -99,29 +98,27 @@ export default function HomePage() {
         </section>
         <GeneralSection
           heading="Why Volunteer"
-          subHeading={(<>
-            Empower Change with <br />
-            Open Fresno
-          </>)}
+          subHeading={
+            <>
+              Empower Change with <br />
+              Open Fresno
+            </>
+          }
           sectionType={SectionType.dark}
-          >
-
+        >
           <b>Ready to make a difference? </b>
-          Join us at Open Fresno and use your skills to drive positive
-          change through technology and collaboration.
+          Join us at Open Fresno and use your skills to drive positive change
+          through technology and collaboration.
           <b>
             {" "}
             Whether you&apos;re a designer, developer, or anyone eager to
             volunteer, together we&apos;re enhancing community services,
-            amplifying voices, and giving you the opportunity to improve
-            your resume and portfolio.
+            amplifying voices, and giving you the opportunity to improve your
+            resume and portfolio.
           </b>{" "}
-          It&apos;s a journey of innovation and empowerment waiting for
-          you. Your impact starts{" "}
-          <Link
-            href="/get-started"
-            className="underline underline-offset-4"
-          >
+          It&apos;s a journey of innovation and empowerment waiting for you.
+          Your impact starts{" "}
+          <Link href="/get-started" className="underline underline-offset-4">
             <b>here!</b>
           </Link>
         </GeneralSection>

@@ -1,72 +1,72 @@
 .team-members-container {
-    padding: 0 80px;
+  padding: 0 80px;
 
-    @media (max-width: var(--screen-sm)) {
-        padding: 0 24px;
-    }
+  @media (max-width: var(--screen-sm)) {
+    padding: 0 24px;
+  }
 
-    @media (max-width: var(--screen-xs)) {
-        padding: 0;
-    }
+  @media (max-width: var(--screen-xs)) {
+    padding: 0;
+  }
 }
 
-.grid-cols-autofill{
-    grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+.grid-cols-autofill {
+  grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
 }
 
 .team-cards-grid {
-    background-color:#ff0!important;
-    display: grid;
-    grid-template-columns: repeat(auto-fill , minmax(306px, 1fr));
-    gap: 10px;
+  background-color: #ff0 !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+  gap: 10px;
 
-    @media (max-width: var(--screen-xxl)) {
-        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    }
+  @media (max-width: var(--screen-xxl)) {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
 }
 
 .team-grid-item {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    border: solid 1px #eaecf0;
-    padding: 0 0 15px 0;
-    width: 296px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border: solid 1px #eaecf0;
+  padding: 0 0 15px 0;
+  width: 296px;
 }
 
 .member-info-container {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 15px;
 }
 
 .member-name-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .member-name {
-    margin: 0;
-    color: #282828;
-    font-weight: 600;
-    font-size: 1.1em;
-    line-height: 29px;
-    font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #282828;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 29px;
+  font-family: "Inter", sans-serif;
 }
 
 .member-title {
-    margin: 0;
-    color: #3e3e59;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 21px;
-    font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #3e3e59;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 21px;
+  font-family: "Inter", sans-serif;
 }
 
 .member-quote {
-    margin-right: auto;
-    color: #5f6980;
+  margin-right: auto;
+  color: #5f6980;
 }

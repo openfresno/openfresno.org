@@ -5,14 +5,14 @@ import { titleCase } from "@/utility/string";
 
 const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+};
 
 const ProjectsCardsContainer = ({
-                                  error = false,
-                                  isLoading = true,
-                                  projectsData = "",
-                                  sectionType = SectionType.light,
-                                }) => {
+  error = false,
+  isLoading = true,
+  projectsData = "",
+  sectionType = SectionType.light,
+}) => {
   return isLoading ? (
     <section className={`page-container app-color--${sectionType}`}>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -33,11 +33,11 @@ const ProjectsCardsContainer = ({
   ) : error || projectsData.length === 0 ? (
     <section className={`page-container app-color--${sectionType}`}>
       <div className="w-full flex flex-col lg:flex-row flex-wrap justify-between gap-4">
-      <span className={`project-cards-load-status-text`}>
-        {error
-          ? "Failed to load..."
-          : "There are no projects that meet the search criteria..."}
-      </span>
+        <span className={`project-cards-load-status-text`}>
+          {error
+            ? "Failed to load..."
+            : "There are no projects that meet the search criteria..."}
+        </span>
       </div>
     </section>
   ) : (
@@ -46,13 +46,13 @@ const ProjectsCardsContainer = ({
         {(() => {
           let shuffleArray = (array) => {
             let copyArray = [...array];
-            for(var i = 0; i < copyArray.length; i++){
-              let randomIndex = randomInt(i, copyArray.length-1);
+            for (var i = 0; i < copyArray.length; i++) {
+              let randomIndex = randomInt(i, copyArray.length - 1);
               let temp = copyArray[i];
               copyArray[i] = copyArray[randomIndex];
               copyArray[randomIndex] = temp;
             }
-          }
+          };
           let dataArray = projectsData.map((project) => (
             <ProjectCard
               key={moment(project.updated_at)}
@@ -76,21 +76,30 @@ const ProjectsCardsContainer = ({
             "bigdog-2017-fb.jpg",
           ];
           return images.map((image, i) => {
-            let randomMoment = moment().subtract(randomInt(4, 30), "days").add(randomInt(0, 30), "hours").add(randomInt(0, 60), "minutes");
-            return(
+            let randomMoment = moment()
+              .subtract(randomInt(4, 30), "days")
+              .add(randomInt(0, 30), "hours")
+              .add(randomInt(0, 60), "minutes");
+            return (
               <ProjectCard
                 key={randomMoment}
                 sectionType={sectionType}
-                projectStatus={randomInt(0,1) ? "Active" : "Inactive"}
-                projectTitle={titleCase(image.split(".")[0].split(/[_-]/).join(" "))}
+                projectStatus={randomInt(0, 1) ? "Active" : "Inactive"}
+                projectTitle={titleCase(
+                  image.split(".")[0].split(/[_-]/).join(" "),
+                )}
                 projectText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin euismod aliquet ligula, eu efficitur quam accumsan nec. Maecenas lobortis, justo eget commodo vehicula."
                 imgUrl={`/img/${image}`}
-                tags={[...projectsData[0].meta.tags.split(","), "Kotlin", "Express", "MongoDB"]}
+                tags={[
+                  ...projectsData[0].meta.tags.split(","),
+                  "Kotlin",
+                  "Express",
+                  "MongoDB",
+                ]}
                 lastUpdatedTimestamp={randomMoment}
               />
-            )
+            );
           });
-
         })()}
         {/*)*/}
       </div>

@@ -1,4 +1,4 @@
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 import HeadingPair from "@/components/ui/HeadingPair";
 
 /**
@@ -12,12 +12,12 @@ import HeadingPair from "@/components/ui/HeadingPair";
  * @returns {JSX.Element}
  */
 export default function GeneralSection({
-    heading = "",
-    subHeading = (<></>),
-    sectionType = SectionType.light,
-    children = (<></>),
-                                       }) {
-  return(
+  heading = "",
+  subHeading = <></>,
+  sectionType = SectionType.light,
+  children = <></>,
+}) {
+  return (
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
       <div className="page-split">
         <HeadingPair
@@ -25,10 +25,8 @@ export default function GeneralSection({
           subHeading={subHeading}
           sectionType={sectionType}
         />
-        <p className="paragraph-large">
-          {children}
-        </p>
+        <p className="paragraph-large">{children}</p>
       </div>
     </section>
-  )
+  );
 }

@@ -12,15 +12,16 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
  * @returns {JSX.Element}
  */
 export default function SingleProjectsSectionStart({
-                                                     data,
-                                                     sectionType = SectionType.light,
-                                                   }) {
+  data,
+  sectionType = SectionType.light,
+}) {
   return (
-    <section id="project-section-start" className={`py-12 lg:py-24 app-color--${sectionType}`}>
+    <section
+      id="project-section-start"
+      className={`py-12 lg:py-24 app-color--${sectionType}`}
+    >
       <div className={`page-container flex flex-col lg:flex-row-reverse`}>
-        <div
-          className={`w-fit rounded-lg lg:ml-8 lg:min-w-[60%] border`}
-        >
+        <div className={`w-fit rounded-lg lg:ml-8 lg:min-w-[60%] border`}>
           <BasePathImage
             alt={data.meta.title}
             imgClassName={`aspect-2/1 object-cover rounded-xl w-full`}
@@ -32,7 +33,7 @@ export default function SingleProjectsSectionStart({
             heading={data.meta.project_type}
             subHeading={data.meta.title}
           />
-          <div className="mt-2 h-1 w-10 bg-neutral-900"/>
+          <div className="mt-2 h-1 w-10 bg-neutral-900" />
           <div className={`btn-alt border p-1 rounded-md w-fit my-4`}>
             Project Status: {titleCase(data.meta.project_status)}
           </div>
