@@ -19,7 +19,7 @@ export default function ProjectCard({
     <div className={`flex flex-col app-color--${sectionType}`}>
       <div className="relative project-card-img-container w-full">
         <div
-          className={`absolute top-3 left-6 font-semibold rounded-md px-1.5 w-fit app-color--grey ${isLoading && "project-card-loading"}`}
+          className={`absolute top-3 left-6 font-semibold rounded-md px-1.5 w-fit app-color--gray ${isLoading && "project-card-loading"}`}
         >
           {titleCase(projectStatus)}
         </div>

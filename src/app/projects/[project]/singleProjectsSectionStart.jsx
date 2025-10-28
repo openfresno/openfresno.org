@@ -37,7 +37,7 @@ export default function SingleProjectsSectionStart({
             Project Status: {titleCase(data.meta.project_status)}
           </div>
           <p className={`project-paragraph`}>{data.meta.description}</p>
-          <p className={`project-paragraph app-text--grey my-4`}>
+          <p className={`project-paragraph app-text--gray my-4`}>
             Last Updated:{" "}
             {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
           </p>
