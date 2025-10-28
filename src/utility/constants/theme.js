@@ -8,7 +8,7 @@ export const SectionType = {
   gray: "gray",
   /**
    * Returns the inverse of the given section type.
-   * @param {toInvert: string}
+   * @param {string} [toInvert]
    * @returns {string}
    */
   invert: (toInvert) => {
@@ -16,6 +16,11 @@ export const SectionType = {
     if (toInvert === "gray") return "gray";
     if (toInvert === "dark") return "light";
   },
+  /**
+   * Returns the complement of the given section type.
+   * @param {string} [toConvert]
+   * @returns {string}
+   */
   toColor: (toConvert) => {
     if (toConvert === "light") return "primary";
     if (toConvert === "gray") return "secondary";

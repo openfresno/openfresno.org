@@ -7,6 +7,7 @@ import GeneralSection from "@/components/ui/GeneralSection";
 export default function AboutSectionLanding({ sectionType }) {
   return (
     <GeneralSection
+      sectionType={sectionType}
       heading="About Us"
       subHeading="Connecting Civic-Minded Technologists"
     >

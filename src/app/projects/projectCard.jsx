@@ -32,7 +32,7 @@ export default function ProjectCard({
       <ul
         className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto`}
       >
-        {tags.map((tag, index) => (
+        {tags.map((tag) => (
           <div
             key={projectTitle + tag}
             className={`project-card-tag app-color--primary w-min px-1 rounded-md ${isLoading && "project-card-loading"}`}

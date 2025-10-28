@@ -7,6 +7,7 @@ import GeneralSection from "@/components/ui/GeneralSection";
 export default function ContactSectionLanding({ sectionType }) {
   return (
     <GeneralSection
+      sectionType={sectionType}
       heading="Contact Us"
       subHeading={
         <>

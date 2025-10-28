@@ -1,8 +1,5 @@
-import { githubOwner } from "../../../utility/constants/app-data";
+import { githubOwner } from "@/utility/constants/app-data";
 import SingleProject from "./singleProject";
-import NavbarE7e from "../../../components/layout/NavbarE7e";
-// import MarginTop from "../../../components/layout/MarginTop";
-import FooterE4d from "../../../components/layout/FooterE4d";
 import LayoutE53 from "@/components/layout/LayoutE53";
 import { SectionType } from "@/utility/constants/theme";
 

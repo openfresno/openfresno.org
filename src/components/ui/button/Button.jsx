@@ -4,7 +4,7 @@ import {
   ChevronLeft,
   ChevronRight,
   ChevronUp,
-} from "../../../integrations/tabler-icon";
+} from "@/integrations/tabler-icon";
 import { HamburgerStaggered, IconX } from "..";
 
 /**

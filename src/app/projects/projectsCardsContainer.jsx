@@ -44,15 +44,6 @@ const ProjectsCardsContainer = ({
     <section className={`page-container app-color--${sectionType}`}>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {(() => {
-          let shuffleArray = (array) => {
-            let copyArray = [...array];
-            for (var i = 0; i < copyArray.length; i++) {
-              let randomIndex = randomInt(i, copyArray.length - 1);
-              let temp = copyArray[i];
-              copyArray[i] = copyArray[randomIndex];
-              copyArray[randomIndex] = temp;
-            }
-          };
           let dataArray = projectsData.map((project) => (
             <ProjectCard
               key={moment(project.updated_at)}
@@ -68,6 +59,7 @@ const ProjectsCardsContainer = ({
             />
           ));
           return dataArray;
+          /*
           let images = [
             "open_data_day.jpg",
             "open_data_day_curved.png",
@@ -75,7 +67,7 @@ const ProjectsCardsContainer = ({
             "towerbridgenight.png",
             "bigdog-2017-fb.jpg",
           ];
-          return images.map((image, i) => {
+          return images.map((image) => {
             let randomMoment = moment()
               .subtract(randomInt(4, 30), "days")
               .add(randomInt(0, 30), "hours")
@@ -100,8 +92,8 @@ const ProjectsCardsContainer = ({
               />
             );
           });
+           */
         })()}
-        {/*)*/}
       </div>
     </section>
   );

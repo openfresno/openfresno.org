@@ -8,7 +8,7 @@ export default function SingleProjectsContributor({ data, role, sectionType }) {
       title={titleCase(role.replaceAll("_", " "))}
       sectionType={sectionType}
       lines={Object.entries(data.meta.contributing[role])
-        .filter((k, v) => k !== "description")
+        .filter(([k, _]) => k !== "description")
         .map(([k, v]) => [titleCase(k.replaceAll("_", " ")), v])}
     >
       <p className="paragraph-large">

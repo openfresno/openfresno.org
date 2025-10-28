@@ -24,7 +24,7 @@ export default function SingleProjectsSectionStart({
         <div className={`w-fit rounded-lg lg:ml-8 lg:min-w-[60%] border`}>
           <BasePathImage
             alt={data.meta.title}
-            imgClassName={`aspect-2/1 object-cover rounded-xl w-full`}
+            imgClassName={`object-cover rounded-xl w-full`}
             src={`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}
           />
         </div>

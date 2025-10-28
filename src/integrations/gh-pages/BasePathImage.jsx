@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 /**
  * BasePathImage is a wrapper around Next.js's `Image` component that ensures
  * image paths resolve correctly when the app is deployed under a subpath—

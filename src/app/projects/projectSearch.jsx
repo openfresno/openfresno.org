@@ -5,7 +5,6 @@ import {
   OutlinedInput,
   InputAdornment,
   IconButton,
-  TextField,
 } from "@mui/material";
 import Link from "next/link";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
@@ -81,6 +80,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         <div className={`max-lg:w-full form-row grow-1 basis-0`}>
           <InputLabel id="project-filter-label">Filter</InputLabel>
           <Select
+            variant="outlined"
             className="w-full"
             id="project-filter"
             label="Filter"
@@ -95,6 +95,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         <div className={`max-lg:w-full form-row grow-1 basis-0`}>
           <InputLabel id="project-sort-by-label">Sort By</InputLabel>
           <Select
+            variant="outlined"
             className="w-full"
             id="project-sort-by"
             label={"Sort By"}

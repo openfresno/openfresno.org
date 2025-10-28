@@ -1,5 +1,4 @@
 import Link from "next/link";
-import HeadingPair from "@/components/ui/HeadingPair";
 import { SectionType } from "@/utility/constants/theme";
 import { HeaderUnderline } from "@/components/ui";
 
