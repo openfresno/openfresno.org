@@ -98,9 +98,10 @@ export default function Timeline({ className }) {
         ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Have a project idea that can benefit the community? Pitch it to us and
-        join forces with our community of innovators to bring your vision to
-        life, driving positive change in Central California.
+        Discover Root Access on Van Ness Ave in the Tower District, just a block
+        south of Fresno City College. From advanced 3D printers and a cozy
+        lounge to laser cutting, workshops, and an electronics haven, <b>explore
+        what awaits you at our partner's space!</b>
       </TimelineItem>
       <style>
         {((_timelineNumbers, _clientRect) => {
