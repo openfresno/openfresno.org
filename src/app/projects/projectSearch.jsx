@@ -9,7 +9,6 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 const ProjectSearch = ({ data, setProjectsData }) => {
   const search = (formData) => {
-    console.log(formData);
     if(!data || !setProjectsData) return;
     const projectSearch = formData.get("project-search").toLowerCase();
     const projectFilter = formData.get("project-filter");

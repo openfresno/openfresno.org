@@ -10,7 +10,6 @@ export default function SingleProjectsContribute({
   setContributeAs,
   sectionType,
 }) {
-  console.log(data.meta.contributing);
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>How to Contribute</h2>

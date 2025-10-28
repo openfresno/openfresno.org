@@ -31,7 +31,6 @@ export default function BasePathImage({ src, className="", imgClassName="", ...p
       ? `${basePath}${src}`
       : src;
 
-  console.log("basePath: ", basePath)
   // eslint-disable-next-line jsx-a11y/alt-text
   return (
     <div className={className}>
