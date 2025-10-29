@@ -1,0 +1,44 @@
+.faq-summary {
+  position: relative;
+  cursor: pointer;
+  anchor-name: --summary;
+  &::marker {
+    content: "";
+  }
+
+  &::before,
+  &::after {
+    /* Custom marker dimensions */
+    content: "";
+    border-radius: 3px;
+    background-color: var(--neutral-900);
+    height: 0.2rem;
+    width: 1rem;
+
+    /* Positions the lines */
+    inset-block-start: 50%;
+    inset-inline-end: 0;
+
+    /* Anchor the shape to the summary */
+    position: absolute;
+    top: calc(8 * var(--spacing));
+    /*position-anchor: --summary;
+    position-area: end end;*/
+    @media (width >= 992px) {
+      right: calc(4 * var(--spacing)) !important;
+    }
+  }
+
+  /* Rotate just the ::after line to create a "+"" shape */
+  &::after {
+    transform: rotate(90deg);
+    transform-origin: 50%;
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+details[open] .faq-summary::after {
+  transform: rotate(180deg);
+}
+.faq-details {
+}

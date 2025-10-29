@@ -95,8 +95,8 @@ Key selectors
 
     &::after {
       left: 50%;
-      width: 36px!important;
-      height: 36px!important;
+      width: 36px !important;
+      height: 36px !important;
     }
   }
 }

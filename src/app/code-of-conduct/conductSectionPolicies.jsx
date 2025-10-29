@@ -1,22 +1,23 @@
 import Link from "next/link";
+import { SectionType } from "@/utility/constants/theme";
+import { HeaderUnderline } from "@/components/ui";
 
-export default function conductSectionPolicies() {
+export default function conductSectionPolicies({
+  sectionType = SectionType.dark,
+}) {
   return (
-    <section className={`conduct-dark-theme`}>
-      <div className={`conduct-policy-landing-container conduct-dark-theme`}>
-        <div
-          className={`conduct-section-heading-container conduct-heading-underline underline-alt`}
+    <section className={`py-12 lg:py-24 app-color--${sectionType}`}>
+      <div
+        className={`page-container conduct-policy-landing-container conduct-dark-theme flex flex-col gap-4 lg:gap-8`}
+      >
+        <HeaderUnderline
+          title="Anti-harassment Policy"
+          description="Promoting a Safe and Respectful Community"
+          sectionType={sectionType}
+          className={"mb-8"}
         >
-          <h1 className={`general-heading-main general-heading-main-alt`}>
-            anti-harassment policy
-          </h1>
-          <h2 className={`conduct-sub-h1-heading`}>
-            Promoting a Safe and Respectful Community
-          </h2>
-        </div>
-        <p className={`conduct-item-paragraph`}>
           This anti-harassment policy is based on{" "}
-          <Link className={`conduct-paragraph-anchor`} href="/">
+          <Link className={`conduct-paragraph-anchor underline`} href="/">
             the example policy
           </Link>{" "}
           from the Geek Feminism wiki, created by the Ada Initiative and other
@@ -29,12 +30,12 @@ export default function conductSectionPolicies() {
           Valerie Aurora, Sarah Smith, and Donna Benjamin generalized the
           policies and added supporting material. Many members of LinuxChix,
           Geek Feminism and other groups contributed to this work.
-        </p>
-      </div>
+        </HeaderUnderline>
 
-      <div className={`conduct-policy-body-container`}>
-        <h3 className={`conduct-sub-heading-main`}>
-          Open Fresno fosters a community that:
+        <h3 className={`conduct-sub-heading-main font-semibold`}>
+          All Open Sacramento network activities, events, and digital forums and
+          their staff, presenters, and participants are held to an
+          anti-harassment policy, included below.{" "}
         </h3>
 
         <p className={`conduct-item-paragraph`}>
@@ -42,7 +43,7 @@ export default function conductSectionPolicies() {
           will only lend its brand and fund groups that offer an anti-harassment
           policy to their attendees. For information on how to offer an
           anti-harassment policy to your group,{" "}
-          <Link className={`conduct-paragraph-anchor`} href="/">
+          <Link className={`conduct-paragraph-anchor underline`} href="/">
             see this guide.
           </Link>
         </p>

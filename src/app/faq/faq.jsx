@@ -4,7 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
 import MDXComponents from "./MDXComponents";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 
 function extractToc(content) {
   const headers = [];
@@ -38,7 +38,7 @@ export default function Faq() {
     <div className="faq-main">
       <FaqSectionStart sectionType={SectionType.light} />
       <FaqSectionNav sectionType={SectionType.light} topics={tableOfContents} />
-      <section className="faq-container-margins">
+      <section className="faq-container-margins mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] flex flex-col gap-0 px-6 py-6 lg:py-12">
         <MDXRemote source={fileContent} components={MDXComponents} />
       </section>
     </div>

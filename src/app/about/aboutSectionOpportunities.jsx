@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SectionType } from "@/utility/constants/theme";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import AboutSectionPositionList from "@/app/about/components/aboutSectionPositionList";
+import HeadingPair from "@/components/ui/HeadingPair";
 
 /**
  * About opportunities section.
@@ -12,35 +13,50 @@ export default function AboutSectionOpportunities({ sectionType }) {
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
       <div className={`w-full page-container overflow-hidden`}>
         <div className="w-full overflow-hidden">
-          <div className={`w-[55%] float-left about-${sectionType}-heading-container about-heading-underline about-underline-alt`}>
-              <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>opportunities</h1>
-              <h2 className={`sub-heading-main`}>Join Our Team</h2>
-              <p className={`opportunities-intro-paragraph`}>
-            <span className={`paragraph-bold`}>
-              Are you passionate about civic tech leadership?
-            </span>{" "}
-                Open Fresno invites you to join our Core Team, organizing events,
-                fostering partnerships, and driving community impact. Shape
-                Fresno&apos;s civic innovation future – connect with us and explore
-                joining our dedicated team.
-              </p>
+          <div
+            className={`w-[55%] float-left about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
+          >
+            <HeadingPair
+              heading="Opportunities"
+              subHeading="Join Our Team"
+              sectionType={sectionType}
+            />
+            <p className={`opportunities-intro-paragraph`}>
+              <span className={`paragraph-bold`}>
+                Are you passionate about civic tech leadership?
+              </span>{" "}
+              Open Fresno invites you to join our Core Team, organizing events,
+              fostering partnerships, and driving community impact. Shape
+              Fresno&apos;s civic innovation future – connect with us and
+              explore joining our dedicated team.
+            </p>
           </div>
-          <div className={`max-lg:hidden w-[45%] h-fit opportunities-get-started relative float-right`}>
+          <div
+            className={`max-lg:hidden w-[45%] h-fit opportunities-get-started relative float-right`}
+          >
             <CenteredInImage
               src="/img/about/rectangle-blue.png"
               alt="rectangle"
               float="right"
-              >
-              <div className="w-fit mx-auto font text-3xl font-bold">
-                <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
+            >
+              <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
+                <span
+                  className={`app-text--${SectionType.invert(sectionType)}`}
+                >
+                  Not a volunteer yet?
+                </span>
                 <br />
-                <Link href="/get-started" className="underline">Get Started</Link>
+                <Link href="/get-started" className="underline">
+                  Get Started
+                </Link>
               </div>
             </CenteredInImage>
           </div>
         </div>
 
-        <h3 className={`sub-heading-main app-text--primary mb-8`}>Open Positions within Our Team</h3>
+        <h3 className={`sub-heading-main app-text--primary mb-8`}>
+          Open Positions within Our Team
+        </h3>
 
         <div className={`w-full flex flex-row flex-wrap space-between`}>
           <AboutSectionPositionList
@@ -48,7 +64,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
             listText={[
               "Director of Fundraising",
               "Director of Community Engagement",
-              "Director of Recruitment"
+              "Director of Recruitment",
             ]}
           />
           <AboutSectionPositionList
@@ -56,7 +72,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
             listText={[
               "Director of Product Management",
               "Director of Marketing & Engagement",
-              "Director of Event Management"
+              "Director of Event Management",
             ]}
           />
         </div>
@@ -65,15 +81,15 @@ export default function AboutSectionOpportunities({ sectionType }) {
           <AboutSectionPositionList
             header="Product"
             listText={[
-              (<s>Director of Frontend Engineering</s>),
-              "Director of Design & Usability"
+              <s>Director of Frontend Engineering</s>,
+              "Director of Design & Usability",
             ]}
           />
           <AboutSectionPositionList
             header="Platform"
             listText={[
               "Director of Backend Engineering",
-              "Director of Data Science"
+              "Director of Data Science",
             ]}
           />
         </div>
@@ -83,10 +99,14 @@ export default function AboutSectionOpportunities({ sectionType }) {
             alt="rectangle"
             float="center"
           >
-            <div className="w-fit mx-auto font text-3xl font-bold">
-              <span className={`app-text--${SectionType.invert(sectionType)}`}>Not a volunteer yet?</span>
+            <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
+              <span className={`app-text--${SectionType.invert(sectionType)}`}>
+                Not a volunteer yet?
+              </span>
               <br />
-              <Link href="/get-started" className="underline">Get Started</Link>
+              <Link href="/get-started" className="underline">
+                Get Started
+              </Link>
             </div>
           </CenteredInImage>
         </div>

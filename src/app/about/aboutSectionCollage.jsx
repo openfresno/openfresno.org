@@ -1,55 +1,36 @@
-"use client"
-import { useEffect, useRef, useState } from "react";
+"use client";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import PageContainer from "@/components/ui/PageContainer";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About collage section.
  * @returns {JSX.Element}
  */
-export default function AboutSectionCollage({ sectionType }) {
-  const containerRef = useRef(null);
-  const [containerWidth, setContainerWidth] = useState(1280);
-  useEffect(() => {
-    let updateContainerWidth = () => {
-      if (containerRef.current) {
-        setContainerWidth(containerRef.current.clientWidth);
-      }
-    }
-    window.addEventListener("resize", updateContainerWidth);
-    updateContainerWidth();
-    return () => {
-      window.removeEventListener("resize", updateContainerWidth);
-    }
-  })
+export default function AboutSectionCollage({
+  sectionType = SectionType.light,
+}) {
   return (
-    <section className={`py-12 lg:py-24 `}>
-      <div className={`page-container flex flex-col content-center app-color--${sectionType}`}>
-        <div className={`w-full mb-[5%]`} ref={containerRef}>
-          <BasePathImage
-            src="/img/about/towerbridgeside.png"
-            alt="Tower bridge"
-            className={`full-width-item`}
-            width={containerWidth}
-            height={426}
-          />
-        </div>
-        <div className={`w-full flex flex-row justify-between`}>
-          <BasePathImage
-            src="/img/about/tablet.png"
-            alt="Tablet"
-            className={`grid-item`}
-            width={containerWidth*0.475}
-            height={426}
-          />
-          <BasePathImage
-            src="/img/about/meeting.png"
-            alt="Meeting"
-            className={`grid-item`}
-            width={containerWidth*0.475}
-            height={426}
-          />
-        </div>
+    <PageContainer divClassName={`gap-4 lg:gap-10`} sectionType={sectionType}>
+      <BasePathImage
+        className={"w-full grow-1 basis-0"}
+        src="/img/about/towerbridgeside.png"
+        alt="Tower bridge"
+      />
+      <div
+        className={`w-full grow-1 basis-0 flex flex-row justify-between gap-6 lg:gap-16`}
+      >
+        <BasePathImage
+          className={"aspect-11/10 grow-1 basis-0"}
+          src="/img/about/tablet.png"
+          alt="Tablet"
+        />
+        <BasePathImage
+          className={"aspect-11/10 grow-1 basis-0"}
+          src="/img/about/meeting.png"
+          alt="Meeting"
+        />
       </div>
-    </section>
+    </PageContainer>
   );
 }

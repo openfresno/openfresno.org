@@ -6,7 +6,7 @@ import ProjectSearch from "@/app/projects/projectSearch";
 import { jsonResponse } from "@/utility/response";
 import useSWR from "swr";
 import { fetchGithubProjectData } from "./github";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 
 const fetcher = (...args) =>
   fetch(...args)
@@ -35,17 +35,15 @@ export default function Projects({ githubOwner }) {
   }, [data]);
 
   return (
-    <>
-      <div className={`projects-main`}>
-        <ProjectsSectionStart sectionType={SectionType.light} />
-        <ProjectSearch data={data} setProjectsData={setProjectsData} />
-        <ProjectsCardsContainer
-          error={error}
-          isLoading={isLoading}
-          projectsData={projectsData}
-          sectionType={SectionType.light}
-        />
-      </div>
-    </>
+    <div className={`projects-main`}>
+      <ProjectsSectionStart sectionType={SectionType.light} />
+      <ProjectSearch data={data} setProjectsData={setProjectsData} />
+      <ProjectsCardsContainer
+        error={error}
+        isLoading={isLoading}
+        projectsData={projectsData}
+        sectionType={SectionType.light}
+      />
+    </div>
   );
 }

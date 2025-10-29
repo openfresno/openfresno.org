@@ -26,7 +26,7 @@ export default function KeenSlider({
         {children}
       </div>
       {loaded && instanceRef.current && (
-        <div className="dots">
+        <div className="dots p-4 flex flex-row gap-4 mx-auto justify-center">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
@@ -36,7 +36,7 @@ export default function KeenSlider({
                 onClick={() => {
                   instanceRef.current?.moveToIdx(idx);
                 }}
-                className={"dot" + (currentSlide === idx ? " active" : "")}
+                className={`w-4 h-4 rounded-[2rem] ${currentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
               ></button>
             );
           })}

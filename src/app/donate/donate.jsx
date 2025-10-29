@@ -1,6 +1,6 @@
 "use client";
 import DonateSectionLanding from "./donateSectionLanding";
-import { SectionType } from "@/utility/constants/theme"
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About page.

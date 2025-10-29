@@ -1,4 +1,4 @@
-import { githubOwner, githubProject } from "../../utility/constants/app-data";
+import { githubOwner, githubProject } from "@/utility/constants/app-data";
 import * as yaml from "yaml";
 
 /**
@@ -43,6 +43,7 @@ export const fetchGithubProjectData = async (ghFullResponses) => {
 export const fetchGithubSingleProject = async (ghResponse) => {
   const ghData = mapGhData(ghResponse);
   const meta = await fetchMetaFile(ghData.full_name, ghData.default_branch);
+
   return meta
     ? {
         ...ghData,
@@ -125,18 +126,22 @@ const metaFile = "meta.yml";
  * @param defaultBranchName
  */
 const fetchMetaFile = async (ghFullName, defaultBranchName) => {
+  /*
   console.dir(`${ghFullName}/${githubProject}`);
   console.dir(localMetaYaml);
+   */
+  let metaResponse;
   if (
     ghFullName === `${githubOwner}/${githubProject}` &&
     process.env.NODE_ENV === "development"
   ) {
-    return localMetaYaml;
+    metaResponse = await fetch(`http://localhost:3000/meta.yml`);
+  } else {
+    metaResponse = await fetch(
+      `https://raw.githubusercontent.com/${ghFullName}/${defaultBranchName}/${metaFile}`,
+    );
   }
 
-  const metaResponse = await fetch(
-    `https://raw.githubusercontent.com/${ghFullName}/${defaultBranchName}/${metaFile}`,
-  );
   if (metaResponse.status === 404) {
     return null;
   } else if (!metaResponse.ok) {

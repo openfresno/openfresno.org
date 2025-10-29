@@ -1,13 +1,13 @@
-'use client';
+"use client";
 import React, { useEffect, useRef } from "react";
 import { Button } from "../../ui";
 import { SectionType } from "@/utility/constants/theme";
 
 export class SimpleButton {
-    constructor(text = "", href = "") {
-        this.text = text;
-        this.href = href;
-    }
+  constructor(text = "", href = "") {
+    this.text = text;
+    this.href = href;
+  }
 }
 
 /**
@@ -15,7 +15,7 @@ export class SimpleButton {
  *
  * This component renders single slice of a vertical timeline that transitions
  * from a single-column layout on mobile to an alternating two-column layout on
- * desktop. The styling and layout logic are fully described in the associated 
+ * desktop. The styling and layout logic are fully described in the associated
  * CSS file's comments.
  *
  * @component
@@ -32,55 +32,65 @@ export class SimpleButton {
  * @returns {JSX.Element}
  */
 export function TimelineItem({
-    number = 0,
-    heading,
-    buttons = [],
-    updateTimelineNumbers,
-    sectionType = SectionType.light,
-    children = (<></>)
+  number = 0,
+  heading,
+  buttons = [],
+  updateTimelineNumbers,
+  sectionType = SectionType.light,
+  children = <></>,
 }) {
-    const refContainer = useRef();
-    useEffect(() => {
-      let updateContainerRect = () => {
-        if (refContainer.current) {
-          updateTimelineNumbers(number, refContainer.current.getBoundingClientRect());
-        }
+  const refContainer = useRef();
+  useEffect(() => {
+    let updateContainerRect = () => {
+      if (refContainer.current) {
+        updateTimelineNumbers(
+          number,
+          refContainer.current.getBoundingClientRect(),
+        );
       }
-      window.addEventListener("resize", updateContainerRect);
-      updateContainerRect()
-      return () => {
-        window.removeEventListener("resize", updateContainerRect);
-      }
-    }, []);
-    return (
-        <div className="timeline-item">
-            <div className={`circled-number app-color--${SectionType.toColor(sectionType)}`} ref={refContainer}>{number}</div>
-            <div className="timeline-item-content">
-                <h2 className="heading-small">{heading}</h2>
-                <p>
-                    {children}
-                </p>
-                {
-                    buttons.length === 0 ? (
-                        <Button
-                            className="btn btn--grow mx-auto mt-2 lg:mx-0" href={buttons[0].href}
-                        >
-                            {buttons[0].text}
-                        </Button>
-                    ) : buttons.length >= 1 ? (
-                        <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
-                            {
-                                buttons.map((button, index) => {
-                                    return (<Button className="btn btn--grow" href={button.href} key={index}>
-                                        {button.text}
-                                    </Button>)
-                                })
-                            }
-                        </div>
-
-                    ) : ""
-                }
-            </div>
-        </div>
-    )
+    };
+    window.addEventListener("resize", updateContainerRect);
+    updateContainerRect();
+    return () => {
+      window.removeEventListener("resize", updateContainerRect);
+    };
+  }, []);
+  return (
+    <div className="timeline-item">
+      <div
+        className={`circled-number app-color--${SectionType.toColor(sectionType)}`}
+        ref={refContainer}
+      >
+        {number}
+      </div>
+      <div className="timeline-item-content">
+        <h2 className="heading-small">{heading}</h2>
+        <p>{children}</p>
+        {buttons.length === 0 ? (
+          <Button
+            className="btn btn--grow mx-auto mt-2 lg:mx-0"
+            href={buttons[0].href}
+          >
+            {buttons[0].text}
+          </Button>
+        ) : buttons.length >= 1 ? (
+          <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
+            {buttons.map((button, index) => {
+              return (
+                <Button
+                  className="btn btn--grow"
+                  href={button.href}
+                  key={index}
+                >
+                  {button.text}
+                </Button>
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
+    </div>
+  );
 }

@@ -24,11 +24,10 @@
 .steps-step-container {
   display: flex;
   flex-direction: row;
-  gap: 32px;
-
-  /* @media (max-width: variables.$screen-xl) { */
-  /* gap: 16px; */
-  /* } */
+  gap: 16px;
+  @media screen and (min-width: 992px) {
+    gap: 32px !important;
+  }
 }
 
 .step-container {
