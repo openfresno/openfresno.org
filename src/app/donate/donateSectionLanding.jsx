@@ -28,7 +28,7 @@ export default function DonateSectionLanding({
         {/*, or become a sustaining supporter by selecting the monthly donation option*/}
         . Your tax-deductible donation fuels innovation, empowers civic
         engagement, and enhances public services while shaping a brighter future
-        for Fresno. Thank you for your generous support!
+        in Central California. Thank you for your generous support!
       </GeneralSection>
       <PageContainer sectionType={sectionType} divClassName={"items-center"}>
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>

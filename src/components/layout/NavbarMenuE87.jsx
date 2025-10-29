@@ -100,7 +100,7 @@ export default function NavbarMenuE87({ className = "" }) {
               href="https://www.meetup.com/openfresno/"
               target="_blank"
               rel="noopener noreferrer"
-              className="navbar-extended-link"
+              className="primary-link--underline"
             >
               meetup
             </Link>
@@ -108,7 +108,7 @@ export default function NavbarMenuE87({ className = "" }) {
           </p>
           <p>
             For any questions, visit our{" "}
-            <Link href="/faq" className="navbar-extended-link">
+            <Link href="/faq" className="primary-link--underline">
               FAQs
             </Link>
             .

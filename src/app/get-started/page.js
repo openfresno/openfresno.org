@@ -18,9 +18,9 @@ export default function GetStartedPage() {
         subHeading="Ready to Volunteer with Open Fresno"
       >
         We&apos;re thrilled that you&apos;re eager to join our community of
-        civic-minded individuals and make a positive impact on Fresno.
-        Volunteering with Open Fresno is a rewarding experience that allows you
-        to use your skills for the betterment of our city.{" "}
+        civic-minded individuals and make a positive impact in Central
+        California. Volunteering with Open Fresno is a rewarding experience that
+        allows you to use your skills for the betterment of our city.{" "}
         <span className={`paragraph-bold`}>
           Whether you&apos;re a designer, developer, or anyone else passionate
           about civic tech,

@@ -49,12 +49,12 @@ export default function SidebarSection({ children, sectionType }) {
         </div>
         <div className={`side-section-anchors-container`}>
           <hr className="mb-2 border-0 h-px bg-(--neutral-400)" />
-          <Link href="/code-of-conduct" className="app-text--primary underline">
+          <Link href="/code-of-conduct" className="primary-link--underline">
             Code of Conduct
           </Link>
           <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
           <Link
-            className="app-text--primary underline"
+            className="primary-link--underline"
             href="https://forms.gle/JA3jAV9wE1645i9LA"
             target="_blank"
             rel="noopener noreferrer"
@@ -64,7 +64,7 @@ export default function SidebarSection({ children, sectionType }) {
           </Link>
           <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
           <Link
-            className="app-text--primary underline"
+            className="primary-link--underline"
             href="https://www.meetup.com/openfresno/"
             target="_blank"
             rel="noopener noreferrer"

@@ -100,3 +100,11 @@
     padding-right: 5%;
   }
 }
+
+.primary-link--underline {
+  cursor: pointer;
+  border-bottom: 1.5px solid var(--main-vivid-blue);
+  color: var(--main-vivid-blue);
+  font-weight: bold;
+  text-decoration: none;
+}

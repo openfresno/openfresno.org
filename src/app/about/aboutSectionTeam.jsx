@@ -20,7 +20,7 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
               Meet the Heartbeat of Open Fresno
             </h2>
           </div>
-          <p className={`mb-8 team-paragraph`}>
+          <p className={`mb-16 team-paragraph`}>
             Open Fresno is powered by a volunteer Core Team that orchestrates
             events, fosters strategic partnerships, and ensures seamless
             communication among cross-functional project teams. Our dedicated

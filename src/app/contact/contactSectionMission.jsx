@@ -73,7 +73,7 @@ export default function ContactSectionMission({ sectionType }) {
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
                 variant="standard"
-                margin="dense"
+                margin="normal"
                 sx={{
                   marginRight: "10%",
                   "& .MuiInputLabel-root": {
@@ -102,7 +102,7 @@ export default function ContactSectionMission({ sectionType }) {
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
                 variant="standard"
-                margin="dense"
+                margin="normal"
                 sx={{
                   "& .MuiInputLabel-root": {
                     color: "white",
@@ -131,7 +131,7 @@ export default function ContactSectionMission({ sectionType }) {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 variant="standard"
-                margin="dense"
+                margin="normal"
                 fullWidth
                 sx={{
                   "& .MuiInputLabel-root": {
@@ -161,7 +161,7 @@ export default function ContactSectionMission({ sectionType }) {
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 variant="standard"
-                margin="dense"
+                margin="normal"
                 fullWidth
                 sx={{
                   "& .MuiInputLabel-root": {
@@ -192,7 +192,7 @@ export default function ContactSectionMission({ sectionType }) {
                 multiline
                 rows={1}
                 variant="standard"
-                margin="dense"
+                margin="normal"
                 fullWidth
                 sx={{
                   "& .MuiInputLabel-root": {
@@ -213,7 +213,7 @@ export default function ContactSectionMission({ sectionType }) {
                 }}
               />
             </div>
-            <div>
+            <div className="pt-11 flex lg:justify-end">
               <Button
                 href={mailtoUri}
                 variant="contained"
@@ -222,7 +222,6 @@ export default function ContactSectionMission({ sectionType }) {
                   whiteSpace: "nowrap",
                   background: "white",
                   color: "black",
-                  float: "right",
                 }}
               >
                 Send Message

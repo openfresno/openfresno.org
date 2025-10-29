@@ -14,14 +14,14 @@ export default function AboutSectionOpportunities({ sectionType }) {
       <div className={`w-full page-container overflow-hidden`}>
         <div className="w-full overflow-hidden">
           <div
-            className={`w-[55%] float-left about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
+            className={`lg:w-[55%] px-4 sm:px-8 md:px-12 lg:px-0 float-left about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
           >
             <HeadingPair
               heading="Opportunities"
               subHeading="Join Our Team"
               sectionType={sectionType}
             />
-            <p className={`opportunities-intro-paragraph`}>
+            <p className={`my-12`}>
               <span className={`paragraph-bold`}>
                 Are you passionate about civic tech leadership?
               </span>{" "}
@@ -54,7 +54,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
           </div>
         </div>
 
-        <h3 className={`sub-heading-main app-text--primary mb-8`}>
+        <h3 className={`hidden lg:block h3-bold app-text--primary mb-8`}>
           Open Positions within Our Team
         </h3>
 

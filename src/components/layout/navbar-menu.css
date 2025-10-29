@@ -77,11 +77,3 @@
     width: 100%;
   }
 }
-
-.navbar-extended-link {
-  cursor: pointer;
-  border-bottom: 1.5px solid var(--main-vivid-blue);
-  color: var(--main-vivid-blue);
-  font-weight: bold;
-  text-decoration: none;
-}
