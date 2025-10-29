@@ -2,6 +2,7 @@
 .app-text--light {
   color: var(--neutral-900);
 }
+
 .app-text--dark {
   color: var(--secondary-50);
 }
@@ -21,6 +22,7 @@
 .app-fill--gray {
   background-color: var(--neutral-500);
 }
+
 .app-fill--dark {
   background-color: var(--neutral-900);
 }

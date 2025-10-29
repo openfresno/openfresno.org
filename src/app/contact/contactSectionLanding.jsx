@@ -1,5 +1,6 @@
 import { SectionType } from "./contact";
 import GeneralSection from "@/components/ui/GeneralSection";
+
 /**
  * contact landing section.
  * @returns {JSX.Element}

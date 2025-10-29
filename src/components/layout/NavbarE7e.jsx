@@ -31,6 +31,7 @@ export default function NavbarE7e({ fade = false }) {
       if (navbarRef.current && !navbarRef.current.contains(event.target))
         showExtendedMenu(false);
     }
+
     if (extendedMenuVisible)
       document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);

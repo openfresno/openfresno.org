@@ -25,7 +25,9 @@ better — catch up with us at one of [Open Fresno's weekly Hack Nights](https:/
 
 ## Test
 
-Add critical end-to-end tests for the website using the Playwright framework. Supplementary tests—including Storybook snapshots, Vitest unit coverage, non-essential checks, and example code—are maintained separately in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
+Add critical end-to-end tests for the website using the Playwright framework. Supplementary tests—including Storybook
+snapshots, Vitest unit coverage, non-essential checks, and example code—are maintained separately in
+the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
 
 ## Deploy
 

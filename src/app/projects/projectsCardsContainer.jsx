@@ -1,7 +1,6 @@
 import ProjectCard from "@/app/projects/projectCard";
 import moment from "moment";
 import { SectionType } from "@/utility/constants/theme";
-import { titleCase } from "@/utility/string";
 
 const randomInt = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
