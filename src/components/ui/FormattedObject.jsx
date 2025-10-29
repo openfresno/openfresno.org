@@ -1,6 +1,15 @@
 import LinedSection from "@/components/ui/LinedSection";
 import {titleCase} from "@/utility/string";
 
+/**
+ *
+ * @component
+ * @param {object} props
+ * @param {object} [props.obj] An object with special properties "title" for titling and "description" to describe the object.
+ * @param {SectionType} [props.sectionType]
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function FormattedObject({
     obj,
     sectionType,
