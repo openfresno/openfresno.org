@@ -1,7 +1,7 @@
 import Link from "next/link";
-import LinedSection from "@/components/ui/LinedSection";
+import FormattedObject from "@/components/ui/FormattedObject";
 import { SectionType } from "@/utility/constants/theme";
-import { titleCase } from "@/utility/string";
+import PageContainer from "@/components/ui/PageContainer";
 
 export default function SingleProjectsResources({
   data,
@@ -9,21 +9,11 @@ export default function SingleProjectsResources({
 }) {
   if(data.meta.resources) {
     return (
-      <LinedSection
-        title="Resources"
-        sectionType={sectionType}
-        lines={Object.entries(data.meta.resources)
-          .filter(([k, _]) => k !== "description")
-          .map(([k, v]) => [titleCase(k.replaceAll("_", " ")), v])}
-      >
-        <p className="paragraph-large">{
-          data.meta.resources.description}
-        </p>
-      </LinedSection>
+      <FormattedObject obj={data.meta.resources} sectionType={sectionType} />
     );
   } else {
     return (
-      <section id="resources" className={`project-resources-container`}>
+      <PageContainer sectionType={sectionType}>
         <div
           className={`project-main-heading-container heading-underline underline-alt`}
         >
@@ -37,16 +27,7 @@ export default function SingleProjectsResources({
         <hr className={`project-info-line`} />
         <div className={`project-info-container`}>
           <p className={`project-info-label`}>Documentation</p>
-          {data.meta.resources.documentation ? (
-            <Link
-              className={`project-info-link`}
-              href="{data.meta.resources.documentation}"
-            >
-              Download
-            </Link>
-          ) : (
-            <p className={`project-info-text`}>n/a</p>
-          )}
+          <p className={`project-info-text`}>n/a</p>
         </div>
         {(() => {
           if (data.meta.resources.tutorials) {
@@ -80,7 +61,7 @@ export default function SingleProjectsResources({
           </div>
         </div>
         <hr className={`project-info-line`} />
-      </section>
+      </PageContainer>
     );
   }
 }
