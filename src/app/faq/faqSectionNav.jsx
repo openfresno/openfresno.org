@@ -7,7 +7,9 @@ import { SectionType } from "@/utility/constants/theme";
  */
 export default function FaqSectionNav({ topics, sectionType }) {
   return (
-    <section className={`faq-container app-color--${SectionType.toColor(sectionType)} px-6 py-6`}>
+    <section
+      className={`faq-container app-color--${SectionType.toColor(sectionType)} px-6 py-6`}
+    >
       <nav
         className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] flex flex-col max-lg:gap-4 lg:flex-row lg:justify-between`}
       >
