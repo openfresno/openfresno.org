@@ -1,5 +1,5 @@
 .btn {
-  display: inline;
+  display: inline-block;
   border-radius: 6px;
   background: var(--main-vivid-blue);
   padding: 16px 24px;
@@ -10,6 +10,14 @@
   line-height: 18px;
   text-decoration: none;
   text-wrap: nowrap;
+  @media (max-width: 500px) {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.7rem;
+  }
+  @media (max-width: 300px) {
+    font-size: 0.7rem;
+    padding: 0.6rem 0.3rem;
+  }
 }
 
 .btn--grow {
@@ -46,7 +54,7 @@
   cursor: pointer;
   border-radius: 6px;
   background: var(--main-vivid-blue);
-  padding: 0.65rem 0.9rem;
+  padding: 8px 12px;
   width: fit-content;
   color: var(--neutral-50);
   font-weight: 600;

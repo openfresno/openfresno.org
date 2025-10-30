@@ -25,7 +25,9 @@ better — catch up with us at one of [Open Fresno's weekly Hack Nights](https:/
 
 ## Test
 
-Add critical end-to-end tests for the website using the Playwright framework. Supplementary tests—including Storybook snapshots, Vitest unit coverage, non-essential checks, and example code—are maintained separately in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
+Add critical end-to-end tests for the website using the Playwright framework. Supplementary tests—including Storybook
+snapshots, Vitest unit coverage, non-essential checks, and example code—are maintained separately in
+the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
 
 ## Deploy
 
@@ -42,4 +44,3 @@ The site is deployed to GitHub pages. See [deploy-gh-pages.yml](.github/workflow
 - [Code of Conduct](https://github.com/openfresno/codeofconduct)
 - https://nextjs.org/docs/pages/guides/testing/playwright
 - https://playwright.dev/
-

@@ -1,3 +1,7 @@
+import React from "react";
+import CircledNumber from "@/components/ui/CircledNumber";
+import { SectionType } from "@/utility/constants/theme";
+
 /**
  * `Steps` is a presentational component that displays a sequence of numbered
  * instructional steps, each with an image, title, and descriptive body text.
@@ -10,7 +14,7 @@
  * @param {Object} props - The component props.
  * @param {React.ReactNode} [props.children] - Optional additional content that can
  *   be rendered alongside the steps (not currently used in the layout).
- * @param {string} props.sectionType - A style variant applied to the section container
+ * @param {SectionType} props.sectionType - A style variant applied to the section container
  *   (e.g., `"light"` or `"dark"`), used for theming consistency.
  * @param {Array<{id: string|number, title: string, body: string}>} props.steps - An array
  *   of step objects. Each step must include:
@@ -32,19 +36,19 @@
 />
  * ```
  */
-export default function Steps({ children, sectionType, steps }) {
+export default function Steps({
+  children,
+  sectionType = SectionType.light,
+  steps,
+}) {
   return (
     <>
       <div className={`steps-steps-container`}>
         {steps.map((item, index) => (
           <div className={`steps-step-container`} key={index}>
-            <img
-              src={`/img/${item.id}.png`}
-              alt={`Step ${item.id}`}
-              className={`step-image`}
-            />
+            <CircledNumber number={item.id} sectionType={sectionType} />
             <div className={`step-container`}>
-              <h3 className={`step-header`}>{item.title}</h3>
+              <h3 className={`step-header font-semibold`}>{item.title}</h3>
               <div
                 className={`step-paragraph`}
                 dangerouslySetInnerHTML={{ __html: item.body }}

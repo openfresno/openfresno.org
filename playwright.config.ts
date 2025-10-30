@@ -1,25 +1,25 @@
-import { defineConfig } from '@playwright/test'
+import { defineConfig } from "@playwright/test";
+
 export default defineConfig({
-  testDir: './tests',
+  testDir: "./tests",
   use: {
-    baseURL: 'http://localhost:3000',
-    browserName: 'chromium',
+    baseURL: "http://localhost:3000",
+    browserName: "chromium",
     headless: false,
   },
   projects: [
     {
-      name: 'chromium',
-      use: { browserName: 'chromium' },
+      name: "chromium",
+      use: { browserName: "chromium" },
     },
   ],
   webServer: {
-    command: 'npm run dev',
+    command: "npm run dev",
     port: 3000,
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000, // give Next.js plenty of time to boot
   },
-})
-
+});
 
 /**
  * Read environment variables from file.

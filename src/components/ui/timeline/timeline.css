@@ -62,7 +62,6 @@ Key selectors
   margin: auto;
 
   /* The vertical line running through the middle */
-
   &::before {
     position: absolute;
     top: 0;
@@ -74,6 +73,7 @@ Key selectors
     content: "";
   }
 
+  /* The dot that moves along the vertical line */
   &::after {
     position: absolute;
     top: 0;
@@ -95,8 +95,8 @@ Key selectors
 
     &::after {
       left: 50%;
-      width: 36px;
-      height: 36px;
+      width: 36px !important;
+      height: 36px !important;
     }
   }
 }
@@ -138,19 +138,21 @@ Key selectors
   }
 }
 
-.timeline-number {
+.circled-number {
   display: grid;
   align-items: center;
   justify-items: center;
   border-radius: 100%;
-  background: var(--main-vivid-blue);
-  width: 5rem;
-  height: 5rem;
-  color: var(--main-white);
+  aspect-ratio: 1/1;
+  width: 2.5rem;
+  height: 2.5rem;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 1.5rem;
 
   @media (min-width: 786px) {
     margin-right: 1rem;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
   }
 }

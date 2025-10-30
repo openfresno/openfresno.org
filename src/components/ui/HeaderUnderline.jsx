@@ -1,4 +1,5 @@
-import { SectionType } from "../../utility/constants/theme";
+import { SectionType } from "@/utility/constants/theme";
+import HeadingPair from "@/components/ui/HeadingPair";
 
 /**
  *  `HeaderUnderline` renders a header that introduces a major section of a page or layout.
@@ -28,30 +29,25 @@ import { SectionType } from "../../utility/constants/theme";
 </HeaderUnderline>
  * ```
  */
-const HeaderUnderline = ({
+export default function HeaderUnderline({
   children,
-  className,
+  className = "",
   sectionType,
   title,
   description,
   large,
-}) => {
+}) {
   return (
-    <>
-      <div
-        className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}
-      >
-        <h1
-          className={`general-heading-main ${sectionType === SectionType.dark && "general-heading-main-alt"}`}
-        >
-          {title}
-        </h1>
-        <h2
-          className={`${large ? "sub-heading-main-large" : "sub-heading-main"}`}
-        >
-          {description}
-        </h2>
-      </div>
+    <div
+      className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}
+    >
+      <HeadingPair
+        heading={title}
+        subHeading={description}
+        subHeadingWidth={"100%"}
+        sectionType={sectionType}
+        className="lg:mb-4"
+      />
       {children && (
         <p
           className={`heading-paragraph-large ${sectionType === SectionType.dark && "heading-paragraph-color-dark"}`}
@@ -59,8 +55,6 @@ const HeaderUnderline = ({
           {children}
         </p>
       )}
-    </>
+    </div>
   );
-};
-
-export default HeaderUnderline;
+}

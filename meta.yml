@@ -4,7 +4,7 @@ project_status: active
 description: The Open Fresno website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Fresno area and beyond through technology
 comments: This is a great project for new members to get used to working one issues and tasks. It is one of the more approachable projects.
 communications: Slack
-channels: \#proj-openfresnoorg
+channels: "#proj-openfresnoorg"
 image_url: openfresno.png
 project_partner: Dan Fey
 project_lead: Brianda Hernandez
@@ -12,22 +12,31 @@ technical_lead: Nate Bass
 lead_designer: Help Needed
 tags: html,css,javascript,react,github,figma
 contributing:
-  designer:
-    difficulty: easy
-    technologies: Figma
-    ways_to_contribute: improve existing designs, design new pages
   developer:
-    difficulty: easy
-    frontend: html,css,javascript,react
-    backend: n/a
+    title: Developer
+    description: Developers can actively contribute to the project by submitting pull requests with code enhancements or bug fixes via the project's GitHub repository.
+    difficulty: Easy
+    frontend: HTML, CSS, JavaScript, React
+    backend: N/A
     technologies: To be announced
-    version_control: Github
-    repo: /openfresno
+    version_control: &vc Github
+    repo: &repo /openfresno
     ways_to_contribute: Bug fixing, testing, maintenance; see issues on github
+  designer:
+    title: Designer
+    description: Designers can actively contribute to the project by creating content, updating Figma files, and more.
+    difficulty: Easy
+    technologies: Figma
+    ways_to_contribute: Improve existing designs, design new pages
   project_manager:
-    difficulty: easy
-    technologies: github, slack
-    ways_to_contribute: organize and create issues & milestones, work with team members to stay and track and remove roadblocks
+    title: Project Manager
+    description: Any volunteers can contribute by writing documentation, generating ideas, attending meetings, helping out the community, and more.
+    difficulty: Easy
+    documentation: Google Sheets
+    technologies: Github, Slack
+    version_control: *vc
+    repo: *repo
+    ways_to_contribute: Organize and create issues & milestones, work with team members to stay on track and remove roadblocks. Writing documentation, Generating new ideas.
 roadmap:
   research:
     time_range: July 1, 2023 - August 31, 2023
@@ -43,8 +52,10 @@ roadmap:
   comments: This is the opportunity where you can put any valuable information about the project. This helps in keeping everyone well-informed about our project's status and future plans. Please take a moment to review where the project stands, including what has been accomplished and what's in progress. Our project goals and deadlines are clearly defined to ensure we stay on track.
   outcome: This is the opportunity where you can put the expected outcome of the project.
 resources:
-  documentation:
-  tutorials:
+  title: Resources
+  description: Explore our resources section on the project page to discover a wealth of design assets, tutorials, and tools that will inspire and empower your creative journey.
+  documentation: N/A
+  tutorials: N/A
   meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
   office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:

@@ -3,15 +3,7 @@ import AboutSectionCollage from "./aboutSectionCollage";
 import AboutSectionMission from "./aboutSectionMission";
 import AboutSectionTeam from "./aboutSectionTeam";
 import AboutSectionOpportunities from "./aboutSectionOpportunities";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About page.

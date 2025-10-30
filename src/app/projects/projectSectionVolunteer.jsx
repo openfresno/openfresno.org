@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
  * Instructions for project page.
@@ -22,7 +23,7 @@ export default function projectSectionVolunteer() {
         </p>
       </div>
       <div className={`project-volunteer-image-container`}>
-        <img
+        <BasePathImage
           className={`project-volunteer-image`}
           src="/img/about/rectangle.png"
           alt="rectangle"

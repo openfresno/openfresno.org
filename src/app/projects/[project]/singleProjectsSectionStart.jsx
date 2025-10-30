@@ -1,47 +1,60 @@
 import moment from "moment";
 import { Button } from "../../../components/ui";
+import { SectionType } from "@/utility/constants/theme";
+import HeadingPair from "@/components/ui/HeadingPair";
+
+import { titleCase } from "@/utility/string";
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
  * Single project start section.
  *
  * @returns {JSX.Element}
  */
-export default function SingleProjectsSectionStart({ data }) {
+export default function SingleProjectsSectionStart({
+  data,
+  sectionType = SectionType.light,
+}) {
   return (
-    <section id="project-section-start" className={`project-section-start`}>
-      <div
-        className={`project-main-image`}
-        style={{
-          backgroundImage: `url(https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url})`,
-        }}
-      ></div>
-      <div className={`project-main-info-container`}>
-        <div
-          className={`project-main-heading-container heading-underline underline-alt`}
-        >
-          <span className={`project-type`}>{data.meta.project_type}</span>
-          <h1 className={`project-heading mb-2`}>{data.meta.title}</h1>
+    <section
+      id="project-section-start"
+      className={`py-12 lg:py-24 app-color--${sectionType}`}
+    >
+      <div className={`page-container flex flex-col lg:flex-row-reverse`}>
+        <div className={`w-fit rounded-lg lg:ml-8 lg:min-w-[60%] border`}>
+          <BasePathImage
+            alt={data.meta.title}
+            imgClassName={`object-cover rounded-xl w-full`}
+            src={`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}
+          />
         </div>
-        <span className={`project-status-label upper-first`}>
-          Project Status: {data.meta.project_status}
-        </span>
-        <p className={`project-paragraph`}>{data.meta.description}</p>
-        <p className={`project-paragraph`}>
-          Last Updated:{" "}
-          {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
-        </p>
-        <div className={`project-button-container`}>
-          <Button
-            className={"btn btn-gold"}
-            href={data.html_url}
-            target={"_blank"}
-            textContent={"View Source Code"}
+        <div className={`max-lg:mt-6`}>
+          <HeadingPair
+            heading={data.meta.project_type}
+            subHeading={data.meta.title}
           />
-          <Button
-            className={"btn btn-gold"}
-            href={"/get-started"}
-            textContent={"Get Started"}
-          />
+          <div className="mt-2 h-1 w-10 bg-neutral-900" />
+          <div className={`btn-alt border p-1 rounded-md w-fit my-4`}>
+            Project Status: {titleCase(data.meta.project_status)}
+          </div>
+          <p className={`project-paragraph`}>{data.meta.description}</p>
+          <p className={`project-paragraph app-text--gray my-4`}>
+            Last Updated:{" "}
+            {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
+          </p>
+          <div className={`flex max-lg:justify-between flex-row lg:gap-4`}>
+            <Button
+              className={"btn"}
+              href={data.html_url}
+              target={"_blank"}
+              textContent={"View Source Code"}
+            />
+            <Button
+              className={"btn"}
+              href={"/get-started"}
+              textContent={"Get Started"}
+            />
+          </div>
         </div>
       </div>
     </section>

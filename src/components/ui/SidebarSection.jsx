@@ -1,4 +1,6 @@
 import Link from "next/link";
+import CenteredInImage from "@/components/ui/CenteredInImage";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * `SidebarSection` is a layout component that renders a main instructions area
@@ -23,23 +25,36 @@ import Link from "next/link";
  */
 export default function SidebarSection({ children, sectionType }) {
   return (
-    <section className={`section-${sectionType} section-container2`}>
+    <section
+      className={`app-color--${sectionType} page-container py-12 lg:py-24 flex flex-col lg:flex-row gap-2`}
+    >
       <div className={`instructions-container`}>{children}</div>
       <div className={`sidebar-container`}>
-        <div className={`side-section w-[411px]`}>
-          <img src="/img/about/rectangle.png" alt="rectangle" />
-          <p className={`side-section-get-started-anchor`}>
-            Not a volunteer yet?
-            <br />
-            <Link href="/get-started">Get Started</Link>
-          </p>
+        <div className={`side-section lg:w-[411px]`}>
+          <CenteredInImage
+            src="/img/about/rectangle-blue.png"
+            alt="rectangle"
+            float="right"
+          >
+            <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
+              <span className={`app-text--${SectionType.invert(sectionType)}`}>
+                Not a volunteer yet?
+              </span>
+              <br />
+              <Link href="/get-started" className="underline">
+                Get Started
+              </Link>
+            </div>
+          </CenteredInImage>
         </div>
         <div className={`side-section-anchors-container`}>
-          <Link href="/code-of-conduct" className={`side-section-anchor`}>
+          <hr className="mb-2 border-0 h-px bg-(--neutral-400)" />
+          <Link href="/code-of-conduct" className="primary-link--underline">
             Code of Conduct
           </Link>
+          <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
           <Link
-            className={`side-section-anchor`}
+            className="primary-link--underline"
             href="https://forms.gle/JA3jAV9wE1645i9LA"
             target="_blank"
             rel="noopener noreferrer"
@@ -47,8 +62,9 @@ export default function SidebarSection({ children, sectionType }) {
           >
             New Member Form
           </Link>
+          <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
           <Link
-            className={`side-section-anchor`}
+            className="primary-link--underline"
             href="https://www.meetup.com/openfresno/"
             target="_blank"
             rel="noopener noreferrer"

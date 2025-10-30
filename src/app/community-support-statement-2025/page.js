@@ -2,15 +2,7 @@ import Link from "next/link";
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import SidebarSection from "../../components/ui/SidebarSection";
 import LayoutE53 from "@/components/layout/LayoutE53";
-
-/**
- * Section type. Displays light or dark themes.
- * @type {{light: string, dark: string}}
- */
-export const SectionType = {
-  light: "light",
-  dark: "dark",
-};
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * Page for information about how to pitch a project.
@@ -36,10 +28,10 @@ export default function CommunitySupportStatementPage() {
               fostering a community that is safe, respectful, and inclusive for
               all.
             </b>{" "}
-            We take our roles in the Greater Fresno and Greater Fresno areas
-            seriously, and supporting diversity and inclusion is not about
-            taking sides—it&apos;s about doing what&apos;s right for our
-            community and being good people.
+            We take our roles in the Fresno and Central Valley areas seriously,
+            and supporting diversity and inclusion is not about taking
+            sides—it&apos;s about doing what&apos;s right for our community and
+            being good people.
           </p>
           <p>
             <Link href="/code-of-conduct">Our Code of Conduct</Link> embodies

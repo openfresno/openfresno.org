@@ -1,53 +1,76 @@
-export default function SingleProjectsBrief({ data }) {
+import { SectionType } from "@/utility/constants/theme";
+
+import { titleCase } from "@/utility/string";
+
+export default function SingleProjectsBrief({
+  data,
+  sectionType = SectionType.light,
+}) {
   return (
-    <section id="project-brief" className={`project-brief-container`}>
-      <div
-        className={`project-main-heading-container heading-underline underline-alt`}
-      >
-        <h2 className={`project-heading`}>Project Brief</h2>
-      </div>
-      <hr className={`project-info-line project-brief-info-line-first`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Status</p>
-        <p className={`project-info-text upper-first`}>
-          {data.meta.project_status}
-        </p>
-      </div>
-      <hr className={`project-info-line`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Description</p>
-        <p className={`project-paragraph-alt`}>{data.meta.description}</p>
-      </div>
-      <hr className={`project-info-line`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Comments</p>
-        <p className={`project-paragraph-alt`}>{data.meta.comments}</p>
-      </div>
-      <hr className={`project-info-line`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Communications</p>
-        <p className={`project-info-text`}>{data.meta.communications}</p>
-        <p className={`project-info-label`}>Channels</p>
-      </div>
-      <hr className={`project-info-line`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Project Partner</p>
-        <p className={`project-info-text`}>{data.meta.project_partner}</p>
-      </div>
-      <hr className={`project-info-line`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Project Lead</p>
-        <p className={`project-info-text`}>{data.meta.project_lead}</p>
-      </div>
-      <hr className={`project-info-line`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Technical Lead</p>
-        <p className={`project-info-text`}>{data.meta.technical_lead}</p>
-      </div>
-      <hr className={`project-info-line`} />
-      <div className={`project-info-container`}>
-        <p className={`project-info-label`}>Lead Designer</p>
-        <p className={`project-info-text`}>{data.meta.lead_designer}</p>
+    <section className={`py-12 app-color--${sectionType}`}>
+      <div className={`page-container flex flex-col`}>
+        <h2 className={`sub-heading-main`}>Project Brief</h2>
+        <div
+          className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}
+        />
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>Status</div>
+          <div className={`grow-2 basis-0`}>
+            {titleCase(data.meta.project_status)}
+          </div>
+        </div>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>
+            Description
+          </div>
+          <div className={`grow-2 basis-0`}>{data.meta.description}</div>
+        </div>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>Comments</div>
+          <div className={`grow-2 basis-0`}>{data.meta.comments}</div>
+        </div>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>
+            Communications
+          </div>
+          <div className={`grow-2 basis-0`}>{data.meta.communications}</div>
+        </div>
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>Channels</div>
+          <div className={`grow-2 basis-0`}>{data.meta.channels}</div>
+        </div>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>
+            Project Partner
+          </div>
+          <div className={`grow-2 basis-0`}>{data.meta.project_partner}</div>
+        </div>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>
+            Project Lead
+          </div>
+          <div className={`grow-2 basis-0`}>{data.meta.project_lead}</div>
+        </div>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>
+            Technical Lead
+          </div>
+          <div className={`grow-2 basis-0`}>{data.meta.technical_lead}</div>
+        </div>
+        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+        <div className={`flex flex-col lg:flex-row`}>
+          <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>
+            Lead Designer
+          </div>
+          <div className={`grow-2 basis-0`}>{data.meta.lead_designer}</div>
+        </div>
       </div>
     </section>
   );
