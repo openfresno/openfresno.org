@@ -5,7 +5,7 @@ website. Help us make the site better by [forking it](https://help.github.com/ar
 or features, and [submitting a pull request](https://help.github.com/articles/creating-a-pull-request/)!
 
 > [!NOTE]
-> View the Open Fresno website documentation https://openfresno.github.io/fe-openfresno.org-doc.
+> View the documentation website https://openfresno.github.io/fe-openfresno.org-doc.
 
 ## Get started
 
@@ -25,9 +25,7 @@ better — catch up with us at one of [Open Fresno's weekly Hack Nights](https:/
 
 ## Test
 
-Add critical end-to-end tests for the website using the Playwright framework. Supplementary tests—including Storybook
-snapshots, Vitest unit coverage, non-essential checks, and example code—are maintained separately in
-the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
+Add critical end-to-end tests with the [Playwright](https://playwright.dev/) framework. Supplementary tests—including Storybook stories, Vitest unit coverage, non-essential checks, and example code are in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
 
 ## Deploy
 
@@ -44,3 +42,4 @@ The site is deployed to GitHub pages. See [deploy-gh-pages.yml](.github/workflow
 - [Code of Conduct](https://github.com/openfresno/codeofconduct)
 - https://nextjs.org/docs/pages/guides/testing/playwright
 - https://playwright.dev/
+
