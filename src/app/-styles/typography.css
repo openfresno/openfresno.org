@@ -67,14 +67,29 @@
   color: var(--secondary-50);
 }
 
+.app-color--gray-alt {
+  background-color: var(--secondary-50);
+  color: var(--neutral-500);
+}
+
 .app-color--primary {
   background-color: var(--main-vivid-blue);
   color: var(--secondary-50);
 }
 
+.app-color--primary-alt {
+  background-color: var(--secondary-50);
+  color: var(--main-vivid-blue);
+}
+
 .app-color--secondary {
   background-color: var(--secondary-900);
   color: var(--main-vivid-yellow);
+}
+
+.app-color--secondary-alt {
+  background-color: var(--main-vivid-yellow);
+  color: var(--secondary-900);
 }
 
 .title {
