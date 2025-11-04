@@ -43,9 +43,11 @@ export default function conductSectionPolicies({
           will only lend its brand and fund groups that offer an anti-harassment
           policy to their attendees. For information on how to offer an
           anti-harassment policy to your group,{" "}
-          <Link className={`conduct-paragraph-anchor underline`} href="/">
-            see this guide.
+          <Link className={`primary-link--underline`}
+                href="https://docs.google.com/document/d/1Zg2FDt7awgfCmdcbzMwKHMb1A7KDOhs_z7ibCb3TLLQ/edit?usp=sharing">
+            see this guide
           </Link>
+          .
         </p>
 
         <p className={`conduct-item-paragraph`}>
@@ -81,7 +83,7 @@ export default function conductSectionPolicies({
         <p className={`conduct-item-paragraph`}>
           If you are being harassed, notice that someone else is being harassed,
           or have any other concerns, please fill out{" "}
-          <Link href="https://forms.gle/JF3Q1AQA6pGxNSNS8">this form</Link>.
+          <Link className="primary-link--underline" href="https://forms.gle/JF3Q1AQA6pGxNSNS8">this form</Link>.
         </p>
 
         <p className={`conduct-item-paragraph`}>

@@ -11,7 +11,7 @@ const MDXComponents = {
     return (
       <>
         <hr className="mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] border-0 h-px bg-(--neutral-400)"></hr>
-        <h4 className="text-lg font-semibold mr-5 my-5">{children}</h4>
+        <h4 className="text-lg font-semibold mr-5 my-5 px-4">{children}</h4>
       </>
     );
   },
