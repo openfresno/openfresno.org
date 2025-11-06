@@ -65,7 +65,6 @@ export default function ContactSectionMission({ sectionType }) {
               className="w-full md:w-[45%]"
               id="standard-helperText"
               label="First Name"
-              // defaultValue="John"
               placeholder="John"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
@@ -89,6 +88,7 @@ export default function ContactSectionMission({ sectionType }) {
                   borderBottom: "2px solid white" // Underline color when input is focused
                 }
               }}
+              focused
             />
             <TextField
               className="w-full md:w-[45%]"
@@ -117,6 +117,7 @@ export default function ContactSectionMission({ sectionType }) {
                   borderBottom: "2px solid white" // Underline color when input is focused
                 }
               }}
+              focused
             />
           </div>
           <div className="form-input">
@@ -147,6 +148,7 @@ export default function ContactSectionMission({ sectionType }) {
                   borderBottom: "2px solid white" // Underline color when input is focused
                 }
               }}
+              focused
             />
           </div>
           <div className="form-input">
@@ -177,6 +179,7 @@ export default function ContactSectionMission({ sectionType }) {
                   borderBottom: "2px solid white" // Underline color when input is focused
                 }
               }}
+              focused
             />
           </div>
           <div className="form-input">
@@ -208,6 +211,7 @@ export default function ContactSectionMission({ sectionType }) {
                   borderBottom: "2px solid white" // Underline color when input is focused
                 }
               }}
+              focused
             />
           </div>
           <div className="pt-11 flex lg:justify-end">

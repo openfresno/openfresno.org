@@ -33,7 +33,7 @@ export default function conductSectionPolicies({
         </HeaderUnderline>
 
         <h3 className={`conduct-sub-heading-main font-semibold`}>
-          All Open Sacramento network activities, events, and digital forums and
+          All Open Fresno network activities, events, and digital forums and
           their staff, presenters, and participants are held to an
           anti-harassment policy, included below.{" "}
         </h3>

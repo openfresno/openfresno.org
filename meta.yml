@@ -1,4 +1,4 @@
-title: OpenFresno.org
+title: Open Fresno
 project_type: website
 project_status: active
 description: The Open Fresno website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Fresno area and beyond through technology
@@ -59,4 +59,9 @@ resources:
   meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
   office_hours: Saturdays at 3:00 PM (Posted on Slack)
 screenshots:
-  - openfresno.png
+  - home.png
+  - about.png
+  - contact.png
+  - get-started.png
+  - projects.png
+  - faq.png

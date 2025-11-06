@@ -113,6 +113,18 @@
   }
 }
 
+.sub-heading-main-large {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 38px;
+  letter-spacing: -0.02em;
+  @media (min-width: 576px) {
+    font-weight: 600;
+    font-size: 39px;
+    line-height: 47px;
+  }
+}
+
 .heading-small {
   font-weight: 700;
   font-size: 25px;

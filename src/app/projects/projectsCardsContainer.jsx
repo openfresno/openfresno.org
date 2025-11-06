@@ -2,10 +2,6 @@ import ProjectCard from "@/app/projects/projectCard";
 import moment from "moment";
 import { SectionType } from "@/utility/constants/theme";
 
-const randomInt = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
 const ProjectsCardsContainer = ({
   error = false,
   isLoading = true,
@@ -49,7 +45,7 @@ const ProjectsCardsContainer = ({
             projectStatus={project.meta.project_status}
             projectTitle={project.meta.title}
             projectText={project.meta.description}
-            imgUrl={`https://raw.githubusercontent.com/${project.full_name}/main/${project.meta.screenshots[0]}`}
+            imgUrl={`/img/screenshots/${project.meta.screenshots[0]}`}
             pageUrl={`/projects/${project.name}/#project-section-start`}
             githubUrl={project.html_url}
             tags={project.meta.tags.split(",")}

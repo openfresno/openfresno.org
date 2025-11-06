@@ -1,25 +1,28 @@
 import { Slider } from "@/components/ui";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import SimpleDialog from "@/components/ui/SimpleDialog";
+import { useEffect, useState } from "react";
 
 export default function SingleProjectsScreenshots({ data, sectionType }) {
+  const [showDialog, setShowDialog] = useState(false);
+  const [windowState, setWindowState] = useState(window);
+  useEffect(() => {
+    setWindowState(window);
+  });
   let shownImages = data.meta.screenshots.map((screenshot) => (
-    <div
+    <BasePathImage
       key={data.full_name.concat(screenshot)}
-      className={`keen-slider__slide aspect-2/1 lg:rounded-lg project-screenshot`}
-      style={{
-        backgroundImage: `url()`,
+      onClick={() => {
+        if (windowState && windowState.innerWidth > 992 && !showDialog) setShowDialog(true);
       }}
-    >
-      <BasePathImage
-        className={`object-cover aspect-2/1 `}
-        src={`https://raw.githubusercontent.com/${data.full_name}/main/${screenshot}`}
-      />
-    </div>
+      className={`keen-slider__slide object-cover aspect-7/4 lg:rounded-lg sharpen ${showDialog ? "" : "lg:cursor-pointer"}`}
+      src={`https://raw.githubusercontent.com/${data.full_name}/main/screenshots/${screenshot}`}
+    />
   ));
   for (let i = shownImages.length; i < 6; i++) {
     shownImages.push(
       <div
-        className={`keen-slider__slide aspect-2/1 lg:rounded-lg bg-neutral-400 project-blank-screenshot`}
+        className={`keen-slider__slide aspect-7/4 lg:rounded-lg bg-neutral-400 project-blank-screenshot`}
         key={data.full_name + i}
       />,
     );
@@ -39,6 +42,19 @@ export default function SingleProjectsScreenshots({ data, sectionType }) {
         <Slider className={"project-screenshots-slider-container lg:hidden"}>
           {shownImages}
         </Slider>
+        <SimpleDialog
+          title="Screenshots"
+          openState={showDialog}
+          handleClose={() => {
+            setShowDialog(false);
+          }}
+          fullWidth={true}
+          maxWidth={"lg"}
+        >
+          <Slider className={"w-full aspect-7/4"}>
+            {shownImages}
+          </Slider>
+        </SimpleDialog>
       </div>
     </section>
   );
