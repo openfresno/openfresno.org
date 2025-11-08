@@ -11,14 +11,11 @@ export default function AboutSectionLanding({ sectionType }) {
       heading="About Us"
       subHeading="Connecting Civic-Minded Technologists"
     >
-      <span className={`paragraph-bold`}>
-        We are a passionate and diverse group of technologists, developers,
-        designers, and civic-minded individuals united by a common goal:
-      </span>{" "}
-      leveraging technology and open data to address civic challenges and
-      enhance public services in the Fresno area. Our community thrives on
-      collaboration, innovation, and a shared commitment to driving positive
-      change.
+      Get in touch with us through our contact page for questions, ideas, or
+      just to say hello. <span className={"font-semibold"}>We welcome inquiries about volunteering, projects,
+      collaborations, or anything related to our mission of using technology for
+      positive change.</span> Your feedback and engagement are crucial to our progress.
+      We're eager to hear from you and build a better future for our community!
     </GeneralSection>
   );
 }

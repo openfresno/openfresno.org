@@ -2,12 +2,12 @@
   {
     "id": 1,
     "title": "Review Our Code of Conduct",
-    "body": "Before diving into projects and collaborations, familiarize yourself with our <a href='code-of-conduct'>Code of Conduct</a> — a set of principles that guide our community's behavior. By adhering to it, we maintain a respectful and inclusive environment. Please read and understand our guidelines for a positive experience. "
+    "body": "Before diving into projects and collaborations, familiarize yourself with our <a class=\"primary-link--underline\" href='code-of-conduct'>Code of Conduct</a> — a set of principles that guide our community's behavior. By adhering to it, we maintain a respectful and inclusive environment. Please read and understand our guidelines for a positive experience. "
   },
   {
     "id": 2,
     "title": "Fill Out a New Member Form",
-    "body": "To start your journey with Open Fresno, fill out our <a href='https://forms.gle/JA3jAV9wE1645i9LA'>New Member Form</a>. It provides vital info about your skills and connects you with our community via a Slack invite for events and projects. "
+    "body": "To start your journey with Open Fresno, fill out our <a class=\"primary-link--underline\" href='https://forms.gle/JA3jAV9wE1645i9LA'>New Member Form</a>. It provides vital info about your skills and connects you with our community via a Slack invite for events and projects. "
   },
   {
     "id": 3,

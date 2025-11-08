@@ -15,7 +15,7 @@ export default function GetStartedPage() {
       <GeneralSection
         sectionType={SectionType.light}
         heading="Get started"
-        subHeading="Ready to Volunteer with Open Fresno"
+        subHeading={<>Ready to Volunteer with<br />Open Fresno</>}
       >
         We&apos;re thrilled that you&apos;re eager to join our community of
         civic-minded individuals and make a positive impact in Central

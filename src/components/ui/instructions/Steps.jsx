@@ -48,7 +48,7 @@ export default function Steps({
           <div className={`steps-step-container`} key={index}>
             <CircledNumber number={item.id} sectionType={sectionType} />
             <div className={`step-container`}>
-              <h3 className={`step-header font-semibold`}>{item.title}</h3>
+              <h3 className={`text-2xl font-semibold`}>{item.title}</h3>
               <div
                 className={`step-paragraph`}
                 dangerouslySetInnerHTML={{ __html: item.body }}

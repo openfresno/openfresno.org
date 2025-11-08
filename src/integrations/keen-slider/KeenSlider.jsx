@@ -1,5 +1,4 @@
 "use client";
-import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
 
 export default function KeenSlider({
@@ -36,7 +35,7 @@ export default function KeenSlider({
                 onClick={() => {
                   instanceRef.current?.moveToIdx(idx);
                 }}
-                className={`w-4 h-4 rounded-[2rem] ${currentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
+                className={`w-4 h-4 rounded-[2rem] cursor-pointer ${currentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
               ></button>
             );
           })}

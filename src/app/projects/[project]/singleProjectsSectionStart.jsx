@@ -33,7 +33,6 @@ export default function SingleProjectsSectionStart({
             heading={data.meta.project_type}
             subHeading={data.meta.title}
           />
-          <div className="mt-2 h-1 w-10 bg-neutral-900" />
           <div className={`btn-alt border p-1 rounded-md w-fit my-4`}>
             Project Status: {titleCase(data.meta.project_status)}
           </div>
@@ -42,7 +41,7 @@ export default function SingleProjectsSectionStart({
             Last Updated:{" "}
             {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
           </p>
-          <div className={`flex max-lg:justify-between flex-row lg:gap-4`}>
+          <div className={`flex flex-wrap gap-4`}>
             <Button
               className={"btn"}
               href={data.html_url}

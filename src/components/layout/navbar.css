@@ -93,3 +93,7 @@ NOTE: The navbar is initially transparent when the fade on-scroll animation is e
 .navbar-link--underline__three ~ .navbar-underline {
   left: calc(0.25rem * 71.5);
 }
+
+.navbar-link--underline__four ~ .navbar-underline {
+  left: calc(0.25rem * 109);
+}

@@ -24,7 +24,7 @@ export default function ProjectCard({
           {titleCase(projectStatus)}
         </div>
         <BasePathImage
-          className={`aspect-2/1 object-cover rounded-xl w-full`}
+          className={`aspect-7/4 object-cover rounded-xl w-full`}
           src={imgUrl}
           alt={"Default project image"}
         />

@@ -13,7 +13,7 @@ import HeadingPair from "@/components/ui/HeadingPair";
  * @param {SectionType} [props.sectionType] - Determines the theme variant of the
  *   header. When set to `SectionType.dark`, alternate dark styles are applied.
  * @param {string} props.title - The main heading text, rendered inside an `h1`.
- * @param {string} props.description - The secondary heading text, rendered inside an `h2`.
+ * @param {JSX.Element} props.description - The secondary heading text, rendered inside an `h2`.
  * @param {boolean} [props.large=false] - If `true`, applies a larger style to the
  *   description (`h2`) for emphasis.
  * @returns {JSX.Element} A styled header block with underline, description, and optional supporting text.
@@ -47,6 +47,7 @@ export default function HeaderUnderline({
         subHeadingWidth={"100%"}
         sectionType={sectionType}
         className="lg:mb-4"
+        large={large}
       />
       {children && (
         <p
