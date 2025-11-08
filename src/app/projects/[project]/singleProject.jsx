@@ -16,10 +16,6 @@ import { SectionType } from "@/utility/constants/theme";
 import SingleProjectsContributor from "@/app/projects/[project]/singleProjectsContributor";
 import PageContainer from "@/components/ui/PageContainer";
 
-const fetcher = (...args) =>
-  fetch(...args)
-    .then(jsonResponse)
-    .then(fetchGithubSingleProject);
 
 /**
  * Page for displaying a single project
@@ -30,7 +26,18 @@ export default function SingleProject({
   githubFullName,
   sectionType = SectionType.light,
 }) {
-  const [contributeAs, setContributeAs] = useState("developer");
+  const [contributeAs, setContributeAs] = useState("");
+  const fetcher = (...args) =>
+    fetch(...args)
+      .then(jsonResponse)
+      .then(fetchGithubSingleProject)
+      .then((data) => {
+        if (data.meta.contributing) {
+          let keys = Object.keys(data.meta.contributing);
+          if (keys.length > 0) setContributeAs(keys[0]);
+        }
+        return data;
+      });
 
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/repos/${githubFullName}`,
@@ -53,17 +60,23 @@ export default function SingleProject({
         sectionType={SectionType.invert(sectionType)}
         data={data}
       />
-      <SingleProjectsContribute
-        data={data}
-        sectionType={sectionType}
-        contributeAs={contributeAs}
-        setContributeAs={setContributeAs}
-      />
-      <SingleProjectsContributor
-        data={data}
-        role={contributeAs}
-        sectionType={sectionType}
-      />
+      {
+        contributeAs !== "" ? (
+          <>
+            <SingleProjectsContribute
+              data={data}
+              sectionType={sectionType}
+              contributeAs={contributeAs}
+              setContributeAs={setContributeAs}
+            />
+            <SingleProjectsContributor
+              data={data}
+              role={contributeAs}
+              sectionType={sectionType}
+            />
+          </>
+        ) : ""
+      }
       <SingleProjectsResources sectionType={sectionType} data={data} />
       <PageContainer noFlex className="max-lg:hidden" sectionType={sectionType}>
         <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />

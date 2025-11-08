@@ -2,8 +2,12 @@ import { Slider } from "@/components/ui";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import SimpleDialog from "@/components/ui/SimpleDialog";
 import { useEffect, useState } from "react";
+import { SectionType } from "@/utility/constants/theme";
 
-export default function SingleProjectsScreenshots({ data, sectionType }) {
+export default function SingleProjectsScreenshots({
+                                                    data,
+                                                    sectionType = SectionType.light
+                                                  }) {
   const [showDialog, setShowDialog] = useState(false);
   const [windowState, setWindowState] = useState(window);
   useEffect(() => {
@@ -15,7 +19,8 @@ export default function SingleProjectsScreenshots({ data, sectionType }) {
       onClick={() => {
         if (windowState && windowState.innerWidth > 992 && !showDialog) setShowDialog(true);
       }}
-      className={`keen-slider__slide object-cover aspect-7/4 lg:rounded-lg sharpen ${showDialog ? "" : "lg:cursor-pointer"}`}
+      className={`keen-slider__slide aspect-7/4 sharpen ${showDialog ? "" : "lg:cursor-pointer"}`}
+      imgClassName={`@max-lg:border @max-lg:rounded-xl`}
       src={`https://raw.githubusercontent.com/${data.full_name}/main/screenshots/${screenshot}`}
     />
   ));
@@ -31,7 +36,7 @@ export default function SingleProjectsScreenshots({ data, sectionType }) {
     <section className={`py-12 app-color--${sectionType}`}>
       <div className={`page-container flex flex-col`}>
         <h2 className={`sub-heading-main`}>Screenshots</h2>
-        <div className="my-2 h-1 w-10 bg-neutral-900" />
+        <div className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`} />
         <p className={`paragraph-large project-paragraph lg:mb-16`}>
           Explore our project through screenshots, providing visual insights
           into its design and functionality.

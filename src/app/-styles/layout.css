@@ -44,7 +44,7 @@
   }
 
   .split-page > div:first-child {
-    padding-left: calc((100% - (var(--screen-xxl) + 80px)) / 2);
+    padding-left: calc((100% - (var(--screen-xxl) + 80px)) / 2 + 2.5rem);
     padding-right: calc(8 * var(--spacing));
     margin-right: 0;
   }
@@ -52,7 +52,7 @@
   .split-page > div:last-child {
     margin-left: 0;
     padding-left: calc(8 * var(--spacing));
-    padding-right: calc((100% - (var(--screen-xxl) + 80px)) / 2);
+    padding-right: calc((100% - (var(--screen-xxl) + 80px)) / 2 + 2.5rem);
   }
 }
 
