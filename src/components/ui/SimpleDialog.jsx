@@ -3,10 +3,10 @@ import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
 import { SectionType } from "@/utility/constants/theme";
 import { themes } from "@/components/ui/MaterialTheme";
 import { ThemeProvider } from "@mui/material";
+import { IconX } from "@/components/ui/icon/IconX";
 
 /**
  * @component
@@ -55,7 +55,7 @@ export default function SimpleDialog({
             color: theme.palette.grey[500]
           })}
         >
-          <CloseIcon />
+          <IconX width="24px" height="24px" />
         </IconButton>
         <DialogContent>
           {children}
