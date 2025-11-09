@@ -8,8 +8,8 @@ import { SectionType } from "@/utility/constants/theme";
  * @returns {JSX.Element}
  */
 export default function AboutSectionCollage({
-  sectionType = SectionType.light,
-}) {
+                                              sectionType = SectionType.light
+                                            }) {
   return (
     <PageContainer divClassName={`gap-4 lg:gap-10`} sectionType={sectionType}>
       <BasePathImage

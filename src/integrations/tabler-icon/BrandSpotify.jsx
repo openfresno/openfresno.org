@@ -1,11 +1,11 @@
 import React from "react";
 
 export const BrandSpotify = ({
-  width = 38,
-  height = 38,
-  className = "",
-  ...props
-}) => {
+                               width = 38,
+                               height = 38,
+                               className = "",
+                               ...props
+                             }) => {
   return (
     <svg
       width={width}

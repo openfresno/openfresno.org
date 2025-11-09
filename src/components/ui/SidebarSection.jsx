@@ -17,10 +17,10 @@ import { SectionType } from "@/utility/constants/theme";
  * @returns {JSX.Element} A structured section with instructions and a sidebar of resource links.
  * @example
  * ```tsx
-<SidebarSection sectionType="light">
-  <h2>Welcome to the community!</h2>
-  <p>Follow the steps below to get started.</p>
-</SidebarSection>
+ <SidebarSection sectionType="light">
+ <h2>Welcome to the community!</h2>
+ <p>Follow the steps below to get started.</p>
+ </SidebarSection>
  * ```
  */
 export default function SidebarSection({ children, sectionType }) {

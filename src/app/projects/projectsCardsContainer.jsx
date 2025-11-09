@@ -3,11 +3,11 @@ import moment from "moment";
 import { SectionType } from "@/utility/constants/theme";
 
 const ProjectsCardsContainer = ({
-  error = false,
-  isLoading = true,
-  projectsData = "",
-  sectionType = SectionType.light,
-}) => {
+                                  error = false,
+                                  isLoading = true,
+                                  projectsData = "",
+                                  sectionType = SectionType.light
+                                }) => {
   return isLoading ? (
     <section className={`page-container app-color--${sectionType}`}>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

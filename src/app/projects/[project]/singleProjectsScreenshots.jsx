@@ -29,7 +29,7 @@ export default function SingleProjectsScreenshots({
       <div
         className={`keen-slider__slide aspect-7/4 lg:rounded-lg bg-neutral-400 project-blank-screenshot`}
         key={data.full_name + i}
-      />,
+      />
     );
   }
   return (

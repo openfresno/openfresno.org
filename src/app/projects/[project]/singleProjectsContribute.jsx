@@ -5,11 +5,11 @@ import { titleCase } from "@/utility/string";
 import PageContainer from "@/components/ui/PageContainer";
 
 export default function SingleProjectsContribute({
-  data,
-  contributeAs,
-  setContributeAs,
-  sectionType,
-}) {
+                                                   data,
+                                                   contributeAs,
+                                                   setContributeAs,
+                                                   sectionType
+                                                 }) {
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>How to Contribute</h2>

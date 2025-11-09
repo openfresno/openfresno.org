@@ -9,7 +9,7 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
   function parseRoadmapMilestones(roadmap) {
     let roadmapKeys = Object.keys(roadmap);
     roadmapKeys = roadmapKeys.filter(
-      (key) => roadmap[key] !== null && roadmap[key].time_range,
+      (key) => roadmap[key] !== null && roadmap[key].time_range
     );
     return roadmapKeys;
   }

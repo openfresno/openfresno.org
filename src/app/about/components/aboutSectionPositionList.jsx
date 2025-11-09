@@ -6,9 +6,9 @@
  * @constructor
  */
 export default function AboutSectionPositionList({
-  header = "",
-  listText = [""],
-}) {
+                                                   header = "",
+                                                   listText = [""]
+                                                 }) {
   return (
     <div
       className={`w-[48%] max-lg:ml-[6%] min-w-[400px] max-lg:w-full max-sm:min-w-0 positions-container mb-4`}

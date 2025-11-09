@@ -1,9 +1,9 @@
 export const Hamburger = ({
-  width = 32,
-  height = 33,
-  className = "",
-  color = "white",
-}) => {
+                            width = 32,
+                            height = 33,
+                            className = "",
+                            color = "white"
+                          }) => {
   return (
     <svg
       width={width}

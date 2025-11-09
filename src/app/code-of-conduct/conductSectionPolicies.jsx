@@ -3,8 +3,8 @@ import { SectionType } from "@/utility/constants/theme";
 import { HeaderUnderline } from "@/components/ui";
 
 export default function conductSectionPolicies({
-  sectionType = SectionType.dark,
-}) {
+                                                 sectionType = SectionType.dark
+                                               }) {
   return (
     <section className={`py-12 lg:py-24 app-color--${sectionType}`}>
       <div

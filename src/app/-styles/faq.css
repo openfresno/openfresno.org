@@ -32,6 +32,7 @@
   }
 
   /* Rotate just the ::after line to create a "+"" shape */
+
   &::after {
     transform: rotate(90deg);
     transform-origin: 50%;

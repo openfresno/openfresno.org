@@ -18,9 +18,9 @@ export default function Contact() {
         fontSize: 16,
         fontWeight: 600,
         lineHeight: "18px",
-        textTransform: "none",
-      },
-    },
+        textTransform: "none"
+      }
+    }
   });
   return (
     <div className="">

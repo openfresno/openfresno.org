@@ -12,9 +12,9 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
  * @returns {JSX.Element}
  */
 export default function SingleProjectsSectionStart({
-  data,
-  sectionType = SectionType.light,
-}) {
+                                                     data,
+                                                     sectionType = SectionType.light
+                                                   }) {
   return (
     <section
       id="project-section-start"

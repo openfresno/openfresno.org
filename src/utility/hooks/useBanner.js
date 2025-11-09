@@ -71,7 +71,7 @@ export default function useBanner({ id }) {
   const storageKey = `banner_dismissed_${id}`;
   const [isDismissed, setIsDismissed, isReady] = useLocalStorage(
     storageKey,
-    false,
+    false
   );
 
   const dismissBanner = () => {
@@ -80,6 +80,6 @@ export default function useBanner({ id }) {
 
   return {
     visible: isReady ? !isDismissed : false,
-    dismissBanner,
+    dismissBanner
   };
 }

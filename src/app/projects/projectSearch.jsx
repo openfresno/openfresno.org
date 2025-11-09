@@ -1,11 +1,4 @@
-import {
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
-} from "@mui/material";
+import { IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select } from "@mui/material";
 import Link from "next/link";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
@@ -24,18 +17,18 @@ const ProjectSearch = ({ data, setProjectsData }) => {
 
     if (projectSearch) {
       filteredProjects = filteredProjects.filter((project) =>
-        project.meta.title.toLowerCase().includes(projectSearch),
+        project.meta.title.toLowerCase().includes(projectSearch)
       );
     }
 
     if (projectFilter !== "all") {
       filteredProjects = filteredProjects.filter(
-        (project) => project.meta.project_status === projectFilter,
+        (project) => project.meta.project_status === projectFilter
       );
     }
 
     filteredProjects = filteredProjects.sort(
-      (a, b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy]),
+      (a, b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy])
     );
     setProjectsData([...filteredProjects]);
   };
@@ -65,7 +58,8 @@ const ProjectSearch = ({ data, setProjectsData }) => {
                 <IconButton
                   aria-label="search"
                   type="submit"
-                  onClick={() => {}}
+                  onClick={() => {
+                  }}
                 >
                   <BasePathImage
                     src="/img/form-element/search.svg"

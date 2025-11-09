@@ -17,9 +17,9 @@ export default function ContactSectionMission({ sectionType }) {
   const [body, setBody] = useState("");
 
   const mailtoUri = `mailto:hello@openfresno.org?subject=${encodeURIComponent(
-    subject,
+    subject
   )}&body=${encodeURIComponent(body)}%0A%0A%0A%0A${encodeURIComponent(
-    firstName,
+    firstName
   )}%20${encodeURIComponent(lastName)}%0A${encodeURIComponent(email)}`;
 
   return (

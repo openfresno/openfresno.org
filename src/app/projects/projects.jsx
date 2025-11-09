@@ -23,13 +23,13 @@ export default function Projects({ githubOwner }) {
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/orgs/${githubOwner}/repos?per_page=20&sort=updated&direction=desc`,
     fetcher,
-    { shouldRetryOnError: false }, // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
+    { shouldRetryOnError: false } // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
   );
 
   useEffect(() => {
     if (data) {
       setProjectsData(
-        data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)),
+        data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
       );
     }
   }, [data]);

@@ -23,9 +23,9 @@ import PageContainer from "@/components/ui/PageContainer";
  * @returns {JSX.Element}
  */
 export default function SingleProject({
-  githubFullName,
-  sectionType = SectionType.light,
-}) {
+                                        githubFullName,
+                                        sectionType = SectionType.light
+                                      }) {
   const [contributeAs, setContributeAs] = useState("");
   const fetcher = (...args) =>
     fetch(...args)
@@ -42,7 +42,7 @@ export default function SingleProject({
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/repos/${githubFullName}`,
     fetcher,
-    { shouldRetryOnError: false }, // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
+    { shouldRetryOnError: false } // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
   );
 
   if (error) return <div>failed to load</div>;

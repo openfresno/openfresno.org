@@ -9,8 +9,8 @@ import { SectionType } from "@/utility/constants/theme";
  * @returns {JSX.Element}
  */
 export default function ProjectsSectionStart({
-  sectionType = SectionType.light,
-}) {
+                                               sectionType = SectionType.light
+                                             }) {
   return (
     // TODO fix styling classes to represent the projects page?
     <section

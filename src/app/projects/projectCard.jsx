@@ -4,17 +4,17 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 
 export default function ProjectCard({
-  isLoading = true,
-  projectStatus,
-  projectTitle,
-  projectText,
-  imgUrl = "/img/tower-bridge.jpg",
-  pageUrl,
-  githubUrl,
-  tags,
-  lastUpdatedTimestamp,
-  sectionType = SectionType.light,
-}) {
+                                      isLoading = true,
+                                      projectStatus,
+                                      projectTitle,
+                                      projectText,
+                                      imgUrl = "/img/tower-bridge.jpg",
+                                      pageUrl,
+                                      githubUrl,
+                                      tags,
+                                      lastUpdatedTimestamp,
+                                      sectionType = SectionType.light
+                                    }) {
   return (
     <div className={`flex flex-col app-color--${sectionType}`}>
       <div className="relative project-card-img-container w-full">

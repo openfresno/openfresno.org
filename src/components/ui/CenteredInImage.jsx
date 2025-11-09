@@ -1,11 +1,11 @@
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 export default function CenteredInImage({
-  src = "/img/about/rectangle.png",
-  alt = "rectangle",
-  float = "left",
-  children = <></>,
-}) {
+                                          src = "/img/about/rectangle.png",
+                                          alt = "rectangle",
+                                          float = "left",
+                                          children = <></>
+                                        }) {
   return (
     <div
       className={`w-fit relative ${float === "center" ? "mx-auto" : `float-${float}`}`}

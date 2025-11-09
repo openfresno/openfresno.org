@@ -19,24 +19,24 @@ import HeadingPair from "@/components/ui/HeadingPair";
  * @returns {JSX.Element} A styled header block with underline, description, and optional supporting text.
  * @example
  * ```tsx
-<HeaderUnderline
-  title="Our Services"
-  description="We provide scalable solutions for modern businesses."
-  sectionType={SectionType.dark}
-  large
->
-  Trusted by startups and enterprises worldwide.
-</HeaderUnderline>
+ <HeaderUnderline
+ title="Our Services"
+ description="We provide scalable solutions for modern businesses."
+ sectionType={SectionType.dark}
+ large
+ >
+ Trusted by startups and enterprises worldwide.
+ </HeaderUnderline>
  * ```
  */
 export default function HeaderUnderline({
-  children,
-  className = "",
-  sectionType,
-  title,
-  description,
-  large,
-}) {
+                                          children,
+                                          className = "",
+                                          sectionType,
+                                          title,
+                                          description,
+                                          large
+                                        }) {
   return (
     <div
       className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}

@@ -29,7 +29,7 @@ import useBanner from "../../utility/hooks/useBanner";
  */
 export default function BannerF60({ children }) {
   const { visible: bannerVisible, dismissBanner } = useBanner({
-    id: "community-support-statement-2025-banner",
+    id: "community-support-statement-2025-banner"
   });
   const [isAnimating, setIsAnimating] = useState(false);
   const [shouldRender, setShouldRender] = useState(bannerVisible);

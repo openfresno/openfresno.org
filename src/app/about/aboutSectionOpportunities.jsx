@@ -64,7 +64,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
             listText={[
               "Director of Fundraising",
               "Director of Community Engagement",
-              "Director of Recruitment",
+              "Director of Recruitment"
             ]}
           />
           <AboutSectionPositionList
@@ -72,7 +72,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
             listText={[
               "Director of Product Management",
               "Director of Marketing & Engagement",
-              "Director of Event Management",
+              "Director of Event Management"
             ]}
           />
         </div>
@@ -82,14 +82,14 @@ export default function AboutSectionOpportunities({ sectionType }) {
             header="Product"
             listText={[
               <s>Director of Frontend Engineering</s>,
-              "Director of Design & Usability",
+              "Director of Design & Usability"
             ]}
           />
           <AboutSectionPositionList
             header="Platform"
             listText={[
               "Director of Backend Engineering",
-              "Director of Data Science",
+              "Director of Data Science"
             ]}
           />
         </div>

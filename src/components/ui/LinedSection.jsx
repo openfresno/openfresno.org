@@ -25,11 +25,11 @@ export function SectionLine({ title = "", children = <></> }) {
  * @constructor
  */
 export default function LinedSection({
-  title = "",
-  children = <></>,
-  lines = null,
-  sectionType = SectionType.light,
-}) {
+                                       title = "",
+                                       children = <></>,
+                                       lines = null,
+                                       sectionType = SectionType.light
+                                     }) {
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>{title}</h2>
@@ -39,10 +39,10 @@ export default function LinedSection({
       {children ? children : ""}
       {lines
         ? lines.map((line, i) => (
-            <SectionLine title={line[0]} key={line[0] + i}>
-              {line[1]}
-            </SectionLine>
-          ))
+          <SectionLine title={line[0]} key={line[0] + i}>
+            {line[1]}
+          </SectionLine>
+        ))
         : ""}
     </PageContainer>
   );

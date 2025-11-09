@@ -12,11 +12,11 @@ import HeadingPair from "@/components/ui/HeadingPair";
  * @returns {JSX.Element}
  */
 export default function GeneralSection({
-  heading = "",
-  subHeading = <></>,
-  sectionType = SectionType.light,
-  children = <></>,
-}) {
+                                         heading = "",
+                                         subHeading = <></>,
+                                         sectionType = SectionType.light,
+                                         children = <></>
+                                       }) {
   return (
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
       <div className="page-split">

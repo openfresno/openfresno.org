@@ -2,13 +2,13 @@
 import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
 
 export default function KeenSlider({
-  className,
-  children,
-  currentSlide,
-  setCurrentSlide,
-  setLoaded,
-  loaded,
-}) {
+                                     className,
+                                     children,
+                                     currentSlide,
+                                     setCurrentSlide,
+                                     setLoaded,
+                                     loaded
+                                   }) {
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
     slideChanged(slider) {
@@ -16,7 +16,7 @@ export default function KeenSlider({
     },
     created() {
       setLoaded(true);
-    },
+    }
   });
 
   return (
@@ -27,7 +27,7 @@ export default function KeenSlider({
       {loaded && instanceRef.current && (
         <div className="dots p-4 flex flex-row gap-4 mx-auto justify-center">
           {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ...Array(instanceRef.current.track.details.slides.length).keys()
           ].map((idx) => {
             return (
               <button

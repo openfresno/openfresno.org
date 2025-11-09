@@ -3,9 +3,9 @@ import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
 
 export default function SingleProjectsBrief({
-  data,
-  sectionType = SectionType.light,
-}) {
+                                              data,
+                                              sectionType = SectionType.light
+                                            }) {
   return (
     <section className={`py-12 app-color--${sectionType}`}>
       <div className={`page-container flex flex-col`}>

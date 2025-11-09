@@ -4,9 +4,9 @@ import { SectionType } from "@/utility/constants/theme";
 import PageContainer from "@/components/ui/PageContainer";
 
 export default function SingleProjectsResources({
-  data,
-  sectionType = SectionType.light,
-}) {
+                                                  data,
+                                                  sectionType = SectionType.light
+                                                }) {
   if (data.meta.resources) {
     return (
       <FormattedObject obj={data.meta.resources} sectionType={sectionType} />

@@ -7,8 +7,8 @@ import PageContainer from "@/components/ui/PageContainer";
  * @returns {JSX.Element}
  */
 export default function DonateSectionLanding({
-  sectionType = SectionType.light,
-}) {
+                                               sectionType = SectionType.light
+                                             }) {
   return (
     <>
       <GeneralSection

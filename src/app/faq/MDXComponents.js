@@ -14,7 +14,7 @@ const MDXComponents = {
         <h4 className="text-lg font-semibold mr-5 my-5 px-4">{children}</h4>
       </>
     );
-  },
+  }
 };
 
 export default MDXComponents;
