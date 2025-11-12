@@ -38,5 +38,5 @@ const instructions = [
       whether you're a coder, designer, or civic tech enthusiast. Reach out, ask questions, and dive into projects
       you're passionate about. Welcome to Open Fresno!</>)
   }
-]
+];
 export default instructions;

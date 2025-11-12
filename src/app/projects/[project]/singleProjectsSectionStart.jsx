@@ -21,11 +21,15 @@ export default function SingleProjectsSectionStart({
       className={`py-12 lg:py-24 app-color--${sectionType}`}
     >
       <div className={`page-container flex flex-col lg:flex-row-reverse`}>
-        <div className={`w-fit rounded-lg lg:ml-8 lg:min-w-[60%] border`}>
+        <div className={`w-fit lg:ml-8 lg:min-w-[60%]`}>
           <BasePathImage
             alt={data.meta.title}
-            imgClassName={`object-cover rounded-xl w-full`}
-            src={`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}
+            imgClassName={`border rounded-xl`}
+            src={
+              data.meta.image_url ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/${data.meta.image_url}` :
+                data.meta.screenshots ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${data.meta.screenshots[0]}` :
+                  ""
+            }
           />
         </div>
         <div className={`max-lg:mt-6`}>

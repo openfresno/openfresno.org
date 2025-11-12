@@ -6,7 +6,7 @@ import { titleCase } from "@/utility/string";
 const ProjectsCardsContainer = ({
                                   error = false,
                                   isLoading = true,
-                                  projectsData = "",
+                                  projectsData = {},
                                   sectionType = SectionType.light
                                 }) => {
   return isLoading ? (
@@ -46,7 +46,11 @@ const ProjectsCardsContainer = ({
             projectStatus={project.meta.project_status}
             projectTitle={project.meta.title}
             projectText={project.meta.description}
-            imgUrl={project.meta.screenshots ? `https://raw.githubusercontent.com/${project.full_name}/main/screenshots/${project.meta.screenshots[0]}` : ""}
+            imgUrl={
+              project.meta.image_url ? `https://raw.githubusercontent.com/${project.full_name}/${project.default_branch}/${project.meta.image_url}` :
+                project.meta.screenshots ? `https://raw.githubusercontent.com/${project.full_name}/${project.default_branch}/screenshots/${project.meta.screenshots[0]}` :
+                  ""
+            }
             pageUrl={`/projects/${project.name}/#project-section-start`}
             githubUrl={project.html_url}
             tags={titleCase(project.meta.tags, ",", null)}

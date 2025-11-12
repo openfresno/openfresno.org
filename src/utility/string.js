@@ -42,6 +42,6 @@ export function titleCase(
         default:
           return word.charAt(0).toUpperCase() + word.slice(1);
       }
-    })
+    });
   return joiner === null ? titleCased : titleCased.join(joiner);
 }

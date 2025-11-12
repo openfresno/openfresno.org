@@ -45,5 +45,5 @@ const instructions = [
       your project is approved, a team member will provide you with further directions and guidance to get started on
       your exciting journey with Open Fresno!</>)
   }
-]
+];
 export default instructions;

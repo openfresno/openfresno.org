@@ -23,17 +23,19 @@ export default function SingleProjectsScreenshots({
           setSliderState(i);
         }
       }}
-      className={`keen-slider__slide aspect-7/4 sharpen ${showDialog ? "" : "lg:cursor-pointer"}`}
+      className={`keen-slider__slide aspect-7/4 sharpen @container ${showDialog ? "" : "lg:cursor-pointer"}`}
       imgClassName={`@max-lg:border @max-lg:rounded-xl`}
-      src={`https://raw.githubusercontent.com/${data.full_name}/main/screenshots/${screenshot}`}
+      src={`https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${screenshot}`}
     />
   ));
   for (let i = shownImages.length; i < 6; i++) {
     shownImages.push(
       <div
-        className={`keen-slider__slide aspect-7/4 lg:rounded-lg bg-neutral-400 project-blank-screenshot`}
+        className={`keen-slider__slide aspect-7/4 @container`}
         key={data.full_name + i}
-      />
+      >
+        <div className={`size-full bg-neutral-400 @max-lg:border @max-lg:rounded-xl`} />
+      </div>
     );
   }
   return (
