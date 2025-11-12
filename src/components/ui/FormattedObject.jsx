@@ -1,19 +1,25 @@
 import LinedSection from "@/components/ui/LinedSection";
 import { titleCase } from "@/utility/string";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  *
  * @component
  * @param {object} props
  * @param {object} [props.obj] An object with special properties "title" for titling and "description" to describe the object.
+ * @param {string} [props.title] The title to display. Defaults to [obj.title]
  * @param {SectionType} [props.sectionType]
  * @returns {JSX.Element}
  * @constructor
  */
-export default function FormattedObject({ obj, sectionType }) {
+export default function FormattedObject({
+                                          obj = { title: "" },
+                                          title = obj.title,
+                                          sectionType = SectionType.light
+                                        }) {
   return (
     <LinedSection
-      title={obj.title}
+      title={title}
       sectionType={sectionType}
       lines={Object.entries(obj)
         .filter(([k, _]) => k !== "description" && k !== "title")

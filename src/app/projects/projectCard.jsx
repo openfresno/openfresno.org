@@ -24,20 +24,21 @@ export default function ProjectCard({
           {titleCase(projectStatus)}
         </div>
         <BasePathImage
-          className={`aspect-7/4 object-cover rounded-xl w-full`}
+          className={`aspect-7/4 w-full`}
+          imgClassName={"rounded-xl"}
           src={imgUrl}
           alt={"Default project image"}
         />
       </div>
       <ul
-        className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto`}
+        className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto lg:min-h-[75px]`}
       >
         {tags.map((tag) => (
           <div
             key={projectTitle + tag}
-            className={`project-card-tag app-color--primary w-min px-1 rounded-md ${isLoading && "project-card-loading"}`}
+            className={`project-card-tag app-color--primary w-min h-min px-1 rounded-md ${isLoading && "project-card-loading"}`}
           >
-            {titleCase(tag)}
+            {tag}
           </div>
         ))}
       </ul>

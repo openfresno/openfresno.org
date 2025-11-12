@@ -10,7 +10,7 @@ export default function KeenSlider({
                                      loaded
                                    }) {
   const [sliderRef, instanceRef] = useKeenSlider({
-    initial: 0,
+    initial: currentSlide,
     slideChanged(slider) {
       setCurrentSlide(slider.track.details.rel);
     },
@@ -18,7 +18,6 @@ export default function KeenSlider({
       setLoaded(true);
     }
   });
-
   return (
     <div className={className}>
       <div ref={sliderRef} className="keen-slider">

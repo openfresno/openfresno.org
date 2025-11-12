@@ -9,15 +9,19 @@ export default function SingleProjectsScreenshots({
                                                     sectionType = SectionType.light
                                                   }) {
   const [showDialog, setShowDialog] = useState(false);
+  const [sliderState, setSliderState] = useState(0);
   const [windowState, setWindowState] = useState(window);
   useEffect(() => {
     setWindowState(window);
   });
-  let shownImages = data.meta.screenshots.map((screenshot) => (
+  let shownImages = data.meta.screenshots.map((screenshot, i) => (
     <BasePathImage
       key={data.full_name.concat(screenshot)}
       onClick={() => {
-        if (windowState && windowState.innerWidth > 992 && !showDialog) setShowDialog(true);
+        if (windowState && windowState.innerWidth > 992 && !showDialog) {
+          setShowDialog(true);
+          setSliderState(i);
+        }
       }}
       className={`keen-slider__slide aspect-7/4 sharpen ${showDialog ? "" : "lg:cursor-pointer"}`}
       imgClassName={`@max-lg:border @max-lg:rounded-xl`}
@@ -56,7 +60,7 @@ export default function SingleProjectsScreenshots({
           fullWidth={true}
           maxWidth={"lg"}
         >
-          <Slider className={"w-full aspect-7/4"}>
+          <Slider className={"w-full aspect-7/4"} sliderState={[sliderState, setSliderState]}>
             {shownImages}
           </Slider>
         </SimpleDialog>

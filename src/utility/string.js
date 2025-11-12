@@ -13,11 +13,13 @@ export const upperFirst = (s, splitter = " ") =>
  Same as above, but with added exceptions.
  * @param {string} [toTitleCase] The input to title case.
  * @param {string|RegExp} [splitter] A string or regex expression to split the given string by; " " by default
- @returns string
+ * @param {string?} [joiner] The string with which to join the result, will not join if null; " " by default
+ @returns {string|[string]}
  */
 export function titleCase(
   toTitleCase,
-  splitter = " "
+  splitter = " ",
+  joiner = " "
 ) {
   if (
     !toTitleCase ||
@@ -25,7 +27,7 @@ export function titleCase(
   )
     return "";
   if (toTitleCase === ".") return "Loading";
-  return toTitleCase
+  let titleCased = toTitleCase
     .split(splitter)
     .map((word) => {
       switch (word) {
@@ -41,5 +43,5 @@ export function titleCase(
           return word.charAt(0).toUpperCase() + word.slice(1);
       }
     })
-    .join(" ");
+  return joiner === null ? titleCased : titleCased.join(joiner);
 }

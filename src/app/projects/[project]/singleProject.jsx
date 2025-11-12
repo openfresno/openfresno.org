@@ -55,11 +55,19 @@ export default function SingleProject({
       <PageContainer noFlex noPadding sectionType={sectionType}>
         <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
       </PageContainer>
-      <SingleProjectsScreenshots sectionType={sectionType} data={data} />
-      <SingleProjectsRoadmap
-        sectionType={SectionType.invert(sectionType)}
-        data={data}
-      />
+      {
+        data.meta.screenshots ? (
+          <SingleProjectsScreenshots sectionType={sectionType} data={data} />
+        ) : ""
+      }
+      {
+        data.meta.roadmap ? (
+          <SingleProjectsRoadmap
+            sectionType={SectionType.invert(sectionType)}
+            data={data}
+          />
+        ) : ""
+      }
       {
         contributeAs !== "" ? (
           <>
@@ -77,7 +85,11 @@ export default function SingleProject({
           </>
         ) : ""
       }
-      <SingleProjectsResources sectionType={sectionType} data={data} />
+      {
+        data.meta.resources ? (
+          <SingleProjectsResources sectionType={sectionType} data={data} />
+        ) : ""
+      }
       <PageContainer noFlex className="max-lg:hidden" sectionType={sectionType}>
         <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
       </PageContainer>

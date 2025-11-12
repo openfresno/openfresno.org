@@ -1,6 +1,7 @@
 import ProjectCard from "@/app/projects/projectCard";
 import moment from "moment";
 import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 const ProjectsCardsContainer = ({
                                   error = false,
@@ -38,17 +39,17 @@ const ProjectsCardsContainer = ({
   ) : (
     <section className={`page-container app-color--${sectionType}`}>
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {projectsData.map((project) => (
+        {[...projectsData].map((project) => (
           <ProjectCard
             key={moment(project.updated_at)}
             sectionType={sectionType}
             projectStatus={project.meta.project_status}
             projectTitle={project.meta.title}
             projectText={project.meta.description}
-            imgUrl={`/img/screenshots/${project.meta.screenshots[0]}`}
+            imgUrl={project.meta.screenshots ? `https://raw.githubusercontent.com/${project.full_name}/main/screenshots/${project.meta.screenshots[0]}` : ""}
             pageUrl={`/projects/${project.name}/#project-section-start`}
             githubUrl={project.html_url}
-            tags={project.meta.tags.split(",")}
+            tags={titleCase(project.meta.tags, ",", null)}
             lastUpdatedTimestamp={moment(project.updated_at)}
           />
         ))}
