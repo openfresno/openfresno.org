@@ -31,8 +31,9 @@
 .split-page {
   display: flex;
   width: 100%;
-  @media (max-width: 992px) {
-    flex-direction: column;
+  flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
     & > div {
       width: 50%;
       flex-shrink: 1;
