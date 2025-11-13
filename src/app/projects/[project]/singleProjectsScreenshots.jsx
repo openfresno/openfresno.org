@@ -1,4 +1,4 @@
-import { Slider } from "@/components/ui";
+import { Slider, Button } from "@/components/ui";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import SimpleDialog from "@/components/ui/SimpleDialog";
 import { useEffect, useState } from "react";
@@ -9,7 +9,7 @@ export default function SingleProjectsScreenshots({
                                                     sectionType = SectionType.light
                                                   }) {
   const [showDialog, setShowDialog] = useState(false);
-  const [sliderState, setSliderState] = useState(0);
+  const [startingSlide, setStartingSlide] = useState(0);
   const [windowState, setWindowState] = useState(window);
   useEffect(() => {
     setWindowState(window);
@@ -20,7 +20,7 @@ export default function SingleProjectsScreenshots({
       onClick={() => {
         if (windowState && windowState.innerWidth > 992 && !showDialog) {
           setShowDialog(true);
-          setSliderState(i);
+          setStartingSlide(i);
         }
       }}
       className={`keen-slider__slide aspect-7/4 sharpen @container ${showDialog ? "" : "lg:cursor-pointer"}`}
@@ -62,7 +62,7 @@ export default function SingleProjectsScreenshots({
           fullWidth={true}
           maxWidth={"lg"}
         >
-          <Slider className={"w-full aspect-7/4"} sliderState={[sliderState, setSliderState]}>
+          <Slider className={"w-full aspect-7/4"} startingSlide={startingSlide}>
             {shownImages}
           </Slider>
         </SimpleDialog>
