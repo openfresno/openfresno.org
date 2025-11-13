@@ -25,7 +25,7 @@ export default function ContactSectionMission({ sectionType }) {
   return (
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`split-page max-lg:py-12`}>
-      <div className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} max-lg:px-8 pt-12 pb-18 lg:py-24`}>
+      <div className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} max-lg:px-6 pt-12 pb-18 lg:py-24`}>
         <HeaderUnderline
           title="Contact Form"
           description="Get In Touch"

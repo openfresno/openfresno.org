@@ -1,8 +1,6 @@
 .faq-summary {
   position: relative;
   cursor: pointer;
-  anchor-name: --summary;
-  padding: 0 calc(var(--spacing) * 0);
 
   &::marker {
     content: "";
@@ -23,11 +21,9 @@
 
     /* Anchor the shape to the summary */
     position: absolute;
-    top: calc(8 * var(--spacing));
-    /*position-anchor: --summary;
-    position-area: end end;*/
+    top: 2rem;
     @media (width >= 992px) {
-      right: calc(4 * var(--spacing)) !important;
+      right: 1rem;
     }
   }
 
@@ -45,5 +41,5 @@ details[open] .faq-summary::after {
 }
 
 .faq-details > p {
-  padding: 0 calc(4 * var(--spacing));
+  padding: 0 1rem 1rem;
 }

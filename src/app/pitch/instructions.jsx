@@ -4,7 +4,7 @@ const instructions = [
     "title": "Check Eligibility",
     "body": (<>Before presenting your project idea, it's crucial to verify its alignment with our mission and
       principles. Please review the following conditions to ensure your project falls within our scope:
-      <ol style={{ "list-style-type": "decimal", "margin": "1em 0", "padding": "0 0 0 2em" }}>
+      <ol className={"list-inside list-decimal my-4"}>
         <li>Open Source</li>
         <li>Free to Distribute</li>
         <li>Non-Profit</li>

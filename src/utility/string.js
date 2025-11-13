@@ -10,11 +10,11 @@ export const upperFirst = (s, splitter = " ") =>
   s.split(splitter).map(upperFirstOneWord).join(splitter);
 
 /**
- Same as above, but with added exceptions.
+ * Same as above, but with added exceptions.
  * @param {string} [toTitleCase] The input to title case.
  * @param {string|RegExp} [splitter] A string or regex expression to split the given string by; " " by default
  * @param {string?} [joiner] The string with which to join the result, will not join if null; " " by default
- @returns {string|[string]}
+ * @returns {string|[string]}
  */
 export function titleCase(
   toTitleCase,
