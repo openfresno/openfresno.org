@@ -83,7 +83,8 @@ export default function NavbarE7e({ fade = false }) {
             </Link>
           </li>
           <hr
-            className={`navbar-underline  ${!["/", "/about", "/contact", "/donate"].includes(websiteURL) && "hidden"}`} />
+            className={`navbar-underline  ${!["/", "/about", "/contact", "/donate"].includes(websiteURL) && "hidden"}`}
+          />
         </ul>
         <NavToggle
           extendedMenuVisible={extendedMenuVisible}

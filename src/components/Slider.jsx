@@ -35,12 +35,10 @@ export default function Slider({
       //execute it to get the new state, while providing the previous state.
       //This is cursed on so many levels, but is the only way that I can think
       //of to expose the moveToIdx function
-      setUpdateSlider(() =>
-        (index) => {
-          slider.moveToIdx(index);
-        }
-      );
-    }
+      setUpdateSlider(() => (index) => {
+        slider.moveToIdx(index);
+      });
+    },
   });
   return (
     <div className={className}>

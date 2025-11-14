@@ -49,11 +49,7 @@ export default function Steps({
           <CircledNumber number={item.id} sectionType={sectionType} />
           <div className={`step-container`}>
             <h3 className={`text-2xl font-semibold`}>{item.title}</h3>
-            <div
-              className={`step-paragraph`}
-            >
-              {item.body}
-            </div>
+            <div className={`step-paragraph`}>{item.body}</div>
           </div>
         </div>
       ))}

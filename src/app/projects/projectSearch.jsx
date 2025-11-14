@@ -1,4 +1,12 @@
-import { FormHelperText, IconButton, InputAdornment, InputLabel, MenuItem, OutlinedInput, Select } from "@mui/material";
+import {
+  FormHelperText,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  MenuItem,
+  OutlinedInput,
+  Select
+} from "@mui/material";
 
 import Link from "next/link";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
@@ -30,14 +38,19 @@ const ProjectSearch = ({ data, setProjectsData }) => {
     return obj;
   };
 
-  const updateProjectsData = (projectSearch, projectFilter, projectSortBy, curAscending) => {
+  const updateProjectsData = (
+    projectSearch,
+    projectFilter,
+    projectSortBy,
+    curAscending
+  ) => {
     if (!data || !setProjectsData) return;
     projectSearch = projectSearch ? projectSearch.toLowerCase() : "";
     let filteredProjects = data;
 
     if (projectSearch) {
       filteredProjects = filteredProjects.filter((project) =>
-        project.meta.title.toLowerCase().includes(projectSearch)
+        project.meta.title.toLowerCase().includes(projectSearch),
       );
     }
 
@@ -52,7 +65,8 @@ const ProjectSearch = ({ data, setProjectsData }) => {
       //dates
       case "created_at":
       case "updated_at":
-        sortFunction = (a, b) => (new Date(b[projectSortBy]) - new Date(a[projectSortBy]));
+        sortFunction = (a, b) =>
+          new Date(b[projectSortBy]) - new Date(a[projectSortBy]);
         break;
       //strings
       default:
@@ -102,7 +116,12 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         }}
       >
         <div className={`max-lg:w-full grow-3 basis-0`}>
-          <InputLabel id="project-search-label" className="min-w-px min-h-[1.4375em]">{" "}</InputLabel>
+          <InputLabel
+            id="project-search-label"
+            className="min-w-px min-h-[1.4375em]"
+          >
+            {" "}
+          </InputLabel>
           <OutlinedInput
             className={`w-full`}
             name="project-search"
@@ -154,11 +173,19 @@ const ProjectSearch = ({ data, setProjectsData }) => {
             native={false}
             onChange={handleChange}
           >
-            <MenuItem value="created_at" onClick={handleSortClick}>Creation Date</MenuItem>
-            <MenuItem value="updated_at" onClick={handleSortClick}>Last Updated</MenuItem>
-            <MenuItem value="meta,title" onClick={handleSortClick}>Name</MenuItem>
+            <MenuItem value="created_at" onClick={handleSortClick}>
+              Creation Date
+            </MenuItem>
+            <MenuItem value="updated_at" onClick={handleSortClick}>
+              Last Updated
+            </MenuItem>
+            <MenuItem value="meta,title" onClick={handleSortClick}>
+              Name
+            </MenuItem>
           </Select>
-          <FormHelperText>{ascending ? "Ascending" : "Descending"}</FormHelperText>
+          <FormHelperText>
+            {ascending ? "Ascending" : "Descending"}
+          </FormHelperText>
         </div>
       </form>
     </section>

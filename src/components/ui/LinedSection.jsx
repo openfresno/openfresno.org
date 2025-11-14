@@ -41,7 +41,17 @@ export default function LinedSection({
       {lines
         ? lines.map((line, i) => (
           <SectionLine
-            title={titleCase(line[0], /\\n|\n/, null).reduce((acc, x) => acc === null ? x : (<>{acc}<br />{x}</>))}
+            title={titleCase(line[0], /\\n|\n/, null).reduce((acc, x) =>
+              acc === null ? (
+                x
+              ) : (
+                <>
+                  {acc}
+                  <br />
+                  {x}
+                </>
+              )
+            )}
             key={line[0] + i}
           >
             {line[1]}

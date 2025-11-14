@@ -25,17 +25,19 @@ export default function ContactSectionMission({ sectionType }) {
   return (
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`split-page max-lg:py-12`}>
-      <div className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} max-lg:px-6 pt-12 pb-18 lg:py-24`}>
+      <div
+        className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} max-lg:px-6 pt-12 pb-18 lg:py-24`}
+      >
         <HeaderUnderline
           title="Contact Form"
           description="Get In Touch"
           sectionType={sectionType}
         >
-            <span className={`paragraph-bold`}>
-              Have questions or need assistance?
-            </span>{" "}
-          Reach out to us using our form, and we&apos;ll get back to you as
-          soon as possible.
+          <span className={`paragraph-bold`}>
+            Have questions or need assistance?
+          </span>{" "}
+          Reach out to us using our form, and we&apos;ll get back to you as soon
+          as possible.
           <br></br>
           <br></br>
           Before reaching out, you might find quick answers to your queries in
@@ -58,7 +60,9 @@ export default function ContactSectionMission({ sectionType }) {
           .
         </HeaderUnderline>
       </div>
-      <div className={`grow-1 basis-0 lg:ml-8 app-color--${sectionType}-split max-lg:px-8 py-12 lg:py-24`}>
+      <div
+        className={`grow-1 basis-0 lg:ml-8 app-color--${sectionType}-split max-lg:px-8 py-12 lg:py-24`}
+      >
         <form>
           <div className="form-input">
             <TextField
@@ -86,7 +90,7 @@ export default function ContactSectionMission({ sectionType }) {
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
                   borderBottom: "2px solid white" // Underline color when input is focused
-                }
+                },
               }}
               focused
             />
@@ -115,7 +119,7 @@ export default function ContactSectionMission({ sectionType }) {
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
                   borderBottom: "2px solid white" // Underline color when input is focused
-                }
+                },
               }}
               focused
             />
@@ -146,7 +150,7 @@ export default function ContactSectionMission({ sectionType }) {
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
                   borderBottom: "2px solid white" // Underline color when input is focused
-                }
+                },
               }}
               focused
             />
@@ -177,7 +181,7 @@ export default function ContactSectionMission({ sectionType }) {
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
                   borderBottom: "2px solid white" // Underline color when input is focused
-                }
+                },
               }}
               focused
             />
@@ -209,7 +213,7 @@ export default function ContactSectionMission({ sectionType }) {
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
                   borderBottom: "2px solid white" // Underline color when input is focused
-                }
+                },
               }}
               focused
             />

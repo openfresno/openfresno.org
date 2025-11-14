@@ -15,8 +15,8 @@ export const lightTheme = createTheme({
     },
     text: {
       primary: "#060718"
-    }
-  }
+    },
+  },
 });
 
 export const darkTheme = createTheme({
@@ -34,8 +34,8 @@ export const darkTheme = createTheme({
     },
     text: {
       primary: "#fffcf5"
-    }
-  }
+    },
+  },
 });
 
 export const grayTheme = createTheme({
@@ -53,8 +53,8 @@ export const grayTheme = createTheme({
     },
     text: {
       primary: "#fffcf5"
-    }
-  }
+    },
+  },
 });
 
 export const themes = {

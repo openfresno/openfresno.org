@@ -22,9 +22,7 @@ export default function PageContainer({
     <section
       className={`${noPadding ? "" : "py-6 lg:py-12"} app-color--${sectionType} ${className}`}
     >
-      <div
-        className={`page-container ${display} ${divClassName}`}
-      >
+      <div className={`page-container ${display} ${divClassName}`}>
         {children}
       </div>
     </section>

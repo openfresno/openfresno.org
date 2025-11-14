@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from "@/integrations/tabler-icon";
+import {
+  ChevronDown,
+  ChevronLeft,
+  ChevronRight,
+  ChevronUp
+} from "@/integrations/tabler-icon";
 import { HamburgerStaggered, IconX } from "..";
 
 /**

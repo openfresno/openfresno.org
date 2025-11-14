@@ -29,7 +29,8 @@ export default function BasePathImage({
                                         ...props
                                       }) {
   //Fallback state for basic invalid values)
-  if (src === null || src === undefined || src === "") src = "/img/tower-bridge.jpg";
+  if (src === null || src === undefined || src === "")
+    src = "/img/tower-bridge.jpg";
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const finalSrc =
     typeof src === "string" && !src.startsWith("http")

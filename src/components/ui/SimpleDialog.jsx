@@ -21,7 +21,7 @@ import { IconX } from "@/components/ui/icon/IconX";
  */
 export default function SimpleDialog({
                                        title = "",
-                                       children = (<></>),
+                                       children = <></>,
                                        openState = false,
                                        handleClose = () => {
                                        },
@@ -38,7 +38,7 @@ export default function SimpleDialog({
         sx={{
           "& .MuiPaper-root": {
             "--Paper-overlay": "none!important"
-          }
+          },
         }}
         {...props}
       >
@@ -57,9 +57,7 @@ export default function SimpleDialog({
         >
           <IconX width="24px" height="24px" />
         </IconButton>
-        <DialogContent>
-          {children}
-        </DialogContent>
+        <DialogContent>{children}</DialogContent>
       </Dialog>
     </ThemeProvider>
   );

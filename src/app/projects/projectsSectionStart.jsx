@@ -21,7 +21,13 @@ export default function ProjectsSectionStart({
       >
         <HeaderUnderline
           title="Projects"
-          description={<>Building a Better<br />Community</>}
+          description={
+            <>
+              Building a Better
+              <br />
+              Community
+            </>
+          }
         >
           Discover the diverse range of projects at Open Fresno, where
           we&apos;re using technology and collaboration to tackle civic

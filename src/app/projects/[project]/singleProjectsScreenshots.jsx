@@ -1,4 +1,4 @@
-import { Slider, Button } from "@/components/ui";
+import { Slider } from "@/components/ui";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import SimpleDialog from "@/components/ui/SimpleDialog";
 import { useEffect, useState } from "react";
@@ -34,15 +34,19 @@ export default function SingleProjectsScreenshots({
         className={`keen-slider__slide aspect-7/4 @container`}
         key={data.full_name + i}
       >
-        <div className={`size-full bg-neutral-400 @max-lg:border @max-lg:rounded-xl`} />
-      </div>
+        <div
+          className={`size-full bg-neutral-400 @max-lg:border @max-lg:rounded-xl`}
+        />
+      </div>,
     );
   }
   return (
     <section className={`py-12 app-color--${sectionType}`}>
       <div className={`page-container flex flex-col`}>
         <h2 className={`sub-heading-main`}>Screenshots</h2>
-        <div className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`} />
+        <div
+          className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`}
+        />
         <p className={`paragraph-large project-paragraph lg:mb-16`}>
           Explore our project through screenshots, providing visual insights
           into its design and functionality.

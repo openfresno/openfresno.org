@@ -16,32 +16,26 @@ export const upperFirst = (s, splitter = " ") =>
  * @param {string?} [joiner] The string with which to join the result, will not join if null; " " by default
  * @returns {string|[string]}
  */
-export function titleCase(
-  toTitleCase,
-  splitter = " ",
-  joiner = " "
-) {
+export function titleCase(toTitleCase, splitter = " ", joiner = " ") {
   if (
     !toTitleCase ||
     !(typeof toTitleCase === "string" || toTitleCase instanceof String)
   )
     return "";
   if (toTitleCase === ".") return "Loading";
-  let titleCased = toTitleCase
-    .split(splitter)
-    .map((word) => {
-      switch (word) {
-        case "html":
-          return "HTML";
-        case "nodejs":
-          return "Node.js";
-        case "javascript":
-          return "JavaScript";
-        case "css":
-          return "CSS";
-        default:
-          return word.charAt(0).toUpperCase() + word.slice(1);
-      }
-    });
+  let titleCased = toTitleCase.split(splitter).map((word) => {
+    switch (word) {
+      case "html":
+        return "HTML";
+      case "nodejs":
+        return "Node.js";
+      case "javascript":
+        return "JavaScript";
+      case "css":
+        return "CSS";
+      default:
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+  });
   return joiner === null ? titleCased : titleCased.join(joiner);
 }

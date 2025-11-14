@@ -54,5 +54,5 @@ export const SectionType = {
       case SectionType.secondaryAlt:
         return SectionType.secondary;
     }
-  }
+  },
 };

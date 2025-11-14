@@ -31,10 +31,18 @@ export default function HeadingPair({
       >
         {heading}
       </h1>
-      <h2 className={`sub-heading-main${large ? "-large" : ""} w-[${subHeadingWidth}]`}>
+      <h2
+        className={`sub-heading-main${large ? "-large" : ""} w-[${subHeadingWidth}]`}
+      >
         {subHeading}
       </h2>
-      {underlined ? <div className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`} /> : ""}
+      {underlined ? (
+        <div
+          className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 }

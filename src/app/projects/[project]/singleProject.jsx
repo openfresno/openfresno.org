@@ -16,7 +16,6 @@ import { SectionType } from "@/utility/constants/theme";
 import SingleProjectsContributor from "@/app/projects/[project]/singleProjectsContributor";
 import PageContainer from "@/components/ui/PageContainer";
 
-
 /**
  * Page for displaying a single project
  *
@@ -55,41 +54,41 @@ export default function SingleProject({
       <PageContainer noFlex noPadding sectionType={sectionType}>
         <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
       </PageContainer>
-      {
-        data.meta.screenshots ? (
-          <SingleProjectsScreenshots sectionType={sectionType} data={data} />
-        ) : ""
-      }
-      {
-        data.meta.roadmap ? (
-          <SingleProjectsRoadmap
-            sectionType={SectionType.invert(sectionType)}
+      {data.meta.screenshots ? (
+        <SingleProjectsScreenshots sectionType={sectionType} data={data} />
+      ) : (
+        ""
+      )}
+      {data.meta.roadmap ? (
+        <SingleProjectsRoadmap
+          sectionType={SectionType.invert(sectionType)}
+          data={data}
+        />
+      ) : (
+        ""
+      )}
+      {contributeAs !== "" ? (
+        <>
+          <SingleProjectsContribute
             data={data}
+            sectionType={sectionType}
+            contributeAs={contributeAs}
+            setContributeAs={setContributeAs}
           />
-        ) : ""
-      }
-      {
-        contributeAs !== "" ? (
-          <>
-            <SingleProjectsContribute
-              data={data}
-              sectionType={sectionType}
-              contributeAs={contributeAs}
-              setContributeAs={setContributeAs}
-            />
-            <SingleProjectsContributor
-              data={data}
-              role={contributeAs}
-              sectionType={sectionType}
-            />
-          </>
-        ) : ""
-      }
-      {
-        data.meta.resources ? (
-          <SingleProjectsResources sectionType={sectionType} data={data} />
-        ) : ""
-      }
+          <SingleProjectsContributor
+            data={data}
+            role={contributeAs}
+            sectionType={sectionType}
+          />
+        </>
+      ) : (
+        ""
+      )}
+      {data.meta.resources ? (
+        <SingleProjectsResources sectionType={sectionType} data={data} />
+      ) : (
+        ""
+      )}
       <PageContainer noFlex className="max-lg:hidden" sectionType={sectionType}>
         <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
       </PageContainer>

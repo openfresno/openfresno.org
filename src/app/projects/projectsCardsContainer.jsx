@@ -47,9 +47,11 @@ const ProjectsCardsContainer = ({
             projectTitle={project.meta.title}
             projectText={project.meta.description}
             imgUrl={
-              project.meta.image_url ? `https://raw.githubusercontent.com/${project.full_name}/${project.default_branch}/${project.meta.image_url}` :
-                project.meta.screenshots ? `https://raw.githubusercontent.com/${project.full_name}/${project.default_branch}/screenshots/${project.meta.screenshots[0]}` :
-                  ""
+              project.meta.image_url
+                ? `https://raw.githubusercontent.com/${project.full_name}/${project.default_branch}/${project.meta.image_url}`
+                : project.meta.screenshots
+                  ? `https://raw.githubusercontent.com/${project.full_name}/${project.default_branch}/screenshots/${project.meta.screenshots[0]}`
+                  : ""
             }
             pageUrl={`/projects/${project.name}/#project-section-start`}
             githubUrl={project.html_url}

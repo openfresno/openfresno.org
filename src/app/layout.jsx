@@ -18,13 +18,13 @@ export const metadata = {
         url: "/assets/logo/logo-blue.svg",
         type: "image/svg+xml",
         sizes: "any"
-      }
+      },
     ],
     apple: [
       { url: "/assets/logo/logo192.png", sizes: "192x192", type: "image/png" }
     ],
     shortcut: ["/assets/logo/favicon.ico"]
-  }
+  },
 };
 
 /**

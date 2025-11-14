@@ -5,7 +5,13 @@ export default function ConductSectionLanding() {
     <>
       <GeneralSection
         heading="Code of Conduct"
-        subHeading={<>Fostering Inclusivity<br />and Respect</>}
+        subHeading={
+          <>
+            Fostering Inclusivity
+            <br />
+            and Respect
+          </>
+        }
       >
         Our Code of Conduct is a set of guidelines that promotes a welcoming and
         inclusive environment within our community. It outlines our commitment

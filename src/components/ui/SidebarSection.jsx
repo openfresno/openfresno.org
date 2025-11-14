@@ -50,7 +50,10 @@ export default function SidebarSection({ children, sectionType }) {
         <div className={`flex flex-col gap-6`}>
           <div className={`flex flex-col gap-2`}>
             <hr className="mb-2 border-0 h-px bg-(--neutral-400)" />
-            <Link href="/code-of-conduct" className="primary-link--underline w-fit">
+            <Link
+              href="/code-of-conduct"
+              className="primary-link--underline w-fit"
+            >
               Code of Conduct
             </Link>
           </div>

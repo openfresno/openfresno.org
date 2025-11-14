@@ -15,7 +15,13 @@ export default function PitchPage() {
     <LayoutE53>
       <GeneralSection
         heading="Pitch a project"
-        subHeading={<>Contribute<br />Your Project Idea</>}
+        subHeading={
+          <>
+            Contribute
+            <br />
+            Your Project Idea
+          </>
+        }
       >
         Share your innovative ideas and collaborate with our community to turn
         them into reality. Pitch your project to make a positive impact on

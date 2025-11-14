@@ -7,7 +7,14 @@ export default function SingleProjectsBrief({
                                               data,
                                               sectionType = SectionType.light
                                             }) {
-  const trimList = ["project_status", "resources", "roadmap", "screenshots", "tags", "contributing"];
+  const trimList = [
+    "project_status",
+    "resources",
+    "roadmap",
+    "screenshots",
+    "tags",
+    "contributing"
+  ];
   const titleCaseList = ["project_type"];
   const concatLists = [["communications", "channels"]];
   const toConcatList = concatLists.flat();
@@ -25,7 +32,13 @@ export default function SingleProjectsBrief({
           if (concatList.indexOf(key) === -1) continue;
           let [a, b] = concatList;
           if (data.meta[a] && data.meta[b]) {
-            meta[a + "\\n" + b] = (<>{data.meta[a]}<br />{data.meta[b]}</>);
+            meta[a + "\\n" + b] = (
+              <>
+                {data.meta[a]}
+                <br />
+                {data.meta[b]}
+              </>
+            );
           } else {
             meta[key] = data.meta[key];
           }

@@ -26,9 +26,11 @@ export default function SingleProjectsSectionStart({
             alt={data.meta.title}
             imgClassName={`border rounded-xl`}
             src={
-              data.meta.image_url ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/${data.meta.image_url}` :
-                data.meta.screenshots ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${data.meta.screenshots[0]}` :
-                  ""
+              data.meta.image_url
+                ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/${data.meta.image_url}`
+                : data.meta.screenshots
+                  ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${data.meta.screenshots[0]}`
+                  : ""
             }
           />
         </div>
