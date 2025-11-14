@@ -17,10 +17,10 @@ import { SectionType } from "@/utility/constants/theme";
  * @returns {JSX.Element} A structured section with instructions and a sidebar of resource links.
  * @example
  * ```tsx
-<SidebarSection sectionType="light">
-  <h2>Welcome to the community!</h2>
-  <p>Follow the steps below to get started.</p>
-</SidebarSection>
+ <SidebarSection sectionType="light">
+ <h2>Welcome to the community!</h2>
+ <p>Follow the steps below to get started.</p>
+ </SidebarSection>
  * ```
  */
 export default function SidebarSection({ children, sectionType }) {
@@ -47,31 +47,40 @@ export default function SidebarSection({ children, sectionType }) {
             </div>
           </CenteredInImage>
         </div>
-        <div className={`side-section-anchors-container`}>
-          <hr className="mb-2 border-0 h-px bg-(--neutral-400)" />
-          <Link href="/code-of-conduct" className="primary-link--underline">
-            Code of Conduct
-          </Link>
-          <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
-          <Link
-            className="primary-link--underline"
-            href="https://forms.gle/JA3jAV9wE1645i9LA"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to new member form."
-          >
-            New Member Form
-          </Link>
-          <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
-          <Link
-            className="primary-link--underline"
-            href="https://www.meetup.com/openfresno/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Link to Meetup."
-          >
-            Meeting Link
-          </Link>
+        <div className={`flex flex-col gap-6`}>
+          <div className={`flex flex-col gap-2`}>
+            <hr className="mb-2 border-0 h-px bg-(--neutral-400)" />
+            <Link
+              href="/code-of-conduct"
+              className="primary-link--underline w-fit"
+            >
+              Code of Conduct
+            </Link>
+          </div>
+          <div className={`flex flex-col gap-2`}>
+            <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
+            <Link
+              className="primary-link--underline w-fit"
+              href="https://forms.gle/JA3jAV9wE1645i9LA"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to new member form."
+            >
+              New Member Form
+            </Link>
+          </div>
+          <div className={`flex flex-col gap-2`}>
+            <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
+            <Link
+              className="primary-link--underline w-fit"
+              href="https://www.meetup.com/openfresno/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Link to Meetup."
+            >
+              Meeting Link
+            </Link>
+          </div>
         </div>
       </div>
     </section>

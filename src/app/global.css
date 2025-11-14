@@ -60,6 +60,6 @@
   --navbar-height: 84px;
   --banner-height: 42px;
   --navbar-height-with-banner: calc(
-    var(--navbar-height) + var(--banner-height)
+          var(--navbar-height) + var(--banner-height)
   );
 }

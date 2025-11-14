@@ -28,6 +28,45 @@
   }
 }
 
+.split-page {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
+    & > div {
+      width: 50%;
+      flex-shrink: 1;
+      flex-basis: 0;
+    }
+
+    & > div:first-child {
+      padding-left: 2.5rem;
+      padding-right: calc(8 * var(--spacing));
+      margin-right: 0;
+    }
+
+    & > div:last-child {
+      margin-left: 0;
+      padding-left: calc(8 * var(--spacing));
+      padding-right: 2.5rem;
+    }
+  }
+  @media (min-width: 1536px) {
+    & > div:first-child {
+      padding-left: calc((100% - (var(--screen-xxl) + 80px)) / 2 + 2.5rem);
+      padding-right: calc(8 * var(--spacing));
+      margin-right: 0;
+    }
+
+    & > div:last-child {
+      margin-left: 0;
+      padding-left: calc(8 * var(--spacing));
+      padding-right: calc((100% - (var(--screen-xxl) + 80px)) / 2 + 2.5rem);
+    }
+  }
+}
+
 /*
   <h1> tags on the homepage have a smaller text size and a rounded border.
    ╭──────────╮
@@ -54,4 +93,9 @@
 
 .toolbar-after-content-with-banner {
   margin-top: var(--navbar-height-with-banner);
+}
+
+.sharpen {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }

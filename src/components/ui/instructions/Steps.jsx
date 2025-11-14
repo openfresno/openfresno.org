@@ -26,37 +26,33 @@ import { SectionType } from "@/utility/constants/theme";
  *
  * @example
  * ```tsx
-<Steps
-  sectionType="light"
-  steps={[
-    { id: 1, title: "Sign Up", body: "Create your free account to get started." },
-    { id: 2, title: "Customize", body: "Set up your profile and preferences." },
-    { id: 3, title: "Explore", body: "Browse tutorials and join the community." }
-  ]}
-/>
+ <Steps
+ sectionType="light"
+ steps={[
+ { id: 1, title: "Sign Up", body: "Create your free account to get started." },
+ { id: 2, title: "Customize", body: "Set up your profile and preferences." },
+ { id: 3, title: "Explore", body: "Browse tutorials and join the community." }
+ ]}
+ />
  * ```
  */
 export default function Steps({
-  children,
-  sectionType = SectionType.light,
-  steps,
-}) {
+                                children,
+                                sectionType = SectionType.light,
+                                steps
+                              }) {
   return (
-    <>
-      <div className={`steps-steps-container`}>
-        {steps.map((item, index) => (
-          <div className={`steps-step-container`} key={index}>
-            <CircledNumber number={item.id} sectionType={sectionType} />
-            <div className={`step-container`}>
-              <h3 className={`step-header font-semibold`}>{item.title}</h3>
-              <div
-                className={`step-paragraph`}
-                dangerouslySetInnerHTML={{ __html: item.body }}
-              />
-            </div>
+    <div className={`steps-steps-container`}>
+      {children ? <div className="steps-step-container">{children}</div> : ""}
+      {steps.map((item, index) => (
+        <div className={`steps-step-container`} key={index}>
+          <CircledNumber number={item.id} sectionType={sectionType} />
+          <div className={`step-container`}>
+            <h3 className={`text-2xl font-semibold`}>{item.title}</h3>
+            <div className={`step-paragraph`}>{item.body}</div>
           </div>
-        ))}
-      </div>
-    </>
+        </div>
+      ))}
+    </div>
   );
 }

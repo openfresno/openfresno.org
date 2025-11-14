@@ -2,13 +2,13 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 
 export default function ImageSection({
-  heading = "",
-  subHeading = "",
-  alt = "Open Data Day",
-  src = "/img/home/home3.png",
-  sectionType = SectionType.light,
-  children = <></>,
-}) {
+                                       heading = "",
+                                       subHeading = "",
+                                       alt = "Open Data Day",
+                                       src = "/img/home/home3.png",
+                                       sectionType = SectionType.light,
+                                       children = <></>
+                                     }) {
   return (
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
       <div className="home-split-wide">

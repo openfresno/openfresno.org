@@ -1,7 +1,8 @@
 import PageContainer from "@/components/ui/PageContainer";
 import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
-export function SectionLine({ title = "", children = <></> }) {
+export function SectionLine({ title = <></>, children = <></> }) {
   return (
     <>
       <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
@@ -17,7 +18,7 @@ export function SectionLine({ title = "", children = <></> }) {
  *
  * @param sectionType
  * @param {Object} [props]
- * @param {string} [props.title]
+ * @param {JSX.Element} [props.title]
  * @param {JSX.Element} [props.children]
  * @param {[string,string][]} [props.lines]
  * @param {SectionType} [props.sectionType] The SectionType to modify display styling
@@ -25,11 +26,11 @@ export function SectionLine({ title = "", children = <></> }) {
  * @constructor
  */
 export default function LinedSection({
-  title = "",
-  children = <></>,
-  lines = null,
-  sectionType = SectionType.light,
-}) {
+                                       title = <></>,
+                                       children = <></>,
+                                       lines = null,
+                                       sectionType = SectionType.light
+                                     }) {
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>{title}</h2>
@@ -39,10 +40,23 @@ export default function LinedSection({
       {children ? children : ""}
       {lines
         ? lines.map((line, i) => (
-            <SectionLine title={line[0]} key={line[0] + i}>
-              {line[1]}
-            </SectionLine>
-          ))
+          <SectionLine
+            title={titleCase(line[0], /\\n|\n/, null).reduce((acc, x) =>
+              acc === null ? (
+                x
+              ) : (
+                <>
+                  {acc}
+                  <br />
+                  {x}
+                </>
+              )
+            )}
+            key={line[0] + i}
+          >
+            {line[1]}
+          </SectionLine>
+        ))
         : ""}
     </PageContainer>
   );

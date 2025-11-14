@@ -1,11 +1,11 @@
 /**
  * Application UI.
  */
-export { default as Slider } from "./slider/Slider";
+export { default as Slider } from "../Slider";
 export {
   NavExtendedToggle,
   NavToggle,
-  BaseButton as Button,
+  BaseButton as Button
 } from "./button/Button";
 export { default as HeaderUnderline } from "./HeaderUnderline";
 export { default as SidebarSection } from "./SidebarSection";

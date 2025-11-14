@@ -1,7 +1,7 @@
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import SidebarSection from "../../components/ui/SidebarSection";
 import Steps from "../../components/ui/instructions/Steps";
-import instructionData from "./instructions.json";
+import instructionData from "./instructions.jsx";
 import LayoutE53 from "@/components/layout/LayoutE53";
 import { SectionType } from "@/utility/constants/theme";
 import GeneralSection from "@/components/ui/GeneralSection";
@@ -15,7 +15,13 @@ export default function GetStartedPage() {
       <GeneralSection
         sectionType={SectionType.light}
         heading="Get started"
-        subHeading="Ready to Volunteer with Open Fresno"
+        subHeading={
+          <>
+            Ready to Volunteer with
+            <br />
+            Open Fresno
+          </>
+        }
       >
         We&apos;re thrilled that you&apos;re eager to join our community of
         civic-minded individuals and make a positive impact in Central

@@ -53,7 +53,7 @@ export default function NavbarE7e({ fade = false }) {
             width={110}
           />
         </Link>
-        <ul className="navbar-middle-section">
+        <ul className={`navbar-middle-section`}>
           <li
             className={`${websiteURL === "/" && "nav-semi-bold navbar-link--underline__one"}`}
           >
@@ -75,12 +75,16 @@ export default function NavbarE7e({ fade = false }) {
               Contact
             </Link>
           </li>
-          <li>
+          <li
+            className={`${websiteURL === "/donate" && "nav-semi-bold navbar-link--underline__four"}`}
+          >
             <Link className="navbar-link" href="/donate">
               Donate
             </Link>
           </li>
-          <hr className="navbar-underline" />
+          <hr
+            className={`navbar-underline  ${!["/", "/about", "/contact", "/donate"].includes(websiteURL) && "hidden"}`}
+          />
         </ul>
         <NavToggle
           extendedMenuVisible={extendedMenuVisible}

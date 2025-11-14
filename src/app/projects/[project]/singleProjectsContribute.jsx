@@ -5,11 +5,11 @@ import { titleCase } from "@/utility/string";
 import PageContainer from "@/components/ui/PageContainer";
 
 export default function SingleProjectsContribute({
-  data,
-  contributeAs,
-  setContributeAs,
-  sectionType,
-}) {
+                                                   data,
+                                                   contributeAs,
+                                                   setContributeAs,
+                                                   sectionType
+                                                 }) {
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>How to Contribute</h2>
@@ -23,7 +23,7 @@ export default function SingleProjectsContribute({
       <h4 className={`project-info-label font-semibold mb-2`}>
         Get Involved As
       </h4>
-      <div className={`flex flex-col max-sm:justify-between gap-4 sm:flex-row`}>
+      <div className={`flex flex-wrap gap-4`}>
         {Object.keys(data.meta.contributing).map((role, i) => (
           <Button
             key={role + i}

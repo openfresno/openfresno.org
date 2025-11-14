@@ -1,20 +1,20 @@
-import { Button } from "../../components/ui";
+import { Button } from "@/components/ui";
 import { titleCase } from "@/utility/string";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 
 export default function ProjectCard({
-  isLoading = true,
-  projectStatus,
-  projectTitle,
-  projectText,
-  imgUrl = "/img/tower-bridge.jpg",
-  pageUrl,
-  githubUrl,
-  tags,
-  lastUpdatedTimestamp,
-  sectionType = SectionType.light,
-}) {
+                                      isLoading = true,
+                                      projectStatus,
+                                      projectTitle,
+                                      projectText,
+                                      imgUrl = "/img/tower-bridge.jpg",
+                                      pageUrl,
+                                      githubUrl,
+                                      tags,
+                                      lastUpdatedTimestamp,
+                                      sectionType = SectionType.light
+                                    }) {
   return (
     <div className={`flex flex-col app-color--${sectionType}`}>
       <div className="relative project-card-img-container w-full">
@@ -24,20 +24,21 @@ export default function ProjectCard({
           {titleCase(projectStatus)}
         </div>
         <BasePathImage
-          className={`aspect-2/1 object-cover rounded-xl w-full`}
+          className={`aspect-7/4 w-full`}
+          imgClassName={"rounded-xl"}
           src={imgUrl}
           alt={"Default project image"}
         />
       </div>
       <ul
-        className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto`}
+        className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto lg:min-h-[75px]`}
       >
         {tags.map((tag) => (
           <div
             key={projectTitle + tag}
-            className={`project-card-tag app-color--primary w-min px-1 rounded-md ${isLoading && "project-card-loading"}`}
+            className={`project-card-tag app-color--primary w-min h-min px-1 rounded-md ${isLoading && "project-card-loading"}`}
           >
-            {titleCase(tag)}
+            {tag}
           </div>
         ))}
       </ul>
@@ -58,7 +59,7 @@ export default function ProjectCard({
       >
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, Y, h:mma")}
       </div>
-      <div className={`flex flex-row gap-2`}>
+      <div className={`flex flex-row flex-wrap gap-2`}>
         <Button
           className={`btn btn-blue ${isLoading && "project-card-loading"}`}
           href={pageUrl}

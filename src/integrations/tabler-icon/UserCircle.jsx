@@ -1,15 +1,15 @@
 export const UserCircle = ({
-  width = 24,
-  height = 24,
-  className = "",
-  id,
-  alt,
-}) => {
+                             width = 24,
+                             height = 24,
+                             className = "",
+                             id = ""
+                           }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={height}
       height={width}
+      id={id}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"

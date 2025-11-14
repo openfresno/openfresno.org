@@ -1,7 +1,6 @@
 .faq-summary {
   position: relative;
   cursor: pointer;
-  anchor-name: --summary;
 
   &::marker {
     content: "";
@@ -22,15 +21,14 @@
 
     /* Anchor the shape to the summary */
     position: absolute;
-    top: calc(8 * var(--spacing));
-    /*position-anchor: --summary;
-    position-area: end end;*/
+    top: 2rem;
     @media (width >= 992px) {
-      right: calc(4 * var(--spacing)) !important;
+      right: 1rem;
     }
   }
 
   /* Rotate just the ::after line to create a "+"" shape */
+
   &::after {
     transform: rotate(90deg);
     transform-origin: 50%;
@@ -42,5 +40,6 @@ details[open] .faq-summary::after {
   transform: rotate(180deg);
 }
 
-.faq-details {
+.faq-details > p {
+  padding: 0 1rem 1rem;
 }

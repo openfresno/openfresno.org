@@ -169,8 +169,8 @@ export default function HomePage() {
                   src="/img/TrashAI2.png"
                   alt="TrashAI"
                   className="home-project-image"
-                  width={839}
-                  height={412}
+                  width={918}
+                  height={469}
                 />
               </div>
               <div className="keen-slider__slide">
@@ -185,8 +185,8 @@ export default function HomePage() {
                   src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.png"
                   alt="Open Budget Sac"
                   className="home-project-image"
-                  width={385}
-                  height={211}
+                  width={918}
+                  height={469}
                 />
               </div>
             </Slider>

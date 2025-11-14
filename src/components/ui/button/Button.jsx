@@ -3,7 +3,7 @@ import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
-  ChevronUp,
+  ChevronUp
 } from "@/integrations/tabler-icon";
 import { HamburgerStaggered, IconX } from "..";
 
@@ -25,31 +25,31 @@ import { HamburgerStaggered, IconX } from "..";
  * @param {string|React.ReactNode} props.textContent - DEPRECATED: Use children instead. The text or content displayed inside the button or link.
  *
  * @example
-// Renders a link with default styles
-<BaseButton className="btn" href="/about">
-  Learn More
-</BaseButton>
+ // Renders a link with default styles
+ <BaseButton className="btn" href="/about">
+ Learn More
+ </BaseButton>
  *
  * @example
-// Renders a link with a growing border effect
-<BaseButton className="btn btn--grow" href="/contact">
-  Get In Touch
-</BaseButton>
+ // Renders a link with a growing border effect
+ <BaseButton className="btn btn--grow" href="/contact">
+ Get In Touch
+ </BaseButton>
  *
  * @example
-// Renders a button with the 'alt' style
-<BaseButton className="btn btn-alt" onClick={() => console.log('Button clicked!')}>
-  Submit
-</BaseButton>
+ // Renders a button with the 'alt' style
+ <BaseButton className="btn btn-alt" onClick={() => console.log('Button clicked!')}>
+ Submit
+ </BaseButton>
  */
 const BaseButton = ({
-  className,
-  href,
-  target,
-  onClick,
-  children,
-  textContent,
-}) => {
+                      className,
+                      href,
+                      target,
+                      onClick,
+                      children,
+                      textContent
+                    }) => {
   if (href) {
     return (
       <Link

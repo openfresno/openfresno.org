@@ -3,11 +3,11 @@ import { titleCase } from "@/utility/string";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 export default function SingleProjectsRoadmapMilestone({
-  data,
-  milestone,
-  isLastIndex,
-  sectionType,
-}) {
+                                                         data,
+                                                         milestone,
+                                                         isLastIndex,
+                                                         sectionType
+                                                       }) {
   return (
     <>
       <div

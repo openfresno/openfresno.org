@@ -3,8 +3,8 @@ import { SectionType } from "@/utility/constants/theme";
 import { HeaderUnderline } from "@/components/ui";
 
 export default function conductSectionPolicies({
-  sectionType = SectionType.dark,
-}) {
+                                                 sectionType = SectionType.dark
+                                               }) {
   return (
     <section className={`py-12 lg:py-24 app-color--${sectionType}`}>
       <div
@@ -33,7 +33,7 @@ export default function conductSectionPolicies({
         </HeaderUnderline>
 
         <h3 className={`conduct-sub-heading-main font-semibold`}>
-          All Open Sacramento network activities, events, and digital forums and
+          All Open Fresno network activities, events, and digital forums and
           their staff, presenters, and participants are held to an
           anti-harassment policy, included below.{" "}
         </h3>
@@ -43,9 +43,13 @@ export default function conductSectionPolicies({
           will only lend its brand and fund groups that offer an anti-harassment
           policy to their attendees. For information on how to offer an
           anti-harassment policy to your group,{" "}
-          <Link className={`conduct-paragraph-anchor underline`} href="/">
-            see this guide.
+          <Link
+            className={`primary-link--underline`}
+            href="https://docs.google.com/document/d/1Zg2FDt7awgfCmdcbzMwKHMb1A7KDOhs_z7ibCb3TLLQ/edit?usp=sharing"
+          >
+            see this guide
           </Link>
+          .
         </p>
 
         <p className={`conduct-item-paragraph`}>
@@ -81,7 +85,13 @@ export default function conductSectionPolicies({
         <p className={`conduct-item-paragraph`}>
           If you are being harassed, notice that someone else is being harassed,
           or have any other concerns, please fill out{" "}
-          <Link href="https://forms.gle/JF3Q1AQA6pGxNSNS8">this form</Link>.
+          <Link
+            className="primary-link--underline"
+            href="https://forms.gle/JF3Q1AQA6pGxNSNS8"
+          >
+            this form
+          </Link>
+          .
         </p>
 
         <p className={`conduct-item-paragraph`}>

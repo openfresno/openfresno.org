@@ -8,8 +8,8 @@ import { HeaderUnderline } from "@/components/ui";
  * @returns {JSX.Element}
  */
 export default function SingleProjectsVolunteer({
-  sectionType = SectionType.light,
-}) {
+                                                  sectionType = SectionType.light
+                                                }) {
   return (
     <section
       id="project-section-start"

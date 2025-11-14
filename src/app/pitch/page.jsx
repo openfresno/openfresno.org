@@ -1,5 +1,5 @@
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
-import instructionData from "./instructions.json";
+import instructionData from "./instructions.jsx";
 import SidebarSection from "@/components/ui/SidebarSection";
 import Steps from "../../components/ui/instructions/Steps";
 import LayoutE53 from "@/components/layout/LayoutE53";
@@ -15,7 +15,13 @@ export default function PitchPage() {
     <LayoutE53>
       <GeneralSection
         heading="Pitch a project"
-        subHeading="Contribute Your Project Idea"
+        subHeading={
+          <>
+            Contribute
+            <br />
+            Your Project Idea
+          </>
+        }
       >
         Share your innovative ideas and collaborate with our community to turn
         them into reality. Pitch your project to make a positive impact on

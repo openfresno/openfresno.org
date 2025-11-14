@@ -7,8 +7,8 @@ import PageContainer from "@/components/ui/PageContainer";
  * @returns {JSX.Element}
  */
 export default function DonateSectionLanding({
-  sectionType = SectionType.light,
-}) {
+                                               sectionType = SectionType.light
+                                             }) {
   return (
     <>
       <GeneralSection
@@ -33,10 +33,13 @@ export default function DonateSectionLanding({
       <PageContainer sectionType={sectionType} divClassName={"items-center"}>
         <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
+        {/*
+        commented out until there's a fresno alternative.
         <stripe-buy-button
           buy-button-id="buy_btn_1POWMWLuvTadPilhtpcuuZL1"
           publishable-key="pk_live_51KlwVzLuvTadPilhP2f7hyPjlLqcDK804eFojbSZJOJhowUXFMfCvKKBha7fOfUYlGsTUZJzy4UbKmRSueQnIIqT00MDGq54rB"
         ></stripe-buy-button>
+        */}
       </PageContainer>
     </>
   );

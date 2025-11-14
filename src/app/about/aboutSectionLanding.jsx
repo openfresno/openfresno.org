@@ -11,7 +11,7 @@ export default function AboutSectionLanding({ sectionType }) {
       heading="About Us"
       subHeading="Connecting Civic-Minded Technologists"
     >
-      <span className={`paragraph-bold`}>
+      <span className={"font-semibold"}>
         We are a passionate and diverse group of technologists, developers,
         designers, and civic-minded individuals united by a common goal:
       </span>{" "}

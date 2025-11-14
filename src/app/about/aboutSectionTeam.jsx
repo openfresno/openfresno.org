@@ -34,34 +34,19 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
             className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4`}
           >
             <AboutSectionTeamMember
-              src={"/img/about/dan_fey.jpg"}
-              name="Dan Fey"
-              title="Executive Director, Open Fresno"
-            />
-            <AboutSectionTeamMember
               src={"/img/about/mary_fey_norris.jpg"}
               name="Mary Fey Norris"
               title="Executive Director, Open Fresno"
             />
             <AboutSectionTeamMember
-              src="/img/about/walter_yu.png"
-              name="Walter Yu"
-              title="Senior Director, Platform"
-            />
-            <AboutSectionTeamMember
-              src="/img/about/brianda_hernandez.png"
-              name="Brianda Hernandez"
-              title="Senior Director, Communications"
+              src={"/img/about/dan_fey.jpg"}
+              name="Dan Fey"
+              title="Executive Director, Open Fresno"
             />
             <AboutSectionTeamMember
               src="/img/about/nate_bass.jpg"
               name="Nate Bass"
               title="Senior Director, Product"
-            />
-            <AboutSectionTeamMember
-              src="/img/about/alexandre_steinhauslin.jpg"
-              name="Alexandre Steinhauslin"
-              title="Director, Frontend Engineering"
             />
           </div>
         </div>
