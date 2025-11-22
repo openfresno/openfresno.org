@@ -20,7 +20,7 @@ export default function FooterE4d() {
             Open Fresno is a tax-deductible civic-tech community dedicated to
             using technology and open data for positive civic change in Fresno.
             Open Fresno is fiscally sponsored by{" "}
-            <Link href="https://www.dbaarts.org/">DBA Arts</Link>.
+            <Link href="https://rootaccess.org/">Root Access</Link>.
           </p>
         </section>
         <section className="grid auto-rows-min gap-y-8">
