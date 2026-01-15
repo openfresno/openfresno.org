@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
+    "compile": "tsc",
     "start": "next start",
     "lint": "eslint .",
     "test": "playwright test --project=chromium",
