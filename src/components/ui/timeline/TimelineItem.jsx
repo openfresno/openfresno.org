@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "../../ui";
+import Button from "../../ui/button/Button";
 import { SectionType } from "@/utility/constants/theme";
 import React, { useEffect, useRef } from "react";
 

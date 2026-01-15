@@ -1,4 +1,4 @@
-import { HeaderUnderline } from "@/components/ui";
+import HeaderUnderline from "@/components/ui/HeaderUnderline";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 import { getWednesday } from "@/utility/get-wednesday";

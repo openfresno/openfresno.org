@@ -1,4 +1,4 @@
-import { Slider } from "@/components/ui";
+import Slider from "@/components/Slider";
 import SimpleDialog from "@/components/ui/SimpleDialog";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";

@@ -1,4 +1,4 @@
-import { Button } from "../../../components/ui";
+import Button from "../../../components/ui/button/Button";
 import HeadingPair from "@/components/ui/HeadingPair";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";

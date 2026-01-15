@@ -1,4 +1,4 @@
-import { HeaderUnderline } from "@/components/ui";
+import HeaderUnderline from "@/components/ui/HeaderUnderline";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";

@@ -1,4 +1,4 @@
-import { HeaderUnderline } from "@/components/ui";
+import HeaderUnderline from "@/components/ui/HeaderUnderline";
 import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";
 

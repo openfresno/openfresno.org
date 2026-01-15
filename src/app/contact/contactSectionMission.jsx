@@ -1,5 +1,5 @@
 import { SectionType } from "./contact";
-import { HeaderUnderline } from "@/components/ui";
+import HeaderUnderline from "@/components/ui/HeaderUnderline";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";

@@ -1,4 +1,4 @@
-import { Button } from "../../../components/ui";
+import Button from "../../../components/ui/button/Button";
 import PageContainer from "@/components/ui/PageContainer";
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";

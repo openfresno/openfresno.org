@@ -1,4 +1,4 @@
-import { Button, NavExtendedToggle } from "../ui";
+import Button, { NavExtendedToggle } from "../ui/button/Button";
 import Link from "next/link";
 import React, { useState } from "react";
 
