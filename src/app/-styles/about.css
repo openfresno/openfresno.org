@@ -1,11 +1,11 @@
 .team-members-container {
   padding: 0 80px;
 
-  @media (max-width: var(--screen-sm)) {
+  @media (max-width: 576px) {
     padding: 0 24px;
   }
 
-  @media (max-width: var(--screen-xs)) {
+  @media (max-width: 400px) {
     padding: 0;
   }
 }
@@ -20,7 +20,7 @@
   gap: 10px;
   background-color: #ff0 !important;
 
-  @media (max-width: var(--screen-xxl)) {
+  @media (max-width: 1400px) {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 }
