@@ -1,3 +1,4 @@
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import {
   FormHelperText,
   IconButton,
@@ -5,11 +6,9 @@ import {
   InputLabel,
   MenuItem,
   OutlinedInput,
-  Select
+  Select,
 } from "@mui/material";
-
 import Link from "next/link";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { useState } from "react";
 
 /**
@@ -42,7 +41,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
     projectSearch,
     projectFilter,
     projectSortBy,
-    curAscending
+    curAscending,
   ) => {
     if (!data || !setProjectsData) return;
     projectSearch = projectSearch ? projectSearch.toLowerCase() : "";
@@ -56,7 +55,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
 
     if (projectFilter !== "all") {
       filteredProjects = filteredProjects.filter(
-        (project) => project.meta.project_status === projectFilter
+        (project) => project.meta.project_status === projectFilter,
       );
     }
 
@@ -76,7 +75,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         };
     }
     filteredProjects = filteredProjects.sort(
-      (a, b) => (curAscending ? 1 : -1) * sortFunction(a, b)
+      (a, b) => (curAscending ? 1 : -1) * sortFunction(a, b),
     );
     setProjectsData([...filteredProjects]);
   };
@@ -108,17 +107,16 @@ const ProjectSearch = ({ data, setProjectsData }) => {
 
   return (
     <section
-      className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] mb-8 px-4 lg:px-8`}
+      className={`mx-auto mb-8 max-w-[calc(var(--screen-xxl)_+_80px)] px-4 lg:px-8`}
     >
       <form
-        className={`w-full flex flex-col lg:flex-row gap-4 lg:gap-8`}
-        action={() => {
-        }}
+        className={`flex w-full flex-col gap-4 lg:flex-row lg:gap-8`}
+        action={() => {}}
       >
-        <div className={`max-lg:w-full grow-3 basis-0`}>
+        <div className={`grow-3 basis-0 max-lg:w-full`}>
           <InputLabel
             id="project-search-label"
-            className="min-w-px min-h-[1.4375em]"
+            className="min-h-[1.4375em] min-w-px"
           >
             {" "}
           </InputLabel>
@@ -134,8 +132,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
                 <IconButton
                   aria-label="search"
                   type="submit"
-                  onClick={() => {
-                  }}
+                  onClick={() => {}}
                 >
                   <BasePathImage
                     src="/img/form-element/search.svg"
@@ -145,9 +142,9 @@ const ProjectSearch = ({ data, setProjectsData }) => {
               </InputAdornment>
             }
           />
-          <Link href="" className="relative inline-block -left-7"></Link>
+          <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
-        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
+        <div className={`form-row grow-1 basis-0 max-lg:w-full`}>
           <InputLabel id="project-filter-label">Filter</InputLabel>
           <Select
             variant="outlined"
@@ -162,7 +159,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
             <MenuItem value="active">Active</MenuItem>
           </Select>
         </div>
-        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
+        <div className={`form-row grow-1 basis-0 max-lg:w-full`}>
           <InputLabel id="project-sort-by-label">Sort By</InputLabel>
           <Select
             variant="outlined"

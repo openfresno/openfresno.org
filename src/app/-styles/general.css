@@ -4,14 +4,14 @@
 
 .general-section-light {
   display: flex;
-  color: var(--primary-900);
   background-color: var(--secondary-50);
+  color: var(--primary-900);
 }
 
 .general-section-dark {
   display: flex;
-  color: var(--primary-50);
   background-color: var(--primary-900);
+  color: var(--primary-50);
 }
 
 .contactActionLinksAnchor {
@@ -20,34 +20,34 @@
 }
 
 .general-heading-light {
-  color: var(--secondary-50);
   background: var(--neutral-900);
+  color: var(--secondary-50);
 }
 
 .general-heading-dark {
-  color: var(--secondary-900);
   background: var(--neutral-50);
+  color: var(--secondary-900);
 }
 
 .general-heading-main {
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 8px;
-  font-family: "Inter", sans-serif;
+  padding: 10px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
+  font-family: "Inter", sans-serif;
 }
 
 .general-sub-heading-main {
-  font-family: "Inter", sans-serif;
+  align-items: center;
   font-style: normal;
   font-weight: 600;
   font-size: 39px;
   line-height: 47px;
-  align-items: center;
+  font-family: "Inter", sans-serif;
 }
 
 .general-sub-heading-light {
@@ -62,8 +62,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
   gap: 12px;
+  padding: 0;
 }
 
 /* Styling for vertical screens*/
@@ -74,8 +74,8 @@
   }
 
   .general-section-container {
-    width: 100%;
     padding: 3% !important;
+    width: 100%;
   }
 }
 
@@ -91,13 +91,13 @@
   }
 
   .general-section-container:first-child {
-    padding-left: 5%;
     padding-right: 1%;
+    padding-left: 5%;
   }
 
   .general-section-container:last-child {
-    padding-left: 1%;
     padding-right: 5%;
+    padding-left: 1%;
   }
 }
 

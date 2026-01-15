@@ -1,9 +1,9 @@
 export const BrandApplePodcast = ({
-                                    width = 39,
-                                    height = 38,
-                                    className = "",
-                                    ...props
-                                  }) => {
+  width = 39,
+  height = 38,
+  className = "",
+  ...props
+}) => {
   return (
     <svg
       width={width}

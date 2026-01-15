@@ -1,10 +1,9 @@
-import moment from "moment";
 import { Button } from "../../../components/ui";
-import { SectionType } from "@/utility/constants/theme";
 import HeadingPair from "@/components/ui/HeadingPair";
-
-import { titleCase } from "@/utility/string";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
+import moment from "moment";
 
 /**
  * Single project start section.
@@ -12,9 +11,9 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
  * @returns {JSX.Element}
  */
 export default function SingleProjectsSectionStart({
-                                                     data,
-                                                     sectionType = SectionType.light
-                                                   }) {
+  data,
+  sectionType = SectionType.light,
+}) {
   return (
     <section
       id="project-section-start"
@@ -39,7 +38,7 @@ export default function SingleProjectsSectionStart({
             heading={data.meta.project_type}
             subHeading={data.meta.title}
           />
-          <div className={`btn-alt border p-1 rounded-md w-fit my-4`}>
+          <div className={`btn-alt my-4 w-fit rounded-md border p-1`}>
             Project Status: {titleCase(data.meta.project_status)}
           </div>
           <p className={`project-paragraph`}>{data.meta.description}</p>

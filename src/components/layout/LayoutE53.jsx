@@ -1,6 +1,6 @@
-import NavbarE7e from "./NavbarE7e";
-import FooterE4d from "./FooterE4d";
 import BannerF60 from "./BannerF60";
+import FooterE4d from "./FooterE4d";
+import NavbarE7e from "./NavbarE7e";
 
 /**
  * The default layout for the application. It includes a navbar, banner and footer.
@@ -12,10 +12,10 @@ import BannerF60 from "./BannerF60";
  <AppLayout />
  */
 export default function LayoutE53({
-                                    children,
-                                    banner = { active: false },
-                                    fadeNavbar = false
-                                  }) {
+  children,
+  banner = { active: false },
+  fadeNavbar = false,
+}) {
   return (
     <>
       <NavbarE7e fade={fadeNavbar} />

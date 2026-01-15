@@ -13,7 +13,7 @@ const instructions = [
         to it, we maintain a respectful and inclusive environment. Please read
         and understand our guidelines for a positive experience.
       </>
-    )
+    ),
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const instructions = [
         . It provides vital info about your skills and connects you with our
         community via a Slack invite for events and projects.{" "}
       </>
-    )
+    ),
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const instructions = [
         introduce yourself, and get involved in projects, questions, and ideas.
         Join us on Slack and be part of our civic tech community!
       </>
-    )
+    ),
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ const instructions = [
           meeting!
         </a>
       </>
-    )
+    ),
   },
   {
     id: 5,
@@ -73,7 +73,7 @@ const instructions = [
         civic tech enthusiast. Reach out, ask questions, and dive into projects
         you're passionate about. Welcome to Open Fresno!
       </>
-    )
+    ),
   },
 ];
 export default instructions;

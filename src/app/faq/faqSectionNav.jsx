@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 /**
  * Frequently-asked questions navigation section.
@@ -11,7 +11,7 @@ export default function FaqSectionNav({ topics, sectionType }) {
       className={`faq-container app-color--${SectionType.toColor(sectionType)} px-6 py-6`}
     >
       <nav
-        className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] flex flex-col max-lg:gap-4 lg:flex-row lg:justify-between`}
+        className={`mx-auto flex max-w-[calc(var(--screen-xxl)_+_80px)] flex-col max-lg:gap-4 lg:flex-row lg:justify-between`}
       >
         {topics.map((item) => (
           <Link

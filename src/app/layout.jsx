@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
 import "./global.css";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
-  display: "swap"
+  display: "swap",
 });
 
 export const metadata = {
@@ -17,13 +17,13 @@ export const metadata = {
       {
         url: "/assets/logo/logo-blue.svg",
         type: "image/svg+xml",
-        sizes: "any"
+        sizes: "any",
       },
     ],
     apple: [
-      { url: "/assets/logo/logo192.png", sizes: "192x192", type: "image/png" }
+      { url: "/assets/logo/logo192.png", sizes: "192x192", type: "image/png" },
     ],
-    shortcut: ["/assets/logo/favicon.ico"]
+    shortcut: ["/assets/logo/favicon.ico"],
   },
 };
 
@@ -33,7 +33,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

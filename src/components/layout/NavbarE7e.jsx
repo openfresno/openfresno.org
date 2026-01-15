@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import NavbarMenuE87 from "./NavbarMenuE87";
-import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import { NavToggle } from "../ui";
+import NavbarMenuE87 from "./NavbarMenuE87";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * The default navigation bar for the application.
@@ -83,7 +83,7 @@ export default function NavbarE7e({ fade = false }) {
             </Link>
           </li>
           <hr
-            className={`navbar-underline  ${!["/", "/about", "/contact", "/donate"].includes(websiteURL) && "hidden"}`}
+            className={`navbar-underline ${!["/", "/about", "/contact", "/donate"].includes(websiteURL) && "hidden"}`}
           />
         </ul>
         <NavToggle

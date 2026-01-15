@@ -1,12 +1,12 @@
-import Link from "next/link";
 import FormattedObject from "@/components/ui/FormattedObject";
-import { SectionType } from "@/utility/constants/theme";
 import PageContainer from "@/components/ui/PageContainer";
+import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 export default function SingleProjectsResources({
-                                                  data,
-                                                  sectionType = SectionType.light
-                                                }) {
+  data,
+  sectionType = SectionType.light,
+}) {
   if (data.meta.resources) {
     return (
       <FormattedObject obj={data.meta.resources} sectionType={sectionType} />

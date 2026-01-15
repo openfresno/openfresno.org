@@ -23,11 +23,11 @@
  // Resolves to: "/my-repo/logo.png"
  */
 export default function BasePathImage({
-                                        src = "/img/tower-bridge.jpg",
-                                        className = "",
-                                        imgClassName = "",
-                                        ...props
-                                      }) {
+  src = "/img/tower-bridge.jpg",
+  className = "",
+  imgClassName = "",
+  ...props
+}) {
   //Fallback state for basic invalid values)
   if (src === null || src === undefined || src === "")
     src = "/img/tower-bridge.jpg";

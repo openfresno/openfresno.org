@@ -1,9 +1,9 @@
 "use client";
 import ContactSectionLanding from "./contactSectionLanding";
 import ContactSectionMission from "./contactSectionMission";
+import { SectionType } from "@/utility/constants/theme";
 import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
-import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About page.
@@ -18,7 +18,7 @@ export default function Contact() {
         fontSize: 16,
         fontWeight: 600,
         lineHeight: "18px",
-        textTransform: "none"
+        textTransform: "none",
       },
     },
   });

@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { fetchGithubProjectData } from "./github";
+import ProjectSearch from "@/app/projects/projectSearch";
 import ProjectsCardsContainer from "@/app/projects/projectsCardsContainer";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
-import ProjectSearch from "@/app/projects/projectSearch";
-import { jsonResponse } from "@/utility/response";
-import useSWR from "swr";
-import { fetchGithubProjectData } from "./github";
 import { SectionType } from "@/utility/constants/theme";
+import { jsonResponse } from "@/utility/response";
+import { useEffect, useState } from "react";
+import useSWR from "swr";
 
 const fetcher = (...args) =>
   fetch(...args)
@@ -23,13 +23,13 @@ export default function Projects({ githubOwner }) {
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/orgs/${githubOwner}/repos?per_page=20&sort=updated&direction=desc`,
     fetcher,
-    { shouldRetryOnError: false } // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
+    { shouldRetryOnError: false }, // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
   );
 
   useEffect(() => {
     if (data) {
       setProjectsData(
-        data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at))
+        data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)),
       );
     }
   }, [data]);

@@ -1,16 +1,16 @@
-import { githubOwner } from "@/utility/constants/app-data";
 import SingleProject from "./singleProject";
 import LayoutE53 from "@/components/layout/LayoutE53";
+import { githubOwner } from "@/utility/constants/app-data";
 import { SectionType } from "@/utility/constants/theme";
 
 // See https://nextjs.org/docs/app/api-reference/functions/generate-static-params
 export async function generateStaticParams() {
   const ghResponses = await fetch(
-    `https://api.github.com/orgs/${githubOwner}/repos?per_page=21&sort=updated&direction=desc`
+    `https://api.github.com/orgs/${githubOwner}/repos?per_page=21&sort=updated&direction=desc`,
   ).then((res) => res.json());
 
   return ghResponses.map((ghResponse) => ({
-    project: ghResponse.name
+    project: ghResponse.name,
   }));
   /*
   return [

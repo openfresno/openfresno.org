@@ -1,11 +1,10 @@
-import { Button, Slider, Timeline } from "../../components/ui";
-import Link from "next/link";
-import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import LayoutE53 from "../../components/layout/LayoutE53";
-
+import { Button, Slider, Timeline } from "../../components/ui";
+import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import GeneralSection from "@/components/ui/GeneralSection";
 import ImageSection from "@/components/ui/ImageSection";
 import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 /**
  * Open Fresno's Home page

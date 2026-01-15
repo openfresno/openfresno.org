@@ -1,11 +1,11 @@
 import React from "react";
 
 export const Envelope = ({
-                           width = 17,
-                           height = 16,
-                           className = "",
-                           ...props
-                         }) => {
+  width = 17,
+  height = 16,
+  className = "",
+  ...props
+}) => {
   return (
     <svg
       width={width}

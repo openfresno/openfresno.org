@@ -1,8 +1,8 @@
 export const ChevronDownStroke = ({
-                                    width = 24,
-                                    height = 24,
-                                    className = ""
-                                  }) => {
+  width = 24,
+  height = 24,
+  className = "",
+}) => {
   return (
     <svg
       width={width}

@@ -8,20 +8,19 @@
 
   &::before,
   &::after {
-    /* Custom marker dimensions */
-    content: "";
-    border-radius: 3px;
-    background-color: var(--neutral-900);
-    height: 0.2rem;
-    width: 1rem;
+    /* Anchor the shape to the summary */
+    position: absolute;
+    top: 2rem;
 
     /* Positions the lines */
     inset-block-start: 50%;
     inset-inline-end: 0;
-
-    /* Anchor the shape to the summary */
-    position: absolute;
-    top: 2rem;
+    border-radius: 3px;
+    background-color: var(--neutral-900);
+    width: 1rem;
+    height: 0.2rem;
+    /* Custom marker dimensions */
+    content: "";
     @media (width >= 992px) {
       right: 1rem;
     }

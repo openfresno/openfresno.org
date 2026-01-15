@@ -1,9 +1,9 @@
 export default function ArrowDown({
-                                    width = 24,
-                                    height = 24,
-                                    className = "",
-                                    strokeWidth = 2
-                                  }) {
+  width = 24,
+  height = 24,
+  className = "",
+  strokeWidth = 2,
+}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

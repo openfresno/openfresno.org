@@ -6,8 +6,8 @@ import { SectionType } from "@/utility/constants/theme";
  * @returns {JSX.Element}
  */
 export default function AboutSectionMission({
-                                              sectionType = SectionType.light
-                                            }) {
+  sectionType = SectionType.light,
+}) {
   return (
     <ImageSection
       heading="OUR MISSION"

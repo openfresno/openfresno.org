@@ -1,11 +1,11 @@
 import React from "react";
 
 export const Facebook = ({
-                           width = 24,
-                           height = 24,
-                           className = "",
-                           ...props
-                         }) => {
+  width = 24,
+  height = 24,
+  className = "",
+  ...props
+}) => {
   return (
     <svg
       width={width}

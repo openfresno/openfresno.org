@@ -1,10 +1,10 @@
-import FaqSectionStart from "./faqSectionStart";
-import FaqSectionNav from "./faqSectionNav";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import fs from "fs";
-import path from "path";
 import MDXComponents from "./MDXComponents";
+import FaqSectionNav from "./faqSectionNav";
+import FaqSectionStart from "./faqSectionStart";
 import { SectionType } from "@/utility/constants/theme";
+import fs from "fs";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import path from "path";
 
 function extractToc(content) {
   const headers = [];
@@ -38,8 +38,7 @@ export default function Faq() {
     <div className="faq-main">
       <FaqSectionStart sectionType={SectionType.light} />
       <FaqSectionNav sectionType={SectionType.light} topics={tableOfContents} />
-      <section
-        className="faq-container-margins mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] flex flex-col gap-0 px-6 py-6 lg:py-12">
+      <section className="faq-container-margins mx-auto flex max-w-[calc(var(--screen-xxl)_+_80px)] flex-col gap-0 px-6 py-6 lg:py-12">
         <MDXRemote source={fileContent} components={MDXComponents} />
       </section>
     </div>

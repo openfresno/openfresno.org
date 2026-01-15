@@ -6,19 +6,19 @@
  * @constructor
  */
 export default function AboutSectionPositionList({
-                                                   header = "",
-                                                   listText = [""]
-                                                 }) {
+  header = "",
+  listText = [""],
+}) {
   return (
     <div
-      className={`w-[48%] max-lg:ml-[6%] min-w-[400px] max-lg:w-full max-sm:min-w-0 positions-container mb-4`}
+      className={`positions-container mb-4 w-[48%] min-w-[400px] max-lg:ml-[6%] max-lg:w-full max-sm:min-w-0`}
     >
-      <div className={`position-header text-xl/6 mb-2`}>{header}</div>
-      <hr className={`w-[90%] border-0 h-px bg-(--neutral-200)`} />
-      <ul className={`list-inside list-disc mt-4 ml-3`}>
+      <div className={`position-header mb-2 text-xl/6`}>{header}</div>
+      <hr className={`h-px w-[90%] border-0 bg-(--neutral-200)`} />
+      <ul className={`mt-4 ml-3 list-inside list-disc`}>
         {listText.map((text, i) => {
           return (
-            <li key={i} className={`text-(--neutral-200) text-xl/10 `}>
+            <li key={i} className={`text-xl/10 text-(--neutral-200)`}>
               {text}
             </li>
           );

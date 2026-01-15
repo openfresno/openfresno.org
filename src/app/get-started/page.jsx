@@ -3,8 +3,8 @@ import SidebarSection from "../../components/ui/SidebarSection";
 import Steps from "../../components/ui/instructions/Steps";
 import instructionData from "./instructions.jsx";
 import LayoutE53 from "@/components/layout/LayoutE53";
-import { SectionType } from "@/utility/constants/theme";
 import GeneralSection from "@/components/ui/GeneralSection";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * Get started page.
@@ -34,7 +34,7 @@ export default function GetStartedPage() {
         you&apos;ll find step-by-step instructions below to help you get started
         on your journey of civic tech and community empowerment.
       </GeneralSection>
-      <hr className="mx-auto mb-12 lg:mb-24 max-w-[calc(var(--screen-xxl)_+_80px)] border-0 h-px bg-(--neutral-400)" />
+      <hr className="mx-auto mb-12 h-px max-w-[calc(var(--screen-xxl)_+_80px)] border-0 bg-(--neutral-400) lg:mb-24" />
       <SidebarSection sectionType={SectionType.light}>
         <div className={`sidebar-info-container`}>
           <HeaderUnderline

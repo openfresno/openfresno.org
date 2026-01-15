@@ -1,9 +1,9 @@
+import { SectionType } from "./contact";
+import { HeaderUnderline } from "@/components/ui";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
 import { useState } from "react";
-import { SectionType } from "./contact";
-import { HeaderUnderline } from "@/components/ui";
 
 /**
  * contact mission section.
@@ -17,16 +17,16 @@ export default function ContactSectionMission({ sectionType }) {
   const [body, setBody] = useState("");
 
   const mailtoUri = `mailto:hello@openfresno.org?subject=${encodeURIComponent(
-    subject
+    subject,
   )}&body=${encodeURIComponent(body)}%0A%0A%0A%0A${encodeURIComponent(
-    firstName
+    firstName,
   )}%20${encodeURIComponent(lastName)}%0A${encodeURIComponent(email)}`;
 
   return (
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`split-page max-lg:py-12`}>
       <div
-        className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} max-lg:px-6 pt-12 pb-18 lg:py-24`}
+        className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} pt-12 pb-18 max-lg:px-6 lg:py-24`}
       >
         <HeaderUnderline
           title="Contact Form"
@@ -61,7 +61,7 @@ export default function ContactSectionMission({ sectionType }) {
         </HeaderUnderline>
       </div>
       <div
-        className={`grow-1 basis-0 lg:ml-8 app-color--${sectionType}-split max-lg:px-8 py-12 lg:py-24`}
+        className={`grow-1 basis-0 lg:ml-8 app-color--${sectionType}-split py-12 max-lg:px-8 lg:py-24`}
       >
         <form>
           <div className="form-input">
@@ -77,19 +77,19 @@ export default function ContactSectionMission({ sectionType }) {
               sx={{
                 marginRight: "10%",
                 "& .MuiInputLabel-root": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-input": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white" // Default underline color
+                  borderBottom: "2px solid white", // Default underline color
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white" // Label color when input is focused
+                  color: "white", // Label color when input is focused
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white" // Underline color when input is focused
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
               focused
@@ -106,19 +106,19 @@ export default function ContactSectionMission({ sectionType }) {
               margin="normal"
               sx={{
                 "& .MuiInputLabel-root": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-input": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white" // Default underline color
+                  borderBottom: "2px solid white", // Default underline color
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white" // Label color when input is focused
+                  color: "white", // Label color when input is focused
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white" // Underline color when input is focused
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
               focused
@@ -137,19 +137,19 @@ export default function ContactSectionMission({ sectionType }) {
               fullWidth
               sx={{
                 "& .MuiInputLabel-root": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-input": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white" // Default underline color
+                  borderBottom: "2px solid white", // Default underline color
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white" // Label color when input is focused
+                  color: "white", // Label color when input is focused
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white" // Underline color when input is focused
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
               focused
@@ -168,19 +168,19 @@ export default function ContactSectionMission({ sectionType }) {
               fullWidth
               sx={{
                 "& .MuiInputLabel-root": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-input": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white" // Default underline color
+                  borderBottom: "2px solid white", // Default underline color
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white" // Label color when input is focused
+                  color: "white", // Label color when input is focused
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white" // Underline color when input is focused
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
               focused
@@ -200,25 +200,25 @@ export default function ContactSectionMission({ sectionType }) {
               fullWidth
               sx={{
                 "& .MuiInputLabel-root": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-input": {
-                  color: "white"
+                  color: "white",
                 },
                 "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white" // Default underline color
+                  borderBottom: "2px solid white", // Default underline color
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white" // Label color when input is focused
+                  color: "white", // Label color when input is focused
                 },
                 "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white" // Underline color when input is focused
+                  borderBottom: "2px solid white", // Underline color when input is focused
                 },
               }}
               focused
             />
           </div>
-          <div className="pt-11 flex lg:justify-end">
+          <div className="flex pt-11 lg:justify-end">
             <Button
               href={mailtoUri}
               variant="contained"
@@ -226,7 +226,7 @@ export default function ContactSectionMission({ sectionType }) {
               sx={{
                 whiteSpace: "nowrap",
                 background: "white",
-                color: "black"
+                color: "black",
               }}
             >
               Send Message

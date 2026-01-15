@@ -4,7 +4,7 @@ const SingleProjectsLinks = () => {
   return (
     <section className={`app-color--primary px-6 py-6`}>
       <div
-        className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] flex flex-col max-lg:gap-4 lg:flex-row lg:justify-between`}
+        className={`mx-auto flex max-w-[calc(var(--screen-xxl)_+_80px)] flex-col max-lg:gap-4 lg:flex-row lg:justify-between`}
       >
         <Link className={`underline`} href="#project-brief">
           Project Brief

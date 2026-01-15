@@ -1,20 +1,20 @@
-import { getWednesday } from "@/utility/get-wednesday";
-import Link from "next/link";
 import { HeaderUnderline } from "@/components/ui";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
+import { getWednesday } from "@/utility/get-wednesday";
+import Link from "next/link";
 
 /**
  * Projects start section.
  * @returns {JSX.Element}
  */
 export default function ProjectsSectionStart({
-                                               sectionType = SectionType.light
-                                             }) {
+  sectionType = SectionType.light,
+}) {
   return (
     // TODO fix styling classes to represent the projects page?
     <section
-      className={`max-w-[calc(var(--screen-xxl)_+_80px)] mx-auto py-12 lg:px-6 lg:py-24 flex max-lg:flex-col app-color--${sectionType}`}
+      className={`mx-auto flex max-w-[calc(var(--screen-xxl)_+_80px)] py-12 max-lg:flex-col lg:px-6 lg:py-24 app-color--${sectionType}`}
     >
       <div
         className={`projects-section-text-container w-full grow-3 basis-0 max-lg:px-6`}
@@ -37,7 +37,7 @@ export default function ProjectsSectionStart({
         </HeaderUnderline>
       </div>
       <div
-        className={`flex items-center grow-2 basis-0 lg:ml-[10%] max-lg:mt-4`}
+        className={`flex grow-2 basis-0 items-center max-lg:mt-4 lg:ml-[10%]`}
       >
         <div className={`border border-neutral-500 lg:rounded-3xl`}>
           <div className={`px-8 py-4`}>
@@ -46,11 +46,11 @@ export default function ProjectsSectionStart({
             </span>
           </div>
           <div
-            className={`flex flex-col gap-4 p-8 border-t border-neutral-500`}
+            className={`flex flex-col gap-4 border-t border-neutral-500 p-8`}
           >
             <div>
               <BasePathImage
-                className="inline-block mr-4"
+                className="mr-4 inline-block"
                 src="/img/meeting-card/calender.svg"
                 alt="Calendar"
               />
@@ -60,7 +60,7 @@ export default function ProjectsSectionStart({
             </div>
             <div>
               <BasePathImage
-                className="inline-block mr-4"
+                className="mr-4 inline-block"
                 src="/img/meeting-card/clock.svg"
                 alt="Clock"
               />
@@ -68,7 +68,7 @@ export default function ProjectsSectionStart({
             </div>
             <div>
               <BasePathImage
-                className="inline-block mr-4"
+                className="mr-4 inline-block"
                 src="/img/meeting-card/document-txt.svg"
                 alt="Document"
               />
@@ -78,7 +78,7 @@ export default function ProjectsSectionStart({
             </div>
           </div>
           <div
-            className={`meeting-card-content px-8 py-4 border-t border-neutral-500`}
+            className={`meeting-card-content border-t border-neutral-500 px-8 py-4`}
           >
             <Link
               className={`meeting-card-link`}
@@ -89,7 +89,7 @@ export default function ProjectsSectionStart({
             >
               <span>Go to meetup</span>
               <BasePathImage
-                className="inline-block ml-2 -mt-0.5"
+                className="-mt-0.5 ml-2 inline-block"
                 src="/img/meeting-card/arrow-right.svg"
                 alt="Arrow right."
               />

@@ -1,19 +1,18 @@
-import { SectionType } from "@/utility/constants/theme";
-
-import { titleCase } from "@/utility/string";
 import FormattedObject from "@/components/ui/FormattedObject";
+import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 export default function SingleProjectsBrief({
-                                              data,
-                                              sectionType = SectionType.light
-                                            }) {
+  data,
+  sectionType = SectionType.light,
+}) {
   const trimList = [
     "project_status",
     "resources",
     "roadmap",
     "screenshots",
     "tags",
-    "contributing"
+    "contributing",
   ];
   const titleCaseList = ["project_type"];
   const concatLists = [["communications", "channels"]];

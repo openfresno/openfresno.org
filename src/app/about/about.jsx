@@ -1,8 +1,8 @@
-import AboutSectionLanding from "./aboutSectionLanding";
 import AboutSectionCollage from "./aboutSectionCollage";
+import AboutSectionLanding from "./aboutSectionLanding";
 import AboutSectionMission from "./aboutSectionMission";
-import AboutSectionTeam from "./aboutSectionTeam";
 import AboutSectionOpportunities from "./aboutSectionOpportunities";
+import AboutSectionTeam from "./aboutSectionTeam";
 import { SectionType } from "@/utility/constants/theme";
 
 /**

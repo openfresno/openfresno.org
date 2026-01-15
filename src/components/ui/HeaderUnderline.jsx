@@ -1,5 +1,5 @@
-import { SectionType } from "@/utility/constants/theme";
 import HeadingPair from "@/components/ui/HeadingPair";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  *  `HeaderUnderline` renders a header that introduces a major section of a page or layout.
@@ -30,13 +30,13 @@ import HeadingPair from "@/components/ui/HeadingPair";
  * ```
  */
 export default function HeaderUnderline({
-                                          children,
-                                          className = "",
-                                          sectionType,
-                                          title,
-                                          description,
-                                          large
-                                        }) {
+  children,
+  className = "",
+  sectionType,
+  title,
+  description,
+  large,
+}) {
   return (
     <div
       className={`${className} underline-header-container heading-underline ${sectionType === SectionType.dark && "underline-alt"}`}

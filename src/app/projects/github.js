@@ -46,9 +46,9 @@ export const fetchGithubSingleProject = async (ghResponse) => {
 
   return meta
     ? {
-      ...ghData,
-      meta
-    }
+        ...ghData,
+        meta,
+      }
     : null;
 };
 
@@ -62,7 +62,7 @@ const mapGhData = (ghResponse) => ({
   html_url: ghResponse.html_url,
   api_url: ghResponse.url,
   created_at: ghResponse.created_at,
-  updated_at: ghResponse.updated_at
+  updated_at: ghResponse.updated_at,
 });
 
 const metaFile = "meta.yml";
@@ -138,7 +138,7 @@ const fetchMetaFile = async (ghFullName, defaultBranchName) => {
     metaResponse = await fetch(`http://localhost:3000/meta.yml`);
   } else {
     metaResponse = await fetch(
-      `https://raw.githubusercontent.com/${ghFullName}/${defaultBranchName}/${metaFile}`
+      `https://raw.githubusercontent.com/${ghFullName}/${defaultBranchName}/${metaFile}`,
     );
   }
 

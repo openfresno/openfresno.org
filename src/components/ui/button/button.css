@@ -11,12 +11,12 @@
   text-decoration: none;
   text-wrap: nowrap;
   @media (max-width: 500px) {
-    font-size: 0.9rem;
     padding: 0.6rem 0.7rem;
+    font-size: 0.9rem;
   }
   @media (max-width: 300px) {
-    font-size: 0.7rem;
     padding: 0.6rem 0.3rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -29,11 +29,12 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transition: top,
-    right,
-    bottom,
-    left,
-    0.3s ease-in-out;
+    transition:
+      top,
+      right,
+      bottom,
+      left,
+      0.3s ease-in-out;
     border: var(--main-vivid-blue) 6px solid;
     border-radius: 6px;
     content: "";
@@ -75,8 +76,9 @@
 }
 
 .btn-alt--transition {
-  transition: background-color 0.3s,
-  color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 
   &:hover {
     background-color: var(--main-vivid-blue);

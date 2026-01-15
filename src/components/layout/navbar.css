@@ -34,9 +34,9 @@ NOTE: The navbar is initially transparent when the fade on-scroll animation is e
 
 .navbar-container--fading {
   animation: fade-in-navbar linear;
+  animation-fill-mode: both;
   animation-timeline: scroll(root block);
   animation-range: 0 520px;
-  animation-fill-mode: both;
   @media screen and (min-width: 992px) {
     border: none;
   }

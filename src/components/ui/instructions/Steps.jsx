@@ -1,6 +1,6 @@
-import React from "react";
 import CircledNumber from "@/components/ui/CircledNumber";
 import { SectionType } from "@/utility/constants/theme";
+import React from "react";
 
 /**
  * `Steps` is a presentational component that displays a sequence of numbered
@@ -37,10 +37,10 @@ import { SectionType } from "@/utility/constants/theme";
  * ```
  */
 export default function Steps({
-                                children,
-                                sectionType = SectionType.light,
-                                steps
-                              }) {
+  children,
+  sectionType = SectionType.light,
+  steps,
+}) {
   return (
     <div className={`steps-steps-container`}>
       {children ? <div className="steps-step-container">{children}</div> : ""}

@@ -1,8 +1,8 @@
-import Link from "next/link";
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import SidebarSection from "../../components/ui/SidebarSection";
 import LayoutE53 from "@/components/layout/LayoutE53";
 import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 /**
  * Page for information about how to pitch a project.

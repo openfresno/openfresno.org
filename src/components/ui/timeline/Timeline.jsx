@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
+import React, { useEffect, useRef, useState } from "react";
 
 /**
  * a responsive, multi-step timeline component for displaying a list of opportunities.
@@ -58,7 +58,7 @@ export default function Timeline({ className }) {
         number={1}
         heading="Engage with Our Community"
         buttons={[
-          new SimpleButton("Visit Meetup", "https://www.meetup.com/openfresno")
+          new SimpleButton("Visit Meetup", "https://www.meetup.com/openfresno"),
         ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
@@ -93,7 +93,7 @@ export default function Timeline({ className }) {
         heading="Explore On-Site Opportunities with Root Access"
         buttons={[
           new SimpleButton("Check it Out"),
-          new SimpleButton("Explore Calendar")
+          new SimpleButton("Explore Calendar"),
         ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >

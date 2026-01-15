@@ -30,39 +30,39 @@
 
 .split-page {
   display: flex;
-  width: 100%;
   flex-direction: column;
+  width: 100%;
   @media (min-width: 992px) {
     flex-direction: row;
     & > div {
-      width: 50%;
       flex-shrink: 1;
       flex-basis: 0;
+      width: 50%;
     }
 
     & > div:first-child {
-      padding-left: 2.5rem;
-      padding-right: calc(8 * var(--spacing));
       margin-right: 0;
+      padding-right: calc(8 * var(--spacing));
+      padding-left: 2.5rem;
     }
 
     & > div:last-child {
       margin-left: 0;
-      padding-left: calc(8 * var(--spacing));
       padding-right: 2.5rem;
+      padding-left: calc(8 * var(--spacing));
     }
   }
   @media (min-width: 1536px) {
     & > div:first-child {
-      padding-left: calc((100% - (var(--screen-xxl) + 80px)) / 2 + 2.5rem);
-      padding-right: calc(8 * var(--spacing));
       margin-right: 0;
+      padding-right: calc(8 * var(--spacing));
+      padding-left: calc((100% - (var(--screen-xxl) + 80px)) / 2 + 2.5rem);
     }
 
     & > div:last-child {
       margin-left: 0;
-      padding-left: calc(8 * var(--spacing));
       padding-right: calc((100% - (var(--screen-xxl) + 80px)) / 2 + 2.5rem);
+      padding-left: calc(8 * var(--spacing));
     }
   }
 }

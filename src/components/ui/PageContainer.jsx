@@ -11,13 +11,13 @@ import { SectionType } from "@/utility/constants/theme";
  * @constructor
  */
 export default function PageContainer({
-                                        className = "",
-                                        divClassName = "",
-                                        sectionType = SectionType.light,
-                                        children = <></>,
-                                        display = `flex flex-col`,
-                                        noPadding = false
-                                      }) {
+  className = "",
+  divClassName = "",
+  sectionType = SectionType.light,
+  children = <></>,
+  display = `flex flex-col`,
+  noPadding = false,
+}) {
   return (
     <section
       className={`${noPadding ? "" : "py-6 lg:py-12"} app-color--${sectionType} ${className}`}

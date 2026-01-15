@@ -1,6 +1,6 @@
-import Link from "next/link";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 /**
  * `SidebarSection` is a layout component that renders a main instructions area
@@ -26,7 +26,7 @@ import { SectionType } from "@/utility/constants/theme";
 export default function SidebarSection({ children, sectionType }) {
   return (
     <section
-      className={`app-color--${sectionType} page-container py-12 lg:py-24 flex flex-col lg:flex-row gap-2`}
+      className={`app-color--${sectionType} page-container flex flex-col gap-2 py-12 lg:flex-row lg:py-24`}
     >
       <div className={`instructions-container`}>{children}</div>
       <div className={`sidebar-container`}>
@@ -36,7 +36,7 @@ export default function SidebarSection({ children, sectionType }) {
             alt="rectangle"
             float="right"
           >
-            <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
+            <div className="font mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?
               </span>
@@ -49,7 +49,7 @@ export default function SidebarSection({ children, sectionType }) {
         </div>
         <div className={`flex flex-col gap-6`}>
           <div className={`flex flex-col gap-2`}>
-            <hr className="mb-2 border-0 h-px bg-(--neutral-400)" />
+            <hr className="mb-2 h-px border-0 bg-(--neutral-400)" />
             <Link
               href="/code-of-conduct"
               className="primary-link--underline w-fit"
@@ -58,7 +58,7 @@ export default function SidebarSection({ children, sectionType }) {
             </Link>
           </div>
           <div className={`flex flex-col gap-2`}>
-            <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
+            <hr className="my-2 h-px border-0 bg-(--neutral-400)" />
             <Link
               className="primary-link--underline w-fit"
               href="https://forms.gle/JA3jAV9wE1645i9LA"
@@ -70,7 +70,7 @@ export default function SidebarSection({ children, sectionType }) {
             </Link>
           </div>
           <div className={`flex flex-col gap-2`}>
-            <hr className="my-2 border-0 h-px bg-(--neutral-400)" />
+            <hr className="my-2 h-px border-0 bg-(--neutral-400)" />
             <Link
               className="primary-link--underline w-fit"
               href="https://www.meetup.com/openfresno/"

@@ -1,6 +1,8 @@
 "use client";
 import { useKeenSlider } from "keen-slider/react";
-import { useState } from "react"; // import from 'keen-slider/react.es' for to get an ES module
+import { useState } from "react";
+
+// import from 'keen-slider/react.es' for to get an ES module
 
 /**
  * @component
@@ -15,14 +17,13 @@ import { useState } from "react"; // import from 'keen-slider/react.es' for to g
  * @constructor
  */
 export default function Slider({
-                                 className,
-                                 children,
-                                 startingSlide = 0,
-                                 loadedState = useState(false),
-                                 setCurrentSlide = useState(startingSlide)[1],
-                                 setUpdateSlider = (updateFunctionGenerator) => {
-                                 }
-                               }) {
+  className,
+  children,
+  startingSlide = 0,
+  loadedState = useState(false),
+  setCurrentSlide = useState(startingSlide)[1],
+  setUpdateSlider = (updateFunctionGenerator) => {},
+}) {
   const [loaded, setLoaded] = loadedState;
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: startingSlide,
@@ -46,16 +47,16 @@ export default function Slider({
         {children}
       </div>
       {loaded && instanceRef.current && (
-        <div className="dots p-4 flex flex-row gap-4 mx-auto justify-center">
+        <div className="dots mx-auto flex flex-row justify-center gap-4 p-4">
           {[
-            ...Array(instanceRef.current.track.details.slides.length).keys()
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => (
             <button
               key={idx}
               onClick={() => {
                 instanceRef.current?.moveToIdx(idx);
               }}
-              className={`w-4 h-4 rounded-[2rem] cursor-pointer ${instanceRef.current?.track.details.rel === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
+              className={`h-4 w-4 cursor-pointer rounded-[2rem] ${instanceRef.current?.track.details.rel === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
             ></button>
           ))}
         </div>

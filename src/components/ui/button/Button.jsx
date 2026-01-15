@@ -1,11 +1,11 @@
-import Link from "next/link";
+import { HamburgerStaggered, IconX } from "..";
 import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
-  ChevronUp
+  ChevronUp,
 } from "@/integrations/tabler-icon";
-import { HamburgerStaggered, IconX } from "..";
+import Link from "next/link";
 
 /**
  * A flexible, multi-purpose component for rendering a styled button or link.
@@ -43,13 +43,13 @@ import { HamburgerStaggered, IconX } from "..";
  </BaseButton>
  */
 const BaseButton = ({
-                      className,
-                      href,
-                      target,
-                      onClick,
-                      children,
-                      textContent
-                    }) => {
+  className,
+  href,
+  target,
+  onClick,
+  children,
+  textContent,
+}) => {
   if (href) {
     return (
       <Link

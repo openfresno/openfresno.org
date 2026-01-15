@@ -1,5 +1,5 @@
-import Link from "next/link";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import Link from "next/link";
 
 /**
  * Instructions for project page.

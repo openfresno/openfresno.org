@@ -1,15 +1,14 @@
 import { Button } from "../../../components/ui";
-import { SectionType } from "@/utility/constants/theme";
-
-import { titleCase } from "@/utility/string";
 import PageContainer from "@/components/ui/PageContainer";
+import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 export default function SingleProjectsContribute({
-                                                   data,
-                                                   contributeAs,
-                                                   setContributeAs,
-                                                   sectionType
-                                                 }) {
+  data,
+  contributeAs,
+  setContributeAs,
+  sectionType,
+}) {
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>How to Contribute</h2>
@@ -20,7 +19,7 @@ export default function SingleProjectsContribute({
         Open Fresno is run by volunteers. We are always looking for help.
         Explore the various ways you can make a difference.
       </p>
-      <h4 className={`project-info-label font-semibold mb-2`}>
+      <h4 className={`project-info-label mb-2 font-semibold`}>
         Get Involved As
       </h4>
       <div className={`flex flex-wrap gap-4`}>

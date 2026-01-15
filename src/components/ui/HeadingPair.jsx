@@ -16,14 +16,14 @@ import { SectionType } from "@/utility/constants/theme";
  * @constructor
  */
 export default function HeadingPair({
-                                      heading = "",
-                                      subHeading = <></>,
-                                      subHeadingWidth = "70%",
-                                      className = "",
-                                      sectionType = SectionType.light,
-                                      underlined = true,
-                                      large = false
-                                    }) {
+  heading = "",
+  subHeading = <></>,
+  subHeadingWidth = "70%",
+  className = "",
+  sectionType = SectionType.light,
+  underlined = true,
+  large = false,
+}) {
   return (
     <div className={className}>
       <h1

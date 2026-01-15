@@ -1,5 +1,5 @@
-import { SectionType } from "@/utility/constants/theme";
 import AboutSectionTeamMember from "@/app/about/components/aboutSectionTeamMember";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About team section.
@@ -20,7 +20,7 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
               Meet the Heartbeat of Open Fresno
             </h2>
           </div>
-          <p className={`mb-16 team-paragraph`}>
+          <p className={`team-paragraph mb-16`}>
             Open Fresno is powered by a volunteer Core Team that orchestrates
             events, fosters strategic partnerships, and ensures seamless
             communication among cross-functional project teams. Our dedicated
@@ -31,7 +31,7 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
 
         <div className={`team-members-container`}>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4`}
+            className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4`}
           >
             <AboutSectionTeamMember
               src={"/img/about/mary_fey_norris.jpg"}

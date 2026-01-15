@@ -1,14 +1,14 @@
 import GeneralSection from "@/components/ui/GeneralSection";
-import { SectionType } from "@/utility/constants/theme";
 import PageContainer from "@/components/ui/PageContainer";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * Donate landing section.
  * @returns {JSX.Element}
  */
 export default function DonateSectionLanding({
-                                               sectionType = SectionType.light
-                                             }) {
+  sectionType = SectionType.light,
+}) {
   return (
     <>
       <GeneralSection

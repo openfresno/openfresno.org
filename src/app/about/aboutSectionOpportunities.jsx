@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { SectionType } from "@/utility/constants/theme";
-import CenteredInImage from "@/components/ui/CenteredInImage";
 import AboutSectionPositionList from "@/app/about/components/aboutSectionPositionList";
+import CenteredInImage from "@/components/ui/CenteredInImage";
 import HeadingPair from "@/components/ui/HeadingPair";
+import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 /**
  * About opportunities section.
@@ -11,10 +11,10 @@ import HeadingPair from "@/components/ui/HeadingPair";
 export default function AboutSectionOpportunities({ sectionType }) {
   return (
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
-      <div className={`w-full page-container overflow-hidden`}>
+      <div className={`page-container w-full overflow-hidden`}>
         <div className="w-full overflow-hidden">
           <div
-            className={`lg:w-[55%] px-4 sm:px-8 md:px-12 lg:px-0 float-left about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
+            className={`float-left px-4 sm:px-8 md:px-12 lg:w-[55%] lg:px-0 about-${sectionType}-heading-container about-heading-underline about-underline-alt`}
           >
             <HeadingPair
               heading="Opportunities"
@@ -32,14 +32,14 @@ export default function AboutSectionOpportunities({ sectionType }) {
             </p>
           </div>
           <div
-            className={`max-lg:hidden w-[45%] h-fit opportunities-get-started relative float-right`}
+            className={`opportunities-get-started relative float-right h-fit w-[45%] max-lg:hidden`}
           >
             <CenteredInImage
               src="/img/about/rectangle-blue.png"
               alt="rectangle"
               float="right"
             >
-              <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
+              <div className="font mx-auto w-fit text-xl font-bold sm:text-3xl">
                 <span
                   className={`app-text--${SectionType.invert(sectionType)}`}
                 >
@@ -54,17 +54,17 @@ export default function AboutSectionOpportunities({ sectionType }) {
           </div>
         </div>
 
-        <h3 className={`hidden lg:block h3-bold app-text--primary mb-8`}>
+        <h3 className={`h3-bold app-text--primary mb-8 hidden lg:block`}>
           Open Positions within Our Team
         </h3>
 
-        <div className={`w-full flex flex-row flex-wrap space-between`}>
+        <div className={`space-between flex w-full flex-row flex-wrap`}>
           <AboutSectionPositionList
             header="Community"
             listText={[
               "Director of Fundraising",
               "Director of Community Engagement",
-              "Director of Recruitment"
+              "Director of Recruitment",
             ]}
           />
           <AboutSectionPositionList
@@ -72,34 +72,34 @@ export default function AboutSectionOpportunities({ sectionType }) {
             listText={[
               "Director of Product Management",
               "Director of Marketing & Engagement",
-              "Director of Event Management"
+              "Director of Event Management",
             ]}
           />
         </div>
 
-        <div className={`w-full flex flex-row flex-wrap space-between`}>
+        <div className={`space-between flex w-full flex-row flex-wrap`}>
           <AboutSectionPositionList
             header="Product"
             listText={[
               <s>Director of Frontend Engineering</s>,
-              "Director of Design & Usability"
+              "Director of Design & Usability",
             ]}
           />
           <AboutSectionPositionList
             header="Platform"
             listText={[
               "Director of Backend Engineering",
-              "Director of Data Science"
+              "Director of Data Science",
             ]}
           />
         </div>
-        <div className={`lg:hidden w-full h-fit relative`}>
+        <div className={`relative h-fit w-full lg:hidden`}>
           <CenteredInImage
             src="/img/about/rectangle-blue.png"
             alt="rectangle"
             float="center"
           >
-            <div className="w-fit mx-auto font text-xl sm:text-3xl font-bold">
+            <div className="font mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?
               </span>

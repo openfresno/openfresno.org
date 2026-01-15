@@ -1,5 +1,5 @@
-import React from "react";
 import { SectionType } from "@/utility/constants/theme";
+import React from "react";
 
 /**
  *
@@ -11,11 +11,11 @@ import { SectionType } from "@/utility/constants/theme";
  * @constructor
  */
 export default function CircledNumber({
-                                        number,
-                                        sectionType = SectionType.light
-                                      }) {
+  number,
+  sectionType = SectionType.light,
+}) {
   return (
-    <div className="w-[2.5rem] h-[2.5rem] lg:w-[5rem] lg:h-[5rem]">
+    <div className="h-[2.5rem] w-[2.5rem] lg:h-[5rem] lg:w-[5rem]">
       <div
         className={`circled-number app-color--${SectionType.toColor(sectionType)}`}
       >

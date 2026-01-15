@@ -1,10 +1,10 @@
-import Link from "next/link";
-import { SectionType } from "@/utility/constants/theme";
 import { HeaderUnderline } from "@/components/ui";
+import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 export default function conductSectionPolicies({
-                                                 sectionType = SectionType.dark
-                                               }) {
+  sectionType = SectionType.dark,
+}) {
   return (
     <section className={`py-12 lg:py-24 app-color--${sectionType}`}>
       <div

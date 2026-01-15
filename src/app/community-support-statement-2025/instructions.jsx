@@ -16,7 +16,7 @@ const instructions = [
         These criteria will help ensure your project is in harmony with our
         mission and objectives.
       </>
-    )
+    ),
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const instructions = [
         </a>{" "}
         for a positive experience.
       </>
-    )
+    ),
   },
   {
     id: 3,
@@ -57,7 +57,7 @@ const instructions = [
         assess its alignment with our mission and guidelines. During this time,
         someone from our team will reach out to discuss your project further.
       </>
-    )
+    ),
   },
   {
     id: 4,
@@ -79,7 +79,7 @@ const instructions = [
         team, discuss your project ideas, and explore collaborations within our
         community.
       </>
-    )
+    ),
   },
   {
     id: 5,
@@ -91,7 +91,7 @@ const instructions = [
         member will provide you with further directions and guidance to get
         started on your exciting journey with Open Fresno!
       </>
-    )
+    ),
   },
 ];
 export default instructions;

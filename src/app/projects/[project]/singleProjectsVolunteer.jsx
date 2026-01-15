@@ -1,15 +1,15 @@
-import Link from "next/link";
+import { HeaderUnderline } from "@/components/ui";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import { SectionType } from "@/utility/constants/theme";
-import { HeaderUnderline } from "@/components/ui";
+import Link from "next/link";
 
 /**
  * Instructions for project page.
  * @returns {JSX.Element}
  */
 export default function SingleProjectsVolunteer({
-                                                  sectionType = SectionType.light
-                                                }) {
+  sectionType = SectionType.light,
+}) {
   return (
     <section
       id="project-section-start"
@@ -38,7 +38,7 @@ export default function SingleProjectsVolunteer({
             alt="rectangle"
             float="center"
           >
-            <div className="w-fit mx-auto text-xl sm:text-3xl font-bold">
+            <div className="mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?
               </span>

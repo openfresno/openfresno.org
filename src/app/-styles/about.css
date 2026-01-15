@@ -15,10 +15,10 @@
 }
 
 .team-cards-grid {
-  background-color: #ff0 !important;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
   gap: 10px;
+  background-color: #ff0 !important;
 
   @media (max-width: var(--screen-xxl)) {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));

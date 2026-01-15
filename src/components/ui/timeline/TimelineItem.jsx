@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { Button } from "../../ui";
 import { SectionType } from "@/utility/constants/theme";
+import React, { useEffect, useRef } from "react";
 
 export class SimpleButton {
   constructor(text = "", href = "") {
@@ -32,20 +32,20 @@ export class SimpleButton {
  * @returns {JSX.Element}
  */
 export function TimelineItem({
-                               number = 0,
-                               heading,
-                               buttons = [],
-                               updateTimelineNumbers,
-                               sectionType = SectionType.light,
-                               children = <></>
-                             }) {
+  number = 0,
+  heading,
+  buttons = [],
+  updateTimelineNumbers,
+  sectionType = SectionType.light,
+  children = <></>,
+}) {
   const refContainer = useRef();
   useEffect(() => {
     let updateContainerRect = () => {
       if (refContainer.current) {
         updateTimelineNumbers(
           number,
-          refContainer.current.getBoundingClientRect()
+          refContainer.current.getBoundingClientRect(),
         );
       }
     };

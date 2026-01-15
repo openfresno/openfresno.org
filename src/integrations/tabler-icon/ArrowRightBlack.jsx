@@ -1,8 +1,8 @@
 export const ArrowRightBlack = ({
-                                  width = 14,
-                                  height = 15,
-                                  className = ""
-                                }) => {
+  width = 14,
+  height = 15,
+  className = "",
+}) => {
   return (
     <svg
       width={width}

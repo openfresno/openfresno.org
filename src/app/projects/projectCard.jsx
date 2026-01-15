@@ -1,25 +1,25 @@
 import { Button } from "@/components/ui";
-import { titleCase } from "@/utility/string";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 export default function ProjectCard({
-                                      isLoading = true,
-                                      projectStatus,
-                                      projectTitle,
-                                      projectText,
-                                      imgUrl = "/img/tower-bridge.jpg",
-                                      pageUrl,
-                                      githubUrl,
-                                      tags,
-                                      lastUpdatedTimestamp,
-                                      sectionType = SectionType.light
-                                    }) {
+  isLoading = true,
+  projectStatus,
+  projectTitle,
+  projectText,
+  imgUrl = "/img/tower-bridge.jpg",
+  pageUrl,
+  githubUrl,
+  tags,
+  lastUpdatedTimestamp,
+  sectionType = SectionType.light,
+}) {
   return (
     <div className={`flex flex-col app-color--${sectionType}`}>
-      <div className="relative project-card-img-container w-full">
+      <div className="project-card-img-container relative w-full">
         <div
-          className={`absolute top-3 left-6 font-semibold rounded-md px-1.5 w-fit app-color--gray ${isLoading && "project-card-loading"}`}
+          className={`app-color--gray absolute top-3 left-6 w-fit rounded-md px-1.5 font-semibold ${isLoading && "project-card-loading"}`}
         >
           {titleCase(projectStatus)}
         </div>
@@ -31,31 +31,31 @@ export default function ProjectCard({
         />
       </div>
       <ul
-        className={`project-card-tags flex flex-row py-4 gap-2 overflow-x-auto lg:min-h-[75px]`}
+        className={`project-card-tags flex flex-row gap-2 overflow-x-auto py-4 lg:min-h-[75px]`}
       >
         {tags.map((tag) => (
           <div
             key={projectTitle + tag}
-            className={`project-card-tag app-color--primary w-min h-min px-1 rounded-md ${isLoading && "project-card-loading"}`}
+            className={`project-card-tag app-color--primary h-min w-min rounded-md px-1 ${isLoading && "project-card-loading"}`}
           >
             {tag}
           </div>
         ))}
       </ul>
       <h2
-        className={`text-2xl font-bold project-card-heading mb-1 ${isLoading && "project-card-loading"}`}
+        className={`project-card-heading mb-1 text-2xl font-bold ${isLoading && "project-card-loading"}`}
       >
         {projectTitle}
       </h2>
       <div className={`project-card-description-container`}>
         <p
-          className={`text-sm font-normal line-clamp-3 text-ellipses ${isLoading && "project-card-loading"}`}
+          className={`text-ellipses line-clamp-3 text-sm font-normal ${isLoading && "project-card-loading"}`}
         >
           {projectText}
         </p>
       </div>
       <div
-        className={`text-sm text-neutral-700 font-normal my-3 ${isLoading && "project-card-loading"}`}
+        className={`my-3 text-sm font-normal text-neutral-700 ${isLoading && "project-card-loading"}`}
       >
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, Y, h:mma")}
       </div>

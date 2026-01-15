@@ -1,6 +1,6 @@
 import LinedSection from "@/components/ui/LinedSection";
-import { titleCase } from "@/utility/string";
 import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 /**
  *
@@ -13,10 +13,10 @@ import { SectionType } from "@/utility/constants/theme";
  * @constructor
  */
 export default function FormattedObject({
-                                          obj = { title: "" },
-                                          title = obj.title,
-                                          sectionType = SectionType.light
-                                        }) {
+  obj = { title: "" },
+  title = obj.title,
+  sectionType = SectionType.light,
+}) {
   return (
     <LinedSection
       title={title}

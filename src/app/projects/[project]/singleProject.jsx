@@ -1,20 +1,19 @@
 "use client";
-import { jsonResponse } from "@/utility/response";
-import useSWR from "swr";
 import { fetchGithubSingleProject } from "../github";
-
-import SingleProjectsSectionStart from "./singleProjectsSectionStart";
-import SingleProjectsLinks from "./singleProjectsLinks";
 import SingleProjectsBrief from "./singleProjectsBrief";
-import SingleProjectsScreenshots from "./singleProjectsScreenshots";
-import SingleProjectsRoadmap from "./singleProjectsRoadmap";
 import SingleProjectsContribute from "./singleProjectsContribute";
+import SingleProjectsLinks from "./singleProjectsLinks";
 import SingleProjectsResources from "./singleProjectsResources";
+import SingleProjectsRoadmap from "./singleProjectsRoadmap";
+import SingleProjectsScreenshots from "./singleProjectsScreenshots";
+import SingleProjectsSectionStart from "./singleProjectsSectionStart";
 import SingleProjectsVolunteer from "./singleProjectsVolunteer";
-import { useState } from "react";
-import { SectionType } from "@/utility/constants/theme";
 import SingleProjectsContributor from "@/app/projects/[project]/singleProjectsContributor";
 import PageContainer from "@/components/ui/PageContainer";
+import { SectionType } from "@/utility/constants/theme";
+import { jsonResponse } from "@/utility/response";
+import { useState } from "react";
+import useSWR from "swr";
 
 /**
  * Page for displaying a single project
@@ -22,9 +21,9 @@ import PageContainer from "@/components/ui/PageContainer";
  * @returns {JSX.Element}
  */
 export default function SingleProject({
-                                        githubFullName,
-                                        sectionType = SectionType.light
-                                      }) {
+  githubFullName,
+  sectionType = SectionType.light,
+}) {
   const [contributeAs, setContributeAs] = useState("");
   const fetcher = (...args) =>
     fetch(...args)
@@ -41,7 +40,7 @@ export default function SingleProject({
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/repos/${githubFullName}`,
     fetcher,
-    { shouldRetryOnError: false } // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
+    { shouldRetryOnError: false }, // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
   );
 
   if (error) return <div>failed to load</div>;
@@ -52,7 +51,7 @@ export default function SingleProject({
       <SingleProjectsLinks sectionType={sectionType} />
       <SingleProjectsBrief sectionType={sectionType} data={data} />
       <PageContainer noFlex noPadding sectionType={sectionType}>
-        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
+        <hr className={`mt-6 mb-2 h-px border-0 bg-neutral-400 lg:my-6`} />
       </PageContainer>
       {data.meta.screenshots ? (
         <SingleProjectsScreenshots sectionType={sectionType} data={data} />
@@ -90,7 +89,7 @@ export default function SingleProject({
         ""
       )}
       <PageContainer noFlex className="max-lg:hidden" sectionType={sectionType}>
-        <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-400`} />
+        <hr className={`mt-6 mb-2 h-px border-0 bg-neutral-400 lg:my-6`} />
       </PageContainer>
       <SingleProjectsVolunteer
         sectionType={SectionType.invert(sectionType)}

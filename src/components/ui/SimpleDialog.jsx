@@ -1,12 +1,12 @@
-import * as React from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
-import IconButton from "@mui/material/IconButton";
-import { SectionType } from "@/utility/constants/theme";
 import { themes } from "@/components/ui/MaterialTheme";
-import { ThemeProvider } from "@mui/material";
 import { IconX } from "@/components/ui/icon/IconX";
+import { SectionType } from "@/utility/constants/theme";
+import { ThemeProvider } from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import * as React from "react";
 
 /**
  * @component
@@ -20,14 +20,13 @@ import { IconX } from "@/components/ui/icon/IconX";
  * @constructor
  */
 export default function SimpleDialog({
-                                       title = "",
-                                       children = <></>,
-                                       openState = false,
-                                       handleClose = () => {
-                                       },
-                                       sectionType = SectionType.light,
-                                       ...props
-                                     }) {
+  title = "",
+  children = <></>,
+  openState = false,
+  handleClose = () => {},
+  sectionType = SectionType.light,
+  ...props
+}) {
   return (
     <ThemeProvider theme={themes[sectionType]}>
       <Dialog
@@ -37,7 +36,7 @@ export default function SimpleDialog({
         open={openState}
         sx={{
           "& .MuiPaper-root": {
-            "--Paper-overlay": "none!important"
+            "--Paper-overlay": "none!important",
           },
         }}
         {...props}
@@ -52,7 +51,7 @@ export default function SimpleDialog({
             position: "absolute",
             right: 8,
             top: 8,
-            color: theme.palette.grey[500]
+            color: theme.palette.grey[500],
           })}
         >
           <IconX width="24px" height="24px" />
