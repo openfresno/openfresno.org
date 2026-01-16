@@ -23,7 +23,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   const [ascending, setAscending] = useState(true);
 
   /**
-   * Allows for easily accessing any level of a nested objects.
+   * Allows for easily accessing any level of a nested object.
    * Usage: data.meta.obj1.obj2 is accessed with browseObject(data, ["meta", "obj1", "obj2"])
    *  or, the intended use for this function, is browseObject(data, selectInput.split(,))
    * @param {object} [obj] The object to browse.
@@ -107,7 +107,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
 
   return (
     <section
-      className={`mx-auto mb-8 max-w-[calc(var(--screen-xxl)_+_80px)] px-4 lg:px-8`}
+      className={`mx-auto mb-8 max-w-[calc(var(--screen-xxl)+80px)] px-4 lg:px-8`}
     >
       <form
         className={`flex w-full flex-col gap-4 lg:flex-row lg:gap-8`}
@@ -144,7 +144,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
           />
           <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
-        <div className={`form-row grow-1 basis-0 max-lg:w-full`}>
+        <div className={`form-row grow basis-0 max-lg:w-full`}>
           <InputLabel id="project-filter-label">Filter</InputLabel>
           <Select
             variant="outlined"
@@ -159,7 +159,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
             <MenuItem value="active">Active</MenuItem>
           </Select>
         </div>
-        <div className={`form-row grow-1 basis-0 max-lg:w-full`}>
+        <div className={`form-row grow basis-0 max-lg:w-full`}>
           <InputLabel id="project-sort-by-label">Sort By</InputLabel>
           <Select
             variant="outlined"

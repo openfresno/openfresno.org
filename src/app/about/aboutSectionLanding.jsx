@@ -1,7 +1,7 @@
 import GeneralSection from "@/components/ui/GeneralSection";
 
 /**
- * About landing section.
+ * About the landing section.
  * @returns {JSX.Element}
  */
 export default function AboutSectionLanding({ sectionType }) {

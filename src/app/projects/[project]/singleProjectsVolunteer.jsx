@@ -4,7 +4,7 @@ import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";
 
 /**
- * Instructions for project page.
+ * Instructions for the project page.
  * @returns {JSX.Element}
  */
 export default function SingleProjectsVolunteer({
@@ -32,7 +32,7 @@ export default function SingleProjectsVolunteer({
             </span>
           </HeaderUnderline>
         </div>
-        <div className={`get-started-bottom grow-1 basis-0`}>
+        <div className={`get-started-bottom grow basis-0`}>
           <CenteredInImage
             src="/img/about/rectangle-blue.png"
             alt="rectangle"

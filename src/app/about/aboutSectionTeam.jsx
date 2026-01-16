@@ -2,7 +2,7 @@ import AboutSectionTeamMember from "@/app/about/components/aboutSectionTeamMembe
 import { SectionType } from "@/utility/constants/theme";
 
 /**
- * About team section.
+ * About the team section.
  * @returns {JSX.Element}
  */
 export default function AboutSectionTeam({ sectionType = SectionType.light }) {

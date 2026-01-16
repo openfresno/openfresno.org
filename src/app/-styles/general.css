@@ -1,6 +1,6 @@
-.form-holder {
-  background-color: var(--secondary-900);
-}
+/*.form-holder {*/
+/*  background-color: var(--secondary-900);*/
+/*}*/
 
 .general-section-light {
   display: flex;
@@ -8,26 +8,26 @@
   color: var(--primary-900);
 }
 
-.general-section-dark {
-  display: flex;
-  background-color: var(--primary-900);
-  color: var(--primary-50);
-}
+/*.general-section-dark {*/
+/*  display: flex;*/
+/*  background-color: var(--primary-900);*/
+/*  color: var(--primary-50);*/
+/*}*/
 
 .contactActionLinksAnchor {
   color: var(--main-light-blue);
   text-decoration: underline;
 }
 
-.general-heading-light {
-  background: var(--neutral-900);
-  color: var(--secondary-50);
-}
+/*.general-heading-light {*/
+/*  background: var(--neutral-900);*/
+/*  color: var(--secondary-50);*/
+/*}*/
 
-.general-heading-dark {
-  background: var(--neutral-50);
-  color: var(--secondary-900);
-}
+/*.general-heading-dark {*/
+/*  background: var(--neutral-50);*/
+/*  color: var(--secondary-900);*/
+/*}*/
 
 .general-heading-main {
   justify-content: center;
@@ -41,22 +41,22 @@
   font-family: "Inter", sans-serif;
 }
 
-.general-sub-heading-main {
-  align-items: center;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 39px;
-  line-height: 47px;
-  font-family: "Inter", sans-serif;
-}
+/*.general-sub-heading-main {*/
+/*  align-items: center;*/
+/*  font-style: normal;*/
+/*  font-weight: 600;*/
+/*  font-size: 39px;*/
+/*  line-height: 47px;*/
+/*  font-family: "Inter", sans-serif;*/
+/*}*/
 
-.general-sub-heading-light {
-  color: var(--neutral-900);
-}
+/*.general-sub-heading-light {*/
+/*  color: var(--neutral-900);*/
+/*}*/
 
-.general-sub-heading-dark {
-  color: var(--neutral-50);
-}
+/*.general-sub-heading-dark {*/
+/*  color: var(--neutral-50);*/
+/*}*/
 
 .heading-underline {
   display: flex;
@@ -67,17 +67,17 @@
 }
 
 /* Styling for vertical screens*/
-@media (max-width: 992px) {
-  .general-section-dark,
-  .general-section-light {
-    flex-direction: column;
-  }
+/*@media (max-width: 992px) {*/
+/*  .general-section-dark,*/
+/*  .general-section-light {*/
+/*    flex-direction: column;*/
+/*  }*/
 
-  .general-section-container {
-    padding: 3% !important;
-    width: 100%;
-  }
-}
+/*  .general-section-container {*/
+/*    padding: 3% !important;*/
+/*    width: 100%;*/
+/*  }*/
+/*}*/
 
 /* Styling for horizontal screens*/
 @media (min-width: 992px) {

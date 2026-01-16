@@ -11,7 +11,7 @@ export default function AboutSectionPositionList({
 }) {
   return (
     <div
-      className={`positions-container mb-4 w-[48%] min-w-[400px] max-lg:ml-[6%] max-lg:w-full max-sm:min-w-0`}
+      className={`positions-container mb-4 w-[48%] min-w-100 max-lg:ml-[6%] max-lg:w-full max-sm:min-w-0`}
     >
       <div className={`position-header mb-2 text-xl/6`}>{header}</div>
       <hr className={`h-px w-[90%] border-0 bg-(--neutral-200)`} />

@@ -34,7 +34,7 @@ export default function GetStartedPage() {
         you&apos;ll find step-by-step instructions below to help you get started
         on your journey of civic tech and community empowerment.
       </GeneralSection>
-      <hr className="mx-auto mb-12 h-px max-w-[calc(var(--screen-xxl)_+_80px)] border-0 bg-(--neutral-400) lg:mb-24" />
+      <hr className="mx-auto mb-12 h-px max-w-[calc(var(--screen-xxl)+80px)] border-0 bg-(--neutral-400) lg:mb-24" />
       <SidebarSection sectionType={SectionType.light}>
         <div className={`sidebar-info-container`}>
           <HeaderUnderline

@@ -2,8 +2,7 @@ import { SectionType } from "@/utility/constants/theme";
 import React from "react";
 
 /**
- *
- * @component
+ * Component for displaying a number in a circle.
  * @param {Object} props
  * @param {number} [props.number] The number to display
  * @param {SectionType} [props.sectionType] The SectionType to modify display styling

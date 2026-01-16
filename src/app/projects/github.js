@@ -15,7 +15,7 @@ import * as yaml from "yaml";
  * It may be useful to cache this data and only re-fetch on longer intervals if this becomes a frequent issue.
  * See https://swr.vercel.app/docs/advanced/cache#localstorage-based-persistent-cache
  *
- * @returns array of GitHub api response & meta fields
+ * @returns array of GitHub api response & meta-fields
  * @param ghFullResponses
  */
 export const fetchGithubProjectData = async (ghFullResponses) => {
@@ -37,7 +37,7 @@ export const fetchGithubProjectData = async (ghFullResponses) => {
  * It may be useful to cache this data and only re-fetch on longer intervals if this becomes a frequent issue.
  * See https://swr.vercel.app/docs/advanced/cache#localstorage-based-persistent-cache
  *
- * @returns github api response & meta fields
+ * @returns github api response & meta-fields
  * @param ghResponse
  */
 export const fetchGithubSingleProject = async (ghResponse) => {

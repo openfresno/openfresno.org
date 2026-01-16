@@ -4,7 +4,6 @@ import { SectionType } from "@/utility/constants/theme";
 /**
  *  `HeaderUnderline` renders a header that introduces a major section of a page or layout.
  * It adapts to light/dark themes, supports larger descriptions, and ensures consistent typography across sections.
- * @component
  * @param {Object} props - The component props.
  * @param {React.ReactNode} [props.children] - Optional supporting content displayed
  *   below the headings. Typically used for explanatory text or sub-paragraphs.

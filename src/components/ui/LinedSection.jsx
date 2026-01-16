@@ -7,7 +7,7 @@ export function SectionLine({ title = <></>, children = <></> }) {
     <>
       <hr className={`mt-6 mb-2 h-px border-0 bg-neutral-500 lg:my-6`} />
       <div className={`flex flex-col lg:flex-row`}>
-        <div className={`grow-1 basis-0 font-bold max-lg:mb-2`}>{title}</div>
+        <div className={`grow basis-0 font-bold max-lg:mb-2`}>{title}</div>
         <div className={`grow-2 basis-0`}>{children}</div>
       </div>
     </>
@@ -23,7 +23,6 @@ export function SectionLine({ title = <></>, children = <></> }) {
  * @param {[string,string][]} [props.lines]
  * @param {SectionType} [props.sectionType] The SectionType to modify display styling
  * @returns {JSX.Element}
- * @component
  * @constructor
  */
 export default function LinedSection({

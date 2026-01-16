@@ -1,4 +1,4 @@
-/* Reusable Tailwind styles: mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] px-6 lg:px-10 */
+/* Reusable Tailwind styles: mx-auto max-w-[calc(var(--screen-xxl)+80px)] px-6 lg:px-10 */
 .page-container {
   margin: auto;
   padding: 0 1.5rem;
@@ -95,7 +95,7 @@
   margin-top: var(--navbar-height-with-banner);
 }
 
-.sharpen {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
+/*.sharpen {*/
+/*  image-rendering: -webkit-optimize-contrast;*/
+/*  image-rendering: crisp-edges;*/
+/*}*/

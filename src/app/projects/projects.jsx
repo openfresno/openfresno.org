@@ -32,7 +32,7 @@ export default function Projects({ githubOwner }) {
         data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)),
       );
     }
-  }, [data]);
+  }, [data, setProjectsData]);
 
   return (
     <div className={`projects-main`}>

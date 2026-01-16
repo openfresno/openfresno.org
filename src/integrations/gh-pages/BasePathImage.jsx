@@ -8,8 +8,6 @@
  *
  * This is especially useful in static exports (`next export`) or deployments
  * where the root path is not `/`, e.g. `/my-repo/`.
- *
- * @component
  * @param {Object} props - Props passed to the Next.js Image component.
  * @param {string} props.src - The image source path. If it's a relative path,
  * it will be prefixed with `NEXT_PUBLIC_BASE_PATH`.
@@ -28,7 +26,7 @@ export default function BasePathImage({
   imgClassName = "",
   ...props
 }) {
-  //Fallback state for basic invalid values)
+  // The fallback state for basic invalid values
   if (src === null || src === undefined || src === "")
     src = "/img/tower-bridge.jpg";
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -37,10 +35,9 @@ export default function BasePathImage({
       ? `${basePath}${src}`
       : src;
 
-  // eslint-disable-next-line jsx-a11y/alt-text
-  // used to strip out .../.../fileName.img
   let split = finalSrc.split(/[\/.]/);
   let fileName = split[split.length - 2];
+  // Temporarily use the <img> tag, eventually explicitly pass the width and height via prop.
   return (
     <div className={className}>
       <img

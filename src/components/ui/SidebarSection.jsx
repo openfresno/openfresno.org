@@ -8,7 +8,6 @@ import Link from "next/link";
  *
  * It is typically used in onboarding or informational pages to guide users
  * toward key resources such as the code of conduct, new member form, or meeting links.
- * @component
  * @param {Object} props - The component props.
  * @param {React.ReactNode} props.children - Main instructional content displayed
  *   in the left section of the layout.

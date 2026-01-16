@@ -2,7 +2,7 @@ import Slider from "@/components/Slider";
 import SimpleDialog from "@/components/ui/SimpleDialog";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function SingleProjectsScreenshots({
   data,
@@ -10,15 +10,11 @@ export default function SingleProjectsScreenshots({
 }) {
   const [showDialog, setShowDialog] = useState(false);
   const [startingSlide, setStartingSlide] = useState(0);
-  const [windowState, setWindowState] = useState(window);
-  useEffect(() => {
-    setWindowState(window);
-  });
   let shownImages = data.meta.screenshots.map((screenshot, i) => (
     <BasePathImage
       key={data.full_name.concat(screenshot)}
       onClick={() => {
-        if (windowState && windowState.innerWidth > 992 && !showDialog) {
+        if (typeof window !== "undefined" && window.innerWidth > 992 && !showDialog) {
           setShowDialog(true);
           setStartingSlide(i);
         }

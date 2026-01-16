@@ -67,15 +67,15 @@
   color: var(--main-vivid-blue);
 }
 
-.app-color--secondary {
-  background-color: var(--secondary-900);
-  color: var(--main-vivid-yellow);
-}
+/*.app-color--secondary {*/
+/*  background-color: var(--secondary-900);*/
+/*  color: var(--main-vivid-yellow);*/
+/*}*/
 
-.app-color--secondary-alt {
-  background-color: var(--main-vivid-yellow);
-  color: var(--secondary-900);
-}
+/*.app-color--secondary-alt {*/
+/*  background-color: var(--main-vivid-yellow);*/
+/*  color: var(--secondary-900);*/
+/*}*/
 
 .title {
   font-weight: 700;
@@ -198,29 +198,29 @@
 }
 
 /* The fonts below should be kept as reference, even if they are not being used. */
-.subheading-regular {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-}
+/*.subheading-regular {*/
+/*  font-weight: 400;*/
+/*  font-size: 20px;*/
+/*  line-height: 32px;*/
+/*}*/
 
-.subheading-bold {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 32px;
-}
+/*.subheading-bold {*/
+/*  font-weight: 700;*/
+/*  font-size: 20px;*/
+/*  line-height: 32px;*/
+/*}*/
 
-.subheading-medium-bold {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-}
+/*.subheading-medium-bold {*/
+/*  font-weight: 700;*/
+/*  font-size: 24px;*/
+/*  line-height: 29px;*/
+/*}*/
 
-.subheading-medium-regular {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 29px;
-}
+/*.subheading-medium-regular {*/
+/*  font-weight: 400;*/
+/*  font-size: 24px;*/
+/*  line-height: 29px;*/
+/*}*/
 
 .h1-small-bold {
   font-weight: 700;
@@ -228,11 +228,11 @@
   line-height: 47px;
 }
 
-.h1-small-semi-bold {
-  font-weight: 600;
-  font-size: 39px;
-  line-height: 47px;
-}
+/*.h1-small-semi-bold {*/
+/*  font-weight: 600;*/
+/*  font-size: 39px;*/
+/*  line-height: 47px;*/
+/*}*/
 
 .h1-semi-bold {
   font-weight: 600;
@@ -267,11 +267,11 @@
   letter-spacing: 0.02em;
 }
 
-.h3-semi-bold {
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 38px;
-}
+/*.h3-semi-bold {*/
+/*  font-weight: 600;*/
+/*  font-size: 31px;*/
+/*  line-height: 38px;*/
+/*}*/
 
 .h4-bold {
   font-weight: 700;
@@ -285,17 +285,17 @@
   line-height: 32px;
 }
 
-.h5-semi-bold {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 26px;
-}
+/*.h5-semi-bold {*/
+/*  font-weight: 600;*/
+/*  font-size: 20px;*/
+/*  line-height: 26px;*/
+/*}*/
 
-.h6-semi-bold {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
-}
+/*.h6-semi-bold {*/
+/*  font-weight: 600;*/
+/*  font-size: 16px;*/
+/*  line-height: 21px;*/
+/*}*/
 
 .p1-regular {
   font-weight: 400;
@@ -303,11 +303,11 @@
   line-height: 20px;
 }
 
-.p1-bold {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
-}
+/*.p1-bold {*/
+/*  font-weight: 600;*/
+/*  font-size: 14px;*/
+/*  line-height: 17px;*/
+/*}*/
 
 .p2-regular {
   font-weight: 400;
@@ -322,17 +322,17 @@
   font-family: "Inter", sans-serif;
 }
 
-.p3-bold {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 28px;
-}
+/*.p3-bold {*/
+/*  font-weight: 700;*/
+/*  font-size: 18px;*/
+/*  line-height: 28px;*/
+/*}*/
 
-.p3-semi-bold {
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 28px;
-}
+/*.p3-semi-bold {*/
+/*  font-weight: 600;*/
+/*  font-size: 18px;*/
+/*  line-height: 28px;*/
+/*}*/
 
 .p3-regular {
   font-weight: 400;

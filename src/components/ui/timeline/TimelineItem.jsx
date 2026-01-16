@@ -13,13 +13,11 @@ export class SimpleButton {
 /**
  * A responsive component for displaying a single volunteer opportunity.
  *
- * This component renders single slice of a vertical timeline that transitions
+ * This component renders a single slice of a vertical timeline that transitions
  * from a single-column layout on mobile to an alternating two-column layout on
  * desktop. The styling and layout logic are fully described in the associated
  * CSS file's comments.
  *
- * @component
- * @param {object} [props]
  * @param {integer} [props.number] The number to display
  * @param {string} [props.heading] The heading text to display
  * @param {SimpleButton[]} [props.buttons] A list of buttons to display, with
@@ -54,7 +52,7 @@ export function TimelineItem({
     return () => {
       window.removeEventListener("resize", updateContainerRect);
     };
-  }, []);
+  }, [number, updateTimelineNumbers]);
   return (
     <div className="timeline-item">
       <div

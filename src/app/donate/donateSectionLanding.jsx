@@ -3,7 +3,7 @@ import PageContainer from "@/components/ui/PageContainer";
 import { SectionType } from "@/utility/constants/theme";
 
 /**
- * Donate landing section.
+ * The landing section for donations.
  * @returns {JSX.Element}
  */
 export default function DonateSectionLanding({

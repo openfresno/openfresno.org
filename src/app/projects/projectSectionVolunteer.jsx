@@ -2,7 +2,7 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import Link from "next/link";
 
 /**
- * Instructions for project page.
+ * Instructions for the project page.
  * Not implemented yet. Styles are only available for mobile on Figma.
  * @returns {JSX.Element}
  */

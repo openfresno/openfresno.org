@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react";
  * The default navigation bar for the application.
  * - Includes an extended menu that expands to show more text underneath the navbar.
  * EXPERIMENTAL: The desktop links have a sliding underline animation when the page navigates.
- * EXPERIMENTAL: The fade on-scroll effect uses CSS scroll-driven animations. It is not supported by Chrome < 115, Firefox, Firefox for Android, Safari, Safari on iOS. On unsupprted platforms it functions the same as fade = false.
+ * EXPERIMENTAL: The fade on-scroll effect uses CSS scroll-driven animations. It is not supported by Chrome < 115, Firefox, Firefox for Android, Safari, Safari on iOS. On unsupported platforms it functions the same as fade = false.
  * @param {boolean} fade - Whether to enable fade effect on scroll
  * @returns {JSX.Element}
  */

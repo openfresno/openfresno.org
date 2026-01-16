@@ -44,7 +44,7 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
           Know about the current progress, scope, and stage of project
         </p>
         <div className={`flex flex-col lg:my-6 lg:flex-row lg:gap-70`}>
-          <div className={`grow-1 basis-0`}>
+          <div className={`grow basis-0`}>
             <div className={`lg:ml-[15%]`}>
               {milestones.map((milestone, index) => {
                 return (
@@ -59,7 +59,7 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
               })}
             </div>
           </div>
-          <div className="project-roadmap-details-container grow-1 basis-0 max-lg:mt-12">
+          <div className="project-roadmap-details-container grow basis-0 max-lg:mt-12">
             <div>
               <h4 className={`project-roadmap-info-label-two`}>Objective</h4>
               <hr className="project-info-line my-2" />

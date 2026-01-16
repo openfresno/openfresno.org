@@ -90,7 +90,7 @@ export default function HomePage() {
             empowering our community!
           </b>
         </ImageSection>
-        <section className="mx-auto mb-10 max-w-[calc(var(--screen-xxl)_+_80px)]">
+        <section className="mx-auto mb-10 max-w-[calc(var(--screen-xxl)+80px)]">
           <div className="home-timeline-header">
             <h1 className="heading-main app-color--dark">Opportunities</h1>
             <h2 className="sub-heading-main">Explore Our Volunteer Options</h2>
