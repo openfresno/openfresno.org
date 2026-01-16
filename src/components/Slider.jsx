@@ -61,7 +61,7 @@ export default function Slider({
               onClick={() => {
                 instanceRef.current?.moveToIdx(idx);
               }}
-              className={`h-4 w-4 cursor-pointer rounded-[2rem] ${defaultCurrentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
+              className={`h-4 w-4 cursor-pointer rounded-4xl ${defaultCurrentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
             ></button>
           ))}
         </div>
