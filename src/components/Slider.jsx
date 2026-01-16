@@ -20,20 +20,27 @@ export default function Slider({
   className,
   children,
   startingSlide = 0,
-  loadedState = useState(false),
-  setCurrentSlide = useState(startingSlide)[1],
+                                 loadedState,
+                                 setCurrentSlide: providedSetCurrentSlide,
   setUpdateSlider = (updateFunctionGenerator) => {},
 }) {
-  const [loaded, setLoaded] = loadedState;
+  const [defaultLoaded, setDefaultLoaded] = useState(false);
+  const [defaultCurrentSlide, setDefaultCurrentSlide] = useState(startingSlide);
+  const [slideCount, setSlideCount] = useState(0);
+
+  const [loaded, setLoaded] = loadedState || [defaultLoaded, setDefaultLoaded];
+  const setCurrentSlide = providedSetCurrentSlide || setDefaultCurrentSlide;
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: startingSlide,
     slideChanged(slider) {
+      setDefaultCurrentSlide(slider.track.details.rel);
       setCurrentSlide(slider.track.details.rel);
     },
     created(slider) {
       setLoaded(true);
+      setSlideCount(slider.track.details.slides.length);
       //This has to be done because the default behavior for lambdas is to
-      //execute it to get the new state, while providing the previous state.
+      //execute it to get the new state while providing the previous state.
       //This is cursed on so many levels, but is the only way that I can think
       //of to expose the moveToIdx function
       setUpdateSlider(() => (index) => {
@@ -46,17 +53,17 @@ export default function Slider({
       <div ref={sliderRef} className="keen-slider">
         {children}
       </div>
-      {loaded && instanceRef.current && (
+      {loaded && slideCount > 0 && (
         <div className="dots mx-auto flex flex-row justify-center gap-4 p-4">
           {[
-            ...Array(instanceRef.current.track.details.slides.length).keys(),
+            ...Array(slideCount).keys(),
           ].map((idx) => (
             <button
               key={idx}
               onClick={() => {
                 instanceRef.current?.moveToIdx(idx);
               }}
-              className={`h-4 w-4 cursor-pointer rounded-[2rem] ${instanceRef.current?.track.details.rel === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
+              className={`h-4 w-4 cursor-pointer rounded-[2rem] ${defaultCurrentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
             ></button>
           ))}
         </div>

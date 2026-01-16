@@ -54,7 +54,7 @@ export function TimelineItem({
     return () => {
       window.removeEventListener("resize", updateContainerRect);
     };
-  }, []);
+  }, [number, updateTimelineNumbers]);
   return (
     <div className="timeline-item">
       <div

@@ -41,9 +41,10 @@ export default function BasePathImage({
 
   let split = finalSrc.split(/[\/.]/);
   let fileName = split[split.length - 2];
+  // Temporarily use the <img> tag, eventually explicitly pass the width and height via prop.
   return (
     <div className={className}>
-      <Image
+      <img
         alt={fileName}
         className={`object-cover ${imgClassName}${props.width === undefined && " w-full"}`}
         src={finalSrc}

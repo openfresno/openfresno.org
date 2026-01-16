@@ -34,7 +34,7 @@ export default function Timeline({ className }) {
 
   function updateTimelineNumbers(timelineNumber, bounds) {
     setTimelineNumbers((previousTimelineNumbers) => {
-      if (timelineNumbers[timelineNumber]) {
+      if (previousTimelineNumbers[timelineNumber]) {
         return previousTimelineNumbers.map((_, i) => {
           if (i === timelineNumber) return bounds;
         });
