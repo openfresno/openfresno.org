@@ -5,7 +5,7 @@ import { useState } from "react";
 // import from 'keen-slider/react.es' for to get an ES module
 
 /**
- * @component
+ * Component for displaying a slider with multiple slides.
  * @param {object} [props]
  * @param {string} [props.className]
  * @param {JSX.Element} [props.children]

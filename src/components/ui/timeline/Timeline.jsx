@@ -8,8 +8,6 @@ import React, { useEffect, useRef, useState } from "react";
  * this component renders a vertical timeline that transitions from a single-column
  * layout on mobile to an alternating two-column layout on desktop. the styling
  * and layout logic are fully described in the associated CSS file's comments.
- *
- * @component
  * @param {object} props
  * @param {string} [props.className] optional CSS classes to apply to the root div element.
  */

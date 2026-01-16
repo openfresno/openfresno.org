@@ -18,8 +18,6 @@ export class SimpleButton {
  * desktop. The styling and layout logic are fully described in the associated
  * CSS file's comments.
  *
- * @component
- * @param {object} [props]
  * @param {integer} [props.number] The number to display
  * @param {string} [props.heading] The heading text to display
  * @param {SimpleButton[]} [props.buttons] A list of buttons to display, with

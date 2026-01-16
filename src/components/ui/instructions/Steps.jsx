@@ -8,9 +8,6 @@ import React from "react";
  *
  * It is commonly used for onboarding flows, tutorials, or process explanations
  * where users need to follow a series of steps in order.
- *
- * @component
- *
  * @param {Object} props - The component props.
  * @param {React.ReactNode} [props.children] - Optional additional content that can
  *   be rendered alongside the steps (not currently used in the layout).

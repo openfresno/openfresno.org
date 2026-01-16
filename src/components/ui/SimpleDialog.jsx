@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import * as React from "react";
 
 /**
- * @component
+ * Component for displaying a simple dialog with customizable title, content, and state.
  * @param {object} [props]
  * @param {string} [props.title] The title of the Dialog
  * @param {JSX.Element} [props.children] The contents of the dialog

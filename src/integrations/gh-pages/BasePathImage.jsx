@@ -8,8 +8,6 @@
  *
  * This is especially useful in static exports (`next export`) or deployments
  * where the root path is not `/`, e.g. `/my-repo/`.
- *
- * @component
  * @param {Object} props - Props passed to the Next.js Image component.
  * @param {string} props.src - The image source path. If it's a relative path,
  * it will be prefixed with `NEXT_PUBLIC_BASE_PATH`.

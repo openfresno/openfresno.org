@@ -2,7 +2,6 @@ import { SectionType } from "@/utility/constants/theme";
 
 /**
  * A reusable element for display heading, subheading pairs
- * @component
  * @param {Object} [props]
  * @param {string} [props.heading] The heading to display
  * @param {JSX.Element} [props.subHeading] The subheading to display
