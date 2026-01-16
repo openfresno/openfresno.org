@@ -1,9 +1,4 @@
-import {
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp,
-} from "@/integrations/tabler-icon";
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, } from "@/integrations/tabler-icon";
 import Link from "next/link";
 import { IconX } from "@/components/ui/icon/IconX";
 import { HamburgerStaggered } from "@/components/ui/icon/HamburgerStaggered";
@@ -73,7 +68,7 @@ const NavToggle = ({ mobile, extendedMenuVisible, showExtendedMenu }) => {
   if (mobile) {
     return (
       <BaseButton
-        className="navbar-toggle-button--desktop"
+        className="navbar-toggle-button navbar-toggle-button--desktop"
         onClick={() => showExtendedMenu(!extendedMenuVisible)}
       >
         Get Involved

@@ -86,8 +86,7 @@
   }
 }
 
-.navbar-toggle-button--desktop {
-  display: none;
+.navbar-toggle-button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -98,6 +97,10 @@
   font-size: 20px;
   line-height: 32px;
   letter-spacing: -0.02em;
+}
+
+.navbar-toggle-button--desktop {
+  display: none;
   @media (min-width: 996px) {
     display: inline-flex;
   }
@@ -113,20 +116,6 @@
   @media (min-width: 996px) {
     display: none;
   }
-}
-
-.navbar-extended-toggle-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  padding: 1rem;
-  width: fit-content;
-  color: var(--main-vivid-blue);
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: -0.02em;
 }
 
 /* Deprecated */
