@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 /**
  * BasePathImage is a wrapper around Next.js's `Image` component that ensures
  * image paths resolve correctly when the app is deployed under a subpath—
@@ -28,7 +30,7 @@ export default function BasePathImage({
   imgClassName = "",
   ...props
 }) {
-  //Fallback state for basic invalid values)
+  // The fallback state for basic invalid values
   if (src === null || src === undefined || src === "")
     src = "/img/tower-bridge.jpg";
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
@@ -37,13 +39,11 @@ export default function BasePathImage({
       ? `${basePath}${src}`
       : src;
 
-  // eslint-disable-next-line jsx-a11y/alt-text
-  // used to strip out .../.../fileName.img
   let split = finalSrc.split(/[\/.]/);
   let fileName = split[split.length - 2];
   return (
     <div className={className}>
-      <img
+      <Image
         alt={fileName}
         className={`object-cover ${imgClassName}${props.width === undefined && " w-full"}`}
         src={finalSrc}

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 /**
- * Hook to check if component has mounted
+ * Hook to check if the component has mounted
  * @returns {boolean} - Whether the component has mounted
  */
 function useHasMounted() {
@@ -28,7 +28,7 @@ function useLocalStorage(key, initialValue) {
   const [isLoaded, setIsLoaded] = useState(false);
   const hasMounted = useHasMounted();
 
-  // Only run on client-side after mount
+  // Only run on the client-side after mount
   useEffect(() => {
     if (typeof window !== "undefined") {
       try {

@@ -2,11 +2,11 @@ import HeadingPair from "@/components/ui/HeadingPair";
 import { SectionType } from "@/utility/constants/theme";
 
 /**
- * A general section, with a heading and sub heading pair on the left, and a child section on the right.
+ * A general section, with a heading and subheading pair on the left, and a child section on the right.
  *
  * @param {object} props
  * @param {string} [props.heading] The heading to display
- * @param {JSX.Element} [props.subHeading] The sub-heading to display
+ * @param {JSX.Element} [props.subHeading] The subheading to display
  * @param {SectionType} [props.sectionType] The SectionType to modify display styling
  * @param {JSX.Element} [props.children] The body of the section
  * @returns {JSX.Element}

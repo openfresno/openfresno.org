@@ -1,7 +1,7 @@
 import GeneralSection from "@/components/ui/GeneralSection";
 
 /**
- * Frequently-asked questions start section.
+ * The start section for frequently-asked questions.
  * @returns {JSX.Element}
  */
 export default function FaqSectionStart({ sectionType }) {

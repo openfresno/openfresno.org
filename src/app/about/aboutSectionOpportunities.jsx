@@ -81,6 +81,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
           <AboutSectionPositionList
             header="Product"
             listText={[
+              // eslint-disable-next-line react/jsx-key
               <s>Director of Frontend Engineering</s>,
               "Director of Design & Usability",
             ]}

@@ -5,13 +5,13 @@ import { SectionType } from "@/utility/constants/theme";
  * @component
  * @param {Object} [props]
  * @param {string} [props.heading] The heading to display
- * @param {JSX.Element} [props.subHeading] The sub-heading to display
+ * @param {JSX.Element} [props.subHeading] The subheading to display
  * @param {CSS.width} [props.subHeadingWidth] The width value for the sub-heading
  * @param {string} [props.className] Passes the classname down to the parent div
  * @param {SectionType} [props.sectionType] The SectionType of the parent to modify display styling
- * @param {boolean} [props.underlined] Decides display of the sub heading underline; defaults to true
+ * @param {boolean} [props.underlined] Decides display of the subheading underline; defaults to true
  * @param {boolean} [props.large=false] - If `true`, applies a larger style to the
- *   sub-heading (`h2`) for emphasis.
+ *   subheading (`h2`) for emphasis.
  * @returns {JSX.Element}
  * @constructor
  */

@@ -3,7 +3,7 @@ import CircledNumber from "@/components/ui/CircledNumber";
 export default function conductSectionBullets({ sectionType }) {
   return (
     <section
-      className={`conduct-list-container mx-auto my-12 max-w-[calc(var(--screen-xxl)_+_80px)] px-2 lg:my-24 conduct-${sectionType}-theme flex flex-col gap-4 lg:gap-8`}
+      className={`conduct-list-container mx-auto my-12 max-w-[calc(var(--screen-xxl)+80px)] px-2 lg:my-24 conduct-${sectionType}-theme flex flex-col gap-4 lg:gap-8`}
     >
       <p className={`conduct-sub-heading-main font-semibold`}>
         Open Fresno fosters a community that:

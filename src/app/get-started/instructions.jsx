@@ -9,7 +9,7 @@ const instructions = [
         <a className="primary-link--underline" href="/code-of-conduct">
           Code of Conduct
         </a>{" "}
-        — a set of principles that guide our community's behavior. By adhering
+        — a set of principles that guide our community&apos;s behavior. By adhering
         to it, we maintain a respectful and inclusive environment. Please read
         and understand our guidelines for a positive experience.
       </>
@@ -37,9 +37,9 @@ const instructions = [
     title: "Join Our Slack Community",
     body: (
       <>
-        After completing the New Member Form, join our Slack community. It's
+        After completing the New Member Form, join our Slack community. It&apos;s
         where the magic happens—our hub for communication and collaboration.
-        You'll receive an invitation via the email you provided. Accept it,
+        You&apos;ll receive an invitation via the email you provided. Accept it,
         introduce yourself, and get involved in projects, questions, and ideas.
         Join us on Slack and be part of our civic tech community!
       </>
@@ -68,10 +68,10 @@ const instructions = [
     title: "Welcome to Open Fresno",
     body: (
       <>
-        Congratulations! You've joined Open Fresno's vibrant community. We're
-        excited for your contributions, whether you're a coder, designer, or
+        Congratulations! You&apos;ve joined Open Fresno&apos;s vibrant community. We&apos;re
+        excited for your contributions, whether you&apos;re a coder, designer, or
         civic tech enthusiast. Reach out, ask questions, and dive into projects
-        you're passionate about. Welcome to Open Fresno!
+        you&apos;re passionate about. Welcome to Open Fresno!
       </>
     ),
   },

@@ -63,7 +63,7 @@ export default function NavbarMenuE87({ className = "" }) {
       <div className="navbar-extended-desktop-container page-container">
         <section className="navbar-extended-desktop-section">
           <h4 className="navbar-extended-header h4-semi-bold">Get Started</h4>
-          <p className="grow-1">
+          <p className="grow">
             Get started today and volunteer with us to drive positive change
             through technology, making a meaningful impact in your community!
           </p>
@@ -73,7 +73,7 @@ export default function NavbarMenuE87({ className = "" }) {
         </section>
         <section className="navbar-extended-desktop-section">
           <h4 className="navbar-extended-header h4-semi-bold">Projects</h4>
-          <p className="grow-1">
+          <p className="grow">
             Explore our projects and discover how you can contribute your skills
             to drive innovation and create positive change.
           </p>
@@ -85,7 +85,7 @@ export default function NavbarMenuE87({ className = "" }) {
           <h4 className="navbar-extended-header h4-semi-bold">
             Pitch a Project
           </h4>
-          <p className="grow-1">
+          <p className="grow">
             Get the latest information and guidance for anyone who wants to
             propose new projects or ideas to the Open Fresno community.
           </p>

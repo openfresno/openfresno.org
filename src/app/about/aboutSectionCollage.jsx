@@ -13,20 +13,20 @@ export default function AboutSectionCollage({
   return (
     <PageContainer divClassName={`gap-4 lg:gap-10`} sectionType={sectionType}>
       <BasePathImage
-        className={"w-full grow-1 basis-0"}
+        className={"w-full grow basis-0"}
         src="/img/about/towerbridgeside.png"
         alt="Tower bridge"
       />
       <div
-        className={`flex w-full grow-1 basis-0 flex-row justify-between gap-6 lg:gap-16`}
+        className={`flex w-full grow basis-0 flex-row justify-between gap-6 lg:gap-16`}
       >
         <BasePathImage
-          className={"aspect-11/10 grow-1 basis-0"}
+          className={"aspect-11/10 grow basis-0"}
           src="/img/about/tablet.png"
           alt="Tablet"
         />
         <BasePathImage
-          className={"aspect-11/10 grow-1 basis-0"}
+          className={"aspect-11/10 grow basis-0"}
           src="/img/about/meeting.png"
           alt="Meeting"
         />

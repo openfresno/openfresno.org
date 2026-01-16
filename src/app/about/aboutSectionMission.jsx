@@ -2,7 +2,7 @@ import ImageSection from "@/components/ui/ImageSection";
 import { SectionType } from "@/utility/constants/theme";
 
 /**
- * About mission section.
+ * About the mission section.
  * @returns {JSX.Element}
  */
 export default function AboutSectionMission({

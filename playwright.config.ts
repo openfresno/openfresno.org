@@ -22,7 +22,7 @@ export default defineConfig({
 });
 
 /**
- * Read environment variables from file.
+ * Read environment variables from a file.
  * https://github.com/motdotla/dotenv
  */
 // import dotenv from 'dotenv';
