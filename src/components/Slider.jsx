@@ -20,8 +20,8 @@ export default function Slider({
   className,
   children,
   startingSlide = 0,
-                                 loadedState,
-                                 setCurrentSlide: providedSetCurrentSlide,
+  loadedState,
+  setCurrentSlide: providedSetCurrentSlide,
   setUpdateSlider = (updateFunctionGenerator) => {},
 }) {
   const [defaultLoaded, setDefaultLoaded] = useState(false);
@@ -55,9 +55,7 @@ export default function Slider({
       </div>
       {loaded && slideCount > 0 && (
         <div className="dots mx-auto flex flex-row justify-center gap-4 p-4">
-          {[
-            ...Array(slideCount).keys(),
-          ].map((idx) => (
+          {[...Array(slideCount).keys()].map((idx) => (
             <button
               key={idx}
               onClick={() => {

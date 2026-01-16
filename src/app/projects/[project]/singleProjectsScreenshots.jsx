@@ -14,7 +14,11 @@ export default function SingleProjectsScreenshots({
     <BasePathImage
       key={data.full_name.concat(screenshot)}
       onClick={() => {
-        if (typeof window !== "undefined" && window.innerWidth > 992 && !showDialog) {
+        if (
+          typeof window !== "undefined" &&
+          window.innerWidth > 992 &&
+          !showDialog
+        ) {
           setShowDialog(true);
           setStartingSlide(i);
         }

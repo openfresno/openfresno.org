@@ -80,7 +80,9 @@ export default function BannerF60({ children }) {
   if (!state.shouldRender) return null;
 
   return (
-    <div className={`banner ${state.isAnimating ? "animate-in" : "animate-out"}`}>
+    <div
+      className={`banner ${state.isAnimating ? "animate-in" : "animate-out"}`}
+    >
       <div className="banner-content container-xxl">
         <span>{children}</span>
         <button
