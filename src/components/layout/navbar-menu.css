@@ -55,9 +55,22 @@
     row-gap: 3rem;
     height: 100%;
 
-    /* Last item spans 2 columns on medium screens */
-    > * :last-child {
-      grid-column: span 2;
+    /* Last item (Quick Links) spans all columns on medium screens to overflow 1-column boundary */
+    .navbar-extended-quick-links {
+      grid-column: 1 / -1;
+
+      @media (min-width: 992px) and (max-width: 1400px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.5rem;
+
+        /* Remove Tailwind's space-y margin when in flex-row */
+        > * {
+          margin-top: 0 !important;
+        }
+      }
     }
 
     @media (min-width: 992px) {
@@ -68,7 +81,7 @@
     @media (min-width: 1400px) {
       grid-template-columns: 18.75rem 18.75rem 18.75rem 1fr;
 
-      > * :last-child {
+      .navbar-extended-quick-links {
         grid-column: auto;
       }
     }

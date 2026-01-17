@@ -125,7 +125,7 @@ export default function NavbarMenuE87({ className = "" }) {
         ))}
 
         {/* Quick Links */}
-        <section className="p3-regular space-y-8 self-center">
+        <section className="navbar-extended-quick-links p3-regular space-y-8 gap-4 self-center [@media(min-width:992px)_and_(max-width:1400px)]:flex">
           <p>
             Join us for our weekly meetings on{" "}
             <Link
