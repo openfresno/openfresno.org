@@ -3,7 +3,7 @@ import { SectionType } from "@/utility/constants/theme";
 
 export default function ImageSection({
   heading = "",
-  subHeading = "",
+  subHeading = <></>,
   alt = "Open Data Day",
   src = "/img/home/home3.png",
   sectionType = SectionType.light,

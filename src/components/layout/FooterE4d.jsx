@@ -23,7 +23,7 @@ export default function FooterE4d() {
             <Link href="https://rootaccess.org/">Root Access</Link>.
           </p>
         </section>
-        <section className="grid auto-rows-min gap-y-8">
+        <section className="grid auto-rows-min gap-y-8 pl-8">
           <p>
             Join us for our weekly meetings on{" "}
             <Link
