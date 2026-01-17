@@ -27,10 +27,11 @@
     }
 
     /* Link styles */
+
     a {
       display: block;
-      padding: 1rem;
       transition: color 150ms ease;
+      padding: 1rem;
 
       &:hover {
         color: var(--primary-600, #0066cc);
@@ -46,16 +47,17 @@
 
   /* ===== Desktop Navigation ===== */
   .navbar-extended-desktop-container {
-    margin: auto;
-    padding: 1.25rem 1.5rem 1rem 1.5rem;
-    max-width: calc(var(--screen-xxl) + 80px);
     display: none;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 4rem;
     row-gap: 3rem;
+    margin: auto;
+    padding: 1.25rem 1.5rem 1rem 1.5rem;
+    max-width: calc(var(--screen-xxl) + 80px);
     height: 100%;
 
     /* Last item (Quick Links) spans all columns on medium screens to overflow 1-column boundary */
+
     .navbar-extended-quick-links {
       grid-column: 1 / -1;
 

@@ -1,3 +1,5 @@
+import { HamburgerStaggered } from "@/components/ui/icon/HamburgerStaggered";
+import { IconX } from "@/components/ui/icon/IconX";
 import {
   ChevronDown,
   ChevronLeft,
@@ -5,8 +7,6 @@ import {
   ChevronUp,
 } from "@/integrations/tabler-icon";
 import Link from "next/link";
-import { IconX } from "@/components/ui/icon/IconX";
-import { HamburgerStaggered } from "@/components/ui/icon/HamburgerStaggered";
 
 /**
  * A flexible, multi-purpose component for rendering a styled button or link.

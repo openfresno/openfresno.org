@@ -1,6 +1,6 @@
-import Button from "@/components/ui/button/Button";
 import { SectionType } from "./contact";
 import HeaderUnderline from "@/components/ui/HeaderUnderline";
+import Button from "@/components/ui/button/Button";
 import Link from "next/link";
 import { useState } from "react";
 

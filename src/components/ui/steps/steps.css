@@ -3,8 +3,8 @@
   flex-direction: column;
   gap: 2rem;
   margin-inline: auto;
-  max-width: calc(var(--screen-xxl) + 80px);
   padding: 0 1.5rem;
+  max-width: calc(var(--screen-xxl) + 80px);
 
   @media (min-width: 992px) {
     padding: 0 2.5rem;

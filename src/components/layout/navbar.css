@@ -21,11 +21,11 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
     position: fixed;
     top: 0;
     z-index: 100;
+    view-transition-name: navbar;
     border-bottom: 1px solid var(--neutral-300);
     background-color: rgb(255, 252, 245);
     width: 100%;
     height: var(--navbar-height);
-    view-transition-name: navbar;
   }
 
   /* Fade on scroll animation */
@@ -70,9 +70,9 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
   .navbar-middle-section {
     display: none;
     position: relative;
+    anchor-name: --nav-container;
     gap: 0;
     height: 100%;
-    anchor-name: --nav-container;
 
     @media screen and (min-width: 992px) {
       display: inline-flex;
@@ -82,30 +82,31 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
 
   /* Individual nav links */
   .navbar-link {
-    z-index: 15;
-    padding: 1rem 1.25rem;
-    margin: 0 0.25rem;
-    position: relative;
-    white-space: nowrap;
     display: inline-flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
+    z-index: 15;
+    margin: 0 0.25rem;
+    padding: 1rem 1.25rem;
+    white-space: nowrap;
 
     /* Reserve space for bold text to prevent layout shift */
+
     &::after {
-      content: attr(data-text);
-      font-weight: 600;
+      visibility: hidden;
       height: 0;
       overflow: hidden;
-      visibility: hidden;
-      user-select: none;
       pointer-events: none;
+      content: attr(data-text);
+      font-weight: 600;
+      user-select: none;
     }
 
     &::before {
-      content: "";
       position: absolute;
       inset: 0;
+      content: "";
     }
   }
 
@@ -121,10 +122,6 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
   /* ===== Sliding Underline with Anchor Positioning & View Transitions ===== */
   .navbar-underline {
     position: absolute;
-    z-index: 10;
-    background-color: var(--neutral-900);
-    height: 2px;
-    view-transition-name: navbar-underline;
 
     /* Anchor to the active link */
     position-anchor: --active-nav-link;
@@ -132,12 +129,16 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
     /* Position 16px from bottom, inset 24px on each side */
     bottom: 16px;
     left: calc(anchor(left) + 16px);
-    width: calc(anchor-size(width) - 32px);
+    z-index: 10;
+    view-transition-name: navbar-underline;
 
     /* Smooth sliding animation within a single page */
     transition:
       left 700ms cubic-bezier(0.4, 0, 0.2, 1),
       right 700ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--neutral-900);
+    width: calc(anchor-size(width) - 32px);
+    height: 2px;
   }
 
   /* Hide underline when no link is active */

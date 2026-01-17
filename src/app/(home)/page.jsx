@@ -1,6 +1,6 @@
+import Slider from "../../components/Slider";
 import LayoutE53 from "../../components/layout/LayoutE53";
 import Button from "../../components/ui/button/Button";
-import Slider from "../../components/Slider";
 import Timeline from "../../components/ui/timeline/Timeline";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import GeneralSection from "@/components/ui/GeneralSection";

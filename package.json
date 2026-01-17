@@ -6,11 +6,9 @@
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "compile": "tsc",
     "start": "next start",
     "lint": "eslint .",
-    "test": "playwright test --project=chromium",
-    "debug:chromium": "playwright test --project=chromium --headed --debug"
+    "test": "playwright test --project=chromium"
   },
   "repository": {
     "type": "git",
@@ -35,7 +33,6 @@
     "moment": "^2.30.1",
     "next": "^16.1.2",
     "next-mdx-remote": "^5.0.0",
-    "prop-types": "^15.8.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "swr": "^2.3.8",
@@ -51,7 +48,6 @@
     "eslint": "^9.39.2",
     "eslint-config-next": "^16.1.2",
     "postcss": "^8.5.6",
-    "sass": "^1.97.2",
     "tailwindcss": "^4.1.18"
   }
 }

@@ -3,7 +3,7 @@ import createMDX from "@next/mdx";
 
 const basePath = getBasePath(true);
 
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   output: "export",
   basePath,

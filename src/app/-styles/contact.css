@@ -24,27 +24,27 @@
   position: absolute;
   top: -0.5rem;
   left: 0;
-  font-size: 0.75rem;
-  color: var(--neutral-50);
-  pointer-events: none;
   transition: all 0.2s ease;
+  pointer-events: none;
+  color: var(--neutral-50);
+  font-size: 0.75rem;
 }
 
 .form-input-field {
-  width: 100%;
-  padding: 1rem 0 0.5rem 0;
-  font-size: 1rem;
-  color: var(--neutral-50);
-  background: transparent;
+  transition: border-color 0.2s ease;
+  outline: none;
   border: none;
   border-bottom: 1px solid var(--neutral-50);
-  outline: none;
-  transition: border-color 0.2s ease;
+  background: transparent;
+  padding: 1rem 0 0.5rem 0;
+  width: 100%;
+  color: var(--neutral-50);
+  font-size: 1rem;
 }
 
 .form-textarea {
-  resize: vertical;
   min-height: 2rem;
+  resize: vertical;
 }
 
 /* Outlined form controls (MUI-like) */
@@ -55,31 +55,31 @@
 }
 
 .form-control-label {
-  font-size: 0.875rem;
-  color: var(--neutral-600);
   margin-bottom: 0.25rem;
+  color: var(--neutral-600);
+  font-size: 0.875rem;
 }
 
 .form-outlined-input {
   display: flex;
   align-items: center;
-  width: 100%;
-  padding: 0.875rem 0.875rem;
-  font-size: 1rem;
-  color: var(--neutral-900);
-  background: var(--neutral-50);
-  border: 1px solid var(--neutral-300);
-  border-radius: 4px;
-  outline: none;
   transition:
     border-color 0.2s ease,
     box-shadow 0.2s ease;
+  outline: none;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
+  background: var(--neutral-50);
+  padding: 0.875rem 0.875rem;
+  width: 100%;
+  color: var(--neutral-900);
+  font-size: 1rem;
 }
 
 .form-outlined-input:focus,
 .form-outlined-input:focus-within {
-  border-color: var(--primary-600);
   box-shadow: 0 0 0 2px rgba(0, 52, 174, 0.1);
+  border-color: var(--primary-600);
 }
 
 .form-outlined-input::placeholder {
@@ -87,8 +87,8 @@
 }
 
 .form-search-wrapper {
-  position: relative;
   display: flex;
+  position: relative;
   align-items: center;
   width: 100%;
 }
@@ -98,19 +98,19 @@
 }
 
 .form-search-btn {
+  display: flex;
   position: absolute;
   right: 0.5rem;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: 0;
-  background: transparent;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
   border: none;
   border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  background: transparent;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .form-search-btn:hover {
@@ -119,32 +119,32 @@
 
 .form-select {
   appearance: none;
-  width: 100%;
-  padding: 0.875rem 2.5rem 0.875rem 0.875rem;
-  font-size: 1rem;
-  color: var(--neutral-900);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
   background: var(--neutral-50)
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2372727e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
     no-repeat right 0.75rem center;
   background-size: 1rem;
-  border: 1px solid var(--neutral-300);
-  border-radius: 4px;
-  outline: none;
-  cursor: pointer;
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
+  padding: 0.875rem 2.5rem 0.875rem 0.875rem;
+  width: 100%;
+  color: var(--neutral-900);
+  font-size: 1rem;
 }
 
 .form-select:focus {
-  border-color: var(--primary-600);
   box-shadow: 0 0 0 2px rgba(0, 52, 174, 0.1);
+  border-color: var(--primary-600);
 }
 
 .form-helper-text {
-  font-size: 0.75rem;
-  color: var(--neutral-500);
   margin-top: 0.25rem;
+  color: var(--neutral-500);
+  font-size: 0.75rem;
 }
 
 /* Dialog styles (MUI-like) */
@@ -153,18 +153,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin: 0;
+  box-shadow:
+    0 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 4px;
+  background: var(--neutral-50);
+  padding: 0;
   width: 100%;
   max-width: 600px;
   max-height: 90vh;
-  margin: 0;
-  padding: 0;
-  background: var(--neutral-50);
-  border: none;
-  border-radius: 4px;
-  box-shadow:
-    0px 11px 15px -7px rgba(0, 0, 0, 0.2),
-    0px 24px 38px 3px rgba(0, 0, 0, 0.14),
-    0px 9px 46px 8px rgba(0, 0, 0, 0.12);
   overflow: auto;
 }
 
@@ -178,31 +178,31 @@
 
 .dialog-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  align-items: center;
   border-bottom: 1px solid var(--neutral-200);
+  padding: 1rem;
 }
 
 .dialog-title {
   margin: 0;
-  font-size: 1.25rem;
   font-weight: 500;
+  font-size: 1.25rem;
 }
 
 .dialog-close-btn {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  padding: 0;
-  background: transparent;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
   border: none;
   border-radius: 50%;
-  cursor: pointer;
+  background: transparent;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
   color: var(--neutral-500);
-  transition: background-color 0.2s ease;
 }
 
 .dialog-close-btn:hover {

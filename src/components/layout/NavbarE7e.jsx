@@ -1,12 +1,11 @@
 "use client";
 
-import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import { NavToggle } from "../ui/button/Button";
 import NavbarMenuE87 from "./NavbarMenuE87";
+import { LogoTextBlack } from "@/components/ui/icon/logo-text-black";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { LogoTextBlack } from "@/components/ui/icon/logo-text-black";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },

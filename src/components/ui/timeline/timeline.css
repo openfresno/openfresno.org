@@ -13,28 +13,28 @@ Desktop (md+): alternating two-column, line centered
 
 /* Vertical line */
 .timeline::before {
-  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 20px;
-  width: 1px;
-  background-color: var(--neutral-900);
   transform: translateX(-50%);
+  background-color: var(--neutral-900);
+  width: 1px;
+  content: "";
 }
 
 /* Animated dot */
 .timeline::after {
-  content: "";
   position: absolute;
   top: 0;
   left: 20px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: var(--neutral-900);
   transform: translateX(-50%);
   z-index: 1;
+  border-radius: 50%;
+  background-color: var(--neutral-900);
+  width: 12px;
+  height: 12px;
+  content: "";
 }
 
 @media (min-width: 768px) {
@@ -84,8 +84,8 @@ Desktop (md+): alternating two-column, line centered
 
 @media (min-width: 768px) {
   .timeline-item-content {
-    width: calc(50% - 4rem);
     margin-top: 0;
+    width: calc(50% - 4rem);
     text-align: left;
   }
 }
@@ -93,11 +93,11 @@ Desktop (md+): alternating two-column, line centered
 /* Circled number */
 .circled-number {
   display: grid;
-  place-items: center;
   flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 50%;
   font-weight: 800;
   font-size: 1.25rem;
 }
