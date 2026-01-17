@@ -3,7 +3,7 @@ import { SectionType } from "@/utility/constants/theme";
 /**General use Page Container used throughout the website.
  *
  * @param {Object} [props]
- * @param {SectionType} [props.sectionType] The SectionType to modify display styling
+ * @param {string} [props.sectionType] The SectionType to modify display styling
  * @param {JSX.Element} [props.children] Elements to display within the container
  * @param {string} [props.display] Optionally changes the display type; default is a flex column
  * @param {boolean} [props.noPadding] Optionally disables padding
