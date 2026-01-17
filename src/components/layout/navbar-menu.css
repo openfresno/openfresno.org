@@ -14,26 +14,6 @@
     background: var(--secondary-50);
     padding: 1.75rem 0 0.75rem;
     width: 100%;
-
-    /* Entry animation */
-    animation: slide-down 200ms ease-out;
-
-    @starting-style {
-      opacity: 0;
-      transform: translateY(-0.5rem);
-    }
-  }
-
-  @keyframes slide-down {
-    from {
-      opacity: 0;
-      transform: translateY(-0.5rem);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   /* ===== Mobile Navigation ===== */
@@ -67,29 +47,28 @@
   /* ===== Desktop Navigation ===== */
   .navbar-extended-desktop-container {
     margin: auto;
-    padding: 0 1.5rem;
+    padding: 1.25rem 1.5rem 1rem 1.5rem;
     max-width: calc(var(--screen-xxl) + 80px);
     display: none;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    column-gap: 4rem;
     row-gap: 3rem;
-    margin-block: 1.25rem 3rem;
     height: 100%;
 
     /* Last item spans 2 columns on medium screens */
-    > *:last-child {
+    > * :last-child {
       grid-column: span 2;
     }
 
     @media (min-width: 992px) {
       display: grid;
-      padding: 0 2.5rem;
+      padding: 1.25rem 2.5rem 1rem 2.5rem;
     }
 
     @media (min-width: 1400px) {
       grid-template-columns: 18.75rem 18.75rem 18.75rem 1fr;
 
-      > *:last-child {
+      > * :last-child {
         grid-column: auto;
       }
     }
@@ -110,21 +89,5 @@
     width: fit-content;
     max-width: 13.75rem;
     white-space: nowrap;
-
-    /* Animated underline */
-    &::after {
-      content: "";
-      position: absolute;
-      inset-block-end: 0;
-      inset-inline-start: 0;
-      background-color: var(--main-black);
-      width: 0;
-      height: 2px;
-      transition: width 200ms ease-out;
-    }
-
-    &:hover::after {
-      width: 100%;
-    }
   }
 }

@@ -47,7 +47,7 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
     animation-range: 0 520px;
 
     @media screen and (min-width: 992px) {
-      border: none;
+      border-color: transparent;
     }
   }
 
@@ -83,7 +83,8 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
   /* Individual nav links */
   .navbar-link {
     z-index: 15;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.25rem;
+    margin: 0 0.25rem;
     position: relative;
     white-space: nowrap;
     display: inline-flex;
@@ -130,8 +131,8 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
 
     /* Position 16px from bottom, inset 24px on each side */
     bottom: 16px;
-    left: calc(anchor(left) + 24px);
-    width: calc(anchor-size(width) - 48px);
+    left: calc(anchor(left) + 16px);
+    width: calc(anchor-size(width) - 32px);
 
     /* Smooth sliding animation within a single page */
     transition:
