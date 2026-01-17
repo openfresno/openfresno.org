@@ -2,98 +2,193 @@
 The main application navigation bar.
 It is made up of three sections.
 - Left: Logo
-- Middle: Links with animated underline
+- Middle: Links with animated underline (using CSS Anchor Positioning)
 - Right: Dropdown link that displays extended section
 
 ===================================================================
 | ( LOGO ) |          Home    About    Contact          [v] Expand |
 ===================================================================
 
-NOTE: The navbar is initially transparent when the fade on-scroll animation is enabled. Define light background color or image in the page styles in order to not conflict with the black text.
+NOTE: The navbar is initially transparent when the fade on-scroll animation is enabled.
+Define light background color or image in the page styles to not conflict with black text.
+
+BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
 */
-.navbar-container {
-  position: fixed;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--neutral-300);
-  background-color: rgb(255, 252, 245);
-  width: 100%;
-  height: var(--navbar-height);
-}
 
-@keyframes fade-in-navbar {
-  from {
-    box-shadow: none;
-    background-color: rgba(255, 252, 245, 0);
-  }
-  to {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+@layer navbar {
+  /* ===== Main Container ===== */
+  .navbar-container {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--neutral-300);
     background-color: rgb(255, 252, 245);
+    width: 100%;
+    height: var(--navbar-height);
+    view-transition-name: navbar;
   }
-}
 
-.navbar-container--fading {
-  animation: fade-in-navbar linear;
-  animation-fill-mode: both;
-  animation-timeline: scroll(root block);
-  animation-range: 0 520px;
-  @media screen and (min-width: 992px) {
-    border: none;
+  /* Fade on scroll animation */
+  @keyframes fade-in-navbar {
+    from {
+      box-shadow: none;
+      background-color: rgb(255 252 245 / 0%);
+    }
+
+    to {
+      box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+      background-color: rgb(255, 252, 245);
+    }
   }
-}
 
-.navbar-main-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  padding: 0 8px;
-  max-width: calc(var(--screen-xxl) + 72px);
-  height: 100%;
-  @media (min-width: 992px) {
-    padding: 0 24px;
+  .navbar-container--fading {
+    animation: fade-in-navbar linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 520px;
+
+    @media screen and (min-width: 992px) {
+      border: none;
+    }
   }
-}
 
-.navbar-middle-section {
-  display: none;
-  position: relative;
-  gap: 3.125rem;
-  height: 100%;
-  @media screen and (min-width: 992px) {
-    display: inline-flex;
+  /* ===== Main Content Layout ===== */
+  .navbar-main-content {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    margin: auto;
+    padding-inline: 8px;
+    max-width: calc(var(--screen-xxl) + 72px);
+    height: 100%;
+
+    @media (min-width: 992px) {
+      padding-inline: 24px;
+    }
+  }
+
+  /* ===== Middle Navigation Links ===== */
+  .navbar-middle-section {
+    display: none;
+    position: relative;
+    gap: 0;
+    height: 100%;
+    anchor-name: --nav-container;
+
+    @media screen and (min-width: 992px) {
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  /* Individual nav links */
+  .navbar-link {
+    z-index: 15;
+    padding: 1rem 1.5rem;
+    position: relative;
+    white-space: nowrap;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    /* Reserve space for bold text to prevent layout shift */
+    &::after {
+      content: attr(data-text);
+      font-weight: 600;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  /* Active link anchoring - each link registers as an anchor when active */
+  .navbar-link-item {
+    position: relative;
+
+    &[data-active="true"] .navbar-link {
+      anchor-name: --active-nav-link;
+    }
+  }
+
+  /* ===== Sliding Underline with Anchor Positioning & View Transitions ===== */
+  .navbar-underline {
+    position: absolute;
+    z-index: 10;
+    background-color: var(--neutral-900);
+    height: 2px;
+    view-transition-name: navbar-underline;
+
+    /* Anchor to the active link */
+    position-anchor: --active-nav-link;
+
+    /* Position 16px from bottom, inset 24px on each side */
+    bottom: 16px;
+    left: calc(anchor(left) + 24px);
+    width: calc(anchor-size(width) - 48px);
+
+    /* Smooth sliding animation within a single page */
+    transition:
+      left 700ms cubic-bezier(0.4, 0, 0.2, 1),
+      right 700ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hide underline when no link is active */
+  .navbar-middle-section:not(:has([data-active="true"])) .navbar-underline {
+    opacity: 0;
   }
 }
 
-.navbar-link {
-  z-index: 15;
-  padding: 1rem;
-}
+/* ===== View Transitions for Page Navigation ===== */
+@layer view-transitions {
+  /* Enable view transitions for the whole page */
+  @view-transition {
+    navigation: auto;
+  }
 
-.navbar-underline {
-  position: absolute;
-  top: 70%;
-  z-index: 10;
-  transition: 0.3s ease-in-out;
-  background-color: var(--neutral-900);
-  width: 5rem;
-  height: 2px;
-}
+  /* Navbar stays fixed during transitions, but sub-elements with their own names morph */
+  ::view-transition-group(navbar) {
+    animation-duration: 0ms;
+  }
 
-/* Sibling selectors to position the underline */
-.navbar-link--underline__one ~ .navbar-underline {
-  left: 0.25rem;
-}
+  /* Allow the underline to morph smoothly across pages */
+  ::view-transition-group(navbar-underline) {
+    animation-duration: 700ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
-.navbar-link--underline__two ~ .navbar-underline {
-  left: calc(0.25rem * 35);
-}
+  /* Page content fades and slides */
+  ::view-transition-old(root) {
+    animation: 150ms ease-out fade-out;
+  }
 
-.navbar-link--underline__three ~ .navbar-underline {
-  left: calc(0.25rem * 71.5);
-}
+  ::view-transition-new(root) {
+    animation: 150ms ease-in fade-in;
+  }
 
-.navbar-link--underline__four ~ .navbar-underline {
-  left: calc(0.25rem * 109);
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }

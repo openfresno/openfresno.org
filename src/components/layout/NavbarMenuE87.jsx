@@ -1,98 +1,130 @@
 import Button, { NavExtendedToggle } from "../ui/button/Button";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
+
+const MOBILE_NAV_PRIMARY = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/donate", label: "Donate" },
+];
+
+const MOBILE_NAV_SECONDARY = [
+  { href: "/get-started", label: "Get Started" },
+  { href: "/projects", label: "Projects" },
+  { href: "/pitch", label: "Pitch a Project" },
+  {
+    href: "https://www.meetup.com/openfresno",
+    label: "Meetup",
+    external: true,
+  },
+  { href: "/faq", label: "FAQs" },
+];
+
+const DESKTOP_SECTIONS = [
+  {
+    title: "Get Started",
+    description:
+      "Get started today and volunteer with us to drive positive change through technology, making a meaningful impact in your community!",
+    href: "/get-started",
+    buttonText: "Get Started",
+  },
+  {
+    title: "Projects",
+    description:
+      "Explore our projects and discover how you can contribute your skills to drive innovation and create positive change.",
+    href: "/projects",
+    buttonText: "See Projects",
+  },
+  {
+    title: "Pitch a Project",
+    description:
+      "Get the latest information and guidance for anyone who wants to propose new projects or ideas to the Open Fresno community.",
+    href: "/pitch",
+    buttonText: "Pitch a Project",
+  },
+];
 
 /**
- * Extend a navbar menu below the main application navbar.
+ * Extended navbar menu below the main navigation bar.
  * - **Mobile view**: Toggles between two distinct navigation menus.
  * - **Desktop view**: Displays multiple sections with descriptive text and
  *   call-to-action links.
  * @param {string} className - Optional additional CSS class names
- *   applied to the root container for layout or styling overrides.
- * @returns {JSX.Element} A responsive extended navbar with mobile toggle menus
- *   and desktop sections containing navigation links and descriptions.
+ * @returns {JSX.Element}
  */
 export default function NavbarMenuE87({ className = "" }) {
-  const [mobileNavPosition, toggleMobileNavPosition] = useState(false);
+  const [showSecondaryNav, setShowSecondaryNav] = useState(false);
 
   return (
-    <div className={`navbar-extended-container p2-regular ${className}`}>
+    <div
+      className={`navbar-extended-container p2-regular ${className}`}
+      role="region"
+      aria-label="Extended navigation"
+    >
+      {/* Mobile Navigation - Primary */}
       <ul
-        className={`${mobileNavPosition ? "hidden" : "grid"} navbar-extended-mobile-container nav-semi-bold`}
+        className={`navbar-extended-mobile-container nav-semi-bold ${showSecondaryNav ? "hidden" : "grid"}`}
+        role="menu"
+        aria-label="Primary navigation"
       >
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-        <li>
-          <Link href="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link href="/donate">Donate</Link>
-        </li>
+        {MOBILE_NAV_PRIMARY.map((link) => (
+          <li key={link.href} role="none">
+            <Link href={link.href} role="menuitem">
+              {link.label}
+            </Link>
+          </li>
+        ))}
         <NavExtendedToggle
-          mobileNavPosition={mobileNavPosition}
-          toggleMobileNavPosition={toggleMobileNavPosition}
+          mobileNavPosition={showSecondaryNav}
+          toggleMobileNavPosition={setShowSecondaryNav}
         />
       </ul>
+
+      {/* Mobile Navigation - Secondary */}
       <ul
-        className={`${mobileNavPosition ? "grid" : "hidden"} navbar-extended-mobile-container nav-semi-bold`}
+        className={`navbar-extended-mobile-container nav-semi-bold ${showSecondaryNav ? "grid" : "hidden"}`}
+        role="menu"
+        aria-label="Secondary navigation"
       >
-        <li>
-          <Link href="/get-started">Get Started</Link>
-        </li>
-        <li>
-          <Link href="/projects">Projects</Link>
-        </li>
-        <li>
-          <Link href="/pitch">Pitch a Project</Link>
-        </li>
-        <li>
-          <Link href="https://www.meetup.com/openfresno">Meetup</Link>
-        </li>
-        <li>
-          <Link href="/faq">FAQs</Link>
-        </li>
+        {MOBILE_NAV_SECONDARY.map((link) => (
+          <li key={link.href} role="none">
+            <Link
+              href={link.href}
+              role="menuitem"
+              {...(link.external && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
         <NavExtendedToggle
-          mobileNavPosition={mobileNavPosition}
-          toggleMobileNavPosition={toggleMobileNavPosition}
+          mobileNavPosition={showSecondaryNav}
+          toggleMobileNavPosition={setShowSecondaryNav}
         />
       </ul>
-      <div className="navbar-extended-desktop-container page-container">
-        <section className="navbar-extended-desktop-section">
-          <h4 className="navbar-extended-header h4-semi-bold">Get Started</h4>
-          <p className="grow">
-            Get started today and volunteer with us to drive positive change
-            through technology, making a meaningful impact in your community!
-          </p>
-          <Button href="/get-started" className="btn-small">
-            Get Started
-          </Button>
-        </section>
-        <section className="navbar-extended-desktop-section">
-          <h4 className="navbar-extended-header h4-semi-bold">Projects</h4>
-          <p className="grow">
-            Explore our projects and discover how you can contribute your skills
-            to drive innovation and create positive change.
-          </p>
-          <Button href="/projects" className="btn-small">
-            See Projects
-          </Button>
-        </section>
-        <section className="navbar-extended-desktop-section">
-          <h4 className="navbar-extended-header h4-semi-bold">
-            Pitch a Project
-          </h4>
-          <p className="grow">
-            Get the latest information and guidance for anyone who wants to
-            propose new projects or ideas to the Open Fresno community.
-          </p>
-          <Button href="/pitch" className="btn-small">
-            Pitch a Project
-          </Button>
-        </section>
+
+      {/* Desktop Navigation */}
+      <div className="navbar-extended-desktop-container">
+        {DESKTOP_SECTIONS.map((section) => (
+          <section
+            key={section.href}
+            className="navbar-extended-desktop-section"
+          >
+            <h4 className="navbar-extended-header h4-semi-bold">
+              {section.title}
+            </h4>
+            <p className="grow p1-regular">{section.description}</p>
+            <Button href={section.href} className="btn-small">
+              {section.buttonText}
+            </Button>
+          </section>
+        ))}
+
+        {/* Quick Links */}
         <section className="p3-regular space-y-8 self-center">
           <p>
             Join us for our weekly meetings on{" "}

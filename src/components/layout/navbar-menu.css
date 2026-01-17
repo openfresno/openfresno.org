@@ -1,79 +1,130 @@
 /*
-  Styles for the extended dropdown menu in the navigation bar.
+  Extended dropdown menu styles for the navigation bar.
   - Mobile view: Toggles between two distinct navigation menus.
-  - Desktop view: Displays multiple sections with descriptive text and
-  call-to-action links.
+  - Desktop view: Displays multiple sections with descriptive text and CTAs.
+
+  BROWSER SUPPORT: Chrome 117+ (uses @starting-style for entry animations)
 */
-.navbar-extended-container {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-top: 1px solid #ebeae5;
-  background: var(--secondary-50);
-  padding: 1.75rem 0 0.75rem 0;
-  width: 100%;
-}
 
-.navbar-extended-mobile-container {
-  gap: 1.75rem;
-  margin: auto;
-  padding: 0 0.5rem;
-  @media (min-width: 992px) {
-    display: none;
-  }
+@layer navbar-menu {
+  /* ===== Container ===== */
+  .navbar-extended-container {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    border-top: 1px solid #ebeae5;
+    background: var(--secondary-50);
+    padding: 1.75rem 0 0.75rem;
+    width: 100%;
 
-  a {
-    padding: 1rem;
-  }
-}
+    /* Entry animation */
+    animation: slide-down 200ms ease-out;
 
-.navbar-extended-desktop-container {
-  display: none;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 3rem;
-  margin-top: 1.25rem;
-  margin-bottom: 3rem;
-  height: 100%;
-
-  > *:last-child {
-    grid-column: span 2 / span 2;
-  }
-
-  @media (min-width: 992px) {
-    display: grid;
-  }
-  @media (min-width: 1400px) {
-    grid-template-columns: 18.75rem 18.75rem 18.75rem 1fr;
-    > *:last-child {
-      grid-column: auto;
+    @starting-style {
+      opacity: 0;
+      transform: translateY(-0.5rem);
     }
   }
-}
 
-.navbar-extended-desktop-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  height: 100%;
-}
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-0.5rem);
+    }
 
-.navbar-extended-header {
-  position: relative;
-  cursor: pointer;
-  width: fit-content;
-  max-width: 13.75rem;
-  white-space: nowrap;
-
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--main-black);
-    width: 0;
-    height: 2px;
-    content: "";
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
-  &:hover::after {
-    width: 100%;
+  /* ===== Mobile Navigation ===== */
+  .navbar-extended-mobile-container {
+    gap: 1.75rem;
+    margin: auto;
+    padding-inline: 0.5rem;
+
+    @media (min-width: 992px) {
+      display: none;
+    }
+
+    /* Link styles */
+    a {
+      display: block;
+      padding: 1rem;
+      transition: color 150ms ease;
+
+      &:hover {
+        color: var(--primary-600, #0066cc);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--primary-600, #0066cc);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  /* ===== Desktop Navigation ===== */
+  .navbar-extended-desktop-container {
+    margin: auto;
+    padding: 0 1.5rem;
+    max-width: calc(var(--screen-xxl) + 80px);
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 3rem;
+    margin-block: 1.25rem 3rem;
+    height: 100%;
+
+    /* Last item spans 2 columns on medium screens */
+    > *:last-child {
+      grid-column: span 2;
+    }
+
+    @media (min-width: 992px) {
+      display: grid;
+      padding: 0 2.5rem;
+    }
+
+    @media (min-width: 1400px) {
+      grid-template-columns: 18.75rem 18.75rem 18.75rem 1fr;
+
+      > *:last-child {
+        grid-column: auto;
+      }
+    }
+  }
+
+  /* ===== Desktop Section Cards ===== */
+  .navbar-extended-desktop-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+  }
+
+  /* Section Header with Hover Underline */
+  .navbar-extended-header {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    max-width: 13.75rem;
+    white-space: nowrap;
+
+    /* Animated underline */
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block-end: 0;
+      inset-inline-start: 0;
+      background-color: var(--main-black);
+      width: 0;
+      height: 2px;
+      transition: width 200ms ease-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }

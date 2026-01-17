@@ -6,36 +6,48 @@ import NavbarMenuE87 from "./NavbarMenuE87";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { LogoTextBlack } from "@/components/ui/icon/logo-text-black";
+
+const NAV_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+  { href: "/donate", label: "Donate" },
+];
 
 /**
  * The default navigation bar for the application.
  * - Includes an extended menu that expands to show more text underneath the navbar.
- * EXPERIMENTAL: The desktop links have a sliding underline animation when the page navigates.
- * EXPERIMENTAL: The fade on-scroll effect uses CSS scroll-driven animations. It is not supported by Chrome < 115, Firefox, Firefox for Android, Safari, Safari on iOS. On unsupported platforms it functions the same as fade = false.
+ * - Desktop links have a sliding underline animation using CSS Anchor Positioning.
+ * - Fade on-scroll effect uses CSS scroll-driven animations (Chrome 115+).
  * @param {boolean} fade - Whether to enable fade effect on scroll
  * @returns {JSX.Element}
  */
 export default function NavbarE7e({ fade = false }) {
   const [extendedMenuVisible, showExtendedMenu] = useState(false);
-  const websiteURL = usePathname();
+  const pathname = usePathname();
   const navbarRef = useRef(null);
 
-  // Close the menu when the route changes.
   useEffect(() => {
     showExtendedMenu(false);
-  }, [websiteURL]);
+  }, [pathname]);
 
-  // Close the menu when clicking outside the menu.
   useEffect(() => {
+    if (!extendedMenuVisible) return;
+
     function handleClickOutside(event) {
-      if (navbarRef.current && !navbarRef.current.contains(event.target))
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         showExtendedMenu(false);
+      }
     }
 
-    if (extendedMenuVisible)
-      document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [extendedMenuVisible]);
+
+  // Check if a nav link is active
+  const isActive = (href) => pathname === href;
+  const hasActiveLink = NAV_LINKS.some((link) => isActive(link.href));
 
   return (
     <nav
@@ -43,49 +55,40 @@ export default function NavbarE7e({ fade = false }) {
       className={`navbar-container ${
         fade && !extendedMenuVisible ? "navbar-container--fading" : ""
       }`}
+      aria-label="Main navigation"
     >
       <div className="navbar-main-content nav-regular">
-        <Link className="p-4" href="/">
-          <BasePathImage
-            src="/assets/logo/logo-text-black.svg"
-            alt="Open Fresno logo"
-            height={45}
-            width={110}
-          />
+        <Link className="p-4" href="/" aria-label="Open Fresno home">
+          <LogoTextBlack height={40} width={100} />
         </Link>
-        <ul className={`navbar-middle-section`}>
-          <li
-            className={`${websiteURL === "/" && "nav-semi-bold navbar-link--underline__one"}`}
-          >
-            <Link className="navbar-link" href="/">
-              Home
-            </Link>
-          </li>
-          <li
-            className={`${websiteURL === "/about" && "nav-semi-bold navbar-link--underline__two"}`}
-          >
-            <Link className="navbar-link" href="/about">
-              About
-            </Link>
-          </li>
-          <li
-            className={`${websiteURL === "/contact" && "nav-semi-bold navbar-link--underline__three"}`}
-          >
-            <Link className="navbar-link" href="/contact">
-              Contact
-            </Link>
-          </li>
-          <li
-            className={`${websiteURL === "/donate" && "nav-semi-bold navbar-link--underline__four"}`}
-          >
-            <Link className="navbar-link" href="/donate">
-              Donate
-            </Link>
-          </li>
-          <hr
-            className={`navbar-underline ${!["/", "/about", "/contact", "/donate"].includes(websiteURL) && "hidden"}`}
-          />
+
+        {/* Desktop Navigation Links */}
+        <ul className="navbar-middle-section" role="menubar">
+          {NAV_LINKS.map((link) => (
+            <li
+              key={link.href}
+              className="navbar-link-item"
+              data-active={isActive(link.href)}
+              role="none"
+            >
+              <Link
+                className={`navbar-link ${isActive(link.href) ? "nav-semi-bold" : ""}`}
+                href={link.href}
+                role="menuitem"
+                aria-current={isActive(link.href) ? "page" : undefined}
+                data-text={link.label}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+          {/* Sliding underline - positioned via CSS Anchor Positioning */}
+          {hasActiveLink && (
+            <hr className="navbar-underline" aria-hidden="true" />
+          )}
         </ul>
+
+        {/* Menu Toggles */}
         <NavToggle
           extendedMenuVisible={extendedMenuVisible}
           showExtendedMenu={showExtendedMenu}
@@ -97,6 +100,8 @@ export default function NavbarE7e({ fade = false }) {
           mobile={false}
         />
       </div>
+
+      {/* Extended Menu */}
       {extendedMenuVisible && <NavbarMenuE87 />}
     </nav>
   );
