@@ -3,33 +3,20 @@ import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";
 
 /**
- * `SidebarSection` is a layout component that renders a main instructions area
- * alongside a sidebar with helpful links and a "Get Started" call-to-action.
- *
- * It is typically used in onboarding or informational pages to guide users
- * toward key resources such as the code of conduct, new member form, or meeting links.
- * @param {Object} props - The component props.
- * @param {React.ReactNode} props.children - Main instructional content displayed
- *   in the left section of the layout.
- * @param {string} props.sectionType - A style variant applied to the section container
- *   (e.g., `"light"` or `"dark"`), used to theme the section appropriately.
- * @returns {JSX.Element} A structured section with instructions and a sidebar of resource links.
- * @example
- * ```tsx
- <SidebarSection sectionType="light">
- <h2>Welcome to the community!</h2>
- <p>Follow the steps below to get started.</p>
- </SidebarSection>
- * ```
+ * Layout component with main content and a sidebar with resource links.
+ * @param {Object} props
+ * @param {React.ReactNode} props.children - Main content.
+ * @param {string} props.sectionType - Style variant (e.g., "light" or "dark").
+ * @returns {JSX.Element}
  */
 export default function SidebarSection({ children, sectionType }) {
   return (
     <section
-      className={`app-color--${sectionType} page-container flex flex-col gap-2 py-12 lg:flex-row lg:py-24`}
+      className={`app-color--${sectionType} page-container flex flex-col gap-8 py-12 lg:flex-row lg:py-24`}
     >
-      <div className={`instructions-container`}>{children}</div>
-      <div className={`sidebar-container`}>
-        <div className={`side-section lg:w-[411px]`}>
+      <div className="flex flex-col gap-12">{children}</div>
+      <div className="flex flex-col gap-10">
+        <div className="lg:w-[411px]">
           <CenteredInImage
             src="/img/about/rectangle-blue.png"
             alt="rectangle"
@@ -46,8 +33,8 @@ export default function SidebarSection({ children, sectionType }) {
             </div>
           </CenteredInImage>
         </div>
-        <div className={`flex flex-col gap-6`}>
-          <div className={`flex flex-col gap-2`}>
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-2">
             <hr className="mb-2 h-px border-0 bg-(--neutral-400)" />
             <Link
               href="/code-of-conduct"
@@ -56,7 +43,7 @@ export default function SidebarSection({ children, sectionType }) {
               Code of Conduct
             </Link>
           </div>
-          <div className={`flex flex-col gap-2`}>
+          <div className="flex flex-col gap-2">
             <hr className="my-2 h-px border-0 bg-(--neutral-400)" />
             <Link
               className="primary-link--underline w-fit"
@@ -68,7 +55,7 @@ export default function SidebarSection({ children, sectionType }) {
               New Member Form
             </Link>
           </div>
-          <div className={`flex flex-col gap-2`}>
+          <div className="flex flex-col gap-2">
             <hr className="my-2 h-px border-0 bg-(--neutral-400)" />
             <Link
               className="primary-link--underline w-fit"
