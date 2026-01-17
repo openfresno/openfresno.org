@@ -75,6 +75,17 @@
   white-space: nowrap;
 }
 
+.btn-alt-white {
+  border: solid var(--main-vivid-blue) 1px;
+  background-color: transparent;
+  color: var(--neutral-50);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 18px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 .btn-alt--transition {
   transition:
     background-color 0.3s,

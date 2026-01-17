@@ -262,7 +262,7 @@ export default function HomePage() {
               <div className="mt-10 space-x-5">
                 <Button
                   href="/get-started"
-                  className="btn btn-alt btn-alt--transition"
+                  className="btn btn-alt-white btn-alt--transition"
                   textContent="Get Started"
                 />
                 <Button
