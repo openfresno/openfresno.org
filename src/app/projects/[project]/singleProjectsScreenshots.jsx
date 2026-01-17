@@ -24,8 +24,11 @@ export default function SingleProjectsScreenshots({
         }
       }}
       className={`keen-slider__slide sharpen @container aspect-7/4 ${showDialog ? "" : "lg:cursor-pointer"}`}
-      imgClassName={`@max-lg:border @max-lg:rounded-xl`}
+      className={`@max-lg:border @max-lg:rounded-xl`}
       src={`https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${screenshot}`}
+      alt={`${data.meta.title} screenshot ${i + 1}`}
+      width={700}
+      height={400}
     />
   ));
   for (let i = shownImages.length; i < 6; i++) {

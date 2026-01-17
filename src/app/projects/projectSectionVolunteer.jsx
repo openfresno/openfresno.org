@@ -24,9 +24,11 @@ export default function projectSectionVolunteer() {
       </div>
       <div className={`project-volunteer-image-container`}>
         <BasePathImage
-          className={`project-volunteer-image`}
+          className="project-volunteer-image"
           src="/img/about/rectangle.png"
-          alt="rectangle"
+          alt="Volunteer with Open Fresno"
+          width={400}
+          height={300}
         />
         <p className={`project-volunteer-anchor`}>
           Not a volunteer yet?

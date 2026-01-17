@@ -4,13 +4,15 @@ export default function CenteredInImage({
   src = "/img/about/rectangle.png",
   alt = "rectangle",
   float = "left",
+  width = 400,
+  height = 300,
   children = <></>,
 }) {
   return (
     <div
       className={`relative w-fit ${float === "center" ? "mx-auto" : `float-${float}`}`}
     >
-      <BasePathImage src={src} alt={alt} />
+      <BasePathImage src={src} alt={alt} width={width} height={height} />
       {/*used to place the text over the image*/}
       <div className={`absolute bottom-0 h-full w-full`}>
         {/*used to vertically center the text over the image*/}

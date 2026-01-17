@@ -15,7 +15,9 @@ export default function AboutSectionCollage({
       <BasePathImage
         className={"w-full grow basis-0"}
         src="/img/about/towerbridgeside.png"
-        alt="Tower bridge"
+        alt="Tower bridge in Fresno"
+        width={1200}
+        height={400}
       />
       <div
         className={`flex w-full grow basis-0 flex-row justify-between gap-6 lg:gap-16`}
@@ -23,12 +25,16 @@ export default function AboutSectionCollage({
         <BasePathImage
           className={"aspect-11/10 grow basis-0"}
           src="/img/about/tablet.png"
-          alt="Tablet"
+          alt="Working on tablet"
+          width={550}
+          height={500}
         />
         <BasePathImage
           className={"aspect-11/10 grow basis-0"}
           src="/img/about/meeting.png"
-          alt="Meeting"
+          alt="Team meeting"
+          width={550}
+          height={500}
         />
       </div>
     </PageContainer>

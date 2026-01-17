@@ -23,7 +23,7 @@ export default function SingleProjectsSectionStart({
         <div className={`w-fit lg:ml-8 lg:min-w-[60%]`}>
           <BasePathImage
             alt={data.meta.title}
-            imgClassName={`border rounded-xl`}
+            className={`border rounded-xl`}
             src={
               data.meta.image_url
                 ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/${data.meta.image_url}`
@@ -31,6 +31,8 @@ export default function SingleProjectsSectionStart({
                   ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${data.meta.screenshots[0]}`
                   : ""
             }
+            width={800}
+            height={457}
           />
         </div>
         <div className={`max-lg:mt-6`}>

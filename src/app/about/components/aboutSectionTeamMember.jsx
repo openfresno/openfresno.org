@@ -12,7 +12,9 @@ export default function AboutSectionTeamMember({
       <BasePathImage
         className={`aspect-1/1`}
         src={src}
-        alt={`Team Member Name: ${name}`}
+        alt={`Team member: ${name}`}
+        width={300}
+        height={300}
       />
       <div className={`member-info-container`}>
         <div className={`member-name-container`}>

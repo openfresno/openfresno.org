@@ -136,7 +136,9 @@ const ProjectSearch = ({ data, setProjectsData }) => {
                 >
                   <BasePathImage
                     src="/img/form-element/search.svg"
-                    alt="Search icon."
+                    alt="Search icon"
+                    width={24}
+                    height={24}
                   />
                 </IconButton>
               </InputAdornment>
