@@ -1,13 +1,4 @@
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
-import {
-  FormHelperText,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
-} from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -99,7 +90,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   };
 
   const handleSortClick = (e) => {
-    if (e.target.dataset.value === sortBy) {
+    if (e.target.value === sortBy) {
       updateProjectsData(search, filter, sortBy, !ascending);
       setAscending(!ascending);
     }
@@ -113,78 +104,84 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         className={`flex w-full flex-col gap-4 lg:flex-row lg:gap-8`}
         action={() => {}}
       >
-        <div className={`grow-3 basis-0 max-lg:w-full`}>
-          <InputLabel
+        <div className={`form-control grow-3 basis-0 max-lg:w-full`}>
+          <label
             id="project-search-label"
-            className="min-h-[1.4375em] min-w-px"
+            htmlFor="project-search"
+            className="form-control-label min-h-[1.4375em] min-w-px"
           >
             {" "}
-          </InputLabel>
-          <OutlinedInput
-            className={`w-full`}
-            name="project-search"
-            type="search"
-            placeholder="Search"
-            value={search}
-            onChange={handleChange}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="search"
-                  type="submit"
-                  onClick={() => {}}
-                >
-                  <BasePathImage
-                    src="/img/form-element/search.svg"
-                    alt="Search icon"
-                    width={24}
-                    height={24}
-                  />
-                </IconButton>
-              </InputAdornment>
-            }
-          />
+          </label>
+          <div className="form-search-wrapper">
+            <input
+              id="project-search"
+              className="form-outlined-input"
+              name="project-search"
+              type="search"
+              placeholder="Search"
+              value={search}
+              onChange={handleChange}
+            />
+            <button
+              className="form-search-btn"
+              aria-label="search"
+              type="submit"
+              onClick={(e) => e.preventDefault()}
+            >
+              <BasePathImage
+                src="/img/form-element/search.svg"
+                alt="Search icon"
+                width={24}
+                height={24}
+              />
+            </button>
+          </div>
           <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
-        <div className={`form-row grow basis-0 max-lg:w-full`}>
-          <InputLabel id="project-filter-label">Filter</InputLabel>
-          <Select
-            variant="outlined"
-            className="w-full"
+        <div className={`form-control grow basis-0 max-lg:w-full`}>
+          <label
+            id="project-filter-label"
+            htmlFor="project-filter"
+            className="form-control-label"
+          >
+            Filter
+          </label>
+          <select
+            className="form-select"
+            id="project-filter"
             name="project-filter"
-            label="Filter"
             defaultValue="all"
-            native={false}
             onChange={handleChange}
           >
-            <MenuItem value="all">All</MenuItem>
-            <MenuItem value="active">Active</MenuItem>
-          </Select>
+            <option value="all">All</option>
+            <option value="active">Active</option>
+          </select>
         </div>
-        <div className={`form-row grow basis-0 max-lg:w-full`}>
-          <InputLabel id="project-sort-by-label">Sort By</InputLabel>
-          <Select
-            variant="outlined"
-            className="w-full"
-            name="project-sort-by"
-            label={"Sort By"}
-            defaultValue="created_at"
-            native={false}
-            onChange={handleChange}
+        <div className={`form-control grow basis-0 max-lg:w-full`}>
+          <label
+            id="project-sort-by-label"
+            htmlFor="project-sort-by"
+            className="form-control-label"
           >
-            <MenuItem value="created_at" onClick={handleSortClick}>
-              Creation Date
-            </MenuItem>
-            <MenuItem value="updated_at" onClick={handleSortClick}>
-              Last Updated
-            </MenuItem>
-            <MenuItem value="meta,title" onClick={handleSortClick}>
-              Name
-            </MenuItem>
-          </Select>
-          <FormHelperText>
+            Sort By
+          </label>
+          <select
+            className="form-select"
+            id="project-sort-by"
+            name="project-sort-by"
+            defaultValue="created_at"
+            onChange={(e) => {
+              handleChange(e);
+              handleSortClick(e);
+            }}
+          >
+            <option value="created_at">Creation Date</option>
+            <option value="updated_at">Last Updated</option>
+            <option value="meta,title">Name</option>
+          </select>
+          <span className="form-helper-text">
             {ascending ? "Ascending" : "Descending"}
-          </FormHelperText>
+          </span>
         </div>
       </form>
     </section>

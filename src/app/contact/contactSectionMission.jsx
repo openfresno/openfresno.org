@@ -1,7 +1,6 @@
+import Button from "@/components/ui/button/Button";
 import { SectionType } from "./contact";
 import HeaderUnderline from "@/components/ui/HeaderUnderline";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -64,170 +63,83 @@ export default function ContactSectionMission({ sectionType }) {
         className={`grow basis-0 lg:ml-8 app-color--${sectionType}-split py-12 max-lg:px-8 lg:py-24`}
       >
         <form>
-          <div className="form-input">
-            <TextField
-              className="w-full md:w-[45%]"
-              id="standard-helperText"
-              label="First Name"
-              placeholder="John"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              variant="standard"
-              margin="normal"
-              sx={{
-                marginRight: "10%",
-                "& .MuiInputLabel-root": {
-                  color: "white",
-                },
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white", // Default underline color
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white", // Label color when input is focused
-                },
-                "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white", // Underline color when input is focused
-                },
-              }}
-              focused
-            />
-            <TextField
-              className="w-full md:w-[45%]"
-              id="standard-helperText"
-              label="Last Name"
-              // defaultValue="John"
-              placeholder="Smith"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              variant="standard"
-              margin="normal"
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "white",
-                },
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white", // Default underline color
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white", // Label color when input is focused
-                },
-                "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white", // Underline color when input is focused
-                },
-              }}
-              focused
-            />
+          <div className="form-input flex flex-wrap">
+            <div className="form-field form-field-half">
+              <label className="form-label" htmlFor="firstName">
+                First Name
+              </label>
+              <input
+                id="firstName"
+                type="text"
+                className="form-input-field"
+                placeholder="John"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+            </div>
+            <div className="form-field form-field-half">
+              <label className="form-label" htmlFor="lastName">
+                Last Name
+              </label>
+              <input
+                id="lastName"
+                type="text"
+                className="form-input-field"
+                placeholder="Smith"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
           </div>
           <div className="form-input">
-            <TextField
-              id="standard-helperText"
-              label="Email"
-              // defaultValue="John"
-              placeholder="Example@email.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              variant="standard"
-              margin="normal"
-              fullWidth
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "white",
-                },
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white", // Default underline color
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white", // Label color when input is focused
-                },
-                "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white", // Underline color when input is focused
-                },
-              }}
-              focused
-            />
+            <div className="form-field">
+              <label className="form-label" htmlFor="email">
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                className="form-input-field"
+                placeholder="Example@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
           </div>
           <div className="form-input">
-            <TextField
-              id="standard-helperText"
-              label="Subject"
-              // defaultValue="John"
-              placeholder="Write  your subject..."
-              value={subject}
-              onChange={(e) => setSubject(e.target.value)}
-              variant="standard"
-              margin="normal"
-              fullWidth
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "white",
-                },
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white", // Default underline color
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white", // Label color when input is focused
-                },
-                "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white", // Underline color when input is focused
-                },
-              }}
-              focused
-            />
+            <div className="form-field">
+              <label className="form-label" htmlFor="subject">
+                Subject
+              </label>
+              <input
+                id="subject"
+                type="text"
+                className="form-input-field"
+                placeholder="Write your subject..."
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
+            </div>
           </div>
           <div className="form-input">
-            <TextField
-              id="standard-multiline-static"
-              label="Body"
-              placeholder="Write your message..."
-              value={body}
-              onChange={(e) => setBody(e.target.value)}
-              multiline
-              rows={1}
-              variant="standard"
-              margin="normal"
-              fullWidth
-              sx={{
-                "& .MuiInputLabel-root": {
-                  color: "white",
-                },
-                "& .MuiInput-input": {
-                  color: "white",
-                },
-                "& .MuiInput-underline:before": {
-                  borderBottom: "2px solid white", // Default underline color
-                },
-                "& .MuiInputLabel-root.Mui-focused": {
-                  color: "white", // Label color when input is focused
-                },
-                "& .MuiInput-underline.Mui-focused:after": {
-                  borderBottom: "2px solid white", // Underline color when input is focused
-                },
-              }}
-              focused
-            />
+            <div className="form-field">
+              <label className="form-label" htmlFor="body">
+                Body
+              </label>
+              <textarea
+                id="body"
+                className="form-input-field form-textarea"
+                placeholder="Write your message..."
+                value={body}
+                onChange={(e) => setBody(e.target.value)}
+                rows={1}
+              />
+            </div>
           </div>
           <div className="flex pt-11 lg:justify-end">
             <Button
               href={mailtoUri}
-              variant="contained"
-              size="large"
-              sx={{
-                whiteSpace: "nowrap",
-                background: "white",
-                color: "black",
-              }}
+              className="btn btn--white btn--grow bg-white"
             >
               Send Message
             </Button>

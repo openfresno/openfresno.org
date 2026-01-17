@@ -28,11 +28,8 @@
   },
   "homepage": "https://openfresno.org",
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@mui/material": "^7.3.7",
     "@next/mdx": "^16.1.2",
     "keen-slider": "^6.8.6",
     "moment": "^2.30.1",

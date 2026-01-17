@@ -18,9 +18,7 @@ export default function AboutSectionCollage({
         width={1200}
         height={400}
       />
-      <div
-        className="flex w-full grow basis-0 flex-row justify-between gap-6 lg:gap-16"
-      >
+      <div className="flex w-full grow basis-0 flex-row justify-between gap-6 lg:gap-16">
         <BasePathImage
           src="/img/about/tablet.png"
           alt="Working on tablet"

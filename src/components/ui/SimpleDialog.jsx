@@ -1,12 +1,7 @@
-import { themes } from "@/components/ui/MaterialTheme";
 import { IconX } from "@/components/ui/icon/IconX";
 import { SectionType } from "@/utility/constants/theme";
-import { ThemeProvider } from "@mui/material";
-import Dialog from "@mui/material/Dialog";
-import DialogContent from "@mui/material/DialogContent";
-import DialogTitle from "@mui/material/DialogTitle";
-import IconButton from "@mui/material/IconButton";
 import * as React from "react";
+import { useEffect, useRef } from "react";
 
 /**
  * Component for displaying a simple dialog with customizable title, content, and state.
@@ -27,37 +22,48 @@ export default function SimpleDialog({
   sectionType = SectionType.light,
   ...props
 }) {
+  const dialogRef = useRef(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    if (openState) {
+      dialog.showModal();
+    } else {
+      dialog.close();
+    }
+  }, [openState]);
+
+  const handleBackdropClick = (e) => {
+    if (e.target === dialogRef.current) {
+      handleClose();
+    }
+  };
+
   return (
-    <ThemeProvider theme={themes[sectionType]}>
-      <Dialog
-        className={"Test"}
-        onClose={handleClose}
-        aria-labelledby="customized-dialog-title"
-        open={openState}
-        sx={{
-          "& .MuiPaper-root": {
-            "--Paper-overlay": "none!important",
-          },
-        }}
-        {...props}
-      >
-        <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-          <span className={`sub-heading-main`}>{title}</span>
-        </DialogTitle>
-        <IconButton
+    <dialog
+      ref={dialogRef}
+      className="dialog"
+      onClose={handleClose}
+      onClick={handleBackdropClick}
+      aria-labelledby="dialog-title"
+      {...props}
+    >
+      <div className="dialog-header">
+        <h2 id="dialog-title" className="dialog-title">
+          <span className="sub-heading-main">{title}</span>
+        </h2>
+        <button
+          className="dialog-close-btn"
           aria-label="close"
           onClick={handleClose}
-          sx={(theme) => ({
-            position: "absolute",
-            right: 8,
-            top: 8,
-            color: theme.palette.grey[500],
-          })}
+          type="button"
         >
           <IconX width="24px" height="24px" />
-        </IconButton>
-        <DialogContent>{children}</DialogContent>
-      </Dialog>
-    </ThemeProvider>
+        </button>
+      </div>
+      <div className="dialog-content">{children}</div>
+    </dialog>
   );
 }
