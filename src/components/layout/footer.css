@@ -12,8 +12,9 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 992px) {
     grid-template-columns: 1fr 1fr auto;
+    padding: 4rem 2.5rem 2rem;
   }
 }
 
@@ -32,9 +33,11 @@
   margin: auto;
   padding: 1rem 1.5rem;
   max-width: calc(var(--screen-xxl) + 80px);
+
   @media (min-width: 768px) {
     flex-direction: row;
   }
+
   @media (min-width: 992px) {
     padding: 1rem 2.5rem;
   }
@@ -44,6 +47,7 @@
   display: flex;
   justify-content: start;
   gap: 3rem;
+
   @media (min-width: 992px) {
     justify-content: end;
   }

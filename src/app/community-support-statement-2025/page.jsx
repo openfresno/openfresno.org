@@ -1,5 +1,5 @@
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
-import SidebarSection from "../../components/ui/SidebarSection";
+import SidebarSection from "../../components/ui/steps/SidebarSection";
 import LayoutE53 from "@/components/layout/LayoutE53";
 import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";

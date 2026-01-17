@@ -11,18 +11,18 @@ import Link from "next/link";
  */
 export default function SidebarSection({ children, sectionType }) {
   return (
-    <section
-      className={`app-color--${sectionType} page-container flex flex-col gap-8 py-12 lg:flex-row lg:py-24`}
-    >
-      <div className="flex flex-col gap-12">{children}</div>
-      <div className="flex flex-col gap-10">
-        <div className="lg:w-[411px]">
+    <section className="sidebar-section-container">
+      <div className="flex flex-1 flex-col gap-12 [&_a]:font-bold">
+        {children}
+      </div>
+      <div className="flex flex-col gap-10 lg:w-[411px] lg:shrink-0">
+        <div>
           <CenteredInImage
             src="/img/about/rectangle-blue.png"
             alt="rectangle"
             float="right"
           >
-            <div className="font mx-auto w-fit text-xl font-bold sm:text-3xl">
+            <div className="mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?
               </span>

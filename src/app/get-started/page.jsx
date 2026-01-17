@@ -1,6 +1,6 @@
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
-import SidebarSection from "../../components/ui/SidebarSection";
-import Steps from "../../components/ui/instructions/Steps";
+import SidebarSection from "../../components/ui/steps/SidebarSection";
+import Steps from "../../components/ui/steps/Steps";
 import instructionData from "./instructions.jsx";
 import LayoutE53 from "@/components/layout/LayoutE53";
 import GeneralSection from "@/components/ui/GeneralSection";
@@ -34,7 +34,7 @@ export default function GetStartedPage() {
         you&apos;ll find step-by-step instructions below to help you get started
         on your journey of civic tech and community empowerment.
       </GeneralSection>
-      <hr className="mx-auto mb-12 h-px max-w-[calc(var(--screen-xxl)+80px)] border-0 bg-(--neutral-400) lg:mb-24" />
+      <hr className="border-b-.5 border-(--neutral-400) w-full mb-18" />
       <SidebarSection sectionType={SectionType.light}>
         <div className="flex flex-col gap-6">
           <HeaderUnderline
@@ -49,8 +49,9 @@ export default function GetStartedPage() {
             positive change through technology and collaboration.
           </HeaderUnderline>
         </div>
-        <Steps sectionType={SectionType.light} steps={instructionData}></Steps>
+        <Steps sectionType={SectionType.light} steps={instructionData} />
       </SidebarSection>
+      <hr className="border-b-.5 border-(--neutral-400) w-full mt-18" />
     </LayoutE53>
   );
 }
