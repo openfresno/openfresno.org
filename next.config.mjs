@@ -1,7 +1,7 @@
 import getBasePath from "./src/integrations/gh-pages/getBasePath.mjs";
 import createMDX from "@next/mdx";
 
-const basePath = getBasePath(true);
+const basePath = getBasePath();
 
 /** @type {import("next").NextConfig} */
 const nextConfig = {
