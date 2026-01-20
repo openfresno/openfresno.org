@@ -18,7 +18,7 @@ export default function ConductSectionLanding() {
         to respectful behavior, collaboration, and diversity, ensuring that all
         members can contribute and thrive in a positive atmosphere.
       </GeneralSection>
-      <hr className="mx-auto mb-12 h-px max-w-[calc(var(--screen-xxl)+80px)] border-0 bg-(--neutral-400) lg:mb-24" />
+      <hr className="mx-auto mb-12 h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400) lg:mb-16" />
     </>
   );
 }

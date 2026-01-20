@@ -3,9 +3,9 @@ import CircledNumber from "@/components/ui/CircledNumber";
 export default function conductSectionBullets({ sectionType }) {
   return (
     <section
-      className={`conduct-list-container mx-auto my-12 max-w-[calc(var(--screen-xxl)+80px)] px-2 lg:my-24 conduct-${sectionType}-theme flex flex-col gap-4 lg:gap-8`}
+      className={`conduct-list-container mx-auto my-12 max-w-[calc(var(--screen-xxl)+80px)] px-3 lg:px-10 lg:mb-24 lg:mt-16 conduct-${sectionType}-theme flex flex-col gap-4 lg:gap-8`}
     >
-      <p className={`conduct-sub-heading-main font-semibold`}>
+      <p className={`conduct-sub-heading-main font-semibold ml-3 lg:ml-0`}>
         Open Fresno fosters a community that:
       </p>
 
@@ -97,10 +97,10 @@ export default function conductSectionBullets({ sectionType }) {
         </p>
       </div>
 
-      <p className={`conduct-sub-heading-main`}>
-        Open Fresno reserves the right to ask anyone in violation of these
+      <p className={`conduct-sub-heading-main pt-6`}>
+        <b>Open Fresno reserves the right to ask anyone in violation of these
         policies not to participate in Open Fresno network activities, events,
-        and digital forums.
+        and digital forums.</b>
       </p>
     </section>
   );

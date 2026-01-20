@@ -64,13 +64,13 @@
       @media (min-width: 992px) and (max-width: 1400px) {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1.5rem;
+        align-items: top;
+        gap: 3rem;
 
         /* Remove Tailwind's space-y margin when in flex-row */
         > * {
           margin-top: 0 !important;
+		  max-width: 300px;
         }
       }
     }
