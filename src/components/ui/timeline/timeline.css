@@ -64,8 +64,8 @@ Desktop (md+): alternating two-column, line centered
   /* Even child = odd-numbered item (1, 3, ...) due to mobile header being first child */
   .timeline-item {
     flex-direction: row;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 1.5rem;
     padding: 2rem calc(50% + 2rem) 2rem 2rem;
   }
