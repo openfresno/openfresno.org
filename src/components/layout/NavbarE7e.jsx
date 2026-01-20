@@ -40,8 +40,18 @@ export default function NavbarE7e({ fade = false }) {
       }
     }
 
+    function handleKeyDown(event) {
+      if (event.key === "Escape") {
+        showExtendedMenu(false);
+      }
+    }
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [extendedMenuVisible]);
 
   // Check if a nav link is active
