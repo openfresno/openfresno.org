@@ -1,5 +1,6 @@
 "use client";
 import Button from "../../ui/button/Button";
+import CircledNumber from "@/components/ui/CircledNumber";
 import { SectionType } from "@/utility/constants/theme";
 import React, { useEffect, useRef } from "react";
 
@@ -55,12 +56,11 @@ export function TimelineItem({
   }, [number, updateTimelineNumbers]);
   return (
     <div className="timeline-item">
-      <div
-        className={`circled-number app-color--${SectionType.toColor(sectionType)}`}
+      <CircledNumber
+        number={number}
+        sectionType={sectionType}
         ref={refContainer}
-      >
-        {number}
-      </div>
+      />
       <div className="timeline-item-content">
         <h2 className="heading-small">{heading}</h2>
         <p>{children}</p>

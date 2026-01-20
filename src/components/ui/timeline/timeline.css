@@ -61,14 +61,19 @@ Desktop (md+): alternating two-column, line centered
 }
 
 @media (min-width: 768px) {
+  /* Even child = odd-numbered item (1, 3, ...) due to mobile header being first child */
   .timeline-item {
     flex-direction: row;
-    justify-content: flex-end;
-    padding: 1rem 1.5rem 2.5rem 1rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 2rem calc(50% + 2rem) 2rem 2rem;
   }
 
-  .timeline-item:nth-child(even) {
-    flex-direction: row-reverse;
+  /* Odd child = even-numbered item (2, 4, ...) */
+  .timeline-item:nth-child(odd) {
+    justify-content: flex-end;
+    padding: 2rem 2rem 2rem calc(50% + 2rem);
   }
 }
 
@@ -85,7 +90,6 @@ Desktop (md+): alternating two-column, line centered
 @media (min-width: 768px) {
   .timeline-item-content {
     margin-top: 0;
-    width: calc(50% - 4rem);
     text-align: left;
   }
 }
@@ -100,6 +104,7 @@ Desktop (md+): alternating two-column, line centered
   height: 2.5rem;
   font-weight: 800;
   font-size: 1.25rem;
+  user-select: none;
 }
 
 @media (min-width: 640px) {
