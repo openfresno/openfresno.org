@@ -1,3 +1,4 @@
+import rectangleBlue from "@/../public/img/about/rectangle-blue.png";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";
@@ -17,11 +18,7 @@ export default function SidebarSection({ children, sectionType }) {
       </div>
       <div className="flex flex-col gap-10 lg:w-[411px] lg:shrink-0">
         <div>
-          <CenteredInImage
-            src="/img/about/rectangle-blue.png"
-            alt="rectangle"
-            float="right"
-          >
+          <CenteredInImage src={rectangleBlue} alt="rectangle" float="right">
             <div className="mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?

@@ -1,3 +1,4 @@
+import rectangleBlue from "@/../public/img/about/rectangle-blue.png";
 import AboutSectionPositionList from "@/app/about/components/aboutSectionPositionList";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import HeadingPair from "@/components/ui/HeadingPair";
@@ -34,11 +35,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
           <div
             className={`opportunities-get-started relative float-right h-fit w-[45%] max-lg:hidden`}
           >
-            <CenteredInImage
-              src="/img/about/rectangle-blue.png"
-              alt="rectangle"
-              float="right"
-            >
+            <CenteredInImage src={rectangleBlue} alt="rectangle" float="right">
               <div className="font mx-auto w-fit text-xl font-bold sm:text-3xl">
                 <span
                   className={`app-text--${SectionType.invert(sectionType)}`}
@@ -95,11 +92,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
           />
         </div>
         <div className={`relative h-fit w-full lg:hidden`}>
-          <CenteredInImage
-            src="/img/about/rectangle-blue.png"
-            alt="rectangle"
-            float="center"
-          >
+          <CenteredInImage src={rectangleBlue} alt="rectangle" float="center">
             <div className="font mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?

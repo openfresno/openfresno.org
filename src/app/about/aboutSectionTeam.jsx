@@ -1,3 +1,6 @@
+import danFey from "@/../public/img/about/dan_fey.jpg";
+import maryFeyNorris from "@/../public/img/about/mary_fey_norris.jpg";
+import nateBass from "@/../public/img/about/nate_bass.jpg";
 import AboutSectionTeamMember from "@/app/about/components/aboutSectionTeamMember";
 import { SectionType } from "@/utility/constants/theme";
 
@@ -34,17 +37,17 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
             className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4`}
           >
             <AboutSectionTeamMember
-              src={"/img/about/mary_fey_norris.jpg"}
+              src={maryFeyNorris}
               name="Mary Fey Norris"
               title="Executive Director, Open Fresno"
             />
             <AboutSectionTeamMember
-              src={"/img/about/dan_fey.jpg"}
+              src={danFey}
               name="Dan Fey"
               title="Executive Director, Open Fresno"
             />
             <AboutSectionTeamMember
-              src="/img/about/nate_bass.jpg"
+              src={nateBass}
               name="Nate Bass"
               title="Senior Director, Product"
             />

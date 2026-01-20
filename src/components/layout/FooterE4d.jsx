@@ -1,4 +1,7 @@
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import facebookIcon from "@/../public/img/socialmedia/facebook.svg";
+import twitterIcon from "@/../public/img/socialmedia/twitter.svg";
+import youtubeIcon from "@/../public/img/socialmedia/youtube.svg";
+import Image from "next/image";
 import Link from "next/link";
 
 /**
@@ -58,11 +61,12 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BasePathImage
-              src="/img/socialmedia/facebook.svg"
+            <Image
+              src={facebookIcon}
               alt="Facebook"
               width={46}
               height={46}
+              className="object-cover"
             />
           </Link>
           <Link
@@ -70,11 +74,12 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BasePathImage
-              src="/img/socialmedia/twitter.svg"
+            <Image
+              src={twitterIcon}
               alt="X"
               width={46}
               height={46}
+              className="object-cover"
             />
           </Link>
           <Link
@@ -82,11 +87,12 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BasePathImage
-              src="/img/socialmedia/youtube.svg"
+            <Image
+              src={youtubeIcon}
               alt="Youtube"
               width={46}
               height={46}
+              className="object-cover"
             />
           </Link>
         </section>

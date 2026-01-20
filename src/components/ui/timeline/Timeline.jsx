@@ -12,7 +12,7 @@ import React, { useEffect, useRef, useState } from "react";
  * @param {string} [props.className] optional CSS classes to apply to the root div element.
  */
 
-export default function Timeline({ className }) {
+export default function Timeline({ className = "" }) {
   const refContainer = useRef();
   const [timelineNumbers, setTimelineNumbers] = useState([]);
   const [clientRect, setClientRect] = useState();

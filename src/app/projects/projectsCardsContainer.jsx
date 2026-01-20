@@ -11,7 +11,7 @@ const ProjectsCardsContainer = ({
 }) => {
   return isLoading ? (
     <section className={`page-container app-color--${sectionType}`}>
-      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-18 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {Array.from({ length: 3 }).map((_, index) => (
           <ProjectCard
             key={index}
@@ -28,7 +28,7 @@ const ProjectsCardsContainer = ({
     </section>
   ) : error || projectsData.length === 0 ? (
     <section className={`page-container app-color--${sectionType}`}>
-      <div className="flex w-full flex-col flex-wrap justify-between gap-4 lg:flex-row">
+      <div className="mb-18 flex w-full flex-col flex-wrap justify-between gap-4 lg:flex-row">
         <span className={`project-cards-load-status-text`}>
           {error
             ? "Failed to load..."
@@ -38,7 +38,7 @@ const ProjectsCardsContainer = ({
     </section>
   ) : (
     <section className={`page-container app-color--${sectionType}`}>
-      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-18 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[...projectsData].map((project) => (
           <ProjectCard
             key={moment(project.updated_at)}

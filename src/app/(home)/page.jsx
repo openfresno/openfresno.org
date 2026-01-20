@@ -2,10 +2,17 @@ import Slider from "../../components/Slider";
 import LayoutE53 from "../../components/layout/LayoutE53";
 import Button from "../../components/ui/button/Button";
 import Timeline from "../../components/ui/timeline/Timeline";
-import BasePathImage from "../../integrations/gh-pages/BasePathImage";
+import logoBlue from "@/../public/assets/logo/logo-blue.svg";
+import trashAi from "@/../public/img/TrashAI2.png";
+import fresnoTowerCircle from "@/../public/img/fresno_tower_circle.png";
+import homeImage from "@/../public/img/home/home3.png";
+import learningBlocks from "@/../public/img/home/learningblocks.jpg";
+import openSacramento from "@/../public/img/partnership-icons/open-sacramento-black-transparent.svg";
+import rootAccess from "@/../public/img/partnership-icons/root-access-white-transparent.svg";
 import GeneralSection from "@/components/ui/GeneralSection";
 import ImageSection from "@/components/ui/ImageSection";
 import { SectionType } from "@/utility/constants/theme";
+import Image from "next/image";
 import Link from "next/link";
 
 /**
@@ -38,17 +45,18 @@ export default function HomePage() {
           </div>
           <div>
             <div className="home-landing-image">
-              <BasePathImage
-                src="/assets/logo/logo-blue.svg"
-                className="absolute -top-10 right-0"
+              <Image
+                src={logoBlue}
+                className="absolute -top-10 right-0 object-cover"
                 width={200}
                 height={397}
                 alt="Open Fresno logo blue"
               />
-              <BasePathImage
-                src="/img/fresno_tower_circle.png"
+              <Image
+                src={fresnoTowerCircle}
                 width={418}
                 height={397}
+                className="object-cover"
                 alt="Ariel photo of downtown Fresno and the iconic Tower Theatre."
               />
             </div>
@@ -73,7 +81,7 @@ export default function HomePage() {
           positive impact through technology and community engagement.
         </GeneralSection>
         <ImageSection
-          src={"/img/home/home3.png"}
+          src={homeImage}
           heading="What we do"
           subHeading={
             <>
@@ -156,10 +164,10 @@ export default function HomePage() {
                     platform!
                   </p>
                 </div>
-                <BasePathImage
-                  src="/img/home/learningblocks.jpg"
+                <Image
+                  src={learningBlocks}
                   alt="Learning Blocks"
-                  className="home-project-image"
+                  className="home-project-image object-cover"
                   width={918}
                   height={469}
                 />
@@ -172,10 +180,10 @@ export default function HomePage() {
                     images.
                   </p>
                 </div>
-                <BasePathImage
-                  src="/img/TrashAI2.png"
+                <Image
+                  src={trashAi}
                   alt="TrashAI"
-                  className="home-project-image"
+                  className="home-project-image object-cover"
                   width={918}
                   height={469}
                 />
@@ -188,10 +196,10 @@ export default function HomePage() {
                     of Fresno.
                   </p>
                 </div>
-                <BasePathImage
+                <Image
                   src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.png"
                   alt="Open Budget Sac"
-                  className="home-project-image"
+                  className="home-project-image object-cover"
                   width={918}
                   height={469}
                 />
@@ -211,18 +219,20 @@ export default function HomePage() {
             </p>
             <div className="mt-12 flex flex-col items-center gap-16 pb-20 sm:flex-row lg:mt-20">
               <Link href="https://rootaccess.org/">
-                <BasePathImage
-                  src="/img/partnership-icons/root-access-white-transparent.svg"
+                <Image
+                  src={rootAccess}
                   width={239}
                   height={146}
+                  className="object-cover"
                   alt="Root Access"
                 />
               </Link>
               <Link href="https://opensac.org">
-                <BasePathImage
-                  src="/img/partnership-icons/open-sacramento-black-transparent.svg"
+                <Image
+                  src={openSacramento}
                   width={242}
                   height={88}
+                  className="object-cover"
                   alt="Open Sacramento"
                 />
               </Link>

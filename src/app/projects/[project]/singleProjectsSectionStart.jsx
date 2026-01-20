@@ -1,9 +1,9 @@
 import Button from "../../../components/ui/button/Button";
 import HeadingPair from "@/components/ui/HeadingPair";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
 import moment from "moment";
+import Image from "next/image";
 
 /**
  * Single project start section.
@@ -21,9 +21,9 @@ export default function SingleProjectsSectionStart({
     >
       <div className={`page-container flex flex-col lg:flex-row-reverse`}>
         <div className={`w-fit lg:ml-8 lg:min-w-[60%]`}>
-          <BasePathImage
+          <Image
             alt={data.meta.title}
-            className={`border rounded-xl`}
+            className="border rounded-xl object-cover"
             src={
               data.meta.image_url
                 ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/${data.meta.image_url}`

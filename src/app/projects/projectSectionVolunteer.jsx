@@ -1,4 +1,5 @@
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import rectangleImage from "@/../public/img/about/rectangle.png";
+import Image from "next/image";
 import Link from "next/link";
 
 /**
@@ -23,9 +24,9 @@ export default function projectSectionVolunteer() {
         </p>
       </div>
       <div className={`project-volunteer-image-container`}>
-        <BasePathImage
-          className="project-volunteer-image"
-          src="/img/about/rectangle.png"
+        <Image
+          className="project-volunteer-image object-cover"
+          src={rectangleImage}
           alt="Volunteer with Open Fresno"
           width={400}
           height={300}

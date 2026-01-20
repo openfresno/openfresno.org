@@ -1,3 +1,4 @@
+import rectangleBlue from "@/../public/img/about/rectangle-blue.png";
 import CenteredInImage from "@/components/ui/CenteredInImage";
 import HeaderUnderline from "@/components/ui/HeaderUnderline";
 import { SectionType } from "@/utility/constants/theme";
@@ -33,11 +34,7 @@ export default function SingleProjectsVolunteer({
           </HeaderUnderline>
         </div>
         <div className={`get-started-bottom grow basis-0`}>
-          <CenteredInImage
-            src="/img/about/rectangle-blue.png"
-            alt="rectangle"
-            float="center"
-          >
+          <CenteredInImage src={rectangleBlue} alt="rectangle" float="center">
             <div className="mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?

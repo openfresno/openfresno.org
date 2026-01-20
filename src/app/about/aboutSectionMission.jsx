@@ -1,3 +1,4 @@
+import openDataDay from "@/../public/img/open_data_day_curved_blue.png";
 import ImageSection from "@/components/ui/ImageSection";
 import { SectionType } from "@/utility/constants/theme";
 
@@ -12,7 +13,7 @@ export default function AboutSectionMission({
     <ImageSection
       heading="OUR MISSION"
       subHeading="Driving Civic Innovation through Technology"
-      src="/img/open_data_day_curved_blue.png"
+      src={openDataDay}
       sectionType={sectionType}
     >
       At Open Fresno, we roll up our sleeves and dive into a wide range of

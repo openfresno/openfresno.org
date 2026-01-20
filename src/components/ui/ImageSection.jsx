@@ -1,11 +1,11 @@
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
+import Image from "next/image";
 
 export default function ImageSection({
   heading = "",
   subHeading = <></>,
   alt = "Open Data Day",
-  src = "/img/home/home3.png",
+  src,
   sectionType = SectionType.light,
   children = <></>,
 }) {
@@ -24,11 +24,11 @@ export default function ImageSection({
           </div>
         </div>
         <div className="grid items-center justify-end">
-          <BasePathImage
+          <Image
             alt={alt}
             width={728}
             height={577}
-            className="home-split-image translate-x-6 lg:translate-x-10"
+            className="home-split-image translate-x-6 lg:translate-x-10 object-cover"
             src={src}
           />
         </div>

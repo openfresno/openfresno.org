@@ -1,4 +1,5 @@
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import searchIcon from "@/../public/img/form-element/search.svg";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -98,7 +99,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
 
   return (
     <section
-      className={`mx-auto mb-8 max-w-[calc(var(--screen-xxl)+80px)] px-4 lg:px-8`}
+      className={`mx-auto mb-4 max-w-[calc(var(--screen-xxl)+80px)] px-4 lg:px-8`}
     >
       <form
         className={`flex w-full flex-col gap-4 lg:flex-row lg:gap-8`}
@@ -108,7 +109,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
           <label
             id="project-search-label"
             htmlFor="project-search"
-            className="form-control-label min-h-[1.4375em] min-w-px"
+            className="form-control-label min-h-7 min-w-px"
           >
             {" "}
           </label>
@@ -128,11 +129,12 @@ const ProjectSearch = ({ data, setProjectsData }) => {
               type="submit"
               onClick={(e) => e.preventDefault()}
             >
-              <BasePathImage
-                src="/img/form-element/search.svg"
+              <Image
+                src={searchIcon}
                 alt="Search icon"
                 width={24}
                 height={24}
+                className="object-cover"
               />
             </button>
           </div>

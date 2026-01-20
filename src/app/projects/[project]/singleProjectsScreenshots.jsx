@@ -1,7 +1,7 @@
 import Slider from "@/components/Slider";
 import SimpleDialog from "@/components/ui/SimpleDialog";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function SingleProjectsScreenshots({
@@ -11,7 +11,7 @@ export default function SingleProjectsScreenshots({
   const [showDialog, setShowDialog] = useState(false);
   const [startingSlide, setStartingSlide] = useState(0);
   let shownImages = data.meta.screenshots.map((screenshot, i) => (
-    <BasePathImage
+    <Image
       key={data.full_name.concat(screenshot)}
       onClick={() => {
         if (
@@ -23,8 +23,7 @@ export default function SingleProjectsScreenshots({
           setStartingSlide(i);
         }
       }}
-      className={`keen-slider__slide sharpen @container aspect-7/4 ${showDialog ? "" : "lg:cursor-pointer"}`}
-      className={`@max-lg:border @max-lg:rounded-xl`}
+      className={`keen-slider__slide sharpen @container aspect-7/4 @max-lg:border @max-lg:rounded-xl object-cover ${showDialog ? "" : "lg:cursor-pointer"}`}
       src={`https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${screenshot}`}
       alt={`${data.meta.title} screenshot ${i + 1}`}
       width={700}

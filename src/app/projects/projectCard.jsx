@@ -1,7 +1,7 @@
 import Button from "@/components/ui/button/Button";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
+import Image from "next/image";
 
 export default function ProjectCard({
   isLoading = true,
@@ -23,9 +23,8 @@ export default function ProjectCard({
         >
           {titleCase(projectStatus)}
         </div>
-        <BasePathImage
-          className="aspect-7/4 w-full"
-          className={"rounded-xl"}
+        <Image
+          className="aspect-7/4 w-full rounded-xl object-cover"
           src={imgUrl}
           alt={projectTitle || "Project image"}
           width={350}

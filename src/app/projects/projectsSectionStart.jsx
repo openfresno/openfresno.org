@@ -1,7 +1,11 @@
+import arrowRightIcon from "@/../public/img/meeting-card/arrow-right.svg";
+import calendarIcon from "@/../public/img/meeting-card/calender.svg";
+import clockIcon from "@/../public/img/meeting-card/clock.svg";
+import documentIcon from "@/../public/img/meeting-card/document-txt.svg";
 import HeaderUnderline from "@/components/ui/HeaderUnderline";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 import { getWednesday } from "@/utility/get-wednesday";
+import Image from "next/image";
 import Link from "next/link";
 
 /**
@@ -14,11 +18,9 @@ export default function ProjectsSectionStart({
   return (
     // TODO fix styling classes to represent the projects page?
     <section
-      className={`mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] py-12 max-lg:flex-col lg:px-6 lg:py-24 app-color--${sectionType}`}
+      className={`mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] py-12 max-lg:flex-col px-6 lg:px-10 lg:py-24 app-color--${sectionType}`}
     >
-      <div
-        className={`projects-section-text-container w-full grow-3 basis-0 max-lg:px-6`}
-      >
+      <div className={`projects-section-text-container w-full grow-3 basis-0`}>
         <HeaderUnderline
           title="Projects"
           description={
@@ -49,9 +51,9 @@ export default function ProjectsSectionStart({
             className={`flex flex-col gap-4 border-t border-neutral-500 p-8`}
           >
             <div>
-              <BasePathImage
-                className="mr-4 inline-block"
-                src="/img/meeting-card/calender.svg"
+              <Image
+                className="mr-4 inline-block object-cover"
+                src={calendarIcon}
                 alt="Calendar"
                 width={24}
                 height={24}
@@ -61,9 +63,9 @@ export default function ProjectsSectionStart({
               </span>
             </div>
             <div>
-              <BasePathImage
-                className="mr-4 inline-block"
-                src="/img/meeting-card/clock.svg"
+              <Image
+                className="mr-4 inline-block object-cover"
+                src={clockIcon}
                 alt="Clock"
                 width={24}
                 height={24}
@@ -71,9 +73,9 @@ export default function ProjectsSectionStart({
               <span className={`meeting-card-list-item-text`}>6:30pm PST</span>
             </div>
             <div>
-              <BasePathImage
-                className="mr-4 inline-block"
-                src="/img/meeting-card/document-txt.svg"
+              <Image
+                className="mr-4 inline-block object-cover"
+                src={documentIcon}
                 alt="Document"
                 width={24}
                 height={24}
@@ -94,9 +96,9 @@ export default function ProjectsSectionStart({
               aria-label="Link to Meetup."
             >
               <span>Go to meetup</span>
-              <BasePathImage
-                className="-mt-0.5 ml-2 inline-block"
-                src="/img/meeting-card/arrow-right.svg"
+              <Image
+                className="-mt-0.5 ml-2 inline-block object-cover"
+                src={arrowRightIcon}
                 alt="Arrow right"
                 width={16}
                 height={16}

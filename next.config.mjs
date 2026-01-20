@@ -12,9 +12,6 @@ const nextConfig = {
     unoptimized: true,
   },
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
-  },
   reactCompiler: true,
 };
 
