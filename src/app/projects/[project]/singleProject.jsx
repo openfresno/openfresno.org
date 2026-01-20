@@ -88,9 +88,6 @@ export default function SingleProject({
       ) : (
         ""
       )}
-      <PageContainer noFlex className="max-lg:hidden" sectionType={sectionType}>
-        <hr className={`mt-6 mb-2 h-px border-0 bg-neutral-400 lg:my-6`} />
-      </PageContainer>
       <SingleProjectsVolunteer
         sectionType={SectionType.invert(sectionType)}
         data={data}

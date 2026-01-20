@@ -38,9 +38,10 @@ export default function Faq() {
     <div className="faq-main">
       <FaqSectionStart sectionType={SectionType.light} />
       <FaqSectionNav sectionType={SectionType.light} topics={tableOfContents} />
-      <section className="faq-container-margins mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] flex-col gap-0 px-6 py-6 lg:py-12">
+      <section className="faq-container-margins mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] flex-col gap-0 px-6 py-t lg:pt-12 lg:pb-17">
         <MDXRemote source={fileContent} components={MDXComponents} />
       </section>
+      <hr className="mx-auto h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400)" />
     </div>
   );
 }

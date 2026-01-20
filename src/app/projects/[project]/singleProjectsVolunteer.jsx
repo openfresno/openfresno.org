@@ -14,7 +14,7 @@ export default function SingleProjectsVolunteer({
   return (
     <section
       id="project-section-start"
-      className={`py-6 app-color--${sectionType}`}
+      className={`mt-8 py-6 app-color--${sectionType}`}
     >
       <div className={`page-container flex flex-col lg:flex-row lg:gap-[20%]`}>
         <div

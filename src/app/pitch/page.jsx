@@ -27,7 +27,7 @@ export default function PitchPage() {
         them into reality. Pitch your project to make a positive impact on
         Fresno using technology and civic engagement.
       </GeneralSection>
-      <hr className="mx-auto mb-12 h-px max-w-[calc(var(--screen-xxl)+80px)] border-0 bg-(--neutral-400) lg:mb-24" />
+      <hr className="mx-auto mb-12 h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400) lg:mb-24" />
       <SidebarSection sectionType={SectionType.light}>
         <div className="flex flex-col gap-6">
           <HeaderUnderline
@@ -41,7 +41,7 @@ export default function PitchPage() {
         </div>
         <Steps sectionType={SectionType.light} steps={instructionData}></Steps>
       </SidebarSection>
-      <hr className="border-b-.5 border-(--neutral-400) w-full mt-18" />
+      <hr className="mx-auto h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400) mt-18 " />
     </LayoutE53>
   );
 }

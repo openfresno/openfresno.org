@@ -97,7 +97,7 @@ export default function FooterE4d() {
           </Link>
         </section>
       </div>
-      <div className="border-t-1">
+      <div className="border-t border-(--neutral-300)">
         <div className="footer-bottom-content">
           <div className="caption-footer">Open Fresno</div>
           <div className="caption-regular-uppercase space-x-10">

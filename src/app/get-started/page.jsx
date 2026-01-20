@@ -34,7 +34,7 @@ export default function GetStartedPage() {
         you&apos;ll find step-by-step instructions below to help you get started
         on your journey of civic tech and community empowerment.
       </GeneralSection>
-      <hr className="border-b-.5 border-(--neutral-400) w-full mb-18" />
+      <hr className="mx-auto h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400) mb-18" />
       <SidebarSection sectionType={SectionType.light}>
         <div className="flex flex-col gap-6">
           <HeaderUnderline
@@ -51,7 +51,7 @@ export default function GetStartedPage() {
         </div>
         <Steps sectionType={SectionType.light} steps={instructionData} />
       </SidebarSection>
-      <hr className="border-b-.5 border-(--neutral-400) w-full mt-18" />
+      <hr className="mx-auto h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400) mt-18" />
     </LayoutE53>
   );
 }
