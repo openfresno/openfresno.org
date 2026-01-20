@@ -70,7 +70,7 @@
         /* Remove Tailwind's space-y margin when in flex-row */
         > * {
           margin-top: 0 !important;
-		  max-width: 300px;
+          max-width: 300px;
         }
       }
     }

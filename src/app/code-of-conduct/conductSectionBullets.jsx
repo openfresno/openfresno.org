@@ -98,9 +98,11 @@ export default function conductSectionBullets({ sectionType }) {
       </div>
 
       <p className={`conduct-sub-heading-main pt-6`}>
-        <b>Open Fresno reserves the right to ask anyone in violation of these
-        policies not to participate in Open Fresno network activities, events,
-        and digital forums.</b>
+        <b>
+          Open Fresno reserves the right to ask anyone in violation of these
+          policies not to participate in Open Fresno network activities, events,
+          and digital forums.
+        </b>
       </p>
     </section>
   );
