@@ -74,7 +74,7 @@ export default function HomePage() {
             civic-minded individuals{" "}
           </b>
           who come together to use technology and open data to address civic
-          challenges and improve public services in the Central California.
+          challenges and improve public services in the Central Valley of California.
           <br />
           <br />
           We are passionate about fostering civic innovation and creating
@@ -94,7 +94,7 @@ export default function HomePage() {
           <b>
             Our mission is done by uniting programmers, designers, and other
             talents, we transform ideas into tangible solutions that impact
-            lives throughout Central California.
+            lives throughout the Central Valley.
           </b>{" "}
           Together, we drive innovation forward, building a future where open
           source technology empowers citizens and uplifts Fresno and the
@@ -183,22 +183,6 @@ export default function HomePage() {
                 <Image
                   src={trashAi}
                   alt="TrashAI"
-                  className="home-project-image object-cover"
-                  width={918}
-                  height={469}
-                />
-              </div>
-              <div className="keen-slider__slide">
-                <div>
-                  <h2 className="heading-medium">Open Budget Sac</h2>
-                  <p className="mt-4">
-                    Fiscal transparency and visualization web app for the City
-                    of Fresno.
-                  </p>
-                </div>
-                <Image
-                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.png"
-                  alt="Open Budget Sac"
                   className="home-project-image object-cover"
                   width={918}
                   height={469}
