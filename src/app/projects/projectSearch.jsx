@@ -66,7 +66,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
           browseObject(b, keys).localeCompare(browseObject(a, keys));
         };
     }
-    filteredProjects = filteredProjects.sort(
+    filteredProjects = filteredProjects.toSorted(
       (a, b) => (curAscending ? 1 : -1) * sortFunction(a, b),
     );
     setProjectsData([...filteredProjects]);

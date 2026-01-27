@@ -41,7 +41,7 @@ const ProjectsCardsContainer = ({
       <div className="mb-18 grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {[...projectsData].map((project) => (
           <ProjectCard
-            key={moment(project.updated_at)}
+            key={project.id}
             sectionType={sectionType}
             projectStatus={project.meta.project_status}
             projectTitle={project.meta.title}

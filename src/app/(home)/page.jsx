@@ -1,4 +1,5 @@
-import Slider from "../../components/Slider";
+import dynamic from "next/dynamic";
+const Slider = dynamic(() => import("../../components/Slider"));
 import LayoutE53 from "../../components/layout/LayoutE53";
 import Button from "../../components/ui/button/Button";
 import Timeline from "../../components/ui/timeline/Timeline";

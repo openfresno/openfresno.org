@@ -15,6 +15,11 @@ import { jsonResponse } from "@/utility/response";
 import { useState } from "react";
 import useSWR from "swr";
 
+const fetcher = (...args) =>
+  fetch(...args)
+    .then(jsonResponse)
+    .then(fetchGithubSingleProject);
+
 /**
  * Page for displaying a single project
  *
@@ -25,23 +30,17 @@ export default function SingleProject({
   sectionType = SectionType.light,
 }) {
   const [contributeAs, setContributeAs] = useState("");
-  const fetcher = (...args) =>
-    fetch(...args)
-      .then(jsonResponse)
-      .then(fetchGithubSingleProject)
-      .then((data) => {
-        if (data.meta.contributing) {
-          let keys = Object.keys(data.meta.contributing);
-          if (keys.length > 0) setContributeAs(keys[0]);
-        }
-        return data;
-      });
 
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/repos/${githubFullName}`,
     fetcher,
     { shouldRetryOnError: false }, // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
   );
+
+  if (data && !contributeAs && data.meta.contributing) {
+    const keys = Object.keys(data.meta.contributing);
+    if (keys.length > 0) setContributeAs(keys[0]);
+  }
 
   if (error) return <div>failed to load</div>;
   if (isLoading) return <div>loading...</div>;
@@ -55,17 +54,13 @@ export default function SingleProject({
       </PageContainer>
       {data.meta.screenshots ? (
         <SingleProjectsScreenshots sectionType={sectionType} data={data} />
-      ) : (
-        ""
-      )}
+      ) : null}
       {data.meta.roadmap ? (
         <SingleProjectsRoadmap
           sectionType={SectionType.invert(sectionType)}
           data={data}
         />
-      ) : (
-        ""
-      )}
+      ) : null}
       {contributeAs !== "" ? (
         <>
           <SingleProjectsContribute
@@ -80,14 +75,10 @@ export default function SingleProject({
             sectionType={sectionType}
           />
         </>
-      ) : (
-        ""
-      )}
+      ) : null}
       {data.meta.resources ? (
         <SingleProjectsResources sectionType={sectionType} data={data} />
-      ) : (
-        ""
-      )}
+      ) : null}
       <SingleProjectsVolunteer
         sectionType={SectionType.invert(sectionType)}
         data={data}

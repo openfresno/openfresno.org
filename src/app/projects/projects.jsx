@@ -5,7 +5,7 @@ import ProjectsCardsContainer from "@/app/projects/projectsCardsContainer";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
 import { SectionType } from "@/utility/constants/theme";
 import { jsonResponse } from "@/utility/response";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import useSWR from "swr";
 
 const fetcher = (...args) =>
@@ -19,6 +19,7 @@ const fetcher = (...args) =>
  */
 export default function Projects({ githubOwner }) {
   const [projectsData, setProjectsData] = useState([]);
+  const [prevData, setPrevData] = useState(null);
 
   const { data, error, isLoading } = useSWR(
     `https://api.github.com/orgs/${githubOwner}/repos?per_page=20&sort=updated&direction=desc`,
@@ -26,13 +27,12 @@ export default function Projects({ githubOwner }) {
     { shouldRetryOnError: false }, // Auto retries quickly exhaust unauthenticated api requests to GitHub, which breaks the page
   );
 
-  useEffect(() => {
-    if (data) {
-      setProjectsData(
-        data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at)),
-      );
-    }
-  }, [data, setProjectsData]);
+  if (data && data !== prevData) {
+    setPrevData(data);
+    setProjectsData(
+      data.toSorted((a, b) => new Date(b.updated_at) - new Date(a.updated_at)),
+    );
+  }
 
   return (
     <div className={`projects-main`}>
