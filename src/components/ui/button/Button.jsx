@@ -1,11 +1,9 @@
 import { HamburgerStaggered } from "@/components/ui/icon/HamburgerStaggered";
 import { IconX } from "@/components/ui/icon/IconX";
-import {
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp,
-} from "@/integrations/tabler-icon";
+import { ChevronDown } from "@/integrations/tabler-icon/ChevronDown";
+import { ChevronLeft } from "@/integrations/tabler-icon/ChevronLeft";
+import { ChevronRight } from "@/integrations/tabler-icon/ChevronRight";
+import { ChevronUp } from "@/integrations/tabler-icon/ChevronUp";
 import Link from "next/link";
 
 /**
