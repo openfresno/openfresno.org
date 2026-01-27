@@ -1,6 +1,6 @@
 "use client";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 /**
  * a responsive, multi-step timeline component for displaying a list of opportunities.
@@ -30,11 +30,12 @@ export default function Timeline({ className = "" }) {
     };
   }, []);
 
-  function updateTimelineNumbers(timelineNumber, bounds) {
+  const updateTimelineNumbers = useCallback((timelineNumber, bounds) => {
     setTimelineNumbers((previousTimelineNumbers) => {
       if (previousTimelineNumbers[timelineNumber]) {
-        return previousTimelineNumbers.map((_, i) => {
+        return previousTimelineNumbers.map((item, i) => {
           if (i === timelineNumber) return bounds;
+          return item;
         });
       } else {
         let copy = [...previousTimelineNumbers];
@@ -42,7 +43,7 @@ export default function Timeline({ className = "" }) {
         return copy;
       }
     });
-  }
+  }, []);
 
   return (
     <div className={`timeline ${className}`} ref={refContainer}>

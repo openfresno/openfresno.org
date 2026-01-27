@@ -74,7 +74,8 @@ export default function HomePage() {
             civic-minded individuals{" "}
           </b>
           who come together to use technology and open data to address civic
-          challenges and improve public services in the Central Valley of California.
+          challenges and improve public services in the Central Valley of
+          California.
           <br />
           <br />
           We are passionate about fostering civic innovation and creating
