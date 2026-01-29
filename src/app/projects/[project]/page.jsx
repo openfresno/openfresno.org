@@ -9,6 +9,11 @@ export async function generateStaticParams() {
     `https://api.github.com/orgs/${githubOwner}/repos?per_page=21&sort=updated&direction=desc`,
   ).then((res) => res.json());
 
+  if (!Array.isArray(ghResponses)) {
+    console.error("GitHub API error:", ghResponses);
+    return [];
+  }
+
   return ghResponses.map((ghResponse) => ({
     project: ghResponse.name,
   }));
