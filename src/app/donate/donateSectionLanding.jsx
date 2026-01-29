@@ -1,6 +1,7 @@
 import GeneralSection from "@/components/ui/GeneralSection";
 import PageContainer from "@/components/ui/PageContainer";
 import { SectionType } from "@/utility/constants/theme";
+import Button from "../../components/ui/button/Button";
 
 /**
  * The landing section for donations.
@@ -31,15 +32,9 @@ export default function DonateSectionLanding({
         in Central California. Thank you for your generous support!
       </GeneralSection>
       <PageContainer sectionType={sectionType} divClassName={"items-center"}>
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-
-        {/*
-        commented out until there's a fresno alternative.
-        <stripe-buy-button
-          buy-button-id="buy_btn_1POWMWLuvTadPilhtpcuuZL1"
-          publishable-key="pk_live_51KlwVzLuvTadPilhP2f7hyPjlLqcDK804eFojbSZJOJhowUXFMfCvKKBha7fOfUYlGsTUZJzy4UbKmRSueQnIIqT00MDGq54rB"
-        ></stripe-buy-button>
-        */}
+        <Button className="btn btn--grow" href="https://givebutter.com/openfresno">
+          Donate Now
+        </Button>
       </PageContainer>
     </>
   );
