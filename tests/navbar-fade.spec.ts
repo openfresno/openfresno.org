@@ -45,15 +45,28 @@ test("navbar background fades in on scroll", async ({ page }) => {
       }
       // If animation-timeline isn't supported, the animation may be invalidated.
       // Verify the keyframes exist in the document's stylesheets as a fallback.
-      for (const sheet of document.styleSheets) {
-        try {
-          for (const rule of sheet.cssRules) {
-            if (
-              rule instanceof CSSKeyframesRule &&
-              rule.name === "fade-in-navbar"
-            ) {
+      // Note: keyframes may be nested inside @layer rules, so we check recursively.
+      const findKeyframes = (rules: CSSRuleList): boolean => {
+        for (const rule of rules) {
+          if (
+            rule instanceof CSSKeyframesRule &&
+            rule.name === "fade-in-navbar"
+          ) {
+            return true;
+          }
+          // Check inside @layer blocks
+          if (rule instanceof CSSLayerBlockRule && rule.cssRules) {
+            if (findKeyframes(rule.cssRules)) {
               return true;
             }
+          }
+        }
+        return false;
+      };
+      for (const sheet of document.styleSheets) {
+        try {
+          if (findKeyframes(sheet.cssRules)) {
+            return true;
           }
         } catch {
           // Cross-origin stylesheets may throw
