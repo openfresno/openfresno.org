@@ -5,8 +5,7 @@ website. Help us make the site better by [forking it](https://help.github.com/ar
 or features, and [submitting a pull request](https://help.github.com/articles/creating-a-pull-request/)!
 
 > [!NOTE]
-> Learn about the project at our documentation
-> website https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/get-started--docs.
+> Learn about Open Fresno at the [documentation website](https://openfresno.github.io/fe-openfresno.org-doc).
 
 ## Get started
 
@@ -22,8 +21,7 @@ This is a Next.js static site. Get started by downloading the code and running t
 
 ## Test
 
-Add critical end-to-end tests to the [tests/](/tests) folder. Accessibility tests use
-the [documentation website](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/test--docs).
+Add critical end-to-end tests to the [tests/](/tests) folder. All other tests should be in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
 
 ## Deploy
 
