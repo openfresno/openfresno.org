@@ -16,7 +16,7 @@ export default defineConfig({
   reporter: process.env.CI ? "list" : "html",
   use: {
     baseURL: "http://localhost:3000",
-    headless: !process.env.CI,
+    headless: !!process.env.CI,
     trace: "on-first-retry",
     video: "on-first-retry",
   },
