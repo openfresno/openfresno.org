@@ -91,10 +91,6 @@
   margin-top: var(--navbar-height);
 }
 
-.toolbar-after-content-with-banner {
-  margin-top: var(--navbar-height-with-banner);
-}
-
 /*.sharpen {*/
 /*  image-rendering: -webkit-optimize-contrast;*/
 /*  image-rendering: crisp-edges;*/
