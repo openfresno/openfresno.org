@@ -23,26 +23,27 @@ const NAV_LINKS = [
  * @returns {JSX.Element}
  */
 export default function NavbarE7e({ fade = false }) {
-  const [extendedMenuVisible, showExtendedMenu] = useState(false);
+  const [menuPathname, setMenuPathname] = useState(null);
   const pathname = usePathname();
   const navbarRef = useRef(null);
+  const extendedMenuVisible = menuPathname === pathname;
 
-  useEffect(() => {
-    showExtendedMenu(false);
-  }, [pathname]);
+  const showExtendedMenu = (visible) => {
+    setMenuPathname(visible ? pathname : null);
+  };
 
   useEffect(() => {
     if (!extendedMenuVisible) return;
 
     function handleClickOutside(event) {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        showExtendedMenu(false);
+        setMenuPathname(null);
       }
     }
 
     function handleKeyDown(event) {
       if (event.key === "Escape") {
-        showExtendedMenu(false);
+        setMenuPathname(null);
       }
     }
 
