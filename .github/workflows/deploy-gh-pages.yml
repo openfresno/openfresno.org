@@ -21,7 +21,7 @@
 #     static_site_generator: next
 # ```
 
-name: CI & CD (Test and Deploy)
+name: Test and Deploy
 
 on:
   push:
