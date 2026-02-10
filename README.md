@@ -16,7 +16,7 @@ This is a Next.js static site. Get started by downloading the code and running t
 
 ## Contribute
 
-- [Help wanted](https://github.com/openfresno/openfresno.org/issues)
+- See our projects at https://openfresno.org/projects.
 - Come to our virtual [Open Fresno's Hack Night](https://www.meetup.com/openfresno/).
 
 ## Test
