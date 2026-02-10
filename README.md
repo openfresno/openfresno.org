@@ -21,7 +21,7 @@ This is a Next.js static site. Get started by downloading the code and running t
 
 ## Test
 
-Add critical end-to-end tests to the [tests/](/tests) folder. All other tests should be in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
+Add critical end-to-end tests in the [tests/](/tests) folder. All other tests should be in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
 
 ## Deploy
 
