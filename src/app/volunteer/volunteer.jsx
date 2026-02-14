@@ -27,6 +27,25 @@ import {
   Cloud,
 } from "lucide-react";
 
+/**
+ * Volunteer Form Configuration
+ *
+ * Defines the structure of the volunteer application wizard.
+ * Each object in the array represents a sequential section (step) of the form.
+ *
+ * Structure:
+ * @property {string} section - The title of the form section (e.g., "Contact Information").
+ * @property {Array<Object>} fields - An array of field definition objects for this section.
+ *
+ * Field Object Structure:
+ * @property {string} id - Unique identifier for the field (used as the form data key).
+ * @property {string} type - Input type: "text", "email", "radio", "checkbox_single", "checkbox_group", "select", "textarea".
+ * @property {string} label - The question or prompt displayed to the user.
+ * @property {boolean} required - If true, validation prompts the user to complete this field.
+ * @property {Array<string|Object>} [options] - Options for multi-choice inputs.
+ *    - Can be an array of strings (simple text options).
+ *    - Can be an array of objects: { label: string, value: string, icon: Component }.
+ */
 export const volunteer = [
   {
     section: "Agreements",
@@ -231,7 +250,7 @@ export const volunteer = [
         id: "connection_source",
         type: "select",
         label: "How did you hear about us?",
-        required: false,
+        required: true,
         options: [
           "OpenSacramento Website",
           "Email Newsletters",

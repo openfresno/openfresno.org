@@ -1,6 +1,23 @@
 "use client";
 import React, { useEffect } from "react";
 
+/**
+ * FormInput Component
+ *
+ * Renders a specific input field based on the provided configuration in the `field` prop.
+ * Handles various input types including text, email, select, radio, and checkboxes.
+ *
+ * @param {Object} props - The component props.
+ * @param {Object} props.field - The field configuration object.
+ * @param {string} props.field.id - The unique identifier for the field.
+ * @param {string} props.field.type - The type of input to render (text, email, select, radio, checkbox_group, checkbox_single).
+ * @param {string} props.field.label - The label text for the field.
+ * @param {string} [props.field.placeholder] - Optional placeholder text.
+ * @param {Array<string|Object>} [props.field.options] - Options for select, radio, or checkbox_group inputs.
+ * @param {any} props.value - The current value of the field from the form state.
+ * @param {Function} props.onChange - Handler function to update the form state.
+ * @returns {JSX.Element|null} The rendered input element or null if type is unrecognized.
+ */
 const FormInput = ({ field, value, onChange }) => {
   switch (field.type) {
     case "text":
@@ -75,7 +92,10 @@ const FormInput = ({ field, value, onChange }) => {
             }
           />
           <span className="checkbox-single-box-content">
-            <span className="checkbox-box-label">{field.label}</span>
+            <span className="checkbox-box-label">
+              {field.label}
+              {field.required && <span className="required-mark">*</span>}
+            </span>
           </span>
         </label>
       );
@@ -95,7 +115,7 @@ const FormInput = ({ field, value, onChange }) => {
                   type="checkbox"
                   name={field.id}
                   value={val}
-                  checked={value?.includes(val)}
+                  checked={value?.includes(val) ?? false}
                   onChange={onChange}
                 />
                 <span className="checkbox-box-content">
@@ -114,12 +134,34 @@ const FormInput = ({ field, value, onChange }) => {
   }
 };
 
+/**
+ * Form Component
+ *
+ * Renders a complete form section containing multiple inputs based on the configuration.
+ * It manages the rendering of labels and delegates input rendering to `FormInput`.
+ *
+ * @param {Object} props - The component props.
+ * @param {Object} props.formSection - The configuration for the current form section.
+ * @param {string} props.formSection.section - The title of the section.
+ * @param {Array<Object>} props.formSection.fields - Array of field configuration objects.
+ * @param {number} props.sectionIndex - The index of the current section in the wizard.
+ * @param {Object} props.formData - The current state of the form data.
+ * @param {Function} props.setFormData - State setter for form data.
+ * @returns {JSX.Element} The rendered form section.
+ */
 const Form = ({ formSection, sectionIndex, formData, setFormData }) => {
   const { section, fields } = formSection;
   useEffect(() => {
     console.log(section, fields);
   }, []);
 
+  /**
+   * Handles input changes and updates the form data state.
+   * Special logic handles `checkbox_group` arrays (adding/removing values)
+   * vs standard value updates for other input types.
+   *
+   * @param {Object} e - The event object.
+   */
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
 
@@ -138,41 +180,6 @@ const Form = ({ formSection, sectionIndex, formData, setFormData }) => {
     }
   };
 
-  let inputTags = {
-    text: (
-      <input
-        value={formData.text || ""}
-        type="text"
-        onChange={handleChange}
-        name="text"
-      />
-    ),
-    email: (
-      <input
-        value={formData.email || ""}
-        type="email"
-        onChange={handleChange}
-        name="email"
-      />
-    ),
-    radio: (
-      <input
-        value={formData.radio || ""}
-        type="radio"
-        onChange={handleChange}
-        name="radio"
-      />
-    ),
-    checkbox_group: (
-      <input
-        value={formData.checkbox_group || ""}
-        type="checkbox"
-        onChange={handleChange}
-        name="checkbox_group"
-      />
-    ),
-  };
-
   return (
     <div className="form-section">
       <h2 className="heading-secondary">{section}</h2>
@@ -180,7 +187,12 @@ const Form = ({ formSection, sectionIndex, formData, setFormData }) => {
       <div className="input-section">
         {fields.map((field) => (
           <div className="input-group" key={field.id}>
-            <label htmlFor={field.id}>{field.label}</label>
+            {field.type !== "checkbox_single" && (
+              <label htmlFor={field.id}>
+                {field.label}
+                {field.required && <span className="required-mark">*</span>}
+              </label>
+            )}
             <FormInput
               field={field}
               value={formData[field.id]}

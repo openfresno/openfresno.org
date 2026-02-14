@@ -1,4 +1,19 @@
-/* ===== Form Component Styles - Clean & Spacious Layout ===== */
+/**
+ * form.css
+ *
+ * Styles for the volunteer application form wizard.
+ * Implements a card-based design system with clean inputs, custom checkbox/radio styles,
+ * and responsive layouts (grid to list transformation on mobile).
+ *
+ * Sections:
+ * - Container & Layout
+ * - Typography
+ * - Input Fields (Text, Email, Select, Textarea)
+ * - Option Boxes (Radio & Checkbox Cards)
+ * - Single Checkbox (Agreements)
+ * - Navigation Buttons
+ * - Mobile Optimizations
+ */
 
 .form-section {
   /* Defined surface card - clean white bg with subtle lift */
@@ -340,4 +355,73 @@
 .form-action-btn.btn-grow:hover {
   background: var(--primary-700);
   box-shadow: 0 4px 12px rgba(0, 52, 174, 0.25);
+}
+
+/* Required field asterisk */
+.required-mark {
+  color: #dc2626; /* Red-600 to match error state */
+  margin-left: 0.25rem;
+  font-weight: 700;
+}
+
+/* ===== Mobile Responsiveness Optimizations ===== */
+@media (max-width: 640px) {
+  .form-section {
+    padding: 1.25rem; /* Tighter padding */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  }
+
+  .form-section .heading-secondary {
+    font-size: 1.5rem; /* Smaller heading */
+    margin-bottom: 1.75rem;
+  }
+
+  .input-section {
+    gap: 1.5rem; /* Less vertical gap */
+  }
+
+  /* Compact Options */
+  .radio-box,
+  .checkbox-box {
+    padding: 1rem 0.75rem; /* Reduced padding */
+    min-height: auto; /* Allow flexibility */
+    gap: 0.5rem;
+  }
+
+  .radio-box-content,
+  .checkbox-box-content {
+    flex-direction: row; /* Horizontal layout on mobile saves vertical space! */
+    justify-content: flex-start;
+    text-align: left;
+    gap: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .radio-box-content svg,
+  .checkbox-box-content svg {
+    width: 1.5rem; /* Smaller icon */
+    height: 1.5rem;
+    margin-bottom: 0; /* logic change handled by flex-row */
+    flex-shrink: 0;
+  }
+
+  .radio-box-label,
+  .checkbox-box-label {
+    font-size: 0.875rem; /* Slightly smaller text */
+    text-align: left;
+  }
+
+  /* Adjust indicator position for horizontal layout if needed */
+  .radio-indicator,
+  .checkbox-indicator {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  /* Ensure 1 column grid */
+  .options-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }
