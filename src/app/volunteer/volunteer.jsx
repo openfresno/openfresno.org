@@ -1,3 +1,32 @@
+import {
+  User,
+  Users,
+  Code,
+  PenTool,
+  Database,
+  Heart,
+  BookOpen,
+  Briefcase,
+  Megaphone,
+  Network,
+  Award,
+  HelpCircle,
+  Layers,
+  Server,
+  Layout,
+  Monitor,
+  Cpu,
+  Globe,
+  Search,
+  Image,
+  ClipboardCheck,
+  Zap,
+  Target,
+  BarChart,
+  Box,
+  Cloud,
+} from "lucide-react";
+
 export const volunteer = [
   {
     section: "Agreements",
@@ -8,17 +37,17 @@ export const volunteer = [
         label: "Are you 16 years or older?",
         required: true,
         options: [
-          { label: "Yes, I am 16 or older.", value: "yes_16_plus" },
-          { label: "No, I am younger than 16.", value: "under_16" }
-        ]
+          { label: "Yes, I am 16 or older.", value: "yes_16_plus", icon: User },
+          { label: "No, I am younger than 16.", value: "under_16", icon: User },
+        ],
       },
       {
         id: "code_of_conduct",
         type: "checkbox_single",
         label: "I agree to the Code of Conduct.",
-        required: true
-      }
-    ]
+        required: true,
+      },
+    ],
   },
 
   {
@@ -28,13 +57,13 @@ export const volunteer = [
         id: "first_name",
         type: "text",
         label: "First Name",
-        required: true
+        required: true,
       },
       {
         id: "last_name",
         type: "text",
         label: "Last Name",
-        required: true
+        required: true,
       },
       {
         id: "pronouns",
@@ -42,31 +71,31 @@ export const volunteer = [
         label: "What are your pronouns?",
         required: true,
         options: [
-          { label: "They / Them / Their", value: "they" },
-          { label: "She / Her / Hers", value: "she" },
-          { label: "He / Him / His", value: "he" },
-          { label: "Other", value: "other" }
-        ]
+          { label: "They / Them", value: "they", icon: Users },
+          { label: "She / Her", value: "she", icon: User },
+          { label: "He / Him", value: "he", icon: User },
+          { label: "Other", value: "other", icon: HelpCircle },
+        ],
       },
       {
         id: "email",
         type: "email",
         label: "Email",
-        required: true
+        required: true,
       },
       {
         id: "slack_id",
         type: "text",
         label: "Slack ID",
-        required: false
+        required: false,
       },
       {
         id: "github_username",
         type: "text",
         label: "GitHub Username",
-        required: false
-      }
-    ]
+        required: false,
+      },
+    ],
   },
 
   {
@@ -78,17 +107,17 @@ export const volunteer = [
         label: "What excites or interests you most?",
         required: true,
         options: [
-          "Learning and practicing new skills",
-          "Getting new experience on resume",
-          "Meeting new people",
-          "Contributing to a good cause",
-          "Increasing awareness of the city",
-          "Learning about technology and open data",
-          "Networking and job opportunities",
-          "Learning about civic tech projects",
-          "Finding mentors",
-          "Other"
-        ]
+          { label: "Methods & Skills", value: "skills", icon: BookOpen },
+          { label: "Resume Scaling", value: "resume", icon: Briefcase },
+          { label: "Meeting People", value: "people", icon: Users },
+          { label: "Contribute to Cause", value: "cause", icon: Heart },
+          { label: "City Awareness", value: "awareness", icon: Megaphone },
+          { label: "Open Data / Tech", value: "tech", icon: Database },
+          { label: "Networking", value: "networking", icon: Network },
+          { label: "Civic Projects", value: "civic", icon: Globe },
+          { label: "Mentorship", value: "mentors", icon: Award },
+          { label: "Other", value: "other", icon: HelpCircle },
+        ],
       },
       {
         id: "involvement_level",
@@ -96,13 +125,13 @@ export const volunteer = [
         label: "How deeply would you like to be involved?",
         required: true,
         options: [
-          "Volunteer as part of a project team",
-          "Lead a project team",
-          "Become a Core Team member",
-          "Other"
-        ]
-      }
-    ]
+          { label: "Project Volunteer", value: "volunteer", icon: User },
+          { label: "Project Lead", value: "lead", icon: Target },
+          { label: "Core Team", value: "core", icon: Zap },
+          { label: "Other", value: "other", icon: HelpCircle },
+        ],
+      },
+    ],
   },
 
   {
@@ -114,20 +143,18 @@ export const volunteer = [
         label: "Leadership area(s) of interest",
         required: false,
         options: [
-          "Front-End Engineering",
-          "Back-End Engineering",
-          "Data Science",
-          "UI/UX",
-          "Project Management",
-          "Marketing",
-          "Recruitment",
-          "Fundraising",
-          "Event Management",
-          "Writing",
-          "Other"
-        ]
-      }
-    ]
+          { label: "Front-End", value: "frontend", icon: Layout },
+          { label: "Back-End", value: "backend", icon: Server },
+          { label: "Data Science", value: "data", icon: BarChart },
+          { label: "UI / UX", value: "design", icon: PenTool },
+          { label: "Management", value: "pm", icon: ClipboardCheck },
+          { label: "Marketing", value: "marketing", icon: Megaphone },
+          { label: "People Ops", value: "recruitment", icon: Users },
+          { label: "Fundraising", value: "fundraising", icon: Target },
+          { label: "Other", value: "other", icon: HelpCircle },
+        ],
+      },
+    ],
   },
 
   {
@@ -139,21 +166,21 @@ export const volunteer = [
         label: "What are your skill sets?",
         required: true,
         options: [
-          "Software Engineering - Front-End",
-          "Software Engineering - Back-End",
-          "Software Engineering - Full Stack",
-          "Software Engineering - Data Science",
-          "Software Engineering - DevOps / Infrastructure",
-          "UI Design",
-          "UX Research",
-          "Graphic Design",
-          "Product Management",
-          "Project Management",
-          "Business Analysis / Marketing / Recruitment",
-          "Subject Matter Expert - Government",
-          "Subject Matter Expert - Community Organizing",
-          "Other"
-        ]
+          { label: "Front-End Dev", value: "fe", icon: Layout },
+          { label: "Back-End Dev", value: "be", icon: Server },
+          { label: "Full Stack", value: "fs", icon: Layers },
+          { label: "Data Science", value: "ds", icon: Database },
+          { label: "DevOps", value: "devops", icon: Cpu },
+          { label: "UI Design", value: "ui", icon: PenTool },
+          { label: "UX Research", value: "ux", icon: Search },
+          { label: "Graphic Design", value: "graphics", icon: Image },
+          { label: "Product Mgmt", value: "product", icon: Box },
+          { label: "Project Mgmt", value: "project", icon: ClipboardCheck },
+          { label: "Business/Mktg", value: "business", icon: Briefcase },
+          { label: "Govt Expert", value: "govt", icon: Globe },
+          { label: "Organizer", value: "organizer", icon: Users },
+          { label: "Other", value: "other", icon: HelpCircle },
+        ],
       },
       {
         id: "skill_improvement",
@@ -161,21 +188,21 @@ export const volunteer = [
         label: "Which skills do you want to improve?",
         required: true,
         options: [
-          "Software Engineering - Front-End",
-          "Software Engineering - Back-End",
-          "Software Engineering - Full Stack",
-          "Software Engineering - Data Science",
-          "Software Engineering - DevOps / Infrastructure",
-          "UI Design",
-          "UX Research",
-          "Graphic Design",
-          "Product Management",
-          "Project Management",
-          "Business Analysis / Marketing / Recruitment",
-          "Subject Matter Expert - Government",
-          "Subject Matter Expert - Community Organizing",
-          "Other"
-        ]
+          { label: "Front-End Dev", value: "fe", icon: Layout },
+          { label: "Back-End Dev", value: "be", icon: Server },
+          { label: "Full Stack", value: "fs", icon: Layers },
+          { label: "Data Science", value: "ds", icon: Database },
+          { label: "DevOps", value: "devops", icon: Cpu },
+          { label: "UI Design", value: "ui", icon: PenTool },
+          { label: "UX Research", value: "ux", icon: Search },
+          { label: "Graphic Design", value: "graphics", icon: Image },
+          { label: "Product Mgmt", value: "product", icon: Box },
+          { label: "Project Mgmt", value: "project", icon: ClipboardCheck },
+          { label: "Business/Mktg", value: "business", icon: Briefcase },
+          { label: "Govt Expert", value: "govt", icon: Globe },
+          { label: "Organizer", value: "organizer", icon: Users },
+          { label: "Other", value: "other", icon: HelpCircle },
+        ],
       },
       {
         id: "tech_stack",
@@ -183,19 +210,18 @@ export const volunteer = [
         label: "Tech Skills",
         required: false,
         options: [
-          "React",
-          "CSS / SASS",
-          "Node.js",
-          "Python (APIs)",
-          "Python (Web Scraping)",
-          "GraphQL",
-          "SQL",
-          "NoSQL",
-          "AWS Infrastructure",
-          "Other"
-        ]
-      }
-    ]
+          { label: "React", value: "react", icon: Code },
+          { label: "CSS / SASS", value: "css", icon: PenTool },
+          { label: "Node.js", value: "node", icon: Server },
+          { label: "Python", value: "python", icon: Code },
+          { label: "GraphQL", value: "graphql", icon: Network },
+          { label: "SQL", value: "sql", icon: Database },
+          { label: "NoSQL", value: "nosql", icon: Database },
+          { label: "AWS", value: "aws", icon: Cloud },
+          { label: "Other", value: "other", icon: HelpCircle },
+        ],
+      },
+    ],
   },
 
   {
@@ -219,15 +245,15 @@ export const volunteer = [
           "Facebook",
           "Instagram",
           "VolunteerMatch",
-          "HandsOn Sacramento"
-        ]
+          "HandsOn Sacramento",
+        ],
       },
       {
         id: "extra_information",
         type: "textarea",
         label: "Any extra information?",
-        required: false
-      }
-    ]
-  }
+        required: false,
+      },
+    ],
+  },
 ];

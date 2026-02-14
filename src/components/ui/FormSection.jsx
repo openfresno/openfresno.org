@@ -6,7 +6,7 @@ import Form from "./form/Form";
 
 const FormSection = ({ volunteer, formData, setFormData }) => {
   const [currentSection, setCurrentSection] = React.useState(0);
-  
+
   const handleNext = () => {
     if (currentSection >= volunteer.length - 1) {
       return;
@@ -21,6 +21,13 @@ const FormSection = ({ volunteer, formData, setFormData }) => {
     }
     setCurrentSection((prev) => prev - 1);
   };
+
+  const handleSubmit = (e) => {
+    e?.preventDefault();
+    console.log("Form Submitted:", formData);
+    alert("Form submitted! Check console for data.");
+  };
+
   return (
     <PageContainer>
       <Form
@@ -31,15 +38,28 @@ const FormSection = ({ volunteer, formData, setFormData }) => {
       />
       <div className="form-footer flex justify-end gap-4 mt-6">
         {currentSection > 0 && (
-        <BaseButton className="form-action-btn btn btn-alt" onClick={handleBack}>
-          Back
-        </BaseButton>
-      )}
-      {currentSection < volunteer.length - 1 && (
-        <BaseButton className="form-action-btn btn btn-grow" onClick={handleNext}>
-          Next
-        </BaseButton>
-      )}
+          <BaseButton
+            className="form-action-btn btn btn-alt"
+            onClick={handleBack}
+          >
+            Back
+          </BaseButton>
+        )}
+        {currentSection < volunteer.length - 1 ? (
+          <BaseButton
+            className="form-action-btn btn btn-grow"
+            onClick={handleNext}
+          >
+            Next
+          </BaseButton>
+        ) : (
+          <BaseButton
+            className="form-action-btn btn btn-grow"
+            onClick={handleSubmit}
+          >
+            Submit
+          </BaseButton>
+        )}
       </div>
     </PageContainer>
   );

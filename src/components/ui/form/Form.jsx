@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
 
-
 const FormInput = ({ field, value, onChange }) => {
   switch (field.type) {
     case "text":
@@ -12,36 +11,103 @@ const FormInput = ({ field, value, onChange }) => {
           name={field.id}
           value={value || ""}
           onChange={onChange}
+          placeholder={field.placeholder || ""}
+        />
+      );
+
+    case "select":
+      return (
+        <select name={field.id} value={value || ""} onChange={onChange}>
+          <option value="">Select an option...</option>
+          {field.options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      );
+
+    case "textarea":
+      return (
+        <textarea
+          name={field.id}
+          value={value || ""}
+          onChange={onChange}
+          placeholder={field.placeholder || ""}
+          rows={4}
         />
       );
 
     case "radio":
-      return field.options.map((option) => (
-        <label key={option.value}>
-          <input
-            type="radio"
-            name={field.id}
-            value={option.value}
-            checked={value === option.value}
-            onChange={onChange}
-          />
-          {option.label}
-        </label>
-      ));
+      return (
+        <div className="options-grid">
+          {field.options.map((option) => {
+            const Icon = option.icon;
+            return (
+              <label key={option.value} className="radio-box">
+                <input
+                  type="radio"
+                  name={field.id}
+                  value={option.value}
+                  checked={value === option.value}
+                  onChange={onChange}
+                />
+                <span className="radio-box-content">
+                  {Icon && <Icon className="w-6 h-6 text-neutral-400 mb-1" />}
+                  {!Icon && <span className="radio-indicator"></span>}
+                  <span className="radio-box-label">{option.label}</span>
+                </span>
+              </label>
+            );
+          })}
+        </div>
+      );
 
-    case "checkbox_group":
-      return field.options.map((option) => (
-        <label key={option}>
+    case "checkbox_single":
+      return (
+        <label className="checkbox-single-box">
           <input
             type="checkbox"
             name={field.id}
-            value={option}
-            checked={value?.includes(option)}
-            onChange={onChange}
+            checked={value === true}
+            onChange={(e) =>
+              onChange({ target: { name: field.id, value: e.target.checked } })
+            }
           />
-          {option}
+          <span className="checkbox-single-box-content">
+            <span className="checkbox-box-label">{field.label}</span>
+          </span>
         </label>
-      ));
+      );
+
+    case "checkbox_group":
+      return (
+        <div className="options-grid">
+          {field.options.map((option) => {
+            const isString = typeof option === "string";
+            const label = isString ? option : option.label;
+            const val = isString ? option : option.value || option.label; // Fallback so value exists
+            const Icon = !isString ? option.icon : null;
+
+            return (
+              <label key={val} className="checkbox-box">
+                <input
+                  type="checkbox"
+                  name={field.id}
+                  value={val}
+                  checked={value?.includes(val)}
+                  onChange={onChange}
+                />
+                <span className="checkbox-box-content">
+                  {Icon && <Icon className="w-6 h-6 text-neutral-400 mb-1" />}
+                  {!Icon && <span className="checkbox-indicator"></span>}
+                  <span className="checkbox-box-label">{label}</span>
+                </span>
+              </label>
+            );
+          })}
+        </div>
+      );
 
     default:
       return null;
@@ -55,8 +121,21 @@ const Form = ({ formSection, sectionIndex, formData, setFormData }) => {
   }, []);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    const { name, value, type, checked } = e.target;
+
+    if (type === "checkbox" && !name.includes("single")) {
+      // Handle checkbox groups
+      setFormData((prev) => {
+        const currentValues = prev[name] || [];
+        if (checked) {
+          return { ...prev, [name]: [...currentValues, value] };
+        } else {
+          return { ...prev, [name]: currentValues.filter((v) => v !== value) };
+        }
+      });
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   let inputTags = {

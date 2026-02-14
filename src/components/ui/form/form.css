@@ -1,6 +1,343 @@
+/* ===== Form Component Styles - Clean & Spacious Layout ===== */
+
+.form-section {
+  /* Defined surface card - clean white bg with subtle lift */
+  background: var(--shades-white);
+  border: 1px solid var(--neutral-200);
+  border-radius: 16px; /* Soft corners */
+  padding: 1.5rem;
+
+  /* Flexible width for better use of space */
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  /* Professional shadow lift */
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.02),
+    0 10px 15px -3px rgba(0, 0, 0, 0.03);
+}
+
+@media (min-width: 768px) {
+  .form-section {
+    padding: 3rem; /* Generous breathing room */
+  }
+}
+
+.form-section .heading-secondary {
+  margin-bottom: 2.5rem;
+  color: var(--primary-900);
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* More vertical space */
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.input-group > label {
+  color: var(--neutral-600);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-left: 0.125rem;
+}
+
+/* Text, Email, Select, Textarea Inputs */
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group select,
+.input-group textarea {
+  transition: all 0.2s ease;
+  outline: none;
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  background: var(--neutral-50); /* Subtle input bg */
+  padding: 0.875rem 1rem;
+  width: 100%;
+  color: var(--neutral-900);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input-group input[type="text"]::placeholder,
+.input-group input[type="email"]::placeholder,
+.input-group textarea::placeholder {
+  color: var(--neutral-400);
+}
+
+.input-group input[type="text"]:hover,
+.input-group input[type="email"]:hover,
+.input-group select:hover,
+.input-group textarea:hover {
+  border-color: var(--neutral-300);
+  background: var(--shades-white);
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0, 52, 174, 0.1);
+  border-color: var(--primary-500);
+  background: var(--shades-white);
+}
+
+/* Select Dropdown */
+.input-group select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%2355555e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 14px;
+  padding-right: 2.5rem;
+}
+
+/* Textarea */
+.input-group textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Options Grid - Responsive Layout */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: 1 column */
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .options-grid {
+    /* Tablet/Desktop: Auto-fit columns (min 200px) */
+    /* This allows 3 columns on wide screens (800px container) */
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+/* Radio Box / Checkbox Box - The "Card" style */
+.radio-box,
+.checkbox-box {
+  display: flex;
+  position: relative;
+  flex-direction: column; /* Vertical stack */
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  background: var(--shades-white);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  overflow: hidden;
+  height: 100%;
+  min-height: 150px; /* Uniform height */
+}
+
+/* Hover State */
+.radio-box:hover,
+.checkbox-box:hover {
+  border-color: var(--primary-300);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.08); /* Stronger lift */
+}
+
+/* Active State */
+.radio-box:has(input:checked),
+.checkbox-box:has(input:checked) {
+  border-color: var(--primary-600);
+  border-width: 1.5px;
+  background: var(--primary-50);
+  box-shadow: 0 4px 12px rgba(0, 52, 174, 0.1);
+}
+
+/* Hide native input */
+.radio-box input,
+.checkbox-box input,
+.checkbox-single-box input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Vertical Content - Icon Top, Text Bottom */
+.radio-box-content,
+.checkbox-box-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* SVG Icon Styling */
+.radio-box-content svg,
+.checkbox-box-content svg {
+  width: 2.25rem; /* Larger icon */
+  height: 2.25rem;
+  color: var(--neutral-400);
+  transition: all 0.2s ease;
+  stroke-width: 1.5px;
+}
+
+/* Selected Icon State */
+.radio-box:has(input:checked) .radio-box-content svg,
+.checkbox-box:has(input:checked) .checkbox-box-content svg {
+  color: var(--primary-600);
+  transform: scale(1.1);
+}
+
+/* Indicator - Fallback if no icon */
+.radio-indicator,
+.checkbox-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  border: 1.5px solid var(--neutral-300);
+  background: var(--shades-white);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.radio-indicator {
+  border-radius: 50%;
+}
+
+.checkbox-indicator {
+  border-radius: 4px;
+}
+
+/* Selected Indicators */
+.radio-box input:checked + .radio-box-content .radio-indicator {
+  border-color: var(--primary-600);
+  background: var(--primary-600);
+  box-shadow: inset 0 0 0 2px var(--shades-white);
+}
+
+.checkbox-box input:checked + .checkbox-box-content .checkbox-indicator {
+  border-color: var(--primary-600);
+  background: var(--primary-600);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Text Styling */
+.radio-box-label,
+.checkbox-box-label {
+  color: var(--neutral-600);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.4;
+}
+
+.radio-box:has(input:checked) .radio-box-label,
+.checkbox-box:has(input:checked) .checkbox-box-label {
+  color: var(--primary-900);
+  font-weight: 700;
+}
+
+/* ===== Single Checkbox (Agreements) - Simple Row Style ===== */
+.checkbox-single-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  padding: 0.75rem; /* Slightly more padding */
+  margin: 1rem 0; /* More spacing */
+}
+
+.checkbox-single-box:hover {
+  background: var(--neutral-50);
+}
+
+.checkbox-single-box-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+}
+
+.checkbox-single-box-content::before {
+  content: "";
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  transition: all 0.2s ease;
+  border: 1.5px solid var(--neutral-400);
+  border-radius: 4px;
+  background: var(--shades-white);
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.checkbox-single-box input:checked + .checkbox-single-box-content::before {
+  border-color: var(--primary-600);
+  background: var(--primary-600);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Form Footer */
 .form-footer {
   display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+
+.form-action-btn {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: var(--neutral-100);
+  padding: 0.875rem 2.5rem;
+  color: var(--neutral-900);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.form-action-btn:hover {
+  background: var(--neutral-200);
+  transform: translateY(-1px);
+}
+
+.form-action-btn.btn-grow {
+  background: var(--primary-600);
+  color: var(--shades-white);
+}
+
+.form-action-btn.btn-grow:hover {
+  background: var(--primary-700);
+  box-shadow: 0 4px 12px rgba(0, 52, 174, 0.25);
 }
