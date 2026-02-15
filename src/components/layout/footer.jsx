@@ -100,7 +100,7 @@ export default function Footer() {
       <div className="border-t border-(--neutral-300)">
         <div className="footer-bottom-content">
           <div className="caption-footer">Open Fresno</div>
-          <div className="caption-regular-uppercase space-x-10">
+          <div className="caption-regular-uppercase flex space-x-1 whitespace-nowrap">
             <Link href="/get-started">Get started</Link>
             <Link href="/about/#team">Our team</Link>
             <Link href="/code-of-conduct">Code of conduct</Link>
