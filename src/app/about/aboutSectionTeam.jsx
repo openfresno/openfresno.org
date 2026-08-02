@@ -3,6 +3,23 @@ import maryFeyNorris from "@/../public/img/about/mary_fey_norris.jpg";
 import nateBass from "@/../public/img/about/nate_bass.jpg";
 import AboutSectionTeamMember from "@/app/about/components/aboutSectionTeamMember";
 import { SectionType } from "@/utility/constants/theme";
+const TEAM_MEMBERS = [
+  {
+    src: maryFeyNorris,
+    name: "Mary Fey Norris",
+    title: "Executive Director, Open Fresno",
+  },
+  {
+    src: danFey,
+    name: "Dan Fey",
+    title: "Executive Director, Open Fresno",
+  },
+  {
+    src: nateBass,
+    name: "Nate Bass",
+    title: "Senior Director, Product",
+  },
+];
 
 /**
  * About the team section.
@@ -36,21 +53,9 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
           <div
             className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4`}
           >
-            <AboutSectionTeamMember
-              src={maryFeyNorris}
-              name="Mary Fey Norris"
-              title="Executive Director, Open Fresno"
-            />
-            <AboutSectionTeamMember
-              src={danFey}
-              name="Dan Fey"
-              title="Executive Director, Open Fresno"
-            />
-            <AboutSectionTeamMember
-              src={nateBass}
-              name="Nate Bass"
-              title="Senior Director, Product"
-            />
+            {TEAM_MEMBERS.map((member) => (
+              <AboutSectionTeamMember key={member.name} {...member} />
+            ))}
           </div>
         </div>
       </div>
