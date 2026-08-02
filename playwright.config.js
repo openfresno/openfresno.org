@@ -1,7 +1,7 @@
 import { defineConfig, devices } from "@playwright/test";
 
 /**
- * Tests are intended to be non co-dependent but they are still run sychronously. Trace and video recordings are captured on the first retry. Ignore stdout to keep CI logs clean.
+ * Tests are intended to be non-co-dependent, but they are still run synchronously. Trace and video recordings are captured on the first retry. Ignore stdout to keep CI logs clean.
  *
  * CI/CD
  * - GitHub reporter for clickable annotations and concise list reporter.
