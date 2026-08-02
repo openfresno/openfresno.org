@@ -19,25 +19,11 @@ or features, and [submitting a pull request](https://help.github.com/articles/cr
 > [!NOTE]
 > Learn about Open Fresno at the [documentation website](https://openfresno.github.io/fe-openfresno.org-doc).
 
-## Get started
-
-This is a Next.js static site. Get started by downloading the code and running these commands:
-
-1. `npm i` Install the NPM packages (~685MB).
-2. `npm run dev` Start the web server.
-
 ## Contribute
 
 - See our projects at https://openfresno.org/projects.
 - Come to our virtual [Open Fresno's Hack Night](https://www.meetup.com/openfresno/).
-
-## Test
-
-Add critical end-to-end tests in the [tests/](/tests) folder. All other tests should be in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
-
-## Deploy
-
-The site is deployed to GitHub pages. See [deploy-gh-pages.yml](.github/workflows/deploy-gh-pages.yml).
+- Contribute to the code. See the [contributing guide](https://github.com/openfresno/openfresno.org/blob/main/.github/CONTRIBUTING.md).
 
 ## Known Issues
 
@@ -47,6 +33,3 @@ The site is deployed to GitHub pages. See [deploy-gh-pages.yml](.github/workflow
 
 - [Open Fresno website documentation repository](https://github.com/openfresno/fe-openfresno.org-doc)
 - [Open Websites Figma](https://www.figma.com/design/attWQWKwed1XSaaaMuzM5m/Open-Websites?node-id=2612-11351&t=IiJjmX4Zr0KPPUyE-0)
-- [Code of Conduct](https://github.com/openfresno/codeofconduct)
-- https://nextjs.org/docs/pages/guides/testing/playwright
-- https://playwright.dev/
