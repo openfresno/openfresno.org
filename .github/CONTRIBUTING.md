@@ -1,12 +1,22 @@
 # Contributing to the Open Fresno website
 
-Thank you for your interest in contributing! This is a Next.js static site deployed to GitHub Pages.
+Thank you for your interest in contributing!
 
-## Getting started
+## Get started
 
-1. Fork and clone the repository.
-2. `npm i` to install dependencies.
-3. `npm run dev` to start the development server.
+This is a Next.js static site. Get started by forking the repository and running these commands:
+
+1. `npm i` Install the NPM packages (~685MB).
+2. `npm run dev` Start the web server.
+
+## Test
+
+Add critical end-to-end tests in the [tests/](/tests) folder. All other tests should be in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
+
+## Deploy
+
+The site is deployed to GitHub pages. See [deploy-gh-pages.yml](.github/workflows/deploy-gh-pages.yml).
+Each fork comes with its own live GitHub page to share changes before merging. Make sure you enable GitHub Pages via GitHub Actions in your fork repository settings.
 
 ## How to help
 
@@ -16,8 +26,4 @@ Thank you for your interest in contributing! This is a Next.js static site deplo
 
 ## Documentation
 
-Learn more about Open Fresno at the [documentation website](https://openfresno.github.io/fe-openfresno.org-doc).
-
-## Testing
-
-Add critical end-to-end tests in the [tests/](/tests) folder. Run them with `npm test`.
+Help make it easier for new contributors by writing documentation in the [documentation repository](https://github.com/openfresno.org/fe-openfresno.org-doc).
