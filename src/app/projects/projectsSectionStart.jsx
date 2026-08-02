@@ -94,8 +94,8 @@ export default function ProjectsSectionStart({
                 className="projects-meeting-card-link-icon"
                 src={arrowRightIcon}
                 alt="Arrow right"
-                width={16}
-                height={16}
+                width={24}
+                height={25}
               />
             </Link>
           </div>

@@ -51,7 +51,7 @@ export default function HomePage() {
                 src={logoBlue}
                 className="absolute -top-10 right-0 object-cover"
                 width={200}
-                height={397}
+                height={200}
                 alt="Open Fresno logo blue"
               />
               <Image
@@ -60,6 +60,7 @@ export default function HomePage() {
                 height={397}
                 className="object-cover"
                 alt="Ariel photo of downtown Fresno and the iconic Tower Theatre."
+                loading="eager"
               />
             </div>
           </div>

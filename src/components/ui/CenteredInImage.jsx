@@ -4,8 +4,8 @@ export default function CenteredInImage({
   src,
   alt = "rectangle",
   float = "left",
-  width = 400,
-  height = 300,
+  width,
+  height,
   children = <></>,
 }) {
   return (
@@ -15,8 +15,7 @@ export default function CenteredInImage({
       <Image
         src={src}
         alt={alt}
-        width={width}
-        height={height}
+        {...(width && height ? { width, height } : {})}
         className="object-cover"
       />
       {/*used to place the text over the image*/}

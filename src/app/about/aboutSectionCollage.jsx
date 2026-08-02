@@ -18,23 +18,24 @@ export default function AboutSectionCollage({
       <Image
         src={towerBridgeSide}
         alt="Tower bridge in Fresno"
-        width={1200}
-        height={400}
+        width={1220}
+        height={428}
         className="object-cover"
+        loading="eager"
       />
       <div className="flex w-full grow basis-0 flex-row justify-between gap-6 lg:gap-16">
         <Image
           src={tabletImage}
           alt="Working on tablet"
-          width={550}
-          height={500}
+          width={590}
+          height={427}
           className="object-cover"
         />
         <Image
           src={meetingImage}
           alt="Team meeting"
-          width={550}
-          height={500}
+          width={591}
+          height={427}
           className="object-cover"
         />
       </div>
