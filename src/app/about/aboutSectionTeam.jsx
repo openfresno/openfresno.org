@@ -3,6 +3,7 @@ import maryFeyNorris from "@/../public/img/about/mary_fey_norris.jpg";
 import nateBass from "@/../public/img/about/nate_bass.jpg";
 import AboutSectionTeamMember from "@/app/about/components/aboutSectionTeamMember";
 import { SectionType } from "@/utility/constants/theme";
+
 const TEAM_MEMBERS = [
   {
     src: maryFeyNorris,

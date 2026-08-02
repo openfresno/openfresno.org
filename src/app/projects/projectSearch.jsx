@@ -23,7 +23,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
    * @returns {object}
    */
   const browseObject = (obj, keys) => {
-    for (let key of keys) {
+    for (const key of keys) {
       obj = obj[key];
     }
     return obj;
@@ -54,11 +54,12 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         sortFunction = (a, b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy]);
         break;
       //strings
-      default:
-        let keys = projectSortBy.split(",");
+      default: {
+        const keys = projectSortBy.split(",");
         sortFunction = (a, b) => {
           browseObject(b, keys).localeCompare(browseObject(a, keys));
         };
+      }
     }
     filteredProjects = filteredProjects.toSorted(
       (a, b) => (curAscending ? 1 : -1) * sortFunction(a, b),
@@ -67,7 +68,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   };
 
   const handleChange = (e) => {
-    let cutName = e.target.name.replace("project-", "");
+    const cutName = e.target.name.replace("project-", "");
     switch (cutName) {
       case "search":
         setSearch(e.target.value);

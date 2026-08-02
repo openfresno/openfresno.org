@@ -80,28 +80,26 @@ const NavToggle = ({ mobile, extendedMenuVisible, showExtendedMenu }) => {
 };
 
 const NavExtendedToggle = ({ toggleMobileNavPosition, mobileNavPosition }) => {
-  {
-    if (mobileNavPosition) {
-      return (
-        <BaseButton
-          className="navbar-extended-toggle-button"
-          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
-        >
-          <ChevronLeft className="-ms-1 me-1" height={20} width={20} />
-          Back
-        </BaseButton>
-      );
-    } else {
-      return (
-        <BaseButton
-          className="navbar-extended-toggle-button"
-          onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
-        >
-          Get Involved
-          <ChevronRight className="ms-1" height={20} width={20} />
-        </BaseButton>
-      );
-    }
+  if (mobileNavPosition) {
+    return (
+      <BaseButton
+        className="navbar-extended-toggle-button"
+        onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
+      >
+        <ChevronLeft className="-ms-1 me-1" height={20} width={20} />
+        Back
+      </BaseButton>
+    );
+  } else {
+    return (
+      <BaseButton
+        className="navbar-extended-toggle-button"
+        onClick={() => toggleMobileNavPosition(!mobileNavPosition)}
+      >
+        Get Involved
+        <ChevronRight className="ms-1" height={20} width={20} />
+      </BaseButton>
+    );
   }
 };
 

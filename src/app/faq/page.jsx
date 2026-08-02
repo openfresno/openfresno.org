@@ -57,7 +57,7 @@ export default function FaqPage() {
             ))}
           </nav>
         </section>
-        <section className="mx-auto max-w-[calc(var(--screen-xxl)+80px)] px-6 lg:px-10 pt-12 pb-16">
+        <section className="mx-auto max-w-[calc(var(--screen-xxl)+80px)] px-6 pt-12 pb-16 lg:px-10">
           <MDXRemote source={fileContent} components={MDXComponents} />
         </section>
         <hr className="mx-auto h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400)" />

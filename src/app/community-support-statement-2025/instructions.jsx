@@ -47,6 +47,7 @@ const instructions = [
           href="https://forms.gle/mTiP6KpgWXCvMUn98"
           target="_blank"
           aria-label="Link to project form."
+          rel="noopener"
         >
           Project Form
         </a>{" "}

@@ -40,7 +40,7 @@ export function TimelineItem({
 }) {
   const refContainer = useRef();
   useEffect(() => {
-    let updateContainerRect = () => {
+    const updateContainerRect = () => {
       if (refContainer.current) {
         updateTimelineNumbers(number, refContainer.current.getBoundingClientRect());
       }

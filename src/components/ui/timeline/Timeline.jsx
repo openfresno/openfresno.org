@@ -18,7 +18,7 @@ export default function Timeline({ className = "" }) {
   const [clientRect, setClientRect] = useState();
 
   useEffect(() => {
-    let updateClientRect = () => {
+    const updateClientRect = () => {
       if (refContainer.current) {
         setClientRect(refContainer.current.getBoundingClientRect());
       }
@@ -38,7 +38,7 @@ export default function Timeline({ className = "" }) {
           return item;
         });
       } else {
-        let copy = [...previousTimelineNumbers];
+        const copy = [...previousTimelineNumbers];
         copy[timelineNumber] = bounds;
         return copy;
       }
@@ -97,17 +97,17 @@ export default function Timeline({ className = "" }) {
       <style>
         {((_timelineNumbers, _clientRect) => {
           //the array is 1 indexed;
-          let itemCount = _timelineNumbers.length;
-          let stepSize = 100 / (itemCount - 1);
+          const itemCount = _timelineNumbers.length;
+          const stepSize = 100 / (itemCount - 1);
           let keyframeStyle = `@keyframes timeline-animation{\n`;
           if (_timelineNumbers.length > 0) {
             _timelineNumbers.forEach((bounds, i) => {
               if (bounds != null) {
                 // animates with the progress of viewing the timeline at equal intervals
                 // i-1 is because the array is 1 indexed (_timelineNumbers[0] === null)
-                let percentageValue = Math.round((i - 1) * stepSize);
+                const percentageValue = Math.round((i - 1) * stepSize);
                 // as a pixel value
-                let topValue = bounds.y - _clientRect.y + bounds.height / 4;
+                const topValue = bounds.y - _clientRect.y + bounds.height / 4;
                 keyframeStyle += `\t${percentageValue}% {\n
                           \t\ttop: ${topValue}px;\n
                           \t}\n`;
@@ -121,7 +121,7 @@ export default function Timeline({ className = "" }) {
             });
             // This is cursed, but animation styles have to be declared here
             // because will not work if it is loaded first in the stylesheet.
-            let animationStyle = `
+            const animationStyle = `
             .timeline {\n
             \tview-timeline: --timelineAnimation block -20% 40%;\n
             \t&::after {\n

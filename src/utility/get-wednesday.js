@@ -13,7 +13,7 @@ export const getWednesday = (nextMonth) => {
 
   const daysInMonth = moment().year(currentYear).month(currentMonth).daysInMonth();
 
-  let wednesdays = [];
+  const wednesdays = [];
 
   for (let day = currentDay; day <= daysInMonth; day++) {
     const currentDate = moment().year(currentYear).month(currentMonth).date(day);

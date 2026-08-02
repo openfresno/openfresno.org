@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function SingleProjectsScreenshots({ data, sectionType = SectionType.light }) {
   const [showDialog, setShowDialog] = useState(false);
   const [startingSlide, setStartingSlide] = useState(0);
-  let shownImages = data.meta.screenshots.map((screenshot, i) => (
+  const shownImages = data.meta.screenshots.map((screenshot, i) => (
     <Image
       key={data.full_name.concat(screenshot)}
       onClick={() => {

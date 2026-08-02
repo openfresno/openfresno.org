@@ -14,7 +14,7 @@ export default function SingleProjectsBrief({ data, sectionType = SectionType.li
   const titleCaseList = ["project_type"];
   const concatLists = [["communications", "channels"]];
   const toConcatList = concatLists.flat();
-  let meta = {};
+  const meta = {};
   Object.keys(data.meta).forEach((key) => {
     if (trimList.indexOf(key) === -1) {
       if (toConcatList.indexOf(key) === -1) {
@@ -24,9 +24,9 @@ export default function SingleProjectsBrief({ data, sectionType = SectionType.li
           meta[key] = titleCase(data.meta[key]);
         }
       } else {
-        for (let concatList of concatLists) {
+        for (const concatList of concatLists) {
           if (concatList.indexOf(key) === -1) continue;
-          let [a, b] = concatList;
+          const [a, b] = concatList;
           if (data.meta[a] && data.meta[b]) {
             meta[a + "\\n" + b] = (
               <>

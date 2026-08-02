@@ -1,6 +1,6 @@
+import { useDragScroll } from "@/app/_hooks/useDragScroll.js";
 import Button from "@/components/ui/button/Button";
 import { SectionType } from "@/utility/constants/theme";
-import { useDragScroll } from "@/app/_hooks/useDragScroll.js";
 import { titleCase } from "@/utility/string";
 import Image from "next/image";
 import Link from "next/link";

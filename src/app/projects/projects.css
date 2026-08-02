@@ -11,16 +11,16 @@
   position: absolute;
   top: 0.75rem;
   left: 1.5rem;
-  width: fit-content;
   border-radius: 0.375rem;
   padding: 0 0.375rem;
+  width: fit-content;
   font-weight: 600;
 }
 
 .project-card-image {
-  aspect-ratio: 7/4;
-  width: 100%;
   border-radius: 0.75rem;
+  aspect-ratio: 7 / 4;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -28,9 +28,9 @@
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
-  overflow-x: auto;
-  padding-block: 1rem;
   cursor: grab;
+  padding-block: 1rem;
+  overflow-x: auto;
 
   /* Hide scrollbar by default */
   scrollbar-width: none;
@@ -44,8 +44,8 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background: transparent;
     border-radius: 3px;
+    background: transparent;
   }
 
   /* Show scrollbar when actively scrolling */
@@ -63,10 +63,10 @@
 }
 
 .project-card-tag {
-  height: min-content;
-  width: min-content;
   border-radius: 0.375rem;
   padding: 0 0.25rem;
+  width: min-content;
+  height: min-content;
 }
 
 .project-card-heading {
@@ -81,18 +81,18 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  text-overflow: ellipsis;
 }
 
 .project-card-updated {
   margin-block: 0.75rem;
+  color: var(--neutral-700);
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
-  color: var(--neutral-700);
 }
 
 .project-card-buttons {
@@ -106,10 +106,10 @@
 
 .project-cards-grid {
   display: grid;
-  margin-bottom: 4.5rem;
-  width: 100%;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1rem;
+  margin-bottom: 4.5rem;
+  width: 100%;
 
   @media (min-width: 576px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -122,12 +122,12 @@
 
 .project-cards-error {
   display: flex;
-  margin-bottom: 4.5rem;
-  width: 100%;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
+  margin-bottom: 4.5rem;
+  width: 100%;
 
   @media (min-width: 992px) {
     flex-direction: row;
@@ -149,9 +149,9 @@
 
 .project-search-form {
   display: flex;
-  width: 100%;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 
   @media (min-width: 992px) {
     flex-direction: row;
@@ -180,9 +180,9 @@
 /* ── Projects section start ────────────────────────────────── */
 
 .projects-section-text-container {
-  width: 100%;
   flex-grow: 3;
   flex-basis: 0;
+  width: 100%;
 }
 
 .projects-section-card-container {
@@ -217,8 +217,8 @@
 }
 
 .projects-meeting-card-icon {
-  margin-right: 1rem;
   display: inline-block;
+  margin-right: 1rem;
   object-fit: cover;
 }
 
@@ -228,9 +228,9 @@
 }
 
 .projects-meeting-card-link-icon {
+  display: inline-block;
   margin-top: -0.125rem;
   margin-left: 0.5rem;
-  display: inline-block;
   object-fit: cover;
 }
 
@@ -239,9 +239,9 @@
 .single-project-divider {
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  height: 1px;
   border: 0;
   background-color: var(--neutral-400);
+  height: 1px;
 
   @media (min-width: 992px) {
     margin-block: 1.5rem;
@@ -255,10 +255,10 @@
 }
 
 .single-project-links-container {
-  margin-inline: auto;
   display: flex;
-  max-width: calc(var(--screen-xxl) + 80px);
   flex-direction: column;
+  margin-inline: auto;
+  max-width: calc(var(--screen-xxl) + 80px);
 
   @media (max-width: 991px) {
     gap: 1rem;
@@ -291,17 +291,17 @@
 }
 
 .single-project-start-image {
-  border-radius: 0.75rem;
   border: 1px solid var(--neutral-200);
+  border-radius: 0.75rem;
   object-fit: cover;
 }
 
 .single-project-status-badge {
   margin-block: 1rem;
-  width: fit-content;
-  border-radius: 0.375rem;
   border: 1px solid;
+  border-radius: 0.375rem;
   padding: 0.25rem;
+  width: fit-content;
 }
 
 .single-project-updated-text {
@@ -342,9 +342,9 @@
   flex-direction: column;
 
   @media (min-width: 992px) {
-    margin-block: 1.5rem;
     flex-direction: row;
     gap: 17.5rem;
+    margin-block: 1.5rem;
   }
 }
 
@@ -369,24 +369,24 @@
 
 .project-roadmap-info-container {
   display: flex;
-  width: fit-content;
   flex-direction: row;
   gap: 1rem;
+  width: fit-content;
 }
 
 .project-roadmap-icon {
-  aspect-ratio: 1/1;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
 .project-roadmap-icon-line {
+  display: inline-block;
   position: relative;
   top: -0.75rem;
   left: 0.875rem;
-  display: inline-block;
-  height: 2rem;
-  width: 2px;
   transform-origin: bottom left;
+  width: 2px;
+  height: 2rem;
   object-fit: cover;
 }
 
@@ -403,13 +403,13 @@
 }
 
 .single-project-screenshot-placeholder {
+  background-color: var(--neutral-400);
   width: 100%;
   height: 100%;
-  background-color: var(--neutral-400);
 
   @media (max-width: 991px) {
-    border-radius: 0.75rem;
     border: 1px solid var(--neutral-200);
+    border-radius: 0.75rem;
   }
 }
 
