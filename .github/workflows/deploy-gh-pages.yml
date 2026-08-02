@@ -1,22 +1,19 @@
-# The main GitHub Action that runs on pushes targeting the default branch. It is based on the sample workflow for building and deploying a Next.js site to GitHub Pages.
+# The main GitHub Action that runs on pushes targeting the default branch. It is based on the sample workflow for building and deploying a Next.js site to GitHub Pages. This can be manually run from the Actions tab.
 #
 # Settings
 # - Timeout if running for 15 minutes.
-# - Set permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages.
-# - Allow only one concurrent deployment. Cancel in-progress runs when a newer commit is pushed, since the newer version supersedes the old one.
-# - Contains two jobs: build-and-test and deploy.
-# - Run tests only on pull requests.
-#
-# Features
+# - Runs the full quality gate on pull requests and manual runs.
+# - Builds and deploys direct updates without installing or running browser tests.
+# - Cancel superseded runs for the same branch without interrupting other pull requests.
+# - Deploy only from the default branches.
+# - Scope deployment permissions to the deployment job.
 # - Cache npm packages and Playwright browser binaries to speed up subsequent runs.
-# - Cancel old runs if new code is pushed.
-# - Allow running manually from the Actions tab.
-# - Only upload Playwright report on failure to save storage.
+# - Only upload the Playwright report on failure to save storage.
 #
 # Automatic basePath injection and server side image optimization are disabled. It can be re-enabled if MDX support is removed. This would simplify a lot of the custom basepath logic.
 # ```yml
 # - name: Setup Pages
-#   uses: actions/configure-pages@v5
+#   uses: actions/configure-pages@v6
 #   with:
 #     static_site_generator: next
 # ```
@@ -30,24 +27,22 @@ on:
     branches: [main, master]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
-  build-and-test:
+  quality:
+    if: github.event_name == 'pull_request' || github.event_name == 'workflow_dispatch'
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7.0.1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.5.0
         with:
           node-version: lts/*
           cache: "npm"
@@ -64,7 +59,7 @@ jobs:
 
       - name: Cache Playwright browsers
         id: playwright-cache
-        uses: actions/cache@v5
+        uses: actions/cache@v6.1.0
         with:
           path: ~/.cache/ms-playwright
           key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.version }}
@@ -85,26 +80,48 @@ jobs:
 
       - name: Upload Playwright report
         if: failure()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7.0.1
         with:
           name: playwright-report
           path: playwright-report/
           retention-days: 7
+  build-for-deployment:
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6.5.0
+        with:
+          node-version: lts/*
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Next.js
+        run: npm run build
 
       - name: Upload Pages artifact
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./out
 
   deploy:
-    needs: build-and-test
-    if: github.event_name != 'pull_request'
+    needs: build-for-deployment
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

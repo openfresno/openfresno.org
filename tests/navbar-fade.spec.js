@@ -14,7 +14,7 @@ import test, { expect } from "@playwright/test";
  * 3. Verify the element has the fading class applied
  */
 test("navbar background fades in on scroll", async ({ page }) => {
-  await page.goto("http://localhost:3000");
+  await page.goto("/");
   const root = page.locator("nav");
 
   await expect(root).toHaveClass(/navbar-container--fading/);
