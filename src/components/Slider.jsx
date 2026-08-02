@@ -22,7 +22,7 @@ export default function Slider({
   startingSlide = 0,
   loadedState,
   setCurrentSlide: providedSetCurrentSlide,
-  setUpdateSlider = (updateFunctionGenerator) => {},
+  setUpdateSlider = () => {},
 }) {
   const [defaultLoaded, setDefaultLoaded] = useState(false);
   const [defaultCurrentSlide, setDefaultCurrentSlide] = useState(startingSlide);

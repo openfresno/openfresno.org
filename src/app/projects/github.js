@@ -126,10 +126,6 @@ const metaFile = "meta.yml";
  * @param defaultBranchName
  */
 const fetchMetaFile = async (ghFullName, defaultBranchName) => {
-  /*
-  console.dir(`${ghFullName}/${githubProject}`);
-  console.dir(localMetaYaml);
-   */
   let metaResponse;
   if (
     ghFullName === `${githubOwner}/${githubProject}` &&
@@ -151,57 +147,3 @@ const fetchMetaFile = async (ghFullName, defaultBranchName) => {
 
   return yaml.parse(textResponse);
 };
-
-const localMetaYaml = yaml.parse(`
-title: OpenSac.org
-project_type: website
-project_status: active
-description: The Open Fresno website serves as a hub for technologists, developers, and civic-minded individuals to collaborate, access resources, and engage in projects aimed at enhancing civic innovation in the Fresno area and beyond through technology
-comments: This is a great project for new members to get used to working one issues and tasks. It is one of the more approachable projects.
-communications: Slack
-channels: \#proj-openfresnoorg
-image_url: openfresno.png
-project_partner: Dan Fey
-project_lead: Brianda Hernandez
-technical_lead: Nate Bass
-lead_designer: Help Needed
-tags: html,css,javascript,react,github,figma
-contributing:
-  designer:
-    difficulty: easy
-    technologies: Figma
-    ways_to_contribute: improve existing designs, design new pages
-  developer:
-    difficulty: easy
-    frontend: html,css,javascript,react
-    backend: n/a
-    technologies: To be announced
-    version_control: Github
-    repo: /openfresno
-    ways_to_contribute: Bug fixing, testing, maintenance; see issues on github
-  project_manager:
-    difficulty: easy
-    technologies: github, slack
-    ways_to_contribute: organize and create issues & milestones, work with team members to stay and track and remove roadblocks
-roadmap:
-  research:
-    time_range: July 1, 2023 - August 31, 2023
-  design:
-    time_range: September 1, 2023 - October 5, 2023
-  development:
-    time_range: October 6, 2023 - April 1, 2023
-  deployment:
-    time_range: April 2, 2023 - April 9, 2023
-  launch:
-    time_range: April 10, 2023 - April 24, 2023
-  objective: This is the opportunity where you can put any valuable information about our project's current progress or goals.
-  comments: This is the opportunity where you can put any valuable information about the project. This helps in keeping everyone well-informed about our project's status and future plans. Please take a moment to review where the project stands, including what has been accomplished and what's in progress. Our project goals and deadlines are clearly defined to ensure we stay on track.
-  outcome: This is the opportunity where you can put the expected outcome of the project.
-resources:
-  documentation:
-  tutorials:
-  meeting_times: Scheduled for Wednesdays at 6:30 PM and listed on Meetup.
-  office_hours: Saturdays at 3:00 PM (Posted on Slack)
-screenshots:
-  - openfresno.png
-`);
