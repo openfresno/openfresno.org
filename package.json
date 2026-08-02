@@ -1,8 +1,7 @@
 {
   "name": "openfresno.org",
   "version": "2.0.0-beta.3",
-  "description": "Website for Open Fresno",
-  "private": false,
+  "description": "The public website for Open Fresno.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -28,25 +27,29 @@
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.1.6",
+    "@next/mdx": "^16.3.0-preview.10",
     "keen-slider": "^6.8.6",
     "moment": "^2.30.1",
-    "next": "^16.1.6",
-    "next-mdx-remote": "^5.0.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "swr": "^2.4.0",
-    "yaml": "^2.8.2"
+    "next": "^16.3.0-preview.10",
+    "next-mdx-remote": "^6.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "swr": "^2.4.2",
+    "yaml": "^2.9.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.3",
-    "@playwright/test": "^1.58.2",
-    "@tailwindcss/postcss": "^4.1.18",
-    "@tailwindcss/typography": "^0.5.19",
+    "@eslint/eslintrc": "^3.3.6",
+    "@playwright/test": "^1.62.1",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
     "babel-plugin-react-compiler": "^1.0.0",
-    "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.6",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.18"
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.0-preview.10",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^4.3.3"
+  },
+  "allowScripts": {
+    "sharp@0.34.5": true,
+    "unrs-resolver@1.12.2": true
   }
 }

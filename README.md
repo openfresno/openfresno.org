@@ -1,4 +1,16 @@
-# Open Fresno website
+<p align="center">
+  <a href="https://openfresno.org">
+    <img width=400 alt="The Open Fresno logo." src="public/assets/logo/logo-text-blue.svg">
+  </a>
+</p>
+<h1 align="center">
+  <a href="https://openfresno.org">Welcome to Open Fresno</a>
+</h1>
+<p align="center">
+  <a href="https://openfresno.org/about"><strong>About</strong></a> ·
+  <a href="https://openfresno.github.io/fe-openfresno.org-doc/"><strong>Documentation</strong></a> 
+</p>
+<br/>
 
 Open Fresno is a platform for civic innovation. As an open-source organization, you can fork our code, including our
 website. Help us make the site better by [forking it](https://help.github.com/articles/fork-a-repo/), adding new content
