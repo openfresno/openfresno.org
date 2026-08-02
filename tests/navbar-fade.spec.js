@@ -23,9 +23,7 @@ test("navbar background fades in on scroll", async ({ page }) => {
   await page.evaluate(() => window.scrollTo(0, 600));
   await page.waitForTimeout(300);
 
-  const solidColor = await root.evaluate(
-    (el) => getComputedStyle(el).backgroundColor,
-  );
+  const solidColor = await root.evaluate((el) => getComputedStyle(el).backgroundColor);
   const animationWorked = solidColor === "rgb(255, 252, 245)";
 
   if (animationWorked) {

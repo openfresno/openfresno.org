@@ -29,9 +29,7 @@ export default function Projects({ githubOwner }) {
 
   if (data && data !== prevData) {
     setPrevData(data);
-    setProjectsData(
-      data.toSorted((a, b) => new Date(b.updated_at) - new Date(a.updated_at)),
-    );
+    setProjectsData(data.toSorted((a, b) => new Date(b.updated_at) - new Date(a.updated_at)));
   }
 
   return (

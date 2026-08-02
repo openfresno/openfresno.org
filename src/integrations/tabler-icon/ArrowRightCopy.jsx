@@ -1,9 +1,4 @@
-export const ArrowRight = ({
-  width = 14,
-  height = 15,
-  className = "",
-  ...props
-}) => {
+export const ArrowRight = ({ width = 14, height = 15, className = "", ...props }) => {
   return (
     <svg
       width={width}

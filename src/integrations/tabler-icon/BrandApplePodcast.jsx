@@ -1,9 +1,4 @@
-export const BrandApplePodcast = ({
-  width = 39,
-  height = 38,
-  className = "",
-  ...props
-}) => {
+export const BrandApplePodcast = ({ width = 39, height = 38, className = "", ...props }) => {
   return (
     <svg
       width={width}
@@ -42,12 +37,7 @@ export const BrandApplePodcast = ({
       </g>
       <defs>
         <clipPath id="clip0_537_37087">
-          <rect
-            width="38"
-            height="38"
-            fill="white"
-            transform="translate(0.5)"
-          />
+          <rect width="38" height="38" fill="white" transform="translate(0.5)" />
         </clipPath>
       </defs>
     </svg>

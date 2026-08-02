@@ -122,13 +122,8 @@ export default function NavbarMenu({ className = "" }) {
       {/* Desktop Navigation */}
       <div className="navbar-extended-desktop-container">
         {DESKTOP_SECTIONS.map((section) => (
-          <section
-            key={section.href}
-            className="navbar-extended-desktop-section"
-          >
-            <h4 className="navbar-extended-header h4-semi-bold">
-              {section.title}
-            </h4>
+          <section key={section.href} className="navbar-extended-desktop-section">
+            <h4 className="navbar-extended-header h4-semi-bold">{section.title}</h4>
             <p className="p1-regular grow">{section.description}</p>
             <Button href={section.href} className="btn-small">
               {section.buttonText}

@@ -8,9 +8,7 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
 
   function parseRoadmapMilestones(roadmap) {
     let roadmapKeys = Object.keys(roadmap);
-    roadmapKeys = roadmapKeys.filter(
-      (key) => roadmap[key] !== null && roadmap[key].time_range,
-    );
+    roadmapKeys = roadmapKeys.filter((key) => roadmap[key] !== null && roadmap[key].time_range);
     return roadmapKeys;
   }
 
@@ -37,9 +35,7 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
     <section className={`py-12 app-color--${sectionType}`}>
       <div className="page-container flex flex-col">
         <h2 className="sub-heading-main">Roadmap</h2>
-        <div
-          className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}
-        />
+        <div className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`} />
         <p className="single-project-roadmap-subtitle paragraph-large project-paragraph-large">
           Know about the current progress, scope, and stage of project
         </p>
@@ -63,19 +59,13 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
             <div>
               <h4 className="project-roadmap-info-label-two">Objective</h4>
               <hr className="project-info-line my-2" />
-              <p className="project-paragraph-alt mb-8">
-                {data.meta.roadmap.objective}
-              </p>
+              <p className="project-paragraph-alt mb-8">{data.meta.roadmap.objective}</p>
               <h4 className="project-roadmap-info-label-two">Comments</h4>
               <hr className="project-info-line my-2" />
-              <p className="project-paragraph-alt mb-8">
-                {data.meta.roadmap.comments}
-              </p>
+              <p className="project-paragraph-alt mb-8">{data.meta.roadmap.comments}</p>
               <h4 className="project-roadmap-info-label-two">Outcome</h4>
               <hr className="project-info-line my-2" />
-              <p className="project-paragraph-alt">
-                {data.meta.roadmap.outcome}
-              </p>
+              <p className="project-paragraph-alt">{data.meta.roadmap.outcome}</p>
             </div>
           </div>
         </div>

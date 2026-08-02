@@ -23,16 +23,14 @@ export default function GetStartedPage() {
           </>
         }
       >
-        We&apos;re thrilled that you&apos;re eager to join our community of
-        civic-minded individuals and make a positive impact in Central
-        California. Volunteering with Open Fresno is a rewarding experience that
-        allows you to use your skills for the betterment of our city.{" "}
+        We&apos;re thrilled that you&apos;re eager to join our community of civic-minded individuals
+        and make a positive impact in Central California. Volunteering with Open Fresno is a
+        rewarding experience that allows you to use your skills for the betterment of our city.{" "}
         <span className={`paragraph-bold`}>
-          Whether you&apos;re a designer, developer, or anyone else passionate
-          about civic tech,
+          Whether you&apos;re a designer, developer, or anyone else passionate about civic tech,
         </span>{" "}
-        you&apos;ll find step-by-step instructions below to help you get started
-        on your journey of civic tech and community empowerment.
+        you&apos;ll find step-by-step instructions below to help you get started on your journey of
+        civic tech and community empowerment.
       </GeneralSection>
       <hr className="mx-auto mb-18 h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400)" />
       <SidebarSection sectionType={SectionType.light}>
@@ -43,10 +41,9 @@ export default function GetStartedPage() {
             title="Getting started"
             description="Steps to Volunteer"
           >
-            Discover how you can become a valued volunteer at Open Fresno.
-            Follow these simple steps to join our community of technologists,
-            developers, and civic-minded individuals dedicated to driving
-            positive change through technology and collaboration.
+            Discover how you can become a valued volunteer at Open Fresno. Follow these simple steps
+            to join our community of technologists, developers, and civic-minded individuals
+            dedicated to driving positive change through technology and collaboration.
           </HeaderUnderline>
         </div>
         <Steps sectionType={SectionType.light} steps={instructionData} />

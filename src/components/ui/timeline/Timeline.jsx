@@ -18,7 +18,7 @@ export default function Timeline({ className = "" }) {
   const [clientRect, setClientRect] = useState();
 
   useEffect(() => {
-    let updateClientRect = () => {
+    const updateClientRect = () => {
       if (refContainer.current) {
         setClientRect(refContainer.current.getBoundingClientRect());
       }
@@ -38,7 +38,7 @@ export default function Timeline({ className = "" }) {
           return item;
         });
       } else {
-        let copy = [...previousTimelineNumbers];
+        const copy = [...previousTimelineNumbers];
         copy[timelineNumber] = bounds;
         return copy;
       }
@@ -49,23 +49,18 @@ export default function Timeline({ className = "" }) {
     <div className={`timeline ${className}`} ref={refContainer}>
       <div className="mt-10 ps-8 pb-10 md:hidden">
         <h1 className="heading-main app-color--dark">Opportunities</h1>
-        <h2 className="h4-semi-bold mt-[10px]">
-          Explore Our Volunteer Options
-        </h2>
+        <h2 className="h4-semi-bold mt-[10px]">Explore Our Volunteer Options</h2>
       </div>
       <TimelineItem
         number={1}
         heading="Engage with Our Community"
-        buttons={[
-          new SimpleButton("Visit Meetup", "https://www.meetup.com/openfresno"),
-        ]}
+        buttons={[new SimpleButton("Visit Meetup", "https://www.meetup.com/openfresno")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Connect with like-minded individuals, share ideas, and collaborate on
-        projects at our meetups.
+        Connect with like-minded individuals, share ideas, and collaborate on projects at our
+        meetups.
         <br />
-        Join us to be a part of a vibrant community dedicated to positive change
-        through technology.
+        Join us to be a part of a vibrant community dedicated to positive change through technology.
       </TimelineItem>
       <TimelineItem
         number={2}
@@ -73,9 +68,8 @@ export default function Timeline({ className = "" }) {
         buttons={[new SimpleButton("See Our Projects", "/projects")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Discover how you can contribute your skills to projects that address
-        real challenges and enhance our city. Be part of a dynamic team working
-        on solutions that make a difference.
+        Discover how you can contribute your skills to projects that address real challenges and
+        enhance our city. Be part of a dynamic team working on solutions that make a difference.
       </TimelineItem>
       <TimelineItem
         number={3}
@@ -83,41 +77,37 @@ export default function Timeline({ className = "" }) {
         buttons={[new SimpleButton("Pitch a Project", "pitch")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Have a project idea that can benefit the community? Pitch it to us and
-        join forces with our community of innovators to bring your vision to
-        life, driving positive change in Central California.
+        Have a project idea that can benefit the community? Pitch it to us and join forces with our
+        community of innovators to bring your vision to life, driving positive change in Central
+        California.
       </TimelineItem>
       <TimelineItem
         number={4}
         heading="Explore On-Site Opportunities with Root Access"
         buttons={[
           new SimpleButton("Check it Out", "https://rootaccess.org"),
-          new SimpleButton(
-            "Explore Calendar",
-            "https://rootaccess.org/calendar",
-          ),
+          new SimpleButton("Explore Calendar", "https://rootaccess.org/calendar"),
         ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Discover Root Access on Van Ness Ave in the Tower District, just a block
-        south of Fresno City College. From advanced 3D printers and a cozy
-        lounge to laser cutting, workshops, and an electronics haven,{" "}
-        <b>explore what awaits you at our partner&apos;s space!</b>
+        Discover Root Access on Van Ness Ave in the Tower District, just a block south of Fresno
+        City College. From advanced 3D printers and a cozy lounge to laser cutting, workshops, and
+        an electronics haven, <b>explore what awaits you at our partner&apos;s space!</b>
       </TimelineItem>
       <style>
         {((_timelineNumbers, _clientRect) => {
           //the array is 1 indexed;
-          let itemCount = _timelineNumbers.length;
-          let stepSize = 100 / (itemCount - 1);
-          let keyframeStyle = `@keyframes timeline-animation\{\n`;
+          const itemCount = _timelineNumbers.length;
+          const stepSize = 100 / (itemCount - 1);
+          let keyframeStyle = `@keyframes timeline-animation{\n`;
           if (_timelineNumbers.length > 0) {
             _timelineNumbers.forEach((bounds, i) => {
               if (bounds != null) {
                 // animates with the progress of viewing the timeline at equal intervals
                 // i-1 is because the array is 1 indexed (_timelineNumbers[0] === null)
-                let percentageValue = Math.round((i - 1) * stepSize);
+                const percentageValue = Math.round((i - 1) * stepSize);
                 // as a pixel value
-                let topValue = bounds.y - _clientRect.y + bounds.height / 4;
+                const topValue = bounds.y - _clientRect.y + bounds.height / 4;
                 keyframeStyle += `\t${percentageValue}% {\n
                           \t\ttop: ${topValue}px;\n
                           \t}\n`;
@@ -131,7 +121,7 @@ export default function Timeline({ className = "" }) {
             });
             // This is cursed, but animation styles have to be declared here
             // because will not work if it is loaded first in the stylesheet.
-            let animationStyle = `
+            const animationStyle = `
             .timeline {\n
             \tview-timeline: --timelineAnimation block -20% 40%;\n
             \t&::after {\n

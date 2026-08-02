@@ -14,10 +14,7 @@ const CircledNumber = forwardRef(function CircledNumber(
   ref,
 ) {
   return (
-    <div
-      ref={ref}
-      className={`circled-number app-color--${SectionType.toColor(sectionType)}`}
-    >
+    <div ref={ref} className={`circled-number app-color--${SectionType.toColor(sectionType)}`}>
       {number}
     </div>
   );

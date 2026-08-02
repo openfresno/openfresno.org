@@ -1,8 +1,4 @@
-export const NavigationSearch = ({
-  width = 24,
-  height = 24,
-  className = "",
-}) => {
+export const NavigationSearch = ({ width = 24, height = 24, className = "" }) => {
   return (
     <svg
       width={width}

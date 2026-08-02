@@ -1,5 +1,4 @@
 import { IconX } from "@/components/ui/icon/IconX";
-import { SectionType } from "@/utility/constants/theme";
 import * as React from "react";
 import { useEffect, useRef } from "react";
 
@@ -10,7 +9,6 @@ import { useEffect, useRef } from "react";
  * @param {JSX.Element} [props.children] The contents of the dialog
  * @param {boolean} [props.openState] The state of the Dialog
  * @param {()=>null} [props.handleClose] The that sets openState to false
- * @param {SectionType} [props.sectionType]
  * @returns {JSX.Element}
  * @constructor
  */
@@ -19,9 +17,6 @@ export default function SimpleDialog({
   children = <></>,
   openState = false,
   handleClose = () => {},
-  sectionType = SectionType.light,
-  fullWidth,
-  maxWidth,
   ...props
 }) {
   const dialogRef = useRef(null);
@@ -56,12 +51,7 @@ export default function SimpleDialog({
         <h2 id="dialog-title" className="dialog-title">
           <span className="sub-heading-main">{title}</span>
         </h2>
-        <button
-          className="dialog-close-btn"
-          aria-label="close"
-          onClick={handleClose}
-          type="button"
-        >
+        <button className="dialog-close-btn" aria-label="close" onClick={handleClose} type="button">
           <IconX width="24px" height="24px" />
         </button>
       </div>

@@ -23,9 +23,9 @@ export default function PitchPage() {
           </>
         }
       >
-        Share your innovative ideas and collaborate with our community to turn
-        them into reality. Pitch your project to make a positive impact on
-        Fresno using technology and civic engagement.
+        Share your innovative ideas and collaborate with our community to turn them into reality.
+        Pitch your project to make a positive impact on Fresno using technology and civic
+        engagement.
       </GeneralSection>
       <hr className="mx-auto mb-12 h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400) lg:mb-24" />
       <SidebarSection sectionType={SectionType.light}>
@@ -35,8 +35,8 @@ export default function PitchPage() {
             title="Pitching a project"
             description="How to Start a New Project"
           >
-            Ready to turn your civic tech idea into reality? Follow these simple
-            steps to pitch your project idea to Open Fresno.
+            Ready to turn your civic tech idea into reality? Follow these simple steps to pitch your
+            project idea to Open Fresno.
           </HeaderUnderline>
         </div>
         <Steps sectionType={SectionType.light} steps={instructionData}></Steps>

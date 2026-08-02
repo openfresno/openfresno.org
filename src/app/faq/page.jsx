@@ -41,29 +41,23 @@ export default function FaqPage() {
           subHeading="Frequently Asked Questions"
           sectionType={SectionType.light}
         >
-          Welcome to our FAQ page, designed to provide you with quick and
-          informative answers to commonly asked questions about Open Fresno.
-          Whether you&apos;re curious about volunteering, projects,
-          collaborations, or more, we&apos;ve compiled a list of queries to
-          guide you through our mission, initiatives, and how you can get
-          involved. Browse through the questions to find the information you
-          need and embark on a journey of civic engagement, innovation, and
-          community empowerment.
+          Welcome to our FAQ page, designed to provide you with quick and informative answers to
+          commonly asked questions about Open Fresno. Whether you&apos;re curious about
+          volunteering, projects, collaborations, or more, we&apos;ve compiled a list of queries to
+          guide you through our mission, initiatives, and how you can get involved. Browse through
+          the questions to find the information you need and embark on a journey of civic
+          engagement, innovation, and community empowerment.
         </GeneralSection>
         <section className="faq-nav app-color--primary py-6">
           <nav className="page-container flex flex-col max-lg:gap-4 lg:flex-row lg:justify-between">
             {tableOfContents.map((item) => (
-              <Link
-                key={item.slug}
-                className="nav-link underline"
-                href={`#${item.slug}`}
-              >
+              <Link key={item.slug} className="nav-link underline" href={`#${item.slug}`}>
                 {item.text}
               </Link>
             ))}
           </nav>
         </section>
-        <section className="mx-auto max-w-[calc(var(--screen-xxl)+80px)] px-6 lg:px-10 pt-12 pb-16">
+        <section className="mx-auto max-w-[calc(var(--screen-xxl)+80px)] px-6 pt-12 pb-16 lg:px-10">
           <MDXRemote source={fileContent} components={MDXComponents} />
         </section>
         <hr className="mx-auto h-px max-w-(--screen-xxl) border-0 bg-(--neutral-400)" />

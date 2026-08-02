@@ -1,10 +1,6 @@
 import Image from "next/image";
 
-export default function AboutSectionTeamMember({
-  src,
-  name,
-  title,
-}) {
+export default function AboutSectionTeamMember({ src, name, title }) {
   return (
     <div className="mb-6 flex w-full flex-col gap-2 border border-[#eaecf0] max-lg:mx-auto">
       <Image

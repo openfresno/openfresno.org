@@ -25,10 +25,7 @@ const fetcher = (...args) =>
  *
  * @returns {JSX.Element}
  */
-export default function SingleProject({
-  githubFullName,
-  sectionType = SectionType.light,
-}) {
+export default function SingleProject({ githubFullName, sectionType = SectionType.light }) {
   const [contributeAs, setContributeAs] = useState("");
 
   const { data, error, isLoading } = useSWR(
@@ -56,10 +53,7 @@ export default function SingleProject({
         <SingleProjectsScreenshots sectionType={sectionType} data={data} />
       ) : null}
       {data.meta.roadmap ? (
-        <SingleProjectsRoadmap
-          sectionType={SectionType.invert(sectionType)}
-          data={data}
-        />
+        <SingleProjectsRoadmap sectionType={SectionType.invert(sectionType)} data={data} />
       ) : null}
       {contributeAs !== "" ? (
         <>
@@ -69,20 +63,13 @@ export default function SingleProject({
             contributeAs={contributeAs}
             setContributeAs={setContributeAs}
           />
-          <SingleProjectsContributor
-            data={data}
-            role={contributeAs}
-            sectionType={sectionType}
-          />
+          <SingleProjectsContributor data={data} role={contributeAs} sectionType={sectionType} />
         </>
       ) : null}
       {data.meta.resources ? (
         <SingleProjectsResources sectionType={sectionType} data={data} />
       ) : null}
-      <SingleProjectsVolunteer
-        sectionType={SectionType.invert(sectionType)}
-        data={data}
-      />
+      <SingleProjectsVolunteer sectionType={SectionType.invert(sectionType)} data={data} />
     </>
   );
 }

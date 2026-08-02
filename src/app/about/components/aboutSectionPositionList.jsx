@@ -5,10 +5,7 @@
  * @returns {JSX.Element}
  * @constructor
  */
-export default function AboutSectionPositionList({
-  header = "",
-  listText = [""],
-}) {
+export default function AboutSectionPositionList({ header = "", listText = [""] }) {
   return (
     <div
       className={`positions-container mb-4 w-[48%] min-w-100 max-lg:ml-[6%] max-lg:w-full max-sm:min-w-0`}

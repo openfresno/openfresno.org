@@ -23,18 +23,13 @@ const ProjectSearch = ({ data, setProjectsData }) => {
    * @returns {object}
    */
   const browseObject = (obj, keys) => {
-    for (let key of keys) {
+    for (const key of keys) {
       obj = obj[key];
     }
     return obj;
   };
 
-  const updateProjectsData = (
-    projectSearch,
-    projectFilter,
-    projectSortBy,
-    curAscending,
-  ) => {
+  const updateProjectsData = (projectSearch, projectFilter, projectSortBy, curAscending) => {
     if (!data || !setProjectsData) return;
     projectSearch = projectSearch ? projectSearch.toLowerCase() : "";
     let filteredProjects = data;
@@ -56,15 +51,15 @@ const ProjectSearch = ({ data, setProjectsData }) => {
       //dates
       case "created_at":
       case "updated_at":
-        sortFunction = (a, b) =>
-          new Date(b[projectSortBy]) - new Date(a[projectSortBy]);
+        sortFunction = (a, b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy]);
         break;
       //strings
-      default:
-        let keys = projectSortBy.split(",");
+      default: {
+        const keys = projectSortBy.split(",");
         sortFunction = (a, b) => {
           browseObject(b, keys).localeCompare(browseObject(a, keys));
         };
+      }
     }
     filteredProjects = filteredProjects.toSorted(
       (a, b) => (curAscending ? 1 : -1) * sortFunction(a, b),
@@ -73,7 +68,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   };
 
   const handleChange = (e) => {
-    let cutName = e.target.name.replace("project-", "");
+    const cutName = e.target.name.replace("project-", "");
     switch (cutName) {
       case "search":
         setSearch(e.target.value);
@@ -136,11 +131,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
           <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
         <div className="form-control project-filter-control">
-          <label
-            id="project-filter-label"
-            htmlFor="project-filter"
-            className="form-control-label"
-          >
+          <label id="project-filter-label" htmlFor="project-filter" className="form-control-label">
             Filter
           </label>
           <select
@@ -176,9 +167,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
             <option value="updated_at">Last Updated</option>
             <option value="meta,title">Name</option>
           </select>
-          <span className="form-helper-text">
-            {ascending ? "Ascending" : "Descending"}
-          </span>
+          <span className="form-helper-text">{ascending ? "Ascending" : "Descending"}</span>
         </div>
       </form>
     </section>

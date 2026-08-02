@@ -10,15 +10,9 @@ import Image from "next/image";
  *
  * @returns {JSX.Element}
  */
-export default function SingleProjectsSectionStart({
-  data,
-  sectionType = SectionType.light,
-}) {
+export default function SingleProjectsSectionStart({ data, sectionType = SectionType.light }) {
   return (
-    <section
-      id="project-section-start"
-      className={`py-12 lg:py-24 app-color--${sectionType}`}
-    >
+    <section id="project-section-start" className={`py-12 lg:py-24 app-color--${sectionType}`}>
       <div className="page-container single-project-start-layout">
         <div className="single-project-start-image-container">
           <Image
@@ -36,17 +30,13 @@ export default function SingleProjectsSectionStart({
           />
         </div>
         <div className="max-lg:mt-6">
-          <HeadingPair
-            heading={data.meta.project_type}
-            subHeading={data.meta.title}
-          />
+          <HeadingPair heading={data.meta.project_type} subHeading={data.meta.title} />
           <div className="single-project-status-badge btn-alt">
             Project Status: {titleCase(data.meta.project_status)}
           </div>
           <p className="project-paragraph">{data.meta.description}</p>
           <p className="single-project-updated-text project-paragraph app-text--gray">
-            Last Updated:{" "}
-            {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
+            Last Updated: {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
           </p>
           <div className="single-project-buttons">
             <Button
@@ -55,11 +45,7 @@ export default function SingleProjectsSectionStart({
               target="_blank"
               textContent="View Source Code"
             />
-            <Button
-              className="btn"
-              href="/get-started"
-              textContent="Get Started"
-            />
+            <Button className="btn" href="/get-started" textContent="Get Started" />
           </div>
         </div>
       </div>

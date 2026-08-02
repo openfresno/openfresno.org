@@ -93,9 +93,7 @@ export default function Navbar({ fade = false }) {
             </li>
           ))}
           {/* Sliding underline - positioned via CSS Anchor Positioning */}
-          {hasActiveLink && (
-            <hr className="navbar-underline" aria-hidden="true" />
-          )}
+          {hasActiveLink && <hr className="navbar-underline" aria-hidden="true" />}
         </ul>
 
         {/* Menu Toggles */}

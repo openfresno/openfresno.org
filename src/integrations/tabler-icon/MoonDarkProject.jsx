@@ -1,8 +1,4 @@
-export const MoonDarkProject = ({
-  width = 64,
-  height = 64,
-  className = "",
-}) => {
+export const MoonDarkProject = ({ width = 64, height = 64, className = "" }) => {
   return (
     <svg
       width={width}
@@ -31,12 +27,7 @@ export const MoonDarkProject = ({
       </g>
       <defs>
         <clipPath id="clip0_550_22813">
-          <rect
-            width="24"
-            height="24"
-            fill="white"
-            transform="translate(12.6666 12)"
-          />
+          <rect width="24" height="24" fill="white" transform="translate(12.6666 12)" />
         </clipPath>
       </defs>
     </svg>

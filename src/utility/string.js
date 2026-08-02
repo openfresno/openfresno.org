@@ -17,13 +17,10 @@ export const upperFirst = (s, splitter = " ") =>
  * @returns {string|[string]}
  */
 export function titleCase(toTitleCase, splitter = " ", joiner = " ") {
-  if (
-    !toTitleCase ||
-    !(typeof toTitleCase === "string" || toTitleCase instanceof String)
-  )
+  if (!toTitleCase || !(typeof toTitleCase === "string" || toTitleCase instanceof String))
     return "";
   if (toTitleCase === ".") return "Loading";
-  let titleCased = toTitleCase.split(splitter).map((word) => {
+  const titleCased = toTitleCase.split(splitter).map((word) => {
     switch (word) {
       case "html":
         return "HTML";

@@ -1,8 +1,4 @@
-export const HamburgerStaggered = ({
-  width = 44,
-  height = 44,
-  className = "",
-}) => {
+export const HamburgerStaggered = ({ width = 44, height = 44, className = "" }) => {
   return (
     <svg
       width={width}

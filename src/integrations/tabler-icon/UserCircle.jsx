@@ -1,9 +1,4 @@
-export const UserCircle = ({
-  width = 24,
-  height = 24,
-  className = "",
-  id = "",
-}) => {
+export const UserCircle = ({ width = 24, height = 24, className = "", id = "" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

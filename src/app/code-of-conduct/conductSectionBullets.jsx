@@ -40,68 +40,62 @@ export default function conductSectionBullets({ sectionType }) {
       <div className={`flex h-fit flex-row gap-4 lg:items-center lg:gap-8`}>
         <CircledNumber number={5} sectionType={sectionType} />
         <p className={`conduct-item-paragraph`}>
-          Encourages people to find and utilize their strengths and skills
-          productively. We can foster this environment through
-          &quot;yes/and&quot; statements.
+          Encourages people to find and utilize their strengths and skills productively. We can
+          foster this environment through &quot;yes/and&quot; statements.
         </p>
       </div>
 
       <div className={`flex h-fit flex-row gap-4 lg:items-center lg:gap-8`}>
         <CircledNumber number={6} sectionType={sectionType} />
         <p className={`conduct-item-paragraph`}>
-          Invites members and leaders to practice active listening to better
-          understand new perspectives.
+          Invites members and leaders to practice active listening to better understand new
+          perspectives.
         </p>
       </div>
 
       <div className={`flex h-fit flex-row gap-4 lg:items-center lg:gap-8`}>
         <CircledNumber number={7} sectionType={sectionType} />
         <p className={`conduct-item-paragraph`}>
-          Strives to build open source tools for public use. Private gain is not
-          the priority.
+          Strives to build open source tools for public use. Private gain is not the priority.
         </p>
       </div>
 
       <div className={`flex h-fit flex-row gap-4 lg:items-center lg:gap-8`}>
         <CircledNumber number={8} sectionType={sectionType} />
         <p className={`conduct-item-paragraph`}>
-          Sees the strength in diverse teams and seeks input from those
-          who&apos;s voices have been excluded.
+          Sees the strength in diverse teams and seeks input from those who&apos;s voices have been
+          excluded.
         </p>
       </div>
 
       <div className={`flex h-fit flex-row gap-4 lg:items-center lg:gap-8`}>
         <CircledNumber number={9} sectionType={sectionType} />
         <p className={`conduct-item-paragraph`}>
-          Works to bring in people who are not recognized as &quot;main
-          stream&quot; for any reason including race, gender, economic status,
-          etc. They shall be included throughout the planning, designing, and
-          implementation phases of civic tech.
+          Works to bring in people who are not recognized as &quot;main stream&quot; for any reason
+          including race, gender, economic status, etc. They shall be included throughout the
+          planning, designing, and implementation phases of civic tech.
         </p>
       </div>
 
       <div className={`flex h-fit flex-row gap-4 lg:items-center lg:gap-8`}>
         <CircledNumber number={10} sectionType={sectionType} />
         <p className={`conduct-item-paragraph`}>
-          Seeks out people with subject matter expertise in the decision making
-          processes.
+          Seeks out people with subject matter expertise in the decision making processes.
         </p>
       </div>
 
       <div className={`flex h-fit flex-row gap-4 lg:items-center lg:gap-8`}>
         <CircledNumber number={11} sectionType={sectionType} />
         <p className={`conduct-item-paragraph`}>
-          Ensure that the relationships and conversations between community
-          members, the local government staff and community partners remain
-          respectful, participatory, and productive.
+          Ensure that the relationships and conversations between community members, the local
+          government staff and community partners remain respectful, participatory, and productive.
         </p>
       </div>
 
       <p className={`conduct-sub-heading-main pt-6`}>
         <b>
-          Open Fresno reserves the right to ask anyone in violation of these
-          policies not to participate in Open Fresno network activities, events,
-          and digital forums.
+          Open Fresno reserves the right to ask anyone in violation of these policies not to
+          participate in Open Fresno network activities, events, and digital forums.
         </b>
       </p>
     </section>

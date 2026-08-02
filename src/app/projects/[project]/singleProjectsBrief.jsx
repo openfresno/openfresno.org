@@ -2,10 +2,7 @@ import FormattedObject from "@/components/ui/FormattedObject";
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
 
-export default function SingleProjectsBrief({
-  data,
-  sectionType = SectionType.light,
-}) {
+export default function SingleProjectsBrief({ data, sectionType = SectionType.light }) {
   const trimList = [
     "project_status",
     "resources",
@@ -17,7 +14,7 @@ export default function SingleProjectsBrief({
   const titleCaseList = ["project_type"];
   const concatLists = [["communications", "channels"]];
   const toConcatList = concatLists.flat();
-  let meta = {};
+  const meta = {};
   Object.keys(data.meta).forEach((key) => {
     if (trimList.indexOf(key) === -1) {
       if (toConcatList.indexOf(key) === -1) {
@@ -27,9 +24,9 @@ export default function SingleProjectsBrief({
           meta[key] = titleCase(data.meta[key]);
         }
       } else {
-        for (let concatList of concatLists) {
+        for (const concatList of concatLists) {
           if (concatList.indexOf(key) === -1) continue;
-          let [a, b] = concatList;
+          const [a, b] = concatList;
           if (data.meta[a] && data.meta[b]) {
             meta[a + "\\n" + b] = (
               <>
@@ -46,11 +43,5 @@ export default function SingleProjectsBrief({
       }
     }
   });
-  return (
-    <FormattedObject
-      obj={meta}
-      title={"Project Brief"}
-      sectionType={sectionType}
-    />
-  );
+  return <FormattedObject obj={meta} title={"Project Brief"} sectionType={sectionType} />;
 }

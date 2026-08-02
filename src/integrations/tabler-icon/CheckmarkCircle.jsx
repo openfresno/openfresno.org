@@ -1,8 +1,4 @@
-export const CheckmarkCircle = ({
-  width = 20,
-  height = 20,
-  className = "",
-}) => {
+export const CheckmarkCircle = ({ width = 20, height = 20, className = "" }) => {
   return (
     <svg
       width={width}
