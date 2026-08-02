@@ -20,11 +20,7 @@ export default function GeneralSection({
   return (
     <section className={`app-color--${sectionType} py-12 lg:py-24`}>
       <div className="page-split">
-        <HeadingPair
-          heading={heading}
-          subHeading={subHeading}
-          sectionType={sectionType}
-        />
+        <HeadingPair heading={heading} subHeading={subHeading} sectionType={sectionType} />
         <p className="paragraph-large">{children}</p>
       </div>
     </section>

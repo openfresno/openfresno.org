@@ -2,6 +2,21 @@
   "name": "openfresno.org",
   "version": "2.0.0-beta.3",
   "description": "The public website for Open Fresno.",
+  "keywords": [],
+  "homepage": "https://openfresno.org",
+  "bugs": {
+    "url": "https://github.com/openfresno/openfresno.org/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Open Fresno",
+    "email": "hello@openfresno.org",
+    "url": "https://openfresno.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openfresno/openfresno.org.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,21 +24,6 @@
     "lint": "eslint .",
     "test": "playwright test --project=chromium"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/openfresno/openfresno.org.git"
-  },
-  "keywords": [],
-  "author": {
-    "name": "Open Fresno",
-    "email": "hello@openfresno.org",
-    "url": "https://openfresno.org"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/openfresno/openfresno.org/issues"
-  },
-  "homepage": "https://openfresno.org",
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",

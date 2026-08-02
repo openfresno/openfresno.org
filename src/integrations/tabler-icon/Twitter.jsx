@@ -1,9 +1,4 @@
-export const Twitter = ({
-  width = 24,
-  height = 24,
-  className = "",
-  ...props
-}) => {
+export const Twitter = ({ width = 24, height = 24, className = "", ...props }) => {
   return (
     <svg
       width={width}

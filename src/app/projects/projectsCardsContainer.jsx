@@ -32,9 +32,7 @@ const ProjectsCardsContainer = ({
     <section className={`page-container app-color--${sectionType}`}>
       <div className="project-cards-error">
         <span className="project-cards-load-status-text">
-          {error
-            ? "Failed to load..."
-            : "There are no projects that meet the search criteria..."}
+          {error ? "Failed to load..." : "There are no projects that meet the search criteria..."}
         </span>
       </div>
     </section>

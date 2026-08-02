@@ -25,20 +25,12 @@ export default function HeadingPair({
 }) {
   return (
     <div className={className}>
-      <h1
-        className={`heading-main app-color--${SectionType.invert(sectionType)}`}
-      >
-        {heading}
-      </h1>
-      <h2
-        className={`sub-heading-main${large ? "-large" : ""} w-[${subHeadingWidth}]`}
-      >
+      <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>{heading}</h1>
+      <h2 className={`sub-heading-main${large ? "-large" : ""} w-[${subHeadingWidth}]`}>
         {subHeading}
       </h2>
       {underlined ? (
-        <div
-          className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`}
-        />
+        <div className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`} />
       ) : (
         ""
       )}

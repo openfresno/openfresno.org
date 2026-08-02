@@ -34,9 +34,7 @@ export default function LinedSection({
   return (
     <PageContainer sectionType={sectionType}>
       <h2 className={`sub-heading-main`}>{title}</h2>
-      <div
-        className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}
-      />
+      <div className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`} />
       {children ? children : ""}
       {lines
         ? lines.map((line, i) => (

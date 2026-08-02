@@ -9,9 +9,7 @@ export default function CenteredInImage({
   children = <></>,
 }) {
   return (
-    <div
-      className={`relative w-fit ${float === "center" ? "mx-auto" : `float-${float}`}`}
-    >
+    <div className={`relative w-fit ${float === "center" ? "mx-auto" : `float-${float}`}`}>
       <Image
         src={src}
         alt={alt}

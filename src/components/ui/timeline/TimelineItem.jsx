@@ -42,10 +42,7 @@ export function TimelineItem({
   useEffect(() => {
     let updateContainerRect = () => {
       if (refContainer.current) {
-        updateTimelineNumbers(
-          number,
-          refContainer.current.getBoundingClientRect(),
-        );
+        updateTimelineNumbers(number, refContainer.current.getBoundingClientRect());
       }
     };
     window.addEventListener("resize", updateContainerRect);
@@ -56,30 +53,19 @@ export function TimelineItem({
   }, [number, updateTimelineNumbers]);
   return (
     <div className="timeline-item">
-      <CircledNumber
-        number={number}
-        sectionType={sectionType}
-        ref={refContainer}
-      />
+      <CircledNumber number={number} sectionType={sectionType} ref={refContainer} />
       <div className="timeline-item-content">
         <h2 className="heading-small">{heading}</h2>
         <p>{children}</p>
         {buttons.length === 0 ? (
-          <Button
-            className="btn btn--grow mx-auto mt-2 lg:mx-0"
-            href={buttons[0].href}
-          >
+          <Button className="btn btn--grow mx-auto mt-2 lg:mx-0" href={buttons[0].href}>
             {buttons[0].text}
           </Button>
         ) : buttons.length >= 1 ? (
           <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
             {buttons.map((button, index) => {
               return (
-                <Button
-                  className="btn btn--grow"
-                  href={button.href}
-                  key={index}
-                >
+                <Button className="btn btn--grow" href={button.href} key={index}>
                   {button.text}
                 </Button>
               );

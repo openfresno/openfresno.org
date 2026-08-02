@@ -26,20 +26,12 @@ export default function ContactSectionMission({ sectionType }) {
       <div
         className={`grow basis-0 lg:mr-8 app-color--${sectionType} pt-12 pb-18 max-lg:px-6 lg:py-24`}
       >
-        <HeaderUnderline
-          title="Contact Form"
-          description="Get In Touch"
-          sectionType={sectionType}
-        >
-          <span className={`paragraph-bold`}>
-            Have questions or need assistance?
-          </span>{" "}
-          Reach out to us using our form, and we&apos;ll get back to you as soon
-          as possible.
+        <HeaderUnderline title="Contact Form" description="Get In Touch" sectionType={sectionType}>
+          <span className={`paragraph-bold`}>Have questions or need assistance?</span> Reach out to
+          us using our form, and we&apos;ll get back to you as soon as possible.
           <br></br>
           <br></br>
-          Before reaching out, you might find quick answers to your queries in
-          our{" "}
+          Before reaching out, you might find quick answers to your queries in our{" "}
           <Link href="/faq" className="contactActionLinksAnchor">
             Frequently Asked Questions (FAQs)
           </Link>
@@ -136,10 +128,7 @@ export default function ContactSectionMission({ sectionType }) {
             </div>
           </div>
           <div className="flex pt-11 lg:justify-end">
-            <Button
-              href={mailtoUri}
-              className="btn btn--white btn--grow bg-white"
-            >
+            <Button href={mailtoUri} className="btn btn--white btn--grow bg-white">
               Send Message
             </Button>
           </div>

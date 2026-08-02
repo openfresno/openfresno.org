@@ -13,9 +13,7 @@ import Link from "next/link";
 export default function SidebarSection({ children, sectionType }) {
   return (
     <section className="sidebar-section-container">
-      <div className="flex flex-1 flex-col gap-12 [&_a]:font-bold">
-        {children}
-      </div>
+      <div className="flex flex-1 flex-col gap-12 [&_a]:font-bold">{children}</div>
       <div className="flex flex-col gap-10 lg:w-[411px] lg:shrink-0">
         <div>
           <CenteredInImage src={rectangleBlue} alt="rectangle" float="right">
@@ -33,10 +31,7 @@ export default function SidebarSection({ children, sectionType }) {
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <hr className="mb-2 h-px border-0 bg-(--neutral-400)" />
-            <Link
-              href="/code-of-conduct"
-              className="primary-link--underline w-fit"
-            >
+            <Link href="/code-of-conduct" className="primary-link--underline w-fit">
               Code of Conduct
             </Link>
           </div>

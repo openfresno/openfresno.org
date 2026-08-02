@@ -20,9 +20,7 @@ export const metadata = {
         sizes: "any",
       },
     ],
-    apple: [
-      { url: "/assets/logo/logo192.png", sizes: "192x192", type: "image/png" },
-    ],
+    apple: [{ url: "/assets/logo/logo192.png", sizes: "192x192", type: "image/png" }],
     shortcut: ["/assets/logo/favicon.ico"],
   },
 };

@@ -4,21 +4,14 @@ import { SectionType } from "@/utility/constants/theme";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function SingleProjectsScreenshots({
-  data,
-  sectionType = SectionType.light,
-}) {
+export default function SingleProjectsScreenshots({ data, sectionType = SectionType.light }) {
   const [showDialog, setShowDialog] = useState(false);
   const [startingSlide, setStartingSlide] = useState(0);
   let shownImages = data.meta.screenshots.map((screenshot, i) => (
     <Image
       key={data.full_name.concat(screenshot)}
       onClick={() => {
-        if (
-          typeof window !== "undefined" &&
-          window.innerWidth > 992 &&
-          !showDialog
-        ) {
+        if (typeof window !== "undefined" && window.innerWidth > 992 && !showDialog) {
           setShowDialog(true);
           setStartingSlide(i);
         }
@@ -32,10 +25,7 @@ export default function SingleProjectsScreenshots({
   ));
   for (let i = shownImages.length; i < 6; i++) {
     shownImages.push(
-      <div
-        className="keen-slider__slide @container aspect-7/4"
-        key={data.full_name + i}
-      >
+      <div className="keen-slider__slide @container aspect-7/4" key={data.full_name + i}>
         <div className="single-project-screenshot-placeholder @max-lg:rounded-xl @max-lg:border" />
       </div>,
     );
@@ -44,17 +34,13 @@ export default function SingleProjectsScreenshots({
     <section className={`py-12 app-color--${sectionType}`}>
       <div className="page-container flex flex-col">
         <h2 className="sub-heading-main">Screenshots</h2>
-        <div
-          className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`}
-        />
+        <div className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`} />
         <p className="paragraph-large project-paragraph lg:mb-16">
-          Explore our project through screenshots, providing visual insights
-          into its design and functionality.
+          Explore our project through screenshots, providing visual insights into its design and
+          functionality.
         </p>
         <div className="single-project-screenshots-grid">{shownImages}</div>
-        <Slider className="project-screenshots-slider-container lg:hidden">
-          {shownImages}
-        </Slider>
+        <Slider className="project-screenshots-slider-container lg:hidden">{shownImages}</Slider>
         <SimpleDialog
           title="Screenshots"
           openState={showDialog}

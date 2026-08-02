@@ -41,21 +41,10 @@ import Link from "next/link";
  Submit
  </BaseButton>
  */
-const BaseButton = ({
-  className,
-  href,
-  target,
-  onClick,
-  children,
-  textContent,
-}) => {
+const BaseButton = ({ className, href, target, onClick, children, textContent }) => {
   if (href) {
     return (
-      <Link
-        className={className}
-        href={href}
-        target={target ? target : "_self"}
-      >
+      <Link className={className} href={href} target={target ? target : "_self"}>
         {children || textContent}
       </Link>
     );
@@ -75,11 +64,7 @@ const NavToggle = ({ mobile, extendedMenuVisible, showExtendedMenu }) => {
         onClick={() => showExtendedMenu(!extendedMenuVisible)}
       >
         Get Involved
-        {extendedMenuVisible ? (
-          <ChevronUp className="ms-2" />
-        ) : (
-          <ChevronDown className="ms-2" />
-        )}
+        {extendedMenuVisible ? <ChevronUp className="ms-2" /> : <ChevronDown className="ms-2" />}
       </BaseButton>
     );
   } else {

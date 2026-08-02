@@ -12,9 +12,7 @@ import Link from "next/link";
  * Projects start section.
  * @returns {JSX.Element}
  */
-export default function ProjectsSectionStart({
-  sectionType = SectionType.light,
-}) {
+export default function ProjectsSectionStart({ sectionType = SectionType.light }) {
   return (
     // TODO fix styling classes to represent the projects page?
     <section
@@ -31,10 +29,9 @@ export default function ProjectsSectionStart({
             </>
           }
         >
-          Discover the diverse range of projects at Open Fresno, where
-          we&apos;re using technology and collaboration to tackle civic
-          challenges and enhance public services. Join our dedicated team of
-          designers, developers, and passionate individuals to make a lasting
+          Discover the diverse range of projects at Open Fresno, where we&apos;re using technology
+          and collaboration to tackle civic challenges and enhance public services. Join our
+          dedicated team of designers, developers, and passionate individuals to make a lasting
           impact on our community through innovative solutions.
         </HeaderUnderline>
       </div>
@@ -54,9 +51,7 @@ export default function ProjectsSectionStart({
                 width={24}
                 height={24}
               />
-              <span className="meeting-card-list-item-text">
-                {getWednesday()}
-              </span>
+              <span className="meeting-card-list-item-text">{getWednesday()}</span>
             </div>
             <div>
               <Image
@@ -76,9 +71,7 @@ export default function ProjectsSectionStart({
                 width={24}
                 height={24}
               />
-              <span className="meeting-card-list-item-text">
-                Community Action Night (Virtual)
-              </span>
+              <span className="meeting-card-list-item-text">Community Action Night (Virtual)</span>
             </div>
           </div>
           <div className="projects-meeting-card-footer">

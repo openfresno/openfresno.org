@@ -127,10 +127,7 @@ const metaFile = "meta.yml";
  */
 const fetchMetaFile = async (ghFullName, defaultBranchName) => {
   let metaResponse;
-  if (
-    ghFullName === `${githubOwner}/${githubProject}` &&
-    process.env.NODE_ENV === "development"
-  ) {
+  if (ghFullName === `${githubOwner}/${githubProject}` && process.env.NODE_ENV === "development") {
     metaResponse = await fetch(`http://localhost:3000/meta.yml`);
   } else {
     metaResponse = await fetch(

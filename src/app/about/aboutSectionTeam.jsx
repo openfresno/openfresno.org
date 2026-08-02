@@ -31,28 +31,21 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
       <div className={`page-container`}>
         <div className={`team-paragraph-container md:w-[60%]`}>
           <div className="mb-6">
-            <h1
-              className={`heading-main app-color--${SectionType.invert(sectionType)}`}
-            >
+            <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>
               OUR TEAM
             </h1>
-            <h2 className="sub-heading-main">
-              Meet the Heartbeat of Open Fresno
-            </h2>
+            <h2 className="sub-heading-main">Meet the Heartbeat of Open Fresno</h2>
           </div>
           <p className={`team-paragraph mb-16`}>
-            Open Fresno is powered by a volunteer Core Team that orchestrates
-            events, fosters strategic partnerships, and ensures seamless
-            communication among cross-functional project teams. Our dedicated
-            team members bring diverse skills and expertise to the table, all
-            with a shared passion for civic tech and community empowerment.
+            Open Fresno is powered by a volunteer Core Team that orchestrates events, fosters
+            strategic partnerships, and ensures seamless communication among cross-functional
+            project teams. Our dedicated team members bring diverse skills and expertise to the
+            table, all with a shared passion for civic tech and community empowerment.
           </p>
         </div>
 
         <div className={`team-members-container`}>
-          <div
-            className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4`}
-          >
+          <div className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4`}>
             {TEAM_MEMBERS.map((member) => (
               <AboutSectionTeamMember key={member.name} {...member} />
             ))}

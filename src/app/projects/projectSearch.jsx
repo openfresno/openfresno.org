@@ -29,12 +29,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
     return obj;
   };
 
-  const updateProjectsData = (
-    projectSearch,
-    projectFilter,
-    projectSortBy,
-    curAscending,
-  ) => {
+  const updateProjectsData = (projectSearch, projectFilter, projectSortBy, curAscending) => {
     if (!data || !setProjectsData) return;
     projectSearch = projectSearch ? projectSearch.toLowerCase() : "";
     let filteredProjects = data;
@@ -56,8 +51,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
       //dates
       case "created_at":
       case "updated_at":
-        sortFunction = (a, b) =>
-          new Date(b[projectSortBy]) - new Date(a[projectSortBy]);
+        sortFunction = (a, b) => new Date(b[projectSortBy]) - new Date(a[projectSortBy]);
         break;
       //strings
       default:
@@ -136,11 +130,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
           <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
         <div className="form-control project-filter-control">
-          <label
-            id="project-filter-label"
-            htmlFor="project-filter"
-            className="form-control-label"
-          >
+          <label id="project-filter-label" htmlFor="project-filter" className="form-control-label">
             Filter
           </label>
           <select
@@ -176,9 +166,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
             <option value="updated_at">Last Updated</option>
             <option value="meta,title">Name</option>
           </select>
-          <span className="form-helper-text">
-            {ascending ? "Ascending" : "Descending"}
-          </span>
+          <span className="form-helper-text">{ascending ? "Ascending" : "Descending"}</span>
         </div>
       </form>
     </section>

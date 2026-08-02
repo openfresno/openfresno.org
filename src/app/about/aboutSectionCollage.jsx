@@ -10,9 +10,7 @@ import Image from "next/image";
  * About collage section.
  * @returns {React.JSX.Element}
  */
-export default function AboutSectionCollage({
-  sectionType = SectionType.light,
-}) {
+export default function AboutSectionCollage({ sectionType = SectionType.light }) {
   return (
     <PageContainer divClassName="gap-4 lg:gap-10" sectionType={sectionType}>
       <Image

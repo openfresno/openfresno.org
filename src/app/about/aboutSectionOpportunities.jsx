@@ -26,10 +26,9 @@ export default function AboutSectionOpportunities({ sectionType }) {
               <span className={`paragraph-bold`}>
                 Are you passionate about civic tech leadership?
               </span>{" "}
-              Open Fresno invites you to join our Core Team, organizing events,
-              fostering partnerships, and driving community impact. Shape
-              Fresno&apos;s civic innovation future – connect with us and
-              explore joining our dedicated team.
+              Open Fresno invites you to join our Core Team, organizing events, fostering
+              partnerships, and driving community impact. Shape Fresno&apos;s civic innovation
+              future – connect with us and explore joining our dedicated team.
             </p>
           </div>
           <div
@@ -37,9 +36,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
           >
             <CenteredInImage src={rectangleBlue} alt="rectangle" float="right">
               <div className="font mx-auto w-fit text-xl font-bold sm:text-3xl">
-                <span
-                  className={`app-text--${SectionType.invert(sectionType)}`}
-                >
+                <span className={`app-text--${SectionType.invert(sectionType)}`}>
                   Not a volunteer yet?
                 </span>
                 <br />
@@ -85,10 +82,7 @@ export default function AboutSectionOpportunities({ sectionType }) {
           />
           <AboutSectionPositionList
             header="Platform"
-            listText={[
-              "Director of Backend Engineering",
-              "Director of Data Science",
-            ]}
+            listText={["Director of Backend Engineering", "Director of Data Science"]}
           />
         </div>
         <div className={`relative h-fit w-full lg:hidden`}>

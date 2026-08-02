@@ -11,12 +11,8 @@ export default function notFound() {
     <Layout>
       <section className="not-found-container py-12 text-center lg:py-24">
         <div className="flex flex-col justify-center gap-4">
-          <h1 className="not-found-content-title-large text-4xl font-bold">
-            Oops!
-          </h1>
-          <h2 className="not-found-content-title-small text-xl font-bold">
-            404 Page Not Found
-          </h2>
+          <h1 className="not-found-content-title-large text-4xl font-bold">Oops!</h1>
+          <h2 className="not-found-content-title-small text-xl font-bold">404 Page Not Found</h2>
           <div className="not-found-text app-text--gray font-bold">
             <p>Looks like this page hasn&apos;t been developed yet.</p>
             <p>Would you like to join and be a part of creating it?</p>

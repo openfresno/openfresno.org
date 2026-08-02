@@ -20,9 +20,8 @@ export default function Footer() {
         <section>
           <h2 className="sub-heading-main mb-8">Get Involved.</h2>
           <p>
-            Open Fresno is a tax-deductible civic-tech community dedicated to
-            using technology and open data for positive civic change in Fresno.
-            Open Fresno is fiscally sponsored by{" "}
+            Open Fresno is a tax-deductible civic-tech community dedicated to using technology and
+            open data for positive civic change in Fresno. Open Fresno is fiscally sponsored by{" "}
             <Link href="https://rootaccess.org/">Root Access</Link>.
           </p>
         </section>
@@ -69,18 +68,8 @@ export default function Footer() {
               className="object-cover"
             />
           </Link>
-          <Link
-            href="https://twitter.com/openfresno"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src={twitterIcon}
-              alt="X"
-              width={46}
-              height={46}
-              className="object-cover"
-            />
+          <Link href="https://twitter.com/openfresno" target="_blank" rel="noopener noreferrer">
+            <Image src={twitterIcon} alt="X" width={46} height={46} className="object-cover" />
           </Link>
           <Link
             href="https://www.youtube.com/@openfresno"

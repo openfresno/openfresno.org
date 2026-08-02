@@ -41,9 +41,7 @@ export default function SingleProjectsRoadmapMilestone({
       {!isLastIndex && (
         <Image
           className="project-roadmap-icon-line"
-          src={
-            data.meta.roadmap[milestone].status === "completed" ? line4 : line5
-          }
+          src={data.meta.roadmap[milestone].status === "completed" ? line4 : line5}
           alt="Roadmap divider"
           width={2}
           height={32}

@@ -29,15 +29,11 @@ export default function HomePage() {
           <div className="space-y-10">
             <h1 className="title">Welcome to Open Fresno</h1>
             <p className="paragraph-bold">
-              Become a part of the transformation in Fresno and the Central
-              Valley Area through technology and open data. Volunteer today for
-              a brighter future!
+              Become a part of the transformation in Fresno and the Central Valley Area through
+              technology and open data. Volunteer today for a brighter future!
             </p>
             <div className="space-x-5">
-              <Button
-                className="btn btn-alt btn-alt--transition"
-                href="/get-started"
-              >
+              <Button className="btn btn-alt btn-alt--transition" href="/get-started">
                 Get Started
               </Button>
               <Button className="btn btn--grow" href="/projects">
@@ -71,18 +67,13 @@ export default function HomePage() {
           sectionType={SectionType.dark}
         >
           Open Fresno is
-          <b>
-            {" "}
-            a community of technologists, developers, designers, and
-            civic-minded individuals{" "}
-          </b>
-          who come together to use technology and open data to address civic
-          challenges and improve public services in the Central Valley of
-          California.
+          <b> a community of technologists, developers, designers, and civic-minded individuals </b>
+          who come together to use technology and open data to address civic challenges and improve
+          public services in the Central Valley of California.
           <br />
           <br />
-          We are passionate about fostering civic innovation and creating
-          positive impact through technology and community engagement.
+          We are passionate about fostering civic innovation and creating positive impact through
+          technology and community engagement.
         </GeneralSection>
         <ImageSection
           src={homeImage}
@@ -96,16 +87,13 @@ export default function HomePage() {
           }
         >
           <b>
-            Our mission is done by uniting programmers, designers, and other
-            talents, we transform ideas into tangible solutions that impact
-            lives throughout the Central Valley.
+            Our mission is done by uniting programmers, designers, and other talents, we transform
+            ideas into tangible solutions that impact lives throughout the Central Valley.
           </b>{" "}
-          Together, we drive innovation forward, building a future where open
-          source technology empowers citizens and uplifts Fresno and the
-          surrounding areas.{" "}
+          Together, we drive innovation forward, building a future where open source technology
+          empowers citizens and uplifts Fresno and the surrounding areas.{" "}
           <b>
-            Join us in driving innovation through open-source tech and
-            empowering our community!
+            Join us in driving innovation through open-source tech and empowering our community!
           </b>
         </ImageSection>
         <section className="mx-auto mb-18 max-w-[calc(var(--screen-xxl)+80px)]">
@@ -126,17 +114,15 @@ export default function HomePage() {
           sectionType={SectionType.dark}
         >
           <b>Ready to make a difference? </b>
-          Join us at Open Fresno and use your skills to drive positive change
-          through technology and collaboration.
+          Join us at Open Fresno and use your skills to drive positive change through technology and
+          collaboration.
           <b>
             {" "}
-            Whether you&apos;re a designer, developer, or anyone eager to
-            volunteer, together we&apos;re enhancing community services,
-            amplifying voices, and giving you the opportunity to improve your
-            resume and portfolio.
+            Whether you&apos;re a designer, developer, or anyone eager to volunteer, together
+            we&apos;re enhancing community services, amplifying voices, and giving you the
+            opportunity to improve your resume and portfolio.
           </b>{" "}
-          It&apos;s a journey of innovation and empowerment waiting for you.
-          Your impact starts{" "}
+          It&apos;s a journey of innovation and empowerment waiting for you. Your impact starts{" "}
           <Link href="/get-started" className="underline underline-offset-4">
             <b>here!</b>
           </Link>
@@ -149,9 +135,8 @@ export default function HomePage() {
                 Driving Innovation Through Tech and Collaboration
               </h2>
               <p className="paragraph-large mb-10">
-                We tackle tech projects addressing civic issues, enhancing
-                services in Fresno. From open data initiatives to government
-                services and community platforms,{" "}
+                We tackle tech projects addressing civic issues, enhancing services in Fresno. From
+                open data initiatives to government services and community platforms,{" "}
                 <b>our open-source tech and collaboration drive innovation</b>
                 for transparent, efficient, engaged local governance.
               </p>
@@ -164,8 +149,7 @@ export default function HomePage() {
                 <div>
                   <h2 className="heading-medium">Learning Blocks</h2>
                   <p className="mt-4">
-                    Unlock grades, schedules, and progress in one thrilling
-                    platform!
+                    Unlock grades, schedules, and progress in one thrilling platform!
                   </p>
                 </div>
                 <Image
@@ -180,8 +164,7 @@ export default function HomePage() {
                 <div>
                   <h2 className="heading-medium">TrashAI</h2>
                   <p className="mt-4">
-                    Developing machine learning technology to identify trash in
-                    images.
+                    Developing machine learning technology to identify trash in images.
                   </p>
                 </div>
                 <Image
@@ -197,13 +180,10 @@ export default function HomePage() {
         </section>
         <section className="app-color--gray">
           <div className="page-container">
-            <h1 className="title-semi-bold pt-12 lg:pt-16">
-              Our Collaborations and Partnerships
-            </h1>
+            <h1 className="title-semi-bold pt-12 lg:pt-16">Our Collaborations and Partnerships</h1>
             <p className="paragraph-large mt-10">
-              We have had the privilege of working with a diverse array of
-              companies, organizations, and government entities, some of which
-              are showcased below.
+              We have had the privilege of working with a diverse array of companies, organizations,
+              and government entities, some of which are showcased below.
             </p>
             <div className="mt-12 flex flex-col items-center gap-16 pb-20 sm:flex-row lg:mt-20">
               <Link href="https://rootaccess.org/">
@@ -238,24 +218,21 @@ export default function HomePage() {
             </h1>
             <div>
               <p>
-                Your support, whether through <b>donations or volunteering,</b>{" "}
-                is instrumental in driving positive change with Open Fresno.
+                Your support, whether through <b>donations or volunteering,</b> is instrumental in
+                driving positive change with Open Fresno.
                 <br />
                 <br />
-                <b>Donations fuel our technology</b>-driven initiatives that
-                address civic challenges, enhance public services, and amplify
-                community voices.
+                <b>Donations fuel our technology</b>-driven initiatives that address civic
+                challenges, enhance public services, and amplify community voices.
                 <br />
-                <br />{" "}
-                <b>When you volunteer, you actively contribute your skills</b> –
-                be it coding, designing, or any other expertise – to create
-                tangible solutions that make a real impact.
+                <br /> <b>When you volunteer, you actively contribute your skills</b> – be it
+                coding, designing, or any other expertise – to create tangible solutions that make a
+                real impact.
                 <br />
                 <br />
-                Together, we shape a better future for our city, amplifying
-                voices, enhancing services, and driving innovation. Join us
-                today and be a catalyst for lasting, community-driven
-                transformation!
+                Together, we shape a better future for our city, amplifying voices, enhancing
+                services, and driving innovation. Join us today and be a catalyst for lasting,
+                community-driven transformation!
               </p>
               <div className="mt-10 space-x-5">
                 <Button
@@ -263,11 +240,7 @@ export default function HomePage() {
                   className="btn btn-alt-white btn-alt--transition"
                   textContent="Get Started"
                 />
-                <Button
-                  href="/donate"
-                  className="btn btn--grow"
-                  textContent="Donate"
-                />
+                <Button href="/donate" className="btn btn--grow" textContent="Donate" />
               </div>
             </div>
           </div>

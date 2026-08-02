@@ -1,8 +1,4 @@
-export const LogoTextBlack = ({
-  width = 660,
-  height = 268,
-  className = "",
-}) => {
+export const LogoTextBlack = ({ width = 660, height = 268, className = "" }) => {
   return (
     <svg
       width={width}

@@ -45,21 +45,13 @@ export default function ProjectCard({
           </div>
         ))}
       </ul>
-      <h2
-        className={`project-card-heading ${isLoading && "project-card-loading"}`}
-      >
+      <h2 className={`project-card-heading ${isLoading && "project-card-loading"}`}>
         {projectTitle}
       </h2>
       <div className="project-card-description-container">
-        <p
-          className={`project-card-text ${isLoading && "project-card-loading"}`}
-        >
-          {projectText}
-        </p>
+        <p className={`project-card-text ${isLoading && "project-card-loading"}`}>{projectText}</p>
       </div>
-      <div
-        className={`project-card-updated ${isLoading && "project-card-loading"}`}
-      >
+      <div className={`project-card-updated ${isLoading && "project-card-loading"}`}>
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, Y, h:mma")}
       </div>
       <div className="project-card-buttons">

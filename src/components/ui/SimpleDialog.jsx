@@ -51,12 +51,7 @@ export default function SimpleDialog({
         <h2 id="dialog-title" className="dialog-title">
           <span className="sub-heading-main">{title}</span>
         </h2>
-        <button
-          className="dialog-close-btn"
-          aria-label="close"
-          onClick={handleClose}
-          type="button"
-        >
+        <button className="dialog-close-btn" aria-label="close" onClick={handleClose} type="button">
           <IconX width="24px" height="24px" />
         </button>
       </div>

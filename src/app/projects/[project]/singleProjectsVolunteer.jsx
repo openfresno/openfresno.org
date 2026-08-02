@@ -8,14 +8,9 @@ import Link from "next/link";
  * Instructions for the project page.
  * @returns {JSX.Element}
  */
-export default function SingleProjectsVolunteer({
-  sectionType = SectionType.light,
-}) {
+export default function SingleProjectsVolunteer({ sectionType = SectionType.light }) {
   return (
-    <section
-      id="project-section-start"
-      className={`mt-8 py-24 app-color--${sectionType}`}
-    >
+    <section id="project-section-start" className={`mt-8 py-24 app-color--${sectionType}`}>
       <div className="page-container single-project-volunteer-layout">
         <div className="single-project-volunteer-info">
           <HeaderUnderline
@@ -24,10 +19,9 @@ export default function SingleProjectsVolunteer({
             sectionType={sectionType}
           >
             <span className="text-md">
-              Join us at Open Fresno to collaborate on impactful civic tech
-              projects and connect with a diverse community of like-minded
-              individuals. It&apos;s a rewarding way to make a meaningful
-              difference in our city.
+              Join us at Open Fresno to collaborate on impactful civic tech projects and connect
+              with a diverse community of like-minded individuals. It&apos;s a rewarding way to make
+              a meaningful difference in our city.
             </span>
           </HeaderUnderline>
         </div>

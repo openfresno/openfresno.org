@@ -1,8 +1,4 @@
-export const MoonLightLaptop = ({
-  width = 64,
-  height = 64,
-  className = "",
-}) => {
+export const MoonLightLaptop = ({ width = 64, height = 64, className = "" }) => {
   return (
     <svg
       width={width}

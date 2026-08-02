@@ -14,9 +14,7 @@ export default function ImageSection({
       <div className="home-split-wide">
         <div className="grid items-center">
           <div>
-            <h1
-              className={`heading-main app-color--${SectionType.invert(sectionType)}`}
-            >
+            <h1 className={`heading-main app-color--${SectionType.invert(sectionType)}`}>
               {heading}
             </h1>
             <h2 className="sub-heading-main">{subHeading}</h2>

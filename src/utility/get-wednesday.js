@@ -11,18 +11,12 @@ export const getWednesday = (nextMonth) => {
 
   const currentDay = nextMonth ? 1 : moment().date();
 
-  const daysInMonth = moment()
-    .year(currentYear)
-    .month(currentMonth)
-    .daysInMonth();
+  const daysInMonth = moment().year(currentYear).month(currentMonth).daysInMonth();
 
   let wednesdays = [];
 
   for (let day = currentDay; day <= daysInMonth; day++) {
-    const currentDate = moment()
-      .year(currentYear)
-      .month(currentMonth)
-      .date(day);
+    const currentDate = moment().year(currentYear).month(currentMonth).date(day);
 
     if (currentDate.day() === 3) {
       wednesdays.push(currentDate.date());

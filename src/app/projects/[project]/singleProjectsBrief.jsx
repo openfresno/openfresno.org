@@ -2,10 +2,7 @@ import FormattedObject from "@/components/ui/FormattedObject";
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
 
-export default function SingleProjectsBrief({
-  data,
-  sectionType = SectionType.light,
-}) {
+export default function SingleProjectsBrief({ data, sectionType = SectionType.light }) {
   const trimList = [
     "project_status",
     "resources",
@@ -46,11 +43,5 @@ export default function SingleProjectsBrief({
       }
     }
   });
-  return (
-    <FormattedObject
-      obj={meta}
-      title={"Project Brief"}
-      sectionType={sectionType}
-    />
-  );
+  return <FormattedObject obj={meta} title={"Project Brief"} sectionType={sectionType} />;
 }
