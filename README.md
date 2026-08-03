@@ -20,4 +20,3 @@ Some of the other Issues are larger and require some deeper design or architectu
 
 - [Open Fresno website documentation](https://github.com/openfresno/fe-openfresno-doc)
 - [Open Websites Figma](https://www.figma.com/design/attWQWKwed1XSaaaMuzM5m/Open-Websites?node-id=2612-11351&t=IiJjmX4Zr0KPPUyE-0)
-- [Contributing guide](.github/CONTRIBUTING.md)
