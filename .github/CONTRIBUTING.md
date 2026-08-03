@@ -11,7 +11,7 @@ This is a Next.js static site. Get started by forking the repository and running
 
 ## Test
 
-Add critical end-to-end tests in the [tests/](/tests) folder. All other tests should be in the [documentation repository](https://github.com/openfresno/fe-openfresno.org-doc).
+Add critical end-to-end tests in the [tests/](/tests) folder. All other tests should be in the [documentation repository](https://github.com/openfresno/fe-openfresno-doc).
 
 ## Deploy
 
@@ -26,4 +26,4 @@ Each fork comes with its own live GitHub page to share changes before merging. M
 
 ## Documentation
 
-Help make it easier for new contributors by writing documentation in the [documentation repository](https://github.com/openfresno.org/fe-openfresno.org-doc).
+Help make it easier for new contributors by writing documentation in the [documentation repository](https://github.com/openfresno.org/fe-openfresno-doc).

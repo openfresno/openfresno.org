@@ -10,7 +10,7 @@
  *
  * ### Example base paths.
  *
- * - **If it is a fork:** fe-openfresno.org-doc.
+ * - **If it is a fork:** fe-openfresno-doc.
  * - **If it is the main repository:** Empty string.
  * - **Custom domain:** Empty string.
  * - **Local development:** Empty string.
