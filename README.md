@@ -7,7 +7,8 @@
 
 **Open Fresno** is a platform for civic innovation. As an open-source organization, you can fork our code including our website. Help us make a project better by [forking it](https://help.github.com/articles/fork-a-repo/), adding new content or features, and [submitting a pull request](https://help.github.com/articles/creating-a-pull-request/)!
 
-> For help, see the [getting started guide](https://openfresno.github.io/fe-openfresno-doc/?path=/docs/get-started--docs).
+- [Projects](https://openfresno.org/projects)
+- [Getting started guide](https://openfresno.github.io/fe-openfresno-doc/?path=/docs/get-started--docs)
 
 ## Contributing
 
@@ -19,3 +20,4 @@ Some of the other Issues are larger and require some deeper design or architectu
 
 - [Open Fresno website documentation](https://github.com/openfresno/fe-openfresno-doc)
 - [Open Websites Figma](https://www.figma.com/design/attWQWKwed1XSaaaMuzM5m/Open-Websites?node-id=2612-11351&t=IiJjmX4Zr0KPPUyE-0)
+- [Contributing guide](.github/CONTRIBUTING.md)
