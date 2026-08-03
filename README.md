@@ -1,6 +1,6 @@
 <h1>
 <a href="https://openfresno.org">
-  <img width=250 alt="The Open Fresno logo." src="public/assets/logo/logo-text-blue.svg">
+  <img width=280 alt="The Open Fresno logo." src="public/assets/logo/logo-text-blue.svg">
 </a>
 </h1>
 <br/>
